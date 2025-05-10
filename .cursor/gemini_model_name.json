@@ -1,0 +1,51 @@
+[
+  {
+    "Model variant": "Gemini 2.5 Flash Preview 04-17",
+    "Model code": "gemini-2.5-flash-preview-04-17",
+    "Input(s)": "Audio, images, videos, and text",
+    "Output": "Text",
+    "Optimized for": "Adaptive thinking, cost efficiency"
+  },
+  {
+    "Model variant": "Gemini 2.5 Pro Preview",
+    "Model code": "gemini-2.5-pro-preview-03-25",
+    "Input(s)": "Audio, images, videos, and text",
+    "Output": "Text",
+    "Optimized for": "Enhanced thinking and reasoning, multimodal understanding, advanced coding, and more"
+  },
+  {
+    "Model variant": "Gemini 2.0 Flash",
+    "Model code": "gemini-2.0-flash",
+    "Input(s)": "Audio, images, videos, and text",
+    "Output": "Text, images (experimental), and audio (coming soon)",
+    "Optimized for": "Next generation features, speed, thinking, realtime streaming, and multimodal generation"
+  },
+  {
+    "Model variant": "Gemini 2.0 Flash-Lite",
+    "Model code": "gemini-2.0-flash-lite",
+    "Input(s)": "Audio, images, videos, and text",
+    "Output": "Text",
+    "Optimized for": "Cost efficiency and low latency"
+  },
+  {
+    "Model variant": "Gemini 1.5 Flash",
+    "Model code": "gemini-1.5-flash",
+    "Input(s)": "Audio, images, videos, and text",
+    "Output": "Text",
+    "Optimized for": "Fast and versatile performance across a diverse variety of tasks"
+  },
+  {
+    "Model variant": "Gemini 1.5 Flash-8B",
+    "Model code": "gemini-1.5-flash-8b",
+    "Input(s)": "Audio, images, videos, and text",
+    "Output": "Text",
+    "Optimized for": "High volume and lower intelligence tasks"
+  },
+  {
+    "Model variant": "Gemini 1.5 Pro",
+    "Model code": "gemini-1.5-pro",
+    "Input(s)": "Audio, images, videos, and text",
+    "Output": "Text",
+    "Optimized for": "Complex reasoning tasks requiring more intelligence"
+  }
+] 

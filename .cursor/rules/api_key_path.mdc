@@ -1,0 +1,17 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# API KEY path
+
+- Gemini Text API Key: `/Users/wu_cheng_yan/cursor/project_llm_english_learning_remake/.cursor/gemini_API_key`
+
+- Gemini TTS API JSON Key: `/Users/wu_cheng_yan/cursor/project_llm_english_learning_remake/.cursor/gemini_TTS_key.json`
+
+- Open AI API Key: `/Users/wu_cheng_yan/cursor/project_llm_english_learning_remake/.cursor/OpenAI_API_key`
+
+
+# Gemini Allowed Model List
+
+- Gemini allowed model list:`/Users/wu_cheng_yan/cursor/project_llm_english_learning_remake/.cursor/gemini_allowed_model_name.json`
