@@ -1,15 +1,21 @@
 import { GoogleGenerativeAI, HarmCategory, HarmBlockThreshold } from "@google/generative-ai";
 import * as dotenv from 'dotenv';
+import * as path from 'path'; // Node.js 內置模組
 
-// 從 .env 檔案載入環境變數
-dotenv.config();
+// 解析 .env 文件的正確路徑
+// __dirname 在 CommonJS 模組中是當前文件所在的目錄路徑
+// 假設 GeminiAPIService.ts 位於 backend/src/services/
+// .env 位於 backend 的父目錄, 即 llm_english_learning_read&write/
+const projectRoot = path.resolve(__dirname, '..', '..', '..'); // 退三層到 backend 的父目錄
+const envPath = path.join(projectRoot, '.env');
+dotenv.config({ path: envPath });
 
 const MODEL_NAME = "gemini-2.5-flash-preview-04-17"; // 根據 project_rule
 // const API_KEY = process.env.GEMINI_API_KEY; // 移除頂級 const
 
 // 模組級別的 API Key 檢查，現在直接讀取 process.env
 if (!process.env.GEMINI_API_KEY) {
-  console.error("環境變數中未設定 GEMINI_API_KEY。(模組級別檢查)");
+  console.error(`環境變數中未設定 GEMINI_API_KEY。期望路徑: ${envPath} (模組級別檢查)`);
   // 在真實應用程式中，您可能需要拋出錯誤或更優雅地處理此問題
   // 目前，我們將允許服務初始化但會記錄錯誤。
   // 如果缺少 API 金鑰，操作將會失敗。
@@ -22,13 +28,12 @@ class GeminiAPIService {
   constructor() {
     const apiKey = process.env.GEMINI_API_KEY; // 在建構時動態讀取
     if (!apiKey) {
-      console.error("GeminiAPIService：缺少 API_KEY，無法初始化。(建構子檢查)");
-      // 根據錯誤處理策略，您可以在此處拋出錯誤，但 GoogleGenerativeAI 通常會處理
-      // throw new Error("GeminiAPIService：缺少 API_KEY。");
+      console.error(`GeminiAPIService：缺少 API_KEY，無法初始化。請檢查 .env 文件路徑: ${envPath} (建構子檢查)`);
+      // 根據 GoogleGenerativeAI 的行為，如果 apiKey 為 undefined，它會在實例化時拋出錯誤
+      // 因此這裡的 throw new Error 可能不是必需的，但保留日誌很重要
     }
-    // 如果由於上述檢查導致 apiKey 在此處未定義，GoogleGenerativeAI 將拋出錯誤。
-    // 因此，請確保 apiKey 有效或處理來自 GoogleGenerativeAI 構造函數的錯誤。
-    this.genAI = new GoogleGenerativeAI(apiKey as string); // 使用動態讀取的 apiKey
+    // 如果 apiKey 為 undefined，下一行會拋出錯誤，這是期望的行為
+    this.genAI = new GoogleGenerativeAI(apiKey as string);
     this.model = this.genAI.getGenerativeModel({
       model: MODEL_NAME,
       // 預設安全設定可在此處調整 (如果需要)
@@ -69,11 +74,11 @@ class GeminiAPIService {
     }
 
     try {
-      console.log('正在傳送提示至 Gemini：「' + prompt.substring(0, 100) + '...」');
+      // console.log('正在傳送提示至 Gemini：「' + prompt.substring(0, 100) + '...」'); // 正式環境可考慮移除或改為 debug 級別
       const result = await this.model.generateContent(prompt);
       const response = result.response;
       const generatedText = response.text(); // 重新命名以避免與全域 text 類型衝突
-      console.log('已從 Gemini 收到回應：「' + generatedText.substring(0, 100) + '...」');
+      // console.log('已從 Gemini 收到回應：「' + generatedText.substring(0, 100) + '...」'); // 正式環境可考慮移除或改為 debug 級別
       return generatedText;
     } catch (e) { // 將變數名稱從 error 改為 e
       console.error("呼叫 Gemini API 時發生錯誤：", e);
