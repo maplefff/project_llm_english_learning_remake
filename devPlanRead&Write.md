@@ -2,7 +2,7 @@
 
 ## 1. 專案概述
 
-本專案旨在開發一個本地端應用程式（初期為 Web 應用，最終打包為桌面應用），利用大型語言模型 (LLM) 生成針對性的英語閱讀與寫作測驗題。應用程式將允許使用者針對在 `discussion_read&write_2.md` 中定義的特定題型進行反覆練習，或進行包含多種題型的完整測驗。核心目標是提供一個高效、互動的英語自學工具，並透過快取機制優化使用者體驗。
+本專案旨在開發一個本地端應用程式（初期為 Web 應用，最終打包為桌面應用），利用大型語言模型 (LLM) 生成針對性的英語閱讀與寫作測驗題。應用程式將允許使用者針對在 `discussion_read&write.md` 中定義的特定題型進行反覆練習，或進行包含多種題型的完整測驗。核心目標是提供一個高效、互動的英語自學工具，並透過快取機制優化使用者體驗。
 
 ## 2. 技術選型
 
@@ -11,7 +11,7 @@
 *   **打包 (Packaging)**: Electron (在 Web 版本功能穩定後進行)
 *   **大型語言模型 (LLM)**: Gemini `gemini-2.5-flash-preview-04-17` (根據 `.cursor/rules/project_rule.md` 規定)
 *   **API 金鑰管理**: 後端安全處理，例如透過環境變數或安全的本地設定檔（不納入版本控制）。
-*   **主要參考文件**: `discussion_read&write_2.md` (定義題型、範例、基礎 JSON 結構)
+*   **主要參考文件**: `discussion_read&write.md` (定義題型、範例、基礎 JSON 結構)
 
 ### 2.1. 核心依賴 (Core Dependencies)
 
@@ -32,10 +32,14 @@
 #### 2.2.1. 後端 (Backend)
 *   `nodemon`: (開發依賴) 在開發過程中自動重啟 Node.js 應用程式。
 *   `jest`: (測試依賴) JavaScript 測試框架，用於單元測試和整合測試。
+*   `ts-jest`: (測試依賴) Jest 的 TypeScript preprocessor，允許使用 Jest 測試 TypeScript 程式碼。
 *   `supertest`: (測試依賴) 用於測試 HTTP API 端點 (與 Jest 配合使用)。
 *   `eslint`: (開發依賴) JavaScript 和 TypeScript 的程式碼檢查工具。
 *   `prettier`: (開發依賴) 程式碼格式化工具。
 *   `typescript`: (開發依賴) TypeScript 語言本身。
+*   `@types/node`: (開發依賴) Node.js 的 TypeScript 類型定義。
+*   `@types/express`: (開發依賴) Express.js 的 TypeScript 類型定義。
+*   `@types/jest`: (開發依賴) Jest 的 TypeScript 類型定義。
 *   `ts-node`: (開發依賴, 如果需要直接執行 TS 腳本) TypeScript 執行引擎。
 
 #### 2.2.2. 前端 (Frontend)
@@ -97,7 +101,7 @@ project_llm_english_learning_remake/
 │   └── rules/
 │       ├── project_rule.md
 │       └── ...
-├── discussion_read&write_2.md
+├── discussion_read&write.md
 ├── devPlanRead&Write.md
 ├── exam_example.html
 └── .gitignore
@@ -205,7 +209,7 @@ sequenceDiagram
 ### 3.2. `[題型ID]_generate.js` (例如 `111_generate.js`, `121_generate.js`)
 *   **職責**: 針對**單一特定題型**進行題目生成的所有細節處理。
 *   **功能**:
-    *   **Prompt 設計與構建**: 內部包含或引用為該題型優化的 Prompt 模板（參考 `discussion_read&write_2.md`，包含 few-shot 範例、明確 JSON 輸出格式指示、額外請求鍵如 `explanation_of_Question` 等）。
+    *   **Prompt 設計與構建**: 內部包含或引用為該題型優化的 Prompt 模板（參考 `discussion_read&write.md`，包含 few-shot 範例、明確 JSON 輸出格式指示、額外請求鍵如 `explanation_of_Question` 等）。
     *   **LLM 調用**: 調用 `GeminiAPIService.js` 發送 Prompt 以獲取 LLM 的原始回應。
     *   **回應解析與格式化**:
         *   接收來自 `GeminiAPIService.js` 的 LLM 原始回應。
@@ -285,7 +289,7 @@ sequenceDiagram
 ### 3.8. API Endpoints and Controller (`APIController.js`)
 *   **職責**: 定義和處理前端的 HTTP API 請求，作為前後端通訊的橋樑。這些端點構成初步的 API 合約，可在開發過程中迭代和擴展。
 *   **主要端點 (示例)**:
-    *   `GET /api/question-types`: 獲取可用題型列表 (可從 `discussion_read&write_2.md` 解析或配置中讀取)。
+    *   `GET /api/question-types`: 獲取可用題型列表 (可從 `discussion_read&write.md` 解析或配置中讀取)。
     *   `POST /api/start-test`: (body: `{ testMode: 'single' | 'full', questionType?: '1.1.1', config?: {...} }`) 開始測驗。
     *   `GET /api/next-question`: (session/test ID) 獲取下一題。
     *   `POST /api/submit-answer`: (body: `{ questionDataSnapshot: {...}, userAnswer: '...', timestamp: ... }`) 提交答案。
@@ -307,7 +311,7 @@ sequenceDiagram
 
 ## 5. 核心功能
 
-*   **基於 LLM 的題目生成**: 根據 `discussion_read&write_2.md` 中定義的題型動態生成題目。
+*   **基於 LLM 的題目生成**: 根據 `discussion_read&write.md` 中定義的題型動態生成題目。
 *   **單一題型反覆練習**: 使用者可選擇特定題型進行集中練習。
 *   **完整測驗模式**: 提供包含多種題型的綜合測驗。
 *   **後台題目快取**: 自動在後台預加載題目，減少使用者等待時間。
@@ -319,7 +323,7 @@ sequenceDiagram
 1.  **環境搭建**: 完成 Node.js, Express, Vue 3, Vite, TypeScript 基礎專案結構。
 2.  **API 金鑰配置與安全**: 確立並實施 API 金鑰的安全管理方案。
 3.  **後端核心服務實現 (迭代進行與測試驅動)**:
-    *   **階段一: 基礎服務與單元測試**
+    *   **階段一: 基礎服務與單元測試 (已完成)**
         *   `GeminiAPIService.js`: 確保能與 `gemini-2.5-flash-preview-04-17` 成功通訊。**撰寫單元測試**模擬 API 呼叫與回應處理。
         *   `CleanJSON.js`: 實現基礎的 JSON 清理與解析。**撰寫單元測試**驗證各種字串輸入的處理。
     *   **階段二: 單一題型端到端 (例如 1.1.1) 與整合測試**
@@ -331,7 +335,7 @@ sequenceDiagram
         *   基礎的 API 端點 (`APIController.js`) 供後續測試。**撰寫整合測試**測試從 API 請求到 `TestOrchestratorService` 獲取題目並記錄歷史的完整流程。
     *   **階段三: 前端對接、擴展與自動化端對端測試**
         *   開發前端頁面以展示和測試 1.1.1 題型的生成與作答。
-        *   逐步為 `discussion_read&write_2.md` 中的其他題型實現對應的 `[題型ID]_generate.js` 及相關服務的擴展，並**為每個模組補充單元測試和整合測試**。
+        *   逐步為 `discussion_read&write.md` 中的其他題型實現對應的 `[題型ID]_generate.js` 及相關服務的擴展，並**為每個模組補充單元測試和整合測試**。
         *   引入**自動化端對端 (E2E) 測試框架** (例如 Cypress 或 Playwright) 針對核心使用者場景（如選擇題型、答題、查看歷史）編寫測試腳本。
 4.  **完整測驗模式開發與測試**:
     *   在 `TestOrchestratorService.js` 中實現完整測驗的題型組合與流程控制邏輯。**撰寫相應的單元與整合測試**。
@@ -376,6 +380,6 @@ sequenceDiagram
 *   **安全性考量**:
     *   除了 API 金鑰，是否有其他潛在安全風險點 (例如，輸入清理防止注入)。
     *   Electron 打包時的安全性配置。
-*   **快取更新與失效策略**: `QuestionCacheService.js` 中快取資料的更新頻率、失效條件（例如，當 `discussion_read&write_2.md` 更新時，是否需要清空或更新快取）。
+*   **快取更新與失效策略**: `QuestionCacheService.js` 中快取資料的更新頻率、失效條件（例如，當 `discussion_read&write.md` 更新時，是否需要清空或更新快取）。
 
 本文檔將作為後續開發的主要參考依據，並可根據開發進程和需求變化進行更新。 

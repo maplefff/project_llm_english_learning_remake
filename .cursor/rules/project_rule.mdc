@@ -7,8 +7,8 @@ alwaysApply: true
 
 ## Project Paths
 
-- Write&Read Project Root(閱讀寫作專案根目錄): `/Users/wu_cheng_yan/cursor/project_llm_english_learning_remake/llm_english_learning_remake`
-- Project father(專案父目錄):`/Users/wu_cheng_yan/cursor/project_llm_english_learning_remake`
+- Write&Read Project Root(閱讀寫作專案根目錄): `/Users/wu_cheng_yan/cursor/project_llm_english_learning_remake/llm_english_learning_read&write`
+- father(父目錄):`/Users/wu_cheng_yan/cursor/project_llm_english_learning_remake`
 
 ## Gemini Model Selection
 
@@ -19,3 +19,5 @@ alwaysApply: true
 ## Directory Structure Rule
 
 - **Directory Structure Synchronization**: The project's directory structure is outlined in `devPlanRead&Write.md`. Any significant changes to the actual directory structure (e.g., adding, removing, renaming top-level folders or key service folders) **must** be reflected by updating the corresponding section in `devPlanRead&Write.md` to maintain documentation consistency. 
+
+- 禁止更動`/Users/wu_cheng_yan/cursor/project_llm_english_learning_remake/exam_example.html`
