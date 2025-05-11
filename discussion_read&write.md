@@ -30,9 +30,46 @@
     {"D": "tired"}
     ],
     "standard_answer": "C",
-    "explanation_of_Question": "Resilient means being able to withstand or recover quickly from difficult conditions. In this context, an athlete recovering quickly shows flexibility and the ability to bounce back. Option A is incorrect because... Option B is incorrect because... Option D is incorrect because..."
+    "explanation_of_Question": "Resilient 指能夠承受或迅速從困難情況中恢復。此處運動員能快速復原，顯示其高度彈性與復原力，因此選項 C 正確。選項 A「weak」意為虛弱，語意相反；選項 B「determined」僅表意志堅定，未涵蓋恢復力；選項 D「tired」表示疲倦，與原意無關。"
 }
 ```
+**LLM題本生成prompts**:
+```json
+You are an expert English-quiz generator for language learners.
+
+1. Generate exactly ${questionNumber} multiple-choice questions.  
+2. Learner context: ${historySummary}  
+3. Set difficulty so the average learner accuracy targets {difficuty_setting}%.  
+4. Adjust difficulty with reference to CEFR levels (A1–C2).  
+5. Question type: test only vocabulary meaning, synonyms, and near-synonyms (no grammar).  
+6. Output STRICT JSON: a single array of ${questionNumber} objects, nothing else.  
+   Each object must contain:  
+   • "passage" (string) – context sentence or short passage  
+   • "targetWord" (string) – the word being tested  
+   • "question" (string) – the question prompt  
+   • "options" (array of 4 objects { "A": string }, { "B": string }, { "C": string }, { "D": string })  
+   • "standard_answer" (string) – one of "A" | "B" | "C" | "D"  
+   • "explanation_of_Question" (string) – concise Traditional-Chinese explanation of why the answer is correct and why the other options are wrong.  
+
+7. Example of ONE valid object (format must be matched exactly):
+
+{
+  "passage": "The resilient athlete quickly recovered from her injury.",
+  "targetWord": "resilient",
+  "question": "In the sentence above, the word 'resilient' most nearly means:",
+  "options": [
+    { "A": "weak" },
+    { "B": "determined" },
+    { "C": "flexible and quick to recover" },
+    { "D": "tired" }
+  ],
+  "standard_answer": "C",
+  "explanation_of_Question": "Resilient 指能夠承受或迅速從困難情況中恢復。此處運動員能快速復原，顯示其高度彈性與復原力，因此選項 C 正確。選項 A「weak」意為虛弱，語意相反；選項 B「determined」僅表意志堅定，未涵蓋恢復力；選項 D「tired」表示疲倦，與原意無關。"
+}
+
+Return ONLY the JSON array when you generate the questions.
+```
+
 
 **JSON 存檔格式範例 (History Entry):**
 ```json
@@ -48,7 +85,6 @@
       {"D": "tired"}
     ],
     "standard_answer": "C",
-    "explanation_of_Question": "Resilient means being able to withstand or recover quickly from difficult conditions. In this context, an athlete recovering quickly shows flexibility and the ability to bounce back. Option A is incorrect because weak is an antonym. Option B, while possibly related, doesn't capture the 'recovery' aspect as well as C. Option D is incorrect as resilience implies strength, not tiredness."
   },
   "userAnswer": "C",
   "isCorrect": true,
