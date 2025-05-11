@@ -58,7 +58,7 @@ export async function generate111Question(
   "explanation_of_Question": "Resilient 指能夠承受或迅速從困難情況中恢復。此處運動員能快速復原，顯示其高度彈性與復原力，因此選項 C 正確。選項 A「weak」意為虛弱，語意相反；選項 B「determined」僅表意志堅定，未涵蓋恢復力；選項 D「tired」表示疲倦，與原意無關。"
 }
 
-Return ONLY the JSON array when you generate the questions.
+Return ONLY the JSON array when you generate the questions. Do not include markdown keywords such as \`\`\`json in your response. 
 `;
     
     let prompt = PROMPT_TEMPLATE_1_1_1.replace('{difficuty_setting}', difficultySetting.toString());
