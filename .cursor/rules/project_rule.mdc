@@ -1,0 +1,21 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+# Project Structure and Model Selection Rule
+
+## Project Paths
+
+- Write&Read Project Root(閱讀寫作專案根目錄): `/Users/wu_cheng_yan/cursor/project_llm_english_learning_remake/llm_english_learning_remake`
+- Project father(專案父目錄):`/Users/wu_cheng_yan/cursor/project_llm_english_learning_remake`
+
+## Gemini Model Selection
+
+- **Selected LLM Model**: `gemini-2.5-flash-preview-04-17`
+- **Reason**: User directive.
+- **Note**: This model selection is final and should not be changed without explicit user instruction. All development should target this model for LLM-based generation tasks. 
+
+## Directory Structure Rule
+
+- **Directory Structure Synchronization**: The project's directory structure is outlined in `devPlanRead&Write.md`. Any significant changes to the actual directory structure (e.g., adding, removing, renaming top-level folders or key service folders) **must** be reflected by updating the corresponding section in `devPlanRead&Write.md` to maintain documentation consistency. 

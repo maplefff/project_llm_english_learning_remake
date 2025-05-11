@@ -1,0 +1,34 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+1. **Declaration Line**  
+   Always start the diagram with a valid declaration such as `flowchart TD` or `graph LR`. Omitting or misordering this line causes parsing errors.
+
+2. **Quote Special Text**  
+   Wrap any node or edge label containing spaces, parentheses, slashes, underscores, asterisks, or other special characters in double quotes (e.g. `"Frontend (Vue.js)"`). Do not use backslashes to escape parentheses.
+
+3. **Single Shape per Node**  
+   Use only one bracket style per node (e.g. `[ ]` for rectangles, `( )` for circles). Do not nest or mix multiple bracket types in the same node.
+
+4. **Complete Edge Labels**  
+   Place edge labels entirely inside a pair of pipes, for example `--|HTTP Request|-->`. Partial or unquoted labels with special characters will break parsing.
+
+5. **Omit Trailing Semicolons**  
+   Do not add a semicolon at the end of each line unless you are writing multiple statements on the same line.
+
+6. **Correct Subgraph Syntax**  
+   Declare subgraphs with `subgraph "Title"` and close with `end`. Avoid using lowercase `end` as a node identifier.
+
+7. **Avoid Known Syntax Bugs**  
+   Do not use problematic arrow types such as `.->`; prefer `-.->` or `-->` to ensure compatibility.
+
+8. **Avoid Reserved Keywords**  
+   Do not use Mermaid keywords (e.g. `end`, `click`) as unquoted node IDs. If necessary, wrap them in quotes or change their case.
+
+9. **Use `<br/>` for Line Breaks**  
+   To insert a line break within node text, use HTML `<br/>` tags. Literal newline characters are not supported inside quotes.
+
+10. **Automated Validation**  
+    Always run the generated Mermaid code through a validator (e.g., Mermaid Live Editor or CLI `--validate`) before finalizing to catch any syntax errors.

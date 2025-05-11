@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>英文能力測驗範例 (新版)</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; background-color: #f4f4f4; color: #333; }
+        .exam-container { background-color: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        h1 { text-align: center; color: #333; }
+        h2 { color: #555; border-bottom: 2px solid #eee; padding-bottom: 10px; margin-top: 40px; }
+        h3 { color: #666; margin-top: 30px; }
+        h4 { color: #777; margin-top: 20px; }
+        .question-item { margin-bottom: 30px; padding: 15px; border: 1px solid #ddd; border-radius: 5px; background-color: #fafafa; }
+        .question-title { font-weight: bold; margin-bottom: 10px; }
+        .passage, .original-sentence, .prompt, .topic, .sentence-options, .common-passage-text {
+            margin-bottom:10px; padding:10px; border: 1px dashed #ccc; background-color:#f9f9f9; color: #555; font-style: italic;
+        }
+        .common-passage-container h4 { margin-bottom: 5px; }
+        label { display: block; margin-bottom: 5px; font-weight: normal; }
+        input[type="radio"], input[type="checkbox"] { margin-right: 8px; vertical-align: middle; }
+        textarea, input[type="text"] { width: calc(100% - 22px); padding: 10px; border-radius: 4px; border: 1px solid #ccc; margin-top: 5px; font-size: 1em; }
+        button { display: block; width: 200px; padding: 10px 15px; background-color: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 1em; margin: 40px auto 20px auto; }
+        button:hover { background-color: #0056b3; }
+        .options-group div { margin-bottom: 8px; }
+        .sub-question { margin-top: 15px; padding-left:10px; border-left: 2px solid #007bff; }
+    </style>
+</head>
+<body>
+    <div class="exam-container">
+        <h1>英文能力測驗範例 (新版)</h1>
+        <form id="examForm">
+
+            <h2>1. 閱讀能力 (Reading Skills)</h2>
+
+            <h3>1.1. 詞彙理解 (Vocabulary Comprehension)</h3>
+            <div class="question-item" id="q-1.1.1" data-test-item="1.1.1">
+                <p class="question-title">1.1.1. 選擇題 (詞義選擇)</p>
+                <p class="passage">Passage: "The resilient athlete quickly recovered from her injury."</p>
+                <p class="question-text">Question: In the sentence above, the word "resilient" most nearly means:</p>
+                <div class="options-group">
+                    <div><label><input type="radio" name="ans-1.1.1" value="A"> (A) weak</label></div>
+                    <div><label><input type="radio" name="ans-1.1.1" value="B"> (B) determined</label></div>
+                    <div><label><input type="radio" name="ans-1.1.1" value="C"> (C) flexible and quick to recover</label></div>
+                    <div><label><input type="radio" name="ans-1.1.1" value="D"> (D) tired</label></div>
+                </div>
+            </div>
+
+            <div class="question-item" id="q-1.1.2" data-test-item="1.1.2">
+                <p class="question-title">1.1.2. 填空題 (選擇合適詞彙)</p>
+                <p class="passage">Passage: "The ancient castle stood on a hill, its walls _______ against the stormy sky."</p>
+                <p class="question-text">Question: Choose the best word to complete the sentence.</p>
+                <div class="options-group">
+                    <div><label><input type="radio" name="ans-1.1.2" value="A"> (A) illuminated</label></div>
+                    <div><label><input type="radio" name="ans-1.1.2" value="B"> (B) silhouetted</label></div>
+                    <div><label><input type="radio" name="ans-1.1.2" value="C"> (C) decorated</label></div>
+                    <div><label><input type="radio" name="ans-1.1.2" value="D"> (D) vanished</label></div>
+                </div>
+            </div>
+
+            <h3>1.2. 文法結構 (Grammatical Structure)</h3>
+            <div class="question-item" id="q-1.2.1" data-test-item="1.2.1">
+                <p class="question-title">1.2.1. 句子改錯</p>
+                <p class="original-sentence">Original Sentence: "She go to the library yesterday for study."</p>
+                <p class="question-text">Question: Identify the error(s) in the sentence above and rewrite it correctly.</p>
+                <textarea name="ans-1.2.1" rows="3"></textarea>
+            </div>
+
+            <div class="question-item" id="q-1.2.2" data-test-item="1.2.2">
+                <p class="question-title">1.2.2. 選擇題 (選擇正確語法結構)</p>
+                <p class="question-text">Question: Which of the following sentences is grammatically correct?</p>
+                <div class="options-group">
+                    <div><label><input type="radio" name="ans-1.2.2" value="A"> (A) Him and I is going to the park.</label></div>
+                    <div><label><input type="radio" name="ans-1.2.2" value="B"> (B) He and I are going to the park.</label></div>
+                    <div><label><input type="radio" name="ans-1.2.2" value="C"> (C) Me and him are going to the park.</label></div>
+                    <div><label><input type="radio" name="ans-1.2.2" value="D"> (D) He and me is going to the park.</label></div>
+                </div>
+            </div>
+
+            <div class="question-item" id="q-1.2.3" data-test-item="1.2.3">
+                <p class="question-title">1.2.3. 選擇題 (選擇合適的轉承詞)</p>
+                <p class="sentence-options">Sentence: "She studied hard for the exam; _______, she felt confident about her performance."</p>
+                <p class="question-text">Question: Choose the word that best completes the sentence to ensure cohesion.</p>
+                <div class="options-group">
+                    <div><label><input type="radio" name="ans-1.2.3" value="A"> (A) however</label></div>
+                    <div><label><input type="radio" name="ans-1.2.3" value="B"> (B) therefore</label></div>
+                    <div><label><input type="radio" name="ans-1.2.3" value="C"> (C) meanwhile</label></div>
+                    <div><label><input type="radio" name="ans-1.2.3" value="D"> (D) despite</label></div>
+                </div>
+            </div>
+
+            <h3>1.3. 主要思想理解 (Understanding Main Ideas)</h3>
+            <div class="question-item" id="q-1.3.1" data-test-item="1.3.1">
+                <p class="question-title">1.3.1. 選擇題 (段落主旨)</p>
+                <p class="passage">Passage: [一段描述環保重要性的文字，約50-100字]</p>
+                <p class="question-text">Question: What is the main idea of this paragraph?</p>
+                <div class="options-group">
+                    <div><label><input type="radio" name="ans-1.3.1" value="A"> (A) Recycling is too difficult for most people.</label></div>
+                    <div><label><input type="radio" name="ans-1.3.1" value="B"> (B) Protecting the environment is crucial for future generations.</label></div>
+                    <div><label><input type="radio" name="ans-1.3.1" value="C"> (C) There are many types of pollution.</label></div>
+                    <div><label><input type="radio" name="ans-1.3.1" value="D"> (D) Governments should ban plastic bags.</label></div>
+                </div>
+            </div>
+
+            <h3>1.4. 細節理解 (Understanding Details)</h3>
+            <div class="question-item" id="q-1.4.1" data-test-item="1.4.1">
+                <p class="question-title">1.4.1. 選擇題 (細節查找)</p>
+                <p class="passage">Passage: "The report, published in 2023 by the Energy Institute, indicated a 5% increase in renewable energy consumption globally, while fossil fuel usage also saw a slight rise."</p>
+                <p class="question-text">Question: According to the passage, when was the report published?</p>
+                <div class="options-group">
+                    <div><label><input type="radio" name="ans-1.4.1" value="A"> (A) 2022</label></div>
+                    <div><label><input type="radio" name="ans-1.4.1" value="B"> (B) 2023</label></div>
+                    <div><label><input type="radio" name="ans-1.4.1" value="C"> (C) It doesn't say.</label></div>
+                    <div><label><input type="radio" name="ans-1.4.1" value="D"> (D) 5 years ago.</label></div>
+                </div>
+            </div>
+
+            <h3>1.5. 進階閱讀理解 (Advanced Reading Comprehension)</h3>
+            <div class="common-passage-container">
+                <h4>通用評測文本 (Common Passage for 1.5.1-1.5.3)</h4>
+                <p class="common-passage-text" id="common-passage-1_5">
+                    [一段適合進行多角度分析的短文，約150-250字。例如，關於都市化對環境影響的評論性文字，包含明確觀點、潛在暗示以及特定組織結構。]
+                </p>
+            </div>
+
+            <div class="question-item" id="q-1.5.1" data-test-item="1.5.1" data-common-passage-id="common-passage-1_5">
+                <p class="question-title">1.5.1. 推論能力 (Inference)</p>
+                <p class="question-text">Question: Based on the passage, what can be inferred about the author's view on current urban development strategies?</p>
+                <div class="options-group">
+                    <div><label><input type="radio" name="ans-1.5.1" value="A"> (A) They are entirely sustainable.</label></div>
+                    <div><label><input type="radio" name="ans-1.5.1" value="B"> (B) They may have unforeseen negative consequences.</label></div>
+                    <div><label><input type="radio" name="ans-1.5.1" value="C"> (C) They prioritize economic growth over all other concerns.</label></div>
+                    <div><label><input type="radio" name="ans-1.5.1" value="D"> (D) They are widely accepted by all residents.</label></div>
+                </div>
+            </div>
+
+            <div class="question-item" id="q-1.5.2" data-test-item="1.5.2" data-common-passage-id="common-passage-1_5">
+                <p class="question-title">1.5.2. 作者目的與語氣 (Author's Purpose and Tone)</p>
+                <div class="sub-question">
+                    <p class="question-text">Question 1: What is the author's primary purpose in writing this passage?</p>
+                    <div class="options-group">
+                        <div><label><input type="radio" name="ans-1.5.2-purpose" value="A"> (A) To provide a historical overview of urbanization.</label></div>
+                        <div><label><input type="radio" name="ans-1.5.2-purpose" value="B"> (B) To argue for stricter regulations on urban expansion.</label></div>
+                        <div><label><input type="radio" name="ans-1.5.2-purpose" value="C"> (C) To describe the benefits of city living.</label></div>
+                        <div><label><input type="radio" name="ans-1.5.2-purpose" value="D"> (D) To entertain readers with fictional stories about cities.</label></div>
+                    </div>
+                </div>
+                <div class="sub-question">
+                    <p class="question-text">Question 2: The author's tone in this passage can best be described as:</p>
+                    <div class="options-group">
+                        <div><label><input type="radio" name="ans-1.5.2-tone" value="A"> (A) Optimistic and encouraging</label></div>
+                        <div><label><input type="radio" name="ans-1.5.2-tone" value="B"> (B) Critical and concerned</label></div>
+                        <div><label><input type="radio" name="ans-1.5.2-tone" value="C"> (C) Neutral and objective</label></div>
+                        <div><label><input type="radio" name="ans-1.5.2-tone" value="D"> (D) Sarcastic and dismissive</label></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="question-item" id="q-1.5.3" data-test-item="1.5.3" data-common-passage-id="common-passage-1_5">
+                <p class="question-title">1.5.3. 文本結構與組織 (Text Structure and Organization)</p>
+                <p class="question-text">Question: How is the information in this passage primarily organized?</p>
+                <div class="options-group">
+                    <div><label><input type="radio" name="ans-1.5.3" value="A"> (A) Chronological order of events.</label></div>
+                    <div><label><input type="radio" name="ans-1.5.3" value="B"> (B) Comparison and contrast of different city types.</label></div>
+                    <div><label><input type="radio" name="ans-1.5.3" value="C"> (C) Presentation of a problem (urbanization impact) followed by implied solutions or concerns.</label></div>
+                    <div><label><input type="radio" name="ans-1.5.3" value="D"> (D) Cause and effect analysis of a single event.</label></div>
+                </div>
+            </div>
+
+            <h2>2. 寫作能力 (Writing Skills)</h2>
+
+            <h3>2.1. 文法與力學 (Grammar and Mechanics)</h3>
+            <div class="question-item" id="q-2.1.1" data-test-item="2.1.1">
+                <p class="question-title">2.1.1. 句子寫作 (看圖/主題寫作)</p>
+                <p class="prompt">Prompt: [一張人們在公園野餐的圖片]</p>
+                <p class="question-text">Question: Write one complete and grammatically correct sentence describing what is happening in the picture.</p>
+                <textarea name="ans-2.1.1" rows="3"></textarea>
+            </div>
+            <div class="question-item" id="q-2.1.2" data-test-item="2.1.2">
+                <p class="question-title">2.1.2. 改錯題 (改正句子)</p>
+                <p class="original-sentence">Sentence with errors: "their going to visit they're grandparents next week because its they anniversary."</p>
+                <p class="question-text">Question: Correct all errors in this sentence.</p>
+                <textarea name="ans-2.1.2" rows="3"></textarea>
+            </div>
+
+            <h3>2.2. 句子結構 (Sentence Structure)</h3>
+            <div class="question-item" id="q-2.2.1" data-test-item="2.2.1">
+                <p class="question-title">2.2.1. 句子合併</p>
+                <p class="original-sentence">Sentences: "The cat is black. The cat is fluffy. The cat is sleeping on the mat."</p>
+                <p class="question-text">Question: Combine these sentences into one clear and concise sentence.</p>
+                <textarea name="ans-2.2.1" rows="3"></textarea>
+            </div>
+            <div class="question-item" id="q-2.2.2" data-test-item="2.2.2">
+                <p class="question-title">2.2.2. 句子重組 (詞語排序成句)</p>
+                <p class="original-sentence">Words: /is / a / this / beautiful / sunny / day / . /</p>
+                <p class="question-text">Question: Arrange the words to form a grammatically correct sentence.</p>
+                <textarea name="ans-2.2.2" rows="3"></textarea>
+            </div>
+
+            <h3>2.3. 連貫與一致 (Cohesion and Coherence)</h3>
+            <div class="question-item" id="q-2.3.1" data-test-item="2.3.1">
+                <p class="question-title">2.3.1. 段落寫作 (給定主題)</p>
+                <p class="topic">Topic: "The importance of regular exercise."</p>
+                <p class="question-text">Question: Write a short paragraph (3-5 sentences) about the importance of regular exercise. Make sure your ideas flow logically and are well-connected.</p>
+                <textarea name="ans-2.3.1" rows="5"></textarea>
+            </div>
+
+            <h3>2.4. 組織結構 (Organization)</h3>
+            <div class="question-item" id="q-2.4.1" data-test-item="2.4.1">
+                <p class="question-title">2.4.1. 段落排序</p>
+                <p class="prompt">Prompt: The following four sentences (or short paragraphs A, B, C, D) form a coherent larger paragraph (or short essay). Arrange them in the correct logical order.<br>(A) [Sentence/Paragraph A]<br>(B) [Sentence/Paragraph B]<br>(C) [Sentence/Paragraph C]<br>(D) [Sentence/Paragraph D]</p>
+                <p class="question-text">Question: What is the correct order of the sentences/paragraphs? (e.g., B, A, D, C)</p>
+                <input type="text" name="ans-2.4.1" placeholder="Enter order e.g., B,A,D,C">
+            </div>
+            <div class="question-item" id="q-2.4.2" data-test-item="2.4.2">
+                <p class="question-title">2.4.2. 短文寫作 (給定提示)</p>
+                <p class="prompt">Prompt: "Write a short story about a lost dog finding its way home. Your story should have a clear beginning, middle, and end."</p>
+                <p class="question-text">Question: Write your story in approximately 100-150 words.</p>
+                <textarea name="ans-2.4.2" rows="10"></textarea>
+            </div>
+
+            <h3>2.5. 任務完成度/內容表達 (Task Achievement/Content)</h3>
+            <div class="question-item" id="q-2.5.1" data-test-item="2.5.1">
+                <p class="question-title">2.5.1. 簡答題 (回答問題)</p>
+                <p class="prompt">Question: "What are two advantages of learning a new language? Explain each advantage briefly."</p>
+                <textarea name="ans-2.5.1" rows="5"></textarea>
+            </div>
+            <div class="question-item" id="q-2.5.2" data-test-item="2.5.2">
+                <p class="question-title">2.5.2. 郵件/信函寫作</p>
+                <p class="prompt">Prompt: "You recently borrowed a book from your friend but accidentally damaged it. Write an email to your friend (about 80-100 words) to apologize, explain what happened, and suggest a solution."</p>
+                <textarea name="ans-2.5.2" rows="10"></textarea>
+            </div>
+
+            <h3>2.6. 風格與語氣 (Style and Tone)</h3>
+            <div class="question-item" id="q-2.6.1" data-test-item="2.6.1">
+                <p class="question-title">2.6.1. 改寫句子 (正式/非正式轉換)</p>
+                <p class="original-sentence">Formal Sentence: "Kindly be advised that the aforementioned meeting has been rescheduled to the subsequent week due to unforeseen circumstances."</p>
+                <p class="question-text">Question: Rewrite this sentence in an informal way, as if you were telling a colleague you know well.</p>
+                <textarea name="ans-2.6.1" rows="3"></textarea>
+            </div>
+
+            <h3>2.7. 中翻英 (Chinese to English Translation)</h3>
+            <div class="question-item" id="q-2.7.1" data-test-item="2.7.1">
+                <p class="question-title">2.7.1. 句子翻譯</p>
+                <p class="prompt">Prompt: "這本書不僅內容豐富，而且插圖精美，非常值得一讀。"</p>
+                <p class="question-text">Question: Translate the Chinese sentence into English.</p>
+                <textarea name="ans-2.7.1" rows="3"></textarea>
+            </div>
+            <div class="question-item" id="q-2.7.2" data-test-item="2.7.2">
+                <p class="question-title">2.7.2. 短文翻譯</p>
+                <p class="prompt">Prompt: [一段簡短的中文描述，約50-80字，例如描述一個城市公園的清晨景象。]</p>
+                <p class="question-text">Question: Translate the Chinese passage into English.</p>
+                <textarea name="ans-2.7.2" rows="5"></textarea>
+            </div>
+
+            <h3>2.8. 英翻中 (English to Chinese Translation)</h3>
+            <div class="question-item" id="q-2.8.1" data-test-item="2.8.1">
+                <p class="question-title">2.8.1. 句子翻譯</p>
+                <p class="prompt">Prompt: "Despite the initial setbacks, the team demonstrated remarkable perseverance and ultimately achieved their ambitious goal."</p>
+                <p class="question-text">Question: Translate the English sentence into Chinese.</p>
+                <textarea name="ans-2.8.1" rows="3"></textarea>
+            </div>
+            <div class="question-item" id="q-2.8.2" data-test-item="2.8.2">
+                <p class="question-title">2.8.2. 短文翻譯</p>
+                <p class="prompt">Prompt: [A short English passage, approx. 50-80 words, e.g., describing the benefits of a balanced diet.]</p>
+                <p class="question-text">Question: Translate the English passage into Chinese.</p>
+                <textarea name="ans-2.8.2" rows="5"></textarea>
+            </div>
+
+        </form>
+        <button onclick="generateJSON()">生成 JSON 報告</button>
+    </div>
+
+    <script>
+        function generateJSON() {
+            const results = [];
+            const questionItems = document.querySelectorAll('.question-item');
+
+            // Helper function to extract text from a selector, returning null if not found
+            function getText(element, selector) {
+                const el = element.querySelector(selector);
+                return el ? el.innerText.trim() : null;
+            }
+
+            // Helper function to get radio button answer
+            function getRadioAnswer(element, name) {
+                const checkedRadio = element.querySelector(`input[type="radio"][name="${name}"]:checked`);
+                return checkedRadio ? checkedRadio.value : null;
+            }
+
+            // Helper function to get options for standard radio button questions
+            function getStandardRadioOptions(element) {
+                const optionsArray = [];
+                element.querySelectorAll('.options-group div label').forEach(labelEl => {
+                    const inputEl = labelEl.querySelector('input[type="radio"]');
+                    const text = labelEl.innerText.replace(/\([A-Z]\)/, '').trim(); // Remove (A), (B) etc. for cleaner text
+                    if (inputEl && inputEl.value) { 
+                        optionsArray.push({ id: inputEl.value, text: text });
+                    }
+                });
+                return optionsArray.length > 0 ? optionsArray : null;
+            }
+
+            questionItems.forEach(item => {
+                const testItemDataset = item.dataset.testItem; // Hold dataset value
+                try {
+                    const testItem = testItemDataset; // Use it here
+                    let baseResult = { testItem }; 
+                    let specificResult = {};
+
+                    // Default passage/prompt/instruction extraction
+                    let passage = getText(item, '.passage');
+                    let prompt = getText(item, '.prompt');
+                    let originalSentence = getText(item, '.original-sentence');
+                    let questionText = getText(item, '.question-text:not(.sub-question .question-text)');
+                    let sentenceOptionsContext = getText(item, '.sentence-options'); // For 1.2.3
+                    let topicContext = getText(item, '.topic'); // For 2.3.1
+
+                    // Common passage for 1.5.x series
+                    const commonPassageId = item.dataset.commonPassageId;
+                    if (commonPassageId) {
+                        passage = getText(document, `#${commonPassageId}`);
+                    }
+
+                    if (testItem === '1.1.1' || testItem === '1.1.2' || testItem === '1.2.2' || testItem === '1.3.1' || testItem === '1.4.1' || testItem === '1.5.1' || testItem === '1.5.3') {
+                        specificResult = {
+                            questionType: 'MultipleChoice_Radio',
+                            passage: passage,
+                            question: questionText,
+                            options: getStandardRadioOptions(item),
+                            userAnswer: getRadioAnswer(item, `ans-${testItem}`)
+                        };
+                    } else if (testItem === '1.2.3') { // Transition words
+                        specificResult = {
+                            questionType: 'MultipleChoice_Radio',
+                            sentenceContext: sentenceOptionsContext, // "She studied hard..."
+                            question: questionText,
+                            options: getStandardRadioOptions(item),
+                            userAnswer: getRadioAnswer(item, `ans-${testItem}`)
+                        };
+                    } else if (testItem === '1.2.1' || testItem === '2.1.2') { // Sentence Correction
+                        specificResult = {
+                            questionType: 'FreeText_SentenceCorrection',
+                            originalSentence: originalSentence,
+                            instruction: questionText,
+                            userAnswer: item.querySelector('textarea') ? item.querySelector('textarea').value.trim() : null
+                        };
+                    } else if (testItem === '1.5.2') { // Author's Purpose and Tone
+                        const purposeOptions = [];
+                        item.querySelectorAll('input[name="ans-1.5.2-purpose"]').forEach(opt => {
+                            const label = opt.closest('label'); 
+                            if(label) purposeOptions.push({ id: opt.value, text: label.innerText.replace(/\([A-Z]\)/, '').trim() });
+                        });
+                        const toneOptions = [];
+                        item.querySelectorAll('input[name="ans-1.5.2-tone"]').forEach(opt => {
+                            const label = opt.closest('label');
+                            if(label) toneOptions.push({ id: opt.value, text: label.innerText.replace(/\([A-Z]\)/, '').trim() });
+                        });
+                        specificResult = {
+                            questionType: 'Compound_MultipleChoice_Radio',
+                            commonPassage: passage,
+                            questionTitle: getText(item, '.question-title'),
+                            subQuestions: [
+                                {
+                                    id: "purpose",
+                                    questionText: getText(item, '.sub-question:nth-of-type(1) .question-text'),
+                                    options: purposeOptions,
+                                    userAnswer: getRadioAnswer(item, 'ans-1.5.2-purpose')
+                                },
+                                {
+                                    id: "tone",
+                                    questionText: getText(item, '.sub-question:nth-of-type(2) .question-text'),
+                                    options: toneOptions,
+                                    userAnswer: getRadioAnswer(item, 'ans-1.5.2-tone')
+                                }
+                            ]
+                        };
+                    } else if (testItem === '2.1.1') { // Prompted Sentence (e.g., from image)
+                        specificResult = {
+                            questionType: 'FreeText_PromptedSentence',
+                            prompt: prompt,
+                            instruction: questionText,
+                            userAnswer: item.querySelector('textarea') ? item.querySelector('textarea').value.trim() : null
+                        };
+                    } else if (testItem === '2.2.1') { // Sentence Combination
+                        specificResult = {
+                            questionType: 'FreeText_SentenceCombination',
+                            originalSentences: originalSentence, // HTML shows "Sentences: ..." under .original-sentence
+                            instruction: questionText,
+                            userAnswer: item.querySelector('textarea') ? item.querySelector('textarea').value.trim() : null
+                        };
+                    } else if (testItem === '2.2.2') { // Sentence Scramble
+                        specificResult = {
+                            questionType: 'FreeText_SentenceScramble',
+                            wordsToArrange: originalSentence, // HTML shows "Words: ..." under .original-sentence
+                            instruction: questionText,
+                            userAnswer: item.querySelector('textarea') ? item.querySelector('textarea').value.trim() : null
+                        };
+                    } else if (testItem === '2.3.1') { // Paragraph Writing (topic given)
+                        specificResult = {
+                            questionType: 'FreeText_Paragraph',
+                            topic: topicContext,
+                            instruction: questionText,
+                            userAnswer: item.querySelector('textarea') ? item.querySelector('textarea').value.trim() : null
+                        };
+                    } else if (testItem === '2.4.1') { // Paragraph Sorting
+                        specificResult = {
+                            questionType: 'Ordering_Text',
+                            prompt: prompt, // Contains the A,B,C,D items description
+                            // itemsToOrder could be parsed from prompt if a stricter HTML format was enforced for A,B,C,D parts
+                            instruction: questionText,
+                            userAnswer: item.querySelector('input[type="text"]') ? item.querySelector('input[type="text"]').value.trim() : null
+                        };
+                    } else if (testItem === '2.4.2') { // Short Story Writing
+                        specificResult = {
+                            questionType: 'FreeText_ShortStory',
+                            prompt: prompt,
+                            instruction: questionText, // Contains length hint
+                            userAnswer: item.querySelector('textarea') ? item.querySelector('textarea').value.trim() : null
+                        };
+                    } else if (testItem === '2.5.1') { // Short Answer
+                        specificResult = {
+                            questionType: 'FreeText_ShortAnswer',
+                            prompt: prompt, // The question itself is in the prompt div
+                            instruction: questionText, // Might be null or an additional instruction
+                            userAnswer: item.querySelector('textarea') ? item.querySelector('textarea').value.trim() : null
+                        };
+                    } else if (testItem === '2.5.2') { // Email Writing
+                        specificResult = {
+                            questionType: 'FreeText_Email',
+                            prompt: prompt,
+                            instruction: questionText, // Typically null here, main instructions in prompt
+                            userAnswer: item.querySelector('textarea') ? item.querySelector('textarea').value.trim() : null
+                        };
+                    } else if (testItem === '2.6.1') { // Sentence Rewrite (Formal/Informal)
+                        specificResult = {
+                            questionType: 'FreeText_SentenceRewrite',
+                            originalSentence: originalSentence,
+                            instruction: questionText,
+                            userAnswer: item.querySelector('textarea') ? item.querySelector('textarea').value.trim() : null
+                        };
+                    } else if (testItem === '2.7.1' || testItem === '2.8.1') { // Sentence Translation
+                        specificResult = {
+                            questionType: testItem === '2.7.1' ? 'FreeText_Translation_ZHtoEN_Sentence' : 'FreeText_Translation_ENtoZH_Sentence',
+                            sourceSentence: prompt,
+                            instruction: questionText,
+                            userAnswer: item.querySelector('textarea') ? item.querySelector('textarea').value.trim() : null
+                        };
+                    } else if (testItem === '2.7.2' || testItem === '2.8.2') { // Passage Translation
+                        specificResult = {
+                            questionType: testItem === '2.7.2' ? 'FreeText_Translation_ZHtoEN_Passage' : 'FreeText_Translation_ENtoZH_Passage',
+                            sourcePassage: prompt,
+                            instruction: questionText,
+                            userAnswer: item.querySelector('textarea') ? item.querySelector('textarea').value.trim() : null
+                        };
+                    } else {
+                        // Fallback for any unhandled or generic items - try to capture basic info
+                        specificResult = {
+                            questionType: 'Unknown_or_Generic',
+                            title: getText(item, '.question-title'),
+                            passage: passage,
+                            prompt: prompt,
+                            originalSentence: originalSentence,
+                            question: questionText,
+                            userAnswer: item.querySelector('textarea') ? item.querySelector('textarea').value.trim() : 
+                                        (item.querySelector('input[type="text"]') ? item.querySelector('input[type="text"]').value.trim() : null)
+                        };
+                        // Attempt to get radio answers if it's an unknown radio type
+                        if(item.querySelectorAll('input[type="radio"]').length > 0 && !specificResult.userAnswer) {
+                            specificResult.options = getStandardRadioOptions(item);
+                            const radioName = item.querySelector('input[type="radio"]').name; // Try to get a name
+                            if(radioName) specificResult.userAnswer = getRadioAnswer(item, radioName); 
+                        }
+                    }
+
+                    // Merge base (testItem) and specific structure
+                    const finalResult = { ...baseResult, ...specificResult };
+                    // Ensure userAnswer is null if empty string for consistency
+                    if (typeof finalResult.userAnswer === 'string' && finalResult.userAnswer.trim() === '') {
+                        finalResult.userAnswer = null;
+                    }
+                    // For compound sub-questions, also ensure userAnswer is null if empty
+                    if (finalResult.subQuestions) {
+                        finalResult.subQuestions.forEach(sq => {
+                            if (typeof sq.userAnswer === 'string' && sq.userAnswer.trim() === '') {
+                                sq.userAnswer = null;
+                            }
+                        });
+                    }
+
+                    results.push(finalResult);
+                } catch (e) {
+                    console.error("Error processing item:", item.id, "TestItem:", testItemDataset, e);
+                    // Push an error object to results for this item
+                    results.push({ 
+                        testItem: testItemDataset || (item.id || "Unknown ID"), 
+                        error: e.toString(), 
+                        errorMessage: e.message,
+                        stack: e.stack 
+                    });
+                }
+            });
+
+            const jsonString = JSON.stringify(results, null, 4);
+            const blob = new Blob([jsonString], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'exam_results_tailored.json';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        }
+    </script>
+</body>
+</html> 
