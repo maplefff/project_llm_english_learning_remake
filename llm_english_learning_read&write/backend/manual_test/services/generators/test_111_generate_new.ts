@@ -12,10 +12,12 @@ async function runManualTest() {
     console.log("GEMINI_API_KEY loaded.");
 
     // Set test parameters
+    const questionNumber = 3;
     const difficulty = 75; // Use a different difficulty than unit tests for distinction
     const historySummary = "Learner is preparing for an exam and needs practice with B2 level vocabulary.";
 
     console.log(`\nTest Parameters:
+  Question Number: ${questionNumber}
   Difficulty: ${difficulty}
   History Summary: ${historySummary}
 `);
@@ -23,7 +25,7 @@ async function runManualTest() {
     try {
         console.log("Calling generate111Question...");
         // Call the actual generator function
-        const questionData = await generate111Question(1, historySummary, difficulty);
+        const questionData = await generate111Question(questionNumber, historySummary, difficulty);
 
         console.log("\n--- Test Complete ---");
         if (questionData) {

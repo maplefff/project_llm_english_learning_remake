@@ -1,129 +1,165 @@
-import { generate111Question as generate111 } from '../../../src/services/generators/111_generate';
+import { generate111Question, QuestionData111 } from '../../../src/services/generators/111_generate';
 import GeminiAPIService from '../../../src/services/GeminiAPIService';
-// import { CleanJSON } from '../../../src/utils/CleanJSON'; // CleanJSON 不再使用
+// import { CleanJSON } from '../../src/utils/CleanJSON'; // CleanJSON 不再使用
 import { Schema } from '@google/generative-ai'; // 導入 Schema 以便在測試中引用
 
 // Mock GeminiAPIService
-// 注意：由於 GeminiAPIService 是一個單例，我們模擬的是它的實例方法
-jest.mock('../../../src/services/GeminiAPIService');
-
-// 在每次測試後，清除模擬函數的調用記錄
-afterEach(() => {
-  // 清除默認導出的模擬實例上的方法調用記錄
-  (GeminiAPIService.getResponse as jest.Mock).mockClear();
+// 確保 mock 整個模塊並且可以訪問其 default 導出
+jest.mock('../../../src/services/GeminiAPIService', () => {
+    // 模擬的 getResponse 方法
+    const mockGetResponse = jest.fn();
+    // 返回一個模擬的類實例或物件，其中包含 mock 的方法
+    // 因為 GeminiAPIService 是 default export，所以需要模擬 default
+    return {
+        __esModule: true, // 表示這是一個 ES Module
+        default: {
+            // 模擬單例的 getResponse 方法
+            getResponse: mockGetResponse,
+        },
+    };
 });
 
-interface QuestionData111 {
-    passage: string;
-    targetWord: string;
-    question: string;
-    options: Array<{ [key: string]: string }>;
-    standard_answer: string;
-    explanation_of_Question: string;
-}
+// 將模擬的 getResponse 方法提取出來，以便在測試中設置返回值
+const mockGetResponse = GeminiAPIService.getResponse as jest.Mock;
 
-describe('generate111', () => {
-    it('應該使用結構化輸出成功生成問題數據', async () => {
-        const mockValidResponse = {
-            passage: 'This is a test passage.',
-            targetWord: 'test',
-            question: 'What does test mean?',
-            options: [
-                { id: 'A', text: 'Option A Text' },
-                { id: 'B', text: 'Option B Text' },
-                { id: 'C', text: 'Option C Text' },
-                { id: 'D', text: 'Option D Text' },
-            ],
-            standard_answer: 'B',
-            explanation_of_Question: 'This is the explanation in Traditional Chinese.',
-        };
+// 不再需要 Mock CleanJSON
+// jest.mock('../../src/utils/CleanJSON');
+// const mockExtractAndParse = CleanJSON.extractAndParse as jest.Mock;
 
-        // 配置 getResponse 的模擬實現
-        (GeminiAPIService.getResponse as jest.Mock).mockResolvedValue(mockValidResponse);
+// 輔助函數：創建一個符合結構的假題目數據
+const createMockQuestionData = (idSuffix: string): QuestionData111 => ({
+    passage: `Mock passage ${idSuffix}`,
+    targetWord: `mock${idSuffix}`,
+    question: `What does mock${idSuffix} mean?`,
+    options: [
+        { id: "A", text: "Fake" },
+        { id: "B", text: "Real" },
+        { id: "C", text: "Test" },
+        { id: "D", text: "Bird" },
+    ],
+    standard_answer: "A",
+    explanation_of_Question: `Mock${idSuffix} means fake or imitation.`,
+});
 
-        const difficulty = 75;
-        const historySummary = 'Previous attempt was incorrect.';
-
-        const result = await generate111(difficulty, historySummary);
-
-        expect(result).toEqual(mockValidResponse);
-        expect(GeminiAPIService.getResponse).toHaveBeenCalledTimes(1);
-        // 檢查傳遞給 getResponse 的參數
-        const [prompt, options] = (GeminiAPIService.getResponse as jest.Mock).mock.calls[0];
-        expect(prompt).toContain(`難度設定為：${difficulty}% 目標正確率`);
-        expect(prompt).toContain(historySummary);
-        expect(options).toHaveProperty('responseSchema');
+describe('generate111Question', () => {
+    beforeEach(() => {
+        // Reset mocks before each test
+        mockGetResponse.mockClear();
+        // mockExtractAndParse.mockClear();
     });
 
-    it('當 LLM 回應的 standard_answer 不存在於 options 的 id 中時，應該拋出錯誤', async () => {
-        const mockInvalidResponse = {
-            passage: 'Another passage.',
-            targetWord: 'another',
-            question: 'What about another?',
-            options: [
-                { id: 'A', text: 'Option A' },
-                { id: 'B', text: 'Option B' },
-                { id: 'C', text: 'Option C' },
-                { id: 'D', text: 'Option D' },
-            ],
-            standard_answer: 'E', // 無效的答案 ID
-            explanation_of_Question: 'Explanation.',
-        };
+    // --- 成功案例 --- 
+    it('成功生成指定數量的題目 (questionNumber > 1)', async () => {
+        const requestedNumber = 2;
+        const mockApiResponse = [
+            createMockQuestionData('1'),
+            createMockQuestionData('2'),
+        ]; // LLM 回應模擬為陣列
+        mockGetResponse.mockResolvedValue(mockApiResponse);
 
-        (GeminiAPIService.getResponse as jest.Mock).mockResolvedValue(mockInvalidResponse);
+        const result = await generate111Question(requestedNumber, "history", 70);
 
-        await expect(generate111(50, '')).rejects.toThrow(
-            'LLM 回應驗證失敗: standard_answer - standard_answer 必須對應 options 陣列中某個元素的 id'
+        expect(mockGetResponse).toHaveBeenCalledTimes(1);
+        // 驗證 prompt 是否包含正確的請求數量
+        expect(mockGetResponse.mock.calls[0][0]).toContain(`Generate exactly ${requestedNumber} multiple-choice questions.`);
+        expect(result).toEqual(mockApiResponse); // 期望結果是完整的陣列
+        expect(Array.isArray(result)).toBe(true); // 確保結果是陣列
+        expect(result?.length).toBe(requestedNumber); // 確保數量正確
+    });
+
+    it('成功生成單個題目 (questionNumber = 1)', async () => {
+        const requestedNumber = 1;
+        const mockApiResponse = [ // LLM 回應模擬為包含單個元素的陣列
+            createMockQuestionData('single'),
+        ]; 
+        mockGetResponse.mockResolvedValue(mockApiResponse);
+
+        const result = await generate111Question(requestedNumber, "history", 70);
+
+        expect(mockGetResponse).toHaveBeenCalledTimes(1);
+        expect(mockGetResponse.mock.calls[0][0]).toContain(`Generate exactly ${requestedNumber} multiple-choice questions.`);
+        expect(result).toEqual(mockApiResponse); // 期望結果是包含單個元素的陣列
+        expect(Array.isArray(result)).toBe(true);
+        expect(result?.length).toBe(requestedNumber);
+    });
+    
+    // --- 失敗案例 --- 
+
+    it('當 LLM 回應不是陣列時應該拋出錯誤', async () => {
+        const invalidApiResponse = { message: "I am an object, not an array." }; // 非陣列回應
+        mockGetResponse.mockResolvedValue(invalidApiResponse);
+
+        await expect(generate111Question(1, "", 70)).rejects.toThrow('從 LLM 收到的回應不是有效的陣列。');
+    });
+
+    it('當 LLM 回應的陣列中物件結構不符合 Zod Schema 時應該拋出錯誤', async () => {
+        const invalidApiResponse = [
+            { ...createMockQuestionData('valid'), passage: "" }, // passage 為空，不符合 min(1)
+        ];
+        mockGetResponse.mockResolvedValue(invalidApiResponse);
+
+        await expect(generate111Question(1, "", 70)).rejects.toThrow(/LLM 回應陣列驗證失敗.*passage/);
+    });
+
+    it('當 LLM 回應的陣列中物件的 standard_answer 無效時應該拋出錯誤', async () => {
+        const invalidApiResponse = [
+            { ...createMockQuestionData('invalidRef'), standard_answer: "Z" }, // 'Z' 不在 options 的 id 中
+        ];
+        mockGetResponse.mockResolvedValue(invalidApiResponse);
+
+        await expect(generate111Question(1, "", 70)).rejects.toThrow(/standard_answer 必須對應 options 陣列中某個元素的 id/);
+    });
+
+    it('當 LLM 回應的陣列為空時應該拋出 Zod 錯誤', async () => {
+        const emptyApiResponse: QuestionData111[] = []; // 空陣列
+        mockGetResponse.mockResolvedValue(emptyApiResponse);
+
+        await expect(generate111Question(1, "", 70)).rejects.toThrow(/回應的陣列至少需要包含一個題目/); // 來自 .min(1)
+    });
+
+    it('當 Gemini API 服務拋出錯誤時應該重新拋出', async () => {
+        const errorMessage = "Gemini API network error";
+        mockGetResponse.mockRejectedValue(new Error(errorMessage));
+
+        await expect(generate111Question(1, "", 70)).rejects.toThrow(errorMessage);
+    });
+
+    // 測試 prompt 中的 difficulty setting (之前失敗的案例，觀察是否依然失敗)
+    it('應該使用正確的 difficultySetting 構建 Prompt', async () => {
+        const requestedNumber = 1;
+        const difficulty = 85; 
+        const mockApiResponse = [createMockQuestionData('difficultyTest')];
+        mockGetResponse.mockResolvedValue(mockApiResponse);
+
+        await generate111Question(requestedNumber, "", difficulty);
+
+        expect(mockGetResponse).toHaveBeenCalledTimes(1);
+        const calledPrompt = mockGetResponse.mock.calls[0][0];
+        // 檢查 prompt 字符串中是否包含正確的難度百分比
+        expect(calledPrompt).toContain(`難度設定為：${difficulty}%`); 
+    });
+
+    // 測試 LLM 返回數量與請求數量不符時的警告
+    it('當 LLM 返回的題目數量與請求不符時，應記錄警告但仍返回數據', async () => {
+        const requestedNumber = 3;
+        const returnedNumber = 2; // LLM 只返回了 2 個
+        const mockApiResponse = [
+            createMockQuestionData('mismatch1'),
+            createMockQuestionData('mismatch2'),
+        ];
+        mockGetResponse.mockResolvedValue(mockApiResponse);
+        const consoleWarnSpy = jest.spyOn(console, 'warn').mockImplementation(() => {}); // 監控 console.warn
+
+        const result = await generate111Question(requestedNumber, "", 70);
+
+        expect(mockGetResponse).toHaveBeenCalledTimes(1);
+        expect(result).toEqual(mockApiResponse);
+        expect(result?.length).toBe(returnedNumber);
+        // 驗證警告被觸發
+        expect(consoleWarnSpy).toHaveBeenCalledWith(
+            expect.stringContaining(`LLM returned ${returnedNumber} questions, but ${requestedNumber} were requested`)
         );
-        expect(GeminiAPIService.getResponse).toHaveBeenCalledTimes(1);
-    });
 
-    it('當 LLM 回應缺少必要欄位時，應該拋出錯誤', async () => {
-        const mockIncompleteResponse = {
-            passage: 'Incomplete passage.',
-            targetWord: 'incomplete',
-            // question 欄位缺失
-            options: [
-                { id: 'A', text: 'Opt A' },
-                { id: 'B', text: 'Opt B' },
-                { id: 'C', text: 'Opt C' },
-                { id: 'D', text: 'Opt D' },
-            ],
-            standard_answer: 'A',
-            explanation_of_Question: 'Explanation.',
-        };
-
-        (GeminiAPIService.getResponse as jest.Mock).mockResolvedValue(mockIncompleteResponse);
-
-        await expect(generate111(60, '')).rejects.toThrow(/LLM 回應驗證失敗: question - Required/);
-        expect(GeminiAPIService.getResponse).toHaveBeenCalledTimes(1);
-    });
-
-    it('當 LLM 回應的 options 數量不為 4 時，應該拋出錯誤', async () => {
-        const mockWrongOptionsCount = {
-            passage: 'Passage.',
-            targetWord: 'word',
-            question: 'Question?',
-            options: [
-                { id: 'A', text: 'Only one' },
-            ], // 只有一個選項
-            standard_answer: 'A',
-            explanation_of_Question: 'Explanation.',
-        };
-
-        (GeminiAPIService.getResponse as jest.Mock).mockResolvedValue(mockWrongOptionsCount);
-
-        await expect(generate111(70, '')).rejects.toThrow(
-            'LLM 回應驗證失敗: options - 必須剛好有 4 個選項'
-        );
-        expect(GeminiAPIService.getResponse).toHaveBeenCalledTimes(1);
-    });
-
-    it('當 GeminiAPIService.getResponse 拋出錯誤時，應該向上拋出錯誤', async () => {
-        const errorMessage = 'API Error';
-        (GeminiAPIService.getResponse as jest.Mock).mockRejectedValue(new Error(errorMessage));
-
-        await expect(generate111(80, '')).rejects.toThrow(errorMessage);
-        expect(GeminiAPIService.getResponse).toHaveBeenCalledTimes(1);
+        consoleWarnSpy.mockRestore(); // 恢復 console.warn
     });
 }); 
