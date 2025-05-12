@@ -6,14 +6,22 @@ import { Schema, SchemaType } from '@google/generative-ai';
 import { z } from 'zod'; // 用於驗證
 import 'dotenv/config'; // 確保環境變數已加載
 
-interface QuestionData111 {
+/**
+ * @property {string} passage - 上下文句子或簡短段落
+ * @property {string} targetWord - 正在測試的單詞
+ * @property {string} question - 問題提示
+ * @property {Array<{ id: string; text: string }>} options - 選項數組，每個選項包含 ID 和文本
+ * @property {string} standard_answer - 正確答案的 ID (例如 'C')
+ * @property {string} explanation_of_Question - 題目的繁體中文解釋
+ */
+export type QuestionData111 = {
     passage: string;
     targetWord: string;
     question: string;
     options: Array<{ id: string; text: string }>;
     standard_answer: string;
     explanation_of_Question: string;
-}
+};
 
 // 定義 LLM 應回傳的 JSON 物件結構 Schema
 const QUESTION_DATA_111_SCHEMA: Schema = {
