@@ -24,52 +24,47 @@
     "targetWord": "resilient",
     "question": "In the sentence above, the word 'resilient' most nearly means:",
     "options": [
-    {"A": "weak"},
-    {"B": "determined"},
-    {"C": "flexible and quick to recover"},
-    {"D": "tired"}
+    { "id": "A", "text": "weak" },
+    { "id": "B", "text": "determined" },
+    { "id": "C", "text": "flexible and quick to recover" },
+    { "id": "D", "text": "tired" }
     ],
     "standard_answer": "C",
     "explanation_of_Question": "Resilient 指能夠承受或迅速從困難情況中恢復。此處運動員能快速復原，顯示其高度彈性與復原力，因此選項 C 正確。選項 A「weak」意為虛弱，語意相反；選項 B「determined」僅表意志堅定，未涵蓋恢復力；選項 D「tired」表示疲倦，與原意無關。"
 }
 ```
 **LLM題本生成prompts**:
-```json
-You are an expert English-quiz generator for language learners.
-
-1. Generate exactly ${questionNumber} multiple-choice questions.  
-2. Learner context: ${historySummary}  
-3. Set difficulty so the average learner accuracy targets {difficuty_setting}%.  
-4. Adjust difficulty with reference to CEFR levels (A1–C2).  
-5. Question type: test only vocabulary meaning, synonyms, and near-synonyms (no grammar).  
-6. Output STRICT JSON: a single array of ${questionNumber} objects, nothing else.  
-   Each object must contain:  
-   • "passage" (string) – context sentence or short passage  
-   • "targetWord" (string) – the word being tested  
-   • "question" (string) – the question prompt  
-   • "options" (array of 4 objects { "A": string }, { "B": string }, { "C": string }, { "D": string })  
-   • "standard_answer" (string) – one of "A" | "B" | "C" | "D"  
-   • "explanation_of_Question" (string) – concise Traditional-Chinese explanation of why the answer is correct and why the other options are wrong.  
-
-7. Example of ONE valid object (format must be matched exactly):
-
-{
-  "passage": "The resilient athlete quickly recovered from her injury.",
-  "targetWord": "resilient",
-  "question": "In the sentence above, the word 'resilient' most nearly means:",
-  "options": [
-    { "A": "weak" },
-    { "B": "determined" },
-    { "C": "flexible and quick to recover" },
-    { "D": "tired" }
-  ],
-  "standard_answer": "C",
-  "explanation_of_Question": "Resilient 指能夠承受或迅速從困難情況中恢復。此處運動員能快速復原，顯示其高度彈性與復原力，因此選項 C 正確。選項 A「weak」意為虛弱，語意相反；選項 B「determined」僅表意志堅定，未涵蓋恢復力；選項 D「tired」表示疲倦，與原意無關。"
-}
-
-Return ONLY the JSON array when you generate the questions.
 ```
-
+`You are an expert English-quiz generator for language learners.
+1. Generate exactly {QUESTION_NUMBER} multiple-choice questions.  
+2. Learner context: {HISTORY_SUMMARY}  
+3. 難度設定為：{DIFFICULTY_SETTING}% 目標正確率 (Adjust difficulty with reference to CEFR levels A1–C2).  
+4. Question type: test only vocabulary meaning, synonyms, and near-synonyms (no grammar).  
+5. Output STRICT JSON: a single object (NOT an array), nothing else.  
+The object must contain:  
+• "passage" (string) – context sentence or short passage  
+• "targetWord" (string) – the word being tested  
+• "question" (string) – the question prompt  
+• "options" (array of 4 objects { "id": string, "text": string }, e.g., [{"id":"A", "text":"..."}, ...])  
+• "standard_answer" (string) – one of the "id" values from the options array (e.g., "A", "B", "C", or "D")  
+• "explanation_of_Question" (string) – concise Traditional-Chinese explanation of why the answer is correct and why the other options are wrong.  
+6. Example of ONE valid object (format must be matched exactly):
+{
+"passage": "The resilient athlete quickly recovered from her injury.",
+"targetWord": "resilient",
+"question": "In the sentence above, the word 'resilient' most nearly means:",
+"options": [
+    { "id": "A", "text": "weak" },
+    { "id": "B", "text": "determined" },
+    { "id": "C", "text": "flexible and quick to recover" },
+    { "id": "D", "text": "tired" }
+],
+"standard_answer": "C",
+"explanation_of_Question": "Resilient 指能夠承受或迅速從困難情況中恢復。此處運動員能快速復原，顯示其高度彈性與復原力，因此選項 C 正確。選項 A「weak」意為虛弱，語意相反；選項 B「determined」僅表意志堅定，未涵蓋恢復力；選項 D「tired」表示疲倦，與原意無關。"
+}
+Return ONLY the JSON object when you generate the question. Do not include markdown keywords such as \`\`\`json in your response. 
+`;
+```
 
 **JSON 存檔格式範例 (History Entry):**
 ```json
@@ -79,16 +74,16 @@ Return ONLY the JSON array when you generate the questions.
     "targetWord": "resilient",
     "question": "In the sentence above, the word 'resilient' most nearly means:",
     "options": [
-      {"A": "weak"},
-      {"B": "determined"},
-      {"C": "flexible and quick to recover"},
-      {"D": "tired"}
+      { "id": "A", "text": "weak" },
+      { "id": "B", "text": "determined" },
+      { "id": "C", "text": "flexible and quick to recover" },
+      { "id": "D", "text": "tired" }
     ],
-    "standard_answer": "C",
+    "standard_answer": "C"
   },
   "userAnswer": "C",
   "isCorrect": true,
-  "timestamp": 1678886400
+  "timestamp": 1678886400000
 }
 ```
 

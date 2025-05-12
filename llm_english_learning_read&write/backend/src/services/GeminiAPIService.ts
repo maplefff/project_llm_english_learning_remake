@@ -1,4 +1,4 @@
-import { GoogleGenerativeAI, HarmCategory, HarmBlockThreshold } from "@google/generative-ai";
+import { GoogleGenerativeAI, HarmCategory, HarmBlockThreshold, Schema, SchemaType, GenerateContentResult, GenerationConfig } from "@google/generative-ai";
 import * as dotenv from 'dotenv';
 import * as path from 'path'; // Node.js 內置模組
 
@@ -61,29 +61,86 @@ class GeminiAPIService {
   }
 
   /**
-   * 根據提供的提示生成內容。
+   * 根據提供的提示生成內容。可以選擇性地提供 responseSchema 以獲取結構化 JSON 輸出。
    * @param prompt 要傳送至 Gemini API 的文字提示。
-   * @returns 一個解析為生成文字內容的 Promise。
-   * @throws 如果 API 呼叫失敗或缺少 API 金鑰，則拋出錯誤。
+   * @param options 可選參數，包含 responseSchema。
+   * @param options.responseSchema 一個遵循 OpenAPI 3.0 子集的 Schema 物件，用於結構化輸出。
+   * @returns 如果提供了 schema，則返回解析後的 JSON 物件/陣列；否則返回純文字字串。
+   * @throws 如果 API 呼叫失敗、缺少 API 金鑰或 JSON 解析失敗，則拋出錯誤。
    */
-  async getCompletion(prompt: string): Promise<string> {
-    const apiKey = process.env.GEMINI_API_KEY; // 在方法調用時動態讀取
+  async getResponse(
+    prompt: string, 
+    options?: { responseSchema?: Schema }
+  ): Promise<string | object | any[]> {
+    const apiKey = process.env.GEMINI_API_KEY; 
     if (!apiKey) {
-      console.error("GeminiAPIService：呼叫 getCompletion 時缺少 API_KEY。");
+      console.error("GeminiAPIService：呼叫 getResponse 時缺少 API_KEY。");
       throw new Error("缺少 API 金鑰。無法連接至 Gemini API。");
     }
 
     try {
-      // console.log('正在傳送提示至 Gemini：「' + prompt.substring(0, 100) + '...」'); // 正式環境可考慮移除或改為 debug 級別
-      const result = await this.model.generateContent(prompt);
+      let result: GenerateContentResult;
+      const requestBodyBase = { contents: [{ role: "user", parts: [{ text: prompt }] }] };
+
+      if (options?.responseSchema) {
+        // 如果提供了 Schema，將 generationConfig 合併到請求體中
+        const requestBodyWithSchema = {
+          ...requestBodyBase,
+          generationConfig: { 
+            responseMimeType: "application/json",
+            responseSchema: options.responseSchema,
+          }
+        };
+        console.log("[DEBUG GeminiAPIService.ts] 使用 Schema 請求 Gemini:", JSON.stringify(requestBodyWithSchema.generationConfig.responseSchema, null, 2));
+        // generateContent 只接受一個參數：請求體
+        result = await this.model.generateContent(requestBodyWithSchema);
+
+      } else {
+        // 否則，只發送基本的請求體
+        console.log("[DEBUG GeminiAPIService.ts] 使用純文字請求 Gemini");
+        result = await this.model.generateContent(requestBodyBase);
+      }
+
       const response = result.response;
-      const generatedText = response.text(); // 重新命名以避免與全域 text 類型衝突
-      // console.log('已從 Gemini 收到回應：「' + generatedText.substring(0, 100) + '...」'); // 正式環境可考慮移除或改為 debug 級別
-      return generatedText;
-    } catch (e) { // 將變數名稱從 error 改為 e
+      
+      // 檢查是否有有效的回應和內容
+      if (!response || !response.candidates || response.candidates.length === 0 || !response.candidates[0].content || !response.candidates[0].content.parts || response.candidates[0].content.parts.length === 0) {
+          console.error("Gemini API 回應無效或為空:", JSON.stringify(response, null, 2));
+          throw new Error("Gemini API 返回了無效或空的回應。");
+      }
+
+      const responseText = response.candidates[0].content.parts[0].text;
+
+      if (options?.responseSchema) {
+        // 如果請求了 Schema，嘗試解析 JSON
+        if (responseText && typeof responseText === 'string') {
+          try {
+            const parsedJson = JSON.parse(responseText);
+            // console.log("[DEBUG GeminiAPIService.ts] 成功解析 JSON:", JSON.stringify(parsedJson, null, 2)); // Debug Log - 可選，可能輸出大量資訊
+            return parsedJson; 
+          } catch (parseError) {
+            console.error("GeminiAPIService：解析 JSON 回應時失敗。原始文字:", responseText, parseError);
+            throw new Error(`解析 Gemini API 的 JSON 回應時失敗: ${(parseError instanceof Error) ? parseError.message : parseError}`);
+          }
+        } else {
+          console.error("GeminiAPIService：期望 JSON 但收到了無效的文字回應:", responseText);
+          throw new Error("Gemini API 返回了預期為 JSON 但無效的文字回應。");
+        }
+      } else {
+        // 否則，返回純文字
+        return responseText || ""; // 確保即使 text 為 undefined 也返回空字串
+      }
+
+    } catch (e) { 
       console.error("呼叫 Gemini API 時發生錯誤：", e);
       if (e instanceof Error) {
-        throw new Error('Gemini API 請求失敗： ' + e.message);
+        // 檢查是否有更詳細的 API 錯誤資訊 (例如來自 response)
+        // @ts-ignore - 嘗試訪問可能的錯誤屬性
+        const apiErrorDetails = (e as any).response?.data || (e as any).details; 
+        if (apiErrorDetails) {
+          console.error("Gemini API 詳細錯誤:", apiErrorDetails);
+        }
+        throw new Error(`Gemini API 請求失敗： ${e.message}${apiErrorDetails ? ` (詳細資訊: ${JSON.stringify(apiErrorDetails)})` : ''}`);
       }
       throw new Error("Gemini API 請求因未知錯誤而失敗。");
     }
