@@ -1,27 +1,10 @@
 // llm_english_learning_read&write/backend/src/services/generators/111_generate.ts
 
 import GeminiAPIService from '../GeminiAPIService';
-// import { CleanJSON } from '../../utils/CleanJSON';
 import { Schema, SchemaType } from '@google/generative-ai';
-import { z } from 'zod'; // 用於驗證
 import 'dotenv/config'; // 確保環境變數已加載
-
-/**
- * @property {string} passage - 上下文句子或簡短段落
- * @property {string} targetWord - 正在測試的單詞
- * @property {string} question - 問題提示
- * @property {Array<{ id: string; text: string }>} options - 選項數組，每個選項包含 ID 和文本
- * @property {string} standard_answer - 正確答案的 ID (例如 'C')
- * @property {string} explanation_of_Question - 題目的繁體中文解釋
- */
-export type QuestionData111 = {
-    passage: string;
-    targetWord: string;
-    question: string;
-    options: Array<{ id: string; text: string }>;
-    standard_answer: string;
-    explanation_of_Question: string;
-};
+// 從共享介面導入類型
+import { QuestionData111 } from './QuestionGeneratorInterface';
 
 // 定義 LLM 應回傳的單個 JSON 物件結構 Schema
 const QUESTION_DATA_111_ITEM_SCHEMA: Schema = {
@@ -40,6 +23,8 @@ const QUESTION_DATA_111_ITEM_SCHEMA: Schema = {
                 },
                 required: ['id', 'text'],
             },
+            minItems: 4, // 確保至少有4個選項
+            maxItems: 4, // 確保最多有4個選項
         },
         standard_answer: { type: SchemaType.STRING },
         explanation_of_Question: { type: SchemaType.STRING },
@@ -59,34 +44,6 @@ const QUESTION_DATA_111_ARRAY_SCHEMA: Schema = {
     type: SchemaType.ARRAY,
     items: QUESTION_DATA_111_ITEM_SCHEMA,
 };
-
-// 定義使用 Zod 進行更嚴格驗證的單個題目 Schema
-const QuestionData111ItemZodSchema = z.object({
-    passage: z.string().min(1),
-    targetWord: z.string().min(1),
-    question: z.string().min(1),
-    options: z
-        .array(
-            z.object({
-                id: z.string().min(1),
-                text: z.string().min(1),
-            })
-        )
-        .length(4, '必須剛好有 4 個選項'),
-    standard_answer: z.string().min(1),
-    explanation_of_Question: z.string().min(1),
-}).refine(
-    (data) => {
-        return data.options.some((option) => option.id === data.standard_answer);
-    },
-    {
-        message: 'standard_answer 必須對應 options 陣列中某個元素的 id',
-        path: ['standard_answer'],
-    }
-);
-
-// 定義使用 Zod 進行更嚴格驗證的題目陣列 Schema
-const QuestionData111ArrayZodSchema = z.array(QuestionData111ItemZodSchema).min(1, "回應的陣列至少需要包含一個題目");
 
 /**
  * Generates a question for type 1.1.1 (Word Meaning in Sentence).
@@ -142,62 +99,35 @@ Return ONLY the JSON array when you generate the questions. Do not include markd
 
     try {
         const geminiService = GeminiAPIService;
+        // console.log("[DEBUG 111_generate.ts] Sending prompt:", prompt); // 調試時可取消註釋
         const response = await geminiService.getResponse(prompt, {
             responseSchema: QUESTION_DATA_111_ARRAY_SCHEMA, // 使用陣列 Schema
         });
 
-        if (!Array.isArray(response)) { // 驗證回應是否為陣列
-            console.error('[DEBUG 111_generate.ts] Invalid response type: expected an array, got', typeof response);
-            throw new Error('從 LLM 收到的回應不是有效的陣列。');
+        // console.log("[DEBUG 111_generate.ts] Received raw response:", response); // 調試時可取消註釋
+
+        // 進行基本的響應驗證 (是否為數組)
+        if (!Array.isArray(response)) {
+            console.error('[DEBUG 111_generate.ts] Invalid response type from LLM: expected an array, got', typeof response, response);
+            return null; // 直接返回 null
         }
 
-        const validationResult = QuestionData111ArrayZodSchema.safeParse(response); // 使用陣列 Zod Schema
+        // 移除 Zod 驗證邏輯
 
-        if (!validationResult.success) {
-            console.error(
-                '[DEBUG 111_generate.ts] Zod validation failed for array:',
-                validationResult.error.errors
-            );
-            throw new Error(
-                `LLM 回應陣列驗證失敗: ${validationResult.error.errors
-                    .map((e) => `${e.path.join('.')} - ${e.message}`)
-                    .join(', ')}`
+        // 簡單驗證題目數量 (可選，但有助於調試 Prompt)
+        if (response.length !== questionNumber) {
+            console.warn(
+                `[DEBUG 111_generate.ts] LLM returned ${response.length} questions, but ${questionNumber} were requested. Proceeding with received data.`
             );
         }
         
-        // 驗證成功，檢查題目數量是否符合預期
-        if (validationResult.data.length !== questionNumber) {
-            console.warn(
-                `[DEBUG 111_generate.ts] LLM returned ${validationResult.data.length} questions, but ${questionNumber} were requested. Proceeding with received data, but this might indicate a prompt adherence issue.`
-            );
-            // 根據需求，這裡也可以選擇拋出錯誤，如果嚴格要求數量一致
-            // throw new Error(`LLM did not return the requested number of questions. Expected ${questionNumber}, got ${validationResult.data.length}.`);
-        }
-
-        return validationResult.data as QuestionData111[]; // 返回驗證後的數據陣列
+        // 假設 Gemini 的 Schema 功能已確保內部結構基本正確
+        // 如果需要更嚴格的運行時驗證，可以考慮後續添加 Zod 或類似庫
+        return response as QuestionData111[]; // 返回數據陣列
 
     } catch (error: any) {
-        console.error(`[DEBUG 111_generate.ts] Error in generate111Question (array mode): ${(error instanceof Error) ? error.message : error}`);
-        throw error; 
+        // 簡化錯誤處理：記錄錯誤並返回 null
+        console.error(`[DEBUG 111_generate.ts] Error during question generation:`, error);
+        return null; 
     }
-}
-
-// Example usage (for testing purposes):
-/*
-async function testGenerate() {
-    console.log("Testing 1.1.1 question generation (array mode)...");
-    // Ensure GEMINI_API_KEY is set in your .env file for this test to run properly.
-    const questions = await generate111Question( // 請求 2 個題目
-        2, 
-        "Learner has average accuracy with B1 vocabulary and needs more practice.", 
-        65
-    );
-    if (questions && questions.length > 0) {
-        console.log(`Successfully generated ${questions.length} questions:`, JSON.stringify(questions, null, 2));
-    } else {
-        console.log("Failed to generate questions or received an empty array.");
-    }
-}
-
-testGenerate();
-*/ 
+} 

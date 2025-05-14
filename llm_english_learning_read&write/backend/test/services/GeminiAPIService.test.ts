@@ -119,13 +119,13 @@ describe('GeminiAPIService', () => {
       mockGenerateContent.mockClear(); // 清除 generateContent 的調用
 
       service = await getFreshServiceInstance();
-      consoleLogSpy.mockClear();
+      consoleLogSpy.mockClear(); 
       consoleErrorSpy.mockClear();
     });
 
     it('案例 2.1: 不帶 Schema 呼叫，應返回純文字', async () => {
       const mockResponseText = '這是純文字回應';
-      mockGenerateContent.mockResolvedValue({
+      mockGenerateContent.mockResolvedValue({ 
         response: { candidates: [{ content: { parts: [{ text: mockResponseText }] } }] }
       } as GenerateContentResult);
       const result = await service.getResponse(mockPrompt);

@@ -20,23 +20,21 @@
     *   單條歷史記錄物件 (`HistoryEntry`) 結構示例：
         ```json
         {
-          "recordId": "uuid-v4-string", // 唯一記錄ID
-          "testItem": "1.1.1", // 題型ID
-          "questionDataSnapshot": { // 作答時的題目完整快照
-            "passage": "The resilient athlete quickly recovered from her injury.",
-            "question": "In the sentence above, the word 'resilient' most nearly means:",
-            "options": [
-              {"A": "weak"},
-              {"B": "determined"},
-              {"C": "flexible and quick to recover"},
-              {"D": "tired"}
-            ],
-            "answer": "C", // 正確答案
-            "explanation_of_Question": "Resilient means..." // LLM生成的解釋
-          },
-          "userAnswer": "C", // 使用者提交的答案 (例如選項字母)
-          "isCorrect": true, // 後端判斷答案是否正確
-          "timestamp": "ISO8601-timestamp" // 作答完成的時間戳
+            "questionData": { // 作答時的題目完整快照
+                "passage": "The resilient athlete quickly recovered from her injury.",
+                "targetWord": "resilient",
+                "question": "In the sentence above, the word 'resilient' most nearly means:",
+                "options": [
+                { "id": "A", "text": "weak" },
+                { "id": "B", "text": "determined" },
+                { "id": "C", "text": "flexible and quick to recover" },
+                { "id": "D", "text": "tired" }
+                ],
+                "standard_answer": "C" // 正確答案
+            },
+            "userAnswer": "C", // 使用者提交的答案 (例如選項字母)
+            "isCorrect": true, // 後端判斷答案是否正確
+            "timestamp": 1678886400000 // 作答完成的時間戳 Unix timeStamp
         }
         ```
 2.  **常數與配置**:
