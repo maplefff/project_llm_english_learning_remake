@@ -1,0 +1,32 @@
+[
+  {
+    "UUID": "manual-test-uuid-211-delta",
+    "questionData": {
+      "passage": "Passage for type 3.1",
+      "targetWord": "resilient",
+      "question": "In the sentence above, the word 'resilient' most nearly means:",
+      "options": [
+        {
+          "id": "A",
+          "text": "weak"
+        },
+        {
+          "id": "B",
+          "text": "determined"
+        },
+        {
+          "id": "C",
+          "text": "flexible and quick to recover"
+        },
+        {
+          "id": "D",
+          "text": "tired"
+        }
+      ],
+      "standard_answer": "C"
+    },
+    "userAnswer": "A",
+    "isCorrect": false,
+    "timestamp": 1747245916850
+  }
+]

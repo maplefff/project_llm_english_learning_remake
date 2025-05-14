@@ -1,0 +1,28 @@
+[
+  {
+    "UUID": "manual-test-uuid-121-gamma",
+    "questionData": {
+      "passage": "He showed great acumen in his business dealings.",
+      "targetWord": "acumen",
+      "question": "What does 'acumen' mean?",
+      "options": [
+        {
+          "id": "A",
+          "text": "ignorance"
+        },
+        {
+          "id": "B",
+          "text": "keen insight and good judgment"
+        },
+        {
+          "id": "C",
+          "text": "carelessness"
+        }
+      ],
+      "standard_answer": "B"
+    },
+    "userAnswer": "B",
+    "isCorrect": true,
+    "timestamp": 1747245916849
+  }
+]

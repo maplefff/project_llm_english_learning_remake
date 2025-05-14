@@ -1,7 +1,7 @@
 // Backend server entry point
 import questionCacheServiceInstance from './services/QuestionCacheService';
 
-console.log('Hello from backend server.ts');
+console.log('Hello from backend server.ts'); 
 
 // Initialize services that require async setup
 (async () => {

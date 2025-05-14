@@ -112,11 +112,11 @@
   },
   "include": [
     "src/**/*",
-    "test/**/*"
+    "test/**/*",
+    "manual_test/**/*"
   ],
   "exclude": [
     "node_modules",
-    "dist",
-    "manual_test"
+    "dist"
   ]
 }

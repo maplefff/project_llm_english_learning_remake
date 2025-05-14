@@ -95,7 +95,7 @@ project_llm_english_learning_remake/
 │   │   └── server.js (or app.js)                 # Express 應用入口與伺服器啟動
 │   ├── questionCache/                          # 題目快取 JSON 檔案
 │   │   └── 111Cache.json
-│   ├── historyData/                            # 使用者歷史記錄 JSON 檔案
+│   ├── historyData/                            # 使用者歷史記錄 JSON 檔案 (例如 history111.json, history121.json)
 │   └── package.json
 ├── .cursor/
 │   └── rules/
@@ -261,7 +261,7 @@ sequenceDiagram
 
 ### 3.6. `HistoryService.js`
 *   **職責**: 管理使用者答題歷史。
-*   **儲存方式**: 初期使用 **JSON 檔案**儲存。檔案結構可按日期或測驗會話組織。
+*   **儲存方式**: 初期使用 **JSON 檔案**儲存。每個題型的歷史記錄將儲存在獨立的檔案中，檔案命名格式為 `history[題型ID移除點號].json` (例如 `history111.json` 代表題型 `1.1.1`)，位於 `historyData/` 目錄下。檔案結構可按日期或測驗會話組織。
 *   **記錄資訊 (每條記錄)**:
     *   `questionData`: 完整的題目內容 (包含題目文本、選項、**正確答案**、**LLM 生成的解釋**等前端展示和後續分析所需資訊)。
     *   `userAnswer`: 使用者提交的答案。
@@ -357,8 +357,7 @@ sequenceDiagram
     *   確保包含所有必要的回顧、分析以及未來潛在功能（如錯題重練、進度追蹤）所需的資訊。
     *   考慮數據冗余與正規化之間的平衡。
 *   **歷史記錄 JSON 檔案的具體組織方式**:
-    *   單一檔案 vs. 按日期/使用者/測驗會話分割。
-    *   檔案命名約定和目錄結構。
+    *   已初步決定：每個題型的歷史記錄儲存在獨立的檔案中，位於 `historyData/` 目錄下，檔案命名約定為 `history[題型ID移除點號].json` (例如 `history111.json` 代表題型 `1.1.1`)。
     *   大型歷史數據的查詢效率考量。
 *   **完整測驗模式下，題型組合的具體策略和配置方式**:
     *   固定組合 vs. 可配置組合 vs. 基於使用者表現的動態組合。

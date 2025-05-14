@@ -1,0 +1,58 @@
+[
+  {
+    "UUID": "manual-test-uuid-111-beta",
+    "questionData": {
+      "passage": "The novel had a convoluted plot that was difficult to follow.",
+      "targetWord": "convoluted",
+      "question": "The word 'convoluted' means:",
+      "options": [
+        {
+          "id": "A",
+          "text": "simple"
+        },
+        {
+          "id": "B",
+          "text": "complex and intricate"
+        },
+        {
+          "id": "C",
+          "text": "straightforward"
+        }
+      ],
+      "standard_answer": "B"
+    },
+    "userAnswer": "A",
+    "isCorrect": false,
+    "timestamp": 1747245916848
+  },
+  {
+    "UUID": "manual-test-uuid-111-alpha",
+    "questionData": {
+      "passage": "The resilient athlete quickly recovered from her injury.",
+      "targetWord": "resilient",
+      "question": "In the sentence above, the word 'resilient' most nearly means:",
+      "options": [
+        {
+          "id": "A",
+          "text": "weak"
+        },
+        {
+          "id": "B",
+          "text": "determined"
+        },
+        {
+          "id": "C",
+          "text": "flexible and quick to recover"
+        },
+        {
+          "id": "D",
+          "text": "tired"
+        }
+      ],
+      "standard_answer": "C"
+    },
+    "userAnswer": "C",
+    "isCorrect": true,
+    "timestamp": 1747245916846
+  }
+]
