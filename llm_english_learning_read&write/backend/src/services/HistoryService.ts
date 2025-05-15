@@ -3,7 +3,7 @@ import * as path from 'path';
 // import { v4 as uuidv4 } from 'uuid'; // 不再需要為歷史記錄生成 UUID
 
 // 參考 devPlanRead&Write.md 3.6 節關於「記錄資訊 (每條記錄)」的描述
-interface QuestionData {
+export interface QuestionData {
     passage: string;
     targetWord: string;
     question: string;
@@ -13,6 +13,7 @@ interface QuestionData {
 
 export interface HistoryEntry {
     UUID: string;  // 題目的 UUID (來自快取，欄位名嚴格為 UUID)
+    testItem: string; // ADDED: 題型，例如 '1.1.1'
     questionData: QuestionData; // 作答時的題目完整快照
     userAnswer: string; // 使用者提交的答案 (例如選項字母)
     isCorrect: boolean; // 後端判斷答案是否正確
@@ -58,13 +59,12 @@ async function ensureHistoryDirExists(): Promise<void> {
  */
 export async function saveHistoryEntry(
     questionType: string,
-    entryData: Omit<HistoryEntry, 'timestamp'> // 現在需要傳入 UUID
+    entryData: Omit<HistoryEntry, 'timestamp'>
 ): Promise<HistoryEntry | null> {
     await ensureHistoryDirExists();
     const filePath = getHistoryFilePath(questionType);
     const newRecord: HistoryEntry = {
-        ...entryData, // entryData 中應包含 UUID, questionData, userAnswer, isCorrect
-        // recordId: uuidv4(), // 不再生成 recordId
+        ...entryData, // entryData 中應包含 UUID, testItem, questionData, userAnswer, isCorrect
         timestamp: Date.now(),
     };
 

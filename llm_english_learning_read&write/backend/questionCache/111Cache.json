@@ -1,234 +1,234 @@
 [
   {
-    "UUID": "c9dbc356-95db-427e-945a-be379550bce3",
+    "UUID": "db02f134-cf41-4d6a-8955-67d9612a81ee",
     "questionData": {
-      "explanation_of_Question": "Ambiguous 指含糊不清、模稜兩可的。例句中，經理的指示不清楚，讓人不知道該做什麼，因此選項 B「unclear」是正確的近義詞。選項 A「helpful」意為有幫助的；選項 C「precise」意為精確的，與原意相反；選項 D「urgent」意為緊急的，皆不符合語境。",
+      "explanation_of_Question": "Ephemeral 指「短暫的，瞬息萬變的」。文中提到櫻花的美麗只持續幾個星期，表示它很短暫，故選 B (短暫的)。選項 A (色彩鮮豔的) 描述外觀，不符；選項 C (可預測的) 不符；選項 D (持續不變的) 則與原意相反。",
       "options": [
         {
           "id": "A",
-          "text": "helpful"
+          "text": "colorful"
         },
         {
           "id": "B",
-          "text": "unclear"
+          "text": "short-lived"
         },
         {
           "id": "C",
-          "text": "precise"
+          "text": "predictable"
         },
         {
           "id": "D",
-          "text": "urgent"
+          "text": "constant"
         }
       ],
-      "passage": "The manager's instructions were so <b>ambiguous</b> that nobody knew exactly what to do.",
-      "question": "What is the meaning of the word \"ambiguous\" in the sentence?",
+      "passage": "The beauty of the cherry blossoms is ephemeral, lasting only for a few weeks each spring.",
+      "question": "In this sentence, 'ephemeral' means:",
       "standard_answer": "B",
-      "targetWord": "ambiguous"
+      "targetWord": "ephemeral"
     },
-    "cacheTimestamp": 1747085732
+    "cacheTimestamp": 1747313124
   },
   {
-    "UUID": "6e287eb5-e2b9-4866-8901-87670ff119c1",
+    "UUID": "c89c6fed-6b6b-4f76-8548-153770ecb076",
     "questionData": {
-      "explanation_of_Question": "Prosper 指繁榮、成功，尤指經濟上的成功。例句提到公司在新的市場中表現良好並賺錢，因此選項 C「succeed」最能表達這個意思。選項 A「fail」意為失敗；選項 B「struggle」意為掙扎；選項 D「collapse」意為崩潰，皆與原意相反。",
+      "explanation_of_Question": "Benevolent 指「仁慈的，樂善好施的」。文中捐贈者給醫院一大筆錢，表示他很慷慨，故選 C (慷慨的)。選項 A (富有的) 可能為真，但不是 benevolent 的意思；選項 B (不情願的) 與捐贈行為相反；選項 D (要求高的) 描述不同的性格特徵。",
       "options": [
         {
           "id": "A",
-          "text": "fail"
+          "text": "wealthy"
         },
         {
           "id": "B",
-          "text": "struggle"
+          "text": "reluctant"
         },
         {
           "id": "C",
-          "text": "succeed"
+          "text": "generous"
         },
         {
           "id": "D",
-          "text": "collapse"
+          "text": "demanding"
         }
       ],
-      "passage": "The company started to <b>prosper</b> after finding a new market for its products.",
-      "question": "Which word is closest in meaning to \"prosper\"?",
+      "passage": "The benevolent donor gave a large sum of money to the local hospital.",
+      "question": "Which of the following words is a synonym for 'benevolent' as used in the passage?",
       "standard_answer": "C",
-      "targetWord": "prosper"
+      "targetWord": "benevolent"
     },
-    "cacheTimestamp": 1747085732
+    "cacheTimestamp": 1747313124
   },
   {
-    "UUID": "c02ceb3b-36c4-4c7f-b66e-b6572fa54ac9",
+    "UUID": "bbfa3dd0-0d30-4e29-91e6-afdbaf8a3da6",
     "questionData": {
-      "explanation_of_Question": "Cautious 指謹慎的、小心的。例句中，他對新提議持謹慎態度，表示他不立即接受，需要仔細考慮，因此選項 A「careful」是正確的近義詞。選項 B「excited」意為興奮的；選項 C「reckless」意為魯莽的，與原意相反；選項 D「optimistic」意為樂觀的，皆不符合語境。",
+      "explanation_of_Question": "Gregarious 指「好社交的，群居的」。文中提到她喜歡參加派對和認識新朋友，表示她很喜歡社交，故選 C (好社交的)。選項 A (害羞的) 與原意相反；選項 B (聰明的) 和 D (有野心的) 描述不同的特徵，不符。",
       "options": [
         {
           "id": "A",
-          "text": "careful"
+          "text": "shy"
         },
         {
           "id": "B",
-          "text": "excited"
+          "text": "intelligent"
         },
         {
           "id": "C",
-          "text": "reckless"
+          "text": "social"
         },
         {
           "id": "D",
-          "text": "optimistic"
+          "text": "ambitious"
         }
       ],
-      "passage": "She was <b>cautious</b> about accepting the new proposal without reviewing all the details.",
-      "question": "In this sentence, \"cautious\" is closest in meaning to:",
-      "standard_answer": "A",
-      "targetWord": "cautious"
+      "passage": "As a naturally gregarious person, she enjoys attending parties and meeting new people.",
+      "question": "The word 'gregarious' in the sentence means:",
+      "standard_answer": "C",
+      "targetWord": "gregarious"
     },
-    "cacheTimestamp": 1747085732
+    "cacheTimestamp": 1747313124
   },
   {
-    "UUID": "e4c72fa2-8358-4003-9924-053e49066224",
+    "UUID": "77228368-81b6-4fc1-988d-44e3e084c080",
     "questionData": {
-      "explanation_of_Question": "Innovation 指創新、新的方法或技術。例句提到公司因持續推出新產品而保持領先，這就是創新的體現，因此選項 D「a new idea or method」是正確的解釋。選項 A「a traditional custom」意為傳統習俗；選項 B「a common problem」意為普遍問題；選項 C「a difficult task」意為困難任務，皆與原意無關。",
+      "explanation_of_Question": "Diverse 指多樣的、不同的。句中指城市人口來自不同國家和文化，故選 C。選項 A「small」意為小的，選項 B「similar」意為相似的，選項 D「noisy」意為嘈雜的，均不符。",
       "options": [
         {
           "id": "A",
-          "text": "a traditional custom"
+          "text": "small"
         },
         {
           "id": "B",
-          "text": "a common problem"
+          "text": "similar"
         },
         {
           "id": "C",
-          "text": "a difficult task"
+          "text": "different"
         },
         {
           "id": "D",
-          "text": "a new idea or method"
+          "text": "noisy"
         }
       ],
-      "passage": "The company's success is due to its constant <b>innovation</b> in product development.",
-      "question": "What does the word \"innovation\" mean in this context?",
-      "standard_answer": "D",
-      "targetWord": "innovation"
+      "passage": "The city has a diverse population, with people from many different countries and cultures.",
+      "question": "What does the word 'diverse' mean in this sentence?",
+      "standard_answer": "C",
+      "targetWord": "diverse"
     },
-    "cacheTimestamp": 1747085732
+    "cacheTimestamp": 1747315278
   },
   {
-    "UUID": "ec80944b-adec-4591-983c-39837d71472a",
+    "UUID": "66968cf7-c15f-4794-88a3-91cd16871492",
     "questionData": {
-      "explanation_of_Question": "Sustain 指維持、保持。例句提到很難長時間保持這樣的努力程度，因此選項 A「maintain」是正確的近義詞。選項 B「decrease」意為減少；選項 C「discontinue」意為中斷；選項 D「improve」意為改善，皆不符合語境。",
+      "explanation_of_Question": "Crucial 指極其重要的、關鍵的。句中指睡眠對健康非常重要，故選 B。選項 A「difficult」意為困難的，選項 C「common」意為常見的，選項 D「simple」意為簡單的，均不符。",
       "options": [
         {
           "id": "A",
-          "text": "maintain"
+          "text": "difficult"
         },
         {
           "id": "B",
-          "text": "decrease"
+          "text": "important"
         },
         {
           "id": "C",
-          "text": "discontinue"
+          "text": "common"
         },
         {
           "id": "D",
-          "text": "improve"
+          "text": "simple"
         }
       ],
-      "passage": "It's difficult to <b>sustain</b> this level of effort for a long period.",
-      "question": "Which word is a synonym for \"sustain\" as used in the sentence?",
-      "standard_answer": "A",
-      "targetWord": "sustain"
-    },
-    "cacheTimestamp": 1747085732
-  },
-  {
-    "UUID": "f3590a71-2779-41c6-ae73-e988d7ce8466",
-    "questionData": {
-      "explanation_of_Question": "Adverse 指不利的、有害的。例句提到儘管面臨不利的條件，團隊仍然取得了成功，因此選項 B「unfavorable」是正確的近義詞。選項 A「favorable」意為有利的，與原意相反；選項 C「neutral」意為中立的；選項 D「expected」意為預期的，皆不符合語境。",
-      "options": [
-        {
-          "id": "A",
-          "text": "favorable"
-        },
-        {
-          "id": "B",
-          "text": "unfavorable"
-        },
-        {
-          "id": "C",
-          "text": "neutral"
-        },
-        {
-          "id": "D",
-          "text": "expected"
-        }
-      ],
-      "passage": "Despite the <b>adverse</b> weather conditions, the team managed to complete the outdoor event.",
-      "question": "The word \"adverse\" in the sentence means:",
+      "passage": "Getting enough sleep is crucial for staying healthy.",
+      "question": "Which word is a synonym for 'crucial' in this context?",
       "standard_answer": "B",
-      "targetWord": "adverse"
+      "targetWord": "crucial"
     },
-    "cacheTimestamp": 1747085732
+    "cacheTimestamp": 1747315278
   },
   {
-    "UUID": "244e152c-bebb-4eac-ad82-e8593f8b6fa7",
+    "UUID": "92bb1016-5012-454a-ac06-513471ae8bae",
     "questionData": {
-      "explanation_of_Question": "Mitigate 指減輕、緩和。例句提到採取措施以減輕風險，因此選項 C「reduce」是正確的近義詞。選項 A「increase」意為增加；選項 B「create」意為創造；選項 D「ignore」意為忽視，皆與原意相反。",
+      "explanation_of_Question": "Efficient 指效率高的、能有效利用時間或資源的。句中指文件整理系統節省了許多時間，故選 C。選項 A「slow」意為慢的，選項 B「complicated」意為複雜的，選項 D「expensive」意為昂貴的，均不符。",
       "options": [
         {
           "id": "A",
-          "text": "increase"
+          "text": "slow"
         },
         {
           "id": "B",
-          "text": "create"
+          "text": "complicated"
         },
         {
           "id": "C",
-          "text": "reduce"
+          "text": "productive without waste"
         },
         {
           "id": "D",
-          "text": "ignore"
+          "text": "expensive"
         }
       ],
-      "passage": "The government is implementing policies to <b>mitigate</b> the impact of climate change.",
-      "question": "Which word is closest in meaning to \"mitigate\"?",
+      "passage": "She developed an efficient system for organizing files, saving a lot of time.",
+      "question": "What does it mean if a system is 'efficient'?",
       "standard_answer": "C",
-      "targetWord": "mitigate"
+      "targetWord": "efficient"
     },
-    "cacheTimestamp": 1747085732
+    "cacheTimestamp": 1747315278
   },
   {
-    "UUID": "0aba9b71-5d94-4d53-a97e-c666418a6759",
+    "UUID": "dd040a07-b390-4939-95a6-20c0d0128867",
     "questionData": {
-      "explanation_of_Question": "Diligent 指勤奮的、努力的。例句提到她勤奮學習，最終取得了好成績，因此選項 A「hardworking」是正確的近義詞。選項 B「lazy」意為懶惰的，與原意相反；選項 C「carefree」意為無憂無慮的；選項 D「talented」意為有才華的，雖然有才華可能助於成功，但 \"diligent\" 強調的是努力程度，與其他選項意思不同。",
+      "explanation_of_Question": "Allocate 指分配、撥給（用於特定目的）。句中指公司將更多資金分給研究部門，故選 C。選項 A「borrow」意為借，選項 B「spend」意為花費（不一定指分配），選項 D「lose」意為失去，均不符。",
       "options": [
         {
           "id": "A",
-          "text": "hardworking"
+          "text": "borrow"
         },
         {
           "id": "B",
-          "text": "lazy"
+          "text": "spend"
         },
         {
           "id": "C",
-          "text": "carefree"
+          "text": "distribute for a purpose"
         },
         {
           "id": "D",
-          "text": "talented"
+          "text": "lose"
         }
       ],
-      "passage": "She was very <b>diligent</b> in her studies, which resulted in excellent grades.",
-      "question": "In the sentence, the word \"diligent\" means:",
-      "standard_answer": "A",
-      "targetWord": "diligent"
+      "passage": "The company decided to allocate more funds to the research department.",
+      "question": "To 'allocate' funds means to:",
+      "standard_answer": "C",
+      "targetWord": "allocate"
     },
-    "cacheTimestamp": 1747085732
+    "cacheTimestamp": 1747315278
+  },
+  {
+    "UUID": "498ea888-eec6-4d88-b383-bb1003923114",
+    "questionData": {
+      "explanation_of_Question": "Innovative 指創新的、具有新意的。句中指他的想法帶來革命性改變，故選 C。選項 A「traditional」意為傳統的，選項 B「old」意為舊的，選項 D「confusing」意為令人困惑的，均不符。",
+      "options": [
+        {
+          "id": "A",
+          "text": "traditional"
+        },
+        {
+          "id": "B",
+          "text": "old"
+        },
+        {
+          "id": "C",
+          "text": "new and creative"
+        },
+        {
+          "id": "D",
+          "text": "confusing"
+        }
+      ],
+      "passage": "His innovative idea revolutionized the industry.",
+      "question": "The word 'innovative' describes something that is:",
+      "standard_answer": "C",
+      "targetWord": "innovative"
+    },
+    "cacheTimestamp": 1747315278
   }
 ]

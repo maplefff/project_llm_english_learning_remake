@@ -24,7 +24,7 @@ interface CacheEntry {
   questionData: QuestionData111;
 }
 
-class QuestionCacheService {
+export class QuestionCacheService {
   private caches: Map<string, CacheEntry[]> = new Map();
   private isReplenishing: Map<string, boolean> = new Map();
   private static instance: QuestionCacheService;

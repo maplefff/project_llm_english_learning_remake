@@ -74,12 +74,12 @@
     *   啟動伺服器監聽特定端口 (例如 3000)。
 2.  **API 路由定義 (`routes/api.ts`)**:
     *   創建 Express Router 實例。
-    *   定義以下路由，並將其處理邏जिक指向 `controllers/apiController.ts` 中的相應方法：
+    *   定義以下路由，並將其處理邏輯指向 `controllers/apiController.ts` 中的相應方法：
         *   `GET /question-types`: (初期)
         *   `POST /start-test`:
         *   `POST /submit-answer`:
         *   `GET /history`:
-3.  **API 控制器邏जिक (`controllers/apiController.ts`)**:
+3.  **API 控制器邏輯 (`controllers/apiController.ts`)**:
     *   **`getQuestionTypes(req, res)`**:
         *   返回一個硬編碼的題型列表，至少包含 `{ id: '1.1.1', name: '詞義選擇 (Vocabulary - Multiple Choice)' }`。
     *   **`startTest(req, res)`**:

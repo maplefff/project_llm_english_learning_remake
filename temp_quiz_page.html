@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>臨時測驗頁面</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; background-color: #f4f4f4; color: #333; }
+        .container { background-color: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        h1 { text-align: center; color: #333; }
+        .question-area, .result-area, .navigation-area { margin-bottom: 20px; padding: 15px; border: 1px solid #ddd; border-radius: 5px; }
+        .question-area p, .result-area p { margin: 10px 0; }
+        .passage { font-style: italic; color: #555; }
+        .target-word { font-weight: bold; }
+        .options label { display: block; margin-bottom: 8px; cursor: pointer; padding: 5px; border-radius: 3px; }
+        .options label:hover { background-color: #f0f0f0; }
+        .options input[type="radio"] { margin-right: 10px; }
+        button { 
+            display: block; 
+            padding: 10px 15px; 
+            background-color: #007bff; 
+            color: white; 
+            border: none; 
+            border-radius: 5px; 
+            cursor: pointer; 
+            font-size: 16px;
+            margin-top: 10px;
+        }
+        button:hover { background-color: #0056b3; }
+        button:disabled { background-color: #ccc; cursor: not-allowed; }
+        #nextQuestionBtn { background-color: #28a745; }
+        #nextQuestionBtn:hover { background-color: #1e7e34; }
+        .result-correct { color: green; font-weight: bold; }
+        .result-incorrect { color: red; font-weight: bold; }
+        .explanation { margin-top:10px; padding:10px; background-color:#e9ecef; border-left: 3px solid #007bff;}
+        .error-message { color: red; font-weight: bold; margin-top: 15px; }
+        .loading-message { color: #007bff; }
+        #speakTargetWordBtn {
+            background-color: #6c757d;
+            padding: 5px 10px;
+            font-size: 14px;
+            margin-left: 10px; /* 與目標詞稍微隔開 */
+            vertical-align: middle; /* 垂直居中對齊 */
+        }
+        #speakTargetWordBtn:hover {
+            background-color: #5a6268;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>詞彙測驗 (題型 1.1.1)</h1>
+
+        <div id="loadingMessage" class="loading-message" style="display: none;">載入中...</div>
+        <div id="errorMessage" class="error-message" style="display: none;"></div>
+
+        <div class="question-area" id="questionDisplay" style="display: none;">
+            <h2>題目</h2>
+            <p class="passage"><strong>段落:</strong> <span id="passageText"></span></p>
+            <p><strong>目標詞:</strong> 
+                <span id="targetWordText" class="target-word"></span>
+                <button id="speakTargetWordBtn" title="發音">🔊</button>
+            </p>
+            <p><strong>問題:</strong> <span id="questionText"></span></p>
+            <div class="options" id="optionsContainer">
+                <!-- 選項將由 JS 動態生成 -->
+            </div>
+            <button id="submitAnswerBtn">提交答案</button>
+        </div>
+
+        <div class="result-area" id="resultDisplay" style="display: none;">
+            <h2>作答結果</h2>
+            <p id="submissionFeedback"></p>
+            <p><strong>正確答案:</strong> <span id="correctAnswerText"></span></p>
+            <div class="explanation" id="explanationText" style="display: none;"></div>
+        </div>
+
+        <div class="navigation-area">
+            <button id="nextQuestionBtn" style="display: none;">下一題</button>
+        </div>
+    </div>
+
+    <script>
+        const BASE_URL = 'http://localhost:3001/api'; // 後端 API 的 URL (請確認端口)
+        let currentQuestionData = null; // 存儲後端返回的完整題目數據
+        let isLoading = false;
+
+        const loadingMessageEl = document.getElementById('loadingMessage');
+        const errorMessageEl = document.getElementById('errorMessage');
+        const questionDisplayEl = document.getElementById('questionDisplay');
+        const passageTextEl = document.getElementById('passageText');
+        const targetWordTextEl = document.getElementById('targetWordText');
+        const questionTextEl = document.getElementById('questionText');
+        const optionsContainerEl = document.getElementById('optionsContainer');
+        const submitAnswerBtn = document.getElementById('submitAnswerBtn');
+        
+        const resultDisplayEl = document.getElementById('resultDisplay');
+        const submissionFeedbackEl = document.getElementById('submissionFeedback');
+        const correctAnswerTextEl = document.getElementById('correctAnswerText');
+        const explanationTextEl = document.getElementById('explanationText');
+        const nextQuestionBtn = document.getElementById('nextQuestionBtn');
+        const speakTargetWordBtn = document.getElementById('speakTargetWordBtn');
+
+        async function fetchAndRenderInitialQuestion() {
+            showLoading(true);
+            try {
+                const response = await fetch(`${BASE_URL}/start-test`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ questionType: '1.1.1' })
+                });
+                if (!response.ok) {
+                    const errorData = await response.json().catch(() => ({ message: '無法開始測驗，請檢查伺服器狀態。' }));
+                    throw new Error(errorData.message || `HTTP error! status: ${response.status}`);
+                }
+                currentQuestionData = await response.json();
+                if (currentQuestionData && currentQuestionData.id) {
+                    renderQuestion();
+                    questionDisplayEl.style.display = 'block';
+                } else {
+                    showError('無法獲取有效題目。');
+                }
+            } catch (error) {
+                console.error('Fetch initial question error:', error);
+                showError(`獲取題目失敗: ${error.message}`);
+            } finally {
+                showLoading(false);
+            }
+        }
+
+        function renderQuestion() {
+            if (!currentQuestionData) return;
+
+            passageTextEl.innerHTML = currentQuestionData.passage; // 使用 innerHTML 以便渲染 <b>
+            targetWordTextEl.textContent = currentQuestionData.targetWord;
+            questionTextEl.textContent = currentQuestionData.question;
+            
+            optionsContainerEl.innerHTML = ''; // 清空舊選項
+            currentQuestionData.options.forEach(option => {
+                const label = document.createElement('label');
+                const radio = document.createElement('input');
+                radio.type = 'radio';
+                radio.name = 'answer';
+                radio.value = option.id;
+                radio.id = `option-${option.id}`;
+                
+                label.appendChild(radio);
+                label.appendChild(document.createTextNode(` ${option.id}. ${option.text}`));
+                optionsContainerEl.appendChild(label);
+            });
+
+            resultDisplayEl.style.display = 'none';
+            explanationTextEl.style.display = 'none';
+            submitAnswerBtn.style.display = 'block';
+            submitAnswerBtn.disabled = false;
+            nextQuestionBtn.style.display = 'none';
+            clearError();
+        }
+
+        async function handleSubmitAnswer() {
+            const selectedOption = optionsContainerEl.querySelector('input[name="answer"]:checked');
+            if (!selectedOption) {
+                showError('請選擇一個答案！');
+                return;
+            }
+            if (isLoading || !currentQuestionData) return;
+
+            showLoading(true);
+            submitAnswerBtn.disabled = true;
+            const userAnswer = selectedOption.value;
+
+            try {
+                const response = await fetch(`${BASE_URL}/submit-answer`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        questionId: currentQuestionData.id,
+                        userAnswer: userAnswer,
+                        questionDataSnapshot: currentQuestionData 
+                    })
+                });
+
+                if (!response.ok) {
+                    const errorData = await response.json().catch(() => ({ message: '提交答案時發生錯誤。' }));
+                    throw new Error(errorData.message || `HTTP error! status: ${response.status}`);
+                }
+                
+                const resultData = await response.json();
+                displaySubmissionResult(resultData.submissionResult);
+                
+                // 更新 currentQuestionData 為下一題 (如果有的話)
+                currentQuestionData = resultData.nextQuestion; 
+
+                if (currentQuestionData && currentQuestionData.id) {
+                    nextQuestionBtn.style.display = 'block';
+                } else {
+                    nextQuestionBtn.style.display = 'none';
+                    submissionFeedbackEl.innerHTML += "<br>已是最後一題或沒有更多題目了。";
+                }
+                submitAnswerBtn.style.display = 'none';
+
+            } catch (error) {
+                console.error('Submit answer error:', error);
+                showError(`提交答案失敗: ${error.message}`);
+                submitAnswerBtn.disabled = false; // 允許重試
+            } finally {
+                showLoading(false);
+            }
+        }
+
+        function displaySubmissionResult(submissionResult) {
+            resultDisplayEl.style.display = 'block';
+            if (submissionResult.isCorrect) {
+                submissionFeedbackEl.textContent = '回答正確！';
+                submissionFeedbackEl.className = 'result-correct';
+            } else {
+                submissionFeedbackEl.textContent = '回答錯誤。';
+                submissionFeedbackEl.className = 'result-incorrect';
+            }
+            correctAnswerTextEl.textContent = submissionResult.correctAnswer;
+            if (submissionResult.explanation) {
+                explanationTextEl.innerHTML = submissionResult.explanation; // 使用 innerHTML 處理可能的格式
+                explanationTextEl.style.display = 'block';
+            } else {
+                explanationTextEl.style.display = 'none';
+            }
+        }
+
+        function handleNextQuestionClick() {
+            if (currentQuestionData && currentQuestionData.id) {
+                renderQuestion();
+                questionDisplayEl.style.display = 'block';
+            } else {
+                showError("沒有下一題了。");
+                nextQuestionBtn.style.display = 'none';
+                questionDisplayEl.style.display = 'none'; // 隱藏題目區域
+                resultDisplayEl.style.display = 'none'; // 隱藏結果區域
+            }
+        }
+        
+        function showLoading(show) {
+            isLoading = show;
+            loadingMessageEl.style.display = show ? 'block' : 'none';
+            if (show) clearError(); // 載入時清除舊錯誤
+        }
+
+        function showError(message) {
+            errorMessageEl.textContent = message;
+            errorMessageEl.style.display = 'block';
+        }
+        function clearError() {
+            errorMessageEl.textContent = '';
+            errorMessageEl.style.display = 'none';
+        }
+
+        function speakText(textToSpeak) {
+            if (!('speechSynthesis' in window) || !('SpeechSynthesisUtterance' in window)) {
+                alert('抱歉，您的瀏覽器不支援語音朗讀功能。');
+                return;
+            }
+            // 如果先前有正在朗讀的內容，先取消
+            window.speechSynthesis.cancel();
+
+            const utterance = new SpeechSynthesisUtterance(textToSpeak);
+            utterance.lang = 'en-US'; // 設定為美式英語
+            utterance.rate = 0.9; // 稍微降低語速，可以根據需要調整
+            utterance.pitch = 1; // 預設音高
+            
+            window.speechSynthesis.speak(utterance);
+        }
+
+        function handleSpeakTargetWordClick() {
+            if (currentQuestionData && currentQuestionData.targetWord) {
+                speakText(currentQuestionData.targetWord);
+            }
+        }
+
+        // 事件監聽
+        submitAnswerBtn.addEventListener('click', handleSubmitAnswer);
+        nextQuestionBtn.addEventListener('click', handleNextQuestionClick);
+        speakTargetWordBtn.addEventListener('click', handleSpeakTargetWordClick);
+
+        // 頁面載入完成後獲取第一題
+        document.addEventListener('DOMContentLoaded', fetchAndRenderInitialQuestion);
+    </script>
+</body>
+</html> 
