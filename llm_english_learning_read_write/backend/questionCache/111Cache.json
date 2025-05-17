@@ -1,45 +1,132 @@
 [
   {
-    "UUID": "77228368-81b6-4fc1-988d-44e3e084c080",
+    "UUID": "3eac8b00-4dbf-4e6d-a7c7-15d6d59be304",
     "questionData": {
-      "explanation_of_Question": "Diverse 指多樣的、不同的。句中指城市人口來自不同國家和文化，故選 C。選項 A「small」意為小的，選項 B「similar」意為相似的，選項 D「noisy」意為嘈雜的，均不符。",
+      "explanation_of_Question": "Consequence 指由於某事而產生的結果或影響。未讀書會導致考試成績不佳，這是其後果。選項 B「effects」意為結果、影響，符合語意。選項 A「causes」意為原因，語意相反；選項 C「efforts」意為努力，與結果無關；選項 D「improvements」意為改善，語意不符。",
       "options": [
         {
           "id": "A",
-          "text": "small"
+          "text": "causes"
         },
         {
           "id": "B",
-          "text": "similar"
+          "text": "effects"
         },
         {
           "id": "C",
-          "text": "different"
+          "text": "efforts"
         },
         {
           "id": "D",
-          "text": "noisy"
+          "text": "improvements"
         }
       ],
-      "passage": "The city has a diverse population, with people from many different countries and cultures.",
-      "question": "What does the word 'diverse' mean in this sentence?",
-      "standard_answer": "C",
-      "targetWord": "diverse"
+      "passage": "Failing to study will have serious **consequences** for your exam results.",
+      "question": "In the sentence above, the word 'consequences' most nearly means:",
+      "standard_answer": "B",
+      "targetWord": "consequences"
     },
-    "cacheTimestamp": 1747315278
+    "cacheTimestamp": 1747498273
   },
   {
-    "UUID": "66968cf7-c15f-4794-88a3-91cd16871492",
+    "UUID": "38d4d7b6-4abc-4e99-963e-261410597062",
     "questionData": {
-      "explanation_of_Question": "Crucial 指極其重要的、關鍵的。句中指睡眠對健康非常重要，故選 B。選項 A「difficult」意為困難的，選項 C「common」意為常見的，選項 D「simple」意為簡單的，均不符。",
+      "explanation_of_Question": "Sufficient 指足夠的、充分的。提供足夠資訊才能完全理解情況。選項 C「enough」意為足夠的，符合語意。選項 A「limited」意為有限的，語意相反；選項 B「incomplete」意為不完整的，語意相反；選項 D「confusing」意為令人困惑的，與原意無關。",
       "options": [
         {
           "id": "A",
-          "text": "difficult"
+          "text": "limited"
         },
         {
           "id": "B",
-          "text": "important"
+          "text": "incomplete"
+        },
+        {
+          "id": "C",
+          "text": "enough"
+        },
+        {
+          "id": "D",
+          "text": "confusing"
+        }
+      ],
+      "passage": "Please provide **sufficient** information so we can understand the situation fully.",
+      "question": "In the sentence above, the word 'sufficient' most nearly means:",
+      "standard_answer": "C",
+      "targetWord": "sufficient"
+    },
+    "cacheTimestamp": 1747498273
+  },
+  {
+    "UUID": "ced2b6de-40a9-4e30-8672-fa4ee7c65f87",
+    "questionData": {
+      "explanation_of_Question": "Enhance 指提高、增強。健康飲食能提高能量水平。選項 B「improve」意為改善、提高，符合語意。選項 A「decrease」意為減少，語意相反；選項 C「hide」意為隱藏，語意不符；選項 D「complicate」意為使複雜化，語意不符。",
+      "options": [
+        {
+          "id": "A",
+          "text": "decrease"
+        },
+        {
+          "id": "B",
+          "text": "improve"
+        },
+        {
+          "id": "C",
+          "text": "hide"
+        },
+        {
+          "id": "D",
+          "text": "complicate"
+        }
+      ],
+      "passage": "Eating a healthy diet can **enhance** your energy levels.",
+      "question": "In the sentence above, the word 'enhance' most nearly means:",
+      "standard_answer": "B",
+      "targetWord": "enhance"
+    },
+    "cacheTimestamp": 1747498273
+  },
+  {
+    "UUID": "8fd342e6-fb50-44aa-8a9e-55a5c03ef06e",
+    "questionData": {
+      "explanation_of_Question": "Crucial 指至關重要的、關鍵的。現在做出正確決定對公司未來至關重要。選項 D「very important」意為非常重要的，符合語意。選項 A「unimportant」意為不重要的，語意相反；選項 B「difficult」意為困難的，未涵蓋重要性；選項 C「interesting」意為有趣的，語意不符。",
+      "options": [
+        {
+          "id": "A",
+          "text": "unimportant"
+        },
+        {
+          "id": "B",
+          "text": "difficult"
+        },
+        {
+          "id": "C",
+          "text": "interesting"
+        },
+        {
+          "id": "D",
+          "text": "very important"
+        }
+      ],
+      "passage": "Making the right decision now is **crucial** for the future of the company.",
+      "question": "In the sentence above, the word 'crucial' most nearly means:",
+      "standard_answer": "D",
+      "targetWord": "crucial"
+    },
+    "cacheTimestamp": 1747498273
+  },
+  {
+    "UUID": "8c7b5991-5533-4fa3-874f-bfd64ae91afa",
+    "questionData": {
+      "explanation_of_Question": "Distinct 指明顯不同的、獨特的。這兩種文化有明顯不同的習俗和傳統。選項 B「different」意為不同的，符合語意。選項 A「similar」意為相似的，語意相反；選項 C「common」意為普遍的、常見的，語意不符；選項 D「ancient」意為古代的，語意不符。",
+      "options": [
+        {
+          "id": "A",
+          "text": "similar"
+        },
+        {
+          "id": "B",
+          "text": "different"
         },
         {
           "id": "C",
@@ -47,78 +134,20 @@
         },
         {
           "id": "D",
-          "text": "simple"
+          "text": "ancient"
         }
       ],
-      "passage": "Getting enough sleep is crucial for staying healthy.",
-      "question": "Which word is a synonym for 'crucial' in this context?",
+      "passage": "The two cultures have very **distinct** customs and traditions.",
+      "question": "In the sentence above, the word 'distinct' most nearly means:",
       "standard_answer": "B",
-      "targetWord": "crucial"
+      "targetWord": "distinct"
     },
-    "cacheTimestamp": 1747315278
+    "cacheTimestamp": 1747498273
   },
   {
-    "UUID": "92bb1016-5012-454a-ac06-513471ae8bae",
+    "UUID": "e8bab8c0-204d-40a5-9ad7-6a3661f83fe1",
     "questionData": {
-      "explanation_of_Question": "Efficient 指效率高的、能有效利用時間或資源的。句中指文件整理系統節省了許多時間，故選 C。選項 A「slow」意為慢的，選項 B「complicated」意為複雜的，選項 D「expensive」意為昂貴的，均不符。",
-      "options": [
-        {
-          "id": "A",
-          "text": "slow"
-        },
-        {
-          "id": "B",
-          "text": "complicated"
-        },
-        {
-          "id": "C",
-          "text": "productive without waste"
-        },
-        {
-          "id": "D",
-          "text": "expensive"
-        }
-      ],
-      "passage": "She developed an efficient system for organizing files, saving a lot of time.",
-      "question": "What does it mean if a system is 'efficient'?",
-      "standard_answer": "C",
-      "targetWord": "efficient"
-    },
-    "cacheTimestamp": 1747315278
-  },
-  {
-    "UUID": "dd040a07-b390-4939-95a6-20c0d0128867",
-    "questionData": {
-      "explanation_of_Question": "Allocate 指分配、撥給（用於特定目的）。句中指公司將更多資金分給研究部門，故選 C。選項 A「borrow」意為借，選項 B「spend」意為花費（不一定指分配），選項 D「lose」意為失去，均不符。",
-      "options": [
-        {
-          "id": "A",
-          "text": "borrow"
-        },
-        {
-          "id": "B",
-          "text": "spend"
-        },
-        {
-          "id": "C",
-          "text": "distribute for a purpose"
-        },
-        {
-          "id": "D",
-          "text": "lose"
-        }
-      ],
-      "passage": "The company decided to allocate more funds to the research department.",
-      "question": "To 'allocate' funds means to:",
-      "standard_answer": "C",
-      "targetWord": "allocate"
-    },
-    "cacheTimestamp": 1747315278
-  },
-  {
-    "UUID": "498ea888-eec6-4d88-b383-bb1003923114",
-    "questionData": {
-      "explanation_of_Question": "Innovative 指創新的、具有新意的。句中指他的想法帶來革命性改變，故選 C。選項 A「traditional」意為傳統的，選項 B「old」意為舊的，選項 D「confusing」意為令人困惑的，均不符。",
+      "explanation_of_Question": "Innovative 指創新的、革新的。公司以其創新的技術方法而聞名。選項 C「brand new and creative」意為全新的且有創造力的，符合語意。選項 A「traditional」意為傳統的，語意相反；選項 B「unoriginal」意為無創意的，語意相反；選項 D「complicated」意為複雜的，語意不符。",
       "options": [
         {
           "id": "A",
@@ -126,22 +155,80 @@
         },
         {
           "id": "B",
-          "text": "old"
+          "text": "unoriginal"
         },
         {
           "id": "C",
-          "text": "new and creative"
+          "text": "brand new and creative"
         },
         {
           "id": "D",
-          "text": "confusing"
+          "text": "complicated"
         }
       ],
-      "passage": "His innovative idea revolutionized the industry.",
-      "question": "The word 'innovative' describes something that is:",
+      "passage": "The company is known for its **innovative** approach to technology.",
+      "question": "In the sentence above, the word 'innovative' most nearly means:",
       "standard_answer": "C",
       "targetWord": "innovative"
     },
-    "cacheTimestamp": 1747315278
+    "cacheTimestamp": 1747498273
+  },
+  {
+    "UUID": "c22fa238-837d-4b06-972c-bdf103dd9866",
+    "questionData": {
+      "explanation_of_Question": "Prioritize 指按重要性排序、優先處理。你需要按重要性排序任務才能有效管理時間。選項 A「arrange by importance」意為按重要性排序，符合語意。選項 B「finish quickly」意為快速完成，與優先處理不同；選項 C「share with others」意為與他人分享，語意不符；選項 D「postpone」意為延遲，語意相反。",
+      "options": [
+        {
+          "id": "A",
+          "text": "arrange by importance"
+        },
+        {
+          "id": "B",
+          "text": "finish quickly"
+        },
+        {
+          "id": "C",
+          "text": "share with others"
+        },
+        {
+          "id": "D",
+          "text": "postpone"
+        }
+      ],
+      "passage": "You need to **prioritize** your tasks to manage your time effectively.",
+      "question": "In the sentence above, the word 'prioritize' most nearly means:",
+      "standard_answer": "A",
+      "targetWord": "prioritize"
+    },
+    "cacheTimestamp": 1747498273
+  },
+  {
+    "UUID": "efe93610-3e78-4810-b75d-a0afbd646a03",
+    "questionData": {
+      "explanation_of_Question": "Sustainable 指可持續的、能維持的。公司承諾使用可持續資源以保護環境。選項 C「able to be maintained for a long time」意為能夠長時間維持的，符合語意。選項 A「easy to find」意為容易找到的，語意不符；選項 B「expensive」意為昂貴的，語意不符；選項 D「natural」意為自然的，雖然可持續資源常是自然的，但「sustainable」的重點在於能否長期維持。",
+      "options": [
+        {
+          "id": "A",
+          "text": "easy to find"
+        },
+        {
+          "id": "B",
+          "text": "expensive"
+        },
+        {
+          "id": "C",
+          "text": "able to be maintained for a long time"
+        },
+        {
+          "id": "D",
+          "text": "natural"
+        }
+      ],
+      "passage": "The company is committed to using **sustainable** resources to protect the environment.",
+      "question": "In the sentence above, the word 'sustainable' most nearly means:",
+      "standard_answer": "C",
+      "targetWord": "sustainable"
+    },
+    "cacheTimestamp": 1747498273
   }
 ]

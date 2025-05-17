@@ -18,7 +18,7 @@ const mockedFsMkdir = fs.mkdir as jest.MockedFunction<typeof fs.mkdir>;
 
 
 describe('HistoryService', () => {
-    const HISTORY_BASE_DIR = "/Users/wu_cheng_yan/cursor/project_llm_english_learning_remake/llm_english_learning_read&write/backend/historyData/";
+    const HISTORY_BASE_DIR = "/Users/wu_cheng_yan/cursor/project_llm_english_learning_remake/llm_english_learning_read_write/backend/historyData/";
     const sampleQuestionType = '1.1.1';
     const sampleHistoryFilePath = `${HISTORY_BASE_DIR}history111.json`;
     // 範例數據現在需要包含 UUID

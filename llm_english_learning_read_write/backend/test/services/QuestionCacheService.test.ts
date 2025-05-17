@@ -73,8 +73,8 @@ const createMockCacheEntry = (idValue: string): CacheEntry => ({
 });
 
 // Constants for testing (mirroring service values)
-const LOW_WATER_MARK = 4;
-const TARGET_QUESTIONS_111 = 8;
+const LOW_WATER_MARK = 3;
+const TARGET_QUESTIONS_111 = 5;
 const testCacheDir = '/mock/cache/dir';
 const testCachePath = '/mock/cache/dir/111Cache.json';
 

@@ -9,8 +9,8 @@ const CACHE_DIR_NAME = 'questionCache';
 const CACHE_DIR_PATH = path.join(__dirname, '..', '..', CACHE_DIR_NAME); // 假設 services 在 src/services
 const CACHE_FILE_PATH_111 = path.join(CACHE_DIR_PATH, '111Cache.json');
 
-const MIN_QUESTIONS_111 = 4;
-const TARGET_QUESTIONS_111 = 8; // 目標快取數量
+const MIN_QUESTIONS_111 = 3;
+const TARGET_QUESTIONS_111 = 5; // 目標快取數量
 
 // --- 重試機制常量 ---
 const MAX_GENERATION_RETRIES = 3; // 首次嘗試後的最多重試次數

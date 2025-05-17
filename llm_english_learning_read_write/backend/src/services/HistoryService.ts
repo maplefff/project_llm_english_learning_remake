@@ -21,7 +21,7 @@ export interface HistoryEntry {
 }
 
 // 歷史記錄檔案的基礎目錄
-const HISTORY_BASE_DIR = "/Users/wu_cheng_yan/cursor/project_llm_english_learning_remake/llm_english_learning_read&write/backend/historyData/";
+const HISTORY_BASE_DIR = "/Users/wu_cheng_yan/cursor/project_llm_english_learning_remake/llm_english_learning_read_write/backend/historyData/";
 
 /**
  * 輔助方法，根據題型 ID 獲取歷史記錄檔案的完整路徑。
