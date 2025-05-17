@@ -1,6 +1,6 @@
 # 後端開發階段 6：擴展至其他題型與前端初步對接準備
 
-**對應 `devPlanRead&Write.md` 第 6 點中的 6.3 (階段三)**
+**對應 `devPlanRead_Write.md` 第 6 點中的 6.3 (階段三)**
 
 ## 1. 目標
 
@@ -71,7 +71,7 @@
 
 ## 4. 驗收標準
 
-*   `devPlanRead&Write.md` 中第六點（6.3 階段三）要求覆蓋的**所有題型**（或預先商定的題型子集）均已完成後端核心服務的實現和擴展。
+*   `devPlanRead_Write.md` 中第六點（6.3 階段三）要求覆蓋的**所有題型**（或預先商定的題型子集）均已完成後端核心服務的實現和擴展。
 *   所有新實現的 `[題型ID]_generate.js` 及其依賴服務 (`QuestionGeneratorService`, `QuestionCacheService`, `HistoryService`, `TestOrchestratorService`) 的單元測試和整合測試均已通過。
 *   API 端點 `GET /api/question-types` 能返回所有已支持的題型。
 *   API 能夠正確處理所有已支持題型的開始測驗、提交答案和歷史記錄請求。

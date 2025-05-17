@@ -1,6 +1,6 @@
 # 後端開發階段 4：多題型歷史記錄服務
 
-**對應 `devPlanRead&Write.md` 第 6 點中的 6.3 (階段二 - 部分)**
+**對應 `devPlanRead_Write.md` 第 6 點中的 6.3 (階段二 - 部分)**
 
 ## 目標
 
@@ -10,13 +10,13 @@
 
 *   `HistoryService.ts` 模組，具備記錄和讀取**不同題型**作答歷史的功能，並能操作對應的題型歷史檔案。
 *   `HistoryService.test.ts` 的單元測試。
-*   本地歷史記錄檔案，例如 `/Users/wu_cheng_yan/cursor/project_llm_english_learning_remake/llm_english_learning_read&write/backend/historyData/history111.json`, `/Users/wu_cheng_yan/cursor/project_llm_english_learning_remake/llm_english_learning_read&write/backend/historyData/history121.json` 等，其結構定義和處理邏輯。
+*   本地歷史記錄檔案，例如 `/Users/wu_cheng_yan/cursor/project_llm_english_learning_remake/llm_english_learning_read_write/backend/historyData/history111.json`, `/Users/wu_cheng_yan/cursor/project_llm_english_learning_remake/llm_english_learning_read_write/backend/historyData/history121.json` 等，其結構定義和處理邏輯。
 
 ## 詳細步驟
 
 ### Phase4.1 `HistoryService.ts` 實現
 1.  **歷史記錄資料結構定義**:
-    *   參考 `devPlanRead&Write.md` 3.6 節關於「記錄資訊 (每條記錄)」的描述。
+    *   參考 `devPlanRead_Write.md` 3.6 節關於「記錄資訊 (每條記錄)」的描述。
     *   單條歷史記錄物件 (`HistoryEntry`) 結構示例 (題型通過檔案名和方法參數區分)：
         ```json
         {
@@ -39,7 +39,7 @@
         }
         ```
 2.  **常數與配置**:
-    *   定義歷史記錄檔案的基礎目錄: `HISTORY_BASE_DIR = "/Users/wu_cheng_yan/cursor/project_llm_english_learning_remake/llm_english_learning_read&write/backend/historyData/"`。
+    *   定義歷史記錄檔案的基礎目錄: `HISTORY_BASE_DIR = "/Users/wu_cheng_yan/cursor/project_llm_english_learning_remake/llm_english_learning_read_write/backend/historyData/"`。
     *   服務內部應有一個輔助方法，例如 `getHistoryFilePath(questionType: string): string`，它接收題型 ID (例如 `'1.1.1'`)，移除題型 ID 中的點號 (例如轉換為 `'111'`)，並返回完整的檔案路徑 (例如 `HISTORY_BASE_DIR + 'history111.json'`)。
     *   確保 `historyData` 目錄存在，如果不存在則創建。
 3.  **儲存作答記錄 (`async saveHistoryEntry(questionType: string, entryData: Omit<HistoryEntry, 'timestamp'>): Promise<HistoryEntry | null>`)**:

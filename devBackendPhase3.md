@@ -1,6 +1,6 @@
 # 後端開發階段 3：題型 1.1.1 的快取服務
 
-**對應 `devPlanRead&Write.md` 第 6 點中的 6.3 (階段二 - 部分)**
+**對應 `devPlanRead_Write.md` 第 6 點中的 6.3 (階段二 - 部分)**
 
 ## 目標
 
@@ -10,7 +10,7 @@
 
 *   `QuestionCacheService.ts` 模組，具備針對題型 1.1.1 的記憶體快取、本地 JSON 持久化、水位管理、背景補充觸發及重試功能。
 *   `QuestionCacheService.test.ts` 的單元測試。
-*   本地快取檔案 `/Users/wu_cheng_yan/cursor/project_llm_english_learning_remake/llm_english_learning_read&write/backend/questionCache/111Cache.json` 的結構定義和處理邏輯。
+*   本地快取檔案 `/Users/wu_cheng_yan/cursor/project_llm_english_learning_remake/llm_english_learning_read_write/backend/questionCache/111Cache.json` 的結構定義和處理邏輯。
 
 ## 詳細步驟
 

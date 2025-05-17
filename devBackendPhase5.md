@@ -1,6 +1,6 @@
 # 後端開發階段 5：題型 1.1.1 的測驗協調與 API 端點
 
-**對應 `devPlanRead&Write.md` 第 6 點中的 6.3 (階段二 - 部分)**
+**對應 `devPlanRead_Write.md` 第 6 點中的 6.3 (階段二 - 部分)**
 
 ## 目標
 
@@ -27,7 +27,7 @@
     *   **提交答案 (`async submitAnswer(questionId: string, userAnswer: any, originalQuestionData: any): Promise<object>`)**:
         *   `questionId`: 用於追溯是哪道題 (如果需要從某處比如 `HistoryService` 或一個臨時的會話存儲中獲取完整題目資訊和正確答案)。
         *   `userAnswer`: 使用者提交的答案。
-        *   `originalQuestionData`: 為了判斷答案，需要知道該題目的正確答案。這個數據可以是在 `startSingleTypeTest` 時一併返回給前端，前端提交時再傳回來；或者後端根據 `questionId` 從快取/歷史記錄中重新獲取。**`devPlanRead&Write.md` 的 API 設計 `POST /api/submit-answer` 包含 `questionDataSnapshot`，這意味著前端會傳回作答時的題目數據。**
+        *   `originalQuestionData`: 為了判斷答案，需要知道該題目的正確答案。這個數據可以是在 `startSingleTypeTest` 時一併返回給前端，前端提交時再傳回來；或者後端根據 `questionId` 從快取/歷史記錄中重新獲取。**`devPlanRead_Write.md` 的 API 設計 `POST /api/submit-answer` 包含 `questionDataSnapshot`，這意味著前端會傳回作答時的題目數據。**
         *   **判斷答案正確性**:
             *   從 `originalQuestionData.answer` (或類似路徑) 獲取正確答案。
             *   比較 `userAnswer` 與正確答案。對於題型 1.1.1，這通常是比較選項字母。

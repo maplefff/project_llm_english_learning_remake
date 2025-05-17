@@ -63,7 +63,7 @@ export async function generate111Question(
 `You are an expert English-quiz generator for language learners.
 1. Generate exactly {QUESTION_NUMBER} multiple-choice questions. The output must be an array containing this number of question objects.
 2. Learner context: {HISTORY_SUMMARY}  
-3. 難度設定為：{DIFFICULTY_SETTING}% 目標正確率 (Adjust difficulty with reference to CEFR levels A1–C2).  
+3. Difficulty is set to: {DIFFICULTY_SETTING}% target accuracy (Adjust difficulty with reference to CEFR levels A1–C2)..  
 4. Question type: test only vocabulary meaning, synonyms, and near-synonyms (no grammar).  
 5. Output STRICT JSON: an array of question objects. If "questionNumber" (from point 1) is 1, the array should contain a single question object. The length of the array must exactly match the "questionNumber".  
 Each object in the array must contain:  

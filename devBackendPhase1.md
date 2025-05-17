@@ -18,7 +18,7 @@
 
 ### Phase1.1 專案初始化與環境配置
 1.  **初始化專案**:
-    *   在 `/Users/wu_cheng_yan/cursor/project_llm_english_learning_remake/llm_english_learning_read&write/backend/` 目錄下，初始化 Node.js 專案 (`npm init -y` 或 `yarn init -y`)。
+    *   在 `/Users/wu_cheng_yan/cursor/project_llm_english_learning_remake/llm_english_learning_read_write/backend/` 目錄下，初始化 Node.js 專案 (`npm init -y` 或 `yarn init -y`)。
     *   安裝 Express.js (`npm install express` 或 `yarn add express`)。
     *   安裝 TypeScript 及相關類型定義 (`npm install typescript @types/node @types/express --save-dev` 或 `yarn add typescript @types/node @types/express --dev`)。相關的 `@types` 套件已加入 `package.json`。
     *   已初始化 TypeScript 設定檔，並調整 `tsconfig.json` 設定，明確指定了 `"outDir": "./dist"`, `"rootDir": "./src"`, 以及 `"sourceMap": true`。
@@ -38,7 +38,7 @@
 ### Phase1.2 `GeminiAPIService.js` (或 `.ts`) 實現
 1.  **API 金鑰管理**:
     *   安裝 `dotenv` (`npm install dotenv` 或 `yarn add dotenv`)。
-    *   在專案根目錄 `/Users/wu_cheng_yan/cursor/project_llm_english_learning_remake/llm_english_learning_read&write/backend/` 創建 `.env` 檔案，並加入 `GEMINI_API_KEY=YOUR_API_KEY_HERE` (此檔案應加入 `.gitignore`)。
+    *   在專案根目錄 `/Users/wu_cheng_yan/cursor/project_llm_english_learning_remake/llm_english_learning_read_write/backend/` 創建 `.env` 檔案，並加入 `GEMINI_API_KEY=YOUR_API_KEY_HERE` (此檔案應加入 `.gitignore`)。
     *   服務啟動時使用 `dotenv` 加載環境變數。
 2.  **服務實現**:
     *   引入 `@google/generative-ai` SDK。
