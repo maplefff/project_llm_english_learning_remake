@@ -13,7 +13,6 @@ export interface QuestionData {
 
 export interface HistoryEntry {
     UUID: string;  // 題目的 UUID (來自快取，欄位名嚴格為 UUID)
-    testItem: string; // ADDED: 題型，例如 '1.1.1'
     questionData: QuestionData; // 作答時的題目完整快照
     userAnswer: string; // 使用者提交的答案 (例如選項字母)
     isCorrect: boolean; // 後端判斷答案是否正確
@@ -64,7 +63,7 @@ export async function saveHistoryEntry(
     await ensureHistoryDirExists();
     const filePath = getHistoryFilePath(questionType);
     const newRecord: HistoryEntry = {
-        ...entryData, // entryData 中應包含 UUID, testItem, questionData, userAnswer, isCorrect
+        ...entryData, // entryData 中應包含 UUID, questionData, userAnswer, isCorrect
         timestamp: Date.now(),
     };
 

@@ -1,234 +1,89 @@
 [
   {
-    "UUID": "3eac8b00-4dbf-4e6d-a7c7-15d6d59be304",
+    "UUID": "56027b06-92ae-4d5b-94a0-9fd0061d4a68",
     "questionData": {
-      "explanation_of_Question": "Consequence 指由於某事而產生的結果或影響。未讀書會導致考試成績不佳，這是其後果。選項 B「effects」意為結果、影響，符合語意。選項 A「causes」意為原因，語意相反；選項 C「efforts」意為努力，與結果無關；選項 D「improvements」意為改善，語意不符。",
+      "passage": "During the lecture, the speaker chose to emphasize a few key points he felt were crucial for the audience to remember.",
+      "targetWord": "emphasize",
+      "question": "Which word is the best synonym for 'emphasize' in the given sentence?",
       "options": [
         {
           "id": "A",
-          "text": "causes"
+          "text": "stress"
         },
         {
           "id": "B",
-          "text": "effects"
+          "text": "ignore"
         },
         {
           "id": "C",
-          "text": "efforts"
+          "text": "question"
         },
         {
           "id": "D",
-          "text": "improvements"
+          "text": "mention briefly"
         }
       ],
-      "passage": "Failing to study will have serious **consequences** for your exam results.",
-      "question": "In the sentence above, the word 'consequences' most nearly means:",
-      "standard_answer": "B",
-      "targetWord": "consequences"
-    },
-    "cacheTimestamp": 1747498273
-  },
-  {
-    "UUID": "38d4d7b6-4abc-4e99-963e-261410597062",
-    "questionData": {
-      "explanation_of_Question": "Sufficient 指足夠的、充分的。提供足夠資訊才能完全理解情況。選項 C「enough」意為足夠的，符合語意。選項 A「limited」意為有限的，語意相反；選項 B「incomplete」意為不完整的，語意相反；選項 D「confusing」意為令人困惑的，與原意無關。",
-      "options": [
-        {
-          "id": "A",
-          "text": "limited"
-        },
-        {
-          "id": "B",
-          "text": "incomplete"
-        },
-        {
-          "id": "C",
-          "text": "enough"
-        },
-        {
-          "id": "D",
-          "text": "confusing"
-        }
-      ],
-      "passage": "Please provide **sufficient** information so we can understand the situation fully.",
-      "question": "In the sentence above, the word 'sufficient' most nearly means:",
-      "standard_answer": "C",
-      "targetWord": "sufficient"
-    },
-    "cacheTimestamp": 1747498273
-  },
-  {
-    "UUID": "ced2b6de-40a9-4e30-8672-fa4ee7c65f87",
-    "questionData": {
-      "explanation_of_Question": "Enhance 指提高、增強。健康飲食能提高能量水平。選項 B「improve」意為改善、提高，符合語意。選項 A「decrease」意為減少，語意相反；選項 C「hide」意為隱藏，語意不符；選項 D「complicate」意為使複雜化，語意不符。",
-      "options": [
-        {
-          "id": "A",
-          "text": "decrease"
-        },
-        {
-          "id": "B",
-          "text": "improve"
-        },
-        {
-          "id": "C",
-          "text": "hide"
-        },
-        {
-          "id": "D",
-          "text": "complicate"
-        }
-      ],
-      "passage": "Eating a healthy diet can **enhance** your energy levels.",
-      "question": "In the sentence above, the word 'enhance' most nearly means:",
-      "standard_answer": "B",
-      "targetWord": "enhance"
-    },
-    "cacheTimestamp": 1747498273
-  },
-  {
-    "UUID": "8fd342e6-fb50-44aa-8a9e-55a5c03ef06e",
-    "questionData": {
-      "explanation_of_Question": "Crucial 指至關重要的、關鍵的。現在做出正確決定對公司未來至關重要。選項 D「very important」意為非常重要的，符合語意。選項 A「unimportant」意為不重要的，語意相反；選項 B「difficult」意為困難的，未涵蓋重要性；選項 C「interesting」意為有趣的，語意不符。",
-      "options": [
-        {
-          "id": "A",
-          "text": "unimportant"
-        },
-        {
-          "id": "B",
-          "text": "difficult"
-        },
-        {
-          "id": "C",
-          "text": "interesting"
-        },
-        {
-          "id": "D",
-          "text": "very important"
-        }
-      ],
-      "passage": "Making the right decision now is **crucial** for the future of the company.",
-      "question": "In the sentence above, the word 'crucial' most nearly means:",
-      "standard_answer": "D",
-      "targetWord": "crucial"
-    },
-    "cacheTimestamp": 1747498273
-  },
-  {
-    "UUID": "8c7b5991-5533-4fa3-874f-bfd64ae91afa",
-    "questionData": {
-      "explanation_of_Question": "Distinct 指明顯不同的、獨特的。這兩種文化有明顯不同的習俗和傳統。選項 B「different」意為不同的，符合語意。選項 A「similar」意為相似的，語意相反；選項 C「common」意為普遍的、常見的，語意不符；選項 D「ancient」意為古代的，語意不符。",
-      "options": [
-        {
-          "id": "A",
-          "text": "similar"
-        },
-        {
-          "id": "B",
-          "text": "different"
-        },
-        {
-          "id": "C",
-          "text": "common"
-        },
-        {
-          "id": "D",
-          "text": "ancient"
-        }
-      ],
-      "passage": "The two cultures have very **distinct** customs and traditions.",
-      "question": "In the sentence above, the word 'distinct' most nearly means:",
-      "standard_answer": "B",
-      "targetWord": "distinct"
-    },
-    "cacheTimestamp": 1747498273
-  },
-  {
-    "UUID": "e8bab8c0-204d-40a5-9ad7-6a3661f83fe1",
-    "questionData": {
-      "explanation_of_Question": "Innovative 指創新的、革新的。公司以其創新的技術方法而聞名。選項 C「brand new and creative」意為全新的且有創造力的，符合語意。選項 A「traditional」意為傳統的，語意相反；選項 B「unoriginal」意為無創意的，語意相反；選項 D「complicated」意為複雜的，語意不符。",
-      "options": [
-        {
-          "id": "A",
-          "text": "traditional"
-        },
-        {
-          "id": "B",
-          "text": "unoriginal"
-        },
-        {
-          "id": "C",
-          "text": "brand new and creative"
-        },
-        {
-          "id": "D",
-          "text": "complicated"
-        }
-      ],
-      "passage": "The company is known for its **innovative** approach to technology.",
-      "question": "In the sentence above, the word 'innovative' most nearly means:",
-      "standard_answer": "C",
-      "targetWord": "innovative"
-    },
-    "cacheTimestamp": 1747498273
-  },
-  {
-    "UUID": "c22fa238-837d-4b06-972c-bdf103dd9866",
-    "questionData": {
-      "explanation_of_Question": "Prioritize 指按重要性排序、優先處理。你需要按重要性排序任務才能有效管理時間。選項 A「arrange by importance」意為按重要性排序，符合語意。選項 B「finish quickly」意為快速完成，與優先處理不同；選項 C「share with others」意為與他人分享，語意不符；選項 D「postpone」意為延遲，語意相反。",
-      "options": [
-        {
-          "id": "A",
-          "text": "arrange by importance"
-        },
-        {
-          "id": "B",
-          "text": "finish quickly"
-        },
-        {
-          "id": "C",
-          "text": "share with others"
-        },
-        {
-          "id": "D",
-          "text": "postpone"
-        }
-      ],
-      "passage": "You need to **prioritize** your tasks to manage your time effectively.",
-      "question": "In the sentence above, the word 'prioritize' most nearly means:",
       "standard_answer": "A",
-      "targetWord": "prioritize"
+      "explanation_of_Question": "Emphasize 指強調或突出某事的重要性。句子中講師強調一個關鍵點，因此選項 A「stress」正確。選項 B「ignore」意為忽視；選項 C「question」意為質疑；選項 D「mention briefly」意為簡略提及，皆與原意不符。"
     },
-    "cacheTimestamp": 1747498273
+    "cacheTimestamp": 1747501305
   },
   {
-    "UUID": "efe93610-3e78-4810-b75d-a0afbd646a03",
+    "UUID": "44c29fd1-21ce-4170-887f-b1fce399f7cd",
     "questionData": {
-      "explanation_of_Question": "Sustainable 指可持續的、能維持的。公司承諾使用可持續資源以保護環境。選項 C「able to be maintained for a long time」意為能夠長時間維持的，符合語意。選項 A「easy to find」意為容易找到的，語意不符；選項 B「expensive」意為昂貴的，語意不符；選項 D「natural」意為自然的，雖然可持續資源常是自然的，但「sustainable」的重點在於能否長期維持。",
+      "passage": "Her approach to solving the problem was highly pragmatic, focusing on achievable steps rather than abstract theories.",
+      "targetWord": "pragmatic",
+      "question": "The word 'pragmatic' in the sentence is closest in meaning to:",
       "options": [
         {
           "id": "A",
-          "text": "easy to find"
+          "text": "idealistic"
         },
         {
           "id": "B",
-          "text": "expensive"
+          "text": "complex"
         },
         {
           "id": "C",
-          "text": "able to be maintained for a long time"
+          "text": "theoretical"
         },
         {
           "id": "D",
-          "text": "natural"
+          "text": "practical"
         }
       ],
-      "passage": "The company is committed to using **sustainable** resources to protect the environment.",
-      "question": "In the sentence above, the word 'sustainable' most nearly means:",
-      "standard_answer": "C",
-      "targetWord": "sustainable"
+      "standard_answer": "D",
+      "explanation_of_Question": "Pragmatic 指務實、實際的，關注於解決問題而非理論。此處描述的方法注重實際結果，因此選項 D「practical」正確。選項 A「idealistic」意為理想主義的；選項 B「complex」意為複雜的；選項 C「theoretical」意為理論上的，皆與原意相反或不符。"
     },
-    "cacheTimestamp": 1747498273
+    "cacheTimestamp": 1747501305
+  },
+  {
+    "UUID": "13ea2b2d-e7bf-4bad-a635-b9f416e629f0",
+    "questionData": {
+      "passage": "The stars in the night sky, like the grains of sand on the beach, seemed almost innumerable.",
+      "targetWord": "innumerable",
+      "question": "What does the word 'innumerable' mean as used in the sentence?",
+      "options": [
+        {
+          "id": "A",
+          "text": "visible"
+        },
+        {
+          "id": "B",
+          "text": "countless"
+        },
+        {
+          "id": "C",
+          "text": "few"
+        },
+        {
+          "id": "D",
+          "text": "large"
+        }
+      ],
+      "standard_answer": "B",
+      "explanation_of_Question": "Innumerable 指數量極多、數不清的。句子中描述了海灘上數不清的沙粒，因此選項 B「countless」正確。選項 A「visible」意為可見的；選項 C「few」意為少數的；選項 D「large」意為巨大的，皆與原意不符。"
+    },
+    "cacheTimestamp": 1747501305
   }
 ]

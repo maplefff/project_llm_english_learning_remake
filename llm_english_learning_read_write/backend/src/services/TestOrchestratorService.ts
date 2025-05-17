@@ -55,24 +55,15 @@ class TestOrchestratorService {
 
     try {
       console.log(`[DEBUG TestOrchestratorService.ts] startSingleTypeTest: 正在從快取獲取題型 ${questionType} 的題目`);
-      const cachedItem = await this.questionCacheService.getQuestionFromCache('1.1.1');
+      const cachedEntry = await this.questionCacheService.getQuestionFromCache('1.1.1'); // cachedEntry is CacheEntry | null
       
-      let cachedPayload: CachedQuestionPayload | null = null;
-      if (cachedItem) {
-        const placeholderId = `temp_id_${Date.now()}`;
-        console.warn(`[DEBUG TestOrchestratorService.ts] Using placeholder ID ${placeholderId} for question from cache. QuestionCacheService.getQuestionFromCache needs update.`);
-        cachedPayload = {
-          id: placeholderId, 
-          questionBody: cachedItem
-        };
-      }
-
-      if (!cachedPayload || !cachedPayload.id || !cachedPayload.questionBody) {
+      if (!cachedEntry || !cachedEntry.UUID || !cachedEntry.questionData) {
         console.log(`[DEBUG TestOrchestratorService.ts] startSingleTypeTest: 快取中無可用題目或返回格式不符 (題型 ${questionType})`);
         return null;
       }
       
-      const questionForClient = this.formatQuestionForClient(cachedPayload.id, cachedPayload.questionBody);
+      // 使用 cachedEntry.UUID 和 cachedEntry.questionData
+      const questionForClient = this.formatQuestionForClient(cachedEntry.UUID, cachedEntry.questionData);
       console.log(`[DEBUG TestOrchestratorService.ts] startSingleTypeTest: 成功獲取題目 ${questionForClient.id}`);
       return questionForClient;
     } catch (error) {
@@ -107,7 +98,6 @@ class TestOrchestratorService {
       
       const historyEntryPayload: Omit<HistoryEntry, 'timestamp'> = {
         UUID: originalQuestionClientData.id,
-        testItem: originalQuestionClientData.type, 
         questionData: snapshotForHistory, 
         userAnswer: userAnswer,
         isCorrect: isCorrect,
@@ -117,20 +107,12 @@ class TestOrchestratorService {
       await saveHistoryEntry(originalQuestionClientData.type, historyEntryPayload);
       console.log(`[DEBUG TestOrchestratorService.ts] submitAnswer: 歷史記錄已儲存`);
 
-      const nextCachedItem = await this.questionCacheService.getQuestionFromCache(originalQuestionClientData.type);
-      let nextCachedPayload: CachedQuestionPayload | null = null;
-      if (nextCachedItem) {
-        const placeholderId = `temp_id_next_${Date.now()}`;
-        console.warn(`[DEBUG TestOrchestratorService.ts] Using placeholder ID ${placeholderId} for next question. QuestionCacheService.getQuestionFromCache needs update.`);
-        nextCachedPayload = {
-          id: placeholderId,
-          questionBody: nextCachedItem
-        };
-      }
-
+      const nextCachedEntry = await this.questionCacheService.getQuestionFromCache(originalQuestionClientData.type); // nextCachedEntry is CacheEntry | null
+      
       let nextQuestionForClient: TestOrchestratorQuestion | null = null;
-      if (nextCachedPayload && nextCachedPayload.id && nextCachedPayload.questionBody) {
-        nextQuestionForClient = this.formatQuestionForClient(nextCachedPayload.id, nextCachedPayload.questionBody);
+      if (nextCachedEntry && nextCachedEntry.UUID && nextCachedEntry.questionData) {
+        // 使用 nextCachedEntry.UUID 和 nextCachedEntry.questionData
+        nextQuestionForClient = this.formatQuestionForClient(nextCachedEntry.UUID, nextCachedEntry.questionData);
         console.log(`[DEBUG TestOrchestratorService.ts] submitAnswer: 下一題獲取結果: ${nextQuestionForClient.id}`);
       } else {
         console.log(`[DEBUG TestOrchestratorService.ts] submitAnswer: 無可用下一題`);

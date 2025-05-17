@@ -188,19 +188,32 @@ export class QuestionCacheService {
       if (success && Array.isArray(newQuestionDataArray)) {
         // (原有的處理生成題目的邏輯)
         console.log(`[DEBUG QuestionCacheService.ts] Processing ${newQuestionDataArray.length} generated questions for ${questionType}.`);
-        for (const questionData of newQuestionDataArray) {
-          if (this.caches.get(questionType)!.length >= TARGET_QUESTIONS_111) {
-            console.log(`[DEBUG QuestionCacheService.ts] Target for ${questionType} reached during batch add. Stopping.`);
-            break;
+        for (const originalQuestionData of newQuestionDataArray) {
+          if (this._isQuestionData111(originalQuestionData)) { // 確保類型正確
+            const orderedQuestionData: QuestionData111 = {
+              passage: originalQuestionData.passage,
+              targetWord: originalQuestionData.targetWord,
+              question: originalQuestionData.question,
+              options: originalQuestionData.options,
+              standard_answer: originalQuestionData.standard_answer,
+              explanation_of_Question: originalQuestionData.explanation_of_Question,
+            };
+
+            if (this.caches.get(questionType)!.length >= TARGET_QUESTIONS_111) {
+              console.log(`[DEBUG QuestionCacheService.ts] Target for ${questionType} reached during batch add. Stopping.`);
+              break;
+            }
+            const cachedQuestion: CacheEntry = {
+              UUID: uuidv4(),
+              questionData: orderedQuestionData, // 使用屬性有序的副本
+              cacheTimestamp: Math.floor(Date.now() / 1000),
+            };
+            this.caches.get(questionType)!.push(cachedQuestion);
+            console.log(`[DEBUG QuestionCacheService.ts] Added new question ${cachedQuestion.UUID} to cache for ${questionType}. New count: ${this.caches.get(questionType)!.length}`);
+            this._persistCacheToFile(questionType); // 每次添加都持久化
+          } else {
+            console.warn('[DEBUG QuestionCacheService.ts] Skipping an item from generator as it does not match QuestionData111 structure:', originalQuestionData);
           }
-          const cachedQuestion: CacheEntry = {
-            UUID: uuidv4(),
-            questionData: questionData as QuestionData111,
-            cacheTimestamp: Math.floor(Date.now() / 1000),
-          };
-          this.caches.get(questionType)!.push(cachedQuestion);
-          console.log(`[DEBUG QuestionCacheService.ts] Added new question ${cachedQuestion.UUID} to cache for ${questionType}. New count: ${this.caches.get(questionType)!.length}`);
-          this._persistCacheToFile(questionType); // 每次添加都持久化
         }
       } else if (!success) {
          // 如果 success 仍然是 false，表示所有重試都失敗了
@@ -235,12 +248,12 @@ export class QuestionCacheService {
   }
 
   // --- 從快取提供題目 ---
-  public async getQuestionFromCache(questionType: '1.1.1'): Promise<QuestionData111 | null> {
+  public async getQuestionFromCache(questionType: '1.1.1'): Promise<CacheEntry | null> {
     const cachedQuestions = this.caches.get(questionType);
 
     if (cachedQuestions && cachedQuestions.length > 0) {
       // 從陣列開頭取出題目 (FIFO)
-      const questionToReturn = cachedQuestions.shift(); 
+      const questionToReturn = cachedQuestions.shift();
       
       if (questionToReturn) {
         console.log(`[DEBUG QuestionCacheService.ts] Providing question ${questionToReturn.UUID} from cache for ${questionType}. Remaining: ${cachedQuestions.length}`);
@@ -248,7 +261,7 @@ export class QuestionCacheService {
         this._persistCacheToFile(questionType);
         // 檢查是否需要補充 (非同步)
         this._checkAndTriggerReplenishment(questionType);
-        return questionToReturn.questionData;
+        return questionToReturn;
       } else {
         // 理論上如果 length > 0，shift 不應返回 undefined，但做個防禦性處理
         console.warn(`[DEBUG QuestionCacheService.ts] Cache for ${questionType} reported length > 0 but shift() returned undefined.`);
