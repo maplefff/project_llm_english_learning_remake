@@ -6,18 +6,13 @@ alwaysApply: true
 ##Project Paths
 - Root(專案根目錄): /Users/wu_cheng_yan/cursor/project_llm_english_learning_remake/llm_english_learning_read&write
 - Parent(父目錄): /Users/wu_cheng_yan/cursor/project_llm_english_learning_remake
-
 ##LLM Selection
 - Model: gemini-2.5-flash-preview-04-17 (fixed by user; do not change)
-
 ##
 - Any major change to the folder layout must be mirrored in devPlanRead&Write.md.
-
 ##Debug Logging
 - Prefix logs with [DEBUG <filename.ext>].
 - Comment out unused console.log lines instead of deleting them.
-
 ##
 - Do not modify /Users/wu_cheng_yan/cursor/project_llm_english_learning_remake/exam_example.html.
-
-⸻
+- Do not instruct the user to execute the command themselves unless you have repeatedly attempted and failed.

@@ -1,5 +1,35 @@
 [
   {
+    "UUID": "52fe3960-8153-4a82-9c78-e5cb2caeb162",
+    "questionData": {
+      "passage": "The rules regarding the use of mobile phones were rather ambiguous, causing much confusion among students.",
+      "targetWord": "ambiguous",
+      "question": "In this sentence, the word 'ambiguous' is closest in meaning to:",
+      "options": [
+        {
+          "id": "A",
+          "text": "simple"
+        },
+        {
+          "id": "B",
+          "text": "strict"
+        },
+        {
+          "id": "C",
+          "text": "unclear"
+        },
+        {
+          "id": "D",
+          "text": "helpful"
+        }
+      ],
+      "standard_answer": "C"
+    },
+    "userAnswer": "C",
+    "isCorrect": true,
+    "timestamp": 1747592188917
+  },
+  {
     "UUID": "19fedab0-d935-4b37-8554-c34496eab920",
     "questionData": {
       "passage": "Before signing the contract, he decided to **scrutinize** every detail carefully to avoid any potential issues.",
@@ -88,5 +118,5 @@
     "userAnswer": "A",
     "isCorrect": false,
     "timestamp": 1747501297333
-r}
+  }
 ]

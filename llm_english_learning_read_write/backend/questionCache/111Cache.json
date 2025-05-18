@@ -1,89 +1,147 @@
 [
   {
-    "UUID": "56027b06-92ae-4d5b-94a0-9fd0061d4a68",
+    "UUID": "1cbd423f-267e-4751-a173-214afe2add6e",
     "questionData": {
-      "passage": "During the lecture, the speaker chose to emphasize a few key points he felt were crucial for the audience to remember.",
-      "targetWord": "emphasize",
-      "question": "Which word is the best synonym for 'emphasize' in the given sentence?",
+      "passage": "She inadvertently revealed the surprise party plans during a casual conversation.",
+      "targetWord": "inadvertently",
+      "question": "What is the closest meaning of 'inadvertently' in this sentence?",
       "options": [
         {
           "id": "A",
-          "text": "stress"
+          "text": "purposefully"
         },
         {
           "id": "B",
-          "text": "ignore"
+          "text": "carefully"
         },
         {
           "id": "C",
-          "text": "question"
+          "text": "quickly"
         },
         {
           "id": "D",
-          "text": "mention briefly"
-        }
-      ],
-      "standard_answer": "A",
-      "explanation_of_Question": "Emphasize 指強調或突出某事的重要性。句子中講師強調一個關鍵點，因此選項 A「stress」正確。選項 B「ignore」意為忽視；選項 C「question」意為質疑；選項 D「mention briefly」意為簡略提及，皆與原意不符。"
-    },
-    "cacheTimestamp": 1747501305
-  },
-  {
-    "UUID": "44c29fd1-21ce-4170-887f-b1fce399f7cd",
-    "questionData": {
-      "passage": "Her approach to solving the problem was highly pragmatic, focusing on achievable steps rather than abstract theories.",
-      "targetWord": "pragmatic",
-      "question": "The word 'pragmatic' in the sentence is closest in meaning to:",
-      "options": [
-        {
-          "id": "A",
-          "text": "idealistic"
-        },
-        {
-          "id": "B",
-          "text": "complex"
-        },
-        {
-          "id": "C",
-          "text": "theoretical"
-        },
-        {
-          "id": "D",
-          "text": "practical"
+          "text": "unintentionally"
         }
       ],
       "standard_answer": "D",
-      "explanation_of_Question": "Pragmatic 指務實、實際的，關注於解決問題而非理論。此處描述的方法注重實際結果，因此選項 D「practical」正確。選項 A「idealistic」意為理想主義的；選項 B「complex」意為複雜的；選項 C「theoretical」意為理論上的，皆與原意相反或不符。"
+      "explanation_of_Question": "Inadvertently 意為「非故意地」或「不經意地」。句子描述主角不小心（非故意地）洩漏了秘密，因此選項 D「unintentionally」是其近義詞，表示非故意地。選項 A「purposefully」意為故意地；選項 B「carefully」意為仔細地；選項 C「quickly」意為快速地，這些都不符合語境。"
     },
-    "cacheTimestamp": 1747501305
+    "cacheTimestamp": 1747592206
   },
   {
-    "UUID": "13ea2b2d-e7bf-4bad-a635-b9f416e629f0",
+    "UUID": "e8eda18e-3ff0-4a5a-a2ae-df7bf8679444",
     "questionData": {
-      "passage": "The stars in the night sky, like the grains of sand on the beach, seemed almost innumerable.",
-      "targetWord": "innumerable",
-      "question": "What does the word 'innumerable' mean as used in the sentence?",
+      "passage": "The benevolent old woman donated a large sum of money to the local orphanage.",
+      "targetWord": "benevolent",
+      "question": "Which word is a synonym for 'benevolent'?",
       "options": [
         {
           "id": "A",
-          "text": "visible"
+          "text": "strict"
         },
         {
           "id": "B",
-          "text": "countless"
+          "text": "wealthy"
         },
         {
           "id": "C",
-          "text": "few"
+          "text": "kind"
         },
         {
           "id": "D",
-          "text": "large"
+          "text": "anxious"
+        }
+      ],
+      "standard_answer": "C",
+      "explanation_of_Question": "Benevolent 意為「仁慈的」、「善良的」。句子描述一位仁慈的老婦人。選項 C「kind」意為善良的，與 benevolent 意思最接近。選項 A「strict」意為嚴格的；選項 B「wealthy」意為富有的；選項 D「anxious」意為焦慮的，這些都不符合語境。"
+    },
+    "cacheTimestamp": 1747592206
+  },
+  {
+    "UUID": "12b7eb9f-94f9-427b-9866-66e833c1c42d",
+    "questionData": {
+      "passage": "They had to cross a precarious bridge to reach the other side of the valley.",
+      "targetWord": "precarious",
+      "question": "In the sentence, 'precarious' is best described as:",
+      "options": [
+        {
+          "id": "A",
+          "text": "easy"
+        },
+        {
+          "id": "B",
+          "text": "unstable"
+        },
+        {
+          "id": "C",
+          "text": "smooth"
+        },
+        {
+          "id": "D",
+          "text": "familiar"
         }
       ],
       "standard_answer": "B",
-      "explanation_of_Question": "Innumerable 指數量極多、數不清的。句子中描述了海灘上數不清的沙粒，因此選項 B「countless」正確。選項 A「visible」意為可見的；選項 C「few」意為少數的；選項 D「large」意為巨大的，皆與原意不符。"
+      "explanation_of_Question": "Precarious 意為「不穩定的」、「危險的」。句子描述登山者在危險或不穩定的地形上行進。選項 B「unstable」意為不穩定的，與 precarious 意思最接近。選項 A「easy」意為容易的；選項 C「smooth」意為平坦的；選項 D「familiar」意為熟悉的，這些都不符合語境。"
     },
-    "cacheTimestamp": 1747501305
+    "cacheTimestamp": 1747592206
+  },
+  {
+    "UUID": "a44a98fb-9cd2-4b88-b700-896126943573",
+    "questionData": {
+      "passage": "The team presented an elaborate plan for the new marketing campaign.",
+      "targetWord": "elaborate",
+      "question": "What does 'elaborate' mean in the context of this sentence?",
+      "options": [
+        {
+          "id": "A",
+          "text": "detailed"
+        },
+        {
+          "id": "B",
+          "text": "simple"
+        },
+        {
+          "id": "C",
+          "text": "quick"
+        },
+        {
+          "id": "D",
+          "text": "temporary"
+        }
+      ],
+      "standard_answer": "A",
+      "explanation_of_Question": "Elaborate (adjective) 意為「精密的」、「複雜的」、「詳盡的」。句子描述了一項包含許多細節和複雜部分的計畫。選項 A「detailed」意為詳盡的，與 elaborate 在此語境下的意思最接近。選項 B「simple」意為簡單的；選項 C「quick」意為快速的；選項 D「temporary」意為暫時的，這些都不符合語境。"
+    },
+    "cacheTimestamp": 1747592206
+  },
+  {
+    "UUID": "6e18dbb8-e3c2-42a5-a767-938b84fa0386",
+    "questionData": {
+      "passage": "His understanding of the subject was rather superficial; he hadn't studied it in depth.",
+      "targetWord": "superficial",
+      "question": "Which phrase best defines 'superficial' as used in the sentence?",
+      "options": [
+        {
+          "id": "A",
+          "text": "very serious"
+        },
+        {
+          "id": "B",
+          "text": "easy to solve"
+        },
+        {
+          "id": "C",
+          "text": "complex and difficult"
+        },
+        {
+          "id": "D",
+          "text": "not deep or thorough"
+        }
+      ],
+      "standard_answer": "D",
+      "explanation_of_Question": "Superficial 意為「表面的」、「膚淺的」。句子描述的是對問題只有表面的理解，沒有深入探究。選項 D「not deep or thorough」意為不深入或不透徹的，這與 superficial 的意思相符。選項 A「very serious」意為非常嚴重的；選項 B「easy to solve」意為容易解決的；選項 C「complex and difficult」意為複雜且困難的，這些都不符合語境。"
+    },
+    "cacheTimestamp": 1747592206
   }
 ]
