@@ -1,122 +1,92 @@
 [
   {
-    "UUID": "52fe3960-8153-4a82-9c78-e5cb2caeb162",
+    "UUID": "44024925-a475-48bd-a1eb-a6066708425c",
     "questionData": {
-      "passage": "The rules regarding the use of mobile phones were rather ambiguous, causing much confusion among students.",
-      "targetWord": "ambiguous",
-      "question": "In this sentence, the word 'ambiguous' is closest in meaning to:",
+      "passage": "Researchers are working to analyze the data collected from the experiment.",
+      "targetWord": "analyze",
+      "question": "The word 'analyze' is best replaced by:",
       "options": [
         {
           "id": "A",
-          "text": "simple"
+          "text": "ignore"
         },
         {
           "id": "B",
-          "text": "strict"
+          "text": "examine"
         },
         {
           "id": "C",
-          "text": "unclear"
+          "text": "discard"
         },
         {
           "id": "D",
-          "text": "helpful"
+          "text": "create"
         }
       ],
-      "standard_answer": "C"
+      "standard_answer": "B"
     },
-    "userAnswer": "C",
+    "userAnswer": "B",
     "isCorrect": true,
-    "timestamp": 1747592188917
+    "timestamp": 1747599811827
   },
   {
-    "UUID": "19fedab0-d935-4b37-8554-c34496eab920",
+    "UUID": "989d4412-facd-4bc7-8b54-c46a634424ca",
     "questionData": {
-      "passage": "Before signing the contract, he decided to **scrutinize** every detail carefully to avoid any potential issues.",
-      "targetWord": "scrutinize",
-      "question": "To \"scrutinize\" something means to:",
+      "passage": "Do you have sufficient time to complete the project by Friday?",
+      "targetWord": "sufficient",
+      "question": "What does 'sufficient' mean in this context?",
       "options": [
         {
           "id": "A",
-          "text": "Ignore it"
+          "text": "limited"
         },
         {
           "id": "B",
-          "text": "Sign it quickly"
+          "text": "excessive"
         },
         {
           "id": "C",
-          "text": "Examine it closely"
+          "text": "minimal"
         },
         {
           "id": "D",
-          "text": "Criticize it harshly"
+          "text": "enough"
         }
       ],
-      "standard_answer": "C"
-    },
-    "userAnswer": "C",
-    "isCorrect": true,
-    "timestamp": 1747501348100
-  },
-  {
-    "UUID": "8fa86fcb-0bc7-4b60-903e-e91c320eb901",
-    "questionData": {
-      "passage": "The influence of social media has become increasingly **pervasive** in modern society, affecting everything from politics to personal relationships.",
-      "targetWord": "pervasive",
-      "question": "Which word is closest in meaning to \"pervasive\" as used in the sentence?",
-      "options": [
-        {
-          "id": "A",
-          "text": "Limited"
-        },
-        {
-          "id": "B",
-          "text": "Superficial"
-        },
-        {
-          "id": "C",
-          "text": "Widespread and influential"
-        },
-        {
-          "id": "D",
-          "text": "Temporary"
-        }
-      ],
-      "standard_answer": "C"
+      "standard_answer": "D"
     },
     "userAnswer": "D",
-    "isCorrect": false,
-    "timestamp": 1747501330035
+    "isCorrect": true,
+    "timestamp": 1747599808846
   },
   {
-    "UUID": "f3f579cc-0b07-447b-a559-e65743e7d7f1",
+    "UUID": "5dbfbe0e-c555-477b-a5f6-c70947f80258",
     "questionData": {
-      "passage": "Smartphones are so common today that they are practically **ubiquitous**. You see them everywhere you go.",
-      "targetWord": "ubiquitous",
-      "question": "In this sentence, what does \"ubiquitous\" mean?",
+      "passage": "She was genuinely concerned about her friend's health after hearing the news.",
+      "targetWord": "concerned",
+      "question": "In the sentence, 'concerned' is closest in meaning to:",
       "options": [
         {
           "id": "A",
-          "text": "Expensive"
+          "text": "worried"
         },
         {
           "id": "B",
-          "text": "Necessary"
+          "text": "excited"
         },
         {
           "id": "C",
-          "text": "Widespread"
+          "text": "indifferent"
         },
         {
           "id": "D",
-          "text": "Complicated"
+          "text": "joyful"
         }
       ],
-      "standard_answer": "C"
+      "standard_answer": "A"
     },
-    "userAnswer": "A",
+    "userAnswer": "B",
     "isCorrect": false,
-    "timestamp": 1747501297333
+    "timestamp": 1747599805306
   }
 ]

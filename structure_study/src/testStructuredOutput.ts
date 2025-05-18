@@ -1,6 +1,7 @@
 import * as dotenv from 'dotenv';
 import * as path from 'path';
 import { GoogleGenerativeAI, HarmCategory, HarmBlockThreshold, GenerationConfig, GenerativeModel, Content, Part, FunctionDeclarationSchema, FunctionDeclaration, FunctionDeclarationsTool, FunctionResponsePart, GenerateContentResult, Schema, SchemaType } from '@google/generative-ai';
+import { Type } from '@google/genai';
 
 // --- .env 設定 ---
 // structure_study 目錄相對於 llm_english_learning_read&write 目錄是 '../structure_study'

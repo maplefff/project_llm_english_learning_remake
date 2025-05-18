@@ -1,147 +1,147 @@
 [
   {
-    "UUID": "1cbd423f-267e-4751-a173-214afe2add6e",
+    "UUID": "1a72dc2e-43f3-43a8-aa7d-d2906e1d5eb2",
     "questionData": {
-      "passage": "She inadvertently revealed the surprise party plans during a casual conversation.",
-      "targetWord": "inadvertently",
-      "question": "What is the closest meaning of 'inadvertently' in this sentence?",
+      "passage": "Getting enough sleep is essential for staying healthy.",
+      "targetWord": "essential",
+      "question": "The word 'essential' in the sentence means:",
       "options": [
         {
           "id": "A",
-          "text": "purposefully"
+          "text": "necessary"
         },
         {
           "id": "B",
-          "text": "carefully"
+          "text": "unimportant"
         },
         {
           "id": "C",
-          "text": "quickly"
+          "text": "harmful"
         },
         {
           "id": "D",
-          "text": "unintentionally"
-        }
-      ],
-      "standard_answer": "D",
-      "explanation_of_Question": "Inadvertently 意為「非故意地」或「不經意地」。句子描述主角不小心（非故意地）洩漏了秘密，因此選項 D「unintentionally」是其近義詞，表示非故意地。選項 A「purposefully」意為故意地；選項 B「carefully」意為仔細地；選項 C「quickly」意為快速地，這些都不符合語境。"
-    },
-    "cacheTimestamp": 1747592206
-  },
-  {
-    "UUID": "e8eda18e-3ff0-4a5a-a2ae-df7bf8679444",
-    "questionData": {
-      "passage": "The benevolent old woman donated a large sum of money to the local orphanage.",
-      "targetWord": "benevolent",
-      "question": "Which word is a synonym for 'benevolent'?",
-      "options": [
-        {
-          "id": "A",
-          "text": "strict"
-        },
-        {
-          "id": "B",
-          "text": "wealthy"
-        },
-        {
-          "id": "C",
-          "text": "kind"
-        },
-        {
-          "id": "D",
-          "text": "anxious"
-        }
-      ],
-      "standard_answer": "C",
-      "explanation_of_Question": "Benevolent 意為「仁慈的」、「善良的」。句子描述一位仁慈的老婦人。選項 C「kind」意為善良的，與 benevolent 意思最接近。選項 A「strict」意為嚴格的；選項 B「wealthy」意為富有的；選項 D「anxious」意為焦慮的，這些都不符合語境。"
-    },
-    "cacheTimestamp": 1747592206
-  },
-  {
-    "UUID": "12b7eb9f-94f9-427b-9866-66e833c1c42d",
-    "questionData": {
-      "passage": "They had to cross a precarious bridge to reach the other side of the valley.",
-      "targetWord": "precarious",
-      "question": "In the sentence, 'precarious' is best described as:",
-      "options": [
-        {
-          "id": "A",
-          "text": "easy"
-        },
-        {
-          "id": "B",
-          "text": "unstable"
-        },
-        {
-          "id": "C",
-          "text": "smooth"
-        },
-        {
-          "id": "D",
-          "text": "familiar"
-        }
-      ],
-      "standard_answer": "B",
-      "explanation_of_Question": "Precarious 意為「不穩定的」、「危險的」。句子描述登山者在危險或不穩定的地形上行進。選項 B「unstable」意為不穩定的，與 precarious 意思最接近。選項 A「easy」意為容易的；選項 C「smooth」意為平坦的；選項 D「familiar」意為熟悉的，這些都不符合語境。"
-    },
-    "cacheTimestamp": 1747592206
-  },
-  {
-    "UUID": "a44a98fb-9cd2-4b88-b700-896126943573",
-    "questionData": {
-      "passage": "The team presented an elaborate plan for the new marketing campaign.",
-      "targetWord": "elaborate",
-      "question": "What does 'elaborate' mean in the context of this sentence?",
-      "options": [
-        {
-          "id": "A",
-          "text": "detailed"
-        },
-        {
-          "id": "B",
-          "text": "simple"
-        },
-        {
-          "id": "C",
-          "text": "quick"
-        },
-        {
-          "id": "D",
-          "text": "temporary"
+          "text": "optional"
         }
       ],
       "standard_answer": "A",
-      "explanation_of_Question": "Elaborate (adjective) 意為「精密的」、「複雜的」、「詳盡的」。句子描述了一項包含許多細節和複雜部分的計畫。選項 A「detailed」意為詳盡的，與 elaborate 在此語境下的意思最接近。選項 B「simple」意為簡單的；選項 C「quick」意為快速的；選項 D「temporary」意為暫時的，這些都不符合語境。"
+      "explanation_of_Question": "Essential 指必要的、不可或缺的。此處表示充足的睡眠對保持健康至關重要，因此選項 A「necessary」最接近原意。選項 B「unimportant」意為不重要，與原意相反；選項 C「harmful」意為有害的，與原意相反；選項 D「optional」意為可選擇的，與原意相反。"
     },
-    "cacheTimestamp": 1747592206
+    "cacheTimestamp": 1747599753
   },
   {
-    "UUID": "6e18dbb8-e3c2-42a5-a767-938b84fa0386",
+    "UUID": "3a2ae617-69a9-452c-be8d-e28313fca73f",
     "questionData": {
-      "passage": "His understanding of the subject was rather superficial; he hadn't studied it in depth.",
-      "targetWord": "superficial",
-      "question": "Which phrase best defines 'superficial' as used in the sentence?",
+      "passage": "Smartphones have become so common that they are now truly ubiquitous.",
+      "targetWord": "ubiquitous",
+      "question": "In the sentence above, the word 'ubiquitous' most nearly means:",
       "options": [
         {
           "id": "A",
-          "text": "very serious"
+          "text": "difficult to find"
         },
         {
           "id": "B",
-          "text": "easy to solve"
+          "text": "very rare"
         },
         {
           "id": "C",
-          "text": "complex and difficult"
+          "text": "found only in cities"
         },
         {
           "id": "D",
-          "text": "not deep or thorough"
+          "text": "present everywhere"
         }
       ],
       "standard_answer": "D",
-      "explanation_of_Question": "Superficial 意為「表面的」、「膚淺的」。句子描述的是對問題只有表面的理解，沒有深入探究。選項 D「not deep or thorough」意為不深入或不透徹的，這與 superficial 的意思相符。選項 A「very serious」意為非常嚴重的；選項 B「easy to solve」意為容易解決的；選項 C「complex and difficult」意為複雜且困難的，這些都不符合語境。"
+      "explanation_of_Question": "TargetWord 是 \"ubiquitous\"，意為「無所不在的、普遍存在的」。選項 D \"present everywhere\" 正好符合此意。選項 A \"difficult to find\" 意為「難以找到」，與原意相反。選項 B \"very rare\" 意為「非常稀有的」，與原意相反。選項 C \"found only in cities\" 意為「只在城市中找到」，範圍受限，不符 \"無所不在\" 的概念。"
     },
-    "cacheTimestamp": 1747592206
+    "cacheTimestamp": 1747599821
+  },
+  {
+    "UUID": "0e3d502c-d4f2-4be3-834c-c95ae6bb7937",
+    "questionData": {
+      "passage": "Lack of sleep can have a detrimental effect on your health.",
+      "targetWord": "detrimental",
+      "question": "What does 'detrimental' mean in the context of the sentence?",
+      "options": [
+        {
+          "id": "A",
+          "text": "harmful"
+        },
+        {
+          "id": "B",
+          "text": "beneficial"
+        },
+        {
+          "id": "C",
+          "text": "temporary"
+        },
+        {
+          "id": "D",
+          "text": "exciting"
+        }
+      ],
+      "standard_answer": "A",
+      "explanation_of_Question": "TargetWord 是 \"detrimental\"，意為「有害的、不利的」。選項 A \"harmful\" 意為「有害的」，是其近義詞，因此正確。選項 B \"beneficial\" 意為「有利的、有益的」，與原意相反。選項 C \"temporary\" 意為「暫時的」，與原意無關。選項 D \"exciting\" 意為「令人興奮的」，與原意無關。"
+    },
+    "cacheTimestamp": 1747599821
+  },
+  {
+    "UUID": "f334d1dd-d917-4c3f-8dc2-78b96fc81a33",
+    "questionData": {
+      "passage": "The journalist tried to elicit a response from the shy politician.",
+      "targetWord": "elicit",
+      "question": "Which word is closest in meaning to 'elicit' in this sentence?",
+      "options": [
+        {
+          "id": "A",
+          "text": "hide"
+        },
+        {
+          "id": "B",
+          "text": "destroy"
+        },
+        {
+          "id": "C",
+          "text": "draw out"
+        },
+        {
+          "id": "D",
+          "text": "ignore"
+        }
+      ],
+      "standard_answer": "C",
+      "explanation_of_Question": "TargetWord 是 \"elicit\"，意為「引出、誘出（資訊或反應）」。選項 C \"draw out\" 意為「引出、探出」，是其近義詞，因此正確。選項 A \"hide\" 意為「隱藏」，與原意相反。選項 B \"destroy\" 意為「摧毀」，與原意無關。選項 D \"ignore\" 意為「忽略」，與原意相反。"
+    },
+    "cacheTimestamp": 1747599821
+  },
+  {
+    "UUID": "c9066360-f29a-43cb-b95b-00d89c2b8764",
+    "questionData": {
+      "passage": "Building a new bridge across the river might be feasible with enough funding.",
+      "targetWord": "feasible",
+      "question": "What does 'feasible' mean in the context of the passage?",
+      "options": [
+        {
+          "id": "A",
+          "text": "difficult"
+        },
+        {
+          "id": "B",
+          "text": "possible and practical"
+        },
+        {
+          "id": "C",
+          "text": "expensive"
+        },
+        {
+          "id": "D",
+          "text": "quick"
+        }
+      ],
+      "standard_answer": "B",
+      "explanation_of_Question": "TargetWord 是 \"feasible\"，意為「可行的、行得通的」。選項 B \"possible and practical\" 意為「可能且實際的」，符合「可行的」概念。選項 A \"difficult\" 意為「困難的」，與原意相反。選項 C \"expensive\" 意為「昂貴的」，與可行性無直接關聯。選項 D \"quick\" 意為「快速的」，與可行性無直接關聯。"
+    },
+    "cacheTimestamp": 1747599821
   }
 ]

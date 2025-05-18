@@ -1,7 +1,8 @@
 import { generate111Question, QuestionData111 } from '../../../src/services/generators/111_generate';
 import GeminiAPIService from '../../../src/services/GeminiAPIService';
 // import { CleanJSON } from '../../src/utils/CleanJSON'; // CleanJSON 不再使用
-import { Schema } from '@google/generative-ai'; // 導入 Schema 以便在測試中引用
+// import { Schema } from '@google/generative-ai'; // 導入 Schema 以便在測試中引用
+// 如需 schema，請改用 import { Type } from '@google/genai';
 
 // Mock GeminiAPIService
 // 確保 mock 整個模塊並且可以訪問其 default 導出

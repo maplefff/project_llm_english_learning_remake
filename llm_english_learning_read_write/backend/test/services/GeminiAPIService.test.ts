@@ -1,5 +1,4 @@
-import { GenerateContentResult, GenerationConfig, Schema } from '@google/generative-ai';
-// 移除 GoogleGenerativeAI, HarmCategory, HarmBlockThreshold, SchemaType 的直接導入，它們將通過 jest.mock 處理
+// [已棄用] 移除所有 @google/generative-ai 相關 import、mock、require
 
 // 這些 mock 函數會被 jest.mock 內部返回的 GoogleGenerativeAI mock 所使用
 const mockGenerateContent = jest.fn();

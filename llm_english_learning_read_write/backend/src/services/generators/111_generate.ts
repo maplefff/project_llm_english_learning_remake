@@ -1,33 +1,34 @@
 // llm_english_learning_read&write/backend/src/services/generators/111_generate.ts
 
 import GeminiAPIService from '../GeminiAPIService';
-import { Schema, SchemaType } from '@google/generative-ai';
+import { Type } from '@google/genai'; // 新 SDK 的型別定義
 import 'dotenv/config'; // 確保環境變數已加載
 // 從共享介面導入類型
 import { QuestionData111 } from './QuestionGeneratorInterface';
+import { LLMConfigService } from '../../utils/LLMConfigService'; // 匯入 LLMConfigService
 
 // 定義 LLM 應回傳的單個 JSON 物件結構 Schema
-const QUESTION_DATA_111_ITEM_SCHEMA: Schema = {
-    type: SchemaType.OBJECT,
+const QUESTION_DATA_111_ITEM_SCHEMA = {
+    type: Type.OBJECT,
     properties: {
-        passage: { type: SchemaType.STRING },
-        targetWord: { type: SchemaType.STRING },
-        question: { type: SchemaType.STRING },
+        passage: { type: Type.STRING },
+        targetWord: { type: Type.STRING },
+        question: { type: Type.STRING },
         options: {
-            type: SchemaType.ARRAY,
+            type: Type.ARRAY,
             items: {
-                type: SchemaType.OBJECT,
+                type: Type.OBJECT,
                 properties: {
-                    id: { type: SchemaType.STRING },
-                    text: { type: SchemaType.STRING },
+                    id: { type: Type.STRING },
+                    text: { type: Type.STRING },
                 },
                 required: ['id', 'text'],
             },
             minItems: 4, // 確保至少有4個選項
             maxItems: 4, // 確保最多有4個選項
         },
-        standard_answer: { type: SchemaType.STRING },
-        explanation_of_Question: { type: SchemaType.STRING },
+        standard_answer: { type: Type.STRING },
+        explanation_of_Question: { type: Type.STRING },
     },
     required: [
         'passage',
@@ -40,8 +41,8 @@ const QUESTION_DATA_111_ITEM_SCHEMA: Schema = {
 };
 
 // 定義 LLM 應回傳的 JSON 陣列結構 Schema
-const QUESTION_DATA_111_ARRAY_SCHEMA: Schema = {
-    type: SchemaType.ARRAY,
+const QUESTION_DATA_111_ARRAY_SCHEMA = {
+    type: Type.ARRAY,
     items: QUESTION_DATA_111_ITEM_SCHEMA,
 };
 
@@ -97,11 +98,15 @@ Return ONLY the JSON array when you generate the questions. Do not include markd
     prompt = prompt.replace('{HISTORY_SUMMARY}', historySummary);
     prompt = prompt.replace('{DIFFICULTY_SETTING}', difficultySetting.toString());
 
+    // 取得 LLM 設定
+    const config = LLMConfigService.getInstance().getConfig('1.1.1');
+
     try {
         const geminiService = GeminiAPIService;
         // console.log("[DEBUG 111_generate.ts] Sending prompt:", prompt); // 調試時可取消註釋
         const response = await geminiService.getResponse(prompt, {
             responseSchema: QUESTION_DATA_111_ARRAY_SCHEMA, // 使用陣列 Schema
+            config, // 傳遞 LLM 設定
         });
 
         // console.log("[DEBUG 111_generate.ts] Received raw response:", response); // 調試時可取消註釋
