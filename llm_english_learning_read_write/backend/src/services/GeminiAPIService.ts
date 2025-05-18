@@ -39,6 +39,8 @@ class GeminiAPIService {
       throw new Error("缺少 API 金鑰。無法連接至 Gemini API。");
     }
     try {
+      // 新增：每次請求前打印 prompt 內容
+      console.log(`[DEBUG GeminiAPIService.ts] Prompt: ${prompt}`);
       // 組合 generationConfig
       const generationConfig: any = {};
       if (options?.config) {
@@ -49,6 +51,7 @@ class GeminiAPIService {
       const request = {
         model: MODEL_NAME,
         contents: [{ role: "user", parts: [{ text: prompt }] }],
+        systemInstruction: "You need to guide students to learn English by generating questions. Please analyze their answer history to determine the appropriate difficulty and whether certain words need to be reinforced.",
         config: {
           ...generationConfig,
           responseMimeType: options?.responseSchema ? "application/json" : undefined,

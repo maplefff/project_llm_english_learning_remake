@@ -45,6 +45,77 @@
         #speakTargetWordBtn:hover {
             background-color: #5a6268;
         }
+
+        /* ===== macOS 暗黑模式支援 ===== */
+        @media (prefers-color-scheme: dark) {
+            body {
+                background-color: #18191A;
+                color: #E4E6EB;
+            }
+            .container {
+                background-color: #242526;
+                box-shadow: 0 0 16px rgba(0,0,0,0.6);
+            }
+            h1 {
+                color: #E4E6EB;
+            }
+            .question-area, .result-area, .navigation-area {
+                background-color: #242526;
+                border: 1px solid #3A3B3C;
+            }
+            .passage {
+                color: #B0B3B8;
+            }
+            .options label {
+                background-color: #242526;
+                color: #E4E6EB;
+            }
+            .options label:hover {
+                background-color: #3A3B3C;
+            }
+            button {
+                background-color: #3578E5;
+                color: #F5F6FA;
+            }
+            button:hover {
+                background-color: #2851A3;
+            }
+            button:disabled {
+                background-color: #444950;
+                color: #888;
+            }
+            #nextQuestionBtn {
+                background-color: #44C767;
+                color: #F5F6FA;
+            }
+            #nextQuestionBtn:hover {
+                background-color: #388E3C;
+            }
+            .result-correct {
+                color: #44C767;
+            }
+            .result-incorrect {
+                color: #FF5C5C;
+            }
+            .explanation {
+                background-color: #20232A;
+                border-left: 3px solid #3578E5;
+                color: #B0B3B8;
+            }
+            .error-message {
+                color: #FF5C5C;
+            }
+            .loading-message {
+                color: #3578E5;
+            }
+            #speakTargetWordBtn {
+                background-color: #444950;
+                color: #F5F6FA;
+            }
+            #speakTargetWordBtn:hover {
+                background-color: #606770;
+            }
+        }
     </style>
 </head>
 <body>

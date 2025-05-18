@@ -1,5 +1,215 @@
 [
   {
+    "UUID": "ae7260a3-21cc-40b6-896a-738105580507",
+    "questionData": {
+      "passage": "Getting enough sleep is crucial for good health.",
+      "targetWord": "crucial",
+      "question": "In this sentence, 'crucial' is closest in meaning to:",
+      "options": [
+        {
+          "id": "A",
+          "text": "unimportant"
+        },
+        {
+          "id": "B",
+          "text": "beneficial"
+        },
+        {
+          "id": "C",
+          "text": "optional"
+        },
+        {
+          "id": "D",
+          "text": "essential"
+        }
+      ],
+      "standard_answer": "D"
+    },
+    "userAnswer": "D",
+    "isCorrect": true,
+    "timestamp": 1747602163214
+  },
+  {
+    "UUID": "b026dfb2-ea86-4372-a23c-ccfec4f23e6a",
+    "questionData": {
+      "passage": "Social media has become a pervasive influence in modern society.",
+      "targetWord": "pervasive",
+      "question": "In the sentence above, 'pervasive' is closest in meaning to:",
+      "options": [
+        {
+          "id": "A",
+          "text": "rare"
+        },
+        {
+          "id": "B",
+          "text": "limited"
+        },
+        {
+          "id": "C",
+          "text": "widespread"
+        },
+        {
+          "id": "D",
+          "text": "temporary"
+        }
+      ],
+      "standard_answer": "C"
+    },
+    "userAnswer": "A",
+    "isCorrect": false,
+    "timestamp": 1747602111694
+  },
+  {
+    "UUID": "488dc874-7f94-4edb-9a8a-75d0601bdb83",
+    "questionData": {
+      "passage": "The teams were asked to collaborate on the challenging task.",
+      "targetWord": "collaborate",
+      "question": "The word 'collaborate' means to:",
+      "options": [
+        {
+          "id": "A",
+          "text": "compete"
+        },
+        {
+          "id": "B",
+          "text": "work separately"
+        },
+        {
+          "id": "C",
+          "text": "work together"
+        },
+        {
+          "id": "D",
+          "text": "negotiate"
+        }
+      ],
+      "standard_answer": "C"
+    },
+    "userAnswer": "C",
+    "isCorrect": true,
+    "timestamp": 1747602096185
+  },
+  {
+    "UUID": "4a4953ae-c958-446d-8966-cfd90474f7ca",
+    "questionData": {
+      "passage": "They implemented several measures to mitigate the potential risks.",
+      "targetWord": "mitigate",
+      "question": "The word 'mitigate' in the sentence is best replaced by:",
+      "options": [
+        {
+          "id": "A",
+          "text": "aggravate"
+        },
+        {
+          "id": "B",
+          "text": "alleviate"
+        },
+        {
+          "id": "C",
+          "text": "amplify"
+        },
+        {
+          "id": "D",
+          "text": "isolate"
+        }
+      ],
+      "standard_answer": "B"
+    },
+    "userAnswer": "B",
+    "isCorrect": true,
+    "timestamp": 1747600990399
+  },
+  {
+    "UUID": "f437988d-f322-4081-8e92-1278ccc83f23",
+    "questionData": {
+      "passage": "The region benefits from an abundant supply of fresh water.",
+      "targetWord": "abundant",
+      "question": "In the sentence above, the word 'abundant' is closest in meaning to:",
+      "options": [
+        {
+          "id": "A",
+          "text": "scarce"
+        },
+        {
+          "id": "B",
+          "text": "intermittent"
+        },
+        {
+          "id": "C",
+          "text": "negligible"
+        },
+        {
+          "id": "D",
+          "text": "plentiful"
+        }
+      ],
+      "standard_answer": "D"
+    },
+    "userAnswer": "D",
+    "isCorrect": true,
+    "timestamp": 1747600967656
+  },
+  {
+    "UUID": "16973c6f-aa6f-4bd1-8b8c-12f21dfe6bd4",
+    "questionData": {
+      "passage": "The company implemented a new policy to *enhance* productivity.",
+      "targetWord": "enhance",
+      "question": "In this sentence, 'enhance' means to:",
+      "options": [
+        {
+          "id": "A",
+          "text": "decrease"
+        },
+        {
+          "id": "B",
+          "text": "improve"
+        },
+        {
+          "id": "C",
+          "text": "delay"
+        },
+        {
+          "id": "D",
+          "text": "replace"
+        }
+      ],
+      "standard_answer": "B"
+    },
+    "userAnswer": "B",
+    "isCorrect": true,
+    "timestamp": 1747600930018
+  },
+  {
+    "UUID": "168a5806-f048-47dd-9091-e6f038b3f705",
+    "questionData": {
+      "passage": "Developing a sustainable energy source is a complex challenge, but many scientists believe it is a feasible goal.",
+      "targetWord": "feasible",
+      "question": "In the sentence above, the word 'feasible' is closest in meaning to:",
+      "options": [
+        {
+          "id": "A",
+          "text": "difficult"
+        },
+        {
+          "id": "B",
+          "text": "practicable"
+        },
+        {
+          "id": "C",
+          "text": "impossible"
+        },
+        {
+          "id": "D",
+          "text": "costly"
+        }
+      ],
+      "standard_answer": "B"
+    },
+    "userAnswer": "B",
+    "isCorrect": true,
+    "timestamp": 1747600212754
+  },
+  {
     "UUID": "44024925-a475-48bd-a1eb-a6066708425c",
     "questionData": {
       "passage": "Researchers are working to analyze the data collected from the experiment.",

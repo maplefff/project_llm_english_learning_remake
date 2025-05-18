@@ -1,147 +1,118 @@
 [
   {
-    "UUID": "1a72dc2e-43f3-43a8-aa7d-d2906e1d5eb2",
+    "UUID": "07095c0d-030d-40dd-8e97-92b328736ccd",
     "questionData": {
-      "passage": "Getting enough sleep is essential for staying healthy.",
-      "targetWord": "essential",
-      "question": "The word 'essential' in the sentence means:",
+      "passage": "The company decided to embrace the new technology.",
+      "targetWord": "embrace",
+      "question": "The word 'embrace' in this context means to:",
       "options": [
         {
           "id": "A",
-          "text": "necessary"
+          "text": "reject"
         },
         {
           "id": "B",
-          "text": "unimportant"
-        },
-        {
-          "id": "C",
-          "text": "harmful"
-        },
-        {
-          "id": "D",
-          "text": "optional"
-        }
-      ],
-      "standard_answer": "A",
-      "explanation_of_Question": "Essential 指必要的、不可或缺的。此處表示充足的睡眠對保持健康至關重要，因此選項 A「necessary」最接近原意。選項 B「unimportant」意為不重要，與原意相反；選項 C「harmful」意為有害的，與原意相反；選項 D「optional」意為可選擇的，與原意相反。"
-    },
-    "cacheTimestamp": 1747599753
-  },
-  {
-    "UUID": "3a2ae617-69a9-452c-be8d-e28313fca73f",
-    "questionData": {
-      "passage": "Smartphones have become so common that they are now truly ubiquitous.",
-      "targetWord": "ubiquitous",
-      "question": "In the sentence above, the word 'ubiquitous' most nearly means:",
-      "options": [
-        {
-          "id": "A",
-          "text": "difficult to find"
-        },
-        {
-          "id": "B",
-          "text": "very rare"
-        },
-        {
-          "id": "C",
-          "text": "found only in cities"
-        },
-        {
-          "id": "D",
-          "text": "present everywhere"
-        }
-      ],
-      "standard_answer": "D",
-      "explanation_of_Question": "TargetWord 是 \"ubiquitous\"，意為「無所不在的、普遍存在的」。選項 D \"present everywhere\" 正好符合此意。選項 A \"difficult to find\" 意為「難以找到」，與原意相反。選項 B \"very rare\" 意為「非常稀有的」，與原意相反。選項 C \"found only in cities\" 意為「只在城市中找到」，範圍受限，不符 \"無所不在\" 的概念。"
-    },
-    "cacheTimestamp": 1747599821
-  },
-  {
-    "UUID": "0e3d502c-d4f2-4be3-834c-c95ae6bb7937",
-    "questionData": {
-      "passage": "Lack of sleep can have a detrimental effect on your health.",
-      "targetWord": "detrimental",
-      "question": "What does 'detrimental' mean in the context of the sentence?",
-      "options": [
-        {
-          "id": "A",
-          "text": "harmful"
-        },
-        {
-          "id": "B",
-          "text": "beneficial"
-        },
-        {
-          "id": "C",
-          "text": "temporary"
-        },
-        {
-          "id": "D",
-          "text": "exciting"
-        }
-      ],
-      "standard_answer": "A",
-      "explanation_of_Question": "TargetWord 是 \"detrimental\"，意為「有害的、不利的」。選項 A \"harmful\" 意為「有害的」，是其近義詞，因此正確。選項 B \"beneficial\" 意為「有利的、有益的」，與原意相反。選項 C \"temporary\" 意為「暫時的」，與原意無關。選項 D \"exciting\" 意為「令人興奮的」，與原意無關。"
-    },
-    "cacheTimestamp": 1747599821
-  },
-  {
-    "UUID": "f334d1dd-d917-4c3f-8dc2-78b96fc81a33",
-    "questionData": {
-      "passage": "The journalist tried to elicit a response from the shy politician.",
-      "targetWord": "elicit",
-      "question": "Which word is closest in meaning to 'elicit' in this sentence?",
-      "options": [
-        {
-          "id": "A",
-          "text": "hide"
-        },
-        {
-          "id": "B",
-          "text": "destroy"
-        },
-        {
-          "id": "C",
-          "text": "draw out"
-        },
-        {
-          "id": "D",
           "text": "ignore"
+        },
+        {
+          "id": "C",
+          "text": "accept and adopt"
+        },
+        {
+          "id": "D",
+          "text": "question"
         }
       ],
       "standard_answer": "C",
-      "explanation_of_Question": "TargetWord 是 \"elicit\"，意為「引出、誘出（資訊或反應）」。選項 C \"draw out\" 意為「引出、探出」，是其近義詞，因此正確。選項 A \"hide\" 意為「隱藏」，與原意相反。選項 B \"destroy\" 意為「摧毀」，與原意無關。選項 D \"ignore\" 意為「忽略」，與原意相反。"
+      "explanation_of_Question": "解釋 embrace 在此情境中意為「欣然接受並採用」。選項 C「accept and adopt」最貼近此意。選項 A「reject」是拒絕；選項 B「ignore」是忽略；選項 D「question」是質疑，皆與原意相反或不符。"
     },
-    "cacheTimestamp": 1747599821
+    "cacheTimestamp": 1747602208
   },
   {
-    "UUID": "c9066360-f29a-43cb-b95b-00d89c2b8764",
+    "UUID": "9254b38e-5fac-4ef0-b83f-6837a6db6f14",
     "questionData": {
-      "passage": "Building a new bridge across the river might be feasible with enough funding.",
-      "targetWord": "feasible",
-      "question": "What does 'feasible' mean in the context of the passage?",
+      "passage": "There are risks inherent in almost every sport.",
+      "targetWord": "inherent",
+      "question": "In the sentence above, 'inherent' is closest in meaning to:",
       "options": [
         {
           "id": "A",
-          "text": "difficult"
+          "text": "accidental"
         },
         {
           "id": "B",
-          "text": "possible and practical"
+          "text": "temporary"
         },
         {
           "id": "C",
-          "text": "expensive"
+          "text": "existing as a natural part"
         },
         {
           "id": "D",
-          "text": "quick"
+          "text": "external"
+        }
+      ],
+      "standard_answer": "C",
+      "explanation_of_Question": "解釋 inherent 指「內在的、固有的」，是事物本身自然存在的一部分。選項 C「existing as a natural part」精準描述了此意義。選項 A「accidental」是意外的；選項 B「temporary」是暫時的；選項 D「external」是外在的，皆與原意不符。"
+    },
+    "cacheTimestamp": 1747602208
+  },
+  {
+    "UUID": "328098d4-7401-43f5-841b-4e211b8167df",
+    "questionData": {
+      "passage": "Scientists will scrutinize the data for any anomalies.",
+      "targetWord": "scrutinize",
+      "question": "To 'scrutinize' means to:",
+      "options": [
+        {
+          "id": "A",
+          "text": "quickly review"
+        },
+        {
+          "id": "B",
+          "text": "discard"
+        },
+        {
+          "id": "C",
+          "text": "examine closely and carefully"
+        },
+        {
+          "id": "D",
+          "text": "summarize"
+        }
+      ],
+      "standard_answer": "C",
+      "explanation_of_Question": "解釋 scrutinize 意為「仔細檢查、詳細審視」。選項 C「examine closely and carefully」最符合此意。選項 A「quickly review」是快速瀏覽，與仔細檢查相反；選項 B「discard」是丟棄；選項 D「summarize」是總結，皆不符句意。"
+    },
+    "cacheTimestamp": 1747602208
+  },
+  {
+    "UUID": "82e1062e-429b-4086-95a4-1f92f8893dac",
+    "questionData": {
+      "passage": "The negotiations culminated in a peace treaty.",
+      "targetWord": "culminated",
+      "question": "In this sentence, 'culminated' means:",
+      "options": [
+        {
+          "id": "A",
+          "text": "began"
+        },
+        {
+          "id": "B",
+          "text": "ended or reached a peak"
+        },
+        {
+          "id": "C",
+          "text": "were postponed"
+        },
+        {
+          "id": "D",
+          "text": "were ignored"
         }
       ],
       "standard_answer": "B",
-      "explanation_of_Question": "TargetWord 是 \"feasible\"，意為「可行的、行得通的」。選項 B \"possible and practical\" 意為「可能且實際的」，符合「可行的」概念。選項 A \"difficult\" 意為「困難的」，與原意相反。選項 C \"expensive\" 意為「昂貴的」，與可行性無直接關聯。選項 D \"quick\" 意為「快速的」，與可行性無直接關聯。"
+      "explanation_of_Question": "解釋 culminate 指「達到最高點」或「以...告終」。在此句中，談判以簽訂和平條約結束，因此選項 B「ended or reached a peak」最為貼切。選項 A「began」是開始，語意相反；選項 C「were postponed」是延期；選項 D「were ignored」是被忽略，皆不符句意。"
     },
-    "cacheTimestamp": 1747599821
+    "cacheTimestamp": 1747602208
   }
 ]

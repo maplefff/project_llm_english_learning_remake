@@ -1,6 +1,7 @@
 import { generate111Question } from './generators/111_generate';
 // 從接口文件導入 QuestionData111 和 QuestionData 類型
 import { QuestionData111, QuestionData } from './generators/QuestionGeneratorInterface';
+import { getHistory } from '../services/HistoryService'; // 匯入查詢歷史紀錄的函數
 
 /**
  * 根據題目類型生成題目資料。
@@ -20,6 +21,10 @@ async function generateQuestionByType(
   switch (questionType) {
     case '1.1.1':
       try {
+        // 查詢歷史紀錄，這裡直接查詢 1.1.1 題型的所有紀錄
+        const historyRecords = await getHistory('1.1.1');
+        // 直接將歷史紀錄序列化為字串作為 summary 傳遞
+        const historySummary = JSON.stringify(historyRecords);
         const questionDataArray = await generate111Question(questionNumber, historySummary, difficulty);
         console.log(`[DEBUG QuestionGeneratorService.ts] Generated ${questionDataArray?.length ?? 0} question(s) for type 1.1.1.`);
         return questionDataArray;
