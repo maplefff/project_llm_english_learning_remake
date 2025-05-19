@@ -1,5 +1,95 @@
 [
   {
+    "UUID": "a4984d47-8c35-4ac1-9971-a2ddac5532ef",
+    "questionData": {
+      "passage": "She began to **lament** the loss of her youth, recalling fond memories from decades past.",
+      "targetWord": "lament",
+      "question": "To **lament** something means to:",
+      "options": [
+        {
+          "id": "A",
+          "text": "celebrate it"
+        },
+        {
+          "id": "B",
+          "text": "forget about it"
+        },
+        {
+          "id": "C",
+          "text": "accept it"
+        },
+        {
+          "id": "D",
+          "text": "express deep sadness or regret about it"
+        }
+      ],
+      "standard_answer": "D"
+    },
+    "userAnswer": "C",
+    "isCorrect": false,
+    "timestamp": 1747681538013
+  },
+  {
+    "UUID": "507d64ac-e68a-4b91-9e7c-ae9d9bbf20b9",
+    "questionData": {
+      "passage": "The project needs to produce some **tangible** results, not just talk.",
+      "targetWord": "tangible",
+      "question": "In this sentence, **tangible** results are results that are:",
+      "options": [
+        {
+          "id": "A",
+          "text": "unclear or confusing"
+        },
+        {
+          "id": "B",
+          "text": "theoretical or abstract"
+        },
+        {
+          "id": "C",
+          "text": "measurable or concrete"
+        },
+        {
+          "id": "D",
+          "text": "popular or well-known"
+        }
+      ],
+      "standard_answer": "C"
+    },
+    "userAnswer": "B",
+    "isCorrect": false,
+    "timestamp": 1747681534862
+  },
+  {
+    "UUID": "d5d429d0-06f8-4280-aa60-9ef0fa736f31",
+    "questionData": {
+      "passage": "His poor health will **preclude** him from participating in the race.",
+      "targetWord": "preclude",
+      "question": "What does it mean if something will **preclude** you from doing something?",
+      "options": [
+        {
+          "id": "A",
+          "text": "encourage you"
+        },
+        {
+          "id": "B",
+          "text": "prevent you"
+        },
+        {
+          "id": "C",
+          "text": "prepare you"
+        },
+        {
+          "id": "D",
+          "text": "warn you"
+        }
+      ],
+      "standard_answer": "B"
+    },
+    "userAnswer": "C",
+    "isCorrect": false,
+    "timestamp": 1747681531780
+  },
+  {
     "UUID": "428c1132-60b9-49bc-ae9b-fd1b8cd9f20f",
     "questionData": {
       "passage": "You need to **calibrate** the scales to ensure accurate measurements.",

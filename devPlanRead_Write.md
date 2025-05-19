@@ -90,12 +90,13 @@ project_llm_english_learning_remake/
 │   │   │   ├── QuestionCacheService.js
 │   │   │   ├── HistoryService.js
 │   │   │   └── TestOrchestratorService.js
-│   │   ├── routes/                               # Express 路由定義
 │   │   ├── utils/                                # 工具函數
+│   │   │   └── LLMConfigService.ts               # LLM 參數配置服務
 │   │   └── server.js (or app.js)                 # Express 應用入口與伺服器啟動
 │   ├── questionCache/                          # 題目快取 JSON 檔案
 │   │   └── 111Cache.json
 │   ├── historyData/                            # 使用者歷史記錄 JSON 檔案 (例如 history111.json, history121.json)
+│   ├── GeneratorConfig.json                    # 不同題型生成器的 LLM 參數配置文件
 │   └── package.json
 ├── .cursor/
 │   └── rules/
@@ -201,7 +202,7 @@ sequenceDiagram
 *   **職責**: 封裝與 Gemini API 的所有互動。
 *   **主要功能**:
     *   初始化 Gemini API 客戶端 (使用 API Key)。
-    *   提供一個方法 (例如 `async getCompletion(prompt: string): Promise<string>`)，接收 prompt 並返回 LLM 的原始回應。
+    *   提供一個方法 (例如 `async getResponse(prompt: string, options?: { responseSchema?: any, config?: any }): Promise<string | object | any[]>`)，接收 prompt、可選的回應 schema 以及 LLM 配置參數 (如 `temperature`, `thinkingBudget`)，並返回 LLM 的原始回應或解析後的 JSON。
     *   錯誤處理 (API 呼叫失敗、超時等)。
     *   API 金鑰管理：服務啟動時，透過 `dotenv` 從 `.env` 檔案 (位於 `/Users/wu_cheng_yan/cursor/project_llm_english_learning_remake/llm_english_learning_read_write/backend/.env`，並已加入 `.gitignore`) 加載 `GEMINI_API_KEY`。確保金鑰不被硬編碼或提交到版本控制。
 *   **單元測試**: 模擬 `@google/generative-ai` SDK，測試成功、失敗及 API Key 未配置等情況。
@@ -220,7 +221,7 @@ sequenceDiagram
 *   **職責**: 為特定題型生成題目數據。
 *   **主要功能 (每個題型一個模組)**:
     *   包含該題型專用的 Prompt 模板 (可能從外部文件讀取)。
-    *   調用 `GeminiAPIService.js` 獲取 LLM 回應。
+    *   調用 `GeminiAPIService.js` 獲取 LLM 回應，可傳遞從 `LLMConfigService.ts` 獲取的特定 LLM 參數 (如 `temperature`, `thinkingBudget`)。
     *   調用 `CleanJSON.js` 解析回應。
     *   驗證和格式化解析後的數據，確保符合該題型所需的結構 (參考 `discussion_read&write.md` 中的 JSON 結構定義)。
     *   返回格式化後的題目物件，或在失敗時返回 `null`。
@@ -278,7 +279,16 @@ sequenceDiagram
         *   返回作答結果和下一題。
 *   **單元測試**: 模擬 `QuestionCacheService` 和 `HistoryService`，測試練習流程的各個環節。
 
-### 3.8. `APIController.js` (位於 `controllers/` 目錄)
+### 3.8. `LLMConfigService.ts` (位於 `utils/` 目錄)
+*   **職責**: 管理和提供不同題型生成器所需的 LLM 參數配置。
+*   **主要功能**:
+    *   從 `GeneratorConfig.json` 檔案載入 LLM 參數配置。
+    *   提供方法 (例如 `getConfig(questionType: string): { temperature?: number, thinkingBudget?: number, ... }`)，根據題型 ID 返回對應的 LLM 參數。
+    *   提供預設參數，以防某些題型未在配置文件中明確指定。
+    *   處理配置文件讀取或解析錯誤。
+*   **單元測試**: 模擬檔案系統操作，測試配置載入、提供及錯誤處理邏輯。
+
+### 3.9. `APIController.js` (位於 `controllers/` 目錄)
 *   **職責**: 處理來自前端的 HTTP 請求，調用相應的服務並返回回應。
 *   **主要端點 (參考 `discussion_read&write.md` API 設計)**:
     *   `GET /api/question-types`: 返回支持的題型列表。
@@ -287,7 +297,7 @@ sequenceDiagram
     *   `GET /api/history?questionType={type}`: 獲取指定題型的歷史記錄 (調用 `HistoryService.getHistory`)。
 *   **整合測試**: 使用 `supertest` 測試 API 端點的行為，模擬底層服務。
 
-### 3.9. `server.js` (或 `app.js`)
+### 3.10. `server.js` (或 `app.js`)
 *   **職責**: 初始化 Express 應用，設定中介軟體 (如 `express.json()`)，註冊 API 路由，啟動 HTTP 伺服器。
 
 ## 4. 前端架構與核心組件 (Vue 3 + TypeScript)

@@ -60,6 +60,8 @@ class GeminiAPIService {
       };
       // 發送請求
       const response = await ai.models.generateContent(request);
+      // 暫時性 debug：直接打印 Gemini API 原始回應
+      console.log('[DEBUG GeminiAPIService.ts] [TEMP] Raw Gemini API response:', response);
       // 若有 responseSchema，回傳 JSON
       if (options?.responseSchema) {
         if (typeof response.text === 'string') {

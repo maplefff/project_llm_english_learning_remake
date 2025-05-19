@@ -43,17 +43,21 @@
 2.  **服務實現**:
     *   引入 `@google/generative-ai` SDK。
     *   初始化 `GenerativeModel`，指定模型為 `gemini-2.5-flash-preview-04-17`。
-    *   實現一個核心函數，例如 `async getCompletion(prompt: string): Promise<string>`，該函數：
+    *   實現一個核心函數，例如 `async getResponse(prompt: string, options?: { responseSchema?: any, config?: any }): Promise<string | object | any[]>`，該函數：
         *   接收一個 Prompt 字串作為輸入。
-        *   向 Gemini API 發送請求。
-        *   返回 LLM 生成的原始文本回應。
-        *   包含錯誤處理邏輯 (例如，API 呼叫失敗、超時等)。
-        *   實現基本的日誌記錄 (例如，請求發送、收到回應、發生錯誤)。
+        *   可選地接收一個 `options` 物件，其中 `responseSchema` 用於指定期望的 JSON 結構，`config` 物件可包含傳遞給 LLM 的參數，例如 `temperature`、`thinkingBudget` 等。
+        *   向 Gemini API 發送請求，並附帶相應的配置。
+        *   如果提供了 `responseSchema`，則嘗試將 LLM 回應解析為 JSON 物件/陣列並返回。
+        *   否則，返回 LLM 生成的原始文本回應。
+        *   包含錯誤處理邏輯 (例如，API 呼叫失敗、超時、JSON 解析失敗等)。
+        *   實現基本的日誌記錄 (例如，請求發送、收到回應、發生錯誤、傳遞的 LLM 參數)。
 3.  **單元測試 (`GeminiAPIService.test.js` 或 `.test.ts`)**:
     *   使用 Jest 的 `mock` 功能模擬 `@google/generative-ai` SDK。
     *   測試案例：
-        *   成功呼叫 Gemini API 並返回預期回應。
+        *   成功呼叫 Gemini API 並返回預期回應 (純文本和 JSON 格式)。
+        *   測試傳遞不同的 `config` 參數 (如 `temperature`) 時，SDK 的 `generateContent` 方法是否以正確的參數被調用。
         *   Gemini API 返回錯誤時，服務能正確處理並拋出/返回錯誤。
+        *   當提供 `responseSchema` 但 LLM 未返回有效 JSON 時的錯誤處理。
         *   API 金鑰未配置時的行為。
 
 ### Phase1.3 `CleanJSON.js` (或 `.ts`) 實現

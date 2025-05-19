@@ -1,89 +1,147 @@
 [
   {
-    "UUID": "d5d429d0-06f8-4280-aa60-9ef0fa736f31",
+    "UUID": "abe662c2-c525-4104-9da4-256ec6b55090",
     "questionData": {
-      "passage": "His poor health will **preclude** him from participating in the race.",
-      "targetWord": "preclude",
-      "question": "What does it mean if something will **preclude** you from doing something?",
+      "passage": "She was a **prolific** writer, publishing several novels and numerous short stories every year.",
+      "targetWord": "prolific",
+      "question": "In this sentence, **prolific** means:",
       "options": [
         {
           "id": "A",
-          "text": "encourage you"
+          "text": "lazy"
         },
         {
           "id": "B",
-          "text": "prevent you"
+          "text": "productive"
         },
         {
           "id": "C",
-          "text": "prepare you"
+          "text": "unpublished"
         },
         {
           "id": "D",
-          "text": "warn you"
+          "text": "secretive"
         }
       ],
       "standard_answer": "B",
-      "explanation_of_Question": "Preclude 意指阻止某事發生或使某人無法做某事。此處，不好的健康狀況阻止他參賽，因此選項 B (prevent you) 正確。選項 A (encourage you) 意為鼓勵，與原意相反；選項 C (prepare you) 意為準備，與原意無關；選項 D (warn you) 意為警告，也與原意不符。"
+      "explanation_of_Question": "Prolific 指多產或作品豐富的。她每年出版多本小說及許多短篇故事，表示她非常「多產」，因此選項 B (productive) 正確。選項 A (lazy) 意為懶惰，語意相反；選項 C (unpublished) 意為未出版，與其多產出版相悖；選項 D (secretive) 意為秘密的，與寫作產量無關。"
     },
-    "cacheTimestamp": 1747603224
+    "cacheTimestamp": 1747682021
   },
   {
-    "UUID": "507d64ac-e68a-4b91-9e7c-ae9d9bbf20b9",
+    "UUID": "59bc9408-0269-42d7-8e12-6a18129d9a80",
     "questionData": {
-      "passage": "The project needs to produce some **tangible** results, not just talk.",
-      "targetWord": "tangible",
-      "question": "In this sentence, **tangible** results are results that are:",
+      "passage": "His answer was **succinct** and to the point, leaving no room for confusion.",
+      "targetWord": "succinct",
+      "question": "If something is **succinct**, it is:",
       "options": [
         {
           "id": "A",
-          "text": "unclear or confusing"
+          "text": "confusing"
         },
         {
           "id": "B",
-          "text": "theoretical or abstract"
+          "text": "brief and clear"
         },
         {
           "id": "C",
-          "text": "measurable or concrete"
+          "text": "very detailed"
         },
         {
           "id": "D",
-          "text": "popular or well-known"
+          "text": "aggressive"
         }
       ],
-      "standard_answer": "C",
-      "explanation_of_Question": "Tangible 指實際存在的、可觸摸的、可證實的或可測量的。此處指能帶來實際、具體的成果，而非空談，因此選項 C (measurable or concrete) 正確。選項 A (unclear or confusing) 意為不明確的、令人困惑的，與原意相反；選項 B (theoretical or abstract) 意為理論的、抽象的，與原意相反；選項 D (popular or well-known) 意為流行的、廣為人知的，與原意無關。"
+      "standard_answer": "B",
+      "explanation_of_Question": "Succinct 指表達簡潔清晰，沒有多餘詞語的。他的回答簡潔明確，表示內容不多但重點清晰，因此選項 B (brief and clear) 正確。選項 A (confusing) 意為令人困惑，語意相反；選項 C (very detailed) 意為非常詳細，語意相反；選項 D (aggressive) 意為有侵略性，與簡潔表達無關。"
     },
-    "cacheTimestamp": 1747603224
+    "cacheTimestamp": 1747682021
   },
   {
-    "UUID": "a4984d47-8c35-4ac1-9971-a2ddac5532ef",
+    "UUID": "b47bd072-e752-4946-8bcb-01cbc6ea6560",
     "questionData": {
-      "passage": "She began to **lament** the loss of her youth, recalling fond memories from decades past.",
-      "targetWord": "lament",
-      "question": "To **lament** something means to:",
+      "passage": "He made an **innocuous** comment about the weather, but it somehow offended his sensitive colleague.",
+      "targetWord": "innocuous",
+      "question": "In this sentence, **innocuous** means:",
       "options": [
         {
           "id": "A",
-          "text": "celebrate it"
+          "text": "offensive"
         },
         {
           "id": "B",
-          "text": "forget about it"
+          "text": "interesting"
         },
         {
           "id": "C",
-          "text": "accept it"
+          "text": "harmful or offensive"
         },
         {
           "id": "D",
-          "text": "express deep sadness or regret about it"
+          "text": "not harmful or offensive"
         }
       ],
       "standard_answer": "D",
-      "explanation_of_Question": "Lament 指對某事表達深切的悲傷或遺憾。此處她對失去青春表示哀悼與追憶，因此選項 D (express deep sadness or regret about it) 正確。選項 A (celebrate it) 意為慶祝，與原意相反；選項 B (forget about it) 意為忘記，與原意相反；選項 C (accept it) 意為接受，與原意相反。"
+      "explanation_of_Question": "Innocuous 指無害的、不冒犯的。雖然評論意外冒犯了同事，但原意是指評論本身是「不冒犯的」，因此選項 D (not harmful or offensive) 正確。選項 A (offensive) 意為冒犯的，語意相反；選項 B (interesting) 意為有趣的，與無害無關；選項 C (harmful or offensive) 意為有害或冒犯的，語意相反。"
     },
-    "cacheTimestamp": 1747603224
+    "cacheTimestamp": 1747682021
+  },
+  {
+    "UUID": "0963a389-e5c9-4132-b633-61cef9d2f04c",
+    "questionData": {
+      "passage": "The happiness she felt was **transient**, lasting only for a few moments before fading away.",
+      "targetWord": "transient",
+      "question": "If something is **transient**, it is:",
+      "options": [
+        {
+          "id": "A",
+          "text": "long-lasting"
+        },
+        {
+          "id": "B",
+          "text": "intense"
+        },
+        {
+          "id": "C",
+          "text": "lasting for only a short time"
+        },
+        {
+          "id": "D",
+          "text": "forgettable"
+        }
+      ],
+      "standard_answer": "C",
+      "explanation_of_Question": "Transient 指短暫的、一時的。她的快樂只持續了幾分鐘就消失了，表示這種感覺是「短暫的」，因此選項 C (lasting for only a short time) 正確。選項 A (long-lasting) 意為持久的，語意相反；選項 B (intense) 意為強烈的，與持續時間無關；選項 D (forgettable) 意為容易被遺忘的，與持續時間不直接相關。"
+    },
+    "cacheTimestamp": 1747682021
+  },
+  {
+    "UUID": "d3c12c13-bcc2-4cc1-8bc8-8620fca21c41",
+    "questionData": {
+      "passage": "She felt **ambivalent** about moving to a new city; she was excited about the change but also nervous about leaving her friends.",
+      "targetWord": "ambivalent",
+      "question": "To feel **ambivalent** about something means to:",
+      "options": [
+        {
+          "id": "A",
+          "text": "feel strongly positive about it"
+        },
+        {
+          "id": "B",
+          "text": "feel strongly negative about it"
+        },
+        {
+          "id": "C",
+          "text": "have mixed feelings or contradictory ideas about it"
+        },
+        {
+          "id": "D",
+          "text": "be completely indifferent to it"
+        }
+      ],
+      "standard_answer": "C",
+      "explanation_of_Question": "Ambivalent 指對某事有複雜的、矛盾的感情或想法。她既對搬家感到興奮又對離開朋友感到緊張，顯示她對這件事「有複雜或矛盾的感受」，因此選項 C (have mixed feelings or contradictory ideas about it) 正確。選項 A (feel strongly positive about it) 意為非常積極的感覺，與矛盾感受不同；選項 B (feel strongly negative about it) 意為非常消極的感覺，也與矛盾感受不同；選項 D (be completely indifferent to it) 意為完全冷漠，與同時感到興奮和緊張相悖。"
+    },
+    "cacheTimestamp": 1747682021
   }
 ]

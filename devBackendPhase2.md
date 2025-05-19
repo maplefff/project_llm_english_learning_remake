@@ -45,7 +45,8 @@
 2.  **服務邏輯**:
     *   實現一個主要函數，例如 `async generateQuestion(): Promise<object | null>`。
     *   在此函數內，構建完整的 Prompt (可能需要動態組裝部分內容，但初期可為靜態)。
-    *   調用已在 `devBackendPhase1` 中實現的 `GeminiAPIService.js` 的 `getCompletion(prompt)` 方法，傳入構建好的 Prompt，獲取 LLM 的原始回應。
+    *   從 `LLMConfigService` 獲取題型 '1.1.1' 對應的 LLM 參數配置 (例如 `temperature`, `thinkingBudget`)。
+    *   調用已在 `devBackendPhase1` 中實現的 `GeminiAPIService.js` 的 `getResponse(prompt, { responseSchema: YOUR_SCHEMA, config: llmParameters })` 方法，傳入構建好的 Prompt、JSON schema 以及從 `LLMConfigService` 獲取的參數，獲取 LLM 的原始回應。
     *   調用已在 `devBackendPhase1` 中實現的 `CleanJSON.js` 的 `extractAndParse(rawLLMResponse)` 方法，解析 LLM 回應，獲取結構化的 `questionData` 物件。
     *   **數據驗證與格式化**:
         *   驗證從 `CleanJSON.js` 返回的物件是否包含所有預期的鍵 (`passage`, `targetWord`, `question`, `options`, `standard_answer`, `explanation_of_Question`) 且格式大致正確。

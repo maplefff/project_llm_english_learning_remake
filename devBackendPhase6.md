@@ -32,7 +32,7 @@
             *   對於**排序題** (如 2.4.1)，Prompt 需指示 LLM 生成待排序的項目和正確順序。
         *   考慮該題型的特殊性，例如 `1.5.2 作者目的與語氣` 是複合型選擇題。
     2.  **服務邏輯**:
-        *   實現調用 `GeminiAPIService.js` 和 `CleanJSON.js` 的邏輯。
+        *   實現調用 `GeminiAPIService.js` 和 `CleanJSON.js` 的邏輯。這裡應包含從 `LLMConfigService` 獲取該題型對應的 LLM 參數 (如 `temperature`, `thinkingBudget`)，並在調用 `GeminiAPIService.getResponse` 時傳入這些參數以及該題型期望的 `responseSchema`。
         *   實現數據驗證與格式化，確保輸出符合前端渲染和後端處理所需。
     3.  **錯誤處理**: 處理特定於該題型生成過程中可能出現的錯誤。
     4.  **單元測試**: 編寫針對此新題型生成器的單元測試，模擬依賴並驗證各種情況下的輸出。
