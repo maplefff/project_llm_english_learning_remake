@@ -1,118 +1,89 @@
 [
   {
-    "UUID": "07095c0d-030d-40dd-8e97-92b328736ccd",
+    "UUID": "d5d429d0-06f8-4280-aa60-9ef0fa736f31",
     "questionData": {
-      "passage": "The company decided to embrace the new technology.",
-      "targetWord": "embrace",
-      "question": "The word 'embrace' in this context means to:",
+      "passage": "His poor health will **preclude** him from participating in the race.",
+      "targetWord": "preclude",
+      "question": "What does it mean if something will **preclude** you from doing something?",
       "options": [
         {
           "id": "A",
-          "text": "reject"
+          "text": "encourage you"
         },
         {
           "id": "B",
-          "text": "ignore"
+          "text": "prevent you"
         },
         {
           "id": "C",
-          "text": "accept and adopt"
+          "text": "prepare you"
         },
         {
           "id": "D",
-          "text": "question"
-        }
-      ],
-      "standard_answer": "C",
-      "explanation_of_Question": "解釋 embrace 在此情境中意為「欣然接受並採用」。選項 C「accept and adopt」最貼近此意。選項 A「reject」是拒絕；選項 B「ignore」是忽略；選項 D「question」是質疑，皆與原意相反或不符。"
-    },
-    "cacheTimestamp": 1747602208
-  },
-  {
-    "UUID": "9254b38e-5fac-4ef0-b83f-6837a6db6f14",
-    "questionData": {
-      "passage": "There are risks inherent in almost every sport.",
-      "targetWord": "inherent",
-      "question": "In the sentence above, 'inherent' is closest in meaning to:",
-      "options": [
-        {
-          "id": "A",
-          "text": "accidental"
-        },
-        {
-          "id": "B",
-          "text": "temporary"
-        },
-        {
-          "id": "C",
-          "text": "existing as a natural part"
-        },
-        {
-          "id": "D",
-          "text": "external"
-        }
-      ],
-      "standard_answer": "C",
-      "explanation_of_Question": "解釋 inherent 指「內在的、固有的」，是事物本身自然存在的一部分。選項 C「existing as a natural part」精準描述了此意義。選項 A「accidental」是意外的；選項 B「temporary」是暫時的；選項 D「external」是外在的，皆與原意不符。"
-    },
-    "cacheTimestamp": 1747602208
-  },
-  {
-    "UUID": "328098d4-7401-43f5-841b-4e211b8167df",
-    "questionData": {
-      "passage": "Scientists will scrutinize the data for any anomalies.",
-      "targetWord": "scrutinize",
-      "question": "To 'scrutinize' means to:",
-      "options": [
-        {
-          "id": "A",
-          "text": "quickly review"
-        },
-        {
-          "id": "B",
-          "text": "discard"
-        },
-        {
-          "id": "C",
-          "text": "examine closely and carefully"
-        },
-        {
-          "id": "D",
-          "text": "summarize"
-        }
-      ],
-      "standard_answer": "C",
-      "explanation_of_Question": "解釋 scrutinize 意為「仔細檢查、詳細審視」。選項 C「examine closely and carefully」最符合此意。選項 A「quickly review」是快速瀏覽，與仔細檢查相反；選項 B「discard」是丟棄；選項 D「summarize」是總結，皆不符句意。"
-    },
-    "cacheTimestamp": 1747602208
-  },
-  {
-    "UUID": "82e1062e-429b-4086-95a4-1f92f8893dac",
-    "questionData": {
-      "passage": "The negotiations culminated in a peace treaty.",
-      "targetWord": "culminated",
-      "question": "In this sentence, 'culminated' means:",
-      "options": [
-        {
-          "id": "A",
-          "text": "began"
-        },
-        {
-          "id": "B",
-          "text": "ended or reached a peak"
-        },
-        {
-          "id": "C",
-          "text": "were postponed"
-        },
-        {
-          "id": "D",
-          "text": "were ignored"
+          "text": "warn you"
         }
       ],
       "standard_answer": "B",
-      "explanation_of_Question": "解釋 culminate 指「達到最高點」或「以...告終」。在此句中，談判以簽訂和平條約結束，因此選項 B「ended or reached a peak」最為貼切。選項 A「began」是開始，語意相反；選項 C「were postponed」是延期；選項 D「were ignored」是被忽略，皆不符句意。"
+      "explanation_of_Question": "Preclude 意指阻止某事發生或使某人無法做某事。此處，不好的健康狀況阻止他參賽，因此選項 B (prevent you) 正確。選項 A (encourage you) 意為鼓勵，與原意相反；選項 C (prepare you) 意為準備，與原意無關；選項 D (warn you) 意為警告，也與原意不符。"
     },
-    "cacheTimestamp": 1747602208
+    "cacheTimestamp": 1747603224
+  },
+  {
+    "UUID": "507d64ac-e68a-4b91-9e7c-ae9d9bbf20b9",
+    "questionData": {
+      "passage": "The project needs to produce some **tangible** results, not just talk.",
+      "targetWord": "tangible",
+      "question": "In this sentence, **tangible** results are results that are:",
+      "options": [
+        {
+          "id": "A",
+          "text": "unclear or confusing"
+        },
+        {
+          "id": "B",
+          "text": "theoretical or abstract"
+        },
+        {
+          "id": "C",
+          "text": "measurable or concrete"
+        },
+        {
+          "id": "D",
+          "text": "popular or well-known"
+        }
+      ],
+      "standard_answer": "C",
+      "explanation_of_Question": "Tangible 指實際存在的、可觸摸的、可證實的或可測量的。此處指能帶來實際、具體的成果，而非空談，因此選項 C (measurable or concrete) 正確。選項 A (unclear or confusing) 意為不明確的、令人困惑的，與原意相反；選項 B (theoretical or abstract) 意為理論的、抽象的，與原意相反；選項 D (popular or well-known) 意為流行的、廣為人知的，與原意無關。"
+    },
+    "cacheTimestamp": 1747603224
+  },
+  {
+    "UUID": "a4984d47-8c35-4ac1-9971-a2ddac5532ef",
+    "questionData": {
+      "passage": "She began to **lament** the loss of her youth, recalling fond memories from decades past.",
+      "targetWord": "lament",
+      "question": "To **lament** something means to:",
+      "options": [
+        {
+          "id": "A",
+          "text": "celebrate it"
+        },
+        {
+          "id": "B",
+          "text": "forget about it"
+        },
+        {
+          "id": "C",
+          "text": "accept it"
+        },
+        {
+          "id": "D",
+          "text": "express deep sadness or regret about it"
+        }
+      ],
+      "standard_answer": "D",
+      "explanation_of_Question": "Lament 指對某事表達深切的悲傷或遺憾。此處她對失去青春表示哀悼與追憶，因此選項 D (express deep sadness or regret about it) 正確。選項 A (celebrate it) 意為慶祝，與原意相反；選項 B (forget about it) 意為忘記，與原意相反；選項 C (accept it) 意為接受，與原意相反。"
+    },
+    "cacheTimestamp": 1747603224
   }
 ]

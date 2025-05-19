@@ -106,7 +106,7 @@ def plot_cumulative_accuracy_trend(cumulative_df, output_image_path):
 if __name__ == "__main__":
     # 使用者根目錄下的絕對路徑
     # 注意：請根據您的實際專案結構調整此路徑
-    json_file_path = '/Users/wu_cheng_yan/cursor/project_llm_english_learning_remake/llm_english_learning_read&write/backend/historyData/history111.json'
+    json_file_path = '/Users/wu_cheng_yan/cursor/project_llm_english_learning_remake/llm_english_learning_read_write/backend/historyData/history111.json'
     # 更新輸出檔名以反映內容變化
     output_image_file = '/Users/wu_cheng_yan/cursor/project_llm_english_learning_remake/history_cumulative_accuracy_trend.png' 
     

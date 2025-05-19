@@ -4,9 +4,7 @@
     "thinkingBudget": 22000
   },
   "Explain":{
-    "description": "Explain the following text",
-    "temperature": 0-2,
-    "thinkingBudget": 0-24576
+    "description": "temperature(0-2) 和 thinkingBudget(0-24576) 的範圍"
   },
   "1.1.2": {
     "description": "完整配置範例",
