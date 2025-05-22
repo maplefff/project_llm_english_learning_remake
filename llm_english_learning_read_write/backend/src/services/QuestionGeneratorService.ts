@@ -1,6 +1,7 @@
 import { generate111Question } from './generators/111_generate';
-// 從接口文件導入 QuestionData111 和 QuestionData 類型
-import { QuestionData111, QuestionData } from './generators/QuestionGeneratorInterface';
+import { generate112Question } from './generators/112_generate';
+// 從接口文件導入 QuestionData111, QuestionData112 和 QuestionData 類型
+import { QuestionData111, QuestionData112, QuestionData } from './generators/QuestionGeneratorInterface';
 import { getHistory } from '../services/HistoryService'; // 匯入查詢歷史紀錄的函數
 
 /**
@@ -32,9 +33,19 @@ async function generateQuestionByType(
         console.error(`[DEBUG QuestionGeneratorService.ts] Error generating question for type 1.1.1:`, error);
         return null;
       }
-    // case '1.1.2': // 未來擴展
-    //   // return await generate112Question(difficulty, historySummary);
-    //   return null;
+    case '1.1.2':
+      try {
+        // 查詢歷史紀錄，這裡直接查詢 1.1.2 題型的所有紀錄
+        const historyRecords = await getHistory('1.1.2');
+        // 直接將歷史紀錄序列化為字串作為 summary 傳遞
+        const historySummary = JSON.stringify(historyRecords);
+        const questionDataArray = await generate112Question(questionNumber, historySummary, difficulty);
+        console.log(`[DEBUG QuestionGeneratorService.ts] Generated ${questionDataArray?.length ?? 0} question(s) for type 1.1.2.`);
+        return questionDataArray;
+      } catch (error) {
+        console.error(`[DEBUG QuestionGeneratorService.ts] Error generating question for type 1.1.2:`, error);
+        return null;
+      }
     default:
       console.warn(`[DEBUG QuestionGeneratorService.ts] Unsupported question type: ${questionType}`);
       return null;

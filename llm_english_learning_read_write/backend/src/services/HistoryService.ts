@@ -5,7 +5,7 @@ import * as path from 'path';
 // 參考 devPlanRead&Write.md 3.6 節關於「記錄資訊 (每條記錄)」的描述
 export interface QuestionData {
     passage: string;
-    targetWord: string;
+    targetWord?: string; // 可選，1.1.2 題型沒有 targetWord
     question: string;
     options: { id: string; text: string }[];
     standard_answer: string;

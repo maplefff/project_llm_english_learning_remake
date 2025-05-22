@@ -1,0 +1,89 @@
+[
+  {
+    "UUID": "2d4463fd-2584-4132-a4c0-7abb14b9c2ed",
+    "questionData": {
+      "passage": "Despite the initial challenges, the project team managed to _______ all the deadlines.",
+      "question": "Choose the best word to complete the sentence.",
+      "options": [
+        {
+          "id": "A",
+          "text": "avoid"
+        },
+        {
+          "id": "B",
+          "text": "miss"
+        },
+        {
+          "id": "C",
+          "text": "extend"
+        },
+        {
+          "id": "D",
+          "text": "meet"
+        }
+      ],
+      "standard_answer": "D"
+    },
+    "userAnswer": "D",
+    "isCorrect": true,
+    "timestamp": 1747946097285
+  },
+  {
+    "UUID": "122eed7f-2bb2-4d18-8aad-e3e5e93db960",
+    "questionData": {
+      "passage": "The board of directors will _______ next week to discuss the proposed merger.",
+      "question": "Choose the best word to complete the sentence.",
+      "options": [
+        {
+          "id": "A",
+          "text": "convene"
+        },
+        {
+          "id": "B",
+          "text": "disperse"
+        },
+        {
+          "id": "C",
+          "text": "abdicate"
+        },
+        {
+          "id": "D",
+          "text": "dissolve"
+        }
+      ],
+      "standard_answer": "A"
+    },
+    "userAnswer": "B",
+    "isCorrect": false,
+    "timestamp": 1747945991646
+  },
+  {
+    "UUID": "48ff86c0-11c1-4aba-a5e6-940d18685124",
+    "questionData": {
+      "passage": "The company implemented several new policies to _______ the environmental impact of its operations.",
+      "question": "Choose the best word to complete the sentence.",
+      "options": [
+        {
+          "id": "A",
+          "text": "enhance"
+        },
+        {
+          "id": "B",
+          "text": "aggravate"
+        },
+        {
+          "id": "C",
+          "text": "mitigate"
+        },
+        {
+          "id": "D",
+          "text": "perpetuate"
+        }
+      ],
+      "standard_answer": "C"
+    },
+    "userAnswer": "C",
+    "isCorrect": true,
+    "timestamp": 1747945275987
+  }
+]

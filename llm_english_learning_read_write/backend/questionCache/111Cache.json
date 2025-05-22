@@ -1,147 +1,89 @@
 [
   {
-    "UUID": "abe662c2-c525-4104-9da4-256ec6b55090",
+    "UUID": "09b63359-a6b1-430c-a629-42620d2fa2b3",
     "questionData": {
-      "passage": "She was a **prolific** writer, publishing several novels and numerous short stories every year.",
-      "targetWord": "prolific",
-      "question": "In this sentence, **prolific** means:",
+      "passage": "The team took a **pragmatic** approach to solving the problem, focusing on what would actually work.",
+      "targetWord": "pragmatic",
+      "question": "In this sentence, a **pragmatic** approach is one that is:",
       "options": [
         {
           "id": "A",
-          "text": "lazy"
+          "text": "idealistic and theoretical"
         },
         {
           "id": "B",
-          "text": "productive"
+          "text": "complicated and difficult"
         },
         {
           "id": "C",
-          "text": "unpublished"
+          "text": "practical and realistic"
         },
         {
           "id": "D",
-          "text": "secretive"
-        }
-      ],
-      "standard_answer": "B",
-      "explanation_of_Question": "Prolific 指多產或作品豐富的。她每年出版多本小說及許多短篇故事，表示她非常「多產」，因此選項 B (productive) 正確。選項 A (lazy) 意為懶惰，語意相反；選項 C (unpublished) 意為未出版，與其多產出版相悖；選項 D (secretive) 意為秘密的，與寫作產量無關。"
-    },
-    "cacheTimestamp": 1747682021
-  },
-  {
-    "UUID": "59bc9408-0269-42d7-8e12-6a18129d9a80",
-    "questionData": {
-      "passage": "His answer was **succinct** and to the point, leaving no room for confusion.",
-      "targetWord": "succinct",
-      "question": "If something is **succinct**, it is:",
-      "options": [
-        {
-          "id": "A",
-          "text": "confusing"
-        },
-        {
-          "id": "B",
-          "text": "brief and clear"
-        },
-        {
-          "id": "C",
-          "text": "very detailed"
-        },
-        {
-          "id": "D",
-          "text": "aggressive"
-        }
-      ],
-      "standard_answer": "B",
-      "explanation_of_Question": "Succinct 指表達簡潔清晰，沒有多餘詞語的。他的回答簡潔明確，表示內容不多但重點清晰，因此選項 B (brief and clear) 正確。選項 A (confusing) 意為令人困惑，語意相反；選項 C (very detailed) 意為非常詳細，語意相反；選項 D (aggressive) 意為有侵略性，與簡潔表達無關。"
-    },
-    "cacheTimestamp": 1747682021
-  },
-  {
-    "UUID": "b47bd072-e752-4946-8bcb-01cbc6ea6560",
-    "questionData": {
-      "passage": "He made an **innocuous** comment about the weather, but it somehow offended his sensitive colleague.",
-      "targetWord": "innocuous",
-      "question": "In this sentence, **innocuous** means:",
-      "options": [
-        {
-          "id": "A",
-          "text": "offensive"
-        },
-        {
-          "id": "B",
-          "text": "interesting"
-        },
-        {
-          "id": "C",
-          "text": "harmful or offensive"
-        },
-        {
-          "id": "D",
-          "text": "not harmful or offensive"
-        }
-      ],
-      "standard_answer": "D",
-      "explanation_of_Question": "Innocuous 指無害的、不冒犯的。雖然評論意外冒犯了同事，但原意是指評論本身是「不冒犯的」，因此選項 D (not harmful or offensive) 正確。選項 A (offensive) 意為冒犯的，語意相反；選項 B (interesting) 意為有趣的，與無害無關；選項 C (harmful or offensive) 意為有害或冒犯的，語意相反。"
-    },
-    "cacheTimestamp": 1747682021
-  },
-  {
-    "UUID": "0963a389-e5c9-4132-b633-61cef9d2f04c",
-    "questionData": {
-      "passage": "The happiness she felt was **transient**, lasting only for a few moments before fading away.",
-      "targetWord": "transient",
-      "question": "If something is **transient**, it is:",
-      "options": [
-        {
-          "id": "A",
-          "text": "long-lasting"
-        },
-        {
-          "id": "B",
-          "text": "intense"
-        },
-        {
-          "id": "C",
-          "text": "lasting for only a short time"
-        },
-        {
-          "id": "D",
-          "text": "forgettable"
+          "text": "emotional and subjective"
         }
       ],
       "standard_answer": "C",
-      "explanation_of_Question": "Transient 指短暫的、一時的。她的快樂只持續了幾分鐘就消失了，表示這種感覺是「短暫的」，因此選項 C (lasting for only a short time) 正確。選項 A (long-lasting) 意為持久的，語意相反；選項 B (intense) 意為強烈的，與持續時間無關；選項 D (forgettable) 意為容易被遺忘的，與持續時間不直接相關。"
+      "explanation_of_Question": "句子中 \"pragmatic\" 用來描述某種思考或行動的方式，即基於實際而非理論性的考量。團隊採取實事求是的方法來解決問題，意味著他們注重有效性與實際可行性。選項 C \"practical and realistic\" (實際且務實的) 最符合這個含義。選項 A \"idealistic and theoretical\" (理想化且理論性的) 是其反義。選項 B \"complicated and difficult\" (複雜且困難的) 與處理問題的方式是否務實無關。選項 D \"emotional and subjective\" (情緒化且主觀的) 描述的是一種情感導向而非實際導向的方式。"
     },
-    "cacheTimestamp": 1747682021
+    "cacheTimestamp": 1747683621
   },
   {
-    "UUID": "d3c12c13-bcc2-4cc1-8bc8-8620fca21c41",
+    "UUID": "d3ca7969-3660-465f-a9ab-d5269b18ac40",
     "questionData": {
-      "passage": "She felt **ambivalent** about moving to a new city; she was excited about the change but also nervous about leaving her friends.",
-      "targetWord": "ambivalent",
-      "question": "To feel **ambivalent** about something means to:",
+      "passage": "Due to strong public opposition, the government decided to **rescind** the newly implemented regulation.",
+      "targetWord": "rescind",
+      "question": "To **rescind** a regulation means to:",
       "options": [
         {
           "id": "A",
-          "text": "feel strongly positive about it"
+          "text": "formally cancel or revoke"
         },
         {
           "id": "B",
-          "text": "feel strongly negative about it"
+          "text": "implement or enforce"
         },
         {
           "id": "C",
-          "text": "have mixed feelings or contradictory ideas about it"
+          "text": "modify or amend"
         },
         {
           "id": "D",
-          "text": "be completely indifferent to it"
+          "text": "announce or publicize"
+        }
+      ],
+      "standard_answer": "A",
+      "explanation_of_Question": "句子中的 \"rescind\" 是指政府取消或廢除某項新頒布的規定。這個詞通常用於正式決定，例如取消法律、政策或協議。選項 A \"formally cancel or revoke\" (正式取消或廢除) 精確地捕捉了 \"rescind\" 的意思。選項 B \"implement or enforce\" (實施或執行) 是其反義。選項 C \"modify or amend\" (修改或修訂) 指的是改變規定而非完全取消。選項 D \"announce or publicize\" (宣布或公開) 與規定的狀態（是否有效）無關，僅指傳達信息的行為。"
+    },
+    "cacheTimestamp": 1747683621
+  },
+  {
+    "UUID": "17cdbd12-c227-46d0-a72a-63c25c3b46d0",
+    "questionData": {
+      "passage": "You will need to bring your official documents to **validate** your certificate.",
+      "targetWord": "validate",
+      "question": "To **validate** something means to:",
+      "options": [
+        {
+          "id": "A",
+          "text": "disprove or refute"
+        },
+        {
+          "id": "B",
+          "text": "create or issue"
+        },
+        {
+          "id": "C",
+          "text": "confirm the truth or validity of"
+        },
+        {
+          "id": "D",
+          "text": "understand or interpret"
         }
       ],
       "standard_answer": "C",
-      "explanation_of_Question": "Ambivalent 指對某事有複雜的、矛盾的感情或想法。她既對搬家感到興奮又對離開朋友感到緊張，顯示她對這件事「有複雜或矛盾的感受」，因此選項 C (have mixed feelings or contradictory ideas about it) 正確。選項 A (feel strongly positive about it) 意為非常積極的感覺，與矛盾感受不同；選項 B (feel strongly negative about it) 意為非常消極的感覺，也與矛盾感受不同；選項 D (be completely indifferent to it) 意為完全冷漠，與同時感到興奮和緊張相悖。"
+      "explanation_of_Question": "在這個句子中，\"validate\" 的意思是確認某件事物（本例中是她的證書）的有效性或真實性。這通常涉及檢查並證實其符合標準或真實無誤。選項 C \"confirm the truth or validity of\" (確認...的真實或有效性) 正確解釋了 \"validate\" 在此的用法。選項 A \"disprove or refute\" (駁倒或反駁) 是其反義。選項 B \"create or issue\" (創造或頒發) 指的是證書的起源，而非確認其有效性。選項 D \"understand or interpret\" (理解或解釋) 與證書的意義理解有關，而非其真實性的確認。"
     },
-    "cacheTimestamp": 1747682021
+    "cacheTimestamp": 1747683621
   }
 ]

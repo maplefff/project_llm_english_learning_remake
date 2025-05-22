@@ -12,9 +12,10 @@ const orchestratorService = new TestOrchestratorService(questionCacheService);
 class ApiController {
   async getQuestionTypes(req: Request, res: Response, next: NextFunction): Promise<void> {
     try {
-      // Phase 5.3: 返回一個硬編碼的題型列表
+      // 返回支援的題型列表
       const questionTypes = [
         { id: '1.1.1', name: '詞義選擇 (Vocabulary - Multiple Choice)' },
+        { id: '1.1.2', name: '詞彙填空 (Vocabulary - Cloze Test)' },
         // Future types can be added here
       ];
       res.json(questionTypes);
@@ -26,8 +27,8 @@ class ApiController {
   async startTest(req: Request, res: Response, next: NextFunction): Promise<void> {
     try {
       const { questionType } = req.body;
-      if (questionType !== '1.1.1') {
-        res.status(400).json({ message: '目前僅支援題型 1.1.1' });
+      if (questionType !== '1.1.1' && questionType !== '1.1.2') {
+        res.status(400).json({ message: '目前僅支援題型 1.1.1 和 1.1.2' });
         return;
       }
       console.log(`[DEBUG api.controller.ts] startTest: Received request for type ${questionType}`);

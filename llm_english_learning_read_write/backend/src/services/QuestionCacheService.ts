@@ -2,15 +2,18 @@ import * as fs from 'fs/promises';
 import * as path from 'path';
 import { v4 as uuidv4 } from 'uuid';
 import { QuestionGeneratorService } from './QuestionGeneratorService';
-import { QuestionData, QuestionData111 } from './generators/QuestionGeneratorInterface';
+import { QuestionData, QuestionData111, QuestionData112 } from './generators/QuestionGeneratorInterface';
 import 'dotenv/config';
 
 const CACHE_DIR_NAME = 'questionCache';
 const CACHE_DIR_PATH = path.join(__dirname, '..', '..', CACHE_DIR_NAME); // 假設 services 在 src/services
 const CACHE_FILE_PATH_111 = path.join(CACHE_DIR_PATH, '111Cache.json');
+const CACHE_FILE_PATH_112 = path.join(CACHE_DIR_PATH, '112Cache.json');
 
 const MIN_QUESTIONS_111 = 3;
 const TARGET_QUESTIONS_111 = 5; // 目標快取數量
+const MIN_QUESTIONS_112 = 3;
+const TARGET_QUESTIONS_112 = 5; // 目標快取數量
 
 // --- 重試機制常量 ---
 const MAX_GENERATION_RETRIES = 3; // 首次嘗試後的最多重試次數
@@ -18,11 +21,19 @@ const BASE_GENERATION_DELAY_MS = 1000; // 基礎延遲 (1秒)
 const JITTER_MS = 200; // 抖動範圍 (+/-)
 // --- End Retry Constants ---
 
-interface CacheEntry {
+interface CacheEntry111 {
   UUID: string;
   cacheTimestamp: number;
   questionData: QuestionData111;
 }
+
+interface CacheEntry112 {
+  UUID: string;
+  cacheTimestamp: number;
+  questionData: QuestionData112;
+}
+
+type CacheEntry = CacheEntry111 | CacheEntry112;
 
 export class QuestionCacheService {
   private caches: Map<string, CacheEntry[]> = new Map();
@@ -31,6 +42,7 @@ export class QuestionCacheService {
 
   private constructor() {
     this.isReplenishing.set('1.1.1', false);
+    this.isReplenishing.set('1.1.2', false);
     // 初始化時不立即執行異步操作，提供一個單獨的 initialize 方法
   }
 
@@ -72,8 +84,29 @@ export class QuestionCacheService {
       }
       this.caches.set('1.1.1', loadedQuestions);
 
+      // 2.2. 嘗試從檔案載入題型 1.1.2 的快取
+      let loadedQuestions112: CacheEntry[] = [];
+      try {
+        const fileContent112 = await fs.readFile(CACHE_FILE_PATH_112, 'utf-8');
+        loadedQuestions112 = JSON.parse(fileContent112) as CacheEntry[];
+        if (!Array.isArray(loadedQuestions112)) { // 基本的類型檢查
+            console.warn('[DEBUG QuestionCacheService.ts] Invalid cache file content (not an array), initializing as empty for 1.1.2.');
+            loadedQuestions112 = [];
+        }
+        console.log(`[DEBUG QuestionCacheService.ts] Loaded ${loadedQuestions112.length} questions for type 1.1.2 from ${CACHE_FILE_PATH_112}`);
+      } catch (error: any) {
+        if (error.code === 'ENOENT') {
+          console.log(`[DEBUG QuestionCacheService.ts] Cache file ${CACHE_FILE_PATH_112} not found. Initializing empty cache for 1.1.2.`);
+        } else {
+          console.error(`[DEBUG QuestionCacheService.ts] Error reading cache file ${CACHE_FILE_PATH_112}:`, error);
+        }
+        loadedQuestions112 = []; // 無論何種讀取錯誤，都初始化為空陣列
+      }
+      this.caches.set('1.1.2', loadedQuestions112);
+
       // 3. 檢查是否需要初次填充
       this._checkAndTriggerReplenishment('1.1.1'); // 非同步執行，不阻塞初始化
+      this._checkAndTriggerReplenishment('1.1.2'); // 非同步執行，不阻塞初始化
 
       console.log('[DEBUG QuestionCacheService.ts] Cache service initialized.');
 
@@ -92,7 +125,14 @@ export class QuestionCacheService {
         console.log(`[DEBUG QuestionCacheService.ts] Check for replenishment for ${questionType}: current ${currentCount}, min ${MIN_QUESTIONS_111}`);
         if (currentCount < MIN_QUESTIONS_111) {
             console.log(`[DEBUG QuestionCacheService.ts] Current count ${currentCount} is below min ${MIN_QUESTIONS_111} for ${questionType}. Triggering replenishment.`);
-            this._triggerReplenishment(questionType); // 非同步執行
+            this._triggerReplenishment(questionType as '1.1.1'); // 非同步執行
+        }    
+    } else if (questionType === '1.1.2') {
+        const currentCount = this.caches.get('1.1.2')?.length ?? 0;
+        console.log(`[DEBUG QuestionCacheService.ts] Check for replenishment for ${questionType}: current ${currentCount}, min ${MIN_QUESTIONS_112}`);
+        if (currentCount < MIN_QUESTIONS_112) {
+            console.log(`[DEBUG QuestionCacheService.ts] Current count ${currentCount} is below min ${MIN_QUESTIONS_112} for ${questionType}. Triggering replenishment.`);
+                         this._triggerReplenishment112(questionType as '1.1.2'); // 使用專門的 1.1.2 方法
         }    
     }
   }
@@ -233,6 +273,124 @@ export class QuestionCacheService {
     }
   }
  
+  // --- 1.1.2 背景補充任務 ---
+  private async _triggerReplenishment112(questionType: '1.1.2'): Promise<void> {
+    if (this.isReplenishing.get(questionType)) {
+      console.log(`[DEBUG QuestionCacheService.ts] Replenishment for ${questionType} is already in progress. Skipping.`);
+      return;
+    }
+
+    const currentQuestions = this.caches.get(questionType) ?? [];
+    const currentCount = currentQuestions.length;
+    
+    if (currentCount >= TARGET_QUESTIONS_112) {
+      console.log(`[DEBUG QuestionCacheService.ts] Cache for ${questionType} is already at or above target (${currentCount}/${TARGET_QUESTIONS_112}). No replenishment needed.`);
+      return;
+    }
+
+    console.log(`[DEBUG QuestionCacheService.ts] Starting replenishment for ${questionType}. Current: ${currentCount}, Target: ${TARGET_QUESTIONS_112}`);
+    this.isReplenishing.set(questionType, true);
+
+    let success = false;
+    try {
+      const needed = TARGET_QUESTIONS_112 - currentCount;
+      if (needed <= 0) {
+        console.log(`[DEBUG QuestionCacheService.ts] No questions needed for ${questionType}.`);
+        success = true;
+        return; 
+      }
+
+      console.log(`[DEBUG QuestionCacheService.ts] Attempting to generate ${needed} new questions for ${questionType}.`);
+      
+      let newQuestionDataArray: QuestionData112[] | null = null;
+      let lastError: Error | null = null;
+
+      for (let attempt = 0; attempt <= MAX_GENERATION_RETRIES; attempt++) {
+        try {
+          const result: QuestionData = await QuestionGeneratorService.generateQuestionByType(
+            questionType,
+            70,
+            "No history available.",
+            needed
+          );
+          
+          if (result === null) {
+             newQuestionDataArray = null;
+          } else if (Array.isArray(result)) {
+              newQuestionDataArray = result.filter(q => this._isQuestionData112(q)) as QuestionData112[];
+          } else if (this._isQuestionData112(result)) {
+              newQuestionDataArray = [result as QuestionData112];
+          } else {
+               console.error(`[DEBUG QuestionCacheService.ts] Unexpected result type or structure from generator for type ${questionType}:`, result);
+               newQuestionDataArray = null;
+          }
+
+          if (newQuestionDataArray && newQuestionDataArray.length > 0) {
+             console.log(`[DEBUG QuestionCacheService.ts] Successfully generated ${newQuestionDataArray.length} questions on attempt ${attempt}.`);
+             success = true;
+             break;
+          } else {
+             throw new Error(`Generator returned null or empty array on attempt ${attempt}`);
+          }
+
+        } catch (error) {
+          lastError = error instanceof Error ? error : new Error(String(error));
+          console.warn(`[DEBUG QuestionCacheService.ts] Generation attempt ${attempt} failed for ${questionType}:`, lastError.message);
+
+          if (attempt >= MAX_GENERATION_RETRIES) {
+            console.error(`[DEBUG QuestionCacheService.ts] Max retries (${MAX_GENERATION_RETRIES}) reached for ${questionType}. Giving up on this replenishment cycle.`);
+            throw lastError;
+          } else {
+            const delay = BASE_GENERATION_DELAY_MS * (2 ** attempt);
+            const jitter = Math.floor(Math.random() * (JITTER_MS * 2 + 1)) - JITTER_MS;
+            const waitTime = Math.max(0, delay + jitter);
+            console.log(`[DEBUG QuestionCacheService.ts] Waiting ${waitTime}ms before retry attempt ${attempt + 1}...`);
+            await new Promise(resolve => setTimeout(resolve, waitTime));
+          }
+        }
+      }
+
+      if (success && Array.isArray(newQuestionDataArray)) {
+        console.log(`[DEBUG QuestionCacheService.ts] Processing ${newQuestionDataArray.length} generated questions for ${questionType}.`);
+        for (const originalQuestionData of newQuestionDataArray) {
+          if (this._isQuestionData112(originalQuestionData)) {
+            const orderedQuestionData: QuestionData112 = {
+              passage: originalQuestionData.passage,
+              question: originalQuestionData.question,
+              options: originalQuestionData.options,
+              standard_answer: originalQuestionData.standard_answer,
+              explanation_of_Question: originalQuestionData.explanation_of_Question,
+            };
+
+            if (this.caches.get(questionType)!.length >= TARGET_QUESTIONS_112) {
+              console.log(`[DEBUG QuestionCacheService.ts] Target for ${questionType} reached during batch add. Stopping.`);
+              break;
+            }
+            const cachedQuestion: CacheEntry = {
+              UUID: uuidv4(),
+              questionData: orderedQuestionData,
+              cacheTimestamp: Math.floor(Date.now() / 1000),
+            };
+            this.caches.get(questionType)!.push(cachedQuestion);
+            console.log(`[DEBUG QuestionCacheService.ts] Added new question ${cachedQuestion.UUID} to cache for ${questionType}. New count: ${this.caches.get(questionType)!.length}`);
+            this._persistCacheToFile112(questionType);
+          } else {
+            console.warn('[DEBUG QuestionCacheService.ts] Skipping an item from generator as it does not match QuestionData112 structure:', originalQuestionData);
+          }
+        }
+      } else if (!success) {
+         console.error(`[DEBUG QuestionCacheService.ts] Replenishment failed for ${questionType} after all retries.`);
+      }
+
+    } catch (error) {
+      console.error(`[DEBUG QuestionCacheService.ts] Error during replenishment cycle for ${questionType}:`, error);
+    } finally {
+      this.isReplenishing.set(questionType, false);
+      console.log(`[DEBUG QuestionCacheService.ts] Replenishment process finished for ${questionType}. New count: ${this.caches.get(questionType)?.length ?? 0}`);
+      this._checkAndTriggerReplenishment(questionType);
+    }
+  }
+
   // --- 持久化快取到檔案 ---
   private async _persistCacheToFile(questionType: '1.1.1'): Promise<void> {
     const questionsToSave = this.caches.get(questionType) ?? [];
@@ -247,8 +405,21 @@ export class QuestionCacheService {
     }
   }
 
+  // --- 持久化 1.1.2 快取到檔案 ---
+  private async _persistCacheToFile112(questionType: '1.1.2'): Promise<void> {
+    const questionsToSave = this.caches.get(questionType) ?? [];
+    console.log(`[DEBUG QuestionCacheService.ts] Persisting ${questionsToSave.length} questions for type ${questionType} to ${CACHE_FILE_PATH_112}`);
+    try {
+      const jsonString = JSON.stringify(questionsToSave, null, 2);
+      await fs.writeFile(CACHE_FILE_PATH_112, jsonString, 'utf-8');
+      console.log(`[DEBUG QuestionCacheService.ts] Successfully persisted cache for ${questionType}.`);
+    } catch (error) {
+      console.error(`[DEBUG QuestionCacheService.ts] Error persisting cache for ${questionType}:`, error);
+    }
+  }
+
   // --- 從快取提供題目 ---
-  public async getQuestionFromCache(questionType: '1.1.1'): Promise<CacheEntry | null> {
+  public async getQuestionFromCache(questionType: '1.1.1' | '1.1.2'): Promise<CacheEntry | null> {
     const cachedQuestions = this.caches.get(questionType);
 
     if (cachedQuestions && cachedQuestions.length > 0) {
@@ -258,7 +429,11 @@ export class QuestionCacheService {
       if (questionToReturn) {
         console.log(`[DEBUG QuestionCacheService.ts] Providing question ${questionToReturn.UUID} from cache for ${questionType}. Remaining: ${cachedQuestions.length}`);
         // 快取已更改，立即觸發持久化 (非同步)
-        this._persistCacheToFile(questionType);
+        if (questionType === '1.1.1') {
+          this._persistCacheToFile(questionType);
+        } else {
+          this._persistCacheToFile112(questionType);
+        }
         // 檢查是否需要補充 (非同步)
         this._checkAndTriggerReplenishment(questionType);
         return questionToReturn;
@@ -281,6 +456,17 @@ export class QuestionCacheService {
     return data && typeof data === 'object' &&
            typeof data.passage === 'string' &&
            typeof data.targetWord === 'string' &&
+           typeof data.question === 'string' &&
+           Array.isArray(data.options) && // 檢查 options 是否為數組
+           typeof data.standard_answer === 'string' &&
+           typeof data.explanation_of_Question === 'string'; // 檢查 explanation_of_Question
+  }
+
+  // 輔助函數，用於 1.1.2 類型守衛 (Type Guard)
+  private _isQuestionData112(data: any): data is QuestionData112 {
+    // 根據 QuestionData112 的實際結構添加更可靠的檢查
+    return data && typeof data === 'object' &&
+           typeof data.passage === 'string' &&
            typeof data.question === 'string' &&
            Array.isArray(data.options) && // 檢查 options 是否為數組
            typeof data.standard_answer === 'string' &&

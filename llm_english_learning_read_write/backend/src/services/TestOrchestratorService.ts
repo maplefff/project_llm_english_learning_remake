@@ -1,17 +1,25 @@
 import { QuestionCacheService } from './QuestionCacheService';
 import actualQuestionCacheServiceInstance from './QuestionCacheService';
-import { QuestionData111 as GeneratorQuestionData111, Option } from './generators/QuestionGeneratorInterface';
+import { QuestionData111 as GeneratorQuestionData111, QuestionData112 as GeneratorQuestionData112, Option } from './generators/QuestionGeneratorInterface';
 import { saveHistoryEntry, HistoryEntry, QuestionData as HistoryServiceQuestionData } from './HistoryService';
 
 /**
  * TestOrchestratorService 內部處理和對外暴露的題目數據結構。
  * 包含從快取來的唯一 ID 和題目類型。
  */
-export interface TestOrchestratorQuestion extends GeneratorQuestionData111 {
+export interface TestOrchestratorQuestion111 extends GeneratorQuestionData111 {
   id: string;           // 題目的唯一 ID (來自快取的 UUID)
   type: '1.1.1';      // 題型
   explanation?: string; // 最終提供給前端的解釋欄位名 (映射自 explanation_of_Question)
 }
+
+export interface TestOrchestratorQuestion112 extends GeneratorQuestionData112 {
+  id: string;           // 題目的唯一 ID (來自快取的 UUID)
+  type: '1.1.2';      // 題型
+  explanation?: string; // 最終提供給前端的解釋欄位名 (映射自 explanation_of_Question)
+}
+
+export type TestOrchestratorQuestion = TestOrchestratorQuestion111 | TestOrchestratorQuestion112;
 
 /**
  * 假設 QuestionCacheService.getQuestionFromCache 返回的結構。
@@ -38,7 +46,7 @@ class TestOrchestratorService {
     private questionCacheService: QuestionCacheService
   ) {}
 
-  private formatQuestionForClient(cacheId: string, questionBody: GeneratorQuestionData111): TestOrchestratorQuestion {
+  private formatQuestionForClient111(cacheId: string, questionBody: GeneratorQuestionData111): TestOrchestratorQuestion111 {
     return {
       ...questionBody,
       id: cacheId,
@@ -47,23 +55,48 @@ class TestOrchestratorService {
     };
   }
 
+  private formatQuestionForClient112(cacheId: string, questionBody: GeneratorQuestionData112): TestOrchestratorQuestion112 {
+    return {
+      ...questionBody,
+      id: cacheId,
+      type: '1.1.2',
+      explanation: questionBody.explanation_of_Question, // 映射欄位名
+    };
+  }
+
   async startSingleTypeTest(questionType: string): Promise<TestOrchestratorQuestion | null> {
-    if (questionType !== '1.1.1') {
+    if (questionType !== '1.1.1' && questionType !== '1.1.2') {
       console.warn(`[DEBUG TestOrchestratorService.ts] startSingleTypeTest: 不支援的題型 ${questionType}`);
       return null;
     }
 
     try {
       console.log(`[DEBUG TestOrchestratorService.ts] startSingleTypeTest: 正在從快取獲取題型 ${questionType} 的題目`);
-      const cachedEntry = await this.questionCacheService.getQuestionFromCache('1.1.1'); // cachedEntry is CacheEntry | null
+      
+      // 根據題型分別處理
+      let cachedEntry: any = null;
+      if (questionType === '1.1.1') {
+        cachedEntry = await this.questionCacheService.getQuestionFromCache('1.1.1');
+      } else if (questionType === '1.1.2') {
+        cachedEntry = await this.questionCacheService.getQuestionFromCache('1.1.2');
+      } else {
+        console.warn(`[DEBUG TestOrchestratorService.ts] startSingleTypeTest: 不支援的題型 ${questionType}`);
+        return null;
+      }
       
       if (!cachedEntry || !cachedEntry.UUID || !cachedEntry.questionData) {
         console.log(`[DEBUG TestOrchestratorService.ts] startSingleTypeTest: 快取中無可用題目或返回格式不符 (題型 ${questionType})`);
         return null;
       }
       
-      // 使用 cachedEntry.UUID 和 cachedEntry.questionData
-      const questionForClient = this.formatQuestionForClient(cachedEntry.UUID, cachedEntry.questionData);
+      // 根據題型選擇對應的格式化方法
+      let questionForClient: TestOrchestratorQuestion;
+      if (questionType === '1.1.1') {
+        questionForClient = this.formatQuestionForClient111(cachedEntry.UUID, cachedEntry.questionData);
+      } else { // questionType === '1.1.2'
+        questionForClient = this.formatQuestionForClient112(cachedEntry.UUID, cachedEntry.questionData);
+      }
+      
       console.log(`[DEBUG TestOrchestratorService.ts] startSingleTypeTest: 成功獲取題目 ${questionForClient.id}`);
       return questionForClient;
     } catch (error) {
@@ -88,9 +121,10 @@ class TestOrchestratorService {
       const isCorrect = userAnswer === correctAnswer;
       console.log(`[DEBUG TestOrchestratorService.ts] submitAnswer: 使用者答案 "${userAnswer}", 正確答案 "${correctAnswer}", 是否正確: ${isCorrect}`);
 
+      // 根據題型構建歷史記錄快照
       const snapshotForHistory: HistoryServiceQuestionData = {
         passage: originalQuestionClientData.passage,
-        targetWord: originalQuestionClientData.targetWord,
+        targetWord: originalQuestionClientData.type === '1.1.1' ? (originalQuestionClientData as TestOrchestratorQuestion111).targetWord : undefined,
         question: originalQuestionClientData.question,
         options: originalQuestionClientData.options.map(opt => ({id: opt.id, text: opt.text})),
         standard_answer: originalQuestionClientData.standard_answer,
@@ -107,15 +141,19 @@ class TestOrchestratorService {
       await saveHistoryEntry(originalQuestionClientData.type, historyEntryPayload);
       console.log(`[DEBUG TestOrchestratorService.ts] submitAnswer: 歷史記錄已儲存`);
 
-      const nextCachedEntry = await this.questionCacheService.getQuestionFromCache(originalQuestionClientData.type); // nextCachedEntry is CacheEntry | null
-      
+      // 暫時只支援1.1.1，1.1.2的支援需要更新QuestionCacheService
       let nextQuestionForClient: TestOrchestratorQuestion | null = null;
-      if (nextCachedEntry && nextCachedEntry.UUID && nextCachedEntry.questionData) {
-        // 使用 nextCachedEntry.UUID 和 nextCachedEntry.questionData
-        nextQuestionForClient = this.formatQuestionForClient(nextCachedEntry.UUID, nextCachedEntry.questionData);
-        console.log(`[DEBUG TestOrchestratorService.ts] submitAnswer: 下一題獲取結果: ${nextQuestionForClient.id}`);
+      if (originalQuestionClientData.type === '1.1.1') {
+        const nextCachedEntry = await this.questionCacheService.getQuestionFromCache('1.1.1'); // nextCachedEntry is CacheEntry | null
+        if (nextCachedEntry && nextCachedEntry.UUID && nextCachedEntry.questionData) {
+          // 確保數據類型正確
+          nextQuestionForClient = this.formatQuestionForClient111(nextCachedEntry.UUID, nextCachedEntry.questionData as GeneratorQuestionData111);
+          console.log(`[DEBUG TestOrchestratorService.ts] submitAnswer: 下一題獲取結果: ${nextQuestionForClient.id}`);
+        } else {
+          console.log(`[DEBUG TestOrchestratorService.ts] submitAnswer: 無可用下一題`);
+        }
       } else {
-        console.log(`[DEBUG TestOrchestratorService.ts] submitAnswer: 無可用下一題`);
+        console.log(`[DEBUG TestOrchestratorService.ts] submitAnswer: 1.1.2題型的下一題獲取暫未實現`);
       }
 
       const submissionResult: SubmissionResult = {

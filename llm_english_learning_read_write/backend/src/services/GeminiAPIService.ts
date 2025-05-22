@@ -31,7 +31,7 @@ class GeminiAPIService {
    * @returns 回傳 JSON 或純文字。
    */
   async getResponse(
-    prompt: string,
+    prompt: string, 
     options?: { responseSchema?: any, config?: any }
   ): Promise<string | object | any[]> {
     if (!process.env.GEMINI_API_KEY) {
@@ -57,11 +57,82 @@ class GeminiAPIService {
           responseMimeType: options?.responseSchema ? "application/json" : undefined,
           responseSchema: options?.responseSchema,
         },
-      };
+        };
       // 發送請求
       const response = await ai.models.generateContent(request);
-      // 暫時性 debug：直接打印 Gemini API 原始回應
-      console.log('[DEBUG GeminiAPIService.ts] [TEMP] Raw Gemini API response:', response);
+
+      // ---- 更詳細的 Debugging Start ----
+      console.log(">>>> GeminiAPIService: ABOUT TO LOG RAW RESPONSE (Line ~63) <<<<");
+      try {
+        console.log('[DEBUG GeminiAPIService.ts] [TEMP] typeof response:', typeof response);
+
+        if (response && typeof response === 'object') {
+          console.log('[DEBUG GeminiAPIService.ts] [TEMP] Object.keys(response):', Object.keys(response));
+          
+          if ('candidates' in response) {
+            console.log('[DEBUG GeminiAPIService.ts] [TEMP] response.candidates exists. Length:', Array.isArray((response as any).candidates) ? (response as any).candidates.length : 'Not an array');
+          } else {
+            console.log('[DEBUG GeminiAPIService.ts] [TEMP] response.candidates does NOT exist.');
+          }
+
+          if (typeof (response as any).text === 'function') {
+            console.log('[DEBUG GeminiAPIService.ts] [TEMP] response.text() output (this is usually the combined, cleaned text from all candidates):');
+            try {
+                console.log((response as any).text());
+            } catch (textFuncError) {
+                console.error('[DEBUG GeminiAPIService.ts] [TEMP] Error calling response.text():', textFuncError);
+            }
+      } else {
+            console.log('[DEBUG GeminiAPIService.ts] [TEMP] response.text is NOT a function. Value (if any):', (response as any).text);
+      }
+        }
+        
+        // 創建 response 的深拷貝以進行修改
+        const clonedResponse = JSON.parse(JSON.stringify(response));
+
+        if (clonedResponse.candidates && Array.isArray(clonedResponse.candidates)) {
+          clonedResponse.candidates.forEach((candidate: any) => {
+            if (candidate.content && candidate.content.parts && Array.isArray(candidate.content.parts)) {
+              candidate.content.parts.forEach((part: any) => {
+                if (part.text && typeof part.text === 'string') {
+                  try {
+                    // 嘗試將 text 解析為 JS 物件/陣列
+                    const parsedContent = JSON.parse(part.text);
+                    part.text = parsedContent; // 直接將解析後的物件/陣列賦值給 part.text
+                  } catch (e) {
+                    // 如果 part.text 不是合法的 JSON 字串，則保持其為原始字串
+                    console.warn('[DEBUG GeminiAPIService.ts] [TEMP] part.text is not valid JSON, keeping original string. Snippet:', part.text.substring(0,100));
+                    // 在這種情況下，原始的 part.text (可能包含 \n) 會在最終 stringify 時被處理
+                  }
+                }
+              });
+            }
+          });
+        }
+        
+        // 使用 JSON.stringify 打印修改後的整個 clonedResponse 物件
+        try {
+          console.log('[DEBUG GeminiAPIService.ts] [TEMP] Modified Gemini API response (JSON.stringify):');
+          console.log(JSON.stringify(clonedResponse, null, 2));
+        } catch (stringifyError) {
+          console.error('[DEBUG GeminiAPIService.ts] [TEMP] Error during JSON.stringify(clonedResponse):', stringifyError);
+          // 如果 stringify 失敗，嘗試用 util.inspect 作為備選
+          try {
+            const util = await import('util');
+            console.log('[DEBUG GeminiAPIService.ts] [TEMP] Modified Gemini API response (util.inspect fallback after stringify error):', util.inspect(clonedResponse, { depth: null, colors: true, showHidden: false }));
+          } catch (inspectError) {
+            console.error('[DEBUG GeminiAPIService.ts] [TEMP] Error during util.inspect fallback:', inspectError);
+          }
+        }
+
+      } catch (logError) {
+        console.error('[DEBUG GeminiAPIService.ts] [TEMP] CRITICAL ERROR WHILE TRYING TO LOG RAW RESPONSE:', logError);
+        // 如果 util.inspect 失敗，嘗試再次直接打印
+        console.log('[DEBUG GeminiAPIService.ts] [TEMP] Raw Gemini API response (fallback direct log after error):', response);
+      }
+      console.log(">>>> GeminiAPIService: FINISHED LOGGING RAW RESPONSE <<<<");
+      // ---- 更詳細的 Debugging End ----
+
       // 若有 responseSchema，回傳 JSON
       if (options?.responseSchema) {
         if (typeof response.text === 'string') {
@@ -78,7 +149,7 @@ class GeminiAPIService {
       } else {
         return response.text || "";
       }
-    } catch (e) {
+    } catch (e) { 
       console.error("呼叫 Gemini API 時發生錯誤：", e);
       throw new Error("Gemini API 請求失敗。");
     }
