@@ -344,7 +344,4 @@ async function generateQuestionByType(
 
 export const QuestionGeneratorService = {
   generateQuestionByType,
-};
-
-// 如果希望直接導出函數而非物件，也可以這樣寫：
-// export { generateQuestionByType }; 
+}; 

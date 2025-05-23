@@ -1,0 +1,87 @@
+[
+  {
+    "UUID": "7c6becb0-00d6-4bc5-ac89-dd1d252503bd",
+    "questionData": {
+      "context": "Discussing the current state and impact of Artificial Intelligence.",
+      "evaluation_focus": [
+        "Technical terminology",
+        "Sentence structure",
+        "Accuracy of meaning"
+      ],
+      "instruction": "Translate the following paragraph about Artificial Intelligence into Chinese.",
+      "reference_translations": [
+        "人工智能正在迅速改变从医疗保健到金融等各个行业。机器学习算法是人工智能的一个子集，它使系统能够在没有明确编程的情况下从数据中学习，从而在预测分析和自动化等领域取得了重大进展。然而，围绕人工智能开发和部署的伦理考量，如偏见和隐私问题，仍然是需要认真关注的关键挑战。"
+      ],
+      "source_text": "Artificial intelligence is rapidly transforming various industries, from healthcare to finance. Machine learning algorithms, a subset of AI, enable systems to learn from data without explicit programming, leading to significant advancements in areas like predictive analysis and automation. However, ethical considerations surrounding AI's development and deployment, such as bias and privacy concerns, remain crucial challenges that need careful attention."
+    },
+    "cacheTimestamp": 1748030524
+  },
+  {
+    "UUID": "e9faa233-0409-47f1-ae7e-2dc1259063a8",
+    "questionData": {
+      "context": "An article discussing the urgency of addressing climate change.",
+      "evaluation_focus": [
+        "Figurative language",
+        "Sentence complexity",
+        "Urgency of tone"
+      ],
+      "instruction": "Translate this paragraph about climate change into Chinese, paying attention to the urgency of the message.",
+      "reference_translations": [
+        "气候变化并非遥远的威胁；它的影响已在全球范围内显现，从威胁沿海城市的不断上升的海平面，到导致广泛破坏的极端天气事件。应对这场危机需要紧急的全球合作，包括向可再生能源和可持续实践的重大转变。有效行动的窗口正在关闭，每个国家都在缓解危机和适应已在发生的变化中发挥着作用。"
+      ],
+      "source_text": "Climate change is not a distant threat; its impacts are already being felt worldwide, from rising sea levels threatening coastal cities to extreme weather events causing widespread destruction. Addressing this crisis requires urgent global cooperation, involving significant shifts towards renewable energy sources and sustainable practices. The window for effective action is closing, and every nation has a role to play in mitigating the crisis and adapting to the changes already underway."
+    },
+    "cacheTimestamp": 1748030524
+  },
+  {
+    "UUID": "10b678c5-9e3c-456c-82a8-6e2f29f72c26",
+    "questionData": {
+      "context": "Analyzing the current state of global supply chains.",
+      "evaluation_focus": [
+        "Business terminology",
+        "Formal register",
+        "Sentence flow"
+      ],
+      "instruction": "Translate the following business-related paragraph into formal Chinese.",
+      "reference_translations": [
+        "在过去的几十年里，全球供应链变得越来越复杂和相互关联。企业依赖于跨越多个大陆的由供应商、制造商和分销商组成的错综复杂的网络。中断，无论是由于地缘政治事件、流行病还是自然灾害，都可能在整个链条中产生连锁反应，凸显了在采购和物流策略中增强韧性和多样化的必要性。"
+      ],
+      "source_text": "Global supply chains have become increasingly complex and interconnected over the past few decades. Businesses rely on intricate networks of suppliers, manufacturers, and distributors spanning multiple continents. Disruptions, whether due to geopolitical events, pandemics, or natural disasters, can have ripple effects throughout the entire chain, highlighting the need for greater resilience and diversification in sourcing and logistics strategies."
+    },
+    "cacheTimestamp": 1748030524
+  },
+  {
+    "UUID": "827b756f-73cf-4e6b-b2bb-0ba96616fed0",
+    "questionData": {
+      "context": "A descriptive passage about an old library.",
+      "evaluation_focus": [
+        "Descriptive language",
+        "Tone and mood",
+        "Cultural resonance"
+      ],
+      "instruction": "Translate this descriptive passage about a library into Chinese, capturing the atmosphere.",
+      "reference_translations": [
+        "老图书馆坐落在俯瞰宁静小镇的山丘上，是无数故事的无声守护者。阳光透过高大的窗户斜射进来，照亮了一排又一排老旧的书籍，尘埃微粒在光束中跳舞。每一卷书的封面内都藏着一个不同的世界，耐心地等待着读者去开启它的秘密，让它的书页再次充满生命力。它是心灵的避难所，一个时间仿佛慢下来的地方。"
+      ],
+      "source_text": "The old library stood on a hill overlooking the quiet town, a silent guardian of countless stories. Dust motes danced in the sunbeams that slanted through the tall windows, illuminating rows upon rows of aging books. Each volume held a different world within its covers, waiting patiently for a reader to unlock its secrets and breathe life into its pages once more. It was a sanctuary for the mind, a place where time seemed to slow down."
+    },
+    "cacheTimestamp": 1748030524
+  },
+  {
+    "UUID": "71986fc5-c4d7-4c28-a00d-03450ba575e3",
+    "questionData": {
+      "context": "General advice on maintaining a healthy lifestyle.",
+      "evaluation_focus": [
+        "Medical/Health terminology",
+        "Clarity and conciseness",
+        "Practical advice phrasing"
+      ],
+      "instruction": "Translate this paragraph about healthy living into clear and practical Chinese.",
+      "reference_translations": [
+        "保持健康的生活方式对于预防慢性疾病和改善整体福祉至关重要。规律的体育活动、富含水果和蔬菜的均衡饮食、充足的睡眠以及压力管理是关键组成部分。还建议咨询医疗专业人员进行定期检查和个性化建议，以确保在人生各个阶段获得最佳健康结果。"
+      ],
+      "source_text": "Maintaining a healthy lifestyle is crucial for preventing chronic diseases and improving overall well-being. Regular physical activity, a balanced diet rich in fruits and vegetables, adequate sleep, and stress management are key components. Consulting healthcare professionals for regular check-ups and personalized advice is also recommended to ensure optimal health outcomes throughout life stages."
+    },
+    "cacheTimestamp": 1748030524
+  }
+]

@@ -1,0 +1,117 @@
+[
+  {
+    "UUID": "8aa5facd-e392-403c-b46e-3c13d91a77d8",
+    "questionData": {
+      "correct_order": [
+        0,
+        2,
+        3,
+        4,
+        1
+      ],
+      "explanation_of_Question": "這個段落按照時間順序描述了製作咖啡的各個步驟：先燒水(0)，然後放咖啡粉(2)，接著倒水(3)，再浸泡或過濾(4)，最後享用(1)。這種順序確保了過程描述的清晰和連貫性。",
+      "instruction": "請將這些句子重新排列，組成一個邏輯連貫的段落。請按照正確的時間順序和邏輯關係排列。",
+      "scrambled_sentences": [
+        "To brew a perfect cup, first heat fresh water to just below boiling.",
+        "Finally, pour the hot coffee into your favorite mug and enjoy.",
+        "Next, place the ground coffee in your chosen brewing device, such as a French press or drip filter.",
+        "Then, carefully pour the hot water over the grounds, ensuring even saturation.",
+        "Allow it to steep or drip for the recommended time to extract the flavor."
+      ],
+      "topic_hint": "製作咖啡的過程"
+    },
+    "cacheTimestamp": 1748030422
+  },
+  {
+    "UUID": "a0ded879-bbf7-4933-9b5b-1b5f794749a0",
+    "questionData": {
+      "correct_order": [
+        1,
+        3,
+        2,
+        0,
+        4
+      ],
+      "explanation_of_Question": "段落按因果關係展開：先說明原因(溫室氣體增加 - 1)，導致氣溫升高(3)，進而造成冰川融化(2)，冰川融化導致海平面上升(0)，最終海平面上升帶來威脅(4)。這種因果鏈的結構解釋了氣候變遷的過程和影響。",
+      "instruction": "請將這些句子重新排列，組成一個邏輯連貫的段落。請按照正確的時間順序和邏輯關係排列。",
+      "scrambled_sentences": [
+        "Consequently, this melting contributes significantly to rising sea levels globally.",
+        "One major consequence of human activity is the increase in greenhouse gas emissions.",
+        "This warming, in turn, leads to the accelerated melting of polar ice caps and glaciers.",
+        "These emissions trap heat, causing a gradual increase in the Earth's average temperature.",
+        "Higher sea levels threaten coastal communities and ecosystems with increased flooding and erosion."
+      ],
+      "topic_hint": "氣候變遷的影響"
+    },
+    "cacheTimestamp": 1748030422
+  },
+  {
+    "UUID": "ac2c70d2-2416-416f-a85b-e86484e650f0",
+    "questionData": {
+      "correct_order": [
+        2,
+        0,
+        1,
+        3,
+        4
+      ],
+      "explanation_of_Question": "按時間順序講述了早上發生的連串事件：睡過頭(2)，匆忙出門(0)，錯過火車(1)，搭計程車(3)，最後遲到(4)。這種敘事順序使故事流暢易懂。",
+      "instruction": "請將這些句子重新排列，組成一個邏輯連貫的段落。請按照正確的時間順序和邏輯關係排列。",
+      "scrambled_sentences": [
+        "Realizing I was late, I quickly got dressed and rushed out the door.",
+        "However, by the time I reached the station, the train had already departed.",
+        "My stressful morning began when I overslept and missed my alarm.",
+        "Desperate, I decided to take an expensive taxi instead.",
+        "Unfortunately, heavy traffic meant I still arrived significantly late for my important meeting."
+      ],
+      "topic_hint": "一個倒楣的早晨"
+    },
+    "cacheTimestamp": 1748030422
+  },
+  {
+    "UUID": "324ab16a-4311-483d-87d3-8722ff57e72e",
+    "questionData": {
+      "correct_order": [
+        1,
+        2,
+        0,
+        3,
+        4
+      ],
+      "explanation_of_Question": "段落結構為問題分析和解決方案：先提出問題(交通量增加 - 1)，解釋原因(人口增長帶動車輛增加 - 2)，導致的後果(嚴重堵塞 - 0)，然後提出解決方案(改善公共交通 - 3)，並闡述其潛在效果(減少堵塞 - 4)。這種結構清晰地呈現了問題與對策。",
+      "instruction": "請將這些句子重新排列，組成一個邏輯連貫的段落。請按照正確的時間順序和邏輯關係排列。",
+      "scrambled_sentences": [
+        "This surge in vehicles has resulted in severe traffic congestion during peak hours.",
+        "One major challenge facing many modern cities is the increasing volume of traffic.",
+        "As cities grow, more people move in, bringing with them a greater number of cars.",
+        "To address this issue, city planners are proposing significant improvements to public transportation systems.",
+        "Expanding and modernizing buses, trains, and subways could encourage people to leave their cars at home, potentially reducing congestion."
+      ],
+      "topic_hint": "城市交通問題及其解決方案"
+    },
+    "cacheTimestamp": 1748030422
+  },
+  {
+    "UUID": "e8348aaa-53b5-413f-b040-c7d37ac7531e",
+    "questionData": {
+      "correct_order": [
+        3,
+        0,
+        1,
+        2,
+        4
+      ],
+      "explanation_of_Question": "按時間順序描述了行動電話的發展歷程：始於1970年代(3)，早期特點(0)，80年代的發展(1)，智慧型手機的出現(2)，以及當今的狀態(4)。這種編年史式的順序清晰地展示了技術的演變。",
+      "instruction": "請將這些句子重新排列，組成一個邏輯連貫的段落。請按照正確的時間順序和邏輯關係排列。",
+      "scrambled_sentences": [
+        "These early devices were bulky and primarily used for making calls.",
+        "Following this, analog phones became smaller and more portable throughout the 1980s.",
+        "The real revolution arrived with the introduction of smartphones in the late 2000s, combining communication with computing power.",
+        "The history of mobile communication began with the first handheld mobile phones introduced in the 1970s.",
+        "Today's advanced smartphones are powerful mini-computers essential for daily life, a stark contrast to their humble beginnings."
+      ],
+      "topic_hint": "行動電話的發展史"
+    },
+    "cacheTimestamp": 1748030422
+  }
+]

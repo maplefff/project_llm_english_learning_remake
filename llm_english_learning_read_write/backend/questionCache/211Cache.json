@@ -1,0 +1,102 @@
+[
+  {
+    "UUID": "3ef4cad5-8e91-44fa-92ac-31a93d5b554c",
+    "questionData": {
+      "evaluation_criteria": {
+        "coherence": 25,
+        "grammar": 25,
+        "task_achievement": 25,
+        "vocabulary": 25
+      },
+      "instruction": "Imagine you step into a hidden part of a forest that feels magical. Use sensory details to bring the scene to life. Describe at least three distinct magical elements or feelings you experience there. Write from a first-person perspective.",
+      "max_words": 250,
+      "min_words": 150,
+      "prompt": "Describe a hidden forest you discover that seems imbued with magic. What sights, sounds, and feelings does it evoke?",
+      "sample_responses": [
+        "Stepping off the familiar trail, I pushed through a curtain of ivy and entered a part of the forest I had never known existed. The air was thick with the scent of ancient earth and something sweet, like blooming nightshade. Sunlight filtered through the canopy in shimmering emerald shafts, illuminating dust motes dancing in the stillness. Moss-covered stones hummed faintly underfoot, and the trees whispered secrets in a language I almost understood. In the distance, I saw creatures I couldn't name, flitting between giant ferns, their wings sparkling. A sense of profound peace washed over me, coupled with an exciting awareness of being a guest in a truly enchanted place. The usual sounds of the forest were muted, replaced by a soft, melodic resonance that seemed to emanate from the very ground.",
+        "I stumbled into the clearing quite by accident, chasing after my dog. Immediately, the atmosphere shifted. The colours were richer, the greens deeper, and the air smelled of rain even though the sky was clear. Tiny lights, like fireflies but stationary, pulsed gently within the bark of the oldest trees. I felt a peculiar lightness in my limbs, as if gravity had lessened its hold. A stream ran through the centre, but its water didn't just flow; it sang a low, beautiful note that resonated deep in my chest. I watched as shadows detached themselves from the trunks and reformed into fleeting shapes that seemed to watch me with gentle curiosity before dissolving back into the gloom. It was a place where the veil between worlds felt thin, tangible magic hummed just beneath the surface, and I felt a strange pull, a desire to stay and explore its secrets forever."
+      ]
+    },
+    "cacheTimestamp": 1748030344
+  },
+  {
+    "UUID": "2bc18835-dd65-47f1-b28e-0466d14c7352",
+    "questionData": {
+      "evaluation_criteria": {
+        "coherence": 25,
+        "grammar": 25,
+        "task_achievement": 25,
+        "vocabulary": 25
+      },
+      "instruction": "Narrate an unexpected encounter with someone you know or once knew, happening in a completely surprising location during your daily routine. Describe the setting, your initial reaction, and include a brief dialogue between you and the person. What happens immediately after the encounter?",
+      "max_words": 280,
+      "min_words": 180,
+      "prompt": "You encounter someone completely unexpected during your daily routine. Who is it, where does it happen, and what is the conversation like? Describe the event.",
+      "sample_responses": [
+        "I was waiting in line at a small, independent coffee shop across town – a place I only go to when my usual spot is closed. I hadn't been in this part of the city in months. As I idly scrolled through my phone, I heard my name. I looked up, and my jaw nearly dropped. Standing behind the counter, wearing a green apron and a wide smile, was Sarah, my best friend from high school who moved to Australia twelve years ago and who I hadn't spoken to since she left. \"Sarah? Is that really you?\" I stammered. She laughed. \"The one and only! What are you doing here?\" We exchanged rushed pleasantries and expressions of disbelief. She quickly made my coffee. \"I'm just working here part-time,\" she explained, \"I'm back for a few months visiting family.\" It felt surreal. After she handed me my order, we promised to exchange numbers properly and arrange a proper catch-up. Walking out with my coffee, I couldn't stop smiling, my mind buzzing with the sheer randomness of the universe and the unexpected joy of reconnecting.",
+        "My usual morning involves a crowded train commute into the city centre. Today was no different, or so I thought. As I squeezed into a standing spot near the doors, my eyes landed on the face of the person sitting directly opposite me. It was Mr. Harrison, my physics teacher from university, whom I hadn't seen or thought about in fifteen years. He looked older, with more grey hair, but his distinctive tweed jacket was instantly recognisable. He caught my eye and gave a hesitant smile. \"Eleanor? Is that you? My goodness, it has been a long time!\" he said, his voice the same calm tone I remembered. \"Mr. Harrison! What a surprise!\" I replied, genuinely astonished. We chatted awkwardly for the next two stops about what we were both doing now. He was retired and on his way to a book club. As the train pulled into my station, we said goodbye, both slightly bewildered by the chance meeting. Stepping onto the platform, I felt a strange mix of nostalgia and wonder at how people drift in and out of your life unexpectedly."
+      ]
+    },
+    "cacheTimestamp": 1748030344
+  },
+  {
+    "UUID": "5c6d6570-68a5-478d-8ca8-d84b5dcea9e1",
+    "questionData": {
+      "evaluation_criteria": {
+        "coherence": 25,
+        "grammar": 25,
+        "task_achievement": 25,
+        "vocabulary": 25
+      },
+      "instruction": "Describe the atmosphere of a bustling seasonal event, such as an autumn harvest festival or a winter holiday market. Focus on the sights, smells, sounds, and general feeling of being there. Convey the mood of the event.",
+      "max_words": 250,
+      "min_words": 150,
+      "prompt": "Capture the atmosphere of a lively seasonal event (e.g., a holiday market, harvest festival) using sensory details.",
+      "sample_responses": [
+        "The air at the Christmas market is crisp and cold, but the scent of spiced mulled wine and roasted chestnuts fills the space, creating a warm, inviting hug. Rows of wooden stalls are adorned with twinkling fairy lights and garlands of pine branches, each one a treasure trove of handmade crafts, sparkling ornaments, and unique gifts. Carols are being sung by a small choir on a central stage, their voices clear above the gentle murmur of the crowd and the occasional burst of laughter. People huddle together, hands wrapped around warm drinks, their faces lit by the glow of the decorations. The ground is often dusted with a light layer of snow, adding to the festive, almost magical feeling that permeates every corner of the market.",
+        "Stepping into the autumn harvest festival feels like entering a scene from a painting. The ground is covered in fallen leaves – reds, oranges, and yellows crunching softly underfoot. Stalls overflow with pumpkins of every size, colourful gourds, and baskets of ripe apples. The smell of cinnamon, baked goods, and woodsmoke from distant bonfires mingles in the air. Children run giggling through a hay maze, while families gather around a large cider press, watching the juice flow. Live folk music is played on a small stage, the cheerful melodies encouraging people to tap their feet. The atmosphere is one of rustic charm and communal warmth, celebrating the bounty of the season before the long winter sets in. Everyone seems relaxed, enjoying the crisp air and the simple pleasures."
+      ]
+    },
+    "cacheTimestamp": 1748030344
+  },
+  {
+    "UUID": "2fc73080-c8b7-4b6d-92bb-2e03a50e9130",
+    "questionData": {
+      "evaluation_criteria": {
+        "coherence": 25,
+        "grammar": 25,
+        "task_achievement": 25,
+        "vocabulary": 25
+      },
+      "instruction": "Imagine you are an old, stationary object on a busy city street, perhaps a lamppost, a bench, or a statue. Describe what you observe about the people and events that pass by you over the course of one day. Give your 'character' a personality through your observations.",
+      "max_words": 280,
+      "min_words": 180,
+      "prompt": "Write from the perspective of an inanimate object on a busy city street and describe the life you observe around you.",
+      "sample_responses": [
+        "I am just an old lamppost on Elm Street, my base worn smooth by countless hands leaning against me. My day begins before dawn, when the first weary workers shuffle past in the dim light. I watch the city wake up: the newspaper delivery truck rattling, the baker opening his shop with a cheerful clatter. During the rush hour, I see a river of hurried faces, some stressed, some determined. Midday brings the shoppers and the tourists, pausing near my base to check maps or tie shoelaces. I see lovers meeting, friends saying goodbye, and sometimes, someone sitting alone on the nearby bench, lost in thought. As evening falls, my light becomes useful, casting a circle of warmth on the pavement. The rhythm slows, different faces appear – those heading home after late shifts, or couples out for a quiet walk. I've seen arguments, laughter, secret whispers, and quiet tears. I am just a silent observer, but I know the pulse of this street, the endless, fascinating drama of human life unfolding beneath my steady gaze.",
+        "Being a park bench near the subway entrance gives me a unique view of urban life. My wooden slats have held the weight of hundreds, perhaps thousands, of stories. Morning is a blur of brief sits – people catching their breath before descending into the underground, or quickly finishing a coffee. I know the regulars: the old gentleman who reads his newspaper here exactly at 7:15 AM, the young artist who sketches passersby during her lunch break. I overhear snippets of conversations – plans being made, worries being shared, dreams being whispered. Children sometimes climb on me, their energy a delightful contrast to the weary adults. I've been a makeshift desk, a temporary bed for the homeless, a meeting point, a place of rest. Rain or shine, hot or cold, I remain here, a quiet witness to the city's relentless energy, a silent confidant to countless fleeting moments of joy, sorrow, and anticipation."
+      ]
+    },
+    "cacheTimestamp": 1748030344
+  },
+  {
+    "UUID": "84fb4cd2-1028-4a77-83a4-1bfb8a709170",
+    "questionData": {
+      "evaluation_criteria": {
+        "coherence": 25,
+        "grammar": 25,
+        "task_achievement": 25,
+        "vocabulary": 25
+      },
+      "instruction": "Recount a single, particularly memorable moment from a trip you took (or imagined). Describe the setting and the events immediately preceding and following the moment. Explain why this specific moment stands out in your memory.",
+      "max_words": 250,
+      "min_words": 150,
+      "prompt": "Narrate a single, significant or surprising moment from a past travel experience (real or imagined) and explain why it was memorable.",
+      "sample_responses": [
+        "We had been hiking for hours through the dense, humid jungle in Costa Rica, following a local guide. The air was thick with the buzz of insects and the calls of unseen birds. We were all hot and tired, swatting away mosquitoes, wondering if the view would be worth the effort. Suddenly, the guide stopped and pointed silently upwards. There, perched on a branch directly above us, was a Resplendent Quetzal, its iridescent green and red feathers shining like jewels, its long tail feathers cascading down. It was breathtakingly beautiful and utterly still, seemingly unafraid. We stood in stunned silence, just watching it for what felt like an eternity, the jungle noises fading away. It was a fleeting moment, maybe only a minute or two, but the sheer, unexpected beauty of seeing such a magnificent creature in its natural habitat after the challenging hike made it an unforgettable highlight of the entire trip, a perfect reward for the effort.",
+        "My most memorable travel moment wasn't a grand view or a famous landmark, but a simple act of kindness in a crowded train station in Rome. I was trying to buy a ticket from a complicated machine, fumbling with the language and the currency, feeling increasingly frustrated and flustered as my train time approached. A kind-looking elderly woman standing nearby noticed my struggle. With a warm smile and limited English, she gently guided me through the process, patiently showing me which buttons to press and explaining how to pay. She didn't have to help me; she could have just walked away. But her willingness to take a few minutes out of her day to assist a complete stranger made a huge impact. In the chaos of travel, that small act of human connection and generosity felt incredibly significant and is the first thing I think of when I remember that particular trip to Italy."
+      ]
+    },
+    "cacheTimestamp": 1748030344
+  }
+]

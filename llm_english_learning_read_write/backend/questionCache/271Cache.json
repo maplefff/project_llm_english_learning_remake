@@ -1,83 +1,86 @@
 [
   {
-    "UUID": "860cec4d-6f32-4d3c-8a1e-c6e54b5f27a7",
+    "UUID": "35b8307b-dc1c-4acf-be71-add9f6e358db",
     "questionData": {
       "evaluation_focus": [
         "Accuracy",
-        "Fluency"
+        "Naturalness",
+        "Grammar"
       ],
       "instruction": "Translate the following sentence into English.",
       "reference_translations": [
-        "Today's weather is really nice.",
-        "The weather is great today."
+        "I feel a bit tired today.",
+        "I'm feeling a little tired today."
       ],
-      "source_text": "今天天气真好。"
+      "source_text": "我今天感觉有点累。"
     },
-    "cacheTimestamp": 1747996076
+    "cacheTimestamp": 1748030490
   },
   {
-    "UUID": "fbbc15bd-5ebb-4554-a91b-cb2a8c88ec8f",
+    "UUID": "9d8a460f-61db-47e9-af30-58e4dc0ce109",
     "questionData": {
       "evaluation_focus": [
         "Accuracy",
-        "Naturalness"
+        "Proper Nouns",
+        "Simple Sentence Structure"
       ],
-      "instruction": "Translate the following sentence into English.",
+      "instruction": "Translate this sentence into English.",
       "reference_translations": [
-        "I want to book a movie ticket for tonight.",
-        "I'd like to reserve a ticket for the movie tonight."
+        "Beijing is the capital of China."
       ],
-      "source_text": "我想预订一张今晚的电影票。"
+      "source_text": "北京是中国的首都。"
     },
-    "cacheTimestamp": 1747996076
+    "cacheTimestamp": 1748030490
   },
   {
-    "UUID": "3ec45db1-4150-4cbc-a0a4-5cc57a8405dc",
+    "UUID": "fb1c6e2d-f80c-4ad7-b488-05f32c94b8da",
     "questionData": {
       "evaluation_focus": [
-        "Accuracy",
         "Politeness",
+        "Directions",
         "Common Phrases"
       ],
-      "instruction": "Translate the following sentence into English.",
+      "instruction": "How would you translate this question into English?",
       "reference_translations": [
         "Excuse me, how do I get to the train station?",
-        "May I ask, how do you get to the train station?"
+        "Excuse me, which way is the train station?"
       ],
       "source_text": "请问，去火车站怎么走？"
     },
-    "cacheTimestamp": 1747996076
+    "cacheTimestamp": 1748030490
   },
   {
-    "UUID": "9eeec6e0-e9c8-455c-90e4-85b251b51b15",
+    "UUID": "3e004352-127c-44e2-acbe-71eda068b763",
     "questionData": {
       "evaluation_focus": [
-        "Accuracy",
-        "Style"
+        "Adjectives",
+        "Connecting Clauses",
+        "Idiomatic Expression"
       ],
-      "instruction": "Translate the following sentence into English.",
+      "instruction": "Translate the sentence into English.",
       "reference_translations": [
         "This book is very interesting and worth reading.",
-        "This is an interesting book worth reading."
+        "This book is quite interesting; it's worth a read."
       ],
-      "source_text": "这本书很有趣，值得一读。"
+      "source_text": "这本书很有意思，值得一读。"
     },
-    "cacheTimestamp": 1747996076
+    "cacheTimestamp": 1748030490
   },
   {
-    "UUID": "fe8dbf66-34d6-4784-bb32-004af78924e3",
+    "UUID": "bd772d07-4f4b-403f-bfaf-0112746fab77",
     "questionData": {
       "evaluation_focus": [
-        "Accuracy",
-        "Sentence Structure"
+        "Present Continuous Tense",
+        "Imperative/Reminder",
+        "Vocabulary"
       ],
-      "instruction": "Translate the following sentence into English.",
+      "instruction": "Translate this sentence into English, including the reminder.",
       "reference_translations": [
-        "China has many cities with a long history.",
-        "There are many historical cities in China."
+        "It's raining outside, remember to bring an umbrella.",
+        "It's raining outdoors, don't forget your umbrella."
       ],
-      "source_text": "中国有很多历史悠久的城市。"
+      "source_text": "外面下雨了，记得带伞。"
     },
-    "cacheTimestamp": 1747996076
+    "cacheTimestamp": 1748030490
   }
 ]

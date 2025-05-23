@@ -1,142 +1,142 @@
 [
   {
-    "UUID": "85c8148c-6146-45e8-91d7-fdaefc225496",
+    "UUID": "50279065-9cff-483b-83e1-d6ef31022af4",
     "questionData": {
-      "explanation_of_Question": "根據文章，新圖書館的建設預計於 2025 年春季完工。選項 A、C、D 提供的日期與文章內容不符。正確答案是 B。",
+      "explanation_of_Question": "根據文章內容，Apex Corporation 在 Q3 的北美市場銷售額為 $8 million。選項 A 的 $5.5 million 是歐洲市場的銷售額；選項 B 的 $4 million 是亞太市場的銷售額；選項 D 的 10% 是北美市場的銷售增長率，而不是銷售額。",
       "options": [
         {
           "id": "A",
-          "text": "2024年秋季"
+          "text": "$5.5 million"
         },
         {
           "id": "B",
-          "text": "2025年春季"
+          "text": "$4 million"
         },
         {
           "id": "C",
-          "text": "2026年夏季"
+          "text": "$8 million"
         },
         {
           "id": "D",
-          "text": "2025年秋季"
-        }
-      ],
-      "passage": "The city council announced today that the construction of the new central library is on schedule. The project, which began in early 2023, involves expanding the existing structure and adding modern facilities. Funding for the project was secured through a combination of municipal bonds and private donations, totaling $15 million. The architect, Mr. David Chen, stated that despite minor supply chain issues, they anticipate completing construction by spring 2025. The library is expected to open to the public shortly after the final inspections are cleared.",
-      "question": "According to the passage, when is the construction of the new central library expected to be completed?",
-      "standard_answer": "B"
-    },
-    "cacheTimestamp": 1747994399
-  },
-  {
-    "UUID": "8a43549e-0a9d-466a-9a67-76bfec1a620b",
-    "questionData": {
-      "explanation_of_Question": "文章提到，這項突破性研究是由 Dr. Anya Sharma 領導的團隊進行的。選項 A、B、D 提供的名字與文章內容不符。正確答案是 C。",
-      "options": [
-        {
-          "id": "A",
-          "text": "Dr. Ben Carter"
-        },
-        {
-          "id": "B",
-          "text": "Professor Emily Roberts"
-        },
-        {
-          "id": "C",
-          "text": "Dr. Anya Sharma"
-        },
-        {
-          "id": "D",
-          "text": "Mr. Thomas Lee"
-        }
-      ],
-      "passage": "Scientists at the National Research Institute have published findings on a novel approach to treating a common genetic disorder. The study, led by Dr. Anya Sharma, involved clinical trials with 50 patients over an 18-month period. The results, published in the 'Journal of Medical Science' last week, showed a significant improvement in 85% of the participants. This breakthrough offers new hope for millions affected by the condition worldwide. Further research is planned to refine the treatment protocol.",
-      "question": "Who led the study on the new treatment approach mentioned in the passage?",
-      "standard_answer": "C"
-    },
-    "cacheTimestamp": 1747994399
-  },
-  {
-    "UUID": "b32deb72-2837-488a-b83e-497b157cf8ab",
-    "questionData": {
-      "explanation_of_Question": "文章指出，這家公司去年的淨利潤增長了 12%。選項 A、C、D 提供的百分比與文章內容不符。正確答案是 B。",
-      "options": [
-        {
-          "id": "A",
           "text": "10%"
+        }
+      ],
+      "passage": "Apex Corporation released its Q3 financial report, showing a 15% increase in overall revenue compared to the previous quarter. Sales in the European market grew by 20%, reaching $5.5 million. The North American market showed a more modest 10% growth, contributing $8 million in sales. Asia-Pacific remained stable with $4 million in sales. The company plans to launch a new product line in Q4 to target further growth, especially in emerging markets.",
+      "question": "What was the sales figure for the North American market in Q3 according to the passage?",
+      "standard_answer": "C"
+    },
+    "cacheTimestamp": 1748030213
+  },
+  {
+    "UUID": "3bad3b03-5a14-4bb6-aa1d-b56163411fac",
+    "questionData": {
+      "explanation_of_Question": "根據文章內容，艾菲爾鐵塔於 1889 年 3 月 31 日完工，趕上 1889 年的巴黎世界博覽會。選項 A 的 1887 年 1 月 28 日是動工日期；選項 C 的 1930 年是它失去世界最高建築稱號的時間；選項 D 是博覽會的名稱，不是完工日期。",
+      "options": [
+        {
+          "id": "A",
+          "text": "January 28, 1887"
         },
         {
           "id": "B",
-          "text": "12%"
+          "text": "March 31, 1889"
         },
         {
           "id": "C",
-          "text": "15%"
+          "text": "1930"
         },
         {
           "id": "D",
-          "text": "20%"
+          "text": "1889 Exposition Universelle"
         }
       ],
-      "passage": "Tech Solutions Inc. released its annual financial report today, showing strong performance across all divisions. Total revenue reached $500 million, a 10% increase from the previous year. Operating expenses were managed effectively, resulting in a 12% growth in net profit compared to the prior fiscal year. The company attributes this success to increased market share in Asia and the launch of two successful new products. The report also projected continued growth of at least 8% for the upcoming year.",
-      "question": "According to the annual report, by what percentage did Tech Solutions Inc.'s net profit grow last year?",
+      "passage": "The construction of the Eiffel Tower began on January 28, 1887, under the direction of Gustave Eiffel. It was completed just over two years later, on March 31, 1889, in time for the 1889 Exposition Universelle, a world's fair held in Paris. The tower stands at 330 meters tall (including antennas) and was the tallest man-made structure in the world until 1930. Millions of visitors have ascended its platforms since its opening.",
+      "question": "According to the passage, when was the Eiffel Tower completed?",
       "standard_answer": "B"
     },
-    "cacheTimestamp": 1747994399
+    "cacheTimestamp": 1748030213
   },
   {
-    "UUID": "4e776ac7-8e0f-4e48-a3b0-8b16efc8ff2e",
+    "UUID": "46841e67-5b36-4658-bf46-dae495f628c8",
     "questionData": {
-      "explanation_of_Question": "文章提到，這幅畫作是於 1955 年在巴黎創作的。選項 A、B、D 提供的地點與文章內容不符。正確答案是 C。",
+      "explanation_of_Question": "根據文章內容，研究人員在格陵蘭的一個繁殖地點對 150 隻北極燕鷗進行了標記。選項 A 的 30% 是受氣候變化影響的鳥類比例；選項 C 的 2019 是研究開始的年份；選項 D 的 96,000 是最長遷徙距離的公里數。",
       "options": [
         {
           "id": "A",
-          "text": "London"
+          "text": "30"
         },
         {
           "id": "B",
-          "text": "New York"
+          "text": "150"
         },
         {
           "id": "C",
-          "text": "Paris"
+          "text": "2019"
         },
         {
           "id": "D",
-          "text": "Rome"
+          "text": "96,000"
         }
       ],
-      "passage": "The painting 'Sunset over Seine' by the acclaimed artist Camille Dubois is now on display at the City Museum. Created in 1955, this masterpiece captures the vibrant colors of the Parisian sky. Dubois, known for her impressionistic style, spent several years living and working in France. The painting was recently acquired by the museum from a private collector in London for a record-breaking sum. It is expected to be a major attraction for visitors over the next few months.",
-      "question": "In which city was the painting 'Sunset over Seine' created?",
-      "standard_answer": "C"
+      "passage": "A study published in the 'Journal of Environmental Science' tracked the migration patterns of Arctic terns. Researchers tagged 150 birds over a three-year period (2019-2021) at a breeding site in Greenland. The longest recorded migration was approximately 96,000 kilometers round trip, made by a single bird named 'Arctic Wanderer'. The study found that climate change is significantly impacting their traditional routes, leading to longer journeys for 30% of the tracked population.",
+      "question": "How many Arctic terns were tagged in the study mentioned in the passage?",
+      "standard_answer": "B"
     },
-    "cacheTimestamp": 1747994399
+    "cacheTimestamp": 1748030213
   },
   {
-    "UUID": "919ac365-af88-414a-b40e-45350cf2affb",
+    "UUID": "88befcc4-45a9-4fc5-8e6e-550074da17ba",
     "questionData": {
-      "explanation_of_Question": "文章指出，會議共有來自 65 個國家的代表參加。選項 A、B、D 提供的數字與文章內容不符。正確答案是 C。",
+      "explanation_of_Question": "根據文章內容，馬丘比丘在 1911 年由美國歷史學家 Hiram Bingham III 帶到國際視野中。選項 A 的 1450 年是馬丘比丘建造的時間；選項 C 的 2,430 是海拔高度（米）；選項 D 的 7,970 也是海拔高度（英尺）。",
       "options": [
         {
           "id": "A",
-          "text": "50"
+          "text": "1450"
         },
         {
           "id": "B",
-          "text": "60"
+          "text": "1911"
         },
         {
           "id": "C",
-          "text": "65"
+          "text": "2,430"
         },
         {
           "id": "D",
-          "text": "70"
+          "text": "7,970"
         }
       ],
-      "passage": "The International Education Conference took place last week in Berlin, Germany. The event brought together educators, policymakers, and researchers from around the globe to discuss the future of learning. A total of 65 countries were represented by their delegates. Key topics included digital literacy, sustainable development in education, and inclusive teaching practices. Dr. Elena Rodriguez delivered the opening keynote address, highlighting the importance of global collaboration in addressing educational challenges.",
-      "question": "How many countries were represented by delegates at the International Education Conference?",
+      "passage": "Located in the Andes Mountains, Machu Picchu is an Incan citadel built around 1450 and later abandoned a century later. It was brought to international attention in 1911 by American historian Hiram Bingham III. Situated at an elevation of 2,430 meters (7,970 feet) above sea level, it is a UNESCO World Heritage Site and one of the New Seven Wonders of the World. Visitors typically arrive via Cusco, the nearest major city with an airport.",
+      "question": "According to the passage, in what year was Machu Picchu brought to international attention by Hiram Bingham III?",
+      "standard_answer": "B"
+    },
+    "cacheTimestamp": 1748030213
+  },
+  {
+    "UUID": "2e7b5afe-5a7e-42c7-9465-78295709c375",
+    "questionData": {
+      "explanation_of_Question": "根據文章內容，Project Nebula 從 Venture Capital Partners 獲得了初始資金 $50 million。選項 A 的 $75 million、選項 B 的 $10,000 和選項 D 的 $1 million 在文章中都沒有提及作為初始資金的金額。",
+      "options": [
+        {
+          "id": "A",
+          "text": "$75 million"
+        },
+        {
+          "id": "B",
+          "text": "$10,000"
+        },
+        {
+          "id": "C",
+          "text": "$50 million"
+        },
+        {
+          "id": "D",
+          "text": "$1 million"
+        }
+      ],
+      "passage": "Tech Solutions announced the launch of 'Project Nebula,' a new cloud computing initiative. The project has secured initial funding of $50 million from Venture Capital Partners. Development began on October 1, 2023, with a planned completion date in Q3 2025. The team consists of 75 engineers based primarily in their Seattle office. The goal is to offer scalable cloud services to small and medium-sized businesses, targeting a user base of 10,000 by the end of the first year.",
+      "question": "According to the passage, how much initial funding did Project Nebula secure?",
       "standard_answer": "C"
     },
-    "cacheTimestamp": 1747994399
+    "cacheTimestamp": 1748030213
   }
 ]

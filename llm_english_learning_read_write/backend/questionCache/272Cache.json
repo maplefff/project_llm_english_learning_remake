@@ -1,0 +1,83 @@
+[
+  {
+    "UUID": "77ca89b9-4d0c-46bc-a98a-0c21eac0a71c",
+    "questionData": {
+      "evaluation_focus": [
+        "Accuracy of details",
+        "Natural English phrasing",
+        "Paragraph cohesion"
+      ],
+      "instruction": "Translate the following paragraph from Chinese to English.",
+      "reference_translations": [
+        "The Spring Festival, also known as the Chinese New Year, is the most important traditional festival in China. It is celebrated from the first day of the first lunar month to the Lantern Festival on the fifteenth day. During this period, families gather for reunion dinners, exchange gifts, and decorate their homes with red lanterns and couplets. Firecrackers are set off to ward off evil spirits and welcome good fortune. The atmosphere is festive and joyful, marking the beginning of a new year."
+      ],
+      "source_text": "春节，也称中国新年，是中国最重要的传统节日。它从农历正月初一持续到正月十五的元宵节。在此期间，家人团聚共进年夜饭，互赠礼物，用红灯笼和对联装饰房屋。燃放鞭炮以驱邪避灾，迎接好运。节日气氛喜庆祥和，标志着新的一年的开始。"
+    },
+    "cacheTimestamp": 1748030499
+  },
+  {
+    "UUID": "0a5dd697-95be-42f0-8574-b333358a541b",
+    "questionData": {
+      "evaluation_focus": [
+        "Figurative language translation",
+        "Sentence structure",
+        "Cultural context"
+      ],
+      "instruction": "Translate the following paragraph from Chinese to English, paying attention to the metaphorical language.",
+      "reference_translations": [
+        "Reading is a journey through time and space. A good book is like a ship, carrying us across the vast ocean of knowledge, allowing us to explore unknown islands and discover hidden treasures. It is also like a wise friend, silently accompanying us, offering guidance and inspiration on our path of growth. Immersing ourselves in books expands our horizons and enriches our inner world."
+      ],
+      "source_text": "阅读是一场跨越时空的旅行。一本好书就像一艘船，载着我们驶向知识的瀚海，让我们探索未知的岛屿，发现隐藏的宝藏。它也像一位智者，默默地陪伴着我们，在我们成长的道路上给予指引和启发。沉浸于书本中，我们的视野得以开阔，内心世界也更加丰盈。"
+    },
+    "cacheTimestamp": 1748030499
+  },
+  {
+    "UUID": "c3fd469a-9863-46c4-abd8-9be35572ce31",
+    "questionData": {
+      "evaluation_focus": [
+        "Technical term accuracy",
+        "Clarity and conciseness",
+        "Logical flow"
+      ],
+      "instruction": "Translate this paragraph about technological development into English.",
+      "reference_translations": [
+        "Artificial intelligence is profoundly changing various industries. From automated production lines to intelligent customer service systems, AI technology is continuously improving efficiency and reducing costs. However, while embracing these opportunities, we must also address potential challenges such as data privacy and algorithmic bias to ensure the healthy development of AI.",
+        "Artificial intelligence is creating significant changes across various sectors. AI technology, from automated manufacturing lines to smart customer service systems, is constantly enhancing efficiency and cutting expenses. Nevertheless, as we seize these chances, it is also crucial to confront potential issues like data privacy and algorithmic prejudice to guarantee AI's sound growth."
+      ],
+      "source_text": "人工智能正在深刻地改变各个行业。从自动化生产线到智能客服系统，人工智能技术不断提升效率，降低成本。然而，在拥抱这些机遇的同时，我们也必须正视数据隐私、算法偏见等潜在挑战，以确保人工智能的健康发展。"
+    },
+    "cacheTimestamp": 1748030499
+  },
+  {
+    "UUID": "e1c75e6a-0264-4c07-9963-a96412bfdf5c",
+    "questionData": {
+      "evaluation_focus": [
+        "Translating descriptive language",
+        "Maintaining mood and atmosphere",
+        "Vocabulary choice"
+      ],
+      "instruction": "Translate the following descriptive paragraph from Chinese to English.",
+      "reference_translations": [
+        "The ancient town is nestled beside a winding river. Cobblestone paths meander through it, bordered by old houses with white walls and black tiles. Red lanterns hang under the eaves, swaying gently in the breeze. Occasionally, the sound of a boatman's song drifts from the river surface, adding a touch of tranquility and poetry to the scene."
+      ],
+      "source_text": "这座古镇依偎在一条蜿蜒的河流旁。青石板铺就的小路在镇中曲折延伸，两旁是白墙黑瓦的老房子。屋檐下挂着红灯笼，在微风中轻轻摇曳。偶尔，河面上飘来船夫的歌声，给这里增添了几分宁静与诗意。"
+    },
+    "cacheTimestamp": 1748030499
+  },
+  {
+    "UUID": "4ada14f6-ae95-48e1-9599-271ee903ebe3",
+    "questionData": {
+      "evaluation_focus": [
+        "Accuracy of scientific concepts",
+        "Formal tone",
+        "Sentence structure complexity"
+      ],
+      "instruction": "Translate the following paragraph about climate change from Chinese to English.",
+      "reference_translations": [
+        "Climate change is one of the most pressing global challenges facing humanity today. Rising global temperatures, melting glaciers, and increasingly frequent extreme weather events are all manifestations of this phenomenon. Addressing climate change requires global cooperation and coordinated action, including reducing greenhouse gas emissions and developing sustainable energy sources."
+      ],
+      "source_text": "气候变化是当今人类面临的最紧迫的全球性挑战之一。全球气温上升、冰川融化以及极端天气事件频发，都是这一现象的表现。应对气候变化需要全球范围的合作与协同行动，包括减少温室气体排放和发展可持续能源等。"
+    },
+    "cacheTimestamp": 1748030499
+  }
+]

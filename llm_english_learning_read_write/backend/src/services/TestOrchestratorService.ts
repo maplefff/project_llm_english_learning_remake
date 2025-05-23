@@ -161,9 +161,21 @@ class TestOrchestratorService {
       const isCorrect = userAnswer === correctAnswer;
       console.log(`[DEBUG TestOrchestratorService.ts] submitAnswer: 使用者答案 "${userAnswer}", 正確答案 "${correctAnswer}", 是否正確: ${isCorrect}`);
 
-      // 根據題型構建歷史記錄快照
+      // 根據題型構建歷史記錄快照，正確處理不同題型的文本屬性
+      let passageText = '';
+      if (originalQuestionClientData.type === '1.1.1' || originalQuestionClientData.type === '1.1.2') {
+        // 這些題型有 passage 屬性
+        passageText = (originalQuestionClientData as TestOrchestratorQuestion111 | TestOrchestratorQuestion112).passage || '';
+      } else if (originalQuestionClientData.type === '1.2.3') {
+        // 這個題型有 sentence_context 屬性
+        passageText = (originalQuestionClientData as TestOrchestratorQuestion123).sentence_context || '';
+      } else {
+        // 其他題型可能沒有相關屬性
+        passageText = '';
+      }
+
       const snapshotForHistory: HistoryServiceQuestionData = {
-        passage: originalQuestionClientData.passage,
+        passage: passageText,
         targetWord: originalQuestionClientData.type === '1.1.1' ? (originalQuestionClientData as TestOrchestratorQuestion111).targetWord : undefined,
         question: originalQuestionClientData.question,
         options: originalQuestionClientData.options.map(opt => ({id: opt.id, text: opt.text})),
@@ -185,12 +197,12 @@ class TestOrchestratorService {
       let nextQuestionForClient: TestOrchestratorQuestion | null = null;
       if (originalQuestionClientData.type === '1.1.1') {
         const nextCachedEntry = await this.questionCacheService.getQuestionFromCache('1.1.1'); // nextCachedEntry is CacheEntry | null
-      if (nextCachedEntry && nextCachedEntry.UUID && nextCachedEntry.questionData) {
+        if (nextCachedEntry && nextCachedEntry.UUID && nextCachedEntry.questionData) {
           // 確保數據類型正確
           nextQuestionForClient = this.formatQuestionForClient111(nextCachedEntry.UUID, nextCachedEntry.questionData as GeneratorQuestionData111);
-        console.log(`[DEBUG TestOrchestratorService.ts] submitAnswer: 下一題獲取結果: ${nextQuestionForClient.id}`);
-      } else {
-        console.log(`[DEBUG TestOrchestratorService.ts] submitAnswer: 無可用下一題`);
+          console.log(`[DEBUG TestOrchestratorService.ts] submitAnswer: 下一題獲取結果: ${nextQuestionForClient.id}`);
+        } else {
+          console.log(`[DEBUG TestOrchestratorService.ts] submitAnswer: 無可用下一題`);
         }
       } else {
         console.log(`[DEBUG TestOrchestratorService.ts] submitAnswer: 1.1.2題型的下一題獲取暫未實現`);

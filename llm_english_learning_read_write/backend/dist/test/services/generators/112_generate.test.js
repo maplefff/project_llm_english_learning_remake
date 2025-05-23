@@ -1,14 +1,5 @@
 "use strict";
 // test/services/generators/112_generate.test.ts
-var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
-    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-};
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
@@ -34,7 +25,7 @@ describe('112_generate', () => {
         LLMConfigService_1.LLMConfigService.getInstance.mockReturnValue(mockLLMInstance);
     });
     describe('generate112Question', () => {
-        it('應該成功生成一個 1.1.2 題型問題', () => __awaiter(void 0, void 0, void 0, function* () {
+        it('應該成功生成一個 1.1.2 題型問題', async () => {
             // Arrange
             const mockResponse = [
                 {
@@ -52,15 +43,15 @@ describe('112_generate', () => {
             ];
             mockGeminiAPIService.getResponse.mockResolvedValue(mockResponse);
             // Act
-            const result = yield (0, _112_generate_1.generate112Question)(1, "No history", 70);
+            const result = await (0, _112_generate_1.generate112Question)(1, "No history", 70);
             // Assert
             expect(result).toEqual(mockResponse);
             expect(mockGeminiAPIService.getResponse).toHaveBeenCalledWith(expect.stringContaining('cloze test questions'), expect.objectContaining({
                 responseSchema: expect.any(Object),
                 config: { temperature: 0.8, thinkingBudget: 12000 }
             }));
-        }));
-        it('應該成功生成多個 1.1.2 題型問題', () => __awaiter(void 0, void 0, void 0, function* () {
+        });
+        it('應該成功生成多個 1.1.2 題型問題', async () => {
             // Arrange
             const mockResponse = [
                 {
@@ -90,41 +81,41 @@ describe('112_generate', () => {
             ];
             mockGeminiAPIService.getResponse.mockResolvedValue(mockResponse);
             // Act
-            const result = yield (0, _112_generate_1.generate112Question)(2, "No history", 70);
+            const result = await (0, _112_generate_1.generate112Question)(2, "No history", 70);
             // Assert
             expect(result).toHaveLength(2);
             expect(result).toEqual(mockResponse);
-        }));
-        it('當 LLM 回傳非陣列時應該返回 null', () => __awaiter(void 0, void 0, void 0, function* () {
+        });
+        it('當 LLM 回傳非陣列時應該返回 null', async () => {
             // Arrange
             mockGeminiAPIService.getResponse.mockResolvedValue("invalid response");
             // Act
-            const result = yield (0, _112_generate_1.generate112Question)(1, "No history", 70);
+            const result = await (0, _112_generate_1.generate112Question)(1, "No history", 70);
             // Assert
             expect(result).toBeNull();
-        }));
-        it('當 LLM 拋出錯誤時應該返回 null', () => __awaiter(void 0, void 0, void 0, function* () {
+        });
+        it('當 LLM 拋出錯誤時應該返回 null', async () => {
             // Arrange
             mockGeminiAPIService.getResponse.mockRejectedValue(new Error('API Error'));
             // Act
-            const result = yield (0, _112_generate_1.generate112Question)(1, "No history", 70);
+            const result = await (0, _112_generate_1.generate112Question)(1, "No history", 70);
             // Assert
             expect(result).toBeNull();
-        }));
-        it('應該在 prompt 中包含正確的參數', () => __awaiter(void 0, void 0, void 0, function* () {
+        });
+        it('應該在 prompt 中包含正確的參數', async () => {
             // Arrange
             const questionNumber = 3;
             const historySummary = "User has 80% accuracy";
             const difficultySetting = 85;
             mockGeminiAPIService.getResponse.mockResolvedValue([]);
             // Act
-            yield (0, _112_generate_1.generate112Question)(questionNumber, historySummary, difficultySetting);
+            await (0, _112_generate_1.generate112Question)(questionNumber, historySummary, difficultySetting);
             // Assert
             const calledPrompt = mockGeminiAPIService.getResponse.mock.calls[0][0];
             expect(calledPrompt).toContain(`exactly ${questionNumber} cloze test questions`);
             expect(calledPrompt).toContain(historySummary);
             expect(calledPrompt).toContain(`${difficultySetting}% target accuracy`);
-        }));
+        });
     });
 });
 //# sourceMappingURL=112_generate.test.js.map

@@ -1,0 +1,94 @@
+[
+  {
+    "UUID": "2fbc83ed-bc1b-47d6-824f-cbc053380f91",
+    "questionData": {
+      "explanation_of_Question": "This question tests your ability to convert an active sentence into its passive equivalent.",
+      "hints": [
+        "Identify the subject and object in the original sentence.",
+        "The object of the active sentence becomes the subject of the passive sentence.",
+        "Use the correct form of 'to be' and the past participle of the main verb."
+      ],
+      "instruction": "Rewrite the following sentence in the passive voice.",
+      "original_sentence": "The cat chased the mouse.",
+      "standard_answers": [
+        "The mouse was chased by the cat."
+      ],
+      "transformation_type": "Change Voice (Active to Passive)"
+    },
+    "cacheTimestamp": 1748030484
+  },
+  {
+    "UUID": "136332db-e51c-4147-88ed-c78290981367",
+    "questionData": {
+      "explanation_of_Question": "This question assesses your skill in combining two simple sentences into a single complex or compound sentence using an appropriate conjunction.",
+      "hints": [
+        "Consider the relationship between the two sentences (cause/effect, reason, contrast, etc.).",
+        "Choose a conjunction that accurately reflects this relationship (e.g., so, because, but, although).",
+        "Punctuate the combined sentence correctly."
+      ],
+      "instruction": "Combine the following two sentences into one using a suitable conjunction.",
+      "original_sentence": "It was raining heavily. We stayed indoors.",
+      "standard_answers": [
+        "It was raining heavily, so we stayed indoors.",
+        "We stayed indoors because it was raining heavily."
+      ],
+      "transformation_type": "Combine Sentences (using conjunction)"
+    },
+    "cacheTimestamp": 1748030484
+  },
+  {
+    "UUID": "ee8a1684-738c-424b-8535-e5abba0ef329",
+    "questionData": {
+      "explanation_of_Question": "This question requires you to rephrase the sentence to express the opposite meaning using the specific word 'never'.",
+      "hints": [
+        "'Never' means 'not ever'.",
+        "Find the word that expresses 'always' or a similar concept.",
+        "Replace the relevant part of the sentence to incorporate 'never' and convey the opposite meaning."
+      ],
+      "instruction": "Rewrite the following sentence using the word \"never\".",
+      "original_sentence": "He is always late for meetings.",
+      "standard_answers": [
+        "He is never on time for meetings.",
+        "He is never early for meetings."
+      ],
+      "transformation_type": "Rewrite using specific word (Negative form)"
+    },
+    "cacheTimestamp": 1748030484
+  },
+  {
+    "UUID": "af62abad-edca-4545-8da8-dbdbcce376cb",
+    "questionData": {
+      "explanation_of_Question": "This question tests your understanding of comparative and superlative forms of adjectives and how to convert between them.",
+      "hints": [
+        "The original sentence makes a comparison stating that one building is taller than *all* others in a group.",
+        "This comparison implies that the building is the *most* tall.",
+        "Use the definite article 'the' before the superlative form."
+      ],
+      "instruction": "Rewrite the following sentence using the superlative form of the adjective.",
+      "original_sentence": "This building is taller than any other building in the city.",
+      "standard_answers": [
+        "This is the tallest building in the city."
+      ],
+      "transformation_type": "Change Degree of Comparison (Comparative to Superlative)"
+    },
+    "cacheTimestamp": 1748030484
+  },
+  {
+    "UUID": "24f81777-122f-46c6-bcc5-1bc1e4468065",
+    "questionData": {
+      "explanation_of_Question": "This question assesses your ability to express a condition and its result using an 'if' clause.",
+      "hints": [
+        "Identify the condition and the result in the original sentence.",
+        "The condition is usually introduced by 'if'.",
+        "For a likely future result based on a present condition, use the structure: If + simple present, ... will + base verb."
+      ],
+      "instruction": "Rewrite the following sentence using an \"if\" clause.",
+      "original_sentence": "You must study hard to pass the exam.",
+      "standard_answers": [
+        "If you study hard, you will pass the exam."
+      ],
+      "transformation_type": "Rewrite using conditional clause (If-clause)"
+    },
+    "cacheTimestamp": 1748030484
+  }
+]

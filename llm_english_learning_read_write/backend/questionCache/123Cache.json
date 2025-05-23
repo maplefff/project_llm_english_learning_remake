@@ -1,72 +1,44 @@
 [
   {
-    "UUID": "2fec76b7-8813-4f85-b959-4d042d855895",
+    "UUID": "3ba3c471-8ca9-4b4f-9622-7f13c8a625e4",
     "questionData": {
-      "explanation_of_Question": "选项 B 'Consequently' 是正确答案，因为它表示因果关系。前句说交通很糟糕，后句说他们开会迟到了，这是前句导致的结果。选项 A 'Although' 表示让步；选项 C 'Similarly' 表示相似；选项 D 'Moreover' 表示附加，都不符合语境的逻辑关系。",
+      "explanation_of_Question": "選項 A 'However' 是正確的，它表示轉折關係。句子的前半部分說天氣預報說有雨，後半部分是我們決定去野餐，這是一個與預期相反或轉折的結果。",
       "options": [
         {
           "id": "A",
-          "text": "Although"
-        },
-        {
-          "id": "B",
-          "text": "Consequently"
-        },
-        {
-          "id": "C",
-          "text": "Similarly"
-        },
-        {
-          "id": "D",
-          "text": "Moreover"
-        }
-      ],
-      "question": "Choose the word that best completes the sentence to show a result.",
-      "sentence_context": "The traffic was terrible. _______, we arrived late for the meeting.",
-      "standard_answer": "B"
-    },
-    "cacheTimestamp": 1747950217
-  },
-  {
-    "UUID": "b2153333-8dbe-4217-a3e5-22b604127124",
-    "questionData": {
-      "explanation_of_Question": "选项 C 'However' 是正确答案，因为它表示转折。前句说她很累，而后句说她熬夜完成项目，这与累的状态形成对比，是一个出乎意料的结果。选项 A 'Therefore' 表示结果；选项 B 'In addition' 表示附加；选项 D 'For example' 表示举例，都不符合语境的转折关系。",
-      "options": [
-        {
-          "id": "A",
-          "text": "Therefore"
-        },
-        {
-          "id": "B",
-          "text": "In addition"
-        },
-        {
-          "id": "C",
           "text": "However"
         },
         {
+          "id": "B",
+          "text": "Therefore"
+        },
+        {
+          "id": "C",
+          "text": "In addition"
+        },
+        {
           "id": "D",
           "text": "For example"
         }
       ],
-      "question": "Choose the word that best completes the sentence to show a contrast or unexpected outcome.",
-      "sentence_context": "She was very tired. _______, she stayed up late to finish her project.",
-      "standard_answer": "C"
+      "question": "Choose the word that best completes the sentence to ensure cohesion.",
+      "sentence_context": "The weather forecast predicted rain; _______, we decided to go for a picnic.",
+      "standard_answer": "A"
     },
-    "cacheTimestamp": 1747950217
+    "cacheTimestamp": 1748030223
   },
   {
-    "UUID": "e4b8b0af-145c-42ac-ae46-41b344eb2ff6",
+    "UUID": "81244c34-0f9b-40a4-8979-4279bdc0d2ae",
     "questionData": {
-      "explanation_of_Question": "选项 B 'For example' 是正确答案，因为它用于引入例子。前句提到一些水果对身体有益，后句则列举了苹果和香蕉作为例子来支持前句。选项 A 'In contrast' 表示对比；选项 C 'Consequently' 表示结果；选项 D 'Otherwise' 表示否则/否则，都不符合语境的逻辑。",
+      "explanation_of_Question": "選項 A 'Furthermore' 是正確的，它用於增加一個相關的觀點或資訊。前一句說吃水果有益健康，後一句說規律運動對健康生活方式很重要，這是對健康習慣的補充說明。",
       "options": [
         {
           "id": "A",
-          "text": "In contrast"
+          "text": "Furthermore"
         },
         {
           "id": "B",
-          "text": "For example"
+          "text": "In contrast"
         },
         {
           "id": "C",
@@ -74,19 +46,47 @@
         },
         {
           "id": "D",
-          "text": "Otherwise"
+          "text": "On the other hand"
         }
       ],
-      "question": "Choose the word that best completes the sentence to introduce an example.",
-      "sentence_context": "Some fruits are good for you. _______, apples and bananas are packed with vitamins.",
-      "standard_answer": "B"
+      "question": "Choose the word that best completes the sentence to ensure cohesion.",
+      "sentence_context": "Eating fruits is good for your health. _______, regular exercise is essential for a healthy lifestyle.",
+      "standard_answer": "A"
     },
-    "cacheTimestamp": 1747950217
+    "cacheTimestamp": 1748030223
   },
   {
-    "UUID": "6331035a-126a-4247-bba5-7f4cb2175164",
+    "UUID": "70b8b096-b25f-4132-9f63-bc741e73f804",
     "questionData": {
-      "explanation_of_Question": "选项 C 'Next' 是正确答案，因为它用于指示序列中的下一个步骤。前句指示混合干性材料，后句则指示下一步骤是加入湿性材料。选项 A 'Finally' 表示最后一步；选项 B 'Meanwhile' 表示同时发生；选项 D 'However' 表示转折，都不符合语境的顺序关系。",
+      "explanation_of_Question": "選項 B 'Consequently' 是正確的，它表示因果關係。前一句說他根本沒學習，後一句說他考試不及格，這是前一個原因造成的結果。",
+      "options": [
+        {
+          "id": "A",
+          "text": "However"
+        },
+        {
+          "id": "B",
+          "text": "Consequently"
+        },
+        {
+          "id": "C",
+          "text": "Meanwhile"
+        },
+        {
+          "id": "D",
+          "text": "Similarly"
+        }
+      ],
+      "question": "Choose the word that best completes the sentence to ensure cohesion.",
+      "sentence_context": "He didn't study at all; _______, he failed the exam.",
+      "standard_answer": "B"
+    },
+    "cacheTimestamp": 1748030223
+  },
+  {
+    "UUID": "ac5a2d52-d22a-4c42-89b2-6280d69882b6",
+    "questionData": {
+      "explanation_of_Question": "選項 C 'Next' 是正確的，它表示步驟或事件的順序。句子描述了做蛋糕的步驟，在“首先預熱烤箱”之後是下一個步驟“混合乾性材料”。",
       "options": [
         {
           "id": "A",
@@ -94,7 +94,7 @@
         },
         {
           "id": "B",
-          "text": "Meanwhile"
+          "text": "For instance"
         },
         {
           "id": "C",
@@ -102,13 +102,41 @@
         },
         {
           "id": "D",
-          "text": "However"
+          "text": "Indeed"
         }
       ],
-      "question": "Choose the word that best completes the sentence to show the next step in a sequence.",
-      "sentence_context": "First, mix the dry ingredients. _______, add the wet ingredients gradually.",
+      "question": "Choose the word that best completes the sentence to ensure cohesion.",
+      "sentence_context": "To bake a cake, first preheat the oven. _______, mix the dry ingredients.",
       "standard_answer": "C"
     },
-    "cacheTimestamp": 1747950217
+    "cacheTimestamp": 1748030223
+  },
+  {
+    "UUID": "db0b20e1-8a27-4672-acaf-746a0ca104dd",
+    "questionData": {
+      "explanation_of_Question": "選項 B 'For instance' 是正確的，它用於給出一個例子來支持或闡明前一個觀點。前一句說學習新語言可能具有挑戰性，後一句“掌握語法規則需要時間和精力”就是一個具體的挑戰性例子。",
+      "options": [
+        {
+          "id": "A",
+          "text": "In summary"
+        },
+        {
+          "id": "B",
+          "text": "For instance"
+        },
+        {
+          "id": "C",
+          "text": "Similarly"
+        },
+        {
+          "id": "D",
+          "text": "In short"
+        }
+      ],
+      "question": "Choose the word that best completes the sentence to ensure cohesion.",
+      "sentence_context": "Learning a new language can be challenging. _______, mastering the grammar rules takes time and effort.",
+      "standard_answer": "B"
+    },
+    "cacheTimestamp": 1748030223
   }
 ]

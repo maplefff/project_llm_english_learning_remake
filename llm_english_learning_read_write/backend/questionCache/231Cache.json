@@ -1,0 +1,102 @@
+[
+  {
+    "UUID": "0ff5c365-a675-4f02-ab9d-b8f944b455c7",
+    "questionData": {
+      "evaluation_criteria": {
+        "coherence": 25,
+        "grammar": 25,
+        "task_achievement": 25,
+        "vocabulary": 25
+      },
+      "instruction": "撰寫一個段落，討論科技對人際互動的影響。請包含一個明確的主題句，至少三個支持性細節（正面或負面影響皆可），並使用適當的連接詞組織你的想法。確保段落有清楚的結構和邏輯性，句子總數介於7到10之間。",
+      "max_sentences": 10,
+      "min_sentences": 7,
+      "sample_responses": [
+        "Technology has profoundly transformed how individuals interact with each other. On one hand, social media platforms and messaging apps make it easier to stay connected with friends and family across vast distances, fostering global communities. Furthermore, these tools enable instant communication and information sharing, facilitating quick organization and response in various situations. However, excessive reliance on digital devices can sometimes reduce face-to-face interactions, potentially leading to feelings of isolation or superficial connections. Additionally, the curated nature of online profiles might create unrealistic social comparisons and pressure. Therefore, while technology offers unparalleled connectivity, it is crucial to balance online interactions with meaningful in-person relationships.",
+        "The advent of modern technology has significantly altered the landscape of human connection. For example, social networking sites allow individuals to maintain relationships and forge new connections with people who share similar interests, regardless of geographical barriers. Moreover, video conferencing tools enable richer communication experiences when physical presence is impossible, supporting both personal and professional relationships. Conversely, constant digital engagement can detract from present moments during in-person interactions, as attention is often divided between the conversation and a device. This pervasive presence of technology might also contribute to a decline in deep, empathetic listening skills. Consequently, understanding and managing technology's role are essential for fostering healthy human connections in the digital age."
+      ],
+      "topic": "The impact of technology on social interaction"
+    },
+    "cacheTimestamp": 1748030404
+  },
+  {
+    "UUID": "73b93217-1763-45d7-85f4-5533ff27531f",
+    "questionData": {
+      "evaluation_criteria": {
+        "coherence": 25,
+        "grammar": 25,
+        "task_achievement": 25,
+        "vocabulary": 25
+      },
+      "instruction": "請描述一次讓你難忘的旅行經驗。你的段落應包含一個清晰的主題句，至少三個具體的細節來支持你的描述（例如地點、人物、事件或感受），並運用感官細節讓讀者身臨其境。使用過渡詞語來連接你的句子，確保總句數介於7到10之間。",
+      "max_sentences": 10,
+      "min_sentences": 7,
+      "sample_responses": [
+        "One particularly memorable travel experience was exploring the ancient city of Kyoto, Japan. From the moment I stepped off the train, the air was filled with the scent of incense from nearby temples and the subtle aroma of green tea. Walking through the Arashiyama Bamboo Grove felt like entering another world, with towering green stalks creating a serene, ethereal atmosphere where sunlight filtered through like emerald rays. Visiting Fushimi Inari Shrine with its thousands of vibrant red torii gates winding up the hillside was breathtaking and felt spiritually uplifting. The taste of fresh matcha ice cream and savory street food like takoyaki added delightful culinary memories. This trip combined stunning natural beauty, profound cultural experiences, and exquisite tastes, making it unforgettable.",
+        "My trip to the rugged landscapes of Patagonia was an adventure that remains etched in my memory. The sheer scale of the mountains, like the iconic peaks of Fitz Roy, was simply awe-inspiring, dwarfing everything beneath them. Hiking on the Perito Moreno Glacier was a surreal experience; the crunch of my crampons on the ice and the deep blue crevices were visually stunning. The strong, whipping winds were a constant companion, reminding me of nature's raw power. Evenings were spent watching the stars emerge in the impossibly clear night sky, a truly humbling spectacle. The remoteness and wild beauty of Patagonia provided a profound sense of perspective and connection to the natural world that I will always cherish."
+      ],
+      "topic": "A memorable travel experience"
+    },
+    "cacheTimestamp": 1748030404
+  },
+  {
+    "UUID": "f1c51fab-87d4-48d7-ba6b-5b43fff3195b",
+    "questionData": {
+      "evaluation_criteria": {
+        "coherence": 25,
+        "grammar": 25,
+        "task_achievement": 25,
+        "vocabulary": 25
+      },
+      "instruction": "撰寫一個段落，闡述環境保護對未來世代的重要性。段落應包含一個明確的主題句，至少三個支持性的論點或例子，解釋為何現在的保育行動對後代至關重要。請使用邏輯清晰的結構和適當的連接詞，確保句子總數介於7到10之間。",
+      "max_sentences": 10,
+      "min_sentences": 7,
+      "sample_responses": [
+        "Environmental conservation is critically important for ensuring a sustainable future for generations to come. Protecting biodiversity now preserves ecosystems that provide essential resources like clean air, water, and food necessary for human survival. Furthermore, combating climate change through reducing emissions and promoting renewable energy safeguards future generations from the devastating impacts of extreme weather events, rising sea levels, and resource scarcity. Conserving natural habitats and open spaces also provides invaluable recreational, cultural, and psychological benefits that enrich lives and contribute to well-being. By taking responsible environmental actions today, we fulfill our ethical obligation to leave a healthy planet for our children and grandchildren. Ignoring these responsibilities risks irreversible damage that future populations will be forced to confront.",
+        "The choices we make regarding environmental stewardship today will directly shape the world inherited by future generations. Firstly, conserving natural resources like forests, water, and minerals prevents their depletion, ensuring that future societies have access to the materials necessary for their development and prosperity. Secondly, controlling pollution of air, water, and soil is vital to prevent long-term health problems and environmental degradation that would burden future healthcare systems and economies. Moreover, preserving natural landscapes and wildlife habitats maintains ecological balance and provides opportunities for future discovery, education, and appreciation of the natural world. Therefore, adopting sustainable practices is not merely an option but a fundamental responsibility we owe to those who will come after us, enabling them to thrive on a healthy planet."
+      ],
+      "topic": "The importance of environmental conservation for future generations"
+    },
+    "cacheTimestamp": 1748030404
+  },
+  {
+    "UUID": "50dd864a-e283-4e95-996c-466d1a391dd0",
+    "questionData": {
+      "evaluation_criteria": {
+        "coherence": 25,
+        "grammar": 25,
+        "task_achievement": 25,
+        "vocabulary": 25
+      },
+      "instruction": "撰寫一個段落，說明如何有效地維持工作與生活之間的平衡。請包含一個明確的主題句，至少三個具體的方法或策略，並解釋它們如何幫助達成平衡。使用流暢的過渡詞語，確保段落的句子總數介於7到10之間。",
+      "max_sentences": 10,
+      "min_sentences": 7,
+      "sample_responses": [
+        "Achieving a healthy work-life balance is essential for long-term well-being and productivity. One effective strategy is setting clear boundaries between work time and personal time, such as avoiding checking work emails after a certain hour or on weekends. Another crucial method involves prioritizing tasks and learning to say no to non-essential commitments that could lead to burnout. Furthermore, regularly scheduling time for hobbies, exercise, and spending time with loved ones provides necessary mental and physical breaks from work pressures. Taking regular vacations or even short breaks during the workday can also significantly contribute to feeling refreshed and less stressed. Ultimately, proactively managing one's time and commitments allows individuals to dedicate sufficient energy to both their professional and personal lives, fostering greater satisfaction.",
+        "Maintaining equilibrium between professional responsibilities and personal life requires conscious effort and deliberate strategies. For instance, effective time management techniques, like blocking out specific periods for focused work and scheduling breaks, can prevent work from spilling into personal hours. Secondly, cultivating a strong support network of friends and family provides emotional resilience and opportunities for leisure and connection outside of work. Additionally, pursuing personal interests and hobbies offers a crucial outlet for stress relief and self-expression, preventing life from revolving solely around career demands. Learning to delegate tasks when possible and managing expectations from supervisors can also alleviate excessive workload pressure. By actively integrating these practices, individuals can create a more harmonious and fulfilling life that encompasses both career success and personal happiness."
+      ],
+      "topic": "How to maintain a healthy work-life balance"
+    },
+    "cacheTimestamp": 1748030404
+  },
+  {
+    "UUID": "bae35034-fdd7-4c65-8dfe-6adb8e0c6ebc",
+    "questionData": {
+      "evaluation_criteria": {
+        "coherence": 25,
+        "grammar": 25,
+        "task_achievement": 25,
+        "vocabulary": 25
+      },
+      "instruction": "撰寫一個段落，討論擁有一個或多個興趣愛好如何幫助減輕壓力。請包含一個明確的主題句，至少三個具體的例子或解釋，說明興趣愛好如何提供放鬆或正面的影響。使用適當的連接詞連接你的想法，並確保段落總共有7到10個句子。",
+      "max_sentences": 10,
+      "min_sentences": 7,
+      "sample_responses": [
+        "Engaging in hobbies is a highly effective way to reduce stress and improve mental well-being. Pursuing activities like painting, playing a musical instrument, or gardening provides a creative outlet that allows individuals to express themselves and escape from daily worries. Furthermore, physical hobbies such as hiking, swimming, or playing sports release endorphins, which are natural mood boosters and stress relievers. Hobbies also offer a sense of accomplishment and mastery as skills develop, building confidence and providing a positive focus outside of work or academic pressures. Connecting with others who share similar interests through clubs or online communities can combat feelings of isolation and provide social support. Therefore, dedicating time to enjoyable pastimes is a valuable investment in one's health and happiness.",
+        "Having hobbies significantly contributes to managing and alleviating stress in modern life. Firstly, activities like reading, knitting, or cooking can induce a state of flow, where one becomes completely absorbed and time seems to disappear, offering a mental break from stressors. Secondly, hobbies provide an opportunity for relaxation and rejuvenation, allowing the mind and body to rest from demanding routines. Moreover, achieving small goals within a hobby, such as finishing a craft project or learning a new song, provides a tangible sense of progress and positive reinforcement. Sharing hobby-related experiences or creations with others also fosters connection and validates personal interests. Ultimately, hobbies serve as essential outlets for decompressing, fostering creativity, and nurturing the soul amidst life's challenges."
+      ],
+      "topic": "The role of hobbies in reducing stress"
+    },
+    "cacheTimestamp": 1748030404
+  }
+]

@@ -1,0 +1,77 @@
+[
+  {
+    "UUID": "f03c22e5-d05c-4b22-a69b-38bb14eca75e",
+    "questionData": {
+      "combining_method": "讓步子句 (Subordinating Conjunction)",
+      "explanation_of_Question": "這題考驗學生使用讓步連接詞 'although' 來表達對比關係。兩種語序都正確：1) Although + 從句, 主句；2) 主句 + although + 從句。重點是理解兩個句子之間的邏輯關係：儘管天氣很糟，但還是決定去健行，這是一種對比或讓步的關係。",
+      "instruction": "請使用 'although' 將這兩個句子合併成一個複合句。",
+      "sentence_a": "The weather was terrible.",
+      "sentence_b": "We decided to go hiking anyway.",
+      "standard_answers": [
+        "Although the weather was terrible, we decided to go hiking anyway.",
+        "We decided to go hiking anyway although the weather was terrible."
+      ]
+    },
+    "cacheTimestamp": 1748030371
+  },
+  {
+    "UUID": "00ff2321-73e4-40c6-a323-67c482f9da21",
+    "questionData": {
+      "combining_method": "關係子句 (Relative Clause) 或 分詞構句 (Participial Phrase)",
+      "explanation_of_Question": "這題考驗學生使用關係子句 (非限定用法) 或分詞構句來合併句子並表達額外資訊或狀態。關係子句使用 'which' 引導，分詞構句則用 '-ing' 開頭。",
+      "instruction": "請使用關係子句或分詞構句將這兩個句子合併。",
+      "sentence_a": "The ancient castle stood on the hill.",
+      "sentence_b": "It was largely ignored by tourists.",
+      "standard_answers": [
+        "The ancient castle, which stood on the hill, was largely ignored by tourists.",
+        "Standing on the hill, the ancient castle was largely ignored by tourists."
+      ]
+    },
+    "cacheTimestamp": 1748030371
+  },
+  {
+    "UUID": "f0664840-78a4-4f45-9904-b7c1b437b433",
+    "questionData": {
+      "combining_method": "時間副詞子句 (Subordinating Conjunction) 或 完成式分詞構句 (Perfect Participial Phrase)",
+      "explanation_of_Question": "這題考驗學生使用時間副詞子句 ('After') 或完成式分詞構句 ('Having + past participle') 來合併句子，強調動作發生的先後順序。",
+      "instruction": "請使用表示時間的連接詞或完成式分詞構句將這兩個句子合併。",
+      "sentence_a": "He finished reading the report.",
+      "sentence_b": "He submitted it to his manager.",
+      "standard_answers": [
+        "After he finished reading the report, he submitted it to his manager.",
+        "Having finished reading the report, he submitted it to his manager.",
+        "He submitted the report to his manager after he finished reading it."
+      ]
+    },
+    "cacheTimestamp": 1748030371
+  },
+  {
+    "UUID": "b5f56a51-9774-4a38-88f7-988e68c2f7da",
+    "questionData": {
+      "combining_method": "條件子句 (Conditional Clause)",
+      "explanation_of_Question": "這題考驗學生使用條件連接詞 'if' 來合併句子，表達條件與結果的關係。條件子句可以使用逗號與主要子句隔開，也可以放在主要子句之後。",
+      "instruction": "請使用 'if' 將這兩個句子合併成一個複合句。",
+      "sentence_a": "You study hard.",
+      "sentence_b": "You will pass the exam.",
+      "standard_answers": [
+        "If you study hard, you will pass the exam.",
+        "You will pass the exam if you study hard."
+      ]
+    },
+    "cacheTimestamp": 1748030371
+  },
+  {
+    "UUID": "a6aa2622-552f-4e49-9ff1-2d9a5a416412",
+    "questionData": {
+      "combining_method": "關係子句 (Relative Clause)",
+      "explanation_of_Question": "這題考驗學生使用關係代名詞 'who' 來合併句子，提供關於前面提及的人 (Mr. Smith) 的額外資訊。在這裡使用非限定關係子句，需用逗號隔開。",
+      "instruction": "請使用 'who' 將這兩個句子合併。",
+      "sentence_a": "Mr. Smith is my neighbor.",
+      "sentence_b": "He volunteers at the local animal shelter every weekend.",
+      "standard_answers": [
+        "Mr. Smith, who volunteers at the local animal shelter every weekend, is my neighbor."
+      ]
+    },
+    "cacheTimestamp": 1748030371
+  }
+]

@@ -1,0 +1,112 @@
+[
+  {
+    "UUID": "d36489b5-a78f-42ca-8cce-aa64a31ea852",
+    "questionData": {
+      "explanation_of_Question": "這題測試學生對包含形容詞的過去式簡單句的語序掌握。正確的語序是：主詞 + 動詞 + 冠詞 + 形容詞 + 名詞 + 時間副詞。'last week' 可以放在句尾。",
+      "instruction": "請將這些單字重新排列成一個語法正確且意義完整的句子。",
+      "scrambled_words": [
+        "she",
+        "a",
+        "novel",
+        "last",
+        "week",
+        "interesting",
+        "read",
+        "very"
+      ],
+      "standard_answers": [
+        "She read a very interesting novel last week."
+      ]
+    },
+    "cacheTimestamp": 1748030381
+  },
+  {
+    "UUID": "4b5947ca-f0e2-4a96-828d-f8972bb4cde8",
+    "questionData": {
+      "explanation_of_Question": "這題考驗學生對關係子句（使用 'who' 引導）的理解。關係子句 'who lives next door' 修飾主詞 'the man'。",
+      "instruction": "請將這些單字重新排列成一個語法正確且意義完整的句子。",
+      "scrambled_words": [
+        "the",
+        "man",
+        "lives",
+        "next",
+        "door",
+        "is",
+        "a",
+        "doctor",
+        "who"
+      ],
+      "standard_answers": [
+        "The man who lives next door is a doctor."
+      ]
+    },
+    "cacheTimestamp": 1748030381
+  },
+  {
+    "UUID": "32fe9e5f-dfef-4f7d-bee8-6b483dffd7c5",
+    "questionData": {
+      "explanation_of_Question": "這題測試學生對假設語氣（Conditional Type 2）的結構掌握。結構為：If + 主詞 + 過去式動詞, 主詞 + would + 原形動詞。'if' 子句可以放在句首或句尾。",
+      "instruction": "請將這些單字重新排列成一個語法正確且意義完整的句子。",
+      "scrambled_words": [
+        "I",
+        "would",
+        "buy",
+        "a",
+        "car",
+        "if",
+        "more",
+        "had",
+        "money",
+        "I"
+      ],
+      "standard_answers": [
+        "If I had more money, I would buy a car.",
+        "I would buy a car if I had more money."
+      ]
+    },
+    "cacheTimestamp": 1748030381
+  },
+  {
+    "UUID": "bb5ecfca-f0d8-4e78-9222-8de9e955ea0e",
+    "questionData": {
+      "explanation_of_Question": "這題考驗學生對使用對等連接詞 'but' 連接兩個獨立子句構成複合句的理解。兩個子句之間通常使用逗號連接。",
+      "instruction": "請將這些單字重新排列成一個語法正確且意義完整的句子。",
+      "scrambled_words": [
+        "it",
+        "was",
+        "raining",
+        "but",
+        "we",
+        "decided",
+        "to",
+        "go",
+        "out",
+        "anyway"
+      ],
+      "standard_answers": [
+        "It was raining, but we decided to go out anyway."
+      ]
+    },
+    "cacheTimestamp": 1748030381
+  },
+  {
+    "UUID": "c2b7498d-0c4c-4b56-b378-4af23d2f6921",
+    "questionData": {
+      "explanation_of_Question": "這題測試學生對疑問句（Wh- question）結構的掌握，特別是包含助動詞的疑問句：疑問詞 + 助動詞 + 主詞 + 主要動詞 + 其他部分。",
+      "instruction": "請將這些單字重新排列成一個語法正確且意義完整的句子。",
+      "scrambled_words": [
+        "did",
+        "you",
+        "where",
+        "spend",
+        "your",
+        "last",
+        "holiday"
+      ],
+      "standard_answers": [
+        "Where did you spend your last holiday?"
+      ]
+    },
+    "cacheTimestamp": 1748030381
+  }
+]

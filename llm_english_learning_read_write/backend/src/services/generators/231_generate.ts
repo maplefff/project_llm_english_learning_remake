@@ -1,6 +1,7 @@
 import { QuestionData231 } from './QuestionGeneratorInterface';
 import { LLMConfigService } from '../../utils/LLMConfigService';
 import GeminiAPIService from '../GeminiAPIService';
+import { PRIORITY_LEVELS } from '../../interfaces/RateLimiter';
 import { Type } from '@google/genai';
 
 // 定義 Schema
@@ -91,7 +92,7 @@ Return ONLY the JSON array. No markdown formatting.`;
         const response = await GeminiAPIService.getResponse(prompt, {
             responseSchema: QUESTION_DATA_231_ARRAY_SCHEMA,
             config,
-        });
+        }, PRIORITY_LEVELS.LOW, 'generator_231');
         
         console.log(`[DEBUG 231_generate.ts] Received response from LLM`);
         

@@ -1,89 +1,31 @@
 [
   {
-    "UUID": "2d4463fd-2584-4132-a4c0-7abb14b9c2ed",
+    "UUID": "4b505f22-c948-4168-8070-925c58cf8f4a",
     "questionData": {
-      "passage": "Despite the initial challenges, the project team managed to _______ all the deadlines.",
+      "passage": "The company is planning to _______ its operations into the Asian market next year.",
       "question": "Choose the best word to complete the sentence.",
       "options": [
         {
           "id": "A",
-          "text": "avoid"
+          "text": "condense"
         },
         {
           "id": "B",
-          "text": "miss"
+          "text": "expand"
         },
         {
           "id": "C",
-          "text": "extend"
+          "text": "shrink"
         },
         {
           "id": "D",
-          "text": "meet"
+          "text": "restrict"
         }
       ],
-      "standard_answer": "D"
+      "standard_answer": "B"
     },
-    "userAnswer": "D",
-    "isCorrect": true,
-    "timestamp": 1747946097285
-  },
-  {
-    "UUID": "122eed7f-2bb2-4d18-8aad-e3e5e93db960",
-    "questionData": {
-      "passage": "The board of directors will _______ next week to discuss the proposed merger.",
-      "question": "Choose the best word to complete the sentence.",
-      "options": [
-        {
-          "id": "A",
-          "text": "convene"
-        },
-        {
-          "id": "B",
-          "text": "disperse"
-        },
-        {
-          "id": "C",
-          "text": "abdicate"
-        },
-        {
-          "id": "D",
-          "text": "dissolve"
-        }
-      ],
-      "standard_answer": "A"
-    },
-    "userAnswer": "B",
+    "userAnswer": "A",
     "isCorrect": false,
-    "timestamp": 1747945991646
-  },
-  {
-    "UUID": "48ff86c0-11c1-4aba-a5e6-940d18685124",
-    "questionData": {
-      "passage": "The company implemented several new policies to _______ the environmental impact of its operations.",
-      "question": "Choose the best word to complete the sentence.",
-      "options": [
-        {
-          "id": "A",
-          "text": "enhance"
-        },
-        {
-          "id": "B",
-          "text": "aggravate"
-        },
-        {
-          "id": "C",
-          "text": "mitigate"
-        },
-        {
-          "id": "D",
-          "text": "perpetuate"
-        }
-      ],
-      "standard_answer": "C"
-    },
-    "userAnswer": "C",
-    "isCorrect": true,
-    "timestamp": 1747945275987
+    "timestamp": 1748031662009
   }
 ]

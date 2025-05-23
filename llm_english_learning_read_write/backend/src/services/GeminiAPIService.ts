@@ -1,6 +1,8 @@
 import { GoogleGenAI } from '@google/genai';
 import * as dotenv from 'dotenv';
 import * as path from 'path'; // Node.js 內置模組
+import RateLimiterService from './RateLimiterService';
+import { PRIORITY_LEVELS } from '../interfaces/RateLimiter';
 
 // 解析 .env 文件的正確路徑
 // __dirname 在 CommonJS 模組中是當前文件所在的目錄路徑
@@ -22,31 +24,75 @@ class GeminiAPIService {
     }
     // 不需再初始化 genAI/model，直接用 ai 實例
     console.log('GeminiAPIService 已使用模型初始化：' + MODEL_NAME);
+    
+    // 將實際API調用方法注入到RateLimiterService
+    this.injectAPICallToRateLimiter();
+  }
+
+  /**
+   * 將實際的API調用方法注入到RateLimiterService
+   */
+  private injectAPICallToRateLimiter(): void {
+    // 使用反射或直接覆寫來注入方法
+    (RateLimiterService as any).makeActualAPICall = this.makeDirectAPICall.bind(this);
+    console.log('[DEBUG GeminiAPIService.ts] 已將API調用方法注入到RateLimiterService');
   }
 
   /**
    * 根據提供的提示生成內容。可選 responseSchema 與 config。
+   * 現在通過速率限制器處理所有請求
    * @param prompt 要傳送至 Gemini API 的文字提示。
    * @param options 可選參數，包含 responseSchema 與 config。
+   * @param priority 請求優先權 (1=高, 2=中, 3=低)，默認為中等
+   * @param context 請求來源上下文，用於調試和監控
    * @returns 回傳 JSON 或純文字。
    */
   async getResponse(
     prompt: string, 
-    options?: { responseSchema?: any, config?: any }
+    options?: { responseSchema?: any, config?: any },
+    priority: number = PRIORITY_LEVELS.MEDIUM,
+    context?: string
   ): Promise<string | object | any[]> {
     if (!process.env.GEMINI_API_KEY) {
       console.error("GeminiAPIService：呼叫 getResponse 時缺少 API_KEY。");
       throw new Error("缺少 API 金鑰。無法連接至 Gemini API。");
     }
+
     try {
       // 新增：每次請求前打印 prompt 內容
-      console.log(`[DEBUG GeminiAPIService.ts] Prompt: ${prompt}`);
+      console.log(`[DEBUG GeminiAPIService.ts] 透過速率限制器發送請求 - 優先權: ${priority}, 上下文: ${context || 'unknown'}`);
+      console.log(`[DEBUG GeminiAPIService.ts] Prompt: ${prompt.substring(0, 200)}...`);
+      
+      // 通過速率限制器排隊處理請求
+      const result = await RateLimiterService.enqueueRequest(prompt, options, priority, context);
+      
+      console.log(`[DEBUG GeminiAPIService.ts] 請求處理完成 - 上下文: ${context || 'unknown'}`);
+      return result;
+      
+    } catch (e) { 
+      console.error(`[DEBUG GeminiAPIService.ts] 請求失敗 - 上下文: ${context || 'unknown'}:`, e);
+      throw e; // 重新拋出錯誤以保持原有的錯誤處理
+    }
+  }
+
+  /**
+   * 直接調用Gemini API的方法（由RateLimiterService調用）
+   * 這是實際進行API調用的方法，不經過速率限制器
+   * @param prompt 要傳送至 Gemini API 的文字提示
+   * @param options 可選參數，包含 responseSchema 與 config
+   * @returns 回傳 JSON 或純文字
+   */
+  private async makeDirectAPICall(prompt: string, options?: { responseSchema?: any, config?: any }): Promise<string | object | any[]> {
+    try {
+      console.log(`[DEBUG GeminiAPIService.ts] 開始直接API調用`);
+      
       // 組合 generationConfig
       const generationConfig: any = {};
       if (options?.config) {
         if (options.config.temperature !== undefined) generationConfig.temperature = options.config.temperature;
         if (options.config.thinkingBudget !== undefined && options.config.thinkingBudget !== null) generationConfig.thinkingBudget = options.config.thinkingBudget;
       }
+
       // 組合請求物件
       const request = {
         model: MODEL_NAME,
@@ -57,7 +103,8 @@ class GeminiAPIService {
           responseMimeType: options?.responseSchema ? "application/json" : undefined,
           responseSchema: options?.responseSchema,
         },
-        };
+      };
+
       // 發送請求
       const response = await ai.models.generateContent(request);
 
@@ -150,9 +197,37 @@ class GeminiAPIService {
         return response.text || "";
       }
     } catch (e) { 
-      console.error("呼叫 Gemini API 時發生錯誤：", e);
+      console.error("直接調用 Gemini API 時發生錯誤：", e);
       throw new Error("Gemini API 請求失敗。");
     }
+  }
+
+  /**
+   * 獲取速率限制器狀態
+   */
+  public getRateLimitStatus() {
+    return RateLimiterService.getStatus();
+  }
+
+  /**
+   * 更新速率限制器配置
+   */
+  public updateRateLimitConfig(config: any) {
+    return RateLimiterService.updateConfig(config);
+  }
+
+  /**
+   * 清空速率限制器排隊
+   */
+  public clearRateLimitQueue() {
+    return RateLimiterService.clearQueue();
+  }
+
+  /**
+   * 切換緊急模式
+   */
+  public toggleEmergencyMode(enabled: boolean) {
+    return RateLimiterService.toggleEmergencyMode(enabled);
   }
 }
 

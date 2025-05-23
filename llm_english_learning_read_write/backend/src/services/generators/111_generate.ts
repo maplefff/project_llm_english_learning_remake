@@ -1,6 +1,7 @@
 // llm_english_learning_read&write/backend/src/services/generators/111_generate.ts
 
 import GeminiAPIService from '../GeminiAPIService';
+import { PRIORITY_LEVELS } from '../../interfaces/RateLimiter';
 import { Type } from '@google/genai'; // 新 SDK 的型別定義
 import 'dotenv/config'; // 確保環境變數已加載
 // 從共享介面導入類型

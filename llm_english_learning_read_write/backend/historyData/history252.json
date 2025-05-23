@@ -1,0 +1,14 @@
+[
+  {
+    "UUID": "d09693c7-b0f7-4040-916c-66628e6b53e0",
+    "questionData": {
+      "passage": "",
+      "question": "Write an email to your former professor requesting a letter of recommendation for a master's program.",
+      "options": [],
+      "standard_answer": "寫作/翻譯題需要人工評分"
+    },
+    "userAnswer": "ghjgj",
+    "isCorrect": false,
+    "timestamp": 1748031671183
+  }
+]

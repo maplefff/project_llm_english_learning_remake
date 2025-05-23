@@ -101,12 +101,12 @@
 
         .start-button {
             background: #2196F3;
-            color: white;
-            border: none;
+            color: white; 
+            border: none; 
             padding: 15px 30px;
             border-radius: 10px;
             font-size: 1.1em;
-            cursor: pointer;
+            cursor: pointer; 
             transition: all 0.3s ease;
             margin-top: 20px;
             width: 100%;
@@ -792,12 +792,13 @@
 
                 const data = await response.json();
                 
-                if (data.message && data.message.includes('無法獲取題目')) {
-                    throw new Error('題目暫時無法獲取，請稍後再試');
+                if (!data.success || !data.question) {
+                    throw new Error('API 返回格式錯誤或題目載入失敗');
                 }
 
-                currentQuestion = data;
-                displayQuestion(data);
+                // 正確提取 question 對象
+                currentQuestion = data.question;
+                displayQuestion(data.question);
                 
             } catch (error) {
                 console.error('Error loading question:', error);
@@ -920,24 +921,33 @@
                         <span style="font-style: italic; font-size: 1.1em;">"${question.original_text}"</span>
                     </div>
                 `;
-            } else if (question.type === '2.2.1' && question.sentences_to_combine) {
-                // 2.2.1 句子合併：顯示需要合併的句子
+            } else if (question.type === '2.2.1' && question.sentence_a && question.sentence_b) {
+                // 2.2.1 句子合併：顯示需要合併的句子（修正數據結構）
                 passageText.innerHTML = `
                     <div style="background: #fff3e0; padding: 15px; border-radius: 8px; border-left: 4px solid #FF9800;">
                         <strong>需要合併的句子：</strong><br>
-                        ${question.sentences_to_combine.map((sentence, index) => 
-                            `<div style="margin: 8px 0; padding: 8px; background: white; border-radius: 5px;">
-                                ${index + 1}. ${sentence}
-                            </div>`
-                        ).join('')}
+                        <div style="margin: 8px 0; padding: 8px; background: white; border-radius: 5px;">
+                            1. ${question.sentence_a}
+                        </div>
+                        <div style="margin: 8px 0; padding: 8px; background: white; border-radius: 5px;">
+                            2. ${question.sentence_b}
+                        </div>
                     </div>
                 `;
-            } else if (question.type === '2.2.2' && question.scrambled_sentence) {
-                // 2.2.2 句子重組：顯示打亂的句子
+            } else if (question.type === '2.2.2' && question.scrambled_words) {
+                // 2.2.2 句子重組：顯示打亂的詞語（修正數據結構）
                 passageText.innerHTML = `
                     <div style="background: #f3f8ff; padding: 15px; border-radius: 8px; border-left: 4px solid #2196F3;">
-                        <strong>打亂的句子：</strong><br>
-                        <span style="font-size: 1.1em; font-style: italic;">"${question.scrambled_sentence}"</span>
+                        <strong>打亂的詞語：</strong><br>
+                        <span style="font-size: 1.1em; font-style: italic;">${question.scrambled_words.join(' / ')}</span>
+                    </div>
+                `;
+            } else if (question.type === '2.4.1' && question.scrambled_sentences) {
+                // 2.4.1 段落排序：顯示打亂的句子（修正數據結構）
+                passageText.innerHTML = `
+                    <div style="background: #f0f8ff; padding: 15px; border-radius: 8px; border-left: 4px solid #1976D2;">
+                        <strong>待排序的句子：</strong><br>
+                        <small>提示：${question.topic_hint || '請將下列句子排列成合理的順序'}</small>
                     </div>
                 `;
             } else if (question.type === '2.7.1' || question.type === '2.7.2') {
@@ -945,7 +955,7 @@
                 passageText.innerHTML = `
                     <div style="background: #f0f8ff; padding: 15px; border-radius: 8px; border-left: 4px solid #1976D2;">
                         <strong>中文原文：</strong><br>
-                        <span style="font-size: 1.1em;">${question.chinese_text || question.source_text || question.passage}</span>
+                        <span style="font-size: 1.1em;">${question.source_text || question.passage}</span>
                     </div>
                 `;
             } else if (question.type === '2.8.1' || question.type === '2.8.2') {
@@ -953,7 +963,7 @@
                 passageText.innerHTML = `
                     <div style="background: #f5f5f5; padding: 15px; border-radius: 8px; border-left: 4px solid #607D8B;">
                         <strong>English Text:</strong><br>
-                        <span style="font-size: 1.1em; font-style: italic;">${question.english_text || question.source_text || question.passage}</span>
+                        <span style="font-size: 1.1em; font-style: italic;">${question.source_text || question.passage}</span>
                     </div>
                 `;
             } else if (question.passage) {
@@ -1003,8 +1013,9 @@
                 } else if (question.type === '2.2.1') {
                     // 句子合併
                     inputContainer.className = 'writing-input-container';
+                    let methodHint = question.combining_method ? `（使用${question.combining_method}）` : '';
                     inputContainer.innerHTML = `
-                        <label for="textInput">請將上述句子合併成一個句子：</label>
+                        <label for="textInput">請將上述句子合併成一個句子${methodHint}：</label>
                         <textarea id="textInput" class="writing-textarea short" placeholder="請在此輸入合併後的句子..."></textarea>
                     `;
                 } else if (question.type === '2.2.2') {
@@ -1098,14 +1109,14 @@
                 instructions.innerHTML = '<strong>📝 說明：</strong>請點擊段落來選擇正確的順序，再次點擊可取消選擇';
                 sortingContainer.appendChild(instructions);
                 
-                if (question.paragraphs && Array.isArray(question.paragraphs)) {
-                    question.paragraphs.forEach((paragraph, index) => {
+                if (question.scrambled_sentences && Array.isArray(question.scrambled_sentences)) {
+                    question.scrambled_sentences.forEach((sentence, index) => {
                         const item = document.createElement('div');
                         item.className = 'sorting-item';
                         item.dataset.paragraphId = index;
                         item.innerHTML = `
                             <span class="order-number"></span>
-                            <span class="paragraph-text">${paragraph}</span>
+                            <span class="paragraph-text">${sentence}</span>
                         `;
                         
                         item.addEventListener('click', function() {

@@ -1,48 +1,83 @@
 [
   {
-    "UUID": "56debf3d-0625-4f12-bdcc-553dbb6b0bc9",
+    "UUID": "67131f93-e4c9-4ca7-9d6c-a12726c85a2d",
     "questionData": {
       "error_types": [
-        "verb_tense",
+        "subject_verb_agreement",
+        "verb_tense"
+      ],
+      "explanation_of_Question": "句子中有兩個錯誤：1. 主詞 'students' 是複數，動詞 'studies' 應該用原型 'study' (現在式) 或 'studied' (過去式)；2. 時間副詞 'last week' 表示過去時間，所以動詞應該用過去式 'studied'。",
+      "instruction": "Identify the error(s) in the sentence above and rewrite it correctly.",
+      "original_sentence": "The students studies hard for the exam last week.",
+      "standard_corrections": [
+        "The students studied hard for the exam last week."
+      ]
+    },
+    "cacheTimestamp": 1748030188
+  },
+  {
+    "UUID": "40269351-ab62-4b60-b9f0-620e48f8af5d",
+    "questionData": {
+      "error_types": [
+        "articles",
+        "word_form",
+        "plural_singular"
+      ],
+      "explanation_of_Question": "句子中有兩個錯誤：1. 'advise' 是動詞，名詞是 'advice'，且 'advice' 是不可數名詞，不能用不定冠詞 'a'；2. 'difficulty' 作為可數名詞時，複數形式是 'difficulties'。",
+      "instruction": "Identify the error(s) in the sentence above and rewrite it correctly.",
+      "original_sentence": "I need a advise about job applications; I have many difficulty.",
+      "standard_corrections": [
+        "I need advice about job applications; I have many difficulties.",
+        "I need some advice about job applications; I have many difficulties."
+      ]
+    },
+    "cacheTimestamp": 1748030188
+  },
+  {
+    "UUID": "936766f9-e006-4077-bb50-1d96d568473d",
+    "questionData": {
+      "error_types": [
         "prepositions"
       ],
-      "explanation_of_Question": "句子中有兩個錯誤：1. 'visit' 應該改為過去式 'visited'，因為有時間副詞 'Last week'；2. 動詞 'visit' 後通常直接接地點，不需要介系詞 'to'。正確的句子應該是 'Last week, they visited the museum.'",
+      "explanation_of_Question": "句子中有三個介係詞錯誤：1. 'good at' 而非 'good in'；2. 'afraid of' 而非 'afraid from'；3. 'in public' 而非 'on public'。",
       "instruction": "Identify the error(s) in the sentence above and rewrite it correctly.",
-      "original_sentence": "Last week, they visit to the museum.",
+      "original_sentence": "She is good in playing the piano, but she is afraid from performing on public.",
       "standard_corrections": [
-        "Last week, they visited the museum."
+        "She is good at playing the piano, but she is afraid of performing in public."
       ]
     },
-    "cacheTimestamp": 1747950505
+    "cacheTimestamp": 1748030188
   },
   {
-    "UUID": "eef6a779-2166-4f40-98d9-a2ce902a6a15",
+    "UUID": "19dfe96a-87a9-4ba9-880f-46f61ffb647f",
     "questionData": {
       "error_types": [
-        "subject_verb_agreement"
+        "modal_verbs",
+        "infinitive_vs_gerund"
       ],
-      "explanation_of_Question": "句子中主詞是 'One' (單數)，因此動詞應該用單數形式 'is'，而不是複數形式 'are'。正確的句子應該是 'One of the students is missing their book.' (註：代名詞 'their' 在這裡指單數的學生，在現代英語中是可接受的用法)。",
+      "explanation_of_Question": "句子中有兩個錯誤：1. 情態動詞 'should' 後面應接動詞原型，不加 'to' 也不用進行式；2. 'want' 後面應接不定詞 'to + 動詞原型'。",
       "instruction": "Identify the error(s) in the sentence above and rewrite it correctly.",
-      "original_sentence": "One of the students are missing their book.",
+      "original_sentence": "You should to practicing more if you want improving your English.",
       "standard_corrections": [
-        "One of the students is missing their book."
+        "You should practice more if you want to improve your English."
       ]
     },
-    "cacheTimestamp": 1747950505
+    "cacheTimestamp": 1748030188
   },
   {
-    "UUID": "d0bb13cb-0b20-47cf-a48b-a8ee9c21eb10",
+    "UUID": "e3c8948d-cf4d-40fd-882a-3de2f9560658",
     "questionData": {
       "error_types": [
-        "word_form"
+        "comparative_superlative",
+        "pronoun_case"
       ],
-      "explanation_of_Question": "句子中修飾動詞 'speaks' 應該用副詞，而不是形容詞。'goodly' 是一個較少用的形容詞，這裡應該使用 'good' 的副詞形式 'well'。正確的句子應該是 'He speaks English very well.'",
+      "explanation_of_Question": "句子中有兩個錯誤：1. 比較級 'more interesting' 用於最高級時應改為 'most interesting'；2. 句尾的代名詞應使用所有格代名詞 'mine'，而非所有格形容詞 'my'。",
       "instruction": "Identify the error(s) in the sentence above and rewrite it correctly.",
-      "original_sentence": "He speaks English very goodly.",
+      "original_sentence": "This is the more interesting book I have ever read, it is better than my.",
       "standard_corrections": [
-        "He speaks English very well."
+        "This is the most interesting book I have ever read, it is better than mine."
       ]
     },
-    "cacheTimestamp": 1747950505
+    "cacheTimestamp": 1748030188
   }
 ]

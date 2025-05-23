@@ -1,142 +1,142 @@
 [
   {
-    "UUID": "2941d5cd-27c3-4576-bb25-4798bb8bf110",
+    "UUID": "a6d14aca-f3b2-46b2-a107-6a254437d297",
     "questionData": {
-      "explanation_of_Question": "這篇文章探討了人工智慧 (AI) 如何迅速發展並融入我們日常生活的各個面向，包括工作、交通和娛樂。文章強調了 AI 的潛力及其不斷擴大的影響力。選項 A 只提到工作場所的變化，是細節；選項 C 提到 AI 的局限性，但文章主要聚焦其進步和影響，而非局限；選項 D 強調娛樂應用，これも部分的な内容です。選項 B 涵蓋了文章的核心主旨，即 AI 的快速發展及其在各領域的廣泛應用和潛力。",
+      "explanation_of_Question": "這段文章主要探討人工智慧（AI）對各行各業的廣泛影響，以及它帶來的機會和挑戰。文章列舉了AI的應用領域，同時也提到了隱私、偏見和就業等倫理問題。選項 A 只提及了特定應用領域；選項 B 只關注倫理挑戰；選項 C 是一個過於籠統的說法。只有選項 D 概括了文章的主旨：AI對社會的廣泛影響及其雙重性。",
       "options": [
         {
           "id": "A",
-          "text": "Artificial intelligence is only changing the workplace."
+          "text": "How AI is used in healthcare and finance."
         },
         {
           "id": "B",
-          "text": "Artificial intelligence is rapidly advancing and transforming many aspects of life."
+          "text": "The ethical challenges posed by artificial intelligence."
         },
         {
           "id": "C",
-          "text": "The limitations of artificial intelligence are becoming apparent."
+          "text": "The rapid pace of technological advancement."
         },
         {
           "id": "D",
-          "text": "AI is primarily used for entertainment purposes."
+          "text": "The widespread impact of AI across various sectors, including both benefits and concerns."
         }
       ],
-      "passage": "Artificial intelligence (AI) is no longer a concept confined to science fiction; it is rapidly becoming an integral part of our daily lives. From smart assistants in our homes to sophisticated algorithms powering medical diagnoses, AI applications are expanding exponentially. This technology is transforming industries, automating tasks, and creating new possibilities in areas like transportation with self-driving cars and personalized education platforms. While challenges related to ethics and job displacement exist, the overarching theme is the accelerating progress of AI and its profound potential to reshape the future of work, leisure, and human interaction.",
-      "question": "What is the main idea of this paragraph?",
+      "passage": "Artificial intelligence (AI) is rapidly transforming many aspects of our lives, from how we work and communicate to how we seek entertainment. AI-powered systems are being used in fields as diverse as healthcare for diagnosis, finance for fraud detection, and even creative arts for generating content. While AI offers incredible potential for innovation and efficiency, it also raises complex ethical questions concerning data privacy, bias in algorithms, and the future of employment. Understanding both the opportunities and challenges presented by AI is crucial as we integrate it further into society.",
+      "question": "What is the primary focus of this paragraph?",
+      "standard_answer": "D"
+    },
+    "cacheTimestamp": 1748030244
+  },
+  {
+    "UUID": "173d700d-6476-4212-b2ba-6dd38e0e1d9c",
+    "questionData": {
+      "explanation_of_Question": "這段文章強調了充足且有品質的睡眠對維持整體健康的重要性。文章解釋了睡眠的好處、睡眠不足的危害，並提出改善睡眠的策略，最後總結說優先考慮睡眠是健康的重要投資。選項 A 只提及了改善睡眠的方法之一；選項 B 只說明了睡眠不足的後果；選項 D 只提及了睡眠的具體功能。只有選項 C 完整概括了文章的主旨：睡眠對健康的重要性。",
+      "options": [
+        {
+          "id": "A",
+          "text": "How to practice relaxation techniques before bed."
+        },
+        {
+          "id": "B",
+          "text": "Chronic sleep deprivation has serious consequences for health."
+        },
+        {
+          "id": "C",
+          "text": "The importance of sufficient quality sleep for overall health and well-being."
+        },
+        {
+          "id": "D",
+          "text": "Sleep helps the body repair tissues and consolidate memories."
+        }
+      ],
+      "passage": "Getting enough quality sleep is fundamental to maintaining good physical and mental health. During sleep, our bodies repair tissues, consolidate memories, and regulate hormones. Chronic sleep deprivation can lead to a host of problems, including weakened immune function, difficulty concentrating, mood swings, and an increased risk of chronic diseases like diabetes and heart disease. Establishing a consistent sleep schedule, creating a restful environment, and practicing relaxation techniques are all effective strategies for improving sleep hygiene and overall well-being. Prioritizing sleep is an essential investment in one's health.",
+      "question": "What is the main point the author is trying to convey?",
+      "standard_answer": "C"
+    },
+    "cacheTimestamp": 1748030244
+  },
+  {
+    "UUID": "fedff4ed-0dd5-4cba-8923-50906747b833",
+    "questionData": {
+      "explanation_of_Question": "這段文章的主要內容是線上學習在現代教育中的地位及其影響。文章先描述了線上學習提供的彈性和可及性及其優勢，然後提到了它面臨的挑戰，最後總結其作為擴展教育機會的工具。選項 A 只針對了特定群體；選項 B 只討論了挑戰；選項 D 只提到了數位資源。只有選項 C 全面概括了線上學習的優勢與挑戰並存，但仍是擴展教育機會的強大工具這一主旨。",
+      "options": [
+        {
+          "id": "A",
+          "text": "Online learning is suitable for working professionals."
+        },
+        {
+          "id": "B",
+          "text": "The challenges of virtual classrooms."
+        },
+        {
+          "id": "C",
+          "text": "Online learning is expanding access to education despite certain challenges."
+        },
+        {
+          "id": "D",
+          "text": "Digital resources are essential for modern education."
+        }
+      ],
+      "passage": "Online learning has become a significant component of modern education, offering flexibility and accessibility to students worldwide. Through virtual classrooms and digital resources, learners can access courses from diverse institutions regardless of their geographical location. This mode of education is particularly beneficial for working professionals, lifelong learners, and individuals who face barriers to traditional classroom settings. However, it also presents challenges, such as the need for self-discipline, technical requirements, and potential lack of face-to-face interaction. Despite these challenges, online learning is clearly a powerful tool for expanding educational opportunities.",
+      "question": "Which of the following best summarizes the paragraph?",
+      "standard_answer": "C"
+    },
+    "cacheTimestamp": 1748030244
+  },
+  {
+    "UUID": "a7ef61fa-ec3c-4638-8be4-fcbfbca0627e",
+    "questionData": {
+      "explanation_of_Question": "這段文章的主旨是文化交流計畫在促進不同國家和社區之間的理解與合作方面扮演的重要角色。文章解釋了親身體驗不同文化如何幫助打破刻板印象、建立同理心，並強調了文化交流對建立人際橋樑和全球公民意識的貢獻。選項 A 只提及了學生交換這一個例子；選項 B 雖然相關但不夠直接表達文化交流計畫的作用；選項 D 只提及了學習語言這一個可能的好處。只有選項 C 準確地概括了文化交流計畫的核心作用和意義。",
+      "options": [
+        {
+          "id": "A",
+          "text": "Student exchange is a popular way to experience new cultures."
+        },
+        {
+          "id": "B",
+          "text": "Cultural differences can be overcome through communication."
+        },
+        {
+          "id": "C",
+          "text": "Cultural exchange programs are important for promoting understanding and global connection."
+        },
+        {
+          "id": "D",
+          "text": "Traveling to different countries helps people learn new languages."
+        }
+      ],
+      "passage": "Cultural exchange programs play a vital role in fostering understanding and cooperation between different nations and communities. By immersing oneself in a new culture, individuals gain firsthand experience of different customs, languages, and perspectives. This direct exposure helps break down stereotypes, build empathy, and promote mutual respect. Whether through student exchange, artist residencies, or international conferences, these interactions create bridges between people, fostering a sense of global citizenship. Ultimately, cultural exchange enriches individual lives and contributes to a more peaceful and interconnected world.",
+      "question": "What is the central idea of this passage?",
+      "standard_answer": "C"
+    },
+    "cacheTimestamp": 1748030244
+  },
+  {
+    "UUID": "e07709de-3877-4ab0-974f-a73e7526a75a",
+    "questionData": {
+      "explanation_of_Question": "這段文章的核心是關於建立強韌社區的重要性及方法。文章闡述了強社區提供的社會支持、安全感和歸屬感等好處，並列舉了建立社區的一些具體做法。選項 A 只提到了組織活動這一個方法；選項 C 只強調了保存文化遺產這一個方面；選項 D 只關注了個人從中獲得的歸屬感。只有選項 B 既提到了建立社區的好處，也包含了實現這些好處的方法，全面概括了文章的主旨。",
+      "options": [
+        {
+          "id": "A",
+          "text": "How to organize local events effectively."
+        },
+        {
+          "id": "B",
+          "text": "The benefits and methods of strengthening local communities."
+        },
+        {
+          "id": "C",
+          "text": "The importance of preserving local culture and heritage."
+        },
+        {
+          "id": "D",
+          "text": "How individuals can find a sense of belonging."
+        }
+      ],
+      "passage": "Building strong, resilient communities is essential for the well-being of individuals and society as a whole. A strong community provides social support networks, enhances safety, and fosters a sense of belonging. It encourages participation in local affairs, facilitates collective problem-solving, and helps preserve local culture and heritage. Efforts to build community can include organizing local events, volunteering, supporting local businesses, and creating shared public spaces. Investing time and energy in community building strengthens social ties and creates a more supportive and vibrant environment for everyone.",
+      "question": "This paragraph is primarily about:",
       "standard_answer": "B"
     },
-    "cacheTimestamp": 1747994415
-  },
-  {
-    "UUID": "45f237ef-ee67-4b2e-ba01-a7c10948d011",
-    "questionData": {
-      "explanation_of_Question": "這段文章的核心主旨是強調充足睡眠對於維持整體健康的重要性。文章列舉了睡眠對身體和大腦的益處，並說明睡眠不足會帶來的負面影響。選項 A 只提到睡眠對身體修復的好處，是細節；選項 C 提到睡眠不足的後果，但不是主旨；選項 D 建議了獲得更好睡眠的方法，是行動建議，而非文章的主旨。只有選項 B 概括了全文，即睡眠對於維護身心健康至關重要。",
-      "options": [
-        {
-          "id": "A",
-          "text": "Sleep helps the body repair itself."
-        },
-        {
-          "id": "B",
-          "text": "Getting enough sleep is essential for overall physical and mental health."
-        },
-        {
-          "id": "C",
-          "text": "Lack of sleep can have negative consequences."
-        },
-        {
-          "id": "D",
-          "text": "Improving sleep hygiene is important."
-        }
-      ],
-      "passage": "Sleep is a fundamental human need, as crucial for our health as eating, drinking, and breathing. During sleep, our bodies and minds undergo essential processes that repair tissues, consolidate memories, and regulate mood. Chronic sleep deprivation has been linked to numerous health problems, including weakened immune function, increased risk of chronic diseases, and impaired cognitive performance. Ensuring you get adequate, quality sleep each night is not a luxury, but a necessity for maintaining optimal physical health, mental clarity, and emotional well-being. Prioritizing sleep is a powerful investment in your overall quality of life.",
-      "question": "What is the main idea of this paragraph?",
-      "standard_answer": "B"
-    },
-    "cacheTimestamp": 1747994415
-  },
-  {
-    "UUID": "ff4b9e3a-8f42-4cf6-aff7-8fbdc4fd189b",
-    "questionData": {
-      "explanation_of_Question": "這段文章闡述了終身學習在快速變化的世界中的重要性。文章指出，僅憑早期的教育不足以應對持續的變革，並強調了不斷獲取新知識和技能的必要性及其帶來的益處。選項 A 只提到早期教育不足，是引入話題；選項 B 強調職業發展的好處，是終身學習的結果之一，不是主旨；選項 D 提到獲取新技能，是終身學習的一部分，不夠全面。選項 C 準確地表達了文章的核心觀點：終身學習是應對現代世界變化的關鍵。",
-      "options": [
-        {
-          "id": "A",
-          "text": "Early education is not sufficient in today's world."
-        },
-        {
-          "id": "B",
-          "text": "Lifelong learning helps people advance in their careers."
-        },
-        {
-          "id": "C",
-          "text": "Continuous learning is crucial for adapting to a changing world."
-        },
-        {
-          "id": "D",
-          "text": "Acquiring new skills is easier than ever."
-        }
-      ],
-      "passage": "In today's rapidly evolving world, the concept of 'learning' extends far beyond formal schooling. The pace of technological advancement and global change means that knowledge acquired early in life can quickly become outdated. Therefore, lifelong learning has become essential. It involves actively seeking new information, skills, and experiences throughout one's life. Embracing continuous learning allows individuals to remain adaptable, stay relevant in the job market, foster personal growth, and better understand the complex issues facing society. It's an ongoing process that empowers people to navigate uncertainty and seize new opportunities.",
-      "question": "What is the main idea of this paragraph?",
-      "standard_answer": "C"
-    },
-    "cacheTimestamp": 1747994415
-  },
-  {
-    "UUID": "9a8510ed-2aea-4ef0-953a-110b9fb85215",
-    "questionData": {
-      "explanation_of_Question": "這段文章討論了全球化對在地文化的複雜影響。文章指出全球化既帶來了文化交流和新機遇，也引發了對在地文化獨特性可能流失的擔憂，並強調了維護文化多樣性的重要性。選項 A 只提到文化交流的好處，是部分內容；選項 B 提到全球化可能導致文化同質化，這是擔憂之一，但不是主旨；選項 D 強調了旅遊業的影響，是全球化的一個面向，但不是主旨。選項 C 概括了文章的核心：全球化對在地文化既有積極影響也有潛在威脅，因此保護文化多樣性變得重要。",
-      "options": [
-        {
-          "id": "A",
-          "text": "Globalization promotes beneficial cultural exchange."
-        },
-        {
-          "id": "B",
-          "text": "Globalization threatens to make all cultures the same."
-        },
-        {
-          "id": "C",
-          "text": "Globalization has a complex impact on local cultures, presenting both opportunities and challenges."
-        },
-        {
-          "id": "D",
-          "text": "Increased tourism is the main effect of globalization on culture."
-        }
-      ],
-      "passage": "Globalization has profoundly impacted cultures worldwide, creating a complex dynamic. On one hand, it facilitates unprecedented cultural exchange, allowing people to experience diverse traditions, cuisines, and arts through media, travel, and migration. This can lead to greater understanding and hybrid cultural forms. On the other hand, there is concern that dominant global cultures may overshadow or even erase unique local traditions and languages, leading to cultural homogenization. Navigating this tension requires conscious efforts to preserve cultural heritage while embracing the opportunities for connection and innovation that globalization offers. Ultimately, the challenge is to maintain cultural diversity in an increasingly interconnected world.",
-      "question": "What is the main idea of this paragraph?",
-      "standard_answer": "C"
-    },
-    "cacheTimestamp": 1747994415
-  },
-  {
-    "UUID": "3d877c29-9561-4f2b-a942-75165ea98c6a",
-    "questionData": {
-      "explanation_of_Question": "這段文章的主旨是闡述志願服務對個人和社會都有重要的益處。文章說明了志願者如何通過服務獲得個人成長、滿足感和技能提升，同時也強調了志願服務如何為社區帶來積極改變，解決社會問題。選項 A 只提到志願服務幫助社區，是單方面的好處；選項 B 強調志願服務的個人回報，也是單方面的好處；選項 D 提到志願服務可以解決所有社會問題，過於絕對且不準確。選項 C 準確地捕捉了文章的核心觀點：志願服務對個人成長和社區福祉都帶來了積極的影響。",
-      "options": [
-        {
-          "id": "A",
-          "text": "Volunteering mainly benefits the community."
-        },
-        {
-          "id": "B",
-          "text": "Volunteers gain personal satisfaction and skills."
-        },
-        {
-          "id": "C",
-          "text": "Volunteering offers significant benefits to both individuals and the community."
-        },
-        {
-          "id": "D",
-          "text": "Volunteering can solve all social problems."
-        }
-      ],
-      "passage": "Volunteering plays a vital role in building stronger communities and fostering personal development. When individuals volunteer their time and skills, they directly contribute to addressing social issues, supporting vulnerable populations, and improving public spaces. This selfless act benefits recipients, but it also provides significant rewards for the volunteers themselves. Studies show that volunteering can boost self-esteem, reduce stress, broaden social networks, and even improve physical health. It offers opportunities to learn new skills, gain experience, and find a sense of purpose. Therefore, engaging in volunteer work is a powerful way to make a positive impact both externally on society and internally on one's own well-being.",
-      "question": "What is the main idea of this paragraph?",
-      "standard_answer": "C"
-    },
-    "cacheTimestamp": 1747994415
+    "cacheTimestamp": 1748030244
   }
 ]

@@ -1,137 +1,137 @@
 [
   {
-    "UUID": "ecec7aec-95ca-472f-84c9-88b93e034f27",
+    "UUID": "1dcc459a-1069-48bb-a6b5-3d4453e4de27",
     "questionData": {
-      "explanation_of_Question": "選項 B 是正確的。當談論在特定時間（例如 'yesterday'）發生的已完成動作時，我們使用過去簡單式（Past Simple）。選項 A 使用現在完成式，通常用於談論影響現在的過去動作或未明確指明時間的過去動作。選項 C 和 D 的動詞形式不正確。",
+      "explanation_of_Question": "在警察抵達（過去時間點）之前，小偷已經逃走了，因此需要使用過去完成式 (had escaped)。",
       "options": [
         {
           "id": "A",
-          "text": "I have finished my homework yesterday."
+          "text": "escaped"
         },
         {
           "id": "B",
-          "text": "I finished my homework yesterday."
+          "text": "had escaped"
         },
         {
           "id": "C",
-          "text": "I finishing my homework yesterday."
+          "text": "were escaping"
         },
         {
           "id": "D",
-          "text": "I finish my homework yesterday."
+          "text": "escape"
         }
       ],
-      "question": "Which sentence uses the correct tense?",
+      "question": "By the time the police arrived, the thieves ______ with all the money.",
       "standard_answer": "B"
     },
-    "cacheTimestamp": 1747950231
+    "cacheTimestamp": 1748030198
   },
   {
-    "UUID": "58ce91f2-c3ef-4ca9-9a0d-cdebf90c432d",
+    "UUID": "8d64d6b6-108d-4770-b683-fa63f75800b8",
     "questionData": {
-      "explanation_of_Question": "選項 C 是正確的。在比較級句子中使用 'than' 是正確的結構。選項 A 應使用 'than' 而非 'then'。選項 B 的 'more taller' 是錯誤的雙重比較。選項 D 缺少比較對象和 'than'。",
+      "explanation_of_Question": "'Neither of' 後接複數名詞時，動詞應使用單數形式，因此正確答案是 'is'。",
       "options": [
         {
           "id": "A",
-          "text": "He is more taller then me."
+          "text": "is"
         },
         {
           "id": "B",
-          "text": "He is more taller than me."
+          "text": "are"
         },
         {
           "id": "C",
-          "text": "He is taller than me."
+          "text": "were"
         },
         {
           "id": "D",
-          "text": "He is taller me."
+          "text": "be"
         }
       ],
-      "question": "Choose the grammatically correct sentence.",
-      "standard_answer": "C"
-    },
-    "cacheTimestamp": 1747950231
-  },
-  {
-    "UUID": "28cbb043-e32e-4596-8c7c-426579497460",
-    "questionData": {
-      "explanation_of_Question": "選項 A 是正確的。當主詞是 'Everyone' 時，動詞應使用單數形式 'has'。選項 B, C, D 都使用了複數動詞 'have' 或不正確的動詞形式。",
-      "options": [
-        {
-          "id": "A",
-          "text": "Everyone has their own opinion."
-        },
-        {
-          "id": "B",
-          "text": "Everyone have their own opinion."
-        },
-        {
-          "id": "C",
-          "text": "Everyone is having their own opinion."
-        },
-        {
-          "id": "D",
-          "text": "Everyone are having their own opinion."
-        }
-      ],
-      "question": "Which sentence demonstrates correct subject-verb agreement?",
+      "question": "Neither of the two books ______ interesting.",
       "standard_answer": "A"
     },
-    "cacheTimestamp": 1747950231
+    "cacheTimestamp": 1748030198
   },
   {
-    "UUID": "e7c0aaf3-79d6-4421-a95a-14c01fab9052",
+    "UUID": "3c4c0120-04b4-4281-a04a-403c31ac83b3",
     "questionData": {
-      "explanation_of_Question": "選項 D 是正確的。形容詞通常按照數量/意見、大小、形狀、年齡、顏色、來源、材料、目的的順序排列。'big'（大小）在 'red'（顏色）之前。選項 A, B, C 的形容詞順序是錯誤的。",
+      "explanation_of_Question": "用於描述獨特天體（如太陽、地球）時，通常使用定冠詞 'the'。",
       "options": [
         {
           "id": "A",
-          "text": "She bought a red big car."
+          "text": "A, a"
         },
         {
           "id": "B",
-          "text": "She bought a big of red car."
+          "text": "The, the"
         },
         {
           "id": "C",
-          "text": "She bought a big red car's."
+          "text": "A, the"
         },
         {
           "id": "D",
-          "text": "She bought a big red car."
+          "text": "The, a"
         }
       ],
-      "question": "Identify the sentence with the correct word order for adjectives.",
-      "standard_answer": "D"
-    },
-    "cacheTimestamp": 1747950231
-  },
-  {
-    "UUID": "4be4d5bb-f477-485f-8f7f-aa62d6e88505",
-    "questionData": {
-      "explanation_of_Question": "選項 B 是正確的。這是一個零條件句或第一條件句的變體，表達一種普遍真理或高度可能的結果。當條件子句使用現在簡單式（'rains'），主要子句通常也使用現在簡單式（'gets'）或未來簡單式（'will get'）。選項 A 應使用現在簡單式動詞 'gets'。選項 C 和 D 的動詞形式不正確。",
-      "options": [
-        {
-          "id": "A",
-          "text": "If it rains, the ground will gets wet."
-        },
-        {
-          "id": "B",
-          "text": "If it rains, the ground gets wet."
-        },
-        {
-          "id": "C",
-          "text": "If it rains, the ground got wet."
-        },
-        {
-          "id": "D",
-          "text": "If it rains, the ground is getting wet."
-        }
-      ],
-      "question": "Complete the sentence with the correct form: 'If it rains, the ground ______ wet.'",
+      "question": "______ Sun is a star, and ______ Earth is a planet that orbits it.",
       "standard_answer": "B"
     },
-    "cacheTimestamp": 1747950231
+    "cacheTimestamp": 1748030198
+  },
+  {
+    "UUID": "1051f151-9155-4e1c-858d-b655cd3b1381",
+    "questionData": {
+      "explanation_of_Question": "頻率副詞 'never' 通常放在主要動詞之前。且主詞 'She' 是第三人稱單數，動詞應加 '-s'。",
+      "options": [
+        {
+          "id": "A",
+          "text": "arrives never"
+        },
+        {
+          "id": "B",
+          "text": "never arrives"
+        },
+        {
+          "id": "C",
+          "text": "never arrive"
+        },
+        {
+          "id": "D",
+          "text": "is never arrive"
+        }
+      ],
+      "question": "She ______ late for work.",
+      "standard_answer": "B"
+    },
+    "cacheTimestamp": 1748030198
+  },
+  {
+    "UUID": "f2012f59-0d06-428e-9db0-7471c694f029",
+    "questionData": {
+      "explanation_of_Question": "這是一個第三類條件句，用於描述過去不可能發生的情況及其結果。結構是 If + 過去完成式 (had known)，主句使用 would have + 過去分詞 (would have baked)。",
+      "options": [
+        {
+          "id": "A",
+          "text": "would bake"
+        },
+        {
+          "id": "B",
+          "text": "would have baked"
+        },
+        {
+          "id": "C",
+          "text": "will bake"
+        },
+        {
+          "id": "D",
+          "text": "baked"
+        }
+      ],
+      "question": "If I had known you were coming, I ______ a cake.",
+      "standard_answer": "B"
+    },
+    "cacheTimestamp": 1748030198
   }
 ]

@@ -2,6 +2,8 @@ import * as fs from 'fs/promises';
 import * as path from 'path';
 import { v4 as uuidv4 } from 'uuid';
 import { QuestionGeneratorService } from './QuestionGeneratorService';
+import RateLimiterService from './RateLimiterService';
+import { PRIORITY_LEVELS } from '../interfaces/RateLimiter';
 import { 
   QuestionData, 
   QuestionData111, 
@@ -34,127 +36,151 @@ import 'dotenv/config';
 const CACHE_DIR_NAME = 'questionCache';
 const CACHE_DIR_PATH = path.join(__dirname, '..', '..', CACHE_DIR_NAME);
 
-// 題型配置
+// 題型配置 - 添加優先權設定
 const QUESTION_TYPE_CONFIG = {
   '1.1.1': {
     filePath: path.join(CACHE_DIR_PATH, '111Cache.json'),
     minQuestions: 3,
     targetQuestions: 5,
+    priority: PRIORITY_LEVELS.MEDIUM, // 基礎類型，中等優先權
   },
   '1.1.2': {
     filePath: path.join(CACHE_DIR_PATH, '112Cache.json'),
     minQuestions: 3,
     targetQuestions: 5,
+    priority: PRIORITY_LEVELS.MEDIUM,
   },
   '1.2.1': {
     filePath: path.join(CACHE_DIR_PATH, '121Cache.json'),
     minQuestions: 3,
     targetQuestions: 5,
+    priority: PRIORITY_LEVELS.MEDIUM,
   },
   '1.2.2': {
     filePath: path.join(CACHE_DIR_PATH, '122Cache.json'),
     minQuestions: 3,
     targetQuestions: 5,
+    priority: PRIORITY_LEVELS.MEDIUM,
   },
   '1.2.3': {
     filePath: path.join(CACHE_DIR_PATH, '123Cache.json'),
     minQuestions: 3,
     targetQuestions: 5,
+    priority: PRIORITY_LEVELS.MEDIUM,
   },
   '1.3.1': {
     filePath: path.join(CACHE_DIR_PATH, '131Cache.json'),
     minQuestions: 3,
     targetQuestions: 5,
+    priority: PRIORITY_LEVELS.MEDIUM,
   },
   '1.4.1': {
     filePath: path.join(CACHE_DIR_PATH, '141Cache.json'),
     minQuestions: 3,
     targetQuestions: 5,
+    priority: PRIORITY_LEVELS.MEDIUM,
   },
   '1.5.1': {
     filePath: path.join(CACHE_DIR_PATH, '151Cache.json'),
     minQuestions: 3,
     targetQuestions: 5,
+    priority: PRIORITY_LEVELS.MEDIUM,
   },
   '1.5.2': {
     filePath: path.join(CACHE_DIR_PATH, '152Cache.json'),
     minQuestions: 3,
     targetQuestions: 5,
+    priority: PRIORITY_LEVELS.MEDIUM,
   },
   '1.5.3': {
     filePath: path.join(CACHE_DIR_PATH, '153Cache.json'),
     minQuestions: 3,
     targetQuestions: 5,
+    priority: PRIORITY_LEVELS.MEDIUM,
   },
   '2.1.1': {
     filePath: path.join(CACHE_DIR_PATH, '211Cache.json'),
     minQuestions: 3,
     targetQuestions: 5,
+    priority: PRIORITY_LEVELS.LOW, // 寫作類型，低優先權（初始化時）
   },
   '2.1.2': {
     filePath: path.join(CACHE_DIR_PATH, '212Cache.json'),
     minQuestions: 3,
     targetQuestions: 5,
+    priority: PRIORITY_LEVELS.LOW,
   },
   '2.2.1': {
     filePath: path.join(CACHE_DIR_PATH, '221Cache.json'),
     minQuestions: 3,
     targetQuestions: 5,
+    priority: PRIORITY_LEVELS.LOW,
   },
   '2.2.2': {
     filePath: path.join(CACHE_DIR_PATH, '222Cache.json'),
     minQuestions: 3,
     targetQuestions: 5,
+    priority: PRIORITY_LEVELS.LOW,
   },
   '2.3.1': {
     filePath: path.join(CACHE_DIR_PATH, '231Cache.json'),
     minQuestions: 3,
     targetQuestions: 5,
+    priority: PRIORITY_LEVELS.LOW,
   },
   '2.4.1': {
     filePath: path.join(CACHE_DIR_PATH, '241Cache.json'),
     minQuestions: 3,
     targetQuestions: 5,
+    priority: PRIORITY_LEVELS.LOW,
   },
   '2.4.2': {
     filePath: path.join(CACHE_DIR_PATH, '242Cache.json'),
     minQuestions: 3,
     targetQuestions: 5,
+    priority: PRIORITY_LEVELS.LOW,
   },
   '2.5.1': {
     filePath: path.join(CACHE_DIR_PATH, '251Cache.json'),
     minQuestions: 3,
     targetQuestions: 5,
+    priority: PRIORITY_LEVELS.LOW,
   },
   '2.5.2': {
     filePath: path.join(CACHE_DIR_PATH, '252Cache.json'),
     minQuestions: 3,
     targetQuestions: 5,
+    priority: PRIORITY_LEVELS.LOW,
   },
   '2.6.1': {
     filePath: path.join(CACHE_DIR_PATH, '261Cache.json'),
     minQuestions: 3,
     targetQuestions: 5,
+    priority: PRIORITY_LEVELS.LOW,
   },
   '2.7.1': {
     filePath: path.join(CACHE_DIR_PATH, '271Cache.json'),
     minQuestions: 3,
     targetQuestions: 5,
+    priority: PRIORITY_LEVELS.LOW,
   },
   '2.7.2': {
     filePath: path.join(CACHE_DIR_PATH, '272Cache.json'),
     minQuestions: 3,
     targetQuestions: 5,
+    priority: PRIORITY_LEVELS.LOW,
   },
   '2.8.1': {
     filePath: path.join(CACHE_DIR_PATH, '281Cache.json'),
     minQuestions: 3,
     targetQuestions: 5,
+    priority: PRIORITY_LEVELS.LOW,
   },
   '2.8.2': {
     filePath: path.join(CACHE_DIR_PATH, '282Cache.json'),
     minQuestions: 3,
     targetQuestions: 5,
+    priority: PRIORITY_LEVELS.LOW,
   },
 } as const;
 
@@ -262,36 +288,6 @@ class TypeGuards {
            Array.isArray(data.options) &&
            typeof data.standard_answer === 'string' &&
            typeof data.explanation_of_Question === 'string';
-  }
-
-  static validateQuestionData(questionType: SupportedQuestionType, data: any): boolean {
-    switch (questionType) {
-      case '1.1.1': return TypeGuards.isQuestionData111(data);
-      case '1.1.2': return TypeGuards.isQuestionData112(data);
-      case '1.2.1': return TypeGuards.isQuestionData121(data);
-      case '1.2.2': return TypeGuards.isQuestionData122(data);
-      case '1.2.3': return TypeGuards.isQuestionData123(data);
-      case '1.3.1': return TypeGuards.isQuestionData131(data);
-      case '1.4.1': return TypeGuards.isQuestionData141(data);
-      case '1.5.1': return TypeGuards.isQuestionData151(data);
-      case '1.5.2': return TypeGuards.isQuestionData152(data);
-      case '1.5.3': return TypeGuards.isQuestionData153(data);
-      case '2.1.1': return TypeGuards.isQuestionData211(data);
-      case '2.1.2': return TypeGuards.isQuestionData212(data);
-      case '2.2.1': return TypeGuards.isQuestionData221(data);
-      case '2.2.2': return TypeGuards.isQuestionData222(data);
-      case '2.3.1': return TypeGuards.isQuestionData231(data);
-      case '2.4.1': return TypeGuards.isQuestionData241(data);
-      case '2.4.2': return TypeGuards.isQuestionData242(data);
-      case '2.5.1': return TypeGuards.isQuestionData251(data);
-      case '2.5.2': return TypeGuards.isQuestionData252(data);
-      case '2.6.1': return TypeGuards.isQuestionData261(data);
-      case '2.7.1': return TypeGuards.isQuestionData271(data);
-      case '2.7.2': return TypeGuards.isQuestionData272(data);
-      case '2.8.1': return TypeGuards.isQuestionData281(data);
-      case '2.8.2': return TypeGuards.isQuestionData282(data);
-      default: return false;
-    }
   }
 
   // 新增題型的類型檢查函數
@@ -432,6 +428,36 @@ class TypeGuards {
            Array.isArray(data.evaluation_focus) &&
            typeof data.context === 'string';
   }
+
+  static validateQuestionData(questionType: SupportedQuestionType, data: any): boolean {
+    switch (questionType) {
+      case '1.1.1': return TypeGuards.isQuestionData111(data);
+      case '1.1.2': return TypeGuards.isQuestionData112(data);
+      case '1.2.1': return TypeGuards.isQuestionData121(data);
+      case '1.2.2': return TypeGuards.isQuestionData122(data);
+      case '1.2.3': return TypeGuards.isQuestionData123(data);
+      case '1.3.1': return TypeGuards.isQuestionData131(data);
+      case '1.4.1': return TypeGuards.isQuestionData141(data);
+      case '1.5.1': return TypeGuards.isQuestionData151(data);
+      case '1.5.2': return TypeGuards.isQuestionData152(data);
+      case '1.5.3': return TypeGuards.isQuestionData153(data);
+      case '2.1.1': return TypeGuards.isQuestionData211(data);
+      case '2.1.2': return TypeGuards.isQuestionData212(data);
+      case '2.2.1': return TypeGuards.isQuestionData221(data);
+      case '2.2.2': return TypeGuards.isQuestionData222(data);
+      case '2.3.1': return TypeGuards.isQuestionData231(data);
+      case '2.4.1': return TypeGuards.isQuestionData241(data);
+      case '2.4.2': return TypeGuards.isQuestionData242(data);
+      case '2.5.1': return TypeGuards.isQuestionData251(data);
+      case '2.5.2': return TypeGuards.isQuestionData252(data);
+      case '2.6.1': return TypeGuards.isQuestionData261(data);
+      case '2.7.1': return TypeGuards.isQuestionData271(data);
+      case '2.7.2': return TypeGuards.isQuestionData272(data);
+      case '2.8.1': return TypeGuards.isQuestionData281(data);
+      case '2.8.2': return TypeGuards.isQuestionData282(data);
+      default: return false;
+    }
+  }
 }
 
 export class QuestionCacheService {
@@ -455,72 +481,142 @@ export class QuestionCacheService {
 
   /**
    * 初始化快取服務
+   * 使用分批初始化策略，避免同時觸發過多API請求
    */
   public async initialize(): Promise<void> {
-    console.log('[DEBUG QuestionCacheService_v2.ts] Initializing cache service...');
+    console.log('[DEBUG QuestionCacheService_v2.ts] Initializing cache service with rate limiting...');
     try {
       // 1. 確保快取目錄存在
       await fs.mkdir(CACHE_DIR_PATH, { recursive: true });
       console.log(`[DEBUG QuestionCacheService_v2.ts] Cache directory ensured at: ${CACHE_DIR_PATH}`);
 
-      // 2. 載入所有題型的快取
+      // 2. 檢查速率限制狀態
+      const rateLimitStatus = RateLimiterService.getStatus();
+      console.log(`[DEBUG QuestionCacheService_v2.ts] Rate limit status - Queue: ${rateLimitStatus.queueLength}, Requests in window: ${rateLimitStatus.requestsInCurrentWindow}`);
+
+      // 3. 載入所有題型的快取（不觸發API請求）
       for (const [questionType, config] of Object.entries(QUESTION_TYPE_CONFIG)) {
         await this.loadCacheFromFile(questionType as SupportedQuestionType, config.filePath);
-        // 觸發檢查補充，但不等待完成
-        this.checkAndTriggerReplenishment(questionType as SupportedQuestionType);
       }
 
-      console.log('[DEBUG QuestionCacheService_v2.ts] Cache service initialized.');
+      // 4. 使用智能初始化策略
+      await this.intelligentInitialization();
+
+      console.log('[DEBUG QuestionCacheService_v2.ts] Cache service initialized with rate limiting.');
     } catch (error) {
       console.error('[DEBUG QuestionCacheService_v2.ts] Critical error during cache service initialization:', error);
     }
   }
 
   /**
-   * 從檔案載入快取
+   * 智能初始化策略
+   * 根據速率限制狀態決定初始化方式
    */
-  private async loadCacheFromFile(questionType: SupportedQuestionType, filePath: string): Promise<void> {
-    try {
-      const fileContent = await fs.readFile(filePath, 'utf-8');
-      const loadedQuestions = JSON.parse(fileContent) as CacheEntry[];
-      
-      if (!Array.isArray(loadedQuestions)) {
-        console.warn(`[DEBUG QuestionCacheService_v2.ts] Invalid cache file content for ${questionType}, initializing as empty.`);
-        this.caches.set(questionType, []);
-        return;
-      }
+  private async intelligentInitialization(): Promise<void> {
+    const questionTypes = Object.keys(QUESTION_TYPE_CONFIG) as SupportedQuestionType[];
+    const rateLimitStatus = RateLimiterService.getStatus();
+    
+    // 計算需要補充的題型
+    const needsReplenishment = questionTypes.filter(questionType => {
+      const config = QUESTION_TYPE_CONFIG[questionType];
+      const currentCount = this.caches.get(questionType)?.length ?? 0;
+      return currentCount < config.minQuestions;
+    });
 
-      this.caches.set(questionType, loadedQuestions);
-      console.log(`[DEBUG QuestionCacheService_v2.ts] Loaded ${loadedQuestions.length} questions for type ${questionType}`);
-    } catch (error: any) {
-      if (error.code === 'ENOENT') {
-        console.log(`[DEBUG QuestionCacheService_v2.ts] Cache file not found for ${questionType}. Initializing empty cache.`);
-      } else {
-        console.error(`[DEBUG QuestionCacheService_v2.ts] Error reading cache file for ${questionType}:`, error);
-      }
-      this.caches.set(questionType, []);
+    console.log(`[DEBUG QuestionCacheService_v2.ts] Found ${needsReplenishment.length} question types needing replenishment`);
+
+    if (needsReplenishment.length === 0) {
+      console.log('[DEBUG QuestionCacheService_v2.ts] All question types have sufficient cache. No initialization needed.');
+      return;
+    }
+
+    // 根據隊列長度決定策略
+    if (rateLimitStatus.queueLength > 20) {
+      console.log('[DEBUG QuestionCacheService_v2.ts] Rate limit queue is busy. Using lazy initialization.');
+      // 延遲初始化：只處理最重要的幾個類型
+      await this.lazyInitialization(needsReplenishment.slice(0, 5));
+    } else {
+      console.log('[DEBUG QuestionCacheService_v2.ts] Rate limit queue is manageable. Using batch initialization.');
+      // 分批初始化
+      await this.batchInitialization(needsReplenishment);
     }
   }
 
   /**
-   * 檢查並觸發補充
+   * 延遲初始化：只處理優先類型
    */
-  private async checkAndTriggerReplenishment(questionType: SupportedQuestionType): Promise<void> {
+  private async lazyInitialization(priorityTypes: SupportedQuestionType[]): Promise<void> {
+    console.log(`[DEBUG QuestionCacheService_v2.ts] Starting lazy initialization for ${priorityTypes.length} priority types`);
+    
+    for (const questionType of priorityTypes) {
+      // 使用高優先權進行初始化
+      this.scheduleReplenishment(questionType, PRIORITY_LEVELS.HIGH, 'lazy_init');
+      
+      // 短暫延遲避免瞬間大量請求
+      await this.sleep(500);
+    }
+  }
+
+  /**
+   * 分批初始化：分組處理所有類型
+   */
+  private async batchInitialization(needsReplenishment: SupportedQuestionType[]): Promise<void> {
+    const batchSize = 5; // 每批處理5個類型
+    const batchDelay = 2000; // 批次間延遲2秒
+    
+    console.log(`[DEBUG QuestionCacheService_v2.ts] Starting batch initialization - ${needsReplenishment.length} types in batches of ${batchSize}`);
+    
+    for (let i = 0; i < needsReplenishment.length; i += batchSize) {
+      const batch = needsReplenishment.slice(i, i + batchSize);
+      console.log(`[DEBUG QuestionCacheService_v2.ts] Processing batch ${Math.floor(i / batchSize) + 1}: ${batch.join(', ')}`);
+      
+      // 處理當前批次
+      for (const questionType of batch) {
+        const config = QUESTION_TYPE_CONFIG[questionType];
+        this.scheduleReplenishment(questionType, config.priority, 'batch_init');
+      }
+      
+      // 批次間延遲（除了最後一批）
+      if (i + batchSize < needsReplenishment.length) {
+        console.log(`[DEBUG QuestionCacheService_v2.ts] Waiting ${batchDelay}ms before next batch...`);
+        await this.sleep(batchDelay);
+      }
+    }
+  }
+
+  /**
+   * 調度補充任務（非阻塞）
+   */
+  private scheduleReplenishment(questionType: SupportedQuestionType, priority: number, context: string): void {
+    console.log(`[DEBUG QuestionCacheService_v2.ts] Scheduling replenishment for ${questionType} with priority ${priority}, context: ${context}`);
+    
+    // 非阻塞調度
+    setTimeout(() => {
+      this.triggerReplenishmentWithPriority(questionType, priority, context);
+    }, 0);
+  }
+
+  /**
+   * 檢查並觸發補充（更新版本，支援優先權）
+   */
+  private async checkAndTriggerReplenishment(questionType: SupportedQuestionType, priority?: number, context?: string): Promise<void> {
     const config = QUESTION_TYPE_CONFIG[questionType];
     const currentCount = this.caches.get(questionType)?.length ?? 0;
     
     console.log(`[DEBUG QuestionCacheService_v2.ts] Check replenishment for ${questionType}: current ${currentCount}, min ${config.minQuestions}`);
     
     if (currentCount < config.minQuestions) {
-      console.log(`[DEBUG QuestionCacheService_v2.ts] Triggering replenishment for ${questionType}`);
-      this.triggerReplenishment(questionType); // 非同步執行
+      const usePriority = priority ?? config.priority;
+      const useContext = context ?? 'auto_check';
+      console.log(`[DEBUG QuestionCacheService_v2.ts] Triggering replenishment for ${questionType} with priority ${usePriority}`);
+      this.triggerReplenishmentWithPriority(questionType, usePriority, useContext);
     }
   }
 
   /**
-   * 觸發題目補充
+   * 觸發題目補充（支援優先權版本）
    */
-  private async triggerReplenishment(questionType: SupportedQuestionType): Promise<void> {
+  private async triggerReplenishmentWithPriority(questionType: SupportedQuestionType, priority: number, context: string): Promise<void> {
     if (this.isReplenishing.get(questionType)) {
       console.log(`[DEBUG QuestionCacheService_v2.ts] Replenishment for ${questionType} already in progress. Skipping.`);
       return;
@@ -535,7 +631,7 @@ export class QuestionCacheService {
       return;
     }
 
-    console.log(`[DEBUG QuestionCacheService_v2.ts] Starting replenishment for ${questionType}. Current: ${currentCount}, Target: ${config.targetQuestions}`);
+    console.log(`[DEBUG QuestionCacheService_v2.ts] Starting replenishment for ${questionType}. Current: ${currentCount}, Target: ${config.targetQuestions}, Priority: ${priority}, Context: ${context}`);
     this.isReplenishing.set(questionType, true);
 
     try {
@@ -545,9 +641,10 @@ export class QuestionCacheService {
       let newQuestionDataArray: any[] | null = null;
       let lastError: Error | null = null;
 
-      // 重試循環
+      // 重試循環（使用速率限制機制）
       for (let attempt = 0; attempt <= MAX_GENERATION_RETRIES; attempt++) {
         try {
+          // 使用QuestionGeneratorService，它現在內部會通過速率限制器
           const result: QuestionData = await QuestionGeneratorService.generateQuestionByType(
             questionType,
             70, // 預設難度
@@ -575,6 +672,12 @@ export class QuestionCacheService {
         } catch (error) {
           lastError = error instanceof Error ? error : new Error(String(error));
           console.warn(`[DEBUG QuestionCacheService_v2.ts] Generation attempt ${attempt} failed for ${questionType}:`, lastError.message);
+
+          // 檢查是否為速率限制錯誤
+          if (lastError.message.includes('429') || lastError.message.includes('Too Many Requests') || lastError.message.includes('排隊已滿')) {
+            console.log(`[DEBUG QuestionCacheService_v2.ts] Rate limit detected for ${questionType}. Will be retried by rate limiter.`);
+            break; // 讓速率限制器處理重試
+          }
 
           if (attempt >= MAX_GENERATION_RETRIES) {
             console.error(`[DEBUG QuestionCacheService_v2.ts] Max retries reached for ${questionType}. Giving up.`);
@@ -617,8 +720,51 @@ export class QuestionCacheService {
       this.isReplenishing.set(questionType, false);
       console.log(`[DEBUG QuestionCacheService_v2.ts] Replenishment finished for ${questionType}. Final count: ${this.caches.get(questionType)?.length ?? 0}`);
       
-      // 檢查是否需要進一步補充
-      this.checkAndTriggerReplenishment(questionType);
+      // 檢查是否需要進一步補充（使用較低優先權）
+      setTimeout(() => {
+        this.checkAndTriggerReplenishment(questionType, PRIORITY_LEVELS.LOW, 'followup_check');
+      }, 30000); // 30秒後檢查
+    }
+  }
+
+  /**
+   * 睡眠工具函數
+   */
+  private sleep(ms: number): Promise<void> {
+    return new Promise(resolve => setTimeout(resolve, ms));
+  }
+
+  /**
+   * 觸發題目補充（保持向後兼容）
+   */
+  private async triggerReplenishment(questionType: SupportedQuestionType): Promise<void> {
+    const config = QUESTION_TYPE_CONFIG[questionType];
+    return this.triggerReplenishmentWithPriority(questionType, config.priority, 'legacy_trigger');
+  }
+
+  /**
+   * 從檔案載入快取
+   */
+  private async loadCacheFromFile(questionType: SupportedQuestionType, filePath: string): Promise<void> {
+    try {
+      const fileContent = await fs.readFile(filePath, 'utf-8');
+      const loadedQuestions = JSON.parse(fileContent) as CacheEntry[];
+      
+      if (!Array.isArray(loadedQuestions)) {
+        console.warn(`[DEBUG QuestionCacheService_v2.ts] Invalid cache file content for ${questionType}, initializing as empty.`);
+        this.caches.set(questionType, []);
+        return;
+      }
+
+      this.caches.set(questionType, loadedQuestions);
+      console.log(`[DEBUG QuestionCacheService_v2.ts] Loaded ${loadedQuestions.length} questions for type ${questionType}`);
+    } catch (error: any) {
+      if (error.code === 'ENOENT') {
+        console.log(`[DEBUG QuestionCacheService_v2.ts] Cache file not found for ${questionType}. Initializing empty cache.`);
+      } else {
+        console.error(`[DEBUG QuestionCacheService_v2.ts] Error reading cache file for ${questionType}:`, error);
+      }
+      this.caches.set(questionType, []);
     }
   }
 

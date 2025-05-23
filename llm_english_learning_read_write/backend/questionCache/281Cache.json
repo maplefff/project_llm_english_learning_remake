@@ -1,0 +1,97 @@
+[
+  {
+    "UUID": "5016e982-1223-4c0d-82db-914c84dbbaf7",
+    "questionData": {
+      "difficulty_hint": "Easy",
+      "evaluation_focus": [
+        "basic vocabulary",
+        "sentence structure",
+        "correct use of '很'"
+      ],
+      "instruction": "Translate the following sentence into Chinese.",
+      "reference_translations": [
+        "今天天气很好。",
+        "今天的天气非常好。"
+      ],
+      "source_text": "The weather is very good today."
+    },
+    "cacheTimestamp": 1748030507
+  },
+  {
+    "UUID": "d646974f-fa04-4b9c-8d85-64406ed60ad2",
+    "questionData": {
+      "difficulty_hint": "Medium",
+      "evaluation_focus": [
+        "phrase translation ('look forward to')",
+        "appropriate tone",
+        "sentence flow",
+        "time expression"
+      ],
+      "instruction": "Translate the following sentence into Chinese.",
+      "reference_translations": [
+        "我期待尽快收到你的来信。",
+        "我期待着很快收到你的消息。",
+        "期待早日收到您的回复。"
+      ],
+      "source_text": "I am looking forward to hearing from you soon."
+    },
+    "cacheTimestamp": 1748030507
+  },
+  {
+    "UUID": "8986dc4f-edca-4d84-a804-3f92d4ed012a",
+    "questionData": {
+      "difficulty_hint": "Medium",
+      "evaluation_focus": [
+        "passive voice translation",
+        "formal vs. informal vocabulary",
+        "sentence structure",
+        "future tense expression"
+      ],
+      "instruction": "Translate the following sentence into Chinese.",
+      "reference_translations": [
+        "据说新政策将于下个月实施。",
+        "听说新政策将在下个月实行。"
+      ],
+      "source_text": "It is said that the new policy will be implemented next month."
+    },
+    "cacheTimestamp": 1748030507
+  },
+  {
+    "UUID": "92dc9e98-a7a9-49cd-97bb-a4410407a74b",
+    "questionData": {
+      "difficulty_hint": "Easy",
+      "evaluation_focus": [
+        "basic verbs",
+        "time phrases",
+        "sentence structure",
+        "correct particle usage"
+      ],
+      "instruction": "Translate the following sentence into Chinese.",
+      "reference_translations": [
+        "她喜欢在空闲时间读书。",
+        "她喜欢在业余时间看书的。"
+      ],
+      "source_text": "She likes to read books in her free time."
+    },
+    "cacheTimestamp": 1748030507
+  },
+  {
+    "UUID": "7548b073-69c8-4cbb-9773-ad8b63c2c575",
+    "questionData": {
+      "difficulty_hint": "Medium",
+      "evaluation_focus": [
+        "relative clause handling",
+        "adjectival phrases",
+        "vocabulary choice",
+        "sentence structure"
+      ],
+      "instruction": "Translate the following sentence into Chinese.",
+      "reference_translations": [
+        "我们昨天讨论的那个项目非常重要。",
+        "我们昨天讨论的项目非常重要。"
+      ],
+      "source_text": "The project that we discussed yesterday is very important."
+    },
+    "cacheTimestamp": 1748030507
+  }
+]

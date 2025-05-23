@@ -32,15 +32,6 @@ var __importStar = (this && this.__importStar) || (function () {
         return result;
     };
 })();
-var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
-    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-};
 Object.defineProperty(exports, "__esModule", { value: true });
 const dotenv = __importStar(require("dotenv"));
 const path = __importStar(require("path"));
@@ -62,28 +53,26 @@ if (!process.env.GEMINI_API_KEY) {
 }
 console.log(`[Manual Test] 成功載入 .env 文件: ${envPath}`);
 console.log('[Manual Test] 開始執行 generate111Question...');
-function runTest() {
-    return __awaiter(this, void 0, void 0, function* () {
-        try {
-            // --- 在這裡自訂測試參數 ---
-            const historySummary = "Learner is at B1 level, often confuses synonyms.";
-            const difficultySetting = 65; // 期望正確率 65%
-            // --- -------------------- ---
-            console.log(`[Manual Test] 使用參數: historySummary="${historySummary}", difficultySetting=${difficultySetting}`);
-            const question = yield (0, _111_generate_1.generate111Question)(1, // 函數內部已固定為 1
-            historySummary, difficultySetting);
-            if (question) {
-                console.log("[Manual Test] 成功生成問題:");
-                console.log(JSON.stringify(question, null, 2));
-            }
-            else {
-                console.log("[Manual Test] 生成問題失敗 (函數返回 null)。請檢查服務日誌或 API 金鑰。");
-            }
+async function runTest() {
+    try {
+        // --- 在這裡自訂測試參數 ---
+        const historySummary = "Learner is at B1 level, often confuses synonyms.";
+        const difficultySetting = 65; // 期望正確率 65%
+        // --- -------------------- ---
+        console.log(`[Manual Test] 使用參數: historySummary="${historySummary}", difficultySetting=${difficultySetting}`);
+        const question = await (0, _111_generate_1.generate111Question)(1, // 函數內部已固定為 1
+        historySummary, difficultySetting);
+        if (question) {
+            console.log("[Manual Test] 成功生成問題:");
+            console.log(JSON.stringify(question, null, 2));
         }
-        catch (error) {
-            console.error("[Manual Test] 執行 generate111Question 時發生未預期的錯誤:", error);
+        else {
+            console.log("[Manual Test] 生成問題失敗 (函數返回 null)。請檢查服務日誌或 API 金鑰。");
         }
-    });
+    }
+    catch (error) {
+        console.error("[Manual Test] 執行 generate111Question 時發生未預期的錯誤:", error);
+    }
 }
 runTest();
 //# sourceMappingURL=test_111_generate.js.map

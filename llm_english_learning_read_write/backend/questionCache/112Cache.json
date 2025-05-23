@@ -1,114 +1,114 @@
 [
   {
-    "UUID": "74c1debf-8c8e-4fb8-9553-cdd812d6ad35",
+    "UUID": "6e38de4b-c6fc-4ecc-bcd5-320c7b0d6ee2",
     "questionData": {
-      "passage": "It is _______ for students to submit their assignments by Friday morning.",
-      "question": "Choose the best word to complete the sentence.",
+      "explanation_of_Question": "這個句子描述了這位藝術家避免追隨當前的時尚潮流。選項 D 的 \"eschewed\" 意為故意避開、戒絕，與 \"current fads\" (當前潮流) 搭配，表示藝術家特立獨行。選項 A \"embraced\" 意為擁抱、接受；選項 B \"pursued\" 意為追求；選項 C \"reveled\" 意為陶醉、狂歡，這些都與句子中藝術家避免潮流的意思相反。",
       "options": [
         {
           "id": "A",
-          "text": "optional"
+          "text": "embraced"
         },
         {
           "id": "B",
-          "text": "suggested"
+          "text": "pursued"
         },
         {
           "id": "C",
-          "text": "voluntary"
+          "text": "reveled"
         },
         {
           "id": "D",
-          "text": "mandatory"
+          "text": "eschewed"
         }
       ],
-      "standard_answer": "D",
-      "explanation_of_Question": "句子說明學生必須在週五早上提交作業。選項 D「mandatory」意為強制性的、必須履行的，最符合語境。選項 A「optional」意為可選的，選項 B「suggested」意為被建議的，選項 C「voluntary」意為自願的，這三個詞都表示非必須的或自願的，與句子中「必須提交」的意思不符。"
+      "passage": "The artist deliberately _______ current fads, preferring to develop his own unique style.",
+      "question": "Choose the best word to complete the sentence.",
+      "standard_answer": "D"
     },
-    "cacheTimestamp": 1747946003
+    "cacheTimestamp": 1748030179
   },
   {
-    "UUID": "4b505f22-c948-4168-8070-925c58cf8f4a",
+    "UUID": "5112a0dc-b3f8-4cbe-9b42-6d9ad55f7436",
     "questionData": {
-      "explanation_of_Question": "「expand」意為擴展、擴大。公司計劃將業務擴展到亞洲市場，因此選項 B 正確。選項 A「condense」意為濃縮；選項 C「shrink」意為縮小；選項 D「restrict」意為限制，這些選項都不符合語境。",
+      "explanation_of_Question": "這個句子描述了經過長時間的討論，他們達成了一個所有人都能接受的妥協方案。選項 B 的 \"compromise\" 意為妥協，指在爭議中雙方或多方各讓一步以達成一致，符合語境。選項 A \"decision\" 意為決定；選項 C \"argument\" 意為爭論；選項 D \"conclusion\" 意為結論，雖然相關，但 \"compromise\" 最精確地描述了長時間討論後各方讓步達成一致的結果。",
       "options": [
         {
           "id": "A",
-          "text": "condense"
+          "text": "decision"
         },
         {
           "id": "B",
-          "text": "expand"
+          "text": "compromise"
         },
         {
           "id": "C",
-          "text": "shrink"
+          "text": "argument"
         },
         {
           "id": "D",
-          "text": "restrict"
+          "text": "conclusion"
         }
       ],
-      "passage": "The company is planning to _______ its operations into the Asian market next year.",
+      "passage": "After lengthy discussions, they finally reached a _______ that satisfied everyone involved.",
       "question": "Choose the best word to complete the sentence.",
       "standard_answer": "B"
     },
-    "cacheTimestamp": 1747995377
+    "cacheTimestamp": 1748030179
   },
   {
-    "UUID": "827502d3-0bc6-4931-87fe-81649f1d6681",
+    "UUID": "3928945c-55fd-405b-9f9b-3cd33e1aa62d",
     "questionData": {
-      "explanation_of_Question": "「exhausted」意為筋疲力盡的、極度疲倦的。連續工作十小時後，她感到筋疲力盡，需要休息，因此選項 C 正確。選項 A「energetic」意為精力充沛的；選項 B「refreshed」意為精神煥發的；選項 D「stimulated」意為受到刺激的，這些選項都不符合語境。",
+      "explanation_of_Question": "這個句子描述了人們普遍認為這項新政策將會帶來好處。選項 A 的 \"perceived\" 意為認為、感知到，常用於表達普遍的看法或印象，符合句子的意思。選項 B \"concealed\" 意為隱藏；選項 C \"revealed\" 意為揭示；選項 D \"deceived\" 意為欺騙，這些都不符合語境，因為句中表達的是人們對政策的看法，而不是隱藏或揭示事實。",
       "options": [
         {
           "id": "A",
-          "text": "energetic"
+          "text": "perceived"
         },
         {
           "id": "B",
-          "text": "refreshed"
+          "text": "concealed"
         },
         {
           "id": "C",
-          "text": "exhausted"
+          "text": "revealed"
         },
         {
           "id": "D",
-          "text": "stimulated"
+          "text": "deceived"
         }
       ],
-      "passage": "After working for ten hours straight, she felt completely _______ and needed a long rest.",
+      "passage": "The new policy is widely _______ as beneficial for the local economy.",
       "question": "Choose the best word to complete the sentence.",
-      "standard_answer": "C"
+      "standard_answer": "A"
     },
-    "cacheTimestamp": 1747995377
+    "cacheTimestamp": 1748030179
   },
   {
-    "UUID": "a4f26014-fd97-463a-badd-ce73956cccec",
+    "UUID": "e4a1dcf7-30cf-4db0-b4d4-f0070bf957ef",
     "questionData": {
-      "explanation_of_Question": "「conclusive」意為決定性的、確鑿的。在法庭上提出的證據不夠確鑿，無法說服陪審團被告有罪，因此選項 C 正確。選項 A「ambiguous」意為模稜兩可的；選項 B「trivial」意為瑣碎的；選項 D「preliminary」意為初步的，這些選項都不符合語境。",
+      "explanation_of_Question": "這個句子描述了在危機時刻，他表現出了卓越的鎮定和勇敢。選項 C 的 \"fortitude\" 意為剛毅、堅韌，特指在痛苦或逆境中表現出的勇氣和決心，非常貼合句子的語境，即在危機中保持冷靜和勇敢。選項 A \"gratitude\" 意為感激；選項 B \"servitude\" 意為奴役；選項 D \"magnitude\" 意為巨大、量級，這些詞都不符合句子的意思。",
       "options": [
         {
           "id": "A",
-          "text": "ambiguous"
+          "text": "gratitude"
         },
         {
           "id": "B",
-          "text": "trivial"
+          "text": "servitude"
         },
         {
           "id": "C",
-          "text": "conclusive"
+          "text": "fortitude"
         },
         {
           "id": "D",
-          "text": "preliminary"
+          "text": "magnitude"
         }
       ],
-      "passage": "The evidence presented in court was not _______ enough to convince the jury of the defendant's guilt.",
+      "passage": "In times of crisis, he showed remarkable _______ and courage.",
       "question": "Choose the best word to complete the sentence.",
       "standard_answer": "C"
     },
-    "cacheTimestamp": 1747995377
+    "cacheTimestamp": 1748030179
   }
 ]

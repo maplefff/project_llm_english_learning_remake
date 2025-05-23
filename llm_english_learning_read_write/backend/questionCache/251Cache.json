@@ -1,0 +1,127 @@
+[
+  {
+    "UUID": "e4877004-43b2-4d4c-915b-1319b706593a",
+    "questionData": {
+      "context": "Many people today struggle with work-life balance in our fast-paced society.",
+      "evaluation_focus": [
+        "內容相關性",
+        "語言準確性",
+        "邏輯清晰度",
+        "字數控制"
+      ],
+      "instruction": "請用50-80字回答這個問題。提供至少兩個具體的策略，並簡單說明為什麼這些策略有效。",
+      "key_points": [
+        "具體策略",
+        "簡單解釋",
+        "實用性"
+      ],
+      "max_words": 80,
+      "min_words": 50,
+      "question": "What are some effective strategies for maintaining a healthy work-life balance?",
+      "sample_responses": [
+        "Effective work-life balance strategies include setting clear boundaries by turning off work devices after hours and prioritizing time management through daily planning. These approaches work because they prevent work from consuming personal time and help individuals focus on what truly matters most each day."
+      ]
+    },
+    "cacheTimestamp": 1748030457
+  },
+  {
+    "UUID": "4cce1e90-6e31-4562-b12b-080c65f37ca6",
+    "questionData": {
+      "context": "Maintaining a good work-life balance offers significant benefits for individuals and society.",
+      "evaluation_focus": [
+        "內容精確性",
+        "語言流暢度",
+        "論點清晰",
+        "字數符合"
+      ],
+      "instruction": "請用50-80字回答這個問題。提供至少兩點維持健康工作生活平衡的重要性，並簡單說明其益處。",
+      "key_points": [
+        "個人福祉",
+        "工作效率",
+        "具體益處"
+      ],
+      "max_words": 80,
+      "min_words": 50,
+      "question": "Why is achieving a healthy work-life balance important for personal well-being and professional productivity?",
+      "sample_responses": [
+        "Achieving a healthy work-life balance is crucial because it reduces stress and improves mental health, leading to greater personal happiness. Professionally, it prevents burnout and enhances focus and creativity, which directly boosts productivity and job satisfaction."
+      ]
+    },
+    "cacheTimestamp": 1748030457
+  },
+  {
+    "UUID": "f15d0697-43e9-41a4-8957-4f89d166969e",
+    "questionData": {
+      "context": "Plastic pollution is a major environmental problem affecting oceans and wildlife.",
+      "evaluation_focus": [
+        "實用性",
+        "內容精確性",
+        "語言結構",
+        "字數限制"
+      ],
+      "instruction": "請用50-80字回答這個問題。列出至少兩個簡單的個人行動，並解釋它們如何幫助減少塑膠使用。",
+      "key_points": [
+        "個人行動",
+        "減少塑膠",
+        "行動效果"
+      ],
+      "max_words": 80,
+      "min_words": 50,
+      "question": "What are some simple, effective actions individuals can take to reduce their daily plastic consumption?",
+      "sample_responses": [
+        "Individuals can significantly reduce plastic by using reusable water bottles and coffee cups instead of disposable ones. Another action is bringing reusable bags for shopping. These steps prevent the constant need for new plastic products, decreasing waste generation dramatically."
+      ]
+    },
+    "cacheTimestamp": 1748030457
+  },
+  {
+    "UUID": "98c880ec-cf2e-46f5-8e8a-5a570ef91328",
+    "questionData": {
+      "context": "Technology has dramatically changed how we learn and access information.",
+      "evaluation_focus": [
+        "內容相關性",
+        "論點說服力",
+        "詞彙運用",
+        "字數要求"
+      ],
+      "instruction": "請用50-80字回答這個問題。舉例說明科技如何帶來至少兩個方面的教育優勢，並簡要解釋。",
+      "key_points": [
+        "科技優勢",
+        "教育改變",
+        "具體例子"
+      ],
+      "max_words": 80,
+      "min_words": 50,
+      "question": "In what ways has technology positively impacted modern education for students?",
+      "sample_responses": [
+        "Technology has improved education by providing access to vast online resources, allowing students to research any topic deeply. It also enables interactive learning platforms and tools that make lessons more engaging and personalized, enhancing understanding and retention."
+      ]
+    },
+    "cacheTimestamp": 1748030457
+  },
+  {
+    "UUID": "dd11147f-913c-44ee-8f18-27c9e72542eb",
+    "questionData": {
+      "context": "Regular physical activity is essential for maintaining good health and preventing diseases.",
+      "evaluation_focus": [
+        "醫學知識",
+        "語言清晰",
+        "重點明確",
+        "字數控制"
+      ],
+      "instruction": "請用50-80字回答這個問題。說明規律運動至少兩個主要好處，並解釋其對身體或心理的影響。",
+      "key_points": [
+        "運動好處",
+        "身心影響",
+        "規律性"
+      ],
+      "max_words": 80,
+      "min_words": 50,
+      "question": "What are the primary benefits of incorporating regular exercise into one's weekly routine?",
+      "sample_responses": [
+        "Regular exercise offers major benefits like improving cardiovascular health, strengthening muscles and bones. It also significantly reduces stress and boosts mood by releasing endorphins. These combined effects lead to increased energy levels and overall better quality of life."
+      ]
+    },
+    "cacheTimestamp": 1748030457
+  }
+]

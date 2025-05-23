@@ -1,147 +1,147 @@
 [
   {
-    "UUID": "d3ca7969-3660-465f-a9ab-d5269b18ac40",
+    "UUID": "28706ace-4268-4e8a-a6b7-562b6d7ba1dd",
     "questionData": {
-      "passage": "Due to strong public opposition, the government decided to **rescind** the newly implemented regulation.",
-      "targetWord": "rescind",
-      "question": "To **rescind** a regulation means to:",
+      "explanation_of_Question": "「Crucial」意為「至關重要的」，指對某事物的結果或成功極為重要。在句子中，這份數據對計畫的成功非常重要，故選項 D「extremely important」最符合其意義。選項 A「slightly important」表示「稍微重要」，與原意相反；選項 B「interesting」表示「有趣的」，與重要性無關；選項 C「easy to understand」表示「容易理解的」，與原意無關。",
       "options": [
         {
           "id": "A",
-          "text": "formally cancel or revoke"
+          "text": "slightly important"
         },
         {
           "id": "B",
-          "text": "implement or enforce"
+          "text": "interesting"
         },
         {
           "id": "C",
-          "text": "modify or amend"
+          "text": "easy to understand"
         },
         {
           "id": "D",
-          "text": "announce or publicize"
+          "text": "extremely important"
         }
       ],
+      "passage": "Gathering this data is **crucial** for the success of our project.",
+      "question": "In the sentence above, the word 'crucial' is closest in meaning to:",
+      "standard_answer": "D",
+      "targetWord": "crucial"
+    },
+    "cacheTimestamp": 1748030170
+  },
+  {
+    "UUID": "77e3f0b9-356b-420c-aff9-ba20f43d745d",
+    "questionData": {
+      "explanation_of_Question": "「Investigate」意為「調查、研究」，通常指為了發現事實真相而進行詳細檢查或研究。在句子中，警方正在調查失竊案，故選項 C「examine thoroughly to discover facts」最符合其意義。選項 A「quickly decide」表示「快速決定」，與調查相反；選項 B「ignore completely」表示「完全忽視」，與調查相反；選項 D「damage accidentally」表示「意外損壞」，與調查無關。",
+      "options": [
+        {
+          "id": "A",
+          "text": "quickly decide"
+        },
+        {
+          "id": "B",
+          "text": "ignore completely"
+        },
+        {
+          "id": "C",
+          "text": "examine thoroughly to discover facts"
+        },
+        {
+          "id": "D",
+          "text": "damage accidentally"
+        }
+      ],
+      "passage": "The police are currently **investigating** the cause of the theft.",
+      "question": "The word 'investigating' in the sentence means:",
+      "standard_answer": "C",
+      "targetWord": "investigating"
+    },
+    "cacheTimestamp": 1748030170
+  },
+  {
+    "UUID": "616cafc6-ccfa-4a46-95be-f879e35a0977",
+    "questionData": {
+      "explanation_of_Question": "「Adequate」意為「足夠的、充足的」，指數量或品質上足以滿足某種需求。在句子中，提供的食物對所有客人來說是足夠的，故選項 B「enough」最符合其意義。選項 A「too much」表示「太多」，與原意相反；選項 C「delicious」表示「美味的」，與數量無關；選項 D「expensive」表示「昂貴的」，與數量是否足夠無關。",
+      "options": [
+        {
+          "id": "A",
+          "text": "too much"
+        },
+        {
+          "id": "B",
+          "text": "enough"
+        },
+        {
+          "id": "C",
+          "text": "delicious"
+        },
+        {
+          "id": "D",
+          "text": "expensive"
+        }
+      ],
+      "passage": "Make sure there is **adequate** food for all the guests.",
+      "question": "Which word is a synonym for 'adequate' in the sentence?",
+      "standard_answer": "B",
+      "targetWord": "adequate"
+    },
+    "cacheTimestamp": 1748030170
+  },
+  {
+    "UUID": "761d354e-764f-479a-9947-79f5de411205",
+    "questionData": {
+      "explanation_of_Question": "「Collaborate」意為「合作」，指與他人一起工作以完成某項任務。在句子中，科學家們決定合作進行研究，故選項 A「work together」最符合其意義。選項 B「compete fiercely」表示「激烈競爭」，與合作相反；選項 C「argue frequently」表示「頻繁爭吵」，與合作相反；選項 D「study alone」表示「獨自學習」，與合作相反。",
+      "options": [
+        {
+          "id": "A",
+          "text": "work together"
+        },
+        {
+          "id": "B",
+          "text": "compete fiercely"
+        },
+        {
+          "id": "C",
+          "text": "argue frequently"
+        },
+        {
+          "id": "D",
+          "text": "study alone"
+        }
+      ],
+      "passage": "The scientists decided to **collaborate** on the new research project.",
+      "question": "What does the word 'collaborate' mean in the sentence?",
       "standard_answer": "A",
-      "explanation_of_Question": "句子中的 \"rescind\" 是指政府取消或廢除某項新頒布的規定。這個詞通常用於正式決定，例如取消法律、政策或協議。選項 A \"formally cancel or revoke\" (正式取消或廢除) 精確地捕捉了 \"rescind\" 的意思。選項 B \"implement or enforce\" (實施或執行) 是其反義。選項 C \"modify or amend\" (修改或修訂) 指的是改變規定而非完全取消。選項 D \"announce or publicize\" (宣布或公開) 與規定的狀態（是否有效）無關，僅指傳達信息的行為。"
+      "targetWord": "collaborate"
     },
-    "cacheTimestamp": 1747683621
+    "cacheTimestamp": 1748030170
   },
   {
-    "UUID": "17cdbd12-c227-46d0-a72a-63c25c3b46d0",
+    "UUID": "aa5f3168-6cae-4621-8b47-bed916959aed",
     "questionData": {
-      "passage": "You will need to bring your official documents to **validate** your certificate.",
-      "targetWord": "validate",
-      "question": "To **validate** something means to:",
+      "explanation_of_Question": "「Distinct」意為「明顯不同的、有區別的」，指兩者之間有清楚的差異。在句子中，這兩隻鳥有明顯不同的羽毛顏色，故選項 D「clearly different」最符合其意義。選項 A「exactly the same」表示「完全相同」，與原意相反；選項 B「slightly similar」表示「稍微相似」，與原意相反；選項 C「hard to see」表示「難以看見」，與明顯不同無關。",
       "options": [
         {
           "id": "A",
-          "text": "disprove or refute"
+          "text": "exactly the same"
         },
         {
           "id": "B",
-          "text": "create or issue"
+          "text": "slightly similar"
         },
         {
           "id": "C",
-          "text": "confirm the truth or validity of"
+          "text": "hard to see"
         },
         {
           "id": "D",
-          "text": "understand or interpret"
+          "text": "clearly different"
         }
       ],
-      "standard_answer": "C",
-      "explanation_of_Question": "在這個句子中，\"validate\" 的意思是確認某件事物（本例中是她的證書）的有效性或真實性。這通常涉及檢查並證實其符合標準或真實無誤。選項 C \"confirm the truth or validity of\" (確認...的真實或有效性) 正確解釋了 \"validate\" 在此的用法。選項 A \"disprove or refute\" (駁倒或反駁) 是其反義。選項 B \"create or issue\" (創造或頒發) 指的是證書的起源，而非確認其有效性。選項 D \"understand or interpret\" (理解或解釋) 與證書的意義理解有關，而非其真實性的確認。"
-    },
-    "cacheTimestamp": 1747683621
-  },
-  {
-    "UUID": "6cb04c3d-8c7a-4e46-a59e-2faa34399294",
-    "questionData": {
-      "explanation_of_Question": "Consensus 指大多數人或團體成員間達成的普遍共識或一致意見。因此選項 D 正確。選項 A「conflict」意為衝突，選項 C「disagreement」意為分歧，選項 B「decision」意為決定，但不如「general agreement」精確反映「consensus」在語境中的含義，因為共識是一種特殊的決定。",
-      "options": [
-        {
-          "id": "A",
-          "text": "conflict"
-        },
-        {
-          "id": "B",
-          "text": "decision"
-        },
-        {
-          "id": "C",
-          "text": "disagreement"
-        },
-        {
-          "id": "D",
-          "text": "general agreement"
-        }
-      ],
-      "passage": "After a long debate, the team finally reached a **consensus** on the best approach.",
-      "question": "In this sentence, **consensus** means:",
+      "passage": "These two bird species have **distinct** feather colors.",
+      "question": "The word 'distinct' in the sentence means:",
       "standard_answer": "D",
-      "targetWord": "consensus"
+      "targetWord": "distinct"
     },
-    "cacheTimestamp": 1747995349
-  },
-  {
-    "UUID": "365c97a9-7eab-4ac2-a6ce-26e9a1e80fae",
-    "questionData": {
-      "explanation_of_Question": "Pervasive 指某事物廣泛存在、影響遍及各處。在此，社群媒體的影響力擴及現代社會的許多層面，故選項 C「widespread and influencing many areas」最貼切。選項 A「limited to a few areas」與原意相反；選項 B「found only online」限制了其範圍；選項 D「declining in popularity」未提及普及程度或影響力。",
-      "options": [
-        {
-          "id": "A",
-          "text": "limited to a few areas"
-        },
-        {
-          "id": "B",
-          "text": "found only online"
-        },
-        {
-          "id": "C",
-          "text": "widespread and influencing many areas"
-        },
-        {
-          "id": "D",
-          "text": "declining in popularity"
-        }
-      ],
-      "passage": "Social media has become a **pervasive** influence in modern society.",
-      "question": "If something is **pervasive**, it is:",
-      "standard_answer": "C",
-      "targetWord": "pervasive"
-    },
-    "cacheTimestamp": 1747995349
-  },
-  {
-    "UUID": "121ef875-e148-4f07-939a-ed561d59c7cb",
-    "questionData": {
-      "explanation_of_Question": "Rigorous 指非常嚴格、精確、一絲不苟。在此語境中，品管測試必須非常仔細嚴格以確保產品品質，故選項 D「thorough and strict」為正解。選項 A「quick and simple」與原意相反；選項 C「lax and easy」是嚴格的反義詞；選項 B「challenging but fair」雖可能適用於測試，但不如「thorough and strict」精確描述「rigorous」的本質。",
-      "options": [
-        {
-          "id": "A",
-          "text": "quick and simple"
-        },
-        {
-          "id": "B",
-          "text": "challenging but fair"
-        },
-        {
-          "id": "C",
-          "text": "lax and easy"
-        },
-        {
-          "id": "D",
-          "text": "thorough and strict"
-        }
-      ],
-      "passage": "The company requires all products to pass a **rigorous** quality control test.",
-      "question": "In this sentence, **rigorous** means:",
-      "standard_answer": "D",
-      "targetWord": "rigorous"
-    },
-    "cacheTimestamp": 1747995349
+    "cacheTimestamp": 1748030170
   }
 ]

@@ -1,142 +1,142 @@
 [
   {
-    "UUID": "bca74ea3-a007-4605-99c3-de09dd2c3edf",
+    "UUID": "5991add9-e1e6-4b58-82dd-8d9a08d3b64a",
     "questionData": {
-      "explanation_of_Question": "指出「災難性的」、「環境有害的材料」、「剝削勞工」、「設計成一次性」、「有毒化學物質」、「無止盡的浪費和剝削」等詞語，表明作者對快速時尚產業持非常批判和擔憂的態度。",
+      "explanation_of_Question": "作者在這段話中的主要目的是批評對於氣候變遷缺乏行動的現狀，並敦促人們立刻採取改變。從『devastating』、『staggering lack of urgency』、『deafening silence』等詞語可以看出強烈的批判態度，而『demand immediate action』、『must recognize』則顯示了呼籲行動的意圖。選項 A 是部分目的，但不是主要目的；選項 C 的娛樂性不是文章的主旨；選項 D 的學術分析不符合文章的批判和呼籲語氣。",
       "options": [
         {
           "id": "A",
-          "text": "Indifferent and balanced"
+          "text": "To inform readers about the science of climate change."
         },
         {
           "id": "B",
-          "text": "Enthusiastic and supportive"
+          "text": "To criticize the lack of action on climate change and urge change."
         },
         {
           "id": "C",
-          "text": "Highly critical and concerned"
+          "text": "To entertain readers with stories about environmental activism."
         },
         {
           "id": "D",
-          "text": "Mildly skeptical but hopeful"
+          "text": "To provide a neutral, analytical comparison of environmental policies."
         }
       ],
-      "passage": "Fast fashion's relentless cycle of production and consumption is nothing short of catastrophic for the planet. We are churning out billions of garments annually, often using environmentally harmful materials and exploiting labor in developing countries. These clothes are designed to be disposable, worn a few times before ending up in overflowing landfills, where they leach toxic chemicals into the soil and water. The industry markets fleeting trends, convincing consumers they need constant wardrobe updates, fueling this unsustainable machine. It's time we stopped chasing cheap clothes and started demanding transparency and sustainability from brands. Our planet, and the people who make our clothes, deserve better than this endless cycle of waste and exploitation.",
-      "question": "What is the author's attitude towards the fast fashion industry?",
-      "standard_answer": "C"
-    },
-    "cacheTimestamp": 1747994487
-  },
-  {
-    "UUID": "6403c1cd-2ece-471d-8fd6-020f144769f4",
-    "questionData": {
-      "explanation_of_Question": "作者列舉了步行對身心健康的許多好處，並以「could be the most impactful decision」、「Start today, and see the difference it makes」等鼓勵性語言，明顯是為了說服讀者開始每天步行。",
-      "options": [
-        {
-          "id": "A",
-          "text": "To describe the history of walking for exercise"
-        },
-        {
-          "id": "B",
-          "text": "To inform readers about the different types of physical activity"
-        },
-        {
-          "id": "C",
-          "text": "To persuade readers to start walking daily"
-        },
-        {
-          "id": "D",
-          "text": "To compare walking with other forms of exercise"
-        }
-      ],
-      "passage": "If you want to unlock your full potential, integrating a simple 30-minute daily walk into your routine could be the most impactful decision you make today. Beyond the obvious physical benefits – improved cardiovascular health, weight management, increased energy levels – walking offers profound mental advantages. It's a powerful stress reducer, a creativity booster, and provides a valuable opportunity for mindfulness and reflection in our increasingly hectic lives. Forget expensive gym memberships or complex workout regimes. A brisk walk, perhaps listening to a podcast or simply observing the world around you, is accessible to almost everyone, requiring nothing more than comfortable shoes and a willingness to move. Don't underestimate the cumulative power of this small habit; it can transform your health, your mood, and your overall well-being. Start today, and see the difference it makes.",
-      "question": "What is the main purpose of this passage?",
-      "standard_answer": "C"
-    },
-    "cacheTimestamp": 1747994487
-  },
-  {
-    "UUID": "4b9bcddf-a50b-4f4f-b985-96f6c014861f",
-    "questionData": {
-      "explanation_of_Question": "文章中使用了「true strength is forged」、「lesson disguised」、「resilience we didn't know we possessed」、「overcoming obstacles」、「learning from mistakes」、「persisting despite adversity」、「opportunity to learn, adapt, and grow stronger」、「turn setbacks into stepping stones」等詞語，充滿了積極向上和鼓勵的語氣，旨在激勵讀者克服困難。",
-      "options": [
-        {
-          "id": "A",
-          "text": "Pessimistic and resigned"
-        },
-        {
-          "id": "B",
-          "text": "Critical and judgmental"
-        },
-        {
-          "id": "C",
-          "text": "Optimistic and encouraging"
-        },
-        {
-          "id": "D",
-          "text": "Neutral and informative"
-        }
-      ],
-      "passage": "Facing a setback can feel like hitting an insurmountable wall. The disappointment, the frustration, the temptation to give up – it's all very real. However, it's precisely in these moments of challenge that our true strength is forged. Every stumble is not a failure, but a lesson disguised, pointing us towards a better path or revealing a resilience we didn't know we possessed. The most inspiring stories of achievement are rarely tales of smooth sailing; they are narratives of overcoming obstacles, learning from mistakes, and persisting despite adversity. Don't let a temporary defeat define you. See it as an opportunity to learn, adapt, and grow stronger. The path forward may be difficult, but with courage and perseverance, you have the power to turn setbacks into stepping stones towards your ultimate success.",
-      "question": "What is the author's tone throughout the passage?",
-      "standard_answer": "C"
-    },
-    "cacheTimestamp": 1747994487
-  },
-  {
-    "UUID": "e88b2b6d-b040-4936-b5e4-f88df2cdf010",
-    "questionData": {
-      "explanation_of_Question": "文章詳細描述了光合作用的步驟和機制，從捕捉陽光到將二氧化碳轉化為葡萄糖， clearly aiming to inform the reader about how the process works.",
-      "options": [
-        {
-          "id": "A",
-          "text": "Argue for the importance of plants"
-        },
-        {
-          "id": "B",
-          "text": "Describe the visual appearance of photosynthesis"
-        },
-        {
-          "id": "C",
-          "text": "Explain the process of photosynthesis"
-        },
-        {
-          "id": "D",
-          "text": "Persuade readers to study botany"
-        }
-      ],
-      "passage": "Photosynthesis, the process by which green plants and some other organisms use sunlight to synthesize foods with the help of chlorophyll, is fundamental to life on Earth. This incredible biochemical reaction converts light energy into chemical energy, stored in glucose. It begins when chlorophyll pigments in plant cells capture photons from sunlight. Inside the chloroplasts, water absorbed by the roots is split, releasing oxygen (which we breathe) and electrons. Carbon dioxide from the atmosphere enters the leaves, and using the energy captured from sunlight and the electrons from water, the plant converts the carbon dioxide into glucose, a simple sugar that serves as food. This process not only provides energy for the plant itself but also forms the base of most food chains and regulates atmospheric carbon dioxide levels, making it a cornerstone of our planet's ecosystem.",
-      "question": "The main purpose of this passage is to:",
-      "standard_answer": "C"
-    },
-    "cacheTimestamp": 1747994487
-  },
-  {
-    "UUID": "86871768-11ab-4f62-8bd4-df38f8f7ddee",
-    "questionData": {
-      "explanation_of_Question": "作者使用了反語和誇張的詞語，例如「Oh, yes」、「more corporate jargon and less actual work」、「immensely valuable」（用星號強調反諷意味）、「thrilling prospect」、「innovation happening!」（反諷），明顯表達對強制會議的不滿和嘲諷，語氣帶有諷刺和批判性。",
-      "options": [
-        {
-          "id": "A",
-          "text": "Enthusiastic and engaged"
-        },
-        {
-          "id": "B",
-          "text": "Sarcastic and critical"
-        },
-        {
-          "id": "C",
-          "text": "Neutral and objective"
-        },
-        {
-          "id": "D",
-          "text": "Anxious and apprehensive"
-        }
-      ],
-      "passage": "Oh, yes, another mandatory all-hands meeting to discuss \"synergy\" and \"leveraging our core competencies.\" Because clearly, what we need right now is more corporate jargon and less actual work getting done. I'm sure listening to Brian from Marketing explain his groundbreaking new strategy for \"disrupting the paradigm\" for the 17th time this quarter will be *immensely* valuable. And let's not forget the thrilling prospect of \"brainstorming sessions\" where the loudest person's idea somehow becomes the \"innovative solution,\" regardless of its practicality. Honestly, the productivity boost gained from sitting in a windowless room for two hours, pretending to be engaged, is simply unparalleled. I can practically feel the innovation happening! If only we could bottle this meeting magic and sprinkle it on our actual tasks, we might actually achieve something.",
-      "question": "What is the author's tone regarding the mandatory meeting?",
+      "passage": "The evidence is overwhelming, the scientific consensus is clear, yet the world's response to climate change remains tragically inadequate. We stand on the precipice of irreversible damage, facing devastating consequences for future generations, while political debates drag on and corporate interests delay meaningful reform. There is a staggering lack of urgency, a collective denial that borders on madness. We see the signs – extreme weather events, rising sea levels, melting glaciers – yet the action taken is a mere trickle compared to the flood needed. This isn't just a scientific issue; it's a moral imperative. We don't need more reports or summits; we need a global awakening and a demand for immediate, drastic action. The deafening silence from those in power is no longer acceptable. Individuals, communities, and nations must recognize the existential threat and act now.",
+      "question": "What is the author's primary purpose in writing this passage?",
       "standard_answer": "B"
     },
-    "cacheTimestamp": 1747994487
+    "cacheTimestamp": 1748030282
+  },
+  {
+    "UUID": "fbb5e666-a8e6-442d-a411-ad19a15d7940",
+    "questionData": {
+      "explanation_of_Question": "作者這段話描述了暴風雨後的景象，特別是植物在逆境中展現的生命力。從『miracle』、『resilience』、『indomitable spirit』、『quiet triumph』等詞語可以看出，作者對生命的頑強和自然的復原能力表達了強烈的敬佩和讚美之情。選項 A 的沮喪與文章積極的語氣不符；選項 B 的擔憂雖然可能存在於暴風雨中，但文章重點在後續的復原；選項 D 的冷漠超然與作者明顯的情感表達不符。",
+      "options": [
+        {
+          "id": "A",
+          "text": "Depressed"
+        },
+        {
+          "id": "B",
+          "text": "Apprehensive"
+        },
+        {
+          "id": "C",
+          "text": "Admiring"
+        },
+        {
+          "id": "D",
+          "text": "Indifferent"
+        }
+      ],
+      "passage": "After the fury of the storm had passed, leaving behind a landscape scarred and battered, a quiet miracle began to unfold. Though trees were uprooted and structures damaged, the smallest plants, bent low but not broken, slowly began to lift their leaves towards the sun. Tiny shoots emerged from damp earth, a vibrant green against the mud. It was a testament to nature's astonishing resilience, an indomitable spirit that refused to yield to destruction. The air, still heavy with the scent of rain and overturned soil, seemed to hum with this silent resurgence. Witnessing this determined recovery, the way life stubbornly reclaims its space and light, fills one with a profound sense of awe and respect. It's a quiet triumph unfolding in countless small acts of regrowth, a powerful reminder of the enduring strength embedded within the natural world.",
+      "question": "What is the author's tone when describing nature's recovery after the storm?",
+      "standard_answer": "C"
+    },
+    "cacheTimestamp": 1748030282
+  },
+  {
+    "UUID": "e5dd531b-ce70-44d7-8e2a-35aac8a69726",
+    "questionData": {
+      "explanation_of_Question": "這段話詳細解釋了光合作用的過程，描述了植物如何利用陽光、水和二氧化碳製造食物。文章使用了科學術語（如葉綠體、葉綠素、葡萄糖）並按步驟說明過程，目的是向讀者提供關於這個生物學過程的資訊和解釋。選項 A 的說服、選項 B 的娛樂都不是文章的主旨；選項 C 的批評不是文章的目的。因此，主要目的是解釋科學過程。",
+      "options": [
+        {
+          "id": "A",
+          "text": "To persuade readers about the importance of plants."
+        },
+        {
+          "id": "B",
+          "text": "To entertain readers with interesting facts about biology."
+        },
+        {
+          "id": "C",
+          "text": "To criticize the complexity of biological processes."
+        },
+        {
+          "id": "D",
+          "text": "To explain the process of photosynthesis."
+        }
+      ],
+      "passage": "Photosynthesis is the remarkable process by which green plants and some other organisms use sunlight to synthesize foods with the help of chlorophyll pigment. This vital process occurs in the chloroplasts, tiny organelles found within plant cells. First, the plant absorbs water through its roots and carbon dioxide from the air through small pores called stomata on its leaves. Sunlight is then captured by chlorophyll. This light energy is used to convert water and carbon dioxide into glucose, a type of sugar that serves as food for the plant, and oxygen, which is released back into the atmosphere as a byproduct. Essentially, it is how plants create their own energy, forming the base of most food chains on Earth. Understanding photosynthesis is key to understanding plant life and its crucial role in our ecosystem.",
+      "question": "What is the main purpose of this passage?",
+      "standard_answer": "D"
+    },
+    "cacheTimestamp": 1748030282
+  },
+  {
+    "UUID": "7e9c8145-81f8-42f6-bb35-73c2571cd4c7",
+    "questionData": {
+      "explanation_of_Question": "這段話比較了兩種學習新語言的方法：沉浸式學習法和結構式學習法。作者客觀地描述了兩種方法的特點、優缺點，使用了『On one hand』、『On the other hand』等表達來呈現對比，並且沒有表達明顯的偏好或強烈情感。這表明作者的態度是呈現兩種觀點，讓讀者自行比較或了解其差異，屬於客觀分析的態度。選項 A 和 B 表達了偏好，與文章的客觀描述不符；選項 D 的誇大其詞與文章平實的語氣不符。",
+      "options": [
+        {
+          "id": "A",
+          "text": "Strongly advocating for the immersion method."
+        },
+        {
+          "id": "B",
+          "text": "Dismissing the structured learning method as ineffective."
+        },
+        {
+          "id": "C",
+          "text": "Presenting both methods objectively for consideration."
+        },
+        {
+          "id": "D",
+          "text": "Exaggerating the difficulties of language learning."
+        }
+      ],
+      "passage": "When approaching the task of learning a new language, two prominent methods often come into discussion: the immersion method and the structured learning method. On one hand, immersion involves surrounding oneself with the target language as much as possible—living in a country where it's spoken, engaging in conversations, and consuming media in that language. Proponents argue this mirrors natural language acquisition and accelerates fluency. However, it can be overwhelming for beginners and lacks explicit grammar instruction. On the other hand, structured learning relies on classroom settings, textbooks, and explicit grammar rules, progressing through lessons systematically. This method provides a solid foundation in grammar and vocabulary but may not develop conversational fluency as quickly. Both approaches have their merits and drawbacks, and the most effective path often depends on the individual learner's goals, resources, and learning style. There is no universally 'better' method; rather, it's about finding the right fit or even combining elements of both.",
+      "question": "Which of the following best describes the author's attitude towards the two language learning methods discussed?",
+      "standard_answer": "C"
+    },
+    "cacheTimestamp": 1748030282
+  },
+  {
+    "UUID": "4f515003-298a-4b3f-bd62-b29a2a0bfdee",
+    "questionData": {
+      "explanation_of_Question": "這段話描述了作者試圖自己組裝家具的經歷，充滿了無奈、笨拙和預料之外的困難，最終承認了自己的無能並轉向尋求專業幫助。從『seemingly simple』、『hubris』、『bewildering array』、『sheer defiance』、『utter defeat』等詞語以及對組裝過程的描寫，可以看出作者試圖以一種輕鬆、自嘲、帶有幽默感的語氣講述這個令人沮喪的經歷。選項 A 的嚴肅性與文章的個人化和自嘲語氣不符；選項 C 的分析性不是文章的主要目的；選項 D 的悲觀雖然經歷令人沮喪，但整體語氣更偏向於幽默地講述這個失敗而非真正的悲觀。",
+      "options": [
+        {
+          "id": "A",
+          "text": "Serious"
+        },
+        {
+          "id": "B",
+          "text": "Humorous"
+        },
+        {
+          "id": "C",
+          "text": "Analytical"
+        },
+        {
+          "id": "D",
+          "text": "Pessimistic"
+        }
+      ],
+      "passage": "Armed with only an Allen wrench and a surge of misplaced confidence, I embarked on the seemingly simple task of assembling a flat-pack bookshelf. What followed was not a smooth construction project, but a descent into furniture-building purgatory. The instructions, a minimalist diagram resembling ancient hieroglyphs, offered little guidance. Screws refused to align, dowels vanished into the carpet dimension, and panels that looked identical exhibited subtle, yet critical, differences. At one point, a piece that I was absolutely certain went one way decided, in a moment of sheer defiance, to snap clean in half. Sweat beaded on my brow, frustration mounted, and the bookshelf lay before me, a chaotic pile of wood and metal, a monument to my utter defeat. It was then, surrounded by the wreckage of my DIY dreams, that I finally admitted the undeniable truth: some tasks are best left to people who actually know what they're doing.",
+      "question": "What is the primary tone of this passage?",
+      "standard_answer": "B"
+    },
+    "cacheTimestamp": 1748030282
   }
 ]

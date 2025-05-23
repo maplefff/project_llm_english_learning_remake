@@ -1,0 +1,92 @@
+[
+  {
+    "UUID": "980f99ed-bda6-459d-b512-a98af269a424",
+    "questionData": {
+      "error_types": [
+        "時態錯誤",
+        "主謂一致",
+        "複數名詞",
+        "字詞選擇"
+      ],
+      "explanation_of_Question": "這段文字包含以下錯誤：1) 'was'應改為'were'，因為主語'people'是複數（即使前面是a lot of）；2) 'people'本身已是複數，不需要加s；3) 'sit'應改為'sat'，表示過去發生的動作；4) 'feel'應改為'felt'，表示過去的感受。",
+      "instruction": "請找出並修正這段文字中的時態、主謂一致及單複數錯誤。",
+      "original_text": "Yesterday, I went to the park. There was a lot of peoples enjoying the sunshine. A small dog played fetch with its owner. I sit on a bench and read a book. The weather was perfect and I feel very relaxed.",
+      "standard_corrections": [
+        "Yesterday, I went to the park. There were a lot of people enjoying the sunshine. A small dog played fetch with its owner. I sat on a bench and read a book. The weather was perfect and I felt very relaxed."
+      ]
+    },
+    "cacheTimestamp": 1748030361
+  },
+  {
+    "UUID": "36b23395-0b96-4f00-9855-551f8236c299",
+    "questionData": {
+      "error_types": [
+        "主謂一致",
+        "單複數錯誤",
+        "字詞選擇",
+        "冠詞使用"
+      ],
+      "explanation_of_Question": "這段文字包含以下錯誤：1) 'Data'在這種語境下常被視為複數，因此'was collected'應改為'were collected'；2) 'three month'應改為'three months'（複數）；3) 'demonstrate'的主語'analysis'是單數，動詞應改為'demonstrates'；4) 'a needing'應改為'a need'（字詞選擇錯誤）；5) 'finding'應改為'findings'，與前文的'important findings'以及後文的'recommendations'一致，表示基於這些發現。",
+      "instruction": "請修正這段報告摘要中的語法和詞彙錯誤。",
+      "original_text": "The report shows important findings. Data was collected over three month. The analysis clearly demonstrate a needing for further research. Based on this finding, recommendations are proposed.",
+      "standard_corrections": [
+        "The report shows important findings. Data were collected over three months. The analysis clearly demonstrates a need for further research. Based on these findings, recommendations are proposed."
+      ]
+    },
+    "cacheTimestamp": 1748030361
+  },
+  {
+    "UUID": "163d4573-429b-49bb-b144-e52cf61f0435",
+    "questionData": {
+      "error_types": [
+        "介詞使用",
+        "字詞選擇",
+        "單複數錯誤",
+        "句子結構"
+      ],
+      "explanation_of_Question": "這段文字包含以下錯誤：1) 'buzzling of'應改為'buzzing with'，是慣用的搭配詞；2) 'filled by'應改為'filled with'，描述充滿了什麼；3) 'telling story'應改為'telling stories'，表示講述過去的許多故事；4) 'much character'雖然語法上並非絕對錯誤，但在描述場所特性時，更自然且常用的是'a lot of character'。",
+      "instruction": "請修正這段描述性文字中的介詞、詞彙和單複數錯誤。",
+      "original_text": "The city was buzzling of activity. Streets were filled by tourists and locals. Old buildings stood tall, telling story of the past. The smell of street food was everywhere. It was a place with much character.",
+      "standard_corrections": [
+        "The city was buzzing with activity. Streets were filled with tourists and locals. Old buildings stood tall, telling stories of the past. The smell of street food was everywhere. It was a place with a lot of character."
+      ]
+    },
+    "cacheTimestamp": 1748030361
+  },
+  {
+    "UUID": "3b130329-a3d3-4206-a3f7-dc29ee6e2414",
+    "questionData": {
+      "error_types": [
+        "時態錯誤",
+        "動詞形式",
+        "標點符號",
+        "寫作風格"
+      ],
+      "explanation_of_Question": "這段電郵文字包含以下錯誤：1) 開頭的'I write'在正式或半正式電郵中應改為現在進行式'I am writing'，表示當前的目的；2) 'I have attaching'是錯誤的動詞形式，完成式結構應為'have + 過去分詞'，因此應改為'I have attached'；3) 句號'. '在'thoughts'後面應改為逗號','，因為'Please let me know your thoughts'是一個完整的祈使句，但與下一句'Best regards'之間常用逗號分隔，或直接換行。",
+      "instruction": "請修正這段電郵摘錄中的時態、動詞形式及標點符號錯誤。",
+      "original_text": "Dear Mr. Smith, I hope this email finds you well. I write to follow up on our last meeting. We discussed the project proposal. I have attaching the revised document. Please let me know your thoughts. Best regards, John Doe.",
+      "standard_corrections": [
+        "Dear Mr. Smith, I hope this email finds you well. I am writing to follow up on our last meeting. We discussed the project proposal. I have attached the revised document. Please let me know your thoughts. Best regards, John Doe."
+      ]
+    },
+    "cacheTimestamp": 1748030361
+  },
+  {
+    "UUID": "441b21d1-bd21-43f8-99eb-34c445038889",
+    "questionData": {
+      "error_types": [
+        "主謂一致",
+        "冠詞使用",
+        "介詞使用",
+        "單複數錯誤"
+      ],
+      "explanation_of_Question": "這段文字包含以下錯誤：1) 'Sampling'在此處作為不可數或集合名詞的用法，通常視為單數，故'were conducted'應改為'was conducted'；2) 'provide'的主語'analysis'是單數，動詞應改為'provides'；3) 'relationship between'通常需要冠詞，應改為'the relationship between'；4) 'for validate'是錯誤的用法，應改為不定詞'to validate'；5) 'this findings'主謂不一致，'findings'是複數，限定詞應改為'these'。",
+      "instruction": "請找出並修正這段文字中的主謂一致、冠詞、介詞及單複數錯誤。",
+      "original_text": "The study aimed to identify the factor contributing to soil erosion. Sampling were conducted in several locations. The data analysis provide insights into relationship between land use and erosion rates. Further research is necessary for validate this findings.",
+      "standard_corrections": [
+        "The study aimed to identify the factors contributing to soil erosion. Sampling was conducted in several locations. The data analysis provides insights into the relationship between land use and erosion rates. Further research is necessary to validate these findings."
+      ]
+    },
+    "cacheTimestamp": 1748030361
+  }
+]

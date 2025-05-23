@@ -1,6 +1,7 @@
 import { QuestionData242 } from './QuestionGeneratorInterface';
 import { LLMConfigService } from '../../utils/LLMConfigService';
 import GeminiAPIService from '../GeminiAPIService';
+import { PRIORITY_LEVELS } from '../../interfaces/RateLimiter';
 import { Type } from '@google/genai';
 
 const QUESTION_DATA_242_ITEM_SCHEMA = {
@@ -90,7 +91,7 @@ Return ONLY the JSON array. No markdown formatting.`;
         const response = await GeminiAPIService.getResponse(prompt, {
             responseSchema: QUESTION_DATA_242_ARRAY_SCHEMA,
             config,
-        });
+        }, PRIORITY_LEVELS.LOW, 'generator_242');
         
         if (!Array.isArray(response)) {
             console.error('[DEBUG 242_generate.ts] Invalid response type from LLM');

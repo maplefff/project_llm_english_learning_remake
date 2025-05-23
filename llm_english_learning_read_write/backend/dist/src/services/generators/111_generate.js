@@ -1,14 +1,5 @@
 "use strict";
 // llm_english_learning_read&write/backend/src/services/generators/111_generate.ts
-var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
-    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-};
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
@@ -63,9 +54,8 @@ const QUESTION_DATA_111_ARRAY_SCHEMA = {
  * @param difficultySetting The target correct answer rate (e.g., 70 for 70%).
  * @returns A Promise that resolves to an array of question data objects or null if generation fails.
  */
-function generate111Question() {
-    return __awaiter(this, arguments, void 0, function* (questionNumber = 1, historySummary = "", difficultySetting = 70) {
-        const PROMPT_TEMPLATE_1_1_1 = `You are an expert English-quiz generator for language learners.
+async function generate111Question(questionNumber = 1, historySummary = "", difficultySetting = 70) {
+    const PROMPT_TEMPLATE_1_1_1 = `You are an expert English-quiz generator for language learners.
 1. Generate exactly {QUESTION_NUMBER} multiple-choice questions. The output must be an array containing this number of question objects.
 2. Learner context: {HISTORY_SUMMARY}  
 3. Difficulty is set to: {DIFFICULTY_SETTING}% target accuracy (Adjust difficulty with reference to CEFR levels A1–C2)..  
@@ -96,39 +86,38 @@ Each object in the array must contain:
 ]
 Return ONLY the JSON array when you generate the questions. Do not include markdown keywords such as \`\`\`json in your response. 
 `;
-        let prompt = PROMPT_TEMPLATE_1_1_1;
-        prompt = prompt.replace('{QUESTION_NUMBER}', questionNumber.toString());
-        prompt = prompt.replace('{HISTORY_SUMMARY}', historySummary);
-        prompt = prompt.replace('{DIFFICULTY_SETTING}', difficultySetting.toString());
-        // 取得 LLM 設定
-        const config = LLMConfigService_1.LLMConfigService.getInstance().getConfig('1.1.1');
-        try {
-            const geminiService = GeminiAPIService_1.default;
-            // console.log("[DEBUG 111_generate.ts] Sending prompt:", prompt); // 調試時可取消註釋
-            const response = yield geminiService.getResponse(prompt, {
-                responseSchema: QUESTION_DATA_111_ARRAY_SCHEMA, // 使用陣列 Schema
-                config, // 傳遞 LLM 設定
-            });
-            // console.log("[DEBUG 111_generate.ts] Received raw response:", response); // 調試時可取消註釋
-            // 進行基本的響應驗證 (是否為數組)
-            if (!Array.isArray(response)) {
-                console.error('[DEBUG 111_generate.ts] Invalid response type from LLM: expected an array, got', typeof response, response);
-                return null; // 直接返回 null
-            }
-            // 移除 Zod 驗證邏輯
-            // 簡單驗證題目數量 (可選，但有助於調試 Prompt)
-            if (response.length !== questionNumber) {
-                console.warn(`[DEBUG 111_generate.ts] LLM returned ${response.length} questions, but ${questionNumber} were requested. Proceeding with received data.`);
-            }
-            // 假設 Gemini 的 Schema 功能已確保內部結構基本正確
-            // 如果需要更嚴格的運行時驗證，可以考慮後續添加 Zod 或類似庫
-            return response; // 返回數據陣列
+    let prompt = PROMPT_TEMPLATE_1_1_1;
+    prompt = prompt.replace('{QUESTION_NUMBER}', questionNumber.toString());
+    prompt = prompt.replace('{HISTORY_SUMMARY}', historySummary);
+    prompt = prompt.replace('{DIFFICULTY_SETTING}', difficultySetting.toString());
+    // 取得 LLM 設定
+    const config = LLMConfigService_1.LLMConfigService.getInstance().getConfig('1.1.1');
+    try {
+        const geminiService = GeminiAPIService_1.default;
+        // console.log("[DEBUG 111_generate.ts] Sending prompt:", prompt); // 調試時可取消註釋
+        const response = await geminiService.getResponse(prompt, {
+            responseSchema: QUESTION_DATA_111_ARRAY_SCHEMA, // 使用陣列 Schema
+            config, // 傳遞 LLM 設定
+        });
+        // console.log("[DEBUG 111_generate.ts] Received raw response:", response); // 調試時可取消註釋
+        // 進行基本的響應驗證 (是否為數組)
+        if (!Array.isArray(response)) {
+            console.error('[DEBUG 111_generate.ts] Invalid response type from LLM: expected an array, got', typeof response, response);
+            return null; // 直接返回 null
         }
-        catch (error) {
-            // 簡化錯誤處理：記錄錯誤並返回 null
-            console.error(`[DEBUG 111_generate.ts] Error during question generation:`, error);
-            return null;
+        // 移除 Zod 驗證邏輯
+        // 簡單驗證題目數量 (可選，但有助於調試 Prompt)
+        if (response.length !== questionNumber) {
+            console.warn(`[DEBUG 111_generate.ts] LLM returned ${response.length} questions, but ${questionNumber} were requested. Proceeding with received data.`);
         }
-    });
+        // 假設 Gemini 的 Schema 功能已確保內部結構基本正確
+        // 如果需要更嚴格的運行時驗證，可以考慮後續添加 Zod 或類似庫
+        return response; // 返回數據陣列
+    }
+    catch (error) {
+        // 簡化錯誤處理：記錄錯誤並返回 null
+        console.error(`[DEBUG 111_generate.ts] Error during question generation:`, error);
+        return null;
+    }
 }
 //# sourceMappingURL=111_generate.js.map

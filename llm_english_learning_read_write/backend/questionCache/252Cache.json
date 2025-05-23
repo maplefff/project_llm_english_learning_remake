@@ -1,0 +1,92 @@
+[
+  {
+    "UUID": "0bc67298-ddc7-48ef-b62f-f8b119f8dddd",
+    "questionData": {
+      "evaluation_criteria": {
+        "appropriateness": 5,
+        "coherence": 5,
+        "grammar": 5,
+        "task_achievement": 5,
+        "vocabulary": 5
+      },
+      "instruction": "Write an informal email to a friend inviting them to a birthday party you are hosting.",
+      "max_words": 100,
+      "min_words": 70,
+      "purpose": "Inviting a friend to a party",
+      "recipient": "Close friend",
+      "required_content": [
+        "State it's for your birthday party",
+        "Provide the date and time of the party",
+        "Give the location of the party",
+        "Ask them to let you know if they can make it (RSVP)"
+      ],
+      "sample_responses": [
+        "Hey [Friend's Name],\n\nGuess what? I'm having a birthday party to celebrate turning [Your Age]! I'd love for you to come and celebrate with me.\n\nThe party is on [Date of Party] at [Time of Party] at my place ([Your Address, or just 'my place' if they know it]). It's going to be pretty casual, just hanging out with friends.\n\nHope you can make it! Let me know if you're free by [RSVP Date, optional but helpful].\n\nSee you soon!\nBest,\n[Your Name]",
+        "Hi [Friend's Name],\n\nJust sending out invites for my birthday bash! I'm having it on [Date of Party] starting around [Time of Party] at my place. Would be awesome if you could come!\n\nLet me know if you can make it so I can get a headcount.\n\nCan't wait to celebrate!\nCheers,\n[Your Name]"
+      ],
+      "scenario": "You are organizing a birthday party and want to invite your close friend.",
+      "tone": "Informal and friendly"
+    },
+    "cacheTimestamp": 1748030474
+  },
+  {
+    "UUID": "fd88ad89-3c0c-4400-bc0d-6081a5b0ed37",
+    "questionData": {
+      "evaluation_criteria": {
+        "appropriateness": 5,
+        "coherence": 5,
+        "grammar": 5,
+        "task_achievement": 5,
+        "vocabulary": 5
+      },
+      "instruction": "Write a formal letter to a potential employer following up on a job application you submitted.",
+      "max_words": 150,
+      "min_words": 100,
+      "purpose": "Following up on a job application",
+      "recipient": "Hiring Manager",
+      "required_content": [
+        "Refer to the job position you applied for and when",
+        "Reiterate your interest in the role",
+        "Briefly mention why you are a good fit",
+        "Enquire about the status of your application"
+      ],
+      "sample_responses": [
+        "Subject: Following Up: [Job Title] Application - [Your Name]\n\nDear [Mr./Ms./Mx. Last Name of Hiring Manager, or 'Hiring Manager'],\n\nI hope this email finds you well. I am writing to follow up on my application for the [Job Title] position, which I submitted on [Date of Application].\n\nI remain very interested in this opportunity at [Company Name] and am excited about the possibility of contributing to your team. I believe my skills in [Mention 1-2 key skills] and my experience in [Mention 1-2 key experiences] align well with the requirements outlined for this role.\n\nI would appreciate an update on the status of my application and the timeline for the next steps in the hiring process.\n\nThank you for considering my application. I look forward to hearing from you soon.\n\nSincerely,\n[Your Name]\n[Your Phone Number]\n[Your Email Address]",
+        "Dear [Hiring Manager Name or Title],\n\nThis email is a follow-up to my application for the [Job Title] position at [Company Name], which I submitted on [Date].\n\nI am writing to reiterate my strong interest in this role and company. I am particularly drawn to [Mention something specific about the company or role] and am confident my background in [Area of Expertise] makes me a suitable candidate.\n\nCould you please provide an update on the status of my application?\n\nThank you for your time and consideration. I am eager to hear from you.\n\nBest regards,\n[Your Name]"
+      ],
+      "scenario": "You have applied for a job but haven't heard back within the expected timeframe.",
+      "tone": "Formal and professional"
+    },
+    "cacheTimestamp": 1748030474
+  },
+  {
+    "UUID": "dc26c730-7ccc-4a2e-9c4a-1b52d21ae835",
+    "questionData": {
+      "evaluation_criteria": {
+        "appropriateness": 5,
+        "coherence": 5,
+        "grammar": 5,
+        "task_achievement": 5,
+        "vocabulary": 5
+      },
+      "instruction": "Write an email to your landlord informing them about a necessary repair in your apartment.",
+      "max_words": 120,
+      "min_words": 80,
+      "purpose": "Reporting a repair issue",
+      "recipient": "Landlord",
+      "required_content": [
+        "State your apartment number and address",
+        "Clearly describe the repair needed (e.g., leaking faucet, broken window)",
+        "Explain any inconvenience or potential damage caused by the issue",
+        "Request that the repair be addressed promptly"
+      ],
+      "sample_responses": [
+        "Subject: Repair Request - Apartment #[Your Apartment Number]\n\nDear [Landlord's Name],\n\nI am writing to inform you of a repair needed at my apartment, [Your Apartment Number], located at [Your Building Address].\n\nCurrently, the [Specific item, e.g., kitchen faucet] is [Describe the problem, e.g., leaking constantly, making a loud noise]. This issue started on [Date or approximately when]. The leak is causing [Mention consequence, e.g., water wastage, potential damage to the cabinet below].\n\nCould you please arrange for this repair to be fixed as soon as possible? Please let me know when a maintenance person might be available.\n\nThank you for your attention to this matter.\n\nSincerely,\n[Your Name]\n[Your Phone Number]",
+        "To [Landlord's Name],\n\nThis email is to report a needed repair in Apartment [Your Apartment Number] at [Your Address].\n\nThe [Specific item, e.g., bathroom fan] is [Describe the problem, e.g., no longer working, making excessive noise]. This prevents proper ventilation in the bathroom.\n\nI would appreciate it if you could schedule a repair at your earliest convenience.\n\nThank you,\n[Your Name]"
+      ],
+      "scenario": "Something in your rented apartment is broken and needs to be repaired by the landlord.",
+      "tone": "Formal and clear"
+    },
+    "cacheTimestamp": 1748030474
+  }
+]

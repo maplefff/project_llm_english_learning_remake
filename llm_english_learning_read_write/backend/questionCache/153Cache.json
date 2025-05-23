@@ -1,8 +1,8 @@
 [
   {
-    "UUID": "2d41cf24-c077-42ae-a37c-4026be9744c8",
+    "UUID": "a0f83d22-5cd4-485e-b138-9192bf395dec",
     "questionData": {
-      "explanation_of_Question": "這篇文章首先描述了森林砍伐（原因），然後詳細闡述了由此產生的幾種影響或後果，包括土壤侵蝕、生物棲地喪失和氣候變化。這種結構清晰地呈現了某個行動（砍伐森林）如何導致一系列結果。選項 A 的時間順序不符合；選項 C 的問題-解決方案結構不是主要重點，文中沒有提出解決方案；選項 D 的分類結構與文章內容不符。",
+      "explanation_of_Question": "這篇文章以因果結構為主。它先提出森林砍伐 (一個原因)，然後詳細列舉了由此產生的一系列影響或後果，例如生物多樣性喪失、對氣候變遷的影響、土壤侵蝕以及對原住民社區的影響。選項 A 的時間順序不符。選項 B 的問題-解決方案結構不符，文章側重於問題的後果而非解決方案。選項 C 的分類不符，文章不是在分類森林砍伐的不同類型。選項 D 精確描述了文章從一個原因引出多個結果的結構。",
       "options": [
         {
           "id": "A",
@@ -10,105 +10,133 @@
         },
         {
           "id": "B",
-          "text": "Cause and effect"
+          "text": "Problem and multiple solutions"
         },
         {
           "id": "C",
-          "text": "Problem and solution"
+          "text": "Classification of deforestation types"
         },
         {
           "id": "D",
-          "text": "Classification"
+          "text": "A single cause leading to multiple effects"
         }
       ],
-      "passage": "Deforestation, the clearing of forests for other land uses, has become a significant environmental issue globally. This widespread destruction is primarily driven by agricultural expansion, logging, and urbanization. As a result of deforestation, several detrimental consequences occur. First, it leads to massive soil erosion because tree roots are no longer present to hold the soil together, particularly on slopes. Consequently, sediment pollutes rivers and harms aquatic life. Furthermore, deforestation causes habitat loss for countless species, pushing many towards extinction as their ecosystems are destroyed. Another major effect is the impact on climate change; forests absorb carbon dioxide, and their removal releases stored carbon, contributing to greenhouse gas concentrations. Ultimately, the loss of forests disrupts local weather patterns and can lead to desertification in vulnerable areas.",
-      "question": "What is the primary organizational pattern used in this passage?",
-      "standard_answer": "B"
+      "passage": "Deforestation has profound and far-reaching consequences for both the environment and human societies. One of the most immediate effects is the loss of biodiversity, as countless species lose their habitats when forests are cleared. Furthermore, the removal of trees significantly impacts climate change. Trees absorb carbon dioxide, a major greenhouse gas; therefore, cutting them down releases stored carbon and reduces the planet's capacity to absorb more, leading to increased atmospheric CO2 levels and contributing to global warming. Additionally, deforestation can cause soil erosion. Tree roots help bind the soil together, and without them, heavy rains can wash away the topsoil, making the land less fertile and potentially silting up rivers and streams. This erosion can also lead to increased flooding downstream. Finally, indigenous communities often rely on forests for their livelihood and culture, and deforestation can displace these populations and disrupt their traditional ways of life. As a result of these combined effects, deforestation is a critical global issue requiring urgent action.",
+      "question": "Which organizational pattern is primarily used to structure the information in this passage?",
+      "standard_answer": "D"
     },
-    "cacheTimestamp": 1747994431
+    "cacheTimestamp": 1748030309
   },
   {
-    "UUID": "b5f80c2b-9380-4b2e-a8b9-cd5569f5db74",
+    "UUID": "e4030681-9ffb-4149-8715-5b313acce1f1",
     "questionData": {
-      "explanation_of_Question": "這篇文章的主要目的是比較和對比傳統課堂學習與線上學習。文章首先提到兩者都是有效的教育方式，然後分別討論它們的特點，例如傳統學習的即時互動、固定時間和地點，與線上學習的彈性、自主性、技術依賴等。這種結構明確地呈現了兩種不同學習模式的相似點和不同點。選項 A 的因果關係不符合；選項 B 的時間順序不符合；選項 D 的分類結構不是主要目的，文章不是在將學習方式分類，而是在比較。",
+      "explanation_of_Question": "這篇文章的主要目的是比較和對比兩種閱讀形式：傳統紙本書和電子書。文章分別討論了它們各自的優點和缺點，並使用了對比詞語如 'In contrast', 'However', 'On the other hand' 來組織資訊。選項 A 的歷史發展不符。選項 B 的分類不符，文章只討論了兩種類型而非廣泛分類。選項 D 的流程大綱不符，文章沒有提供選擇指南。",
       "options": [
         {
           "id": "A",
-          "text": "Cause and effect"
+          "text": "To explain the historical development of reading formats"
         },
         {
           "id": "B",
-          "text": "Chronological order"
+          "text": "To classify different types of reading technology"
         },
         {
           "id": "C",
-          "text": "Compare and contrast"
+          "text": "To highlight the similarities and differences between two subjects"
         },
         {
           "id": "D",
-          "text": "Classification"
+          "text": "To outline a process for choosing a reading format"
         }
       ],
-      "passage": "Traditional classroom learning and online learning represent two distinct yet effective approaches to education. In traditional settings, students attend physical classes at fixed times, benefiting from face-to-face interaction with instructors and peers. This environment often fosters immediate discussion and builds a strong sense of community. In contrast, online learning offers greater flexibility, allowing students to access materials and participate in discussions at their own pace and schedule, often from anywhere. While traditional learning relies heavily on physical resources like libraries and labs on campus, online learning requires reliable internet access and digital literacy. Both methods necessitate self-discipline and engagement, but the structure and delivery of content differ significantly. Ultimately, the choice between them often depends on individual learning styles, circumstances, and the nature of the subject matter.",
-      "question": "Which organizational pattern does the author primarily use to structure this passage?",
+      "passage": "Traditional printed books and modern e-books offer readers distinct advantages and disadvantages. Physical books provide a tactile experience; many readers enjoy the feel of paper, the smell of ink, and the visual satisfaction of seeing their progress through turning pages. They also don't require batteries or electronic devices, making them reliable anywhere. In contrast, e-books offer unparalleled convenience and portability. A single e-reader device can store thousands of titles, allowing users to carry an entire library in their bag. E-books often include searchable text, adjustable font sizes, and built-in dictionaries, enhancing accessibility. However, e-readers depend on battery life and screens can cause eye strain. Furthermore, some readers feel a lack of ownership compared to physical copies and miss the ability to easily share or sell used books. On the other hand, physical books take up significant space, can be heavy, and printing has environmental costs, unlike the digital distribution of e-books. Both formats have their merits, appealing to different preferences and reading situations.",
+      "question": "What is the main purpose of the structure used in this passage?",
       "standard_answer": "C"
     },
-    "cacheTimestamp": 1747994431
+    "cacheTimestamp": 1748030309
   },
   {
-    "UUID": "0b5c989d-c9e6-4d9c-a48b-fd3ce57a6c86",
+    "UUID": "30b45888-40c5-40da-b63c-789bfae6876b",
     "questionData": {
-      "explanation_of_Question": "這篇文章首先介紹了再生能源的概念，然後列舉並描述了幾種不同的再生能源類型（太陽能、風能、水力發電、地熱能、生質能）。這種結構是將一個廣泛的主題（再生能源）細分為不同的類別或種類，並對每個類別進行解釋，這就是分類的組織模式。選項 A 的時間順序不符合；選項 C 的問題-解決方案不符合；選項 D 的因果關係不符合。",
+      "explanation_of_Question": "這篇文章採用了分類結構來組織資訊。作者將可再生能源這個主題劃分為幾個不同的類別，並分別描述了太陽能、風能、水力、地熱能、生物質能和海洋能這幾種類型。選項 A 的技術演變不符。選項 B 的問題列表不符，文章主要描述類型而非問題。選項 D 的因果關係不符，文章側重於分類而非解釋因果。",
       "options": [
         {
           "id": "A",
-          "text": "Chronological order"
+          "text": "By describing the evolution of renewable energy technology"
         },
         {
           "id": "B",
-          "text": "Classification"
+          "text": "By listing problems associated with each energy type"
         },
         {
           "id": "C",
-          "text": "Problem and solution"
+          "text": "By dividing them into distinct categories"
         },
         {
           "id": "D",
-          "text": "Cause and effect"
+          "text": "By explaining the cause-and-effect relationship of renewable energy use"
         }
       ],
-      "passage": "Renewable energy comes from sources that are naturally replenished on a human timescale. Unlike fossil fuels, which are finite, these sources offer a sustainable alternative for power generation. There are several main types of renewable energy currently in use. Solar energy harnesses sunlight using photovoltaic panels to generate electricity. Wind energy captures kinetic energy from moving air with turbines. Hydroelectric power is generated by capturing the energy of moving water, typically from rivers or dams. Geothermal energy utilizes heat from within the Earth's core. Finally, biomass energy comes from organic materials like plants and animal waste, which can be burned or converted into fuel. Each of these types plays a crucial role in transitioning towards a more sustainable global energy system.",
-      "question": "By breaking down renewable energy into different types, what organizational pattern is primarily used in this passage?",
-      "standard_answer": "B"
-    },
-    "cacheTimestamp": 1747994431
-  },
-  {
-    "UUID": "b587ec9e-d2a2-4ec0-aa74-afcb02d372f8",
-    "questionData": {
-      "explanation_of_Question": "這篇文章提供了一個如何用手沖壺（pour-over）沖泡咖啡的逐步指南。它使用了 'First', 'Next', 'Then', 'After that', 'Finally' 等詞語來標示一系列需要按照特定順序執行的動作，從準備到完成。這種按照時間順序或步驟來解釋如何做某事的結構，就是過程或序列的組織模式。選項 A 的空間描述不符合；選項 B 的因果關係不符合；選項 D 的比較對比不符合。",
-      "options": [
-        {
-          "id": "A",
-          "text": "Spatial description"
-        },
-        {
-          "id": "B",
-          "text": "Cause and effect"
-        },
-        {
-          "id": "C",
-          "text": "Process or sequence"
-        },
-        {
-          "id": "D",
-          "text": "Compare and contrast"
-        }
-      ],
-      "passage": "Brewing coffee using the pour-over method can yield a remarkably clean and flavorful cup. To begin the process, first, gather your equipment: a pour-over cone, filter paper, fresh coffee beans, a grinder, a kettle, and a mug or carafe. Next, heat your water to the optimal temperature, usually between 195-205°F (90-96°C). While the water heats, grind your coffee beans to a medium-fine consistency. Then, place the filter paper in the cone and rinse it with hot water; this removes any papery taste and preheats the cone. After that, discard the rinse water and add the ground coffee to the filter. Finally, slowly pour the hot water over the grounds in a circular motion, starting from the center and working outwards, allowing the coffee to drip into the container below. Repeat until the desired amount is brewed.",
-      "question": "The passage describes how to perform a specific task. What organizational pattern is most evident?",
+      "passage": "Renewable energy sources, which replenish naturally over a human timescale, can be broadly categorized into several key types. One major category is solar energy, which harnesses sunlight using photovoltaic panels or concentrated solar power systems. Another significant type is wind energy, captured by turbines that convert the kinetic energy of moving air into electricity. Hydropower is also a crucial source, generating power from the energy of flowing or falling water, typically through dams or run-of-river systems. Geothermal energy utilizes the Earth's internal heat, tapping into underground reservoirs of hot water or steam. Biomass energy is derived from organic matter, such as plants, wood, or waste, which can be burned directly or converted into biofuels. Ocean energy, a less developed but promising category, includes tidal energy and wave energy. These different types offer distinct technologies and are suitable for varying geographical and climatic conditions, collectively contributing to a sustainable energy future.",
+      "question": "How does the author organize the information about renewable energy sources?",
       "standard_answer": "C"
     },
-    "cacheTimestamp": 1747994431
+    "cacheTimestamp": 1748030309
+  },
+  {
+    "UUID": "09f0cd3c-645a-4b41-a291-2157c28bf0e1",
+    "questionData": {
+      "explanation_of_Question": "這篇文章使用了順序或過程結構來解釋水淨化的過程。文章詳細列出了從原水到飲用水的幾個連續階段，並使用了 'First', 'Next', 'then', 'Following', 'After', 'Finally' 等表示順序的過渡詞。選項 A 的空間佈局不符。選項 C 的不同方法比較不符。選項 D 的一般原則後接具體例子不符，文章是描述一個具體的流程。",
+      "options": [
+        {
+          "id": "A",
+          "text": "Spatial arrangement of the water treatment plant"
+        },
+        {
+          "id": "B",
+          "text": "Steps in a chronological or sequential process"
+        },
+        {
+          "id": "C",
+          "text": "Comparison of different purification methods"
+        },
+        {
+          "id": "D",
+          "text": "General principles of water chemistry followed by specific examples"
+        }
+      ],
+      "passage": "The process of purifying water to make it safe for drinking involves several distinct stages. First, raw water from a source like a river or lake undergoes screening to remove large debris such as leaves, sticks, and trash. Next, chemicals like coagulants are added to the water. These chemicals cause tiny particles suspended in the water, like dirt and silt, to clump together into larger, heavier particles called floc. The water then moves to sedimentation tanks, where the heavy floc settles to the bottom and is removed. Following sedimentation, the water passes through filtration. Filters, often made of sand, gravel, and charcoal, remove smaller particles, impurities, and microorganisms that did not settle out. After filtration, disinfection is crucial. Chlorine, ozone, or UV light is used to kill any remaining bacteria, viruses, and other harmful pathogens. Finally, the treated water is stored in reservoirs or towers and distributed to homes and businesses through a network of pipes, ready for safe consumption.",
+      "question": "The passage explains the water purification process by using which organizational structure?",
+      "standard_answer": "B"
+    },
+    "cacheTimestamp": 1748030309
+  },
+  {
+    "UUID": "e8a889b5-e1f0-439c-84ad-a3d0e194b166",
+    "questionData": {
+      "explanation_of_Question": "這篇文章採用了從一般到具體的組織結構。文章首先給出人工智慧 (AI) 的廣泛定義，然後進一步細分為不同類型（如窄義 AI、廣義 AI）並提供具體的例子，如虛擬助理、推薦引擎等。選項 A 的論證效益不符。選項 C 雖然有提及與人類智慧相關，但不是主要結構。選項 D 的歷史時間線不符。",
+      "options": [
+        {
+          "id": "A",
+          "text": "By arguing for the benefits of AI"
+        },
+        {
+          "id": "B",
+          "text": "By starting with a definition and then providing specific examples and types"
+        },
+        {
+          "id": "C",
+          "text": "By comparing AI to human intelligence"
+        },
+        {
+          "id": "D",
+          "text": "By outlining the historical timeline of AI development"
+        }
+      ],
+      "passage": "Artificial intelligence (AI) is a broad field of computer science focused on creating machines capable of performing tasks that typically require human intelligence. These tasks include learning, problem-solving, perception, and language understanding. At a general level, AI systems are designed to analyze data, make decisions, and adapt based on new information. More specifically, AI can be categorized into different types. Narrow AI, also known as Weak AI, is designed and trained for a particular task, like recognizing images or playing chess. Examples include virtual assistants like Siri and Alexa, recommendation engines used by streaming services, and facial recognition software. General AI, or Strong AI, is hypothetical and refers to machines with intellectual abilities comparable to humans across a wide range of tasks. Superintelligence, another theoretical level, would surpass human intellect. While General and Super AI are still in the realm of speculation, Narrow AI is already widely integrated into our daily lives, transforming industries from healthcare to finance.",
+      "question": "What is the primary way the author presents information about Artificial Intelligence?",
+      "standard_answer": "B"
+    },
+    "cacheTimestamp": 1748030309
   }
 ]
