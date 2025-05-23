@@ -1,0 +1,142 @@
+[
+  {
+    "UUID": "bca74ea3-a007-4605-99c3-de09dd2c3edf",
+    "questionData": {
+      "explanation_of_Question": "指出「災難性的」、「環境有害的材料」、「剝削勞工」、「設計成一次性」、「有毒化學物質」、「無止盡的浪費和剝削」等詞語，表明作者對快速時尚產業持非常批判和擔憂的態度。",
+      "options": [
+        {
+          "id": "A",
+          "text": "Indifferent and balanced"
+        },
+        {
+          "id": "B",
+          "text": "Enthusiastic and supportive"
+        },
+        {
+          "id": "C",
+          "text": "Highly critical and concerned"
+        },
+        {
+          "id": "D",
+          "text": "Mildly skeptical but hopeful"
+        }
+      ],
+      "passage": "Fast fashion's relentless cycle of production and consumption is nothing short of catastrophic for the planet. We are churning out billions of garments annually, often using environmentally harmful materials and exploiting labor in developing countries. These clothes are designed to be disposable, worn a few times before ending up in overflowing landfills, where they leach toxic chemicals into the soil and water. The industry markets fleeting trends, convincing consumers they need constant wardrobe updates, fueling this unsustainable machine. It's time we stopped chasing cheap clothes and started demanding transparency and sustainability from brands. Our planet, and the people who make our clothes, deserve better than this endless cycle of waste and exploitation.",
+      "question": "What is the author's attitude towards the fast fashion industry?",
+      "standard_answer": "C"
+    },
+    "cacheTimestamp": 1747994487
+  },
+  {
+    "UUID": "6403c1cd-2ece-471d-8fd6-020f144769f4",
+    "questionData": {
+      "explanation_of_Question": "作者列舉了步行對身心健康的許多好處，並以「could be the most impactful decision」、「Start today, and see the difference it makes」等鼓勵性語言，明顯是為了說服讀者開始每天步行。",
+      "options": [
+        {
+          "id": "A",
+          "text": "To describe the history of walking for exercise"
+        },
+        {
+          "id": "B",
+          "text": "To inform readers about the different types of physical activity"
+        },
+        {
+          "id": "C",
+          "text": "To persuade readers to start walking daily"
+        },
+        {
+          "id": "D",
+          "text": "To compare walking with other forms of exercise"
+        }
+      ],
+      "passage": "If you want to unlock your full potential, integrating a simple 30-minute daily walk into your routine could be the most impactful decision you make today. Beyond the obvious physical benefits – improved cardiovascular health, weight management, increased energy levels – walking offers profound mental advantages. It's a powerful stress reducer, a creativity booster, and provides a valuable opportunity for mindfulness and reflection in our increasingly hectic lives. Forget expensive gym memberships or complex workout regimes. A brisk walk, perhaps listening to a podcast or simply observing the world around you, is accessible to almost everyone, requiring nothing more than comfortable shoes and a willingness to move. Don't underestimate the cumulative power of this small habit; it can transform your health, your mood, and your overall well-being. Start today, and see the difference it makes.",
+      "question": "What is the main purpose of this passage?",
+      "standard_answer": "C"
+    },
+    "cacheTimestamp": 1747994487
+  },
+  {
+    "UUID": "4b9bcddf-a50b-4f4f-b985-96f6c014861f",
+    "questionData": {
+      "explanation_of_Question": "文章中使用了「true strength is forged」、「lesson disguised」、「resilience we didn't know we possessed」、「overcoming obstacles」、「learning from mistakes」、「persisting despite adversity」、「opportunity to learn, adapt, and grow stronger」、「turn setbacks into stepping stones」等詞語，充滿了積極向上和鼓勵的語氣，旨在激勵讀者克服困難。",
+      "options": [
+        {
+          "id": "A",
+          "text": "Pessimistic and resigned"
+        },
+        {
+          "id": "B",
+          "text": "Critical and judgmental"
+        },
+        {
+          "id": "C",
+          "text": "Optimistic and encouraging"
+        },
+        {
+          "id": "D",
+          "text": "Neutral and informative"
+        }
+      ],
+      "passage": "Facing a setback can feel like hitting an insurmountable wall. The disappointment, the frustration, the temptation to give up – it's all very real. However, it's precisely in these moments of challenge that our true strength is forged. Every stumble is not a failure, but a lesson disguised, pointing us towards a better path or revealing a resilience we didn't know we possessed. The most inspiring stories of achievement are rarely tales of smooth sailing; they are narratives of overcoming obstacles, learning from mistakes, and persisting despite adversity. Don't let a temporary defeat define you. See it as an opportunity to learn, adapt, and grow stronger. The path forward may be difficult, but with courage and perseverance, you have the power to turn setbacks into stepping stones towards your ultimate success.",
+      "question": "What is the author's tone throughout the passage?",
+      "standard_answer": "C"
+    },
+    "cacheTimestamp": 1747994487
+  },
+  {
+    "UUID": "e88b2b6d-b040-4936-b5e4-f88df2cdf010",
+    "questionData": {
+      "explanation_of_Question": "文章詳細描述了光合作用的步驟和機制，從捕捉陽光到將二氧化碳轉化為葡萄糖， clearly aiming to inform the reader about how the process works.",
+      "options": [
+        {
+          "id": "A",
+          "text": "Argue for the importance of plants"
+        },
+        {
+          "id": "B",
+          "text": "Describe the visual appearance of photosynthesis"
+        },
+        {
+          "id": "C",
+          "text": "Explain the process of photosynthesis"
+        },
+        {
+          "id": "D",
+          "text": "Persuade readers to study botany"
+        }
+      ],
+      "passage": "Photosynthesis, the process by which green plants and some other organisms use sunlight to synthesize foods with the help of chlorophyll, is fundamental to life on Earth. This incredible biochemical reaction converts light energy into chemical energy, stored in glucose. It begins when chlorophyll pigments in plant cells capture photons from sunlight. Inside the chloroplasts, water absorbed by the roots is split, releasing oxygen (which we breathe) and electrons. Carbon dioxide from the atmosphere enters the leaves, and using the energy captured from sunlight and the electrons from water, the plant converts the carbon dioxide into glucose, a simple sugar that serves as food. This process not only provides energy for the plant itself but also forms the base of most food chains and regulates atmospheric carbon dioxide levels, making it a cornerstone of our planet's ecosystem.",
+      "question": "The main purpose of this passage is to:",
+      "standard_answer": "C"
+    },
+    "cacheTimestamp": 1747994487
+  },
+  {
+    "UUID": "86871768-11ab-4f62-8bd4-df38f8f7ddee",
+    "questionData": {
+      "explanation_of_Question": "作者使用了反語和誇張的詞語，例如「Oh, yes」、「more corporate jargon and less actual work」、「immensely valuable」（用星號強調反諷意味）、「thrilling prospect」、「innovation happening!」（反諷），明顯表達對強制會議的不滿和嘲諷，語氣帶有諷刺和批判性。",
+      "options": [
+        {
+          "id": "A",
+          "text": "Enthusiastic and engaged"
+        },
+        {
+          "id": "B",
+          "text": "Sarcastic and critical"
+        },
+        {
+          "id": "C",
+          "text": "Neutral and objective"
+        },
+        {
+          "id": "D",
+          "text": "Anxious and apprehensive"
+        }
+      ],
+      "passage": "Oh, yes, another mandatory all-hands meeting to discuss \"synergy\" and \"leveraging our core competencies.\" Because clearly, what we need right now is more corporate jargon and less actual work getting done. I'm sure listening to Brian from Marketing explain his groundbreaking new strategy for \"disrupting the paradigm\" for the 17th time this quarter will be *immensely* valuable. And let's not forget the thrilling prospect of \"brainstorming sessions\" where the loudest person's idea somehow becomes the \"innovative solution,\" regardless of its practicality. Honestly, the productivity boost gained from sitting in a windowless room for two hours, pretending to be engaged, is simply unparalleled. I can practically feel the innovation happening! If only we could bottle this meeting magic and sprinkle it on our actual tasks, we might actually achieve something.",
+      "question": "What is the author's tone regarding the mandatory meeting?",
+      "standard_answer": "B"
+    },
+    "cacheTimestamp": 1747994487
+  }
+]

@@ -1,89 +1,5 @@
 [
   {
-    "UUID": "a4f8a5b3-194d-4f8c-87dd-bf47e5308fa0",
-    "questionData": {
-      "passage": "The witness was asked to _______ exactly what she saw at the scene of the accident.",
-      "question": "Choose the best word to complete the sentence.",
-      "options": [
-        {
-          "id": "A",
-          "text": "invent"
-        },
-        {
-          "id": "B",
-          "text": "forget"
-        },
-        {
-          "id": "C",
-          "text": "exaggerate"
-        },
-        {
-          "id": "D",
-          "text": "describe"
-        }
-      ],
-      "standard_answer": "D",
-      "explanation_of_Question": "句子要求證人準確地說出她在事故現場看到了什麼。選項 D「describe」意為描述、形容，最符合語境。選項 A「invent」意為發明、虛構，選項 B「forget」意為忘記，選項 C「exaggerate」意為誇大，這些都不適合用於證人如實陳述所見的情況。"
-    },
-    "cacheTimestamp": 1747946003
-  },
-  {
-    "UUID": "aef2bec6-626c-48fc-9140-166a5a7e215c",
-    "questionData": {
-      "passage": "The company is planning to _______ its operations into new international markets next year.",
-      "question": "Choose the best word to complete the sentence.",
-      "options": [
-        {
-          "id": "A",
-          "text": "contract"
-        },
-        {
-          "id": "B",
-          "text": "restrict"
-        },
-        {
-          "id": "C",
-          "text": "shrink"
-        },
-        {
-          "id": "D",
-          "text": "expand"
-        }
-      ],
-      "standard_answer": "D",
-      "explanation_of_Question": "句子描述公司計劃明年將業務擴展到新的國際市場。選項 D「expand」意為擴展、擴大，最符合語義。選項 A「contract」意為收縮、縮小，選項 B「restrict」意為限制，選項 C「shrink」意為縮小、減少，這些詞的意思都與「擴展業務」相反。"
-    },
-    "cacheTimestamp": 1747946003
-  },
-  {
-    "UUID": "0a95f775-50a2-48e1-a804-24c05314cb87",
-    "questionData": {
-      "passage": "He was very _______ about his chances of winning the competition, despite strong opponents.",
-      "question": "Choose the best word to complete the sentence.",
-      "options": [
-        {
-          "id": "A",
-          "text": "doubtful"
-        },
-        {
-          "id": "B",
-          "text": "hesitant"
-        },
-        {
-          "id": "C",
-          "text": "uncertain"
-        },
-        {
-          "id": "D",
-          "text": "confident"
-        }
-      ],
-      "standard_answer": "D",
-      "explanation_of_Question": "句子說即使面對強勁的對手，他對贏得比賽的機會仍然如何。選項 D「confident」意為有信心的，與「despite strong opponents」（儘管有強勁對手）形成對比，表示他對自己很有信心。選項 A「doubtful」意為懷疑的，選項 B「hesitant」意為猶豫的，選項 C「uncertain」意為不確定的，這三個詞都表示缺乏信心或猶豫，不符合語境。"
-    },
-    "cacheTimestamp": 1747946003
-  },
-  {
     "UUID": "74c1debf-8c8e-4fb8-9553-cdd812d6ad35",
     "questionData": {
       "passage": "It is _______ for students to submit their assignments by Friday morning.",
@@ -110,5 +26,89 @@
       "explanation_of_Question": "句子說明學生必須在週五早上提交作業。選項 D「mandatory」意為強制性的、必須履行的，最符合語境。選項 A「optional」意為可選的，選項 B「suggested」意為被建議的，選項 C「voluntary」意為自願的，這三個詞都表示非必須的或自願的，與句子中「必須提交」的意思不符。"
     },
     "cacheTimestamp": 1747946003
+  },
+  {
+    "UUID": "4b505f22-c948-4168-8070-925c58cf8f4a",
+    "questionData": {
+      "explanation_of_Question": "「expand」意為擴展、擴大。公司計劃將業務擴展到亞洲市場，因此選項 B 正確。選項 A「condense」意為濃縮；選項 C「shrink」意為縮小；選項 D「restrict」意為限制，這些選項都不符合語境。",
+      "options": [
+        {
+          "id": "A",
+          "text": "condense"
+        },
+        {
+          "id": "B",
+          "text": "expand"
+        },
+        {
+          "id": "C",
+          "text": "shrink"
+        },
+        {
+          "id": "D",
+          "text": "restrict"
+        }
+      ],
+      "passage": "The company is planning to _______ its operations into the Asian market next year.",
+      "question": "Choose the best word to complete the sentence.",
+      "standard_answer": "B"
+    },
+    "cacheTimestamp": 1747995377
+  },
+  {
+    "UUID": "827502d3-0bc6-4931-87fe-81649f1d6681",
+    "questionData": {
+      "explanation_of_Question": "「exhausted」意為筋疲力盡的、極度疲倦的。連續工作十小時後，她感到筋疲力盡，需要休息，因此選項 C 正確。選項 A「energetic」意為精力充沛的；選項 B「refreshed」意為精神煥發的；選項 D「stimulated」意為受到刺激的，這些選項都不符合語境。",
+      "options": [
+        {
+          "id": "A",
+          "text": "energetic"
+        },
+        {
+          "id": "B",
+          "text": "refreshed"
+        },
+        {
+          "id": "C",
+          "text": "exhausted"
+        },
+        {
+          "id": "D",
+          "text": "stimulated"
+        }
+      ],
+      "passage": "After working for ten hours straight, she felt completely _______ and needed a long rest.",
+      "question": "Choose the best word to complete the sentence.",
+      "standard_answer": "C"
+    },
+    "cacheTimestamp": 1747995377
+  },
+  {
+    "UUID": "a4f26014-fd97-463a-badd-ce73956cccec",
+    "questionData": {
+      "explanation_of_Question": "「conclusive」意為決定性的、確鑿的。在法庭上提出的證據不夠確鑿，無法說服陪審團被告有罪，因此選項 C 正確。選項 A「ambiguous」意為模稜兩可的；選項 B「trivial」意為瑣碎的；選項 D「preliminary」意為初步的，這些選項都不符合語境。",
+      "options": [
+        {
+          "id": "A",
+          "text": "ambiguous"
+        },
+        {
+          "id": "B",
+          "text": "trivial"
+        },
+        {
+          "id": "C",
+          "text": "conclusive"
+        },
+        {
+          "id": "D",
+          "text": "preliminary"
+        }
+      ],
+      "passage": "The evidence presented in court was not _______ enough to convince the jury of the defendant's guilt.",
+      "question": "Choose the best word to complete the sentence.",
+      "standard_answer": "C"
+    },
+    "cacheTimestamp": 1747995377
   }
 ]

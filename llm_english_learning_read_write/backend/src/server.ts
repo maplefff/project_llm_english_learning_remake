@@ -1,5 +1,5 @@
 // Backend server entry point
-import questionCacheServiceInstance from './services/QuestionCacheService';
+import questionCacheServiceInstance from './services/QuestionCacheService_v2';
 import app from './app'; // 導入 Express app
 
 console.log('Hello from backend server.ts');

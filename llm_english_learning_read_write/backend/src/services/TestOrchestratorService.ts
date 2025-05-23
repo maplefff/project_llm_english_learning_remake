@@ -1,6 +1,12 @@
 import { QuestionCacheService } from './QuestionCacheService';
 import actualQuestionCacheServiceInstance from './QuestionCacheService';
-import { QuestionData111 as GeneratorQuestionData111, QuestionData112 as GeneratorQuestionData112, Option } from './generators/QuestionGeneratorInterface';
+import { 
+  QuestionData111 as GeneratorQuestionData111, 
+  QuestionData112 as GeneratorQuestionData112,
+  QuestionData122 as GeneratorQuestionData122,
+  QuestionData123 as GeneratorQuestionData123,
+  Option 
+} from './generators/QuestionGeneratorInterface';
 import { saveHistoryEntry, HistoryEntry, QuestionData as HistoryServiceQuestionData } from './HistoryService';
 
 /**
@@ -19,7 +25,23 @@ export interface TestOrchestratorQuestion112 extends GeneratorQuestionData112 {
   explanation?: string; // 最終提供給前端的解釋欄位名 (映射自 explanation_of_Question)
 }
 
-export type TestOrchestratorQuestion = TestOrchestratorQuestion111 | TestOrchestratorQuestion112;
+export interface TestOrchestratorQuestion122 extends GeneratorQuestionData122 {
+  id: string;           // 題目的唯一 ID (來自快取的 UUID)
+  type: '1.2.2';      // 題型
+  explanation?: string; // 最終提供給前端的解釋欄位名 (映射自 explanation_of_Question)
+}
+
+export interface TestOrchestratorQuestion123 extends GeneratorQuestionData123 {
+  id: string;           // 題目的唯一 ID (來自快取的 UUID)
+  type: '1.2.3';      // 題型
+  explanation?: string; // 最終提供給前端的解釋欄位名 (映射自 explanation_of_Question)
+}
+
+export type TestOrchestratorQuestion = 
+  | TestOrchestratorQuestion111 
+  | TestOrchestratorQuestion112 
+  | TestOrchestratorQuestion122 
+  | TestOrchestratorQuestion123;
 
 /**
  * 假設 QuestionCacheService.getQuestionFromCache 返回的結構。
@@ -60,6 +82,24 @@ class TestOrchestratorService {
       ...questionBody,
       id: cacheId,
       type: '1.1.2',
+      explanation: questionBody.explanation_of_Question, // 映射欄位名
+    };
+  }
+
+  private formatQuestionForClient122(cacheId: string, questionBody: GeneratorQuestionData122): TestOrchestratorQuestion122 {
+    return {
+      ...questionBody,
+      id: cacheId,
+      type: '1.2.2',
+      explanation: questionBody.explanation_of_Question, // 映射欄位名
+    };
+  }
+
+  private formatQuestionForClient123(cacheId: string, questionBody: GeneratorQuestionData123): TestOrchestratorQuestion123 {
+    return {
+      ...questionBody,
+      id: cacheId,
+      type: '1.2.3',
       explanation: questionBody.explanation_of_Question, // 映射欄位名
     };
   }
@@ -145,12 +185,12 @@ class TestOrchestratorService {
       let nextQuestionForClient: TestOrchestratorQuestion | null = null;
       if (originalQuestionClientData.type === '1.1.1') {
         const nextCachedEntry = await this.questionCacheService.getQuestionFromCache('1.1.1'); // nextCachedEntry is CacheEntry | null
-        if (nextCachedEntry && nextCachedEntry.UUID && nextCachedEntry.questionData) {
+      if (nextCachedEntry && nextCachedEntry.UUID && nextCachedEntry.questionData) {
           // 確保數據類型正確
           nextQuestionForClient = this.formatQuestionForClient111(nextCachedEntry.UUID, nextCachedEntry.questionData as GeneratorQuestionData111);
-          console.log(`[DEBUG TestOrchestratorService.ts] submitAnswer: 下一題獲取結果: ${nextQuestionForClient.id}`);
-        } else {
-          console.log(`[DEBUG TestOrchestratorService.ts] submitAnswer: 無可用下一題`);
+        console.log(`[DEBUG TestOrchestratorService.ts] submitAnswer: 下一題獲取結果: ${nextQuestionForClient.id}`);
+      } else {
+        console.log(`[DEBUG TestOrchestratorService.ts] submitAnswer: 無可用下一題`);
         }
       } else {
         console.log(`[DEBUG TestOrchestratorService.ts] submitAnswer: 1.1.2題型的下一題獲取暫未實現`);

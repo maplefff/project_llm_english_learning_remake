@@ -1,0 +1,114 @@
+[
+  {
+    "UUID": "6b3dcfbc-406b-46b9-9357-2fedb9d5545b",
+    "questionData": {
+      "explanation_of_Question": "從文章中可以推斷出 Sarah 擔心經濟不穩定。她的行為包括取消假期、減少外出用餐和購物、以及仔細審查預算。這些行為都表明她正在節省開支，這通常是由於對未來經濟狀況的擔憂所驅動的。選項 A、B、D 都沒有文中明顯的行為或暗示支持。",
+      "options": [
+        {
+          "id": "A",
+          "text": "Sarah is planning a large future purchase."
+        },
+        {
+          "id": "B",
+          "text": "Sarah has unexpectedly lost her job."
+        },
+        {
+          "id": "C",
+          "text": "Sarah is concerned about financial instability."
+        },
+        {
+          "id": "D",
+          "text": "Sarah is trying a new minimalist lifestyle."
+        }
+      ],
+      "passage": "For weeks, Sarah had been uncharacteristically quiet about her plans. She had mentioned looking forward to a summer holiday for months, but suddenly, the topic was off-limits. Her friends noticed she started bringing packed lunches to work instead of joining them at the nearby cafe. Weekend shopping trips, once a regular occurrence, became non-existent. When someone suggested a night out, she'd politely decline, citing being 'a bit busy' or 'not feeling up to it,' though she seemed perfectly fine otherwise. She was also seen spending more time reviewing her bank statements and budget spreadsheets at home. A usually spontaneous and carefree person, her recent behavior suggested a new, cautious approach to spending.",
+      "question": "What does Sarah's recent behavior most strongly imply?",
+      "standard_answer": "C"
+    },
+    "cacheTimestamp": 1747994465
+  },
+  {
+    "UUID": "e270430d-11d7-4e62-8a2d-c83b7c60b04d",
+    "questionData": {
+      "explanation_of_Question": "從文章中可以推斷出 Liz 對參加社交活動感到焦慮或不自在。文章提到她找藉口避開派對（'would find excuses to avoid parties'），在大型聚會中顯得沉默寡言且不自在（'often quiet and visibly uncomfortable in large groups'），並且更喜歡一對一或小團體的交流（'seemed to blossom in one-on-one conversations or smaller gatherings'）。這些都是社交焦慮或內向的典型表現，表明她對參加大型社交活動感到不舒服。選項 A、B、D 都沒有文中明顯的行為或暗示支持。",
+      "options": [
+        {
+          "id": "A",
+          "text": "Liz is overly critical of others at social events."
+        },
+        {
+          "id": "B",
+          "text": "Liz prefers to host parties rather than attend them."
+        },
+        {
+          "id": "C",
+          "text": "Liz feels uncomfortable attending large social gatherings."
+        },
+        {
+          "id": "D",
+          "text": "Liz is only interested in attending work-related events."
+        }
+      ],
+      "passage": "Liz was known for her sharp wit and insightful comments during team meetings, yet outside of the office, she was rarely seen. Invitations to company happy hours or weekend get-togethers would often be met with a polite 'maybe' that rarely materialized into an appearance. When she did attend, she would often stand near the edges of the room, engaging briefly if approached directly, but generally remaining quiet. She seemed visibly uncomfortable when the crowd grew larger or the noise level rose. However, in smaller groups of two or three or during one-on-one lunches, she was engaging, funny, and relaxed. This stark difference in behavior between intimate settings and larger social events was quite noticeable to those who knew her.",
+      "question": "What can be inferred about Liz's feelings regarding social events?",
+      "standard_answer": "C"
+    },
+    "cacheTimestamp": 1747994465
+  },
+  {
+    "UUID": "ed55638b-3911-485f-99fe-fb132fcc58ab",
+    "questionData": {
+      "explanation_of_Question": "從文章中可以推斷出學校圖書館缺乏足夠的資源。文章提到學生抱怨難以找到所需的書籍（'students complained about the difficulty in finding required texts'），許多熱門書籍被借出且等待時間長（'many popular titles were constantly checked out with long waiting lists'），以及研究人員發現資源有限影響了他們的研究（'researchers found the limited resources hampered their work'）。這些都暗示圖書館的藏書量或複本數量不足以滿足使用者的需求。選項 A、B、D 都沒有文中明顯的行為或暗示支持。",
+      "options": [
+        {
+          "id": "A",
+          "text": "The library staff is inefficient."
+        },
+        {
+          "id": "B",
+          "text": "The library is undergoing renovations."
+        },
+        {
+          "id": "C",
+          "text": "The library has insufficient resources for its users."
+        },
+        {
+          "id": "D",
+          "text": "Students prefer digital resources over physical books."
+        }
+      ],
+      "passage": "The university library, a grand old building, was often quiet, perhaps too quiet. Students frequently complained about the difficulty in finding required texts for their courses; many popular titles were constantly checked out with long waiting lists, making timely access nearly impossible for large classes. The collection of academic journals, while extensive in some areas, was notably outdated in others, particularly in rapidly evolving scientific fields. Visiting scholars and researchers, while appreciating the historical archives, often noted that the current research materials were less comprehensive than expected for an institution of this size. Librarians were friendly and helpful, doing their best with interlibrary loans, but the core issue seemed persistent. The building itself was beautiful, but the shelves sometimes felt sparse for the number of students it served.",
+      "question": "What can be inferred about the state of the university library?",
+      "standard_answer": "C"
+    },
+    "cacheTimestamp": 1747994465
+  },
+  {
+    "UUID": "ca89b65e-dbc4-4762-9171-6ac223b74145",
+    "questionData": {
+      "explanation_of_Question": "從文章中可以推斷出 David 正在努力適應他目前的工作。線索包括：他經常工作到很晚（'staying late almost every evening'），週末工作（'working weekends'），顯得疲憊不堪（'visibly exhausted'），且很少像以前那樣談論工作（'rarely spoke about his work with his usual enthusiasm'），反而顯得壓力很大（'instead seemed burdened'）。這些行為累積起來，強烈暗示他發現目前的工作很有挑戰性或難以應付。選項 A、B、D 都沒有文中明顯的行為或暗示支持。",
+      "options": [
+        {
+          "id": "A",
+          "text": "David has received a major promotion."
+        },
+        {
+          "id": "B",
+          "text": "David is looking for a new job."
+        },
+        {
+          "id": "C",
+          "text": "David is struggling to cope with his current workload."
+        },
+        {
+          "id": "D",
+          "text": "David is mentoring new employees."
+        }
+      ],
+      "passage": "Since starting his new role three months ago, David's routine had drastically changed. He used to leave the office promptly at 5 PM and spend his evenings pursuing hobbies. Now, the lights in his office were often the last to turn off, with him staying late almost every evening and frequently working weekends. His colleagues noticed he was visibly exhausted, his usual cheerful demeanor replaced by a constant look of concentration and stress. He rarely spoke about his work with his usual enthusiasm, instead seemed burdened by it. Conversations with him became brief and focused, unlike the leisurely chats they used to have. His performance reviews were adequate, but the spark that defined his previous work seemed diminished, replaced by sheer persistence.",
+      "question": "What does David's recent change in behavior most likely imply about his new job?",
+      "standard_answer": "C"
+    },
+    "cacheTimestamp": 1747994465
+  }
+]

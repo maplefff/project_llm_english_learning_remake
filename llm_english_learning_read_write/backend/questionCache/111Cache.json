@@ -1,34 +1,5 @@
 [
   {
-    "UUID": "09b63359-a6b1-430c-a629-42620d2fa2b3",
-    "questionData": {
-      "passage": "The team took a **pragmatic** approach to solving the problem, focusing on what would actually work.",
-      "targetWord": "pragmatic",
-      "question": "In this sentence, a **pragmatic** approach is one that is:",
-      "options": [
-        {
-          "id": "A",
-          "text": "idealistic and theoretical"
-        },
-        {
-          "id": "B",
-          "text": "complicated and difficult"
-        },
-        {
-          "id": "C",
-          "text": "practical and realistic"
-        },
-        {
-          "id": "D",
-          "text": "emotional and subjective"
-        }
-      ],
-      "standard_answer": "C",
-      "explanation_of_Question": "句子中 \"pragmatic\" 用來描述某種思考或行動的方式，即基於實際而非理論性的考量。團隊採取實事求是的方法來解決問題，意味著他們注重有效性與實際可行性。選項 C \"practical and realistic\" (實際且務實的) 最符合這個含義。選項 A \"idealistic and theoretical\" (理想化且理論性的) 是其反義。選項 B \"complicated and difficult\" (複雜且困難的) 與處理問題的方式是否務實無關。選項 D \"emotional and subjective\" (情緒化且主觀的) 描述的是一種情感導向而非實際導向的方式。"
-    },
-    "cacheTimestamp": 1747683621
-  },
-  {
     "UUID": "d3ca7969-3660-465f-a9ab-d5269b18ac40",
     "questionData": {
       "passage": "Due to strong public opposition, the government decided to **rescind** the newly implemented regulation.",
@@ -85,5 +56,92 @@
       "explanation_of_Question": "在這個句子中，\"validate\" 的意思是確認某件事物（本例中是她的證書）的有效性或真實性。這通常涉及檢查並證實其符合標準或真實無誤。選項 C \"confirm the truth or validity of\" (確認...的真實或有效性) 正確解釋了 \"validate\" 在此的用法。選項 A \"disprove or refute\" (駁倒或反駁) 是其反義。選項 B \"create or issue\" (創造或頒發) 指的是證書的起源，而非確認其有效性。選項 D \"understand or interpret\" (理解或解釋) 與證書的意義理解有關，而非其真實性的確認。"
     },
     "cacheTimestamp": 1747683621
+  },
+  {
+    "UUID": "6cb04c3d-8c7a-4e46-a59e-2faa34399294",
+    "questionData": {
+      "explanation_of_Question": "Consensus 指大多數人或團體成員間達成的普遍共識或一致意見。因此選項 D 正確。選項 A「conflict」意為衝突，選項 C「disagreement」意為分歧，選項 B「decision」意為決定，但不如「general agreement」精確反映「consensus」在語境中的含義，因為共識是一種特殊的決定。",
+      "options": [
+        {
+          "id": "A",
+          "text": "conflict"
+        },
+        {
+          "id": "B",
+          "text": "decision"
+        },
+        {
+          "id": "C",
+          "text": "disagreement"
+        },
+        {
+          "id": "D",
+          "text": "general agreement"
+        }
+      ],
+      "passage": "After a long debate, the team finally reached a **consensus** on the best approach.",
+      "question": "In this sentence, **consensus** means:",
+      "standard_answer": "D",
+      "targetWord": "consensus"
+    },
+    "cacheTimestamp": 1747995349
+  },
+  {
+    "UUID": "365c97a9-7eab-4ac2-a6ce-26e9a1e80fae",
+    "questionData": {
+      "explanation_of_Question": "Pervasive 指某事物廣泛存在、影響遍及各處。在此，社群媒體的影響力擴及現代社會的許多層面，故選項 C「widespread and influencing many areas」最貼切。選項 A「limited to a few areas」與原意相反；選項 B「found only online」限制了其範圍；選項 D「declining in popularity」未提及普及程度或影響力。",
+      "options": [
+        {
+          "id": "A",
+          "text": "limited to a few areas"
+        },
+        {
+          "id": "B",
+          "text": "found only online"
+        },
+        {
+          "id": "C",
+          "text": "widespread and influencing many areas"
+        },
+        {
+          "id": "D",
+          "text": "declining in popularity"
+        }
+      ],
+      "passage": "Social media has become a **pervasive** influence in modern society.",
+      "question": "If something is **pervasive**, it is:",
+      "standard_answer": "C",
+      "targetWord": "pervasive"
+    },
+    "cacheTimestamp": 1747995349
+  },
+  {
+    "UUID": "121ef875-e148-4f07-939a-ed561d59c7cb",
+    "questionData": {
+      "explanation_of_Question": "Rigorous 指非常嚴格、精確、一絲不苟。在此語境中，品管測試必須非常仔細嚴格以確保產品品質，故選項 D「thorough and strict」為正解。選項 A「quick and simple」與原意相反；選項 C「lax and easy」是嚴格的反義詞；選項 B「challenging but fair」雖可能適用於測試，但不如「thorough and strict」精確描述「rigorous」的本質。",
+      "options": [
+        {
+          "id": "A",
+          "text": "quick and simple"
+        },
+        {
+          "id": "B",
+          "text": "challenging but fair"
+        },
+        {
+          "id": "C",
+          "text": "lax and easy"
+        },
+        {
+          "id": "D",
+          "text": "thorough and strict"
+        }
+      ],
+      "passage": "The company requires all products to pass a **rigorous** quality control test.",
+      "question": "In this sentence, **rigorous** means:",
+      "standard_answer": "D",
+      "targetWord": "rigorous"
+    },
+    "cacheTimestamp": 1747995349
   }
 ]

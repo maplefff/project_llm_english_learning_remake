@@ -1,0 +1,83 @@
+[
+  {
+    "UUID": "860cec4d-6f32-4d3c-8a1e-c6e54b5f27a7",
+    "questionData": {
+      "evaluation_focus": [
+        "Accuracy",
+        "Fluency"
+      ],
+      "instruction": "Translate the following sentence into English.",
+      "reference_translations": [
+        "Today's weather is really nice.",
+        "The weather is great today."
+      ],
+      "source_text": "今天天气真好。"
+    },
+    "cacheTimestamp": 1747996076
+  },
+  {
+    "UUID": "fbbc15bd-5ebb-4554-a91b-cb2a8c88ec8f",
+    "questionData": {
+      "evaluation_focus": [
+        "Accuracy",
+        "Naturalness"
+      ],
+      "instruction": "Translate the following sentence into English.",
+      "reference_translations": [
+        "I want to book a movie ticket for tonight.",
+        "I'd like to reserve a ticket for the movie tonight."
+      ],
+      "source_text": "我想预订一张今晚的电影票。"
+    },
+    "cacheTimestamp": 1747996076
+  },
+  {
+    "UUID": "3ec45db1-4150-4cbc-a0a4-5cc57a8405dc",
+    "questionData": {
+      "evaluation_focus": [
+        "Accuracy",
+        "Politeness",
+        "Common Phrases"
+      ],
+      "instruction": "Translate the following sentence into English.",
+      "reference_translations": [
+        "Excuse me, how do I get to the train station?",
+        "May I ask, how do you get to the train station?"
+      ],
+      "source_text": "请问，去火车站怎么走？"
+    },
+    "cacheTimestamp": 1747996076
+  },
+  {
+    "UUID": "9eeec6e0-e9c8-455c-90e4-85b251b51b15",
+    "questionData": {
+      "evaluation_focus": [
+        "Accuracy",
+        "Style"
+      ],
+      "instruction": "Translate the following sentence into English.",
+      "reference_translations": [
+        "This book is very interesting and worth reading.",
+        "This is an interesting book worth reading."
+      ],
+      "source_text": "这本书很有趣，值得一读。"
+    },
+    "cacheTimestamp": 1747996076
+  },
+  {
+    "UUID": "fe8dbf66-34d6-4784-bb32-004af78924e3",
+    "questionData": {
+      "evaluation_focus": [
+        "Accuracy",
+        "Sentence Structure"
+      ],
+      "instruction": "Translate the following sentence into English.",
+      "reference_translations": [
+        "China has many cities with a long history.",
+        "There are many historical cities in China."
+      ],
+      "source_text": "中国有很多历史悠久的城市。"
+    },
+    "cacheTimestamp": 1747996076
+  }
+]

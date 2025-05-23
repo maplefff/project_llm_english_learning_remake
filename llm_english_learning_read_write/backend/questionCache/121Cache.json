@@ -1,0 +1,48 @@
+[
+  {
+    "UUID": "56debf3d-0625-4f12-bdcc-553dbb6b0bc9",
+    "questionData": {
+      "error_types": [
+        "verb_tense",
+        "prepositions"
+      ],
+      "explanation_of_Question": "句子中有兩個錯誤：1. 'visit' 應該改為過去式 'visited'，因為有時間副詞 'Last week'；2. 動詞 'visit' 後通常直接接地點，不需要介系詞 'to'。正確的句子應該是 'Last week, they visited the museum.'",
+      "instruction": "Identify the error(s) in the sentence above and rewrite it correctly.",
+      "original_sentence": "Last week, they visit to the museum.",
+      "standard_corrections": [
+        "Last week, they visited the museum."
+      ]
+    },
+    "cacheTimestamp": 1747950505
+  },
+  {
+    "UUID": "eef6a779-2166-4f40-98d9-a2ce902a6a15",
+    "questionData": {
+      "error_types": [
+        "subject_verb_agreement"
+      ],
+      "explanation_of_Question": "句子中主詞是 'One' (單數)，因此動詞應該用單數形式 'is'，而不是複數形式 'are'。正確的句子應該是 'One of the students is missing their book.' (註：代名詞 'their' 在這裡指單數的學生，在現代英語中是可接受的用法)。",
+      "instruction": "Identify the error(s) in the sentence above and rewrite it correctly.",
+      "original_sentence": "One of the students are missing their book.",
+      "standard_corrections": [
+        "One of the students is missing their book."
+      ]
+    },
+    "cacheTimestamp": 1747950505
+  },
+  {
+    "UUID": "d0bb13cb-0b20-47cf-a48b-a8ee9c21eb10",
+    "questionData": {
+      "error_types": [
+        "word_form"
+      ],
+      "explanation_of_Question": "句子中修飾動詞 'speaks' 應該用副詞，而不是形容詞。'goodly' 是一個較少用的形容詞，這裡應該使用 'good' 的副詞形式 'well'。正確的句子應該是 'He speaks English very well.'",
+      "instruction": "Identify the error(s) in the sentence above and rewrite it correctly.",
+      "original_sentence": "He speaks English very goodly.",
+      "standard_corrections": [
+        "He speaks English very well."
+      ]
+    },
+    "cacheTimestamp": 1747950505
+  }
+]

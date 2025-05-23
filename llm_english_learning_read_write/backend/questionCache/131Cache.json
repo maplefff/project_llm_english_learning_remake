@@ -1,0 +1,142 @@
+[
+  {
+    "UUID": "2941d5cd-27c3-4576-bb25-4798bb8bf110",
+    "questionData": {
+      "explanation_of_Question": "這篇文章探討了人工智慧 (AI) 如何迅速發展並融入我們日常生活的各個面向，包括工作、交通和娛樂。文章強調了 AI 的潛力及其不斷擴大的影響力。選項 A 只提到工作場所的變化，是細節；選項 C 提到 AI 的局限性，但文章主要聚焦其進步和影響，而非局限；選項 D 強調娛樂應用，これも部分的な内容です。選項 B 涵蓋了文章的核心主旨，即 AI 的快速發展及其在各領域的廣泛應用和潛力。",
+      "options": [
+        {
+          "id": "A",
+          "text": "Artificial intelligence is only changing the workplace."
+        },
+        {
+          "id": "B",
+          "text": "Artificial intelligence is rapidly advancing and transforming many aspects of life."
+        },
+        {
+          "id": "C",
+          "text": "The limitations of artificial intelligence are becoming apparent."
+        },
+        {
+          "id": "D",
+          "text": "AI is primarily used for entertainment purposes."
+        }
+      ],
+      "passage": "Artificial intelligence (AI) is no longer a concept confined to science fiction; it is rapidly becoming an integral part of our daily lives. From smart assistants in our homes to sophisticated algorithms powering medical diagnoses, AI applications are expanding exponentially. This technology is transforming industries, automating tasks, and creating new possibilities in areas like transportation with self-driving cars and personalized education platforms. While challenges related to ethics and job displacement exist, the overarching theme is the accelerating progress of AI and its profound potential to reshape the future of work, leisure, and human interaction.",
+      "question": "What is the main idea of this paragraph?",
+      "standard_answer": "B"
+    },
+    "cacheTimestamp": 1747994415
+  },
+  {
+    "UUID": "45f237ef-ee67-4b2e-ba01-a7c10948d011",
+    "questionData": {
+      "explanation_of_Question": "這段文章的核心主旨是強調充足睡眠對於維持整體健康的重要性。文章列舉了睡眠對身體和大腦的益處，並說明睡眠不足會帶來的負面影響。選項 A 只提到睡眠對身體修復的好處，是細節；選項 C 提到睡眠不足的後果，但不是主旨；選項 D 建議了獲得更好睡眠的方法，是行動建議，而非文章的主旨。只有選項 B 概括了全文，即睡眠對於維護身心健康至關重要。",
+      "options": [
+        {
+          "id": "A",
+          "text": "Sleep helps the body repair itself."
+        },
+        {
+          "id": "B",
+          "text": "Getting enough sleep is essential for overall physical and mental health."
+        },
+        {
+          "id": "C",
+          "text": "Lack of sleep can have negative consequences."
+        },
+        {
+          "id": "D",
+          "text": "Improving sleep hygiene is important."
+        }
+      ],
+      "passage": "Sleep is a fundamental human need, as crucial for our health as eating, drinking, and breathing. During sleep, our bodies and minds undergo essential processes that repair tissues, consolidate memories, and regulate mood. Chronic sleep deprivation has been linked to numerous health problems, including weakened immune function, increased risk of chronic diseases, and impaired cognitive performance. Ensuring you get adequate, quality sleep each night is not a luxury, but a necessity for maintaining optimal physical health, mental clarity, and emotional well-being. Prioritizing sleep is a powerful investment in your overall quality of life.",
+      "question": "What is the main idea of this paragraph?",
+      "standard_answer": "B"
+    },
+    "cacheTimestamp": 1747994415
+  },
+  {
+    "UUID": "ff4b9e3a-8f42-4cf6-aff7-8fbdc4fd189b",
+    "questionData": {
+      "explanation_of_Question": "這段文章闡述了終身學習在快速變化的世界中的重要性。文章指出，僅憑早期的教育不足以應對持續的變革，並強調了不斷獲取新知識和技能的必要性及其帶來的益處。選項 A 只提到早期教育不足，是引入話題；選項 B 強調職業發展的好處，是終身學習的結果之一，不是主旨；選項 D 提到獲取新技能，是終身學習的一部分，不夠全面。選項 C 準確地表達了文章的核心觀點：終身學習是應對現代世界變化的關鍵。",
+      "options": [
+        {
+          "id": "A",
+          "text": "Early education is not sufficient in today's world."
+        },
+        {
+          "id": "B",
+          "text": "Lifelong learning helps people advance in their careers."
+        },
+        {
+          "id": "C",
+          "text": "Continuous learning is crucial for adapting to a changing world."
+        },
+        {
+          "id": "D",
+          "text": "Acquiring new skills is easier than ever."
+        }
+      ],
+      "passage": "In today's rapidly evolving world, the concept of 'learning' extends far beyond formal schooling. The pace of technological advancement and global change means that knowledge acquired early in life can quickly become outdated. Therefore, lifelong learning has become essential. It involves actively seeking new information, skills, and experiences throughout one's life. Embracing continuous learning allows individuals to remain adaptable, stay relevant in the job market, foster personal growth, and better understand the complex issues facing society. It's an ongoing process that empowers people to navigate uncertainty and seize new opportunities.",
+      "question": "What is the main idea of this paragraph?",
+      "standard_answer": "C"
+    },
+    "cacheTimestamp": 1747994415
+  },
+  {
+    "UUID": "9a8510ed-2aea-4ef0-953a-110b9fb85215",
+    "questionData": {
+      "explanation_of_Question": "這段文章討論了全球化對在地文化的複雜影響。文章指出全球化既帶來了文化交流和新機遇，也引發了對在地文化獨特性可能流失的擔憂，並強調了維護文化多樣性的重要性。選項 A 只提到文化交流的好處，是部分內容；選項 B 提到全球化可能導致文化同質化，這是擔憂之一，但不是主旨；選項 D 強調了旅遊業的影響，是全球化的一個面向，但不是主旨。選項 C 概括了文章的核心：全球化對在地文化既有積極影響也有潛在威脅，因此保護文化多樣性變得重要。",
+      "options": [
+        {
+          "id": "A",
+          "text": "Globalization promotes beneficial cultural exchange."
+        },
+        {
+          "id": "B",
+          "text": "Globalization threatens to make all cultures the same."
+        },
+        {
+          "id": "C",
+          "text": "Globalization has a complex impact on local cultures, presenting both opportunities and challenges."
+        },
+        {
+          "id": "D",
+          "text": "Increased tourism is the main effect of globalization on culture."
+        }
+      ],
+      "passage": "Globalization has profoundly impacted cultures worldwide, creating a complex dynamic. On one hand, it facilitates unprecedented cultural exchange, allowing people to experience diverse traditions, cuisines, and arts through media, travel, and migration. This can lead to greater understanding and hybrid cultural forms. On the other hand, there is concern that dominant global cultures may overshadow or even erase unique local traditions and languages, leading to cultural homogenization. Navigating this tension requires conscious efforts to preserve cultural heritage while embracing the opportunities for connection and innovation that globalization offers. Ultimately, the challenge is to maintain cultural diversity in an increasingly interconnected world.",
+      "question": "What is the main idea of this paragraph?",
+      "standard_answer": "C"
+    },
+    "cacheTimestamp": 1747994415
+  },
+  {
+    "UUID": "3d877c29-9561-4f2b-a942-75165ea98c6a",
+    "questionData": {
+      "explanation_of_Question": "這段文章的主旨是闡述志願服務對個人和社會都有重要的益處。文章說明了志願者如何通過服務獲得個人成長、滿足感和技能提升，同時也強調了志願服務如何為社區帶來積極改變，解決社會問題。選項 A 只提到志願服務幫助社區，是單方面的好處；選項 B 強調志願服務的個人回報，也是單方面的好處；選項 D 提到志願服務可以解決所有社會問題，過於絕對且不準確。選項 C 準確地捕捉了文章的核心觀點：志願服務對個人成長和社區福祉都帶來了積極的影響。",
+      "options": [
+        {
+          "id": "A",
+          "text": "Volunteering mainly benefits the community."
+        },
+        {
+          "id": "B",
+          "text": "Volunteers gain personal satisfaction and skills."
+        },
+        {
+          "id": "C",
+          "text": "Volunteering offers significant benefits to both individuals and the community."
+        },
+        {
+          "id": "D",
+          "text": "Volunteering can solve all social problems."
+        }
+      ],
+      "passage": "Volunteering plays a vital role in building stronger communities and fostering personal development. When individuals volunteer their time and skills, they directly contribute to addressing social issues, supporting vulnerable populations, and improving public spaces. This selfless act benefits recipients, but it also provides significant rewards for the volunteers themselves. Studies show that volunteering can boost self-esteem, reduce stress, broaden social networks, and even improve physical health. It offers opportunities to learn new skills, gain experience, and find a sense of purpose. Therefore, engaging in volunteer work is a powerful way to make a positive impact both externally on society and internally on one's own well-being.",
+      "question": "What is the main idea of this paragraph?",
+      "standard_answer": "C"
+    },
+    "cacheTimestamp": 1747994415
+  }
+]

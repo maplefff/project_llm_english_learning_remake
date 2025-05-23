@@ -1,8 +1,8 @@
 import { Request, Response, NextFunction } from 'express';
-import TestOrchestratorService from '../services/TestOrchestratorService';
-import { QuestionCacheService } from '../services/QuestionCacheService'; // 導入類別本身以獲取實例
+import TestOrchestratorService from '../services/TestOrchestratorService_v2';
+import { QuestionCacheService } from '../services/QuestionCacheService_v2'; // 導入類別本身以獲取實例
 import { getHistory } from '../services/HistoryService';
-import { TestOrchestratorQuestion } from '../services/TestOrchestratorService'; // 導入此類型
+import { TestOrchestratorQuestion } from '../services/TestOrchestratorService_v2'; // 導入此類型
 
 // 獲取 QuestionCacheService 的單例實例
 const questionCacheService = QuestionCacheService.getInstance();
@@ -16,6 +16,9 @@ class ApiController {
       const questionTypes = [
         { id: '1.1.1', name: '詞義選擇 (Vocabulary - Multiple Choice)' },
         { id: '1.1.2', name: '詞彙填空 (Vocabulary - Cloze Test)' },
+        { id: '1.2.1', name: '句子改錯 (Sentence Correction)' },
+        { id: '1.2.2', name: '語法結構選擇 (Grammar Structure - Multiple Choice)' },
+        { id: '1.2.3', name: '轉承詞選擇 (Transition Words - Multiple Choice)' },
         // Future types can be added here
       ];
       res.json(questionTypes);
@@ -27,20 +30,44 @@ class ApiController {
   async startTest(req: Request, res: Response, next: NextFunction): Promise<void> {
     try {
       const { questionType } = req.body;
-      if (questionType !== '1.1.1' && questionType !== '1.1.2') {
-        res.status(400).json({ message: '目前僅支援題型 1.1.1 和 1.1.2' });
+      
+      // 驗證題型
+      const validTypes = [
+        '1.1.1', '1.1.2', '1.2.1', '1.2.2', '1.2.3', 
+        '1.3.1', '1.4.1', '1.5.1', '1.5.2', '1.5.3',
+        '2.1.1', '2.1.2', '2.2.1', '2.2.2', '2.3.1',
+        '2.4.1', '2.4.2', '2.5.1', '2.5.2', '2.6.1',
+        '2.7.1', '2.7.2', '2.8.1', '2.8.2'
+      ];
+      if (!validTypes.includes(questionType)) {
+        res.status(400).json({ 
+          success: false, 
+          message: `不支援的題型: ${questionType}。支援的題型: ${validTypes.join(', ')}` 
+        });
         return;
       }
-      console.log(`[DEBUG api.controller.ts] startTest: Received request for type ${questionType}`);
+
+      console.log(`[DEBUG api.controller.ts] 啟動測驗，題型: ${questionType}`);
+      
       const question = await orchestratorService.startSingleTypeTest(questionType);
+      
       if (question) {
-        res.json(question);
+        res.json({
+          success: true,
+          question: question
+        });
       } else {
-        res.status(404).json({ message: '無法獲取題目，可能快取為空或題型不受支援。' });
+        res.status(500).json({
+          success: false,
+          message: '無法生成題目'
+        });
       }
     } catch (error) {
-      console.error('[DEBUG api.controller.ts] startTest: Error', error);
-      next(error);
+      console.error('[DEBUG api.controller.ts] 啟動測驗時發生錯誤:', error);
+      res.status(500).json({
+        success: false,
+        message: '伺服器錯誤'
+      });
     }
   }
 

@@ -1,0 +1,137 @@
+[
+  {
+    "UUID": "ecec7aec-95ca-472f-84c9-88b93e034f27",
+    "questionData": {
+      "explanation_of_Question": "選項 B 是正確的。當談論在特定時間（例如 'yesterday'）發生的已完成動作時，我們使用過去簡單式（Past Simple）。選項 A 使用現在完成式，通常用於談論影響現在的過去動作或未明確指明時間的過去動作。選項 C 和 D 的動詞形式不正確。",
+      "options": [
+        {
+          "id": "A",
+          "text": "I have finished my homework yesterday."
+        },
+        {
+          "id": "B",
+          "text": "I finished my homework yesterday."
+        },
+        {
+          "id": "C",
+          "text": "I finishing my homework yesterday."
+        },
+        {
+          "id": "D",
+          "text": "I finish my homework yesterday."
+        }
+      ],
+      "question": "Which sentence uses the correct tense?",
+      "standard_answer": "B"
+    },
+    "cacheTimestamp": 1747950231
+  },
+  {
+    "UUID": "58ce91f2-c3ef-4ca9-9a0d-cdebf90c432d",
+    "questionData": {
+      "explanation_of_Question": "選項 C 是正確的。在比較級句子中使用 'than' 是正確的結構。選項 A 應使用 'than' 而非 'then'。選項 B 的 'more taller' 是錯誤的雙重比較。選項 D 缺少比較對象和 'than'。",
+      "options": [
+        {
+          "id": "A",
+          "text": "He is more taller then me."
+        },
+        {
+          "id": "B",
+          "text": "He is more taller than me."
+        },
+        {
+          "id": "C",
+          "text": "He is taller than me."
+        },
+        {
+          "id": "D",
+          "text": "He is taller me."
+        }
+      ],
+      "question": "Choose the grammatically correct sentence.",
+      "standard_answer": "C"
+    },
+    "cacheTimestamp": 1747950231
+  },
+  {
+    "UUID": "28cbb043-e32e-4596-8c7c-426579497460",
+    "questionData": {
+      "explanation_of_Question": "選項 A 是正確的。當主詞是 'Everyone' 時，動詞應使用單數形式 'has'。選項 B, C, D 都使用了複數動詞 'have' 或不正確的動詞形式。",
+      "options": [
+        {
+          "id": "A",
+          "text": "Everyone has their own opinion."
+        },
+        {
+          "id": "B",
+          "text": "Everyone have their own opinion."
+        },
+        {
+          "id": "C",
+          "text": "Everyone is having their own opinion."
+        },
+        {
+          "id": "D",
+          "text": "Everyone are having their own opinion."
+        }
+      ],
+      "question": "Which sentence demonstrates correct subject-verb agreement?",
+      "standard_answer": "A"
+    },
+    "cacheTimestamp": 1747950231
+  },
+  {
+    "UUID": "e7c0aaf3-79d6-4421-a95a-14c01fab9052",
+    "questionData": {
+      "explanation_of_Question": "選項 D 是正確的。形容詞通常按照數量/意見、大小、形狀、年齡、顏色、來源、材料、目的的順序排列。'big'（大小）在 'red'（顏色）之前。選項 A, B, C 的形容詞順序是錯誤的。",
+      "options": [
+        {
+          "id": "A",
+          "text": "She bought a red big car."
+        },
+        {
+          "id": "B",
+          "text": "She bought a big of red car."
+        },
+        {
+          "id": "C",
+          "text": "She bought a big red car's."
+        },
+        {
+          "id": "D",
+          "text": "She bought a big red car."
+        }
+      ],
+      "question": "Identify the sentence with the correct word order for adjectives.",
+      "standard_answer": "D"
+    },
+    "cacheTimestamp": 1747950231
+  },
+  {
+    "UUID": "4be4d5bb-f477-485f-8f7f-aa62d6e88505",
+    "questionData": {
+      "explanation_of_Question": "選項 B 是正確的。這是一個零條件句或第一條件句的變體，表達一種普遍真理或高度可能的結果。當條件子句使用現在簡單式（'rains'），主要子句通常也使用現在簡單式（'gets'）或未來簡單式（'will get'）。選項 A 應使用現在簡單式動詞 'gets'。選項 C 和 D 的動詞形式不正確。",
+      "options": [
+        {
+          "id": "A",
+          "text": "If it rains, the ground will gets wet."
+        },
+        {
+          "id": "B",
+          "text": "If it rains, the ground gets wet."
+        },
+        {
+          "id": "C",
+          "text": "If it rains, the ground got wet."
+        },
+        {
+          "id": "D",
+          "text": "If it rains, the ground is getting wet."
+        }
+      ],
+      "question": "Complete the sentence with the correct form: 'If it rains, the ground ______ wet.'",
+      "standard_answer": "B"
+    },
+    "cacheTimestamp": 1747950231
+  }
+]

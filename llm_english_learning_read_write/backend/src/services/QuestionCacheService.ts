@@ -2,18 +2,27 @@ import * as fs from 'fs/promises';
 import * as path from 'path';
 import { v4 as uuidv4 } from 'uuid';
 import { QuestionGeneratorService } from './QuestionGeneratorService';
-import { QuestionData, QuestionData111, QuestionData112 } from './generators/QuestionGeneratorInterface';
+import { QuestionData, QuestionData111, QuestionData112, QuestionData121, QuestionData122, QuestionData123 } from './generators/QuestionGeneratorInterface';
 import 'dotenv/config';
 
 const CACHE_DIR_NAME = 'questionCache';
 const CACHE_DIR_PATH = path.join(__dirname, '..', '..', CACHE_DIR_NAME); // 假設 services 在 src/services
 const CACHE_FILE_PATH_111 = path.join(CACHE_DIR_PATH, '111Cache.json');
 const CACHE_FILE_PATH_112 = path.join(CACHE_DIR_PATH, '112Cache.json');
+const CACHE_FILE_PATH_121 = path.join(CACHE_DIR_PATH, '121Cache.json');
+const CACHE_FILE_PATH_122 = path.join(CACHE_DIR_PATH, '122Cache.json');
+const CACHE_FILE_PATH_123 = path.join(CACHE_DIR_PATH, '123Cache.json');
 
 const MIN_QUESTIONS_111 = 3;
 const TARGET_QUESTIONS_111 = 5; // 目標快取數量
 const MIN_QUESTIONS_112 = 3;
 const TARGET_QUESTIONS_112 = 5; // 目標快取數量
+const MIN_QUESTIONS_121 = 3;
+const TARGET_QUESTIONS_121 = 5; // 目標快取數量
+const MIN_QUESTIONS_122 = 3;
+const TARGET_QUESTIONS_122 = 5; // 目標快取數量
+const MIN_QUESTIONS_123 = 3;
+const TARGET_QUESTIONS_123 = 5; // 目標快取數量
 
 // --- 重試機制常量 ---
 const MAX_GENERATION_RETRIES = 3; // 首次嘗試後的最多重試次數
@@ -33,7 +42,25 @@ interface CacheEntry112 {
   questionData: QuestionData112;
 }
 
-type CacheEntry = CacheEntry111 | CacheEntry112;
+interface CacheEntry121 {
+  UUID: string;
+  cacheTimestamp: number;
+  questionData: QuestionData121;
+}
+
+interface CacheEntry122 {
+  UUID: string;
+  cacheTimestamp: number;
+  questionData: QuestionData122;
+}
+
+interface CacheEntry123 {
+  UUID: string;
+  cacheTimestamp: number;
+  questionData: QuestionData123;
+}
+
+type CacheEntry = CacheEntry111 | CacheEntry112 | CacheEntry121 | CacheEntry122 | CacheEntry123;
 
 export class QuestionCacheService {
   private caches: Map<string, CacheEntry[]> = new Map();
@@ -43,6 +70,9 @@ export class QuestionCacheService {
   private constructor() {
     this.isReplenishing.set('1.1.1', false);
     this.isReplenishing.set('1.1.2', false);
+    this.isReplenishing.set('1.2.1', false);
+    this.isReplenishing.set('1.2.2', false);
+    this.isReplenishing.set('1.2.3', false);
     // 初始化時不立即執行異步操作，提供一個單獨的 initialize 方法
   }
 
@@ -390,7 +420,7 @@ export class QuestionCacheService {
       this._checkAndTriggerReplenishment(questionType);
     }
   }
-
+ 
   // --- 持久化快取到檔案 ---
   private async _persistCacheToFile(questionType: '1.1.1'): Promise<void> {
     const questionsToSave = this.caches.get(questionType) ?? [];
@@ -430,7 +460,7 @@ export class QuestionCacheService {
         console.log(`[DEBUG QuestionCacheService.ts] Providing question ${questionToReturn.UUID} from cache for ${questionType}. Remaining: ${cachedQuestions.length}`);
         // 快取已更改，立即觸發持久化 (非同步)
         if (questionType === '1.1.1') {
-          this._persistCacheToFile(questionType);
+        this._persistCacheToFile(questionType);
         } else {
           this._persistCacheToFile112(questionType);
         }

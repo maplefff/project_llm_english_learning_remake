@@ -1,0 +1,114 @@
+[
+  {
+    "UUID": "2fec76b7-8813-4f85-b959-4d042d855895",
+    "questionData": {
+      "explanation_of_Question": "选项 B 'Consequently' 是正确答案，因为它表示因果关系。前句说交通很糟糕，后句说他们开会迟到了，这是前句导致的结果。选项 A 'Although' 表示让步；选项 C 'Similarly' 表示相似；选项 D 'Moreover' 表示附加，都不符合语境的逻辑关系。",
+      "options": [
+        {
+          "id": "A",
+          "text": "Although"
+        },
+        {
+          "id": "B",
+          "text": "Consequently"
+        },
+        {
+          "id": "C",
+          "text": "Similarly"
+        },
+        {
+          "id": "D",
+          "text": "Moreover"
+        }
+      ],
+      "question": "Choose the word that best completes the sentence to show a result.",
+      "sentence_context": "The traffic was terrible. _______, we arrived late for the meeting.",
+      "standard_answer": "B"
+    },
+    "cacheTimestamp": 1747950217
+  },
+  {
+    "UUID": "b2153333-8dbe-4217-a3e5-22b604127124",
+    "questionData": {
+      "explanation_of_Question": "选项 C 'However' 是正确答案，因为它表示转折。前句说她很累，而后句说她熬夜完成项目，这与累的状态形成对比，是一个出乎意料的结果。选项 A 'Therefore' 表示结果；选项 B 'In addition' 表示附加；选项 D 'For example' 表示举例，都不符合语境的转折关系。",
+      "options": [
+        {
+          "id": "A",
+          "text": "Therefore"
+        },
+        {
+          "id": "B",
+          "text": "In addition"
+        },
+        {
+          "id": "C",
+          "text": "However"
+        },
+        {
+          "id": "D",
+          "text": "For example"
+        }
+      ],
+      "question": "Choose the word that best completes the sentence to show a contrast or unexpected outcome.",
+      "sentence_context": "She was very tired. _______, she stayed up late to finish her project.",
+      "standard_answer": "C"
+    },
+    "cacheTimestamp": 1747950217
+  },
+  {
+    "UUID": "e4b8b0af-145c-42ac-ae46-41b344eb2ff6",
+    "questionData": {
+      "explanation_of_Question": "选项 B 'For example' 是正确答案，因为它用于引入例子。前句提到一些水果对身体有益，后句则列举了苹果和香蕉作为例子来支持前句。选项 A 'In contrast' 表示对比；选项 C 'Consequently' 表示结果；选项 D 'Otherwise' 表示否则/否则，都不符合语境的逻辑。",
+      "options": [
+        {
+          "id": "A",
+          "text": "In contrast"
+        },
+        {
+          "id": "B",
+          "text": "For example"
+        },
+        {
+          "id": "C",
+          "text": "Consequently"
+        },
+        {
+          "id": "D",
+          "text": "Otherwise"
+        }
+      ],
+      "question": "Choose the word that best completes the sentence to introduce an example.",
+      "sentence_context": "Some fruits are good for you. _______, apples and bananas are packed with vitamins.",
+      "standard_answer": "B"
+    },
+    "cacheTimestamp": 1747950217
+  },
+  {
+    "UUID": "6331035a-126a-4247-bba5-7f4cb2175164",
+    "questionData": {
+      "explanation_of_Question": "选项 C 'Next' 是正确答案，因为它用于指示序列中的下一个步骤。前句指示混合干性材料，后句则指示下一步骤是加入湿性材料。选项 A 'Finally' 表示最后一步；选项 B 'Meanwhile' 表示同时发生；选项 D 'However' 表示转折，都不符合语境的顺序关系。",
+      "options": [
+        {
+          "id": "A",
+          "text": "Finally"
+        },
+        {
+          "id": "B",
+          "text": "Meanwhile"
+        },
+        {
+          "id": "C",
+          "text": "Next"
+        },
+        {
+          "id": "D",
+          "text": "However"
+        }
+      ],
+      "question": "Choose the word that best completes the sentence to show the next step in a sequence.",
+      "sentence_context": "First, mix the dry ingredients. _______, add the wet ingredients gradually.",
+      "standard_answer": "C"
+    },
+    "cacheTimestamp": 1747950217
+  }
+]
