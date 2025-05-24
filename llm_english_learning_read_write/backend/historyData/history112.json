@@ -1,5 +1,66 @@
 [
   {
+    "UUID": "2da17bb8-e1f8-4e42-a7e4-89581f4adcc1",
+    "questionData": {
+      "passage": "Despite facing numerous setbacks, she _______ in her pursuit of becoming a doctor.",
+      "question": "Choose the best word to complete the sentence.",
+      "options": [
+        {
+          "id": "A",
+          "text": "relinquished"
+        },
+        {
+          "id": "B",
+          "text": "detoured"
+        },
+        {
+          "id": "C",
+          "text": "persisted"
+        },
+        {
+          "id": "D",
+          "text": "wavered"
+        }
+      ],
+      "standard_answer": "C"
+    },
+    "userAnswer": {
+      "id": "A",
+      "text": "relinquished"
+    },
+    "isCorrect": false,
+    "timestamp": 1748080880249
+  },
+  {
+    "UUID": "464fc34e-0739-466c-afee-1eb21d1ffd9f",
+    "questionData": {
+      "passage": "The speaker had a remarkable ability to _______ the audience with her powerful words.",
+      "question": "Choose the best word to complete the sentence.",
+      "options": [
+        {
+          "id": "A",
+          "text": "alienate"
+        },
+        {
+          "id": "B",
+          "text": "captivate"
+        },
+        {
+          "id": "C",
+          "text": "bore"
+        },
+        {
+          "id": "D",
+          "text": "rebel"
+        }
+      ],
+      "standard_answer": "B"
+    },
+    "userAnswer": "A",
+    "isCorrect": false,
+    "timestamp": 1748080285256
+  },
+  {
     "UUID": "df2cb850-0322-435b-8d05-25ae83f2c78a",
     "questionData": {
       "passage": "His _______ about the universe led him to study astrophysics.",

@@ -1,53 +1,5 @@
 [
   {
-    "UUID": "0fc421dd-4bdd-4a8a-ad8d-b51739e5fd9c",
-    "questionData": {
-      "correct_order": [
-        1,
-        4,
-        3,
-        0,
-        2
-      ],
-      "explanation_of_Question": "這個段落按照事件的發生順序描述了戶外音樂會如何應對突發天氣狀況：首先介紹了活動面臨的挑戰(句子2)，接著描述了具體的天氣狀況(句子5)。然後說明組織者迅速採取了應急措施(句子4)，並描述了疏散觀眾的具體行動(句子1)。最後，說明了天氣好轉、活動成功繼續的結果(句子3)。",
-      "instruction": "請將這些句子重新排列，組成一個邏輯連貫的段落，描述一個戶外活動如何應對突發狀況。",
-      "scrambled_sentences": [
-        "They announced a temporary delay and guided attendees to shelter indoors.",
-        "Despite careful planning, the outdoor concert faced a sudden challenge.",
-        "After an hour, the storm passed, and the concert resumed successfully, much to everyone's relief.",
-        "Consequently, the organizers had to quickly implement their emergency plan.",
-        "Dark clouds gathered overhead, and a strong wind began to blow."
-      ],
-      "topic_hint": "一個戶外活動遇到問題並解決的故事。"
-    },
-    "cacheTimestamp": 1748038620
-  },
-  {
-    "UUID": "8884d7d9-af97-4886-ba62-cb0d9bba1cb1",
-    "questionData": {
-      "correct_order": [
-        4,
-        5,
-        0,
-        1,
-        2,
-        3
-      ],
-      "explanation_of_Question": "這個段落按照時間順序和操作步驟描述了沖泡一杯好咖啡的過程：首先引入主題(句子5)，接著是磨豆(句子6)，然後是燒水(句子1)，再來是注水(句子2)，隨後是浸泡或過濾(句子3)，最後是享受成品(句子4)。這是一種標準的過程描述結構。",
-      "instruction": "請將這些句子重新排列，組成一個描述如何沖泡好咖啡的段落。請按照步驟的邏輯順序排列。",
-      "scrambled_sentences": [
-        "Next, heat water to just below boiling point.",
-        "Then, pour the hot water over the grounds, ensuring even saturation.",
-        "Finally, let it steep for the recommended time before pressing or filtering.",
-        "Enjoy your freshly brewed coffee!",
-        "Making a good cup of coffee requires attention to detail.",
-        "First, grind fresh coffee beans to the correct coarseness."
-      ],
-      "topic_hint": "如何製作一杯咖啡的過程。"
-    },
-    "cacheTimestamp": 1748038620
-  },
-  {
     "UUID": "bdf5e306-87e0-43c8-ac81-c4821f56b547",
     "questionData": {
       "correct_order": [

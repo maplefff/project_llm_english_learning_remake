@@ -1,220 +1,306 @@
-# 前端開發階段 2：核心組件開發與佈局系統
+# 前端開發階段 2：測驗組件開發與交互系統
 
 **對應 `devFrontEnd.md` Phase 2: 核心組件開發 (第2-3週)**
 
-## 目標
+## 🎯 目標
 
-本階段的核心目標是開發可復用的核心 UI 組件和應用程式佈局系統，建立完整的組件架構和交互模式。這包括應用程式主佈局、通用 UI 組件、測驗系統的基礎組件以及表單和通知系統。所有組件都需要具備完整的 TypeScript 類型定義、單元測試以及清晰的 API 設計，為後續的頁面開發和功能實現奠定穩固的基礎。
+本階段的核心目標是開發測驗系統的專用組件和完善用戶交互體驗。**注意：Phase1 重構已完成應用程式主佈局（App.vue 側邊欄導航、24種題型集成、API整合），因此 Phase2 將專注於測驗組件的細化開發和通用 UI 組件的補全。**
 
-## 主要產出物
+## 📊 Phase1 完成狀況回顧
 
-*   應用程式主佈局組件（AppLayout、AppHeader、AppSidebar）
-*   通用 UI 組件庫（LoadingSpinner、ErrorMessage、ConfirmDialog 等）
-*   測驗系統基礎組件（QuestionRenderer、AnswerInput、QuizProgress 等）
+### ✅ 已完成的核心架構
+- **主佈局系統**：App.vue 完整側邊欄導航（無需額外 AppHeader/AppSidebar）
+- **24種題型支援**：閱讀理解系列(1.x.x) + 寫作應用系列(2.x.x)
+- **API整合**：4個核心後端API已連接（GET /api/question-types, POST /api/start-test, POST /api/submit-answer, GET /api/history）
+- **基礎頁面**：Dashboard.vue、Quiz.vue、History.vue、Settings.vue
+- **UI系統**：自定義 macOS 風格設計（已移除 Element Plus）
+
+### ❌ 待開發的組件
+- **測驗組件**：`components/quiz/` 目錄空白，需要細化測驗交互
+- **通用組件**：`components/common/` 目錄空白，需要基礎 UI 組件
+- **歷史組件**：`components/history/` 目錄空白，需要數據展示組件
+
+## 🎯 Phase2 主要產出物
+
+*   測驗系統專用組件（QuestionRenderer、AnswerInput、ResultDisplay 等）
+*   通用 UI 組件庫（LoadingSpinner、ErrorMessage、Modal 等）
+*   歷史記錄展示組件（HistoryChart、HistoryTable、StatisticsCard 等）
 *   表單驗證和通知系統組件
 *   完整的組件單元測試套件
-*   組件使用文檔和 Storybook 配置
+*   組件使用文檔
 
-## 詳細步驟
+## 📋 詳細步驟
 
-### Phase2.1 應用程式佈局組件開發 (3-4天)
+### Phase2.1 測驗系統專用組件開發 (4-5天)
 
-1.  **AppHeader.vue 組件設計與實現**:
+#### 目標：解決當前 Quiz.vue 的單體問題，拆分為可復用組件
+
+1.  **QuestionRenderer.vue 題目渲染器**:
+    *   **目的**：從 Quiz.vue 中提取題目顯示邏輯
     *   **功能需求**: 
-        *   顯示應用程式標題和 Logo
-        *   用戶信息區域（頭像、姓名、設定下拉菜單）
-        *   主要導航菜單（Dashboard、測驗、歷史、設定）
-        *   響應式設計，移動端折疊導航
-    *   **狀態管理**: 與 `userStore` 連接，獲取用戶信息和登入狀態
-    *   **交互邏輯**: 
-        *   點擊導航項目時的路由跳轉
-        *   用戶頭像點擊顯示下拉菜單
-        *   移動端漢堡菜單的展開/折疊
-    *   **樣式設計**: 使用 Element Plus 的 Menu 組件，自定義主題色彩
-
-2.  **AppSidebar.vue 組件設計與實現**:
-    *   **功能需求**:
-        *   題型分類樹形菜單（1.x 選擇題、2.x 寫作題等）
-        *   側邊欄展開/折疊功能
-        *   當前選中題型的高亮顯示
-        *   最近使用題型的快速訪問
-    *   **數據來源**: 從後端 API 獲取題型列表，與 `quizStore` 同步
-    *   **交互邏輯**:
-        *   點擊題型時更新 `quizStore` 的選中題型
-        *   支援鍵盤導航（上下箭頭、Enter 選擇）
-        *   折疊狀態的持久化存儲
-    *   **響應式適配**: 小螢幕時自動折疊，支援手勢滑動操作
-
-3.  **AppLayout.vue 主佈局容器**:
-    *   **佈局結構**: 採用典型的 Header + Sidebar + Main 三欄佈局
-    *   **響應式邏輯**: 
-        *   桌面端：固定 Header，可折疊 Sidebar
-        *   平板端：固定 Header，覆蓋式 Sidebar
-        *   移動端：隱藏 Sidebar，Header 中整合導航
-    *   **頁面過渡**: 實現路由切換時的平滑過渡動畫
-    *   **載入狀態**: 全局載入指示器的顯示邏輯
-
-4.  **通用佈局組件**:
-    *   **LoadingSpinner.vue**: 
-        *   支援不同大小（small、medium、large）
-        *   可自定義載入文字和顏色主題
-        *   支援全屏遮罩和區域載入兩種模式
-    *   **ErrorMessage.vue**: 
-        *   統一的錯誤訊息顯示格式
-        *   支援可重試操作的錯誤類型
-        *   可配置的錯誤等級（warning、error、critical）
-    *   **ConfirmDialog.vue**: 
-        *   可復用的確認對話框組件
-        *   支援自定義按鈕文字和樣式
-        *   Promise 風格的 API 設計
-
-### Phase2.2 測驗系統基礎組件開發 (4-5天)
-
-1.  **QuestionRenderer.vue 統一題目渲染器**:
-    *   **核心架構**: 
-        *   使用動態組件系統載入不同題型的組件
-        *   統一的題目數據結構處理
-        *   題型路由和組件映射機制
-    *   **功能特性**:
-        *   題目標題、內容、選項的統一顯示格式
+        *   統一的題目文字顯示格式
         *   支援富文本內容（HTML 標籤、數學公式等）
         *   閱讀材料（passage）的展示和高亮功能
-        *   題型標籤和難度指示器
-    *   **交互設計**:
-        *   答案變更時的即時驗證反饋
-        *   答案提交前的確認機制
-        *   只讀模式支援（用於歷史記錄檢視）
-    *   **錯誤處理**: 未知題型的降級顯示和錯誤上報
+        *   題型標籤和代碼顯示（如 "1.1.1 - 詞義選擇"）
+    *   **Props 設計**:
+        ```typescript
+        interface QuestionRendererProps {
+          question: Question
+          readonly?: boolean
+        }
+        ```
+    *   **發射事件**: 無（純展示組件）
 
-2.  **AnswerInput.vue 通用答案輸入組件**:
+2.  **AnswerInput.vue 答案輸入組件**:
+    *   **目的**：統一化不同題型的答案輸入方式
     *   **輸入類型支援**:
-        *   單選/多選選項（Radio、Checkbox）
-        *   文字輸入（短文字、長文字、富文本）
+        *   單選/多選選項（Radio、Checkbox）- 用於選擇題
+        *   文字輸入（短文字、長文字）- 用於翻譯、寫作題
+        *   富文本編輯器 - 用於長篇寫作
         *   填空題的多個輸入框
-        *   排序題的拖拽區域
+    *   **Props 設計**:
+        ```typescript
+        interface AnswerInputProps {
+          question: Question
+          modelValue: string | string[]
+          disabled?: boolean
+        }
+        ```
+    *   **發射事件**: `update:modelValue`、`change`
     *   **驗證功能**:
         *   即時格式驗證（字數限制、必填檢查等）
         *   答案完整性檢查
         *   自定義驗證規則支援
-    *   **用戶體驗**:
-        *   輸入狀態的視覺反饋
-        *   自動儲存草稿功能
-        *   復原/重做功能支援
 
-3.  **QuizProgress.vue 測驗進度組件**:
-    *   **進度顯示**:
-        *   當前題目編號和總題數
-        *   完成百分比的進度條
-        *   剩餘時間倒數計時
-        *   答題狀態指示（已答、未答、標記複習）
-    *   **導航功能**:
-        *   題目導航點擊跳轉
-        *   上一題/下一題按鈕
-        *   提交測驗按鈕（最後一題時顯示）
-    *   **狀態管理**: 與 `quizStore` 同步，即時更新進度數據
-
-4.  **ResultDisplay.vue 答案結果顯示組件**:
+3.  **ResultDisplay.vue 答案結果顯示組件**:
+    *   **目的**：統一化答題結果的展示格式
     *   **結果展示**:
         *   正確/錯誤的視覺化指示
         *   正確答案和用戶答案的對比顯示
         *   詳細的解釋說明（支援 HTML 格式）
-        *   相關知識點鏈接
+        *   得分和統計資訊
+    *   **Props 設計**:
+        ```typescript
+        interface ResultDisplayProps {
+          result: QuizResult
+          question: Question
+        }
+        ```
     *   **交互功能**:
         *   收藏錯題功能
-        *   分享結果到社交媒體
         *   復習標記和筆記添加
-    *   **數據統計**: 本次測驗的準確率和時間統計
+        *   分享結果功能
 
-5.  **QuizTimer.vue 測驗計時器組件**:
+4.  **QuizTimer.vue 測驗計時器組件**:
     *   **計時功能**:
-        *   測驗總時間倒數計時
         *   單題作答時間記錄
-        *   暫停/恢復計時功能
-        *   時間不足時的警告提示
-    *   **視覺設計**:
-        *   時間充足時的正常顯示
-        *   時間不足時的警告樣式（橙色）
-        *   時間即將結束時的緊急樣式（紅色）
-    *   **自動化邏輯**: 時間到達時自動提交當前答案
+        *   總計時顯示
+        *   時間不足時的警告提示（橙色/紅色預警）
+    *   **Props 設計**:
+        ```typescript
+        interface QuizTimerProps {
+          startTime?: Date
+          warningTime?: number  // 警告剩餘時間（秒）
+          autoSubmit?: boolean  // 時間到自動提交
+        }
+        ```
 
-### Phase2.3 表單和交互組件開發 (2-3天)
+5.  **QuizProgress.vue 測驗進度指示器**:
+    *   **功能需求**:
+        *   當前題型的完成統計
+        *   最近答題的準確率趨勢
+        *   連續答對計數
+    *   **視覺設計**: macOS 風格的進度條和統計卡片
+
+### Phase2.2 通用 UI 組件開發 (3-4天)
+
+#### 目標：建立可復用的基礎組件庫，支援整個應用程式
+
+1.  **LoadingSpinner.vue 載入指示器**:
+    *   **需求分析**：當前 Quiz.vue 中的載入狀態需要統一化
+    *   **功能特性**:
+        *   支援不同大小（small、medium、large）
+        *   可自定義載入文字和顏色主題
+        *   支援全屏遮罩和區域載入兩種模式
+        *   macOS 風格的旋轉動畫
+    *   **Props 設計**:
+        ```typescript
+        interface LoadingSpinnerProps {
+          size?: 'small' | 'medium' | 'large'
+          text?: string
+          overlay?: boolean
+          theme?: 'light' | 'dark'
+        }
+        ```
+
+2.  **ErrorMessage.vue 錯誤訊息組件**:
+    *   **需求分析**：統一應用程式的錯誤展示格式
+    *   **功能特性**:
+        *   統一的錯誤訊息顯示格式
+        *   支援可重試操作的錯誤類型
+        *   可配置的錯誤等級（warning、error、critical）
+        *   自動消失和手動關閉功能
+    *   **Props 設計**:
+        ```typescript
+        interface ErrorMessageProps {
+          message: string
+          type?: 'warning' | 'error' | 'critical'
+          retryable?: boolean
+          autoClose?: number
+        }
+        ```
+
+3.  **Modal.vue 模態對話框組件**:
+    *   **功能需求**:
+        *   可復用的模態對話框基礎組件
+        *   支援自定義頭部、內容、底部
+        *   鍵盤事件支援（ESC 關閉）
+        *   背景點擊關閉（可配置）
+        *   macOS 風格的毛玻璃效果
+    *   **Slots 設計**: `header`、`default`、`footer`
+
+4.  **ConfirmDialog.vue 確認對話框**:
+    *   **功能需求**:
+        *   基於 Modal.vue 的確認對話框
+        *   支援自定義按鈕文字和樣式
+        *   Promise 風格的 API 設計
+        *   危險操作的紅色警告樣式
+    *   **Composable 設計**:
+        ```typescript
+        // useConfirm.ts
+        export function useConfirm() {
+          const confirm = (options: ConfirmOptions): Promise<boolean> => { }
+          return { confirm }
+        }
+        ```
+
+5.  **Toast.vue 通知提示組件**:
+    *   **功能需求**:
+        *   成功、警告、錯誤、資訊四種類型
+        *   可配置的顯示位置（右上、右下等）
+        *   支援圖標、標題、內容和操作按鈕
+        *   動畫進入和退出效果
+        *   通知隊列管理
+    *   **Composable 設計**:
+        ```typescript
+        // useToast.ts
+        export function useToast() {
+          const success = (message: string) => { }
+          const error = (message: string) => { }
+          const warning = (message: string) => { }
+          const info = (message: string) => { }
+          return { success, error, warning, info }
+        }
+        ```
+
+### Phase2.3 歷史記錄展示組件開發 (2-3天)
+
+#### 目標：完善 History.vue 頁面的數據展示功能
+
+1.  **HistoryChart.vue 歷史趨勢圖表**:
+    *   **功能需求**:
+        *   答題準確率趨勢線圖
+        *   不同題型的表現對比圖
+        *   時間段篩選功能（今日、本週、本月、全部）
+    *   **技術實現**: 使用 Chart.js 或 ApexCharts
+    *   **Props 設計**:
+        ```typescript
+        interface HistoryChartProps {
+          data: HistoryData[]
+          chartType: 'line' | 'bar' | 'pie'
+          timeRange: TimeRange
+        }
+        ```
+
+2.  **HistoryTable.vue 歷史記錄表格**:
+    *   **功能需求**:
+        *   分頁的歷史記錄表格
+        *   可排序（時間、題型、準確率）
+        *   可篩選（題型、正確性、時間範圍）
+        *   支援批量操作（刪除、標記複習）
+    *   **響應式設計**: 移動端卡片模式，桌面端表格模式
+
+3.  **StatisticsCard.vue 統計卡片**:
+    *   **展示內容**:
+        *   總答題數、正確率、連續答對記錄
+        *   最弱題型和最強題型分析
+        *   本週進度和目標達成情況
+    *   **視覺設計**: macOS 風格的磨砂玻璃卡片
+
+### Phase2.4 表單驗證和工具組件 (1-2天)
 
 1.  **表單驗證系統**:
     *   **useValidation 組合式函數**:
-        *   通用的表單驗證邏輯封裝
-        *   支援同步和異步驗證規則
-        *   錯誤訊息的國際化支援
-        *   驗證狀態的響應式管理
+        ```typescript
+        // composables/useValidation.ts
+        export function useValidation(rules: ValidationRules) {
+          const errors = ref<Record<string, string>>({})
+          const validate = (field: string, value: any): boolean => { }
+          const validateAll = (): boolean => { }
+          return { errors, validate, validateAll }
+        }
+        ```
     *   **內建驗證規則**:
         *   必填欄位驗證
         *   字數限制驗證（最少/最多字數）
         *   格式驗證（電子郵件、網址等）
         *   自定義正則表達式驗證
-    *   **即時驗證反饋**:
-        *   輸入過程中的即時驗證
-        *   錯誤訊息的動畫顯示
-        *   表單提交前的整體驗證
 
-2.  **通知系統組件**:
-    *   **useNotification 組合式函數**:
-        *   統一的通知管理邏輯
-        *   不同類型通知的樣式配置
-        *   通知的自動消失和手動關閉
-        *   通知隊列的管理和限制
-    *   **Toast 通知組件**:
-        *   成功、警告、錯誤、資訊四種類型
-        *   可配置的顯示位置（右上、右下等）
-        *   支援圖標、標題、內容和操作按鈕
-        *   動畫進入和退出效果
-    *   **Dialog 對話框組件**:
-        *   確認對話框（確定/取消）
-        *   提示對話框（僅確定）
-        *   自定義內容對話框
-        *   Promise 風格的 API 設計
-
-3.  **文件處理組件**（如需要）:
-    *   **FileUpload.vue 文件上傳組件**:
+2.  **FileUpload.vue 文件上傳組件**（如需要）:
+    *   **功能需求**:
         *   拖拽上傳和點擊上傳支援
         *   文件類型和大小限制
         *   上傳進度顯示
-        *   文件預覽功能（圖片、PDF 等）
-    *   **ImagePreview.vue 圖片預覽組件**:
-        *   圖片的放大查看功能
-        *   多圖片的輪播查看
-        *   圖片下載和分享功能
+        *   預覽功能（圖片、PDF 等）
 
-### Phase2.4 組件測試與文檔 (1-2天)
+### Phase2.5 組件測試與文檔 (1-2天)
 
 1.  **單元測試開發**:
-    *   **組件測試策略**:
+    *   **測試策略**:
         *   Props 傳遞和預設值測試
         *   事件發射和處理測試
         *   條件渲染和狀態變化測試
         *   用戶交互模擬測試
-    *   **測試工具配置**:
-        *   Vue Test Utils 的進階用法
-        *   Mock 函數和模擬數據
-        *   異步操作的測試處理
-        *   覆蓋率報告的生成
+    *   **測試工具**: Vue Test Utils + Vitest
+    *   **覆蓋率目標**: 80% 以上
 
 2.  **組件文檔建立**:
     *   **API 文檔**:
         *   組件的 Props、Events、Slots 文檔
         *   使用範例和最佳實踐
-        *   常見問題和解決方案
-        *   版本更新和變更日誌
-    *   **Storybook 配置**（選擇性）:
-        *   組件的互動式文檔
-        *   不同狀態和配置的展示
-        *   設計系統的視覺指南
+        *   TypeScript 類型定義
+    *   **組件故事書**（選擇性）:
+        *   組件的互動式展示
+        *   不同狀態的演示
 
-## 組件交互設計
+## 🔧 組件架構設計
+
+### 組件分層結構
+```
+src/components/
+├── common/           # 通用基礎組件
+│   ├── LoadingSpinner.vue
+│   ├── ErrorMessage.vue
+│   ├── Modal.vue
+│   ├── ConfirmDialog.vue
+│   └── Toast.vue
+├── quiz/            # 測驗專用組件
+│   ├── QuestionRenderer.vue
+│   ├── AnswerInput.vue
+│   ├── ResultDisplay.vue
+│   ├── QuizTimer.vue
+│   └── QuizProgress.vue
+└── history/         # 歷史記錄組件
+    ├── HistoryChart.vue
+    ├── HistoryTable.vue
+    └── StatisticsCard.vue
+```
 
 ### 組件間通訊模式
 *   **父子組件**: Props Down, Events Up 的單向數據流
 *   **兄弟組件**: 通過 Pinia Store 進行狀態共享
-*   **跨層級組件**: 使用 provide/inject 或全局事件匯流排
-*   **全局狀態**: 統一使用 Pinia 管理，避免 Props 鑽探
+*   **跨層級組件**: 使用 provide/inject 或 Composables
+*   **全局狀態**: 繼續使用現有的 Pinia stores (app、quiz、history)
 
 ### 事件系統設計
 *   **組件事件**: 使用 TypeScript 定義清晰的事件類型
@@ -225,18 +311,47 @@
 ### 狀態管理集成
 *   **響應式更新**: 組件與 Store 的自動同步
 *   **性能優化**: 計算屬性和 Watch 的合理使用
-*   **持久化**: 重要狀態的本地存儲策略
-*   **調試支援**: 開發模式下的狀態變化追蹤
+*   **持久化**: 重要狀態的本地存儲策略（已有基礎）
 
-## 驗收標準
+## ✅ 驗收標準
 
-*   所有佈局組件能正確顯示，響應式設計在不同設備上表現良好
-*   測驗系統基礎組件功能完整，能正確處理各種題型數據
+### 功能驗收
+*   所有測驗組件能正確顯示，支援 24 種題型的差異化渲染
+*   通用 UI 組件功能完整，能在各頁面正常復用
+*   歷史記錄組件能正確展示數據和圖表
 *   表單驗證系統運作正常，能提供即時和準確的驗證反饋
 *   通知系統能正確顯示和管理各種類型的通知訊息
+
+### 技術驗收
 *   所有組件的單元測試通過率達到 80% 以上
 *   組件 API 設計清晰，TypeScript 類型定義完整
 *   組件間的數據流和事件處理邏輯正確
 *   所有組件已整合到主應用中，無集成錯誤
+*   程式碼通過 ESLint 檢查，符合專案編碼規範
+
+### 效能驗收
+*   組件渲染效能良好，無明顯卡頓
+*   記憶體使用合理，無記憶體洩漏
+*   建構後總大小控制在合理範圍
+
+### 文檔驗收
 *   組件文檔完整，包含使用範例和 API 說明
-*   程式碼通過 ESLint 檢查，符合專案編碼規範 
+*   README 文件更新，包含組件庫的使用指南
+*   TypeScript 聲明文件完整
+
+## 📝 開發注意事項
+
+### 與 Phase1 的銜接
+*   **保持現有架構**：不要修改 App.vue 的佈局，專注於組件細化
+*   **API 整合延續**：利用現有的 4 個 API，等待後端補齊剩餘 4 個
+*   **macOS 風格一致性**：新組件需要與現有的 `@styles/macos.scss` 保持一致
+
+### 開發優先級
+1. **高優先級**：測驗組件（直接影響核心功能）
+2. **中優先級**：通用 UI 組件（提升用戶體驗）  
+3. **低優先級**：歷史記錄組件（依賴後端 API 完善）
+
+### 技術約束
+*   **繼續使用**：Vue 3 + TypeScript + Pinia + Vue Router
+*   **不要引入**：新的 UI 庫（保持自定義 macOS 風格）
+*   **效能考量**：組件懶加載、計算屬性快取、避免不必要的重渲染 

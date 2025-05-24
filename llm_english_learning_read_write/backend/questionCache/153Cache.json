@@ -1,33 +1,5 @@
 [
   {
-    "UUID": "ffbacce0-cd83-4705-b961-fef092f18d84",
-    "questionData": {
-      "explanation_of_Question": "這段文章的主要組織結構是因果結構。文章首先指出了森林砍伐的多個原因 (農業擴張、伐木、城市化)，然後詳細闡述了這些原因導致的結果或影響 (棲息地喪失、水土流失、氣候變化)。文章沒有提出問題和解決方案，也沒有比較不同事物，更不是按時間順序排列。",
-      "options": [
-        {
-          "id": "A",
-          "text": "問題-解決方案結構"
-        },
-        {
-          "id": "B",
-          "text": "時間順序"
-        },
-        {
-          "id": "C",
-          "text": "因果結構"
-        },
-        {
-          "id": "D",
-          "text": "比較結構"
-        }
-      ],
-      "passage": "Deforestation, the clearing of forests for other land use, is a major environmental concern. One significant cause is agricultural expansion, as land is cleared for crops and livestock. Another cause is logging, often for timber and pulp production. Urbanization also contributes, with forests being removed for infrastructure and settlements. These causes have profound effects. Loss of habitat is a primary effect, endangering countless species. Soil erosion increases significantly when tree cover is removed, leading to degraded land. Furthermore, deforestation contributes to climate change by releasing stored carbon and reducing the absorption of atmospheric carbon dioxide. The resulting environmental imbalance impacts biodiversity, water cycles, and ultimately, human livelihoods. Addressing deforestation requires multifaceted approaches, including sustainable forestry, land use planning, and conservation efforts. The chain reaction of causes and effects highlights the urgency of global action.",
-      "question": "How is the information in this passage primarily structured?",
-      "standard_answer": "C"
-    },
-    "cacheTimestamp": 1748038532
-  },
-  {
     "UUID": "c162298f-ecfa-4ed9-a31b-89e9ccaab76a",
     "questionData": {
       "explanation_of_Question": "這段文章使用了比較與對比的結構。文章詳細描述了傳統能源（煤、石油、天然氣）的特點（低成本、廣泛應用、有限性、污染）和可再生能源（太陽能、風能、水力）的特點（可再生、零排放、初始成本高、受地理天氣影響），並討論了兩者的異同，旨在呈現它們各自的優缺點和對環境的影響。選項 A、B、C 都不符合文章的組織方式。",

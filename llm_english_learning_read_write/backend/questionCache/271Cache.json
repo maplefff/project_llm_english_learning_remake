@@ -1,54 +1,5 @@
 [
   {
-    "UUID": "83bce92e-6df8-40a3-bdbb-8fd7850abd73",
-    "questionData": {
-      "evaluation_focus": [
-        "Accuracy",
-        "Naturalness",
-        "Simple grammar"
-      ],
-      "instruction": "Translate the following sentence into English.",
-      "reference_translations": [
-        "The weather is really good today.",
-        "It's a nice day today."
-      ],
-      "source_text": "今天天气真好。"
-    },
-    "cacheTimestamp": 1748038682
-  },
-  {
-    "UUID": "7ab13e7d-83d5-494c-ae56-69060cd5a091",
-    "questionData": {
-      "evaluation_focus": [
-        "Politeness",
-        "Question structure",
-        "Common phrases (asking directions)"
-      ],
-      "instruction": "Translate the following sentence into English.",
-      "reference_translations": [
-        "Excuse me, how do I get to the train station?"
-      ],
-      "source_text": "请问，去火车站怎么走？"
-    },
-    "cacheTimestamp": 1748038682
-  },
-  {
-    "UUID": "a5c21bc2-3976-4376-9936-cc562b3acad2",
-    "questionData": {
-      "evaluation_focus": [
-        "Sentence structure",
-        "Connecting clauses",
-        "Adjectives (interesting, worth)"
-      ],
-      "instruction": "Translate the following sentence into English.",
-      "reference_translations": [
-        "This book is very interesting and worth reading."
-      ],
-      "source_text": "这本书很有趣，值得一读。"
-    },
-    "cacheTimestamp": 1748038682
-  },
-  {
     "UUID": "908ee050-5546-4513-bd72-67d8fece62dc",
     "questionData": {
       "evaluation_focus": [
@@ -81,5 +32,55 @@
       "source_text": "互联网极大地改变了人们的生活方式。"
     },
     "cacheTimestamp": 1748038682
+  },
+  {
+    "UUID": "80103598-3e44-494f-9cc5-c1ca64bba65e",
+    "questionData": {
+      "evaluation_focus": [
+        "Accuracy",
+        "Fluency",
+        "Grammatical correctness"
+      ],
+      "instruction": "Translate the following sentence into English.",
+      "reference_translations": [
+        "China's economy is developing rapidly.",
+        "The Chinese economy is growing quickly."
+      ],
+      "source_text": "中国经济正在快速发展。"
+    },
+    "cacheTimestamp": 1748083940
+  },
+  {
+    "UUID": "f136cfcb-24a7-40c9-a900-1448d0d8f8e7",
+    "questionData": {
+      "evaluation_focus": [
+        "Accuracy",
+        "Simplicity"
+      ],
+      "instruction": "Translate the following sentence into English.",
+      "reference_translations": [
+        "This is a very interesting book."
+      ],
+      "source_text": "这是一本非常有趣的书。"
+    },
+    "cacheTimestamp": 1748083940
+  },
+  {
+    "UUID": "d055bc16-cd54-4ca0-ad48-8331614e57c3",
+    "questionData": {
+      "evaluation_focus": [
+        "Accuracy",
+        "Naturalness",
+        "Politeness",
+        "Grammatical correctness"
+      ],
+      "instruction": "Translate the following sentence into English.",
+      "reference_translations": [
+        "Excuse me, how do I get to the train station?",
+        "Could you tell me how to get to the train station?"
+      ],
+      "source_text": "请问，去火车站怎么走？"
+    },
+    "cacheTimestamp": 1748083940
   }
 ]

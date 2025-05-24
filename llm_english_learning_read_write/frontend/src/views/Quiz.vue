@@ -3,7 +3,7 @@
     <!-- 測驗標題 -->
     <div class="flex items-center justify-between mb-4">
       <h2 style="color: rgba(255, 255, 255, 0.95); font-size: 20px; font-weight: 600; letter-spacing: -0.2px; margin: 0;">
-        Quiz Session - {{ currentQuestionType }}
+        Quiz Session - {{ getFullQuestionTypeName(currentQuestionType) }}
       </h2>
     </div>
 
@@ -17,40 +17,20 @@
 
     <!-- 測驗狀態：進行中 -->
     <div v-else-if="currentQuestion" class="macos-quiz-question">
-      <!-- 段落內容（如果有） -->
-      <div v-if="currentQuestion.passage" class="mb-4 p-4 bg-gray-100 rounded-lg text-gray-800">
-        <h4 class="font-semibold mb-2">Reading Passage:</h4>
-        <p class="leading-relaxed">{{ currentQuestion.passage }}</p>
-      </div>
-
-      <!-- 問題文字 -->
-      <div class="macos-quiz-question-text">
-        {{ currentQuestion.question }}
-      </div>
+      <!-- 使用 QuestionRenderer 組件，不顯示重複的題型標題 -->
+      <QuestionRenderer 
+        :question="currentQuestion" 
+        :show-type-header="false"
+      />
       
-      <!-- 多選題選項 -->
-      <div v-if="currentQuestion.options && currentQuestion.options.length > 0" class="macos-quiz-options">
-        <div
-          v-for="option in currentQuestion.options"
-          :key="option.id"
-          class="macos-quiz-option"
-          :class="{ selected: selectedAnswer === option.id }"
-          @click="selectOption(option.id)"
-        >
-          {{ option.id.toUpperCase() }}. {{ option.text }}
-        </div>
-      </div>
-
-      <!-- 文字輸入題 -->
-      <div v-else class="macos-form-group">
-        <input
-          v-model="textAnswer"
-          type="text"
-          class="macos-form-input"
-          placeholder="請輸入您的答案..."
-          @keyup.enter="submitAnswer"
-        />
-      </div>
+      <!-- 使用 AnswerInput 組件 -->
+      <AnswerInput
+        :question="currentQuestion"
+        v-model="userAnswer"
+        :disabled="false"
+        :show-char-count="true"
+        @submit="submitAnswer"
+      />
 
       <!-- 操作按鈕 -->
       <div class="flex justify-between" style="margin-top: 20px;">
@@ -71,32 +51,17 @@
     </div>
 
     <!-- 測驗狀態：已完成 -->
-    <div v-else-if="lastResult" class="macos-card">
-      <div class="macos-card-title">答題結果</div>
-      <div class="macos-kpi-grid" style="margin-bottom: 20px;">
-        <div class="macos-kpi-card">
-          <div class="macos-kpi-value" :style="{ color: lastResult.isCorrect ? '#30d158' : '#ff453a' }">
-            {{ lastResult.isCorrect ? '✅' : '❌' }}
-          </div>
-          <div class="macos-kpi-label">{{ lastResult.isCorrect ? '正確' : '錯誤' }}</div>
-        </div>
-        <div class="macos-kpi-card">
-          <div class="macos-kpi-value">{{ lastResult.score }}%</div>
-          <div class="macos-kpi-label">得分</div>
-        </div>
-      </div>
-
-      <!-- 詳細說明 -->
-      <div v-if="lastResult.explanation" class="mb-4 p-4 bg-blue-500/10 border border-blue-500/20 rounded-lg">
-        <h4 class="text-blue-400 font-semibold mb-2">解題說明：</h4>
-        <p class="text-blue-300 text-sm">{{ lastResult.explanation }}</p>
-      </div>
-      
-      <div class="flex gap-4">
-        <button class="macos-button" @click="loadNewQuestion">🔄 下一題</button>
-        <button class="macos-button secondary" @click="viewHistory">📊 查看歷史</button>
-        <button class="macos-button secondary" @click="goBack">🏠 返回選題</button>
-      </div>
+    <div v-else-if="lastResult" class="quiz-result">
+      <!-- 使用 ResultDisplay 組件 -->
+      <ResultDisplay
+        :result="lastResult"
+        :user-answer="lastUserAnswer"
+        :show-answer-comparison="true"
+        @next-question="loadNewQuestion"
+        @bookmark-question="bookmarkQuestion"
+        @view-history="viewHistory"
+        @back-to-selection="goBack"
+      />
     </div>
 
     <!-- 錯誤狀態 -->
@@ -109,7 +74,7 @@
     <!-- 初始狀態 -->
     <div v-else class="macos-card">
       <div class="macos-card-title">準備測驗</div>
-      <div class="mb-4">題型：{{ currentQuestionType }}</div>
+      <div class="mb-4">題型：{{ getFullQuestionTypeName(currentQuestionType) }}</div>
       <button class="macos-button" @click="loadNewQuestion">🚀 開始測驗</button>
     </div>
   </div>
@@ -119,6 +84,9 @@
 import { ref, computed, onMounted, watch } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import { useQuizStore } from '@stores/quiz'
+import QuestionRenderer from '@/components/quiz/QuestionRenderer.vue'
+import AnswerInput from '@/components/quiz/AnswerInput.vue'
+import ResultDisplay from '@/components/quiz/ResultDisplay.vue'
 
 // 存儲
 const route = useRoute()
@@ -126,8 +94,8 @@ const router = useRouter()
 const quizStore = useQuizStore()
 
 // 響應式數據
-const selectedAnswer = ref<string | null>(null)
-const textAnswer = ref('')
+const userAnswer = ref<string | string[]>('')
+const lastUserAnswer = ref<string | string[]>('')
 
 // 計算屬性
 const currentQuestion = computed(() => quizStore.currentQuestion)
@@ -139,30 +107,65 @@ const currentQuestionType = computed(() => {
 })
 
 const hasAnswer = computed(() => {
-  if (currentQuestion.value?.options && currentQuestion.value.options.length > 0) {
-    return !!selectedAnswer.value
-  } else {
-    return !!textAnswer.value.trim()
+  if (Array.isArray(userAnswer.value)) {
+    return userAnswer.value.length > 0
   }
+  return !!userAnswer.value?.toString().trim()
 })
 
-// 方法
-const selectOption = (optionId: string) => {
-  selectedAnswer.value = optionId
-  console.log(`[DEBUG Quiz.vue] 選擇答案: ${optionId}`)
+// 方法：獲取完整題型名稱
+const getFullQuestionTypeName = (typeCode: string): string => {
+  const typeNames: Record<string, string> = {
+    // 1.x.x 閱讀理解系列
+    '1.1.1': '1.1.1 詞義選擇',
+    '1.1.2': '1.1.2 詞彙填空',
+    '1.2.1': '1.2.1 句子改錯',
+    '1.2.2': '1.2.2 語法結構選擇',
+    '1.2.3': '1.2.3 轉承詞選擇',
+    '1.3.1': '1.3.1 段落主旨',
+    '1.4.1': '1.4.1 細節查找',
+    '1.5.1': '1.5.1 推論能力',
+    '1.5.2': '1.5.2 作者目的與語氣',
+    '1.5.3': '1.5.3 文本結構與組織',
+    
+    // 2.x.x 寫作與應用系列
+    '2.1.1': '2.1.1 看圖/主題寫作',
+    '2.1.2': '2.1.2 改錯題',
+    '2.2.1': '2.2.1 句子合併',
+    '2.2.2': '2.2.2 句子重組',
+    '2.3.1': '2.3.1 段落寫作',
+    '2.4.1': '2.4.1 段落排序',
+    '2.4.2': '2.4.2 短文寫作',
+    '2.5.1': '2.5.1 簡答題',
+    '2.5.2': '2.5.2 郵件/信函寫作',
+    '2.6.1': '2.6.1 改寫句子',
+    '2.7.1': '2.7.1 中翻英句子',
+    '2.7.2': '2.7.2 中翻英短文',
+    '2.8.1': '2.8.1 英翻中句子',
+    '2.8.2': '2.8.2 英翻中短文'
+  }
+  
+  return typeNames[typeCode] || typeCode
 }
 
+// 方法
 const submitAnswer = async () => {
   if (!hasAnswer.value) return
 
-  const answer = selectedAnswer.value || textAnswer.value.trim()
+  // 儲存用戶答案供結果顯示使用
+  lastUserAnswer.value = userAnswer.value
+  
+  // 轉換答案格式
+  const answer = Array.isArray(userAnswer.value) 
+    ? userAnswer.value.join(',') 
+    : userAnswer.value.toString().trim()
+  
   console.log(`[DEBUG Quiz.vue] 提交答案: ${answer}`)
 
   try {
     await quizStore.submitAnswer(answer)
     // 清除當前答案
-    selectedAnswer.value = null
-    textAnswer.value = ''
+    userAnswer.value = ''
   } catch (error) {
     console.error('[DEBUG Quiz.vue] 提交答案錯誤:', error)
   }
@@ -170,7 +173,15 @@ const submitAnswer = async () => {
 
 const loadNewQuestion = async () => {
   console.log('[DEBUG Quiz.vue] 加載新的問題')
+  userAnswer.value = ''
+  lastUserAnswer.value = ''
   await quizStore.loadNewQuestion()
+}
+
+const bookmarkQuestion = () => {
+  console.log('[DEBUG Quiz.vue] 收藏錯題')
+  // TODO: 實現收藏功能
+  alert('收藏功能待實現')
 }
 
 const viewHistory = () => {
@@ -188,6 +199,8 @@ watch(() => route.params.questionType, (newType) => {
   if (newType) {
     console.log(`[DEBUG Quiz.vue] 路由變化，設置題型: ${newType}`)
     quizStore.setCurrentQuestionType(newType as string)
+    userAnswer.value = ''
+    lastUserAnswer.value = ''
   }
 }, { immediate: true })
 
@@ -204,66 +217,12 @@ onMounted(() => {
 <style lang="scss">
 @import '@styles/macos.scss';
 
-.macos-quiz-question-text {
-  font-size: 15px;
-  color: rgba(255, 255, 255, 0.9);
-  line-height: 1.6;
-  margin-bottom: 16px;
-  font-weight: 400;
-  letter-spacing: -0.1px;
+.quiz-result {
+  margin-bottom: 20px;
 }
 
-.macos-quiz-options {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  margin-bottom: 16px;
-}
-
-.macos-quiz-option {
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 8px;
-  padding: 12px 16px;
-  color: rgba(255, 255, 255, 0.85);
-  font-size: 14px;
-  cursor: pointer;
-  transition: all 0.15s ease;
-}
-
-.macos-quiz-option:hover {
-  background: rgba(255, 255, 255, 0.08);
-  border-color: rgba(255, 255, 255, 0.15);
-}
-
-.macos-quiz-option.selected {
-  background: rgba(10, 132, 255, 0.15);
-  border-color: rgba(10, 132, 255, 0.4);
-  color: #0a84ff;
-}
-
-.macos-form-group {
-  margin-bottom: 16px;
-}
-
-.macos-form-input {
-  width: 100%;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 8px;
-  padding: 12px 16px;
-  color: rgba(255, 255, 255, 0.9);
-  font-size: 14px;
-  transition: all 0.15s ease;
-}
-
-.macos-form-input:focus {
-  outline: none;
-  border-color: rgba(10, 132, 255, 0.4);
-  background: rgba(255, 255, 255, 0.08);
-}
-
-.macos-form-input::placeholder {
-  color: rgba(255, 255, 255, 0.4);
+// 保留原有的其他樣式但移除重複的組件樣式
+.macos-quiz-question {
+  // 移除原有的 .macos-quiz-question-text 等樣式，因為已經在組件中定義
 }
 </style>

@@ -1,19 +1,5 @@
 [
   {
-    "UUID": "5cfef7b1-a08b-41e0-a0c2-4c4ba95eedd7",
-    "questionData": {
-      "combining_method": "原因子句 (Cause clause)",
-      "explanation_of_Question": "這題考驗學生使用連接詞 'because' 來表達因果關係。後面的句子 (He had been working all day.) 是前面句子 (He was extremely tired.) 的原因。使用 'because' 連接時，because 子句可以放在主句之後。",
-      "instruction": "請使用 'because' 將這兩個句子合併成一個句子。",
-      "sentence_a": "He was extremely tired.",
-      "sentence_b": "He had been working all day.",
-      "standard_answers": [
-        "He was extremely tired because he had been working all day."
-      ]
-    },
-    "cacheTimestamp": 1748038571
-  },
-  {
     "UUID": "5d72851c-5f0c-47ba-bb5c-2b197815cbc2",
     "questionData": {
       "combining_method": "限定相對子句 (Defining relative clause - who)",

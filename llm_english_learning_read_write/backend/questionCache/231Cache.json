@@ -1,25 +1,5 @@
 [
   {
-    "UUID": "49fd7c41-03f1-4fb2-8a55-fa8c2eda3a65",
-    "questionData": {
-      "evaluation_criteria": {
-        "coherence": 25,
-        "grammar": 25,
-        "task_achievement": 25,
-        "vocabulary": 25
-      },
-      "instruction": "Write a paragraph explaining why recycling is crucial for protecting the environment. Include a clear topic sentence, at least three reasons supporting your argument, and use transition words to connect your ideas logically.",
-      "max_sentences": 8,
-      "min_sentences": 5,
-      "sample_responses": [
-        "Recycling is fundamentally crucial for safeguarding our planet's health for future generations. Firstly, it significantly reduces the amount of waste sent to landfills, which prevents soil and water contamination and lowers methane gas emissions, a powerful greenhouse gas. Furthermore, recycling conserves natural resources like timber, water, and minerals by decreasing the need to extract new raw materials. This process also saves energy compared to manufacturing products from virgin materials, leading to lower carbon footprints and reduced air pollution. Ultimately, adopting widespread recycling practices is an essential step towards building a sustainable future and mitigating the negative impacts of human consumption on the environment.",
-        "Protecting the environment necessitates embracing recycling as a vital practice in our daily lives. One primary reason is that recycling helps conserve valuable natural resources by reusing materials that would otherwise be discarded, thus reducing the demand for raw material extraction. Additionally, the process of recycling often consumes considerably less energy than producing new products from scratch, which translates into reduced greenhouse gas emissions and less air pollution. Moreover, recycling diverts vast quantities of waste away from landfills, extending their lifespan and preventing harmful substances from leaching into the ground and water supply. Therefore, conscientious recycling is a powerful tool we possess to minimize environmental damage and promote ecological balance."
-      ],
-      "topic": "The importance of recycling for the environment"
-    },
-    "cacheTimestamp": 1748038600
-  },
-  {
     "UUID": "7006f06a-d9eb-450b-a5a7-2dd319715d81",
     "questionData": {
       "evaluation_criteria": {

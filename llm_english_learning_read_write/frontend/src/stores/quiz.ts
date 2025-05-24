@@ -2,28 +2,37 @@ import { defineStore } from 'pinia'
 import { apiService } from '@/services/api'
 import { useRouter } from 'vue-router'
 
-// 後端API返回的題目結構
+// 後端API實際返回的題目結構（根據測試結果修正）
 interface BackendQuestion {
   id: string
-  questionType: string
+  type: string  // 後端使用的是 'type' 而不是 'questionType'
+  explanation_of_Question?: string
+  instruction?: string
   passage?: string
-  question: string
-  options: Array<{ id: string; text: string }>
-  standard_answer: string
+  question?: string  // 有些題型沒有 question 欄位
+  original_sentence?: string  // 1.2.1 句子改錯使用
+  options?: Array<{ id: string; text: string }>  // 修正：實際是物件陣列
+  standard_answer?: string
+  standard_corrections?: string[]  // 1.2.1 句子改錯的標準答案
+  targetWord?: string
+  explanation?: string
+  error_types?: string[]
 }
 
 // 後端API返回的答題結果
-interface BackendResult {
-  isCorrect: boolean
-  score: number
-  explanation?: string
-  correctAnswer: string
+interface BackendSubmissionResult {
+  submissionResult: {
+    isCorrect: boolean
+    correctAnswer: string
+    explanation: string
+  }
+  nextQuestion?: BackendQuestion | null
 }
 
 export const useQuizStore = defineStore('quiz', {
   state: () => ({
     currentQuestion: null as BackendQuestion | null,
-    lastResult: null as BackendResult | null,
+    lastResult: null as BackendSubmissionResult | null,
     isLoading: false,
     error: null as string | null,
     currentQuestionType: '' as string
@@ -49,11 +58,14 @@ export const useQuizStore = defineStore('quiz', {
         console.log(`[DEBUG quiz.ts] 正在加載題型 ${this.currentQuestionType} 的題目`)
         const response = await apiService.startTest(this.currentQuestionType)
         
+        console.log(`[DEBUG quiz.ts] API回應:`, response)
+        
         if (response.success && response.question) {
           this.currentQuestion = response.question
           console.log(`[DEBUG quiz.ts] 成功加載題目:`, response.question)
         } else {
           this.error = '無法獲取題目'
+          console.error(`[DEBUG quiz.ts] API回應格式錯誤:`, response)
         }
       } catch (error: any) {
         console.error('[DEBUG quiz.ts] 加載題目失敗:', error)
@@ -75,6 +87,7 @@ export const useQuizStore = defineStore('quiz', {
 
       try {
         console.log(`[DEBUG quiz.ts] 提交答案: ${userAnswer}`)
+        console.log(`[DEBUG quiz.ts] 題目數據:`, this.currentQuestion)
         
         const result = await apiService.submitAnswer(
           this.currentQuestion.id,
@@ -82,10 +95,10 @@ export const useQuizStore = defineStore('quiz', {
           this.currentQuestion
         )
 
+        console.log(`[DEBUG quiz.ts] 答題結果:`, result)
+        
         this.lastResult = result
         this.currentQuestion = null // 清除當前題目，顯示結果
-        
-        console.log(`[DEBUG quiz.ts] 答題結果:`, result)
         
       } catch (error: any) {
         console.error('[DEBUG quiz.ts] 提交答案失敗:', error)

@@ -1,0 +1,1227 @@
+{
+  "timestamp": "2025-05-24T10:01:20.181Z",
+  "baseUrl": "http://localhost:3001",
+  "questionTypes": {
+    "status": 200,
+    "success": true,
+    "data": [
+      {
+        "id": "1.1.1",
+        "name": "詞義選擇 (Vocabulary - Multiple Choice)"
+      },
+      {
+        "id": "1.1.2",
+        "name": "詞彙填空 (Vocabulary - Cloze Test)"
+      },
+      {
+        "id": "1.2.1",
+        "name": "句子改錯 (Sentence Correction)"
+      },
+      {
+        "id": "1.2.2",
+        "name": "語法結構選擇 (Grammar Structure - Multiple Choice)"
+      },
+      {
+        "id": "1.2.3",
+        "name": "轉承詞選擇 (Transition Words - Multiple Choice)"
+      }
+    ],
+    "count": 5
+  },
+  "testResults": [
+    {
+      "questionType": "1.1.1",
+      "questionTypeName": "詞義選擇 (Vocabulary - Multiple Choice)",
+      "startTest": {
+        "status": 200,
+        "success": true,
+        "payload": {
+          "questionType": "1.1.1"
+        },
+        "data": {
+          "success": true,
+          "question": {
+            "explanation_of_Question": "Ambiguous 指意思不明確、模稜兩可，使人難以理解。選項 B「vague」意為模糊、不明確，是 Ambiguous 的近義詞。選項 A「clear」意為清晰；選項 C「definite」意為明確的；選項 D「certain」意為確定的；這三者都與原意相反。",
+            "options": [
+              {
+                "id": "A",
+                "text": "clear"
+              },
+              {
+                "id": "B",
+                "text": "vague"
+              },
+              {
+                "id": "C",
+                "text": "definite"
+              },
+              {
+                "id": "D",
+                "text": "certain"
+              }
+            ],
+            "passage": "His response was so **ambiguous** that nobody was sure what he meant.",
+            "question": "Based on the sentence, what does the word 'ambiguous' mean?",
+            "standard_answer": "B",
+            "targetWord": "ambiguous",
+            "id": "8f27155f-63a8-47cf-9fbf-71c608241ee7",
+            "type": "1.1.1",
+            "explanation": "Ambiguous 指意思不明確、模稜兩可，使人難以理解。選項 B「vague」意為模糊、不明確，是 Ambiguous 的近義詞。選項 A「clear」意為清晰；選項 C「definite」意為明確的；選項 D「certain」意為確定的；這三者都與原意相反。"
+          }
+        },
+        "dataStructure": {
+          "type": "object",
+          "properties": {
+            "success": {
+              "type": "boolean",
+              "value": true
+            },
+            "question": {
+              "type": "object",
+              "properties": {
+                "explanation_of_Question": {
+                  "type": "string",
+                  "value": "Ambiguous 指意思不明確、模稜兩可，使人難以理解。選項 B「vague」意為模糊、不明確，是 Ambiguous 的近義詞。選項 A「clear」意為清晰；選項 C「definite」意為明確..."
+                },
+                "options": {
+                  "type": "array",
+                  "length": 4,
+                  "itemType": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "string",
+                        "value": "A"
+                      },
+                      "text": {
+                        "type": "string",
+                        "value": "clear"
+                      }
+                    }
+                  }
+                },
+                "passage": {
+                  "type": "string",
+                  "value": "His response was so **ambiguous** that nobody was sure what he meant."
+                },
+                "question": {
+                  "type": "string",
+                  "value": "Based on the sentence, what does the word 'ambiguous' mean?"
+                },
+                "standard_answer": {
+                  "type": "string",
+                  "value": "B"
+                },
+                "targetWord": {
+                  "type": "string",
+                  "value": "ambiguous"
+                },
+                "id": {
+                  "type": "string",
+                  "value": "8f27155f-63a8-47cf-9fbf-71c608241ee7"
+                },
+                "type": {
+                  "type": "string",
+                  "value": "1.1.1"
+                },
+                "explanation": {
+                  "type": "string",
+                  "value": "Ambiguous 指意思不明確、模稜兩可，使人難以理解。選項 B「vague」意為模糊、不明確，是 Ambiguous 的近義詞。選項 A「clear」意為清晰；選項 C「definite」意為明確..."
+                }
+              }
+            }
+          }
+        }
+      },
+      "submitAnswer": {
+        "status": 200,
+        "success": true,
+        "payload": {
+          "questionId": "8f27155f-63a8-47cf-9fbf-71c608241ee7",
+          "userAnswer": {
+            "id": "A",
+            "text": "clear"
+          },
+          "questionDataSnapshot": {
+            "explanation_of_Question": "Ambiguous 指意思不明確、模稜兩可，使人難以理解。選項 B「vague」意為模糊、不明確，是 Ambiguous 的近義詞。選項 A「clear」意為清晰；選項 C「definite」意為明確的；選項 D「certain」意為確定的；這三者都與原意相反。",
+            "options": [
+              {
+                "id": "A",
+                "text": "clear"
+              },
+              {
+                "id": "B",
+                "text": "vague"
+              },
+              {
+                "id": "C",
+                "text": "definite"
+              },
+              {
+                "id": "D",
+                "text": "certain"
+              }
+            ],
+            "passage": "His response was so **ambiguous** that nobody was sure what he meant.",
+            "question": "Based on the sentence, what does the word 'ambiguous' mean?",
+            "standard_answer": "B",
+            "targetWord": "ambiguous",
+            "id": "8f27155f-63a8-47cf-9fbf-71c608241ee7",
+            "type": "1.1.1",
+            "explanation": "Ambiguous 指意思不明確、模稜兩可，使人難以理解。選項 B「vague」意為模糊、不明確，是 Ambiguous 的近義詞。選項 A「clear」意為清晰；選項 C「definite」意為明確的；選項 D「certain」意為確定的；這三者都與原意相反。"
+          }
+        },
+        "data": {
+          "submissionResult": {
+            "isCorrect": false,
+            "correctAnswer": "B",
+            "explanation": "Ambiguous 指意思不明確、模稜兩可，使人難以理解。選項 B「vague」意為模糊、不明確，是 Ambiguous 的近義詞。選項 A「clear」意為清晰；選項 C「definite」意為明確的；選項 D「certain」意為確定的；這三者都與原意相反。"
+          },
+          "nextQuestion": {
+            "explanation_of_Question": "Validate 指證實、確認某事的真實性或有效性。此處實驗結果幫助證實了科學家的假說，因此選項 C「confirm」意為確認、證實，是 Validate 的近義詞。選項 A「contradict」意為反駁；選項 B「deny」意為否定；選項 D「question」意為質疑；這些都與原意相反或不符。",
+            "options": [
+              {
+                "id": "A",
+                "text": "contradict"
+              },
+              {
+                "id": "B",
+                "text": "deny"
+              },
+              {
+                "id": "C",
+                "text": "confirm"
+              },
+              {
+                "id": "D",
+                "text": "question"
+              }
+            ],
+            "passage": "The experiment results helped to **validate** the scientist's hypothesis.",
+            "question": "In the sentence above, what is the closest meaning of 'validate'?",
+            "standard_answer": "C",
+            "targetWord": "validate",
+            "id": "388e1a61-7d2b-4f64-9575-9b54806cc301",
+            "type": "1.1.1",
+            "explanation": "Validate 指證實、確認某事的真實性或有效性。此處實驗結果幫助證實了科學家的假說，因此選項 C「confirm」意為確認、證實，是 Validate 的近義詞。選項 A「contradict」意為反駁；選項 B「deny」意為否定；選項 D「question」意為質疑；這些都與原意相反或不符。"
+          }
+        },
+        "dataStructure": {
+          "type": "object",
+          "properties": {
+            "submissionResult": {
+              "type": "object",
+              "properties": {
+                "isCorrect": {
+                  "type": "boolean",
+                  "value": false
+                },
+                "correctAnswer": {
+                  "type": "string",
+                  "value": "B"
+                },
+                "explanation": {
+                  "type": "string",
+                  "value": "Ambiguous 指意思不明確、模稜兩可，使人難以理解。選項 B「vague」意為模糊、不明確，是 Ambiguous 的近義詞。選項 A「clear」意為清晰；選項 C「definite」意為明確..."
+                }
+              }
+            },
+            "nextQuestion": {
+              "type": "object",
+              "properties": {
+                "explanation_of_Question": {
+                  "type": "string",
+                  "value": "Validate 指證實、確認某事的真實性或有效性。此處實驗結果幫助證實了科學家的假說，因此選項 C「confirm」意為確認、證實，是 Validate 的近義詞。選項 A「contradict」意..."
+                },
+                "options": {
+                  "type": "array",
+                  "length": 4,
+                  "itemType": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "string",
+                        "value": "A"
+                      },
+                      "text": {
+                        "type": "string",
+                        "value": "contradict"
+                      }
+                    }
+                  }
+                },
+                "passage": {
+                  "type": "string",
+                  "value": "The experiment results helped to **validate** the scientist's hypothesis."
+                },
+                "question": {
+                  "type": "string",
+                  "value": "In the sentence above, what is the closest meaning of 'validate'?"
+                },
+                "standard_answer": {
+                  "type": "string",
+                  "value": "C"
+                },
+                "targetWord": {
+                  "type": "string",
+                  "value": "validate"
+                },
+                "id": {
+                  "type": "string",
+                  "value": "388e1a61-7d2b-4f64-9575-9b54806cc301"
+                },
+                "type": {
+                  "type": "string",
+                  "value": "1.1.1"
+                },
+                "explanation": {
+                  "type": "string",
+                  "value": "Validate 指證實、確認某事的真實性或有效性。此處實驗結果幫助證實了科學家的假說，因此選項 C「confirm」意為確認、證實，是 Validate 的近義詞。選項 A「contradict」意..."
+                }
+              }
+            }
+          }
+        }
+      },
+      "completeFlow": true
+    },
+    {
+      "questionType": "1.1.2",
+      "questionTypeName": "詞彙填空 (Vocabulary - Cloze Test)",
+      "startTest": {
+        "status": 200,
+        "success": true,
+        "payload": {
+          "questionType": "1.1.2"
+        },
+        "data": {
+          "success": true,
+          "question": {
+            "explanation_of_Question": "這句話描述的是某人儘管面對許多困難，仍然堅持追求夢想。選項 A 「relinquished」意為放棄、交出，與堅持相反。選項 B 「detoured」意為繞道、偏離，與追求夢想的直線行動不同。選項 D 「wavered」意為動搖、猶豫，儘管可能會有動搖，但句子強調的是儘管困難'仍'堅持。選項 C 「persisted」意為堅持、持續，最能準確表達在困難面前不放棄的態度。因此，C 是正確答案。",
+            "options": [
+              {
+                "id": "A",
+                "text": "relinquished"
+              },
+              {
+                "id": "B",
+                "text": "detoured"
+              },
+              {
+                "id": "C",
+                "text": "persisted"
+              },
+              {
+                "id": "D",
+                "text": "wavered"
+              }
+            ],
+            "passage": "Despite facing numerous setbacks, she _______ in her pursuit of becoming a doctor.",
+            "question": "Choose the best word to complete the sentence.",
+            "standard_answer": "C",
+            "id": "2da17bb8-e1f8-4e42-a7e4-89581f4adcc1",
+            "type": "1.1.2",
+            "explanation": "這句話描述的是某人儘管面對許多困難，仍然堅持追求夢想。選項 A 「relinquished」意為放棄、交出，與堅持相反。選項 B 「detoured」意為繞道、偏離，與追求夢想的直線行動不同。選項 D 「wavered」意為動搖、猶豫，儘管可能會有動搖，但句子強調的是儘管困難'仍'堅持。選項 C 「persisted」意為堅持、持續，最能準確表達在困難面前不放棄的態度。因此，C 是正確答案。"
+          }
+        },
+        "dataStructure": {
+          "type": "object",
+          "properties": {
+            "success": {
+              "type": "boolean",
+              "value": true
+            },
+            "question": {
+              "type": "object",
+              "properties": {
+                "explanation_of_Question": {
+                  "type": "string",
+                  "value": "這句話描述的是某人儘管面對許多困難，仍然堅持追求夢想。選項 A 「relinquished」意為放棄、交出，與堅持相反。選項 B 「detoured」意為繞道、偏離，與追求夢想的直線行動不同。選項 D..."
+                },
+                "options": {
+                  "type": "array",
+                  "length": 4,
+                  "itemType": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "string",
+                        "value": "A"
+                      },
+                      "text": {
+                        "type": "string",
+                        "value": "relinquished"
+                      }
+                    }
+                  }
+                },
+                "passage": {
+                  "type": "string",
+                  "value": "Despite facing numerous setbacks, she _______ in her pursuit of becoming a doctor."
+                },
+                "question": {
+                  "type": "string",
+                  "value": "Choose the best word to complete the sentence."
+                },
+                "standard_answer": {
+                  "type": "string",
+                  "value": "C"
+                },
+                "id": {
+                  "type": "string",
+                  "value": "2da17bb8-e1f8-4e42-a7e4-89581f4adcc1"
+                },
+                "type": {
+                  "type": "string",
+                  "value": "1.1.2"
+                },
+                "explanation": {
+                  "type": "string",
+                  "value": "這句話描述的是某人儘管面對許多困難，仍然堅持追求夢想。選項 A 「relinquished」意為放棄、交出，與堅持相反。選項 B 「detoured」意為繞道、偏離，與追求夢想的直線行動不同。選項 D..."
+                }
+              }
+            }
+          }
+        }
+      },
+      "submitAnswer": {
+        "status": 200,
+        "success": true,
+        "payload": {
+          "questionId": "2da17bb8-e1f8-4e42-a7e4-89581f4adcc1",
+          "userAnswer": {
+            "id": "A",
+            "text": "relinquished"
+          },
+          "questionDataSnapshot": {
+            "explanation_of_Question": "這句話描述的是某人儘管面對許多困難，仍然堅持追求夢想。選項 A 「relinquished」意為放棄、交出，與堅持相反。選項 B 「detoured」意為繞道、偏離，與追求夢想的直線行動不同。選項 D 「wavered」意為動搖、猶豫，儘管可能會有動搖，但句子強調的是儘管困難'仍'堅持。選項 C 「persisted」意為堅持、持續，最能準確表達在困難面前不放棄的態度。因此，C 是正確答案。",
+            "options": [
+              {
+                "id": "A",
+                "text": "relinquished"
+              },
+              {
+                "id": "B",
+                "text": "detoured"
+              },
+              {
+                "id": "C",
+                "text": "persisted"
+              },
+              {
+                "id": "D",
+                "text": "wavered"
+              }
+            ],
+            "passage": "Despite facing numerous setbacks, she _______ in her pursuit of becoming a doctor.",
+            "question": "Choose the best word to complete the sentence.",
+            "standard_answer": "C",
+            "id": "2da17bb8-e1f8-4e42-a7e4-89581f4adcc1",
+            "type": "1.1.2",
+            "explanation": "這句話描述的是某人儘管面對許多困難，仍然堅持追求夢想。選項 A 「relinquished」意為放棄、交出，與堅持相反。選項 B 「detoured」意為繞道、偏離，與追求夢想的直線行動不同。選項 D 「wavered」意為動搖、猶豫，儘管可能會有動搖，但句子強調的是儘管困難'仍'堅持。選項 C 「persisted」意為堅持、持續，最能準確表達在困難面前不放棄的態度。因此，C 是正確答案。"
+          }
+        },
+        "data": {
+          "submissionResult": {
+            "isCorrect": false,
+            "correctAnswer": "C",
+            "explanation": "這句話描述的是某人儘管面對許多困難，仍然堅持追求夢想。選項 A 「relinquished」意為放棄、交出，與堅持相反。選項 B 「detoured」意為繞道、偏離，與追求夢想的直線行動不同。選項 D 「wavered」意為動搖、猶豫，儘管可能會有動搖，但句子強調的是儘管困難'仍'堅持。選項 C 「persisted」意為堅持、持續，最能準確表達在困難面前不放棄的態度。因此，C 是正確答案。"
+          },
+          "nextQuestion": {
+            "explanation_of_Question": "這句話描述的是由於經濟不景氣，公司不得不削減開支。選項 A 「expanded」意為擴大，與削減相反。選項 B 「enhanced」意為提升、加強，與削減無關。選項 D 「bolstered」意為支持、加固，與削減相反。選項 C 「curtail」意為縮減、削減，與句子中因經濟不景氣而需要減少開支的語境相符。因此，C 是正確答案。",
+            "options": [
+              {
+                "id": "A",
+                "text": "expanded"
+              },
+              {
+                "id": "B",
+                "text": "enhanced"
+              },
+              {
+                "id": "C",
+                "text": "curtail"
+              },
+              {
+                "id": "D",
+                "text": "bolstered"
+              }
+            ],
+            "passage": "Due to the economic downturn, the company had to _______ its spending significantly.",
+            "question": "Choose the best word to complete the sentence.",
+            "standard_answer": "C",
+            "id": "ee20f795-6e32-401d-8e46-53c5a23e7837",
+            "type": "1.1.2",
+            "explanation": "這句話描述的是由於經濟不景氣，公司不得不削減開支。選項 A 「expanded」意為擴大，與削減相反。選項 B 「enhanced」意為提升、加強，與削減無關。選項 D 「bolstered」意為支持、加固，與削減相反。選項 C 「curtail」意為縮減、削減，與句子中因經濟不景氣而需要減少開支的語境相符。因此，C 是正確答案。"
+          }
+        },
+        "dataStructure": {
+          "type": "object",
+          "properties": {
+            "submissionResult": {
+              "type": "object",
+              "properties": {
+                "isCorrect": {
+                  "type": "boolean",
+                  "value": false
+                },
+                "correctAnswer": {
+                  "type": "string",
+                  "value": "C"
+                },
+                "explanation": {
+                  "type": "string",
+                  "value": "這句話描述的是某人儘管面對許多困難，仍然堅持追求夢想。選項 A 「relinquished」意為放棄、交出，與堅持相反。選項 B 「detoured」意為繞道、偏離，與追求夢想的直線行動不同。選項 D..."
+                }
+              }
+            },
+            "nextQuestion": {
+              "type": "object",
+              "properties": {
+                "explanation_of_Question": {
+                  "type": "string",
+                  "value": "這句話描述的是由於經濟不景氣，公司不得不削減開支。選項 A 「expanded」意為擴大，與削減相反。選項 B 「enhanced」意為提升、加強，與削減無關。選項 D 「bolstered」意為支持..."
+                },
+                "options": {
+                  "type": "array",
+                  "length": 4,
+                  "itemType": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "string",
+                        "value": "A"
+                      },
+                      "text": {
+                        "type": "string",
+                        "value": "expanded"
+                      }
+                    }
+                  }
+                },
+                "passage": {
+                  "type": "string",
+                  "value": "Due to the economic downturn, the company had to _______ its spending significantly."
+                },
+                "question": {
+                  "type": "string",
+                  "value": "Choose the best word to complete the sentence."
+                },
+                "standard_answer": {
+                  "type": "string",
+                  "value": "C"
+                },
+                "id": {
+                  "type": "string",
+                  "value": "ee20f795-6e32-401d-8e46-53c5a23e7837"
+                },
+                "type": {
+                  "type": "string",
+                  "value": "1.1.2"
+                },
+                "explanation": {
+                  "type": "string",
+                  "value": "這句話描述的是由於經濟不景氣，公司不得不削減開支。選項 A 「expanded」意為擴大，與削減相反。選項 B 「enhanced」意為提升、加強，與削減無關。選項 D 「bolstered」意為支持..."
+                }
+              }
+            }
+          }
+        }
+      },
+      "completeFlow": true
+    },
+    {
+      "questionType": "1.2.1",
+      "questionTypeName": "句子改錯 (Sentence Correction)",
+      "startTest": {
+        "status": 200,
+        "success": true,
+        "payload": {
+          "questionType": "1.2.1"
+        },
+        "data": {
+          "success": true,
+          "question": {
+            "error_types": [
+              "verb_tense",
+              "articles"
+            ],
+            "explanation_of_Question": "句子中有兩個錯誤：1. 'is wanting' 通常不用進行式，可以用現在完成式或簡單現在式來表達願望的持續或目前的願望；2. 'for long time' 缺少冠詞 'a'。正確的句子是 'He has wanted to buy a new car for a long time.' 或 'He wants to buy a new car.'。",
+            "instruction": "Identify the error(s) in the sentence above and rewrite it correctly.",
+            "original_sentence": "He is wanting to buy a new car for long time.",
+            "standard_corrections": [
+              "He has wanted to buy a new car for a long time.",
+              "He wants to buy a new car."
+            ],
+            "id": "8835c8b4-3604-42e6-9f57-ca023673af5f",
+            "type": "1.2.1",
+            "explanation": "句子中有兩個錯誤：1. 'is wanting' 通常不用進行式，可以用現在完成式或簡單現在式來表達願望的持續或目前的願望；2. 'for long time' 缺少冠詞 'a'。正確的句子是 'He has wanted to buy a new car for a long time.' 或 'He wants to buy a new car.'。"
+          }
+        },
+        "dataStructure": {
+          "type": "object",
+          "properties": {
+            "success": {
+              "type": "boolean",
+              "value": true
+            },
+            "question": {
+              "type": "object",
+              "properties": {
+                "error_types": {
+                  "type": "array",
+                  "length": 2,
+                  "itemType": {
+                    "type": "string",
+                    "value": "verb_tense"
+                  }
+                },
+                "explanation_of_Question": {
+                  "type": "string",
+                  "value": "句子中有兩個錯誤：1. 'is wanting' 通常不用進行式，可以用現在完成式或簡單現在式來表達願望的持續或目前的願望；2. 'for long time' 缺少冠詞 'a'。正確的句子是 'He..."
+                },
+                "instruction": {
+                  "type": "string",
+                  "value": "Identify the error(s) in the sentence above and rewrite it correctly."
+                },
+                "original_sentence": {
+                  "type": "string",
+                  "value": "He is wanting to buy a new car for long time."
+                },
+                "standard_corrections": {
+                  "type": "array",
+                  "length": 2,
+                  "itemType": {
+                    "type": "string",
+                    "value": "He has wanted to buy a new car for a long time."
+                  }
+                },
+                "id": {
+                  "type": "string",
+                  "value": "8835c8b4-3604-42e6-9f57-ca023673af5f"
+                },
+                "type": {
+                  "type": "string",
+                  "value": "1.2.1"
+                },
+                "explanation": {
+                  "type": "string",
+                  "value": "句子中有兩個錯誤：1. 'is wanting' 通常不用進行式，可以用現在完成式或簡單現在式來表達願望的持續或目前的願望；2. 'for long time' 缺少冠詞 'a'。正確的句子是 'He..."
+                }
+              }
+            }
+          }
+        }
+      },
+      "submitAnswer": {
+        "status": 200,
+        "success": true,
+        "payload": {
+          "questionId": "8835c8b4-3604-42e6-9f57-ca023673af5f",
+          "userAnswer": "He has wanted to buy a new car for a long time.",
+          "questionDataSnapshot": {
+            "error_types": [
+              "verb_tense",
+              "articles"
+            ],
+            "explanation_of_Question": "句子中有兩個錯誤：1. 'is wanting' 通常不用進行式，可以用現在完成式或簡單現在式來表達願望的持續或目前的願望；2. 'for long time' 缺少冠詞 'a'。正確的句子是 'He has wanted to buy a new car for a long time.' 或 'He wants to buy a new car.'。",
+            "instruction": "Identify the error(s) in the sentence above and rewrite it correctly.",
+            "original_sentence": "He is wanting to buy a new car for long time.",
+            "standard_corrections": [
+              "He has wanted to buy a new car for a long time.",
+              "He wants to buy a new car."
+            ],
+            "id": "8835c8b4-3604-42e6-9f57-ca023673af5f",
+            "type": "1.2.1",
+            "explanation": "句子中有兩個錯誤：1. 'is wanting' 通常不用進行式，可以用現在完成式或簡單現在式來表達願望的持續或目前的願望；2. 'for long time' 缺少冠詞 'a'。正確的句子是 'He has wanted to buy a new car for a long time.' 或 'He wants to buy a new car.'。"
+          }
+        },
+        "data": {
+          "submissionResult": {
+            "isCorrect": true,
+            "correctAnswer": "He has wanted to buy a new car for a long time.",
+            "explanation": "句子中有兩個錯誤：1. 'is wanting' 通常不用進行式，可以用現在完成式或簡單現在式來表達願望的持續或目前的願望；2. 'for long time' 缺少冠詞 'a'。正確的句子是 'He has wanted to buy a new car for a long time.' 或 'He wants to buy a new car.'。"
+          },
+          "nextQuestion": {
+            "error_types": [
+              "subject_verb_agreement"
+            ],
+            "explanation_of_Question": "句子中的主詞是 'The team members' (複數)，動詞應該用複數形式 'are'，而不是單數的 'is'。插入語 'as well as the coach' 不影響主詞的單複數。",
+            "instruction": "Identify the error(s) in the sentence above and rewrite it correctly.",
+            "original_sentence": "The team members, as well as the coach, is confident about winning the championship game.",
+            "standard_corrections": [
+              "The team members, as well as the coach, are confident about winning the championship game."
+            ],
+            "id": "a0b980cd-9eae-481e-bc17-2b606c6752cc",
+            "type": "1.2.1",
+            "explanation": "句子中的主詞是 'The team members' (複數)，動詞應該用複數形式 'are'，而不是單數的 'is'。插入語 'as well as the coach' 不影響主詞的單複數。"
+          }
+        },
+        "dataStructure": {
+          "type": "object",
+          "properties": {
+            "submissionResult": {
+              "type": "object",
+              "properties": {
+                "isCorrect": {
+                  "type": "boolean",
+                  "value": true
+                },
+                "correctAnswer": {
+                  "type": "string",
+                  "value": "He has wanted to buy a new car for a long time."
+                },
+                "explanation": {
+                  "type": "string",
+                  "value": "句子中有兩個錯誤：1. 'is wanting' 通常不用進行式，可以用現在完成式或簡單現在式來表達願望的持續或目前的願望；2. 'for long time' 缺少冠詞 'a'。正確的句子是 'He..."
+                }
+              }
+            },
+            "nextQuestion": {
+              "type": "object",
+              "properties": {
+                "error_types": {
+                  "type": "array",
+                  "length": 1,
+                  "itemType": {
+                    "type": "string",
+                    "value": "subject_verb_agreement"
+                  }
+                },
+                "explanation_of_Question": {
+                  "type": "string",
+                  "value": "句子中的主詞是 'The team members' (複數)，動詞應該用複數形式 'are'，而不是單數的 'is'。插入語 'as well as the coach' 不影響主詞的單複數。"
+                },
+                "instruction": {
+                  "type": "string",
+                  "value": "Identify the error(s) in the sentence above and rewrite it correctly."
+                },
+                "original_sentence": {
+                  "type": "string",
+                  "value": "The team members, as well as the coach, is confident about winning the championship game."
+                },
+                "standard_corrections": {
+                  "type": "array",
+                  "length": 1,
+                  "itemType": {
+                    "type": "string",
+                    "value": "The team members, as well as the coach, are confident about winning the championship game."
+                  }
+                },
+                "id": {
+                  "type": "string",
+                  "value": "a0b980cd-9eae-481e-bc17-2b606c6752cc"
+                },
+                "type": {
+                  "type": "string",
+                  "value": "1.2.1"
+                },
+                "explanation": {
+                  "type": "string",
+                  "value": "句子中的主詞是 'The team members' (複數)，動詞應該用複數形式 'are'，而不是單數的 'is'。插入語 'as well as the coach' 不影響主詞的單複數。"
+                }
+              }
+            }
+          }
+        }
+      },
+      "completeFlow": true
+    },
+    {
+      "questionType": "1.2.2",
+      "questionTypeName": "語法結構選擇 (Grammar Structure - Multiple Choice)",
+      "startTest": {
+        "status": 200,
+        "success": true,
+        "payload": {
+          "questionType": "1.2.2"
+        },
+        "data": {
+          "success": true,
+          "question": {
+            "explanation_of_Question": "選項 C 是正確的，因為在最高級結構 'the + 最高級 + 名詞 + that + 主詞 + have ever + 過去分詞' 中，需要使用定冠詞 'the'。選項 A 缺少 'the' 且 'have' 應為 'has' (搭配 'she')；選項 B 缺少 'the'；選項 D 使用 'the' 但動詞形態錯誤。",
+            "options": [
+              {
+                "id": "A",
+                "text": "This is best book that she have ever read."
+              },
+              {
+                "id": "B",
+                "text": "This is best book that she has ever read."
+              },
+              {
+                "id": "C",
+                "text": "This is the best book that she has ever read."
+              },
+              {
+                "id": "D",
+                "text": "This is the best book that she ever read."
+              }
+            ],
+            "question": "Select the sentence with the correct article and verb form.",
+            "standard_answer": "C",
+            "id": "da944fc3-03b1-4ea3-8680-a6798c8721ab",
+            "type": "1.2.2",
+            "explanation": "選項 C 是正確的，因為在最高級結構 'the + 最高級 + 名詞 + that + 主詞 + have ever + 過去分詞' 中，需要使用定冠詞 'the'。選項 A 缺少 'the' 且 'have' 應為 'has' (搭配 'she')；選項 B 缺少 'the'；選項 D 使用 'the' 但動詞形態錯誤。"
+          }
+        },
+        "dataStructure": {
+          "type": "object",
+          "properties": {
+            "success": {
+              "type": "boolean",
+              "value": true
+            },
+            "question": {
+              "type": "object",
+              "properties": {
+                "explanation_of_Question": {
+                  "type": "string",
+                  "value": "選項 C 是正確的，因為在最高級結構 'the + 最高級 + 名詞 + that + 主詞 + have ever + 過去分詞' 中，需要使用定冠詞 'the'。選項 A 缺少 'the' 且 '..."
+                },
+                "options": {
+                  "type": "array",
+                  "length": 4,
+                  "itemType": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "string",
+                        "value": "A"
+                      },
+                      "text": {
+                        "type": "string",
+                        "value": "This is best book that she have ever read."
+                      }
+                    }
+                  }
+                },
+                "question": {
+                  "type": "string",
+                  "value": "Select the sentence with the correct article and verb form."
+                },
+                "standard_answer": {
+                  "type": "string",
+                  "value": "C"
+                },
+                "id": {
+                  "type": "string",
+                  "value": "da944fc3-03b1-4ea3-8680-a6798c8721ab"
+                },
+                "type": {
+                  "type": "string",
+                  "value": "1.2.2"
+                },
+                "explanation": {
+                  "type": "string",
+                  "value": "選項 C 是正確的，因為在最高級結構 'the + 最高級 + 名詞 + that + 主詞 + have ever + 過去分詞' 中，需要使用定冠詞 'the'。選項 A 缺少 'the' 且 '..."
+                }
+              }
+            }
+          }
+        }
+      },
+      "submitAnswer": {
+        "status": 200,
+        "success": true,
+        "payload": {
+          "questionId": "da944fc3-03b1-4ea3-8680-a6798c8721ab",
+          "userAnswer": {
+            "id": "A",
+            "text": "This is best book that she have ever read."
+          },
+          "questionDataSnapshot": {
+            "explanation_of_Question": "選項 C 是正確的，因為在最高級結構 'the + 最高級 + 名詞 + that + 主詞 + have ever + 過去分詞' 中，需要使用定冠詞 'the'。選項 A 缺少 'the' 且 'have' 應為 'has' (搭配 'she')；選項 B 缺少 'the'；選項 D 使用 'the' 但動詞形態錯誤。",
+            "options": [
+              {
+                "id": "A",
+                "text": "This is best book that she have ever read."
+              },
+              {
+                "id": "B",
+                "text": "This is best book that she has ever read."
+              },
+              {
+                "id": "C",
+                "text": "This is the best book that she has ever read."
+              },
+              {
+                "id": "D",
+                "text": "This is the best book that she ever read."
+              }
+            ],
+            "question": "Select the sentence with the correct article and verb form.",
+            "standard_answer": "C",
+            "id": "da944fc3-03b1-4ea3-8680-a6798c8721ab",
+            "type": "1.2.2",
+            "explanation": "選項 C 是正確的，因為在最高級結構 'the + 最高級 + 名詞 + that + 主詞 + have ever + 過去分詞' 中，需要使用定冠詞 'the'。選項 A 缺少 'the' 且 'have' 應為 'has' (搭配 'she')；選項 B 缺少 'the'；選項 D 使用 'the' 但動詞形態錯誤。"
+          }
+        },
+        "data": {
+          "submissionResult": {
+            "isCorrect": false,
+            "correctAnswer": "C",
+            "explanation": "選項 C 是正確的，因為在最高級結構 'the + 最高級 + 名詞 + that + 主詞 + have ever + 過去分詞' 中，需要使用定冠詞 'the'。選項 A 缺少 'the' 且 'have' 應為 'has' (搭配 'she')；選項 B 缺少 'the'；選項 D 使用 'the' 但動詞形態錯誤。"
+          },
+          "nextQuestion": {
+            "explanation_of_Question": "選項 D 是正確的，頻率副詞 'often' 通常放在助動詞 (will) 和主要動詞 (go) 之間。選項 A、B、C 的 'often' 位置都不正確。",
+            "options": [
+              {
+                "id": "A",
+                "text": "They often will go to the cinema on Fridays."
+              },
+              {
+                "id": "B",
+                "text": "Often they will go to the cinema on Fridays."
+              },
+              {
+                "id": "C",
+                "text": "They will go often to the cinema on Fridays."
+              },
+              {
+                "id": "D",
+                "text": "They will often go to the cinema on Fridays."
+              }
+            ],
+            "question": "Choose the sentence with the correct word order.",
+            "standard_answer": "D",
+            "id": "6ceb7fcd-2cce-4282-86b1-6024bba8e1a9",
+            "type": "1.2.2",
+            "explanation": "選項 D 是正確的，頻率副詞 'often' 通常放在助動詞 (will) 和主要動詞 (go) 之間。選項 A、B、C 的 'often' 位置都不正確。"
+          }
+        },
+        "dataStructure": {
+          "type": "object",
+          "properties": {
+            "submissionResult": {
+              "type": "object",
+              "properties": {
+                "isCorrect": {
+                  "type": "boolean",
+                  "value": false
+                },
+                "correctAnswer": {
+                  "type": "string",
+                  "value": "C"
+                },
+                "explanation": {
+                  "type": "string",
+                  "value": "選項 C 是正確的，因為在最高級結構 'the + 最高級 + 名詞 + that + 主詞 + have ever + 過去分詞' 中，需要使用定冠詞 'the'。選項 A 缺少 'the' 且 '..."
+                }
+              }
+            },
+            "nextQuestion": {
+              "type": "object",
+              "properties": {
+                "explanation_of_Question": {
+                  "type": "string",
+                  "value": "選項 D 是正確的，頻率副詞 'often' 通常放在助動詞 (will) 和主要動詞 (go) 之間。選項 A、B、C 的 'often' 位置都不正確。"
+                },
+                "options": {
+                  "type": "array",
+                  "length": 4,
+                  "itemType": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "string",
+                        "value": "A"
+                      },
+                      "text": {
+                        "type": "string",
+                        "value": "They often will go to the cinema on Fridays."
+                      }
+                    }
+                  }
+                },
+                "question": {
+                  "type": "string",
+                  "value": "Choose the sentence with the correct word order."
+                },
+                "standard_answer": {
+                  "type": "string",
+                  "value": "D"
+                },
+                "id": {
+                  "type": "string",
+                  "value": "6ceb7fcd-2cce-4282-86b1-6024bba8e1a9"
+                },
+                "type": {
+                  "type": "string",
+                  "value": "1.2.2"
+                },
+                "explanation": {
+                  "type": "string",
+                  "value": "選項 D 是正確的，頻率副詞 'often' 通常放在助動詞 (will) 和主要動詞 (go) 之間。選項 A、B、C 的 'often' 位置都不正確。"
+                }
+              }
+            }
+          }
+        }
+      },
+      "completeFlow": true
+    },
+    {
+      "questionType": "1.2.3",
+      "questionTypeName": "轉承詞選擇 (Transition Words - Multiple Choice)",
+      "startTest": {
+        "status": 200,
+        "success": true,
+        "payload": {
+          "questionType": "1.2.3"
+        },
+        "data": {
+          "success": true,
+          "question": {
+            "explanation_of_Question": "選項 C 'in addition' 是正確的，它用於補充信息。前句說她是一個有天賦的音樂家，後句補充說她也是一個優秀的作家，這是信息的疊加關係。選項 A 'however' 表示轉折；選項 B 'indeed' 表示強調或確認；選項 D 'consequently' 表示結果，都不符合語境。",
+            "options": [
+              {
+                "id": "A",
+                "text": "however"
+              },
+              {
+                "id": "B",
+                "text": "indeed"
+              },
+              {
+                "id": "C",
+                "text": "in addition"
+              },
+              {
+                "id": "D",
+                "text": "consequently"
+              }
+            ],
+            "question": "Choose the word that best completes the sentence to ensure cohesion.",
+            "sentence_context": "She is a talented musician; _______, she is an excellent writer.",
+            "standard_answer": "C",
+            "id": "f115f604-5358-4da0-ad33-2f2307f69d85",
+            "type": "1.2.3",
+            "explanation": "選項 C 'in addition' 是正確的，它用於補充信息。前句說她是一個有天賦的音樂家，後句補充說她也是一個優秀的作家，這是信息的疊加關係。選項 A 'however' 表示轉折；選項 B 'indeed' 表示強調或確認；選項 D 'consequently' 表示結果，都不符合語境。"
+          }
+        },
+        "dataStructure": {
+          "type": "object",
+          "properties": {
+            "success": {
+              "type": "boolean",
+              "value": true
+            },
+            "question": {
+              "type": "object",
+              "properties": {
+                "explanation_of_Question": {
+                  "type": "string",
+                  "value": "選項 C 'in addition' 是正確的，它用於補充信息。前句說她是一個有天賦的音樂家，後句補充說她也是一個優秀的作家，這是信息的疊加關係。選項 A 'however' 表示轉折；選項 B 'i..."
+                },
+                "options": {
+                  "type": "array",
+                  "length": 4,
+                  "itemType": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "string",
+                        "value": "A"
+                      },
+                      "text": {
+                        "type": "string",
+                        "value": "however"
+                      }
+                    }
+                  }
+                },
+                "question": {
+                  "type": "string",
+                  "value": "Choose the word that best completes the sentence to ensure cohesion."
+                },
+                "sentence_context": {
+                  "type": "string",
+                  "value": "She is a talented musician; _______, she is an excellent writer."
+                },
+                "standard_answer": {
+                  "type": "string",
+                  "value": "C"
+                },
+                "id": {
+                  "type": "string",
+                  "value": "f115f604-5358-4da0-ad33-2f2307f69d85"
+                },
+                "type": {
+                  "type": "string",
+                  "value": "1.2.3"
+                },
+                "explanation": {
+                  "type": "string",
+                  "value": "選項 C 'in addition' 是正確的，它用於補充信息。前句說她是一個有天賦的音樂家，後句補充說她也是一個優秀的作家，這是信息的疊加關係。選項 A 'however' 表示轉折；選項 B 'i..."
+                }
+              }
+            }
+          }
+        }
+      },
+      "submitAnswer": {
+        "status": 200,
+        "success": true,
+        "payload": {
+          "questionId": "f115f604-5358-4da0-ad33-2f2307f69d85",
+          "userAnswer": {
+            "id": "A",
+            "text": "however"
+          },
+          "questionDataSnapshot": {
+            "explanation_of_Question": "選項 C 'in addition' 是正確的，它用於補充信息。前句說她是一個有天賦的音樂家，後句補充說她也是一個優秀的作家，這是信息的疊加關係。選項 A 'however' 表示轉折；選項 B 'indeed' 表示強調或確認；選項 D 'consequently' 表示結果，都不符合語境。",
+            "options": [
+              {
+                "id": "A",
+                "text": "however"
+              },
+              {
+                "id": "B",
+                "text": "indeed"
+              },
+              {
+                "id": "C",
+                "text": "in addition"
+              },
+              {
+                "id": "D",
+                "text": "consequently"
+              }
+            ],
+            "question": "Choose the word that best completes the sentence to ensure cohesion.",
+            "sentence_context": "She is a talented musician; _______, she is an excellent writer.",
+            "standard_answer": "C",
+            "id": "f115f604-5358-4da0-ad33-2f2307f69d85",
+            "type": "1.2.3",
+            "explanation": "選項 C 'in addition' 是正確的，它用於補充信息。前句說她是一個有天賦的音樂家，後句補充說她也是一個優秀的作家，這是信息的疊加關係。選項 A 'however' 表示轉折；選項 B 'indeed' 表示強調或確認；選項 D 'consequently' 表示結果，都不符合語境。"
+          }
+        },
+        "data": {
+          "submissionResult": {
+            "isCorrect": false,
+            "correctAnswer": "C",
+            "explanation": "選項 C 'in addition' 是正確的，它用於補充信息。前句說她是一個有天賦的音樂家，後句補充說她也是一個優秀的作家，這是信息的疊加關係。選項 A 'however' 表示轉折；選項 B 'indeed' 表示強調或確認；選項 D 'consequently' 表示結果，都不符合語境。"
+          },
+          "nextQuestion": {
+            "explanation_of_Question": "選項 C 'then' 是正確的，它表示順序。前句是第一個步驟（預熱烤箱），後句是緊隨其後的下一個步驟（混合食材），符合動作的先後順序。選項 A 'therefore' 表示因果；選項 B 'meanwhile' 表示同時發生；選項 D 'for instance' 表示舉例，都不符合語境。",
+            "options": [
+              {
+                "id": "A",
+                "text": "therefore"
+              },
+              {
+                "id": "B",
+                "text": "meanwhile"
+              },
+              {
+                "id": "C",
+                "text": "then"
+              },
+              {
+                "id": "D",
+                "text": "for instance"
+              }
+            ],
+            "question": "Choose the word that best completes the sentence to ensure cohesion.",
+            "sentence_context": "First, preheat the oven; _______, mix the ingredients in a bowl.",
+            "standard_answer": "C",
+            "id": "faffd8c4-0ee0-461d-a6b1-9f246f538384",
+            "type": "1.2.3",
+            "explanation": "選項 C 'then' 是正確的，它表示順序。前句是第一個步驟（預熱烤箱），後句是緊隨其後的下一個步驟（混合食材），符合動作的先後順序。選項 A 'therefore' 表示因果；選項 B 'meanwhile' 表示同時發生；選項 D 'for instance' 表示舉例，都不符合語境。"
+          }
+        },
+        "dataStructure": {
+          "type": "object",
+          "properties": {
+            "submissionResult": {
+              "type": "object",
+              "properties": {
+                "isCorrect": {
+                  "type": "boolean",
+                  "value": false
+                },
+                "correctAnswer": {
+                  "type": "string",
+                  "value": "C"
+                },
+                "explanation": {
+                  "type": "string",
+                  "value": "選項 C 'in addition' 是正確的，它用於補充信息。前句說她是一個有天賦的音樂家，後句補充說她也是一個優秀的作家，這是信息的疊加關係。選項 A 'however' 表示轉折；選項 B 'i..."
+                }
+              }
+            },
+            "nextQuestion": {
+              "type": "object",
+              "properties": {
+                "explanation_of_Question": {
+                  "type": "string",
+                  "value": "選項 C 'then' 是正確的，它表示順序。前句是第一個步驟（預熱烤箱），後句是緊隨其後的下一個步驟（混合食材），符合動作的先後順序。選項 A 'therefore' 表示因果；選項 B 'mean..."
+                },
+                "options": {
+                  "type": "array",
+                  "length": 4,
+                  "itemType": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "string",
+                        "value": "A"
+                      },
+                      "text": {
+                        "type": "string",
+                        "value": "therefore"
+                      }
+                    }
+                  }
+                },
+                "question": {
+                  "type": "string",
+                  "value": "Choose the word that best completes the sentence to ensure cohesion."
+                },
+                "sentence_context": {
+                  "type": "string",
+                  "value": "First, preheat the oven; _______, mix the ingredients in a bowl."
+                },
+                "standard_answer": {
+                  "type": "string",
+                  "value": "C"
+                },
+                "id": {
+                  "type": "string",
+                  "value": "faffd8c4-0ee0-461d-a6b1-9f246f538384"
+                },
+                "type": {
+                  "type": "string",
+                  "value": "1.2.3"
+                },
+                "explanation": {
+                  "type": "string",
+                  "value": "選項 C 'then' 是正確的，它表示順序。前句是第一個步驟（預熱烤箱），後句是緊隨其後的下一個步驟（混合食材），符合動作的先後順序。選項 A 'therefore' 表示因果；選項 B 'mean..."
+                }
+              }
+            }
+          }
+        }
+      },
+      "completeFlow": true
+    }
+  ],
+  "historyAPI": {
+    "status": 400,
+    "success": false,
+    "data": {
+      "message": "必須提供 questionType 查詢參數。"
+    },
+    "dataStructure": {
+      "type": "object",
+      "properties": {
+        "message": {
+          "type": "string",
+          "value": "必須提供 questionType 查詢參數。"
+        }
+      }
+    },
+    "count": 0
+  }
+}

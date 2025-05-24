@@ -1,45 +1,5 @@
 [
   {
-    "UUID": "30feb6f5-37f4-4713-8a1d-840a672b66a9",
-    "questionData": {
-      "evaluation_criteria": {
-        "coherence": 25,
-        "grammar": 25,
-        "task_achievement": 25,
-        "vocabulary": 25
-      },
-      "instruction": "Write a narrative essay about a memorable autumn afternoon spent outdoors. Describe the sights, sounds, and smells of the season and how you felt. Include at least three sensory details and reflect on why this moment was special.",
-      "max_words": 250,
-      "min_words": 150,
-      "prompt": "Recount a memorable autumn afternoon you spent outdoors. Where were you and what were you doing? What made this particular experience special?",
-      "sample_responses": [
-        "The crisp air of late October bit at my cheeks as I walked through the local park, the ground a kaleidoscope of reds, oranges, and yellows. Leaves crunched under my boots with a satisfying sound. The scent of damp earth and decaying leaves hung in the air, a smell unique to autumn. Sunlight filtered through the nearly bare branches of the oak trees, casting long shadows. I found a quiet bench by the pond, watching ducks glide across the still water. It wasn't anything extraordinary – just a simple walk – but the peace and beauty of the moment filled me with a profound sense of calm and connection to nature. It felt like the world was pausing, breathing deeply before winter's arrival.",
-        "One unforgettable autumn afternoon, my family and I went apple picking at a farm just outside the city. The sky was a brilliant, cloudless blue, a stark contrast to the vibrant foliage surrounding us. The air smelled sweet with the scent of ripe apples and woodsmoke drifting from a nearby farmhouse chimney. We wandered through rows of apple trees, their branches heavy with fruit. The satisfying *thud* as a perfectly ripe apple dropped into our basket was music to my ears. Later, we shared warm cider and fresh doughnuts, sitting on hay bales and watching the sun begin its descent, painting the sky in fiery hues. It was a perfect blend of simple activity, beautiful scenery, and cherished family time."
-      ]
-    },
-    "cacheTimestamp": 1748038552
-  },
-  {
-    "UUID": "a30fa735-aa29-4190-9390-1a5aa71caa74",
-    "questionData": {
-      "evaluation_criteria": {
-        "coherence": 25,
-        "grammar": 25,
-        "task_achievement": 25,
-        "vocabulary": 25
-      },
-      "instruction": "Describe the atmosphere of your favorite local coffee shop or a busy café you've visited. Focus on the people, the sounds, and the general feeling of the place. Imagine you are observing from a corner table. Use descriptive language to bring the scene to life.",
-      "max_words": 200,
-      "min_words": 120,
-      "prompt": "Describe the scene inside a typical busy coffee shop. What kind of people are there? What are they doing? What does it feel like to be in that space?",
-      "sample_responses": [
-        "My favorite café, 'The Daily Grind', is a haven of quiet activity. The air is thick with the comforting aroma of roasted beans and warm pastries. Soft jazz plays just loud enough to fill the space without being intrusive. At a small table by the window, a student is hunched over a laptop, fingers flying across the keyboard, a half-empty mug beside them. Near the counter, two friends are laughing softly, sharing stories over cappuccinos. A lone figure reads a thick book in a comfortable armchair, occasionally taking a sip of tea. The gentle hum of conversation, the clatter of cups, and the whir of the espresso machine create a soothing background noise, a soundtrack to productivity and connection.",
-        "Entering 'Urban Brews' is like stepping into a dynamic microcosm of city life. The energy is palpable. Baristas call out orders with practiced speed amidst the hiss and steam of machines. People are everywhere: huddled in corners in intense conversations, working silently on laptops, or quickly grabbing a takeaway cup. A young couple shares earbuds, swaying slightly to unheard music. An elderly gentleman sips his black coffee slowly, watching the world go by with calm eyes. The walls are covered in local art, adding splashes of colour to the warm, woody interior. It feels like a place where everyone belongs, united by the simple pleasure of coffee and shared space."
-      ]
-    },
-    "cacheTimestamp": 1748038552
-  },
-  {
     "UUID": "a61c1592-978a-4236-8774-627e4fc0b0fb",
     "questionData": {
       "evaluation_criteria": {

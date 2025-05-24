@@ -1,142 +1,142 @@
 [
   {
-    "UUID": "464fc34e-0739-466c-afee-1eb21d1ffd9f",
+    "UUID": "c71d1dda-0e42-4d0e-a598-6fd3453c4913",
     "questionData": {
-      "explanation_of_Question": "句子描述了一位演講者能夠用她的話語來影響或打動聽眾。選項 B「captivate」意為迷住、吸引，最能描述演講者引人入勝的能力。選項 A「alienate」意為使疏遠；選項 C「bore」意為使厭煩；選項 D「rebel」意為反抗，這三個選項都不符合正面描述演講者能力的語境。",
+      "explanation_of_Question": "句子描述古代遺跡被大自然的無情力量緩慢地破壞。選項 A「eroded」意為侵蝕、腐蝕，符合語境。選項 B「restored」意為修復，與語境相反；選項 C「protected」意為保護，與語境相反；選項 D「observed」意為觀察，與語境無關。",
       "options": [
         {
           "id": "A",
-          "text": "alienate"
+          "text": "eroded"
         },
         {
           "id": "B",
-          "text": "captivate"
+          "text": "restored"
         },
         {
           "id": "C",
-          "text": "bore"
+          "text": "protected"
         },
         {
           "id": "D",
-          "text": "rebel"
+          "text": "observed"
         }
       ],
-      "passage": "The speaker had a remarkable ability to _______ the audience with her powerful words.",
-      "question": "Choose the best word to complete the sentence.",
-      "standard_answer": "B"
-    },
-    "cacheTimestamp": 1748066228
-  },
-  {
-    "UUID": "d66dc03c-9974-43ac-9fdc-6dee8a31dbf6",
-    "questionData": {
-      "explanation_of_Question": "句子描述了儘管情況困難，團隊仍然保持了樂觀積極的態度。選項 A「undaunted」意為不屈不撓的、無畏的，最能形容在困難面前不退縮的態度。選項 B「confused」意為困惑的；選項 C「indifferent」意為漠不關心的；選項 D「skeptical」意為懷疑的，這三個選項都不符合句子中積極面對困難的語境。",
-      "options": [
-        {
-          "id": "A",
-          "text": "undaunted"
-        },
-        {
-          "id": "B",
-          "text": "confused"
-        },
-        {
-          "id": "C",
-          "text": "indifferent"
-        },
-        {
-          "id": "D",
-          "text": "skeptical"
-        }
-      ],
-      "passage": "Despite the numerous challenges, the team remained _______ in their pursuit of the goal.",
+      "passage": "The ancient ruins were slowly being _______ by the relentless forces of nature.",
       "question": "Choose the best word to complete the sentence.",
       "standard_answer": "A"
     },
-    "cacheTimestamp": 1748066228
+    "cacheTimestamp": 1748081626
   },
   {
-    "UUID": "c9b9d627-c690-49d1-97d0-5a399b88c7a8",
+    "UUID": "3cdc655f-7b7a-432e-8a2a-d9f5645a8b66",
     "questionData": {
-      "explanation_of_Question": "句子描述的是一個新開的咖啡館，生意很好，顧客絡繹不絕。選項 A 「sparse」意為稀疏的，不符合語境。選項 B 「meager」意為貧乏的，與生意興隆相反。選項 D 「scant」意為不足的，也與語境不符。選項 C 「brisk」意為興隆的、活躍的，用來形容生意非常合適，表示生意很好。因此，C 是正確答案。",
+      "explanation_of_Question": "句子描述她在完成困難的專案後感受到的情緒。選項 B「relief」意為解脫、寬慰，符合語境。選項 A「frustration」意為沮喪；選項 C「boredom」意為無聊；選項 D「anxiety」意為焦慮。這三者都不適合描述完成困難任務後通常會有的感受。",
       "options": [
         {
           "id": "A",
-          "text": "sparse"
+          "text": "frustration"
         },
         {
           "id": "B",
-          "text": "meager"
+          "text": "relief"
         },
         {
           "id": "C",
-          "text": "brisk"
+          "text": "boredom"
         },
         {
           "id": "D",
-          "text": "scant"
+          "text": "anxiety"
         }
       ],
-      "passage": "The new coffee shop is doing a _______ business, with customers lining up outside every morning.",
+      "passage": "She felt a sense of _______ when she finally completed the difficult project.",
       "question": "Choose the best word to complete the sentence.",
-      "standard_answer": "C"
+      "standard_answer": "B"
     },
-    "cacheTimestamp": 1748066270
+    "cacheTimestamp": 1748081626
   },
   {
-    "UUID": "2da17bb8-e1f8-4e42-a7e4-89581f4adcc1",
+    "UUID": "4c5b157f-62bd-4e80-a19f-2780d7e1db94",
     "questionData": {
-      "explanation_of_Question": "這句話描述的是某人儘管面對許多困難，仍然堅持追求夢想。選項 A 「relinquished」意為放棄、交出，與堅持相反。選項 B 「detoured」意為繞道、偏離，與追求夢想的直線行動不同。選項 D 「wavered」意為動搖、猶豫，儘管可能會有動搖，但句子強調的是儘管困難'仍'堅持。選項 C 「persisted」意為堅持、持續，最能準確表達在困難面前不放棄的態度。因此，C 是正確答案。",
+      "explanation_of_Question": "句子描述委員會成員在解決問題上無法達成一致。選項 C「agree」意為同意、達成一致，是常用的片語「agree on a solution」。選項 A「convene」意為召集；選項 B「disperse」意為分散；選項 D「digress」意為離題。這三者都不符合語境。",
       "options": [
         {
           "id": "A",
-          "text": "relinquished"
+          "text": "convene"
         },
         {
           "id": "B",
-          "text": "detoured"
+          "text": "disperse"
         },
         {
           "id": "C",
-          "text": "persisted"
+          "text": "agree"
         },
         {
           "id": "D",
-          "text": "wavered"
+          "text": "digress"
         }
       ],
-      "passage": "Despite facing numerous setbacks, she _______ in her pursuit of becoming a doctor.",
+      "passage": "The committee members could not _______ on a solution to the problem.",
       "question": "Choose the best word to complete the sentence.",
       "standard_answer": "C"
     },
-    "cacheTimestamp": 1748066270
+    "cacheTimestamp": 1748081626
   },
   {
-    "UUID": "ee20f795-6e32-401d-8e46-53c5a23e7837",
+    "UUID": "d34f0a47-5b8e-480e-9bff-2c8d77cd0961",
     "questionData": {
-      "explanation_of_Question": "這句話描述的是由於經濟不景氣，公司不得不削減開支。選項 A 「expanded」意為擴大，與削減相反。選項 B 「enhanced」意為提升、加強，與削減無關。選項 D 「bolstered」意為支持、加固，與削減相反。選項 C 「curtail」意為縮減、削減，與句子中因經濟不景氣而需要減少開支的語境相符。因此，C 是正確答案。",
+      "explanation_of_Question": "句子描述這塊布料儘管看起來精緻，但性質卻是相反的。選項 C「durable」意為耐用的，與「delicate appearance」形成對比，符合語境。選項 A「brittle」意為易碎的；選項 B「fragile」意為脆弱的；選項 D「transparent」意為透明的。前兩者與「delicate appearance」相似，後者與布料的耐用性無關。",
       "options": [
         {
           "id": "A",
-          "text": "expanded"
+          "text": "brittle"
         },
         {
           "id": "B",
-          "text": "enhanced"
+          "text": "fragile"
         },
         {
           "id": "C",
-          "text": "curtail"
+          "text": "durable"
         },
         {
           "id": "D",
-          "text": "bolstered"
+          "text": "transparent"
         }
       ],
-      "passage": "Due to the economic downturn, the company had to _______ its spending significantly.",
+      "passage": "The fabric was surprisingly _______, despite its delicate appearance.",
       "question": "Choose the best word to complete the sentence.",
       "standard_answer": "C"
     },
-    "cacheTimestamp": 1748066270
+    "cacheTimestamp": 1748081626
+  },
+  {
+    "UUID": "118d91e4-5663-45ee-8a07-a15cf2ef5de6",
+    "questionData": {
+      "explanation_of_Question": "句子描述離開前確保所有門上鎖是你的責任。選項 C「duty」意為責任、義務，符合語境。選項 A「opinion」意為意見；選項 B「intention」意為意圖；選項 D「preference」意為偏好。這三者都不適合用來描述必須執行的任務。",
+      "options": [
+        {
+          "id": "A",
+          "text": "opinion"
+        },
+        {
+          "id": "B",
+          "text": "intention"
+        },
+        {
+          "id": "C",
+          "text": "duty"
+        },
+        {
+          "id": "D",
+          "text": "preference"
+        }
+      ],
+      "passage": "It is your _______ to ensure all the doors are locked before you leave.",
+      "question": "Choose the best word to complete the sentence.",
+      "standard_answer": "C"
+    },
+    "cacheTimestamp": 1748081626
   }
 ]

@@ -1,33 +1,5 @@
 [
   {
-    "UUID": "56562a79-f3d6-4459-ac82-4e2dea7e0944",
-    "questionData": {
-      "explanation_of_Question": "作者的主要目的是說服讀者相信閱讀虛構作品的重要性，並鼓勵他們養成閱讀習慣。從提到'essential exercise for the mind'、'crucial for fostering empathy'、'broadens our perspectives'、'provides a vital escape'等好處可以看出，作者旨在推廣閱讀。選項 A 錯誤，雖然有描述，但目的不止於此。選項 C 錯誤，雖然有分析，但最終目的是說服。選項 D 錯誤，這段文字並非警告。",
-      "options": [
-        {
-          "id": "A",
-          "text": "To describe the different genres of fiction."
-        },
-        {
-          "id": "B",
-          "text": "To persuade readers of the importance of reading fiction."
-        },
-        {
-          "id": "C",
-          "text": "To analyze the literary techniques used in novels."
-        },
-        {
-          "id": "D",
-          "text": "To warn against the dangers of excessive reading."
-        }
-      ],
-      "passage": "In a world increasingly dominated by fleeting digital interactions and sound bites, the sustained, immersive experience of reading fiction remains an essential exercise for the mind and soul. Far from being a mere pastime, engaging with novels is crucial for fostering empathy; stepping into the shoes of diverse characters helps us understand perspectives vastly different from our own. It broadens our perspectives on complex social issues, history, and the human condition itself. Moreover, in an age of constant connectivity and stress, fiction provides a vital escape, a sanctuary where we can temporarily leave our worries behind and explore new realities. Neglecting this rich source of insight and emotional intelligence would be a significant loss. Therefore, making time for fiction is not a luxury, but a necessity for a well-rounded life.",
-      "question": "What is the author's primary purpose in this passage?",
-      "standard_answer": "B"
-    },
-    "cacheTimestamp": 1748038499
-  },
-  {
     "UUID": "e9311326-cfe5-436d-ba62-8ab988fea1b8",
     "questionData": {
       "explanation_of_Question": "作者的語氣充滿批評性，特別是針對現代建築缺乏個性和對環境的無視。詞語如 'dreary conformity'（沉悶的一致性）、'soulless concrete blocks'（沒有靈魂的混凝土塊）、'blight'（破壞）、'utterly disregard the local context'（完全無視當地環境）等都表達了強烈的負面評價和批評。選項 A 的客觀中立與強烈的情感不符；選項 C 的熱情鼓勵與批評相反；選項 D 的幽默嘲諷與嚴肅的批評不同。",

@@ -1,43 +1,5 @@
 [
   {
-    "UUID": "ab2795dd-27f6-4472-87b0-05a7af757041",
-    "questionData": {
-      "error_types": [
-        "Articles",
-        "Subject-verb agreement",
-        "Tense errors",
-        "Punctuation",
-        "Prepositions"
-      ],
-      "explanation_of_Question": "This text contains several common errors. 'An' is needed before 'important meeting'. 'Company' is singular, so the verb should be 'holds'. The event happened in the past, so 'hold' should be 'held'. A comma is needed after 'Additionally'. 'At' is the correct preposition for 'deadline'. Finally, 'must meet a deadline' is the standard phrase.",
-      "instruction": "Identify and correct the errors in articles, verb tense, subject-verb agreement, punctuation, and prepositions in the following sentences.",
-      "original_text": "Yesterday, the company hold a important meeting. The main topic were about the upcoming project. Additionally the company must to meet deadline next month. Employees are working hard on project.",
-      "standard_corrections": [
-        "Yesterday, the company held an important meeting. The main topic was about the upcoming project. Additionally, the company must meet a deadline next month. Employees are working hard on the project."
-      ]
-    },
-    "cacheTimestamp": 1748038562
-  },
-  {
-    "UUID": "8d43fd20-9753-4859-a6a3-6f80abb0c71a",
-    "questionData": {
-      "error_types": [
-        "Word choice",
-        "Prepositions",
-        "Tense errors",
-        "Punctuation"
-      ],
-      "explanation_of_Question": "The phrase 'make a research' should be 'do research' or 'conduct research'. 'On' is the appropriate preposition when discussing a topic. 'Is doing' suggests it's happening now, but the sentence implies it's finished or ongoing, so 'has done' (present perfect) or 'did' (past simple) are better options. A comma is needed after the introductory phrase.",
-      "instruction": "Correct the errors related to word choice, prepositions, tense, and punctuation in the passage.",
-      "original_text": "Following the instructions I make a research on the effects of climate change. He is doing a lot of work in this area and finding surprising results.",
-      "standard_corrections": [
-        "Following the instructions, I did research on the effects of climate change. He is doing a lot of work in this area and finding surprising results.",
-        "Following the instructions, I conducted research on the effects of climate change. He has done a lot of work in this area and found surprising results."
-      ]
-    },
-    "cacheTimestamp": 1748038562
-  },
-  {
     "UUID": "bb0e52e9-529a-43db-92c1-30159b1f124f",
     "questionData": {
       "error_types": [

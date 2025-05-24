@@ -1,28 +1,5 @@
 [
   {
-    "UUID": "fa0e0967-75fa-4f1d-a9f2-ddefddbdc781",
-    "questionData": {
-      "explanation_of_Question": "這題考驗學生對關係子句的理解。主句是 \"The book is very interesting\"，關係子句 \"that I bought yesterday\" 修飾 \"book\"。",
-      "instruction": "請將這些單字重新排列成一個語法正確且意義完整的句子。",
-      "scrambled_words": [
-        "very",
-        "book",
-        "bought",
-        "yesterday",
-        "interesting",
-        "is",
-        "that",
-        "I",
-        "the"
-      ],
-      "standard_answers": [
-        "The book that I bought yesterday is very interesting.",
-        "The book that I bought yesterday is very interesting"
-      ]
-    },
-    "cacheTimestamp": 1748038582
-  },
-  {
     "UUID": "82ab75ca-5746-4889-a29a-6e47dc58975d",
     "questionData": {
       "explanation_of_Question": "這題考驗學生對假設語氣過去完成式的掌握。結構是 \"If + 主詞 + had + 過去分詞, 主詞 + would have + 過去分詞\"。",

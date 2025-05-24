@@ -1,0 +1,34 @@
+[
+  {
+    "UUID": "f115f604-5358-4da0-ad33-2f2307f69d85",
+    "questionData": {
+      "passage": "She is a talented musician; _______, she is an excellent writer.",
+      "question": "Choose the word that best completes the sentence to ensure cohesion.",
+      "options": [
+        {
+          "id": "A",
+          "text": "however"
+        },
+        {
+          "id": "B",
+          "text": "indeed"
+        },
+        {
+          "id": "C",
+          "text": "in addition"
+        },
+        {
+          "id": "D",
+          "text": "consequently"
+        }
+      ],
+      "standard_answer": "C"
+    },
+    "userAnswer": {
+      "id": "A",
+      "text": "however"
+    },
+    "isCorrect": false,
+    "timestamp": 1748080880309
+  }
+]

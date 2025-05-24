@@ -1,33 +1,5 @@
 [
   {
-    "UUID": "c1d6611f-ba3f-43cd-849e-905f3429428c",
-    "questionData": {
-      "explanation_of_Question": "這段文章討論了人工智慧 (AI) 的快速發展對現代生活的影響。它涵蓋了 AI 的應用（好處）以及隨之而來的擔憂和挑戰。選項 B 準確地概括了文章的主要內容，即 AI 發展帶來的挑戰與好處。",
-      "options": [
-        {
-          "id": "A",
-          "text": "How AI helps with streaming recommendations."
-        },
-        {
-          "id": "B",
-          "text": "The challenges and benefits associated with the rapid development of AI."
-        },
-        {
-          "id": "C",
-          "text": "Ethical concerns are the biggest problem with AI."
-        },
-        {
-          "id": "D",
-          "text": "AI is mostly used in medical diagnostics."
-        }
-      ],
-      "passage": "The rapid advancement of artificial intelligence (AI) is transforming numerous aspects of modern life. From powering personalized recommendations on streaming platforms to enabling sophisticated medical diagnostics, AI is becoming integrated into daily routines. While its potential benefits are vast, including increased efficiency and innovation, concerns about job displacement, data privacy, and ethical implications are also growing. Society faces the challenge of harnessing AI's power responsibly while addressing these critical issues to ensure its development serves the greater good.",
-      "question": "What is the primary focus of this passage?",
-      "standard_answer": "B"
-    },
-    "cacheTimestamp": 1748038465
-  },
-  {
     "UUID": "0096aed0-80ff-4742-b429-4246a630884d",
     "questionData": {
       "explanation_of_Question": "這段文章強調了規律體育鍛鍊對整體健康的極大重要性。文章列舉了多種好處，包括心血管健康、肌肉骨骼健康以及心理健康，並給出了推薦量，但核心是說明運動的必要性和廣泛益處。選項 C 準確概括了這個主要觀點。",

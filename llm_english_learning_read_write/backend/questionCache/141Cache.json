@@ -1,33 +1,5 @@
 [
   {
-    "UUID": "a04714ba-3691-4426-b25d-083ec6115445",
-    "questionData": {
-      "explanation_of_Question": "根據文章內容，Tech Solutions Inc. 在 2023 年第四季度的總收入達到了 5.5 億美元（$550 million）。選項 A 的 1.5 億美元是不正確的；選項 B 的 1200 名是員工人數，不是收入；選項 D 的 18% 是淨利潤率，不是總收入。正確答案是 C。",
-      "options": [
-        {
-          "id": "A",
-          "text": "$150 million"
-        },
-        {
-          "id": "B",
-          "text": "1,200 people"
-        },
-        {
-          "id": "C",
-          "text": "$550 million"
-        },
-        {
-          "id": "D",
-          "text": "18%"
-        }
-      ],
-      "passage": "Tech Solutions Inc. recently reported its Q4 2023 earnings. The report indicated strong performance across all sectors. Total revenue reached $550 million, marking a significant 15% increase compared to the previous quarter. The net profit margin for the period was a healthy 18%. The company currently employs over 1,200 people globally, with its main operations centered in North America and Europe. Looking ahead, the company plans to expand its presence in Asia-Pacific markets starting in Q2 2024.",
-      "question": "According to the report, what was Tech Solutions Inc.'s total revenue in Q4 2023?",
-      "standard_answer": "C"
-    },
-    "cacheTimestamp": 1748038481
-  },
-  {
     "UUID": "280120e9-98fb-4a43-83e2-9bc5c1812d0c",
     "questionData": {
       "explanation_of_Question": "根據文章內容，這項新的超導體材料 'Vance-1' 是由 Dr. Eleanor Vance 發現的。選項 A 的 1947 年是發現年份；選項 B 的 -190 是超導溫度；選項 C 的 50 公克是初始樣本的重量。正確答案是 D。",

@@ -1,0 +1,145 @@
+{
+  "timestamp": "2025-05-24T09:59:38.420Z",
+  "baseUrl": "http://localhost:3001",
+  "tests": [
+    {
+      "questionType": "1.1.1",
+      "endpoints": {},
+      "error": "invalid json response body at http://localhost:3001/api/questions/1.1.1 reason: Unexpected token '資', \"資源未找到\" is not valid JSON"
+    },
+    {
+      "questionType": "1.1.2",
+      "endpoints": {},
+      "error": "invalid json response body at http://localhost:3001/api/questions/1.1.2 reason: Unexpected token '資', \"資源未找到\" is not valid JSON"
+    },
+    {
+      "questionType": "1.1.3",
+      "endpoints": {},
+      "error": "invalid json response body at http://localhost:3001/api/questions/1.1.3 reason: Unexpected token '資', \"資源未找到\" is not valid JSON"
+    },
+    {
+      "questionType": "1.2.1",
+      "endpoints": {},
+      "error": "invalid json response body at http://localhost:3001/api/questions/1.2.1 reason: Unexpected token '資', \"資源未找到\" is not valid JSON"
+    },
+    {
+      "questionType": "1.2.2",
+      "endpoints": {},
+      "error": "invalid json response body at http://localhost:3001/api/questions/1.2.2 reason: Unexpected token '資', \"資源未找到\" is not valid JSON"
+    },
+    {
+      "questionType": "1.2.3",
+      "endpoints": {},
+      "error": "invalid json response body at http://localhost:3001/api/questions/1.2.3 reason: Unexpected token '資', \"資源未找到\" is not valid JSON"
+    },
+    {
+      "questionType": "1.3.1",
+      "endpoints": {},
+      "error": "invalid json response body at http://localhost:3001/api/questions/1.3.1 reason: Unexpected token '資', \"資源未找到\" is not valid JSON"
+    },
+    {
+      "questionType": "1.4.1",
+      "endpoints": {},
+      "error": "invalid json response body at http://localhost:3001/api/questions/1.4.1 reason: Unexpected token '資', \"資源未找到\" is not valid JSON"
+    },
+    {
+      "questionType": "1.5.1",
+      "endpoints": {},
+      "error": "invalid json response body at http://localhost:3001/api/questions/1.5.1 reason: Unexpected token '資', \"資源未找到\" is not valid JSON"
+    },
+    {
+      "questionType": "1.6.1",
+      "endpoints": {},
+      "error": "invalid json response body at http://localhost:3001/api/questions/1.6.1 reason: Unexpected token '資', \"資源未找到\" is not valid JSON"
+    },
+    {
+      "questionType": "1.6.2",
+      "endpoints": {},
+      "error": "invalid json response body at http://localhost:3001/api/questions/1.6.2 reason: Unexpected token '資', \"資源未找到\" is not valid JSON"
+    },
+    {
+      "questionType": "1.6.3",
+      "endpoints": {},
+      "error": "invalid json response body at http://localhost:3001/api/questions/1.6.3 reason: Unexpected token '資', \"資源未找到\" is not valid JSON"
+    },
+    {
+      "questionType": "2.1.1",
+      "endpoints": {},
+      "error": "invalid json response body at http://localhost:3001/api/questions/2.1.1 reason: Unexpected token '資', \"資源未找到\" is not valid JSON"
+    },
+    {
+      "questionType": "2.1.2",
+      "endpoints": {},
+      "error": "invalid json response body at http://localhost:3001/api/questions/2.1.2 reason: Unexpected token '資', \"資源未找到\" is not valid JSON"
+    },
+    {
+      "questionType": "2.1.3",
+      "endpoints": {},
+      "error": "invalid json response body at http://localhost:3001/api/questions/2.1.3 reason: Unexpected token '資', \"資源未找到\" is not valid JSON"
+    },
+    {
+      "questionType": "2.2.1",
+      "endpoints": {},
+      "error": "invalid json response body at http://localhost:3001/api/questions/2.2.1 reason: Unexpected token '資', \"資源未找到\" is not valid JSON"
+    },
+    {
+      "questionType": "2.2.2",
+      "endpoints": {},
+      "error": "invalid json response body at http://localhost:3001/api/questions/2.2.2 reason: Unexpected token '資', \"資源未找到\" is not valid JSON"
+    },
+    {
+      "questionType": "2.2.3",
+      "endpoints": {},
+      "error": "invalid json response body at http://localhost:3001/api/questions/2.2.3 reason: Unexpected token '資', \"資源未找到\" is not valid JSON"
+    },
+    {
+      "questionType": "2.3.1",
+      "endpoints": {},
+      "error": "invalid json response body at http://localhost:3001/api/questions/2.3.1 reason: Unexpected token '資', \"資源未找到\" is not valid JSON"
+    },
+    {
+      "questionType": "2.3.2",
+      "endpoints": {},
+      "error": "invalid json response body at http://localhost:3001/api/questions/2.3.2 reason: Unexpected token '資', \"資源未找到\" is not valid JSON"
+    },
+    {
+      "questionType": "2.4.1",
+      "endpoints": {},
+      "error": "invalid json response body at http://localhost:3001/api/questions/2.4.1 reason: Unexpected token '資', \"資源未找到\" is not valid JSON"
+    },
+    {
+      "questionType": "2.4.2",
+      "endpoints": {},
+      "error": "invalid json response body at http://localhost:3001/api/questions/2.4.2 reason: Unexpected token '資', \"資源未找到\" is not valid JSON"
+    },
+    {
+      "questionType": "2.5.1",
+      "endpoints": {},
+      "error": "invalid json response body at http://localhost:3001/api/questions/2.5.1 reason: Unexpected token '資', \"資源未找到\" is not valid JSON"
+    },
+    {
+      "questionType": "2.5.2",
+      "endpoints": {},
+      "error": "invalid json response body at http://localhost:3001/api/questions/2.5.2 reason: Unexpected token '資', \"資源未找到\" is not valid JSON"
+    }
+  ],
+  "historyAPI": {
+    "status": 400,
+    "success": false,
+    "data": {
+      "message": "必須提供 questionType 查詢參數。"
+    },
+    "dataStructure": {
+      "type": "object",
+      "properties": {
+        "message": {
+          "type": "string",
+          "value": "必須提供 questionType 查詢參數。"
+        }
+      }
+    }
+  },
+  "statsAPI": {
+    "error": "invalid json response body at http://localhost:3001/api/stats reason: Unexpected token '資', \"資源未找到\" is not valid JSON"
+  }
+}

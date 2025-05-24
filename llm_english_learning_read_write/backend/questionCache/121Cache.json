@@ -1,82 +1,50 @@
 [
   {
-    "UUID": "47213db4-a100-4468-8849-a619b9706c5b",
+    "UUID": "2d8c9778-7852-43f2-9023-85fad110f9cb",
     "questionData": {
       "error_types": [
         "subject_verb_agreement",
         "prepositions"
       ],
-      "explanation_of_Question": "句子中有兩個錯誤：1. 'is' 應該改為 'are'，因為主語 'They' 是複數；2. 'on London' 應該改為 'to London'，表示目的地。正確的句子應該是 'They are planning to travel to London next week.'",
+      "explanation_of_Question": "The sentence has two errors. First, 'people' is a plural noun, so the verb should be the plural form 'prefer', not 'prefers'. Second, when comparing preferences using 'prefer', the correct structure is 'prefer A to B', not 'prefer A than B'. The correct sentence should be 'Many people prefer coffee to tea in the morning.'",
       "instruction": "Identify the error(s) in the sentence above and rewrite it correctly.",
-      "original_sentence": "They is planning to travel on London next week.",
+      "original_sentence": "Many people prefers coffee than tea in the morning.",
       "standard_corrections": [
-        "They are planning to travel to London next week."
+        "Many people prefer coffee to tea in the morning."
       ]
     },
-    "cacheTimestamp": 1748038428
+    "cacheTimestamp": 1748081571
   },
   {
-    "UUID": "d1c30fdf-1b5d-4a7b-a61b-04e5dbd96ac5",
+    "UUID": "79e555e1-5708-426f-8881-c64587056a3a",
     "questionData": {
       "error_types": [
-        "word_form",
+        "verb_tense",
         "articles"
       ],
-      "explanation_of_Question": "句子中有一個詞形錯誤：'communicate' 是動詞，這裡需要名詞 'communicator' 或形容詞 'communicative'。如果用名詞，需要冠詞 'a'；如果用形容詞，則不需要冠詞 'a'。正確的句子可以是 'She is a very good communicator.' 或 'She is very communicative.'",
+      "explanation_of_Question": "The sentence has two errors. First, the time phrase 'last night' indicates past time, so the verb should be in the simple past tense ('went'), not the present continuous form ('am go'). Second, 'cinema' is usually preceded by the definite article 'the' when referring to the place one goes to watch a film. The correct sentence should be 'I went to the cinema last night with my friends.'",
       "instruction": "Identify the error(s) in the sentence above and rewrite it correctly.",
-      "original_sentence": "She is a very good communicate.",
+      "original_sentence": "I am go to cinema last night with my friends.",
       "standard_corrections": [
-        "She is a very good communicator.",
-        "She is very communicative."
+        "I went to the cinema last night with my friends."
       ]
     },
-    "cacheTimestamp": 1748038428
+    "cacheTimestamp": 1748081571
   },
   {
-    "UUID": "de92a90a-c1b0-4bf2-8272-b1eba41e1a91",
+    "UUID": "8eeaa91e-e879-478c-9130-c1a5526c0282",
     "questionData": {
       "error_types": [
         "plural_singular",
-        "subject_verb_agreement"
+        "word_form"
       ],
-      "explanation_of_Question": "句子中有兩個錯誤：1. 'One of the...' 結構後面的名詞應該是複數，所以 'student' 應該改為 'students'；2. 主語是 'One' (單數)，所以動詞應該是單數 'was'，而不是複數 'were'。正確的句子應該是 'One of the students was absent today.'",
+      "explanation_of_Question": "The sentence has two errors. First, 'many' is followed by a plural noun, so 'mistake' should be 'mistakes'. Second, 'significant' is an adjective, but here we need an adverb ('significantly') to modify the verb 'affected' or the phrase 'affected the final result'. The correct sentence should be 'He made many mistakes in his report, which affected the final result significantly.'",
       "instruction": "Identify the error(s) in the sentence above and rewrite it correctly.",
-      "original_sentence": "One of the student were absent today.",
+      "original_sentence": "He made many mistake in his report, which affected the final result significant.",
       "standard_corrections": [
-        "One of the students was absent today."
+        "He made many mistakes in his report, which affected the final result significantly."
       ]
     },
-    "cacheTimestamp": 1748038428
-  },
-  {
-    "UUID": "da5ca6a6-f64b-4de8-ad53-1bc394285b2c",
-    "questionData": {
-      "error_types": [
-        "modal_verbs",
-        "infinitive_vs_gerund"
-      ],
-      "explanation_of_Question": "句子中有兩個錯誤：1. 情態動詞 'should' 後面應該直接跟動詞原形，所以 'to practice' 應該改為 'practice'；2. 'practice' 後面通常跟動名詞，所以 'to speak' 應該改為 'speaking'。正確的句子應該是 'You should practice speaking English every day.'",
-      "instruction": "Identify the error(s) in the sentence above and rewrite it correctly.",
-      "original_sentence": "You should to practice to speak English every day.",
-      "standard_corrections": [
-        "You should practice speaking English every day."
-      ]
-    },
-    "cacheTimestamp": 1748038428
-  },
-  {
-    "UUID": "b46b1462-3b3b-4454-8f17-695ad7659896",
-    "questionData": {
-      "error_types": [
-        "comparative_superlative"
-      ],
-      "explanation_of_Question": "句子中有一個比較級錯誤：形容詞 'tall' 是單音節詞，其比較級形式應該是 'taller'，而不是 'more tall'。正確的句子應該是 'He is taller than his brother.'",
-      "instruction": "Identify the error(s) in the sentence above and rewrite it correctly.",
-      "original_sentence": "He is more tall than his brother.",
-      "standard_corrections": [
-        "He is taller than his brother."
-      ]
-    },
-    "cacheTimestamp": 1748038428
+    "cacheTimestamp": 1748081571
   }
 ]

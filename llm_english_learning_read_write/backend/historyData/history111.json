@@ -1,0 +1,335 @@
+[
+  {
+    "UUID": "b882998e-0fd2-41e5-8101-3801840a408c",
+    "questionData": {
+      "passage": "Experts can **predict** that the economy will improve next year.",
+      "targetWord": "predict",
+      "question": "Based on the sentence, the word 'predict' means:",
+      "options": [
+        {
+          "id": "A",
+          "text": "confirm"
+        },
+        {
+          "id": "B",
+          "text": "doubt"
+        },
+        {
+          "id": "C",
+          "text": "foretell or forecast"
+        },
+        {
+          "id": "D",
+          "text": "change"
+        }
+      ],
+      "standard_answer": "C"
+    },
+    "userAnswer": "confirm",
+    "isCorrect": false,
+    "timestamp": 1748084854855
+  },
+  {
+    "UUID": "8ec5e964-4f9b-44ad-b302-81fe8ebc42e1",
+    "questionData": {
+      "passage": "The company aims to be **transparent** in its dealings with customers.",
+      "targetWord": "transparent",
+      "question": "In this sentence, the word 'transparent' means:",
+      "options": [
+        {
+          "id": "A",
+          "text": "difficult to see through"
+        },
+        {
+          "id": "B",
+          "text": "easy to understand and not hidden"
+        },
+        {
+          "id": "C",
+          "text": "full of secrets"
+        },
+        {
+          "id": "D",
+          "text": "always changing"
+        }
+      ],
+      "standard_answer": "B"
+    },
+    "userAnswer": "easy to understand and not hidden",
+    "isCorrect": false,
+    "timestamp": 1748084679893
+  },
+  {
+    "UUID": "b686198f-2875-4947-bc44-57df534a9a76",
+    "questionData": {
+      "passage": "We may need to **modify** the design slightly based on the feedback.",
+      "targetWord": "modify",
+      "question": "Based on the sentence, the word 'modify' means:",
+      "options": [
+        {
+          "id": "A",
+          "text": "change or adjust"
+        },
+        {
+          "id": "B",
+          "text": "keep the same"
+        },
+        {
+          "id": "C",
+          "text": "destroy completely"
+        },
+        {
+          "id": "D",
+          "text": "explain clearly"
+        }
+      ],
+      "standard_answer": "A"
+    },
+    "userAnswer": "keep the same",
+    "isCorrect": false,
+    "timestamp": 1748084662436
+  },
+  {
+    "UUID": "6274049d-48bf-4726-bb17-c1974dbbe575",
+    "questionData": {
+      "passage": "It is **crucial** that we make a decision quickly before the deadline.",
+      "targetWord": "crucial",
+      "question": "What does the word 'crucial' mean in this sentence?",
+      "options": [
+        {
+          "id": "A",
+          "text": "difficult to understand"
+        },
+        {
+          "id": "B",
+          "text": "easy to forget"
+        },
+        {
+          "id": "C",
+          "text": "optional"
+        },
+        {
+          "id": "D",
+          "text": "extremely important"
+        }
+      ],
+      "standard_answer": "D"
+    },
+    "userAnswer": "easy to forget",
+    "isCorrect": false,
+    "timestamp": 1748084657696
+  },
+  {
+    "UUID": "370dd622-bcff-408b-b05a-bba535e4e6a5",
+    "questionData": {
+      "passage": "She would often **hesitate** before speaking in public.",
+      "targetWord": "hesitate",
+      "question": "What does the word 'hesitate' mean in this context?",
+      "options": [
+        {
+          "id": "A",
+          "text": "speak loudly"
+        },
+        {
+          "id": "B",
+          "text": "pause or delay"
+        },
+        {
+          "id": "C",
+          "text": "laugh"
+        },
+        {
+          "id": "D",
+          "text": "feel confident"
+        }
+      ],
+      "standard_answer": "B"
+    },
+    "userAnswer": "feel confident",
+    "isCorrect": false,
+    "timestamp": 1748084653691
+  },
+  {
+    "UUID": "74a2757a-4d60-4f26-bf55-e10e28d13f11",
+    "questionData": {
+      "passage": "The new system is more **efficient**, saving both time and money.",
+      "targetWord": "efficient",
+      "question": "What does the word 'efficient' mean in this sentence?",
+      "options": [
+        {
+          "id": "A",
+          "text": "slow"
+        },
+        {
+          "id": "B",
+          "text": "costly"
+        },
+        {
+          "id": "C",
+          "text": "productive"
+        },
+        {
+          "id": "D",
+          "text": "complicated"
+        }
+      ],
+      "standard_answer": "C"
+    },
+    "userAnswer": "productive",
+    "isCorrect": false,
+    "timestamp": 1748084596826
+  },
+  {
+    "UUID": "6ec5cb5e-bd97-4cad-8085-baebb33c8605",
+    "questionData": {
+      "passage": "The new software is very **versatile**, it can be used for many different tasks.",
+      "targetWord": "versatile",
+      "question": "The word 'versatile' in the sentence means:",
+      "options": [
+        {
+          "id": "A",
+          "text": "limited in use"
+        },
+        {
+          "id": "B",
+          "text": "difficult to use"
+        },
+        {
+          "id": "C",
+          "text": "able to be used for many purposes"
+        },
+        {
+          "id": "D",
+          "text": "expensive to buy"
+        }
+      ],
+      "standard_answer": "C"
+    },
+    "userAnswer": "able to be used for many purposes",
+    "isCorrect": false,
+    "timestamp": 1748084587778
+  },
+  {
+    "UUID": "d29bfd80-5413-4e65-a6d5-2a6d92c38b01",
+    "questionData": {
+      "passage": "Drivers should be **cautious** when driving in foggy conditions.",
+      "targetWord": "cautious",
+      "question": "In the sentence, the word 'cautious' means:",
+      "options": [
+        {
+          "id": "A",
+          "text": "careless"
+        },
+        {
+          "id": "B",
+          "text": "reckless"
+        },
+        {
+          "id": "C",
+          "text": "careful"
+        },
+        {
+          "id": "D",
+          "text": "fast"
+        }
+      ],
+      "standard_answer": "C"
+    },
+    "userAnswer": "reckless",
+    "isCorrect": false,
+    "timestamp": 1748084582864
+  },
+  {
+    "UUID": "254af7f4-e4bc-47ad-92b3-65206f61eca7",
+    "questionData": {
+      "passage": "Make sure you have **adequate** supplies for the trip, such as food and water.",
+      "targetWord": "adequate",
+      "question": "Based on the sentence, what does the word 'adequate' mean?",
+      "options": [
+        {
+          "id": "A",
+          "text": "too many"
+        },
+        {
+          "id": "B",
+          "text": "not enough"
+        },
+        {
+          "id": "C",
+          "text": "sufficient"
+        },
+        {
+          "id": "D",
+          "text": "expensive"
+        }
+      ],
+      "standard_answer": "C"
+    },
+    "userAnswer": "too many",
+    "isCorrect": false,
+    "timestamp": 1748084551097
+  },
+  {
+    "UUID": "8f27155f-63a8-47cf-9fbf-71c608241ee7",
+    "questionData": {
+      "passage": "His response was so **ambiguous** that nobody was sure what he meant.",
+      "targetWord": "ambiguous",
+      "question": "Based on the sentence, what does the word 'ambiguous' mean?",
+      "options": [
+        {
+          "id": "A",
+          "text": "clear"
+        },
+        {
+          "id": "B",
+          "text": "vague"
+        },
+        {
+          "id": "C",
+          "text": "definite"
+        },
+        {
+          "id": "D",
+          "text": "certain"
+        }
+      ],
+      "standard_answer": "B"
+    },
+    "userAnswer": {
+      "id": "A",
+      "text": "clear"
+    },
+    "isCorrect": false,
+    "timestamp": 1748080880244
+  },
+  {
+    "UUID": "552a8bbd-c196-4c2c-a318-256eb0eab995",
+    "questionData": {
+      "passage": "The teacher decided to **emphasize** the importance of regular practice for improving skills.",
+      "targetWord": "emphasize",
+      "question": "Based on the sentence, what does the word 'emphasize' mean?",
+      "options": [
+        {
+          "id": "A",
+          "text": "ignore"
+        },
+        {
+          "id": "B",
+          "text": "suggest"
+        },
+        {
+          "id": "C",
+          "text": "highlight or stress"
+        },
+        {
+          "id": "D",
+          "text": "criticize"
+        }
+      ],
+      "standard_answer": "C"
+    },
+    "userAnswer": "A",
+    "isCorrect": false,
+    "timestamp": 1748080660844
+  }
+]

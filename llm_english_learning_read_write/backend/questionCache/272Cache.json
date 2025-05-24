@@ -1,39 +1,5 @@
 [
   {
-    "UUID": "34243c03-35d6-44b1-8888-58d1872fab04",
-    "questionData": {
-      "evaluation_focus": [
-        "Precision",
-        "Economic terminology",
-        "Policy language",
-        "Conciseness"
-      ],
-      "instruction": "Translate the following paragraph, focusing on precise economic and policy-related terms.",
-      "reference_translations": [
-        "The Chinese economy is transitioning from a phase of high-speed growth to one of high-quality development, placing greater emphasis on innovation-driven strategies and structural optimization. The government has introduced a series of reform measures aimed at enhancing industrial competitiveness, improving the business environment, and promoting sustainable development. The external environment remains complex, presenting both challenges and opportunities."
-      ],
-      "source_text": "中国经济正从高速增长转向高质量发展阶段，更加注重创新驱动和结构优化。政府推出一系列改革措施，旨在提升产业竞争力、改善营商环境并推动可持续发展。外部环境依然复杂，挑战与机遇并存。"
-    },
-    "cacheTimestamp": 1748038694
-  },
-  {
-    "UUID": "8dc94d31-78be-47cc-aef0-de045f074d7e",
-    "questionData": {
-      "evaluation_focus": [
-        "Accuracy",
-        "Fluency",
-        "Vocabulary Choice"
-      ],
-      "instruction": "Translate the following paragraph into English.",
-      "reference_translations": [
-        "Reading is an important way to acquire knowledge and broaden one's horizons. Through reading, we can understand history, grasp scientific knowledge, feel the charm of literature, and even learn how to live better. Cultivating a reading habit from a young age is crucial for personal growth.",
-        "Reading serves as a vital path to gaining knowledge and expanding perspectives. It allows us to explore history, acquire scientific understanding, experience the appeal of literature, and even learn how to improve our lives. Developing a reading habit early on is essential for individual development."
-      ],
-      "source_text": "阅读是获取知识、拓宽视野的重要途径。通过阅读，我们可以了解历史，掌握科学知识，感受文学的魅力，甚至学习如何更好地生活。从小培养阅读习惯，对个人的成长至关重要。"
-    },
-    "cacheTimestamp": 1748068743
-  },
-  {
     "UUID": "11686c96-ecb3-4fd1-8980-9bb63d731667",
     "questionData": {
       "evaluation_focus": [
@@ -68,5 +34,56 @@
       "source_text": "中秋节是中国重要的传统节日之一，通常在农历八月十五。这一天，家人团聚，一起赏月、吃月饼，象征着团圆和美满。月饼种类繁多，口味各异，是节日不可或缺的美食。"
     },
     "cacheTimestamp": 1748068743
+  },
+  {
+    "UUID": "e21518ff-670c-4bad-9485-bf8e4d32ef42",
+    "questionData": {
+      "evaluation_focus": [
+        "Accuracy",
+        "Fluency",
+        "Grammar"
+      ],
+      "instruction": "Translate the following paragraph about environmental protection into clear and concise English. Pay attention to maintaining the original meaning.",
+      "reference_translations": [
+        "Protecting the environment is a shared responsibility for all humanity. As industrialization accelerates, various forms of pollution pose serious threats to our planet. Reducing carbon emissions, promoting renewable energy sources, and practicing sustainable consumption are crucial steps we must take together. Every individual's small action, like saving water and electricity or recycling, contributes to building a better future for generations to come.",
+        "Environmental protection is a universal responsibility. With accelerating industrialization, various pollutants severely endanger our planet. Reducing carbon emissions, advocating for renewable energy, and practicing sustainable consumption are essential collective actions. Every person's small effort, such as conserving water and power or recycling, helps build a better tomorrow for future generations."
+      ],
+      "source_text": "环境保护是全人类共同的责任。随着工业化的加速，各种形式的污染对地球构成了严重的威胁。减少碳排放、推广可再生能源、践行可持续消费是我们必须共同采取的关键措施。每个人的微小行动，比如节约水电、垃圾分类回收，都能为子孙后代创造更美好的未来做出贡献。"
+    },
+    "cacheTimestamp": 1748083903
+  },
+  {
+    "UUID": "cd795388-152c-4c50-aaed-5e23e533525f",
+    "questionData": {
+      "evaluation_focus": [
+        "Terminology",
+        "Accuracy",
+        "Readability"
+      ],
+      "instruction": "Translate the paragraph about the features of a new electronic device. Ensure technical terms are translated correctly.",
+      "reference_translations": [
+        "This new smartphone model boasts a state-of-the-art processor, 128GB of internal storage, and a high-resolution AMOLED display. It also supports 5G connectivity and features an advanced triple camera system, allowing users to capture stunning photos and videos. The battery life has been significantly improved compared to previous models, providing a full day's usage on a single charge.",
+        "Featuring a cutting-edge processor, 128GB built-in storage, and a high-res AMOLED screen, this new smartphone is packed with features. It supports 5G networks and includes an advanced three-lens camera setup, enabling users to take impressive pictures and record videos. Battery performance is much better than previous versions, offering power for an entire day after charging fully."
+      ],
+      "source_text": "这款新型智能手机配备了最先进的处理器、128GB的内存以及一块高分辨率的AMOLED屏幕。它还支持5G网络连接，并带有一个先进的三摄像头系统，让用户能够拍摄出色的照片和视频。电池续航能力相比前代型号有了显著提升，一次充电即可满足一整天的使用需求。"
+    },
+    "cacheTimestamp": 1748083903
+  },
+  {
+    "UUID": "507be2df-c3a8-4928-9f0c-ec1c9318a3cb",
+    "questionData": {
+      "evaluation_focus": [
+        "Style",
+        "Fluency",
+        "Cultural Nuance"
+      ],
+      "instruction": "Translate the following short story excerpt, trying to convey the slightly nostalgic and reflective tone.",
+      "reference_translations": [
+        "That old street, paved with bluestone slabs, still holds many memories from my childhood. The corner shop, the banyan tree by the bridge, the scent of jasmine blooming in summer – they are all etched deep in my mind. Though time has passed and things have changed, revisiting this place always brings back a mix of warmth and melancholy.",
+        "Many childhood memories remain on that old bluestone-paved street. The store on the corner, the banyan tree near the bridge, and the summer fragrance of jasmine are all profoundly imprinted in my memory. Although time has moved on and things are different now, coming back here always fills me with a blend of warmth and sadness."
+      ],
+      "source_text": "那条铺着青石板的老街，承载着我童年的许多回忆。街角的小卖部，桥边的老榕树，夏天里茉莉花的香气，都深深地烙印在我的脑海里。尽管时光流逝，物是人非，但每一次重回故地，心里总会涌起一种温暖而又惆怅的感觉。"
+    },
+    "cacheTimestamp": 1748083903
   }
 ]

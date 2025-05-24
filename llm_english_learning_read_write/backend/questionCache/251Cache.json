@@ -1,30 +1,5 @@
 [
   {
-    "UUID": "9298dd6f-7702-4078-9d53-1994118d85ff",
-    "questionData": {
-      "context": "Many people today struggle with work-life balance in our fast-paced society.",
-      "evaluation_focus": [
-        "內容相關性",
-        "語言準確性",
-        "邏輯清晰度",
-        "字數控制"
-      ],
-      "instruction": "請用50-80字回答這個問題。提供至少兩個具體的策略，並簡單說明為什麼這些策略有效。",
-      "key_points": [
-        "具體策略",
-        "簡單解釋",
-        "實用性"
-      ],
-      "max_words": 80,
-      "min_words": 50,
-      "question": "What are some effective strategies for maintaining a healthy work-life balance?",
-      "sample_responses": [
-        "Effective work-life balance strategies include setting clear boundaries by turning off work devices after hours and prioritizing time management through daily planning. These approaches work because they prevent work from consuming personal time and help individuals focus on what truly matters most each day."
-      ]
-    },
-    "cacheTimestamp": 1748038652
-  },
-  {
     "UUID": "1238c8ab-48a1-4368-8351-0e162721a234",
     "questionData": {
       "context": "Regular physical activity is essential for overall well-being.",

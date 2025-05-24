@@ -8,9 +8,12 @@ export {}
 /* prettier-ignore */
 declare module 'vue' {
   export interface GlobalComponents {
+    AnswerInput: typeof import('./src/components/quiz/AnswerInput.vue')['default']
     ElButton: typeof import('element-plus/es')['ElButton']
     ElResult: typeof import('element-plus/es')['ElResult']
     HelloWorld: typeof import('./src/components/HelloWorld.vue')['default']
+    QuestionRenderer: typeof import('./src/components/quiz/QuestionRenderer.vue')['default']
+    ResultDisplay: typeof import('./src/components/quiz/ResultDisplay.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
   }

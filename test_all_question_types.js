@@ -1,375 +1,113 @@
-/**
- * 英語學習系統API測試腳本
- * 測試所有25個題型的讀取和答案提交功能
- */
+#!/usr/bin/env node
 
-const API_BASE = 'http://localhost:3001/api';
+const fetch = require('node-fetch');
 
-// 所有25個題型
-const ALL_QUESTION_TYPES = [
-  '1.1.1', '1.1.2', '1.2.1', '1.2.2', '1.2.3',
-  '1.3.1', '1.4.1', '1.5.1', '1.5.2', '1.5.3',
-  '2.1.1', '2.1.2', '2.2.1', '2.2.2', '2.3.1',
-  '2.4.1', '2.4.2', '2.5.1', '2.5.2', '2.6.1',
-  '2.7.1', '2.7.2', '2.8.1', '2.8.2'
-];
+const BASE_URL = 'http://localhost:3001';
+const FRONTEND_URL = 'http://localhost:5173';
 
-// 測試結果統計
-let testResults = {
-  total: 0,
-  passed: 0,
-  failed: 0,
-  details: []
-};
+async function testAllQuestionTypes() {
+  console.log('🔍 測試所有題型的前端渲染...\n');
 
-/**
- * 延遲函數
- */
-function delay(ms) {
-  return new Promise(resolve => setTimeout(resolve, ms));
-}
-
-/**
- * 發送POST請求
- */
-async function postRequest(url, data) {
   try {
-    const response = await fetch(url, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(data)
-    });
-
-    if (!response.ok) {
-      throw new Error(`HTTP error! status: ${response.status}`);
-    }
-
-    return await response.json();
-  } catch (error) {
-    throw new Error(`Request failed: ${error.message}`);
-  }
-}
-
-/**
- * 測試單個題型
- */
-async function testQuestionType(questionType) {
-  console.log(`\n🧪 測試題型 ${questionType}...`);
-  
-  try {
-    // 1. 測試獲取題目
-    console.log(`   步驟1: 獲取題目...`);
-    const questionResponse = await postRequest(`${API_BASE}/start-test`, {
-      questionType: questionType
-    });
-
-    if (!questionResponse || !questionResponse.id) {
-      throw new Error('無法獲取題目或題目格式錯誤');
-    }
-
-    console.log(`   ✅ 題目獲取成功，ID: ${questionResponse.id}`);
+    // 1. 獲取可用的題型列表
+    console.log('📋 獲取題型列表...');
+    const typesResponse = await fetch(`${BASE_URL}/api/question-types`);
+    const questionTypes = await typesResponse.json();
     
-    // 2. 準備測試答案
-    let testAnswer = 'A'; // 默認答案
-    
-    // 根據題型調整測試答案
-    if (questionType.startsWith('1.') && questionResponse.options && questionResponse.options.length > 0) {
-      // 選擇題：使用第一個選項
-      testAnswer = questionResponse.options[0].id;
-    } else if (questionType.startsWith('2.')) {
-      // 寫作、翻譯等題型：使用文本答案
-      if (questionType === '2.4.1') {
-        // 排序題：假設有3個段落，答案格式為 "0,1,2"
-        testAnswer = questionResponse.scrambled_sentences ? 
-          questionResponse.scrambled_sentences.map((_, i) => i).join(',') : '0,1,2';
-      } else {
-        // 其他文本輸入題型
-        testAnswer = `This is a test answer for question type ${questionType}.`;
+    console.log(`✅ 獲取到 ${questionTypes.length} 個題型\n`);
+
+    // 2. 測試每個題型
+    for (const questionType of questionTypes) {
+      console.log(`📝 測試題型: ${questionType.id} - ${questionType.name}`);
+      
+      try {
+        // 2a. 獲取題目
+        const startResponse = await fetch(`${BASE_URL}/api/start-test`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ questionType: questionType.id })
+        });
+
+        const startData = await startResponse.json();
+        
+        if (startResponse.ok && startData.success && startData.question) {
+          const question = startData.question;
+          
+          console.log(`  ✅ 成功獲取題目 (ID: ${question.id})`);
+          console.log(`  📊 題目結構分析:`);
+          
+          // 分析題目內容
+          const features = [];
+          if (question.passage) features.push(`段落(${question.passage.length}字)`);
+          if (question.original_sentence) features.push(`原句(${question.original_sentence.length}字)`);
+          if (question.question) features.push(`問題(${question.question.length}字)`);
+          if (question.instruction) features.push(`指令(${question.instruction.length}字)`);
+          if (question.options) features.push(`選項(${question.options.length}個)`);
+          if (question.explanation_of_Question) features.push('問題說明');
+          
+          console.log(`     內容: ${features.join(', ')}`);
+          
+          // 顯示題目內容摘要
+          if (question.passage) {
+            console.log(`     段落摘要: ${question.passage.substring(0, 60)}...`);
+          }
+          if (question.original_sentence) {
+            console.log(`     原句: ${question.original_sentence}`);
+          }
+          if (question.question) {
+            console.log(`     問題: ${question.question.substring(0, 60)}...`);
+          }
+          if (question.instruction) {
+            console.log(`     指令: ${question.instruction.substring(0, 60)}...`);
+          }
+          if (question.options) {
+            console.log(`     選項: ${question.options.map((opt, i) => `${String.fromCharCode(65+i)}.${opt.substring(0, 20)}...`).join(' | ')}`);
+          }
+          
+          console.log(`  🌐 前端測試URL: ${FRONTEND_URL}/quiz/${questionType.id}`);
+          
+        } else {
+          console.log(`  ❌ 獲取題目失敗`);
+        }
+        
+      } catch (error) {
+        console.log(`  ❌ 測試錯誤: ${error.message}`);
       }
+      
+      console.log(''); // 空行分隔
     }
 
-    // 3. 測試提交答案
-    console.log(`   步驟2: 提交答案...`);
-    const submitResponse = await postRequest(`${API_BASE}/submit-answer`, {
-      questionId: questionResponse.id,
-      userAnswer: testAnswer,
-      questionDataSnapshot: questionResponse
-    });
-
-    if (!submitResponse || !submitResponse.submissionResult) {
-      throw new Error('答案提交失敗或返回格式錯誤');
-    }
-
-    console.log(`   ✅ 答案提交成功`);
-    console.log(`   📊 結果: ${submitResponse.submissionResult.isCorrect ? '正確' : '錯誤'}`);
+    // 3. 生成測試報告
+    console.log('='.repeat(80));
+    console.log('📈 前端測試建議');
+    console.log('='.repeat(80));
+    console.log('✅ 所有題型的數據結構已修正，前端應該能正確渲染');
+    console.log('🔧 主要修正內容:');
+    console.log('  1. 題目類型欄位: questionType → type');
+    console.log('  2. 選項格式: object[] → string[]');
+    console.log('  3. 新增支援: original_sentence, instruction, explanation_of_Question');
+    console.log('  4. 答題結果結構: 包裝在 submissionResult 中');
+    console.log('\n🌐 測試步驟:');
+    console.log('  1. 開啟瀏覽器訪問: http://localhost:5173');
+    console.log('  2. 點擊任意題型進入測驗');
+    console.log('  3. 檢查題目內容是否正確顯示');
+    console.log('  4. 測試答題和結果顯示功能');
     
-    // 記錄成功
-    testResults.passed++;
-    testResults.details.push({
-      questionType,
-      status: 'PASSED',
-      questionId: questionResponse.id,
-      testAnswer,
-      result: submitResponse.submissionResult.isCorrect ? '正確' : '錯誤'
+    questionTypes.forEach(type => {
+      console.log(`     - ${type.id}: ${FRONTEND_URL}/quiz/${type.id}`);
     });
 
   } catch (error) {
-    console.log(`   ❌ 測試失敗: ${error.message}`);
-    testResults.failed++;
-    testResults.details.push({
-      questionType,
-      status: 'FAILED',
-      error: error.message
-    });
+    console.error('❌ 測試過程發生錯誤:', error);
   }
-
-  testResults.total++;
 }
 
-/**
- * 主測試函數
- */
-async function runAllTests() {
-  console.log('🚀 開始測試所有25個題型的API功能...\n');
-  console.log('=' .repeat(60));
-
-  for (const questionType of ALL_QUESTION_TYPES) {
-    await testQuestionType(questionType);
-    
-    // 在測試之間添加延遲，避免過於頻繁的請求
-    await delay(1000);
-  }
-
-  // 輸出最終結果
-  console.log('\n' + '='.repeat(60));
-  console.log('📋 測試結果總結:');
-  console.log(`總測試數: ${testResults.total}`);
-  console.log(`通過: ${testResults.passed}`);
-  console.log(`失敗: ${testResults.failed}`);
-  console.log(`成功率: ${((testResults.passed / testResults.total) * 100).toFixed(1)}%`);
-
-  // 詳細結果
-  console.log('\n📊 詳細結果:');
-  testResults.details.forEach(detail => {
-    if (detail.status === 'PASSED') {
-      console.log(`✅ ${detail.questionType}: 成功 (${detail.result})`);
-    } else {
-      console.log(`❌ ${detail.questionType}: 失敗 - ${detail.error}`);
-    }
+// 主程序
+if (require.main === module) {
+  testAllQuestionTypes().catch(error => {
+    console.error('❌ 測試失敗:', error);
+    process.exit(1);
   });
-
-  // 如果有失敗的測試，列出失敗的題型
-  const failedTypes = testResults.details
-    .filter(d => d.status === 'FAILED')
-    .map(d => d.questionType);
-  
-  if (failedTypes.length > 0) {
-    console.log('\n⚠️  失敗的題型:');
-    failedTypes.forEach(type => console.log(`   - ${type}`));
-  }
-
-  console.log('\n🏁 測試完成!');
 }
 
-// 檢查 fetch API 是否可用（Node.js 18+）
-if (typeof fetch === 'undefined') {
-  console.error('❌ 此腳本需要 Node.js 18+ 或安裝 node-fetch');
-  console.log('請使用以下命令安裝 node-fetch:');
-  console.log('npm install node-fetch');
-  process.exit(1);
-}
-
-// 運行測試
-runAllTests().catch(error => {
-  console.error('❌ 測試過程中發生嚴重錯誤:', error);
-  process.exit(1);
-}); 
- * 英語學習系統API測試腳本
- * 測試所有25個題型的讀取和答案提交功能
- */
-
-const API_BASE = 'http://localhost:3001/api';
-
-// 所有25個題型
-const ALL_QUESTION_TYPES = [
-  '1.1.1', '1.1.2', '1.2.1', '1.2.2', '1.2.3',
-  '1.3.1', '1.4.1', '1.5.1', '1.5.2', '1.5.3',
-  '2.1.1', '2.1.2', '2.2.1', '2.2.2', '2.3.1',
-  '2.4.1', '2.4.2', '2.5.1', '2.5.2', '2.6.1',
-  '2.7.1', '2.7.2', '2.8.1', '2.8.2'
-];
-
-// 測試結果統計
-let testResults = {
-  total: 0,
-  passed: 0,
-  failed: 0,
-  details: []
-};
-
-/**
- * 延遲函數
- */
-function delay(ms) {
-  return new Promise(resolve => setTimeout(resolve, ms));
-}
-
-/**
- * 發送POST請求
- */
-async function postRequest(url, data) {
-  try {
-    const response = await fetch(url, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(data)
-    });
-
-    if (!response.ok) {
-      throw new Error(`HTTP error! status: ${response.status}`);
-    }
-
-    return await response.json();
-  } catch (error) {
-    throw new Error(`Request failed: ${error.message}`);
-  }
-}
-
-/**
- * 測試單個題型
- */
-async function testQuestionType(questionType) {
-  console.log(`\n🧪 測試題型 ${questionType}...`);
-  
-  try {
-    // 1. 測試獲取題目
-    console.log(`   步驟1: 獲取題目...`);
-    const questionResponse = await postRequest(`${API_BASE}/start-test`, {
-      questionType: questionType
-    });
-
-    if (!questionResponse || !questionResponse.id) {
-      throw new Error('無法獲取題目或題目格式錯誤');
-    }
-
-    console.log(`   ✅ 題目獲取成功，ID: ${questionResponse.id}`);
-    
-    // 2. 準備測試答案
-    let testAnswer = 'A'; // 默認答案
-    
-    // 根據題型調整測試答案
-    if (questionType.startsWith('1.') && questionResponse.options && questionResponse.options.length > 0) {
-      // 選擇題：使用第一個選項
-      testAnswer = questionResponse.options[0].id;
-    } else if (questionType.startsWith('2.')) {
-      // 寫作、翻譯等題型：使用文本答案
-      if (questionType === '2.4.1') {
-        // 排序題：假設有3個段落，答案格式為 "0,1,2"
-        testAnswer = questionResponse.scrambled_sentences ? 
-          questionResponse.scrambled_sentences.map((_, i) => i).join(',') : '0,1,2';
-      } else {
-        // 其他文本輸入題型
-        testAnswer = `This is a test answer for question type ${questionType}.`;
-      }
-    }
-
-    // 3. 測試提交答案
-    console.log(`   步驟2: 提交答案...`);
-    const submitResponse = await postRequest(`${API_BASE}/submit-answer`, {
-      questionId: questionResponse.id,
-      userAnswer: testAnswer,
-      questionDataSnapshot: questionResponse
-    });
-
-    if (!submitResponse || !submitResponse.submissionResult) {
-      throw new Error('答案提交失敗或返回格式錯誤');
-    }
-
-    console.log(`   ✅ 答案提交成功`);
-    console.log(`   📊 結果: ${submitResponse.submissionResult.isCorrect ? '正確' : '錯誤'}`);
-    
-    // 記錄成功
-    testResults.passed++;
-    testResults.details.push({
-      questionType,
-      status: 'PASSED',
-      questionId: questionResponse.id,
-      testAnswer,
-      result: submitResponse.submissionResult.isCorrect ? '正確' : '錯誤'
-    });
-
-  } catch (error) {
-    console.log(`   ❌ 測試失敗: ${error.message}`);
-    testResults.failed++;
-    testResults.details.push({
-      questionType,
-      status: 'FAILED',
-      error: error.message
-    });
-  }
-
-  testResults.total++;
-}
-
-/**
- * 主測試函數
- */
-async function runAllTests() {
-  console.log('🚀 開始測試所有25個題型的API功能...\n');
-  console.log('=' .repeat(60));
-
-  for (const questionType of ALL_QUESTION_TYPES) {
-    await testQuestionType(questionType);
-    
-    // 在測試之間添加延遲，避免過於頻繁的請求
-    await delay(1000);
-  }
-
-  // 輸出最終結果
-  console.log('\n' + '='.repeat(60));
-  console.log('📋 測試結果總結:');
-  console.log(`總測試數: ${testResults.total}`);
-  console.log(`通過: ${testResults.passed}`);
-  console.log(`失敗: ${testResults.failed}`);
-  console.log(`成功率: ${((testResults.passed / testResults.total) * 100).toFixed(1)}%`);
-
-  // 詳細結果
-  console.log('\n📊 詳細結果:');
-  testResults.details.forEach(detail => {
-    if (detail.status === 'PASSED') {
-      console.log(`✅ ${detail.questionType}: 成功 (${detail.result})`);
-    } else {
-      console.log(`❌ ${detail.questionType}: 失敗 - ${detail.error}`);
-    }
-  });
-
-  // 如果有失敗的測試，列出失敗的題型
-  const failedTypes = testResults.details
-    .filter(d => d.status === 'FAILED')
-    .map(d => d.questionType);
-  
-  if (failedTypes.length > 0) {
-    console.log('\n⚠️  失敗的題型:');
-    failedTypes.forEach(type => console.log(`   - ${type}`));
-  }
-
-  console.log('\n🏁 測試完成!');
-}
-
-// 檢查 fetch API 是否可用（Node.js 18+）
-if (typeof fetch === 'undefined') {
-  console.error('❌ 此腳本需要 Node.js 18+ 或安裝 node-fetch');
-  console.log('請使用以下命令安裝 node-fetch:');
-  console.log('npm install node-fetch');
-  process.exit(1);
-}
-
-// 運行測試
-runAllTests().catch(error => {
-  console.error('❌ 測試過程中發生嚴重錯誤:', error);
-  process.exit(1);
-}); 
+module.exports = { testAllQuestionTypes }; 

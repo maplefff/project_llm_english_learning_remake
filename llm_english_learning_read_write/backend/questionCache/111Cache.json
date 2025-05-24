@@ -1,147 +1,118 @@
 [
   {
-    "UUID": "a78c7626-1870-4695-bc20-221691a0ac77",
+    "UUID": "12acc2ac-2938-4171-a94d-3c4edc79891f",
     "questionData": {
-      "explanation_of_Question": "原文中「feasible」意為可行的、辦得到的。選項 A「impossible」意為不可能，語意相反。選項 B「necessary」意為必要的。選項 C「practical and achievable」意為實際且可實現的，與「feasible」的含義最接近，故為正確答案。選項 D「difficult」意為困難的。",
+      "explanation_of_Question": "Acquire 指獲得或購得某物，故選項 A「獲得或取得」為正確解釋。選項 B「失去」是反義詞；選項 C「販賣」是將物品賣出；選項 D「分享」是與他人共同擁有或使用，皆與 \"acquire\" 的意思不符。",
       "options": [
         {
           "id": "A",
-          "text": "impossible"
+          "text": "get or obtain"
         },
         {
           "id": "B",
-          "text": "necessary"
+          "text": "lose"
         },
         {
           "id": "C",
-          "text": "practical and achievable"
+          "text": "sell"
         },
         {
           "id": "D",
-          "text": "difficult"
+          "text": "share"
         }
       ],
-      "passage": "After reviewing the proposal, the committee concluded that the plan was **feasible** given the current resources.",
-      "question": "In the sentence above, the word 'feasible' most nearly means:",
-      "standard_answer": "C",
-      "targetWord": "feasible"
+      "passage": "She worked hard to **acquire** the necessary skills for the job.",
+      "question": "What does the word 'acquire' mean in this context?",
+      "standard_answer": "A",
+      "targetWord": "acquire"
     },
-    "cacheTimestamp": 1748038408
+    "cacheTimestamp": 1748084675
   },
   {
-    "UUID": "552a8bbd-c196-4c2c-a318-256eb0eab995",
+    "UUID": "2b3a6b74-1f63-44b6-b3a2-e358e1fc8686",
     "questionData": {
-      "explanation_of_Question": "原文中「emphasize」意為強調。選項 A「ignore」意為忽略，語意相反。選項 B「suggest」意為建議。選項 C「highlight or stress」意為凸顯或強調，與「emphasize」的含義最接近，故為正確答案。選項 D「criticize」意為批評。",
+      "explanation_of_Question": "Consistent 指始終如一、沒有改變，與 \"always the same\" 意思相近，故選項 D 正確。選項 A「多變的」意為容易改變，是反義詞；選項 B「罕見的」意為不常發生；選項 C「複雜的」意為難以理解或處理，這些都不符合 \"consistent\" 的意思。",
       "options": [
         {
           "id": "A",
+          "text": "changeable"
+        },
+        {
+          "id": "B",
+          "text": "rare"
+        },
+        {
+          "id": "C",
+          "text": "complicated"
+        },
+        {
+          "id": "D",
+          "text": "always the same or regular"
+        }
+      ],
+      "passage": "Her performance has been **consistent** throughout the season.",
+      "question": "The word 'consistent' in the sentence means:",
+      "standard_answer": "D",
+      "targetWord": "consistent"
+    },
+    "cacheTimestamp": 1748084675
+  },
+  {
+    "UUID": "5a5fbab7-92f7-4bd6-99e5-19f678023ca0",
+    "questionData": {
+      "explanation_of_Question": "Evaluate 指評估、判斷某事物的價值或表現，因此選項 A「評估或判斷」是正確答案。選項 B「創造」是從無到有地生成；選項 C「忽略」是不去注意或重視；選項 D「慶祝」是為了某事而歡樂，這些都與 \"evaluate\" 的意思不同。",
+      "options": [
+        {
+          "id": "A",
+          "text": "assess or judge"
+        },
+        {
+          "id": "B",
+          "text": "create"
+        },
+        {
+          "id": "C",
           "text": "ignore"
         },
         {
-          "id": "B",
-          "text": "suggest"
-        },
-        {
-          "id": "C",
-          "text": "highlight or stress"
-        },
-        {
           "id": "D",
-          "text": "criticize"
+          "text": "celebrate"
         }
       ],
-      "passage": "The teacher decided to **emphasize** the importance of regular practice for improving skills.",
-      "question": "Based on the sentence, what does the word 'emphasize' mean?",
-      "standard_answer": "C",
-      "targetWord": "emphasize"
+      "passage": "We need to **evaluate** the results of the survey carefully.",
+      "question": "Based on the sentence, what does the word 'evaluate' mean?",
+      "standard_answer": "A",
+      "targetWord": "evaluate"
     },
-    "cacheTimestamp": 1748038408
+    "cacheTimestamp": 1748084675
   },
   {
-    "UUID": "b97bfaeb-1ece-44b2-b44e-c1ce4e0284c0",
+    "UUID": "5455720f-bbb4-4add-9e0e-be6352c6b6a3",
     "questionData": {
-      "explanation_of_Question": "原文中「sufficient」意為足夠的。選項 A「scarce」意為稀少的，語意相反。選項 B「abundant」意為豐富的，比足夠多。選項 C「adequate or enough」意為足夠的，與「sufficient」的含義最接近，故為正確答案。選項 D「excessive」意為過多的。",
+      "explanation_of_Question": "Significant 指重要或值得注意的，與 \"important or noticeable\" 同義，故選項 B 正確。選項 A「微不足道的」意為不重要的，是反義詞；選項 C「秘密的」意為不公開的；選項 D「隨機的」意為沒有特定模式或計畫的，這些都不符合 \"significant\" 的意思。",
       "options": [
         {
           "id": "A",
-          "text": "scarce"
+          "text": "minor"
         },
         {
           "id": "B",
-          "text": "abundant"
+          "text": "important or noticeable"
         },
         {
           "id": "C",
-          "text": "adequate or enough"
+          "text": "secret"
         },
         {
           "id": "D",
-          "text": "excessive"
+          "text": "random"
         }
       ],
-      "passage": "We have **sufficient** supplies to last us through the weekend.",
-      "question": "Which word is a synonym for 'sufficient' in the given sentence?",
-      "standard_answer": "C",
-      "targetWord": "sufficient"
-    },
-    "cacheTimestamp": 1748038408
-  },
-  {
-    "UUID": "123d55e1-56cb-4a0f-8836-c9e50db92e9d",
-    "questionData": {
-      "explanation_of_Question": "原文中「modify」意為修改、調整。選項 A「destroy」意為破壞，語意相反。選項 B「copy」意為複製。選項 C「alter or change slightly」意為修改或稍微改變，與「modify」的含義最接近，故為正確答案。選項 D「approve」意為批准。",
-      "options": [
-        {
-          "id": "A",
-          "text": "destroy"
-        },
-        {
-          "id": "B",
-          "text": "copy"
-        },
-        {
-          "id": "C",
-          "text": "alter or change slightly"
-        },
-        {
-          "id": "D",
-          "text": "approve"
-        }
-      ],
-      "passage": "The chef decided to **modify** the recipe slightly to enhance the flavor.",
-      "question": "What is the meaning of 'modify' as used in the sentence?",
-      "standard_answer": "C",
-      "targetWord": "modify"
-    },
-    "cacheTimestamp": 1748038408
-  },
-  {
-    "UUID": "d6ceb3f8-6303-44eb-8ab2-8479283220c0",
-    "questionData": {
-      "explanation_of_Question": "原文中「integrate」意為整合、結合。選項 A「separate」意為分開，語意相反。選項 B「combine or merge」意為結合或合併，與「integrate」的含義最接近，故為正確答案。選項 C「reduce」意為減少。選項 D「analyze」意為分析。",
-      "options": [
-        {
-          "id": "A",
-          "text": "separate"
-        },
-        {
-          "id": "B",
-          "text": "combine or merge"
-        },
-        {
-          "id": "C",
-          "text": "reduce"
-        },
-        {
-          "id": "D",
-          "text": "analyze"
-        }
-      ],
-      "passage": "The company is trying to **integrate** the new software with their existing systems.",
-      "question": "In the sentence above, the word 'integrate' is closest in meaning to:",
+      "passage": "There was a **significant** increase in sales last month.",
+      "question": "In the sentence, the word 'significant' means:",
       "standard_answer": "B",
-      "targetWord": "integrate"
+      "targetWord": "significant"
     },
-    "cacheTimestamp": 1748038408
+    "cacheTimestamp": 1748084675
   }
 ]

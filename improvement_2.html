@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>方案2 顏色區分改進方案</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', 'Microsoft JhengHei', sans-serif;
+            background: #1a1a1a;
+            color: #ffffff;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 30px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 20px;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: 300;
+        }
+
+        .header p {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(700px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .layout-option {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .layout-option:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .layout-header {
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .layout-title {
+            font-size: 1.3em;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .layout-description {
+            font-size: 0.9em;
+            opacity: 0.7;
+        }
+
+        .layout-content {
+            padding: 30px;
+        }
+
+        /* 共同的基礎樣式 */
+        .answer-option {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            border-radius: 15px;
+            padding: 18px 20px;
+            margin: 12px 0;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border: 2px solid transparent;
+        }
+
+        .option-indicator {
+            color: #ffffff;
+            padding: 10px 12px;
+            border-radius: 50%;
+            font-weight: bold;
+            min-width: 40px;
+            text-align: center;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+        }
+
+        .question-text {
+            margin: 20px 0;
+            padding: 15px 0;
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        .explanation-section {
+            margin-top: 25px;
+            padding: 20px;
+            border-radius: 15px;
+            border: 2px solid transparent;
+        }
+
+        /* 方案A: 經典藍色系 - 層次分明 */
+        .scheme-a .question-passage {
+            background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
+            border: 2px solid #3b82f6;
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 25px;
+            color: #ffffff;
+            box-shadow: 0 10px 25px rgba(30, 58, 138, 0.3);
+        }
+
+        .scheme-a .question-text {
+            background: linear-gradient(135deg, #374151 0%, #4b5563 100%);
+            border: 2px solid #6b7280;
+            border-radius: 12px;
+            padding: 18px;
+            color: #f3f4f6;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+        }
+
+        .scheme-a .answer-option {
+            background: linear-gradient(135deg, #1f2937 0%, #374151 100%);
+            border: 2px solid #4b5563;
+        }
+
+        .scheme-a .answer-option:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+            border-color: #60a5fa;
+            background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+        }
+
+        .scheme-a .option-indicator {
+            background: linear-gradient(135deg, #6b7280 0%, #4b5563 100%);
+        }
+
+        .scheme-a .answer-option:hover .option-indicator {
+            background: linear-gradient(135deg, #ffffff 0%, #e5e7eb 100%);
+            color: #1f2937;
+        }
+
+        .scheme-a .explanation-section {
+            background: linear-gradient(135deg, #059669 0%, #047857 100%);
+            border: 2px solid #10b981;
+            color: #ffffff;
+            box-shadow: 0 8px 20px rgba(5, 150, 105, 0.3);
+        }
+
+        /* 方案B: 暖色調 - 溫馨舒適 */
+        .scheme-b .question-passage {
+            background: linear-gradient(135deg, #c2410c 0%, #ea580c 100%);
+            border: 2px solid #f97316;
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 25px;
+            color: #ffffff;
+            box-shadow: 0 10px 25px rgba(194, 65, 12, 0.3);
+        }
+
+        .scheme-b .question-text {
+            background: linear-gradient(135deg, #78350f 0%, #92400e 100%);
+            border: 2px solid #d97706;
+            border-radius: 12px;
+            padding: 18px;
+            color: #fef3c7;
+            box-shadow: 0 8px 20px rgba(120, 53, 15, 0.3);
+        }
+
+        .scheme-b .answer-option {
+            background: linear-gradient(135deg, #374151 0%, #4b5563 100%);
+            border: 2px solid #6b7280;
+        }
+
+        .scheme-b .answer-option:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+            border-color: #fbbf24;
+            background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+        }
+
+        .scheme-b .option-indicator {
+            background: linear-gradient(135deg, #6b7280 0%, #4b5563 100%);
+        }
+
+        .scheme-b .answer-option:hover .option-indicator {
+            background: linear-gradient(135deg, #ffffff 0%, #f3f4f6 100%);
+            color: #1f2937;
+        }
+
+        .scheme-b .explanation-section {
+            background: linear-gradient(135deg, #7c3aed 0%, #6d28d9 100%);
+            border: 2px solid #8b5cf6;
+            color: #ffffff;
+            box-shadow: 0 8px 20px rgba(124, 58, 237, 0.3);
+        }
+
+        /* 方案C: 自然綠色系 - 清新護眼 */
+        .scheme-c .question-passage {
+            background: linear-gradient(135deg, #064e3b 0%, #065f46 100%);
+            border: 2px solid #059669;
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 25px;
+            color: #d1fae5;
+            box-shadow: 0 10px 25px rgba(6, 78, 59, 0.4);
+        }
+
+        .scheme-c .question-text {
+            background: linear-gradient(135deg, #1e40af 0%, #1d4ed8 100%);
+            border: 2px solid #3b82f6;
+            border-radius: 12px;
+            padding: 18px;
+            color: #dbeafe;
+            box-shadow: 0 8px 20px rgba(30, 64, 175, 0.3);
+        }
+
+        .scheme-c .answer-option {
+            background: linear-gradient(135deg, #4c1d95 0%, #5b21b6 100%);
+            border: 2px solid #7c3aed;
+        }
+
+        .scheme-c .answer-option:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(76, 29, 149, 0.4);
+            border-color: #a78bfa;
+            background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+        }
+
+        .scheme-c .option-indicator {
+            background: linear-gradient(135deg, #7c3aed 0%, #6d28d9 100%);
+        }
+
+        .scheme-c .answer-option:hover .option-indicator {
+            background: linear-gradient(135deg, #ffffff 0%, #f3f4f6 100%);
+            color: #4c1d95;
+        }
+
+        .scheme-c .explanation-section {
+            background: linear-gradient(135deg, #b45309 0%, #d97706 100%);
+            border: 2px solid #f59e0b;
+            color: #ffffff;
+            box-shadow: 0 8px 20px rgba(180, 83, 9, 0.3);
+        }
+
+        /* 方案D: 彩虹漸層 - 視覺豐富 */
+        .scheme-d .question-passage {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border: 2px solid #8b5cf6;
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 25px;
+            color: #ffffff;
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+        }
+
+        .scheme-d .question-text {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            border: 2px solid #ec4899;
+            border-radius: 12px;
+            padding: 18px;
+            color: #ffffff;
+            box-shadow: 0 8px 20px rgba(240, 147, 251, 0.3);
+        }
+
+        .scheme-d .answer-option {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            border: 2px solid #0ea5e9;
+            color: #1e293b;
+        }
+
+        .scheme-d .answer-option:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(79, 172, 254, 0.4);
+            border-color: #38bdf8;
+            background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%);
+            color: #ffffff;
+        }
+
+        .scheme-d .option-indicator {
+            background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+            color: #ffffff;
+        }
+
+        .scheme-d .answer-option:hover .option-indicator {
+            background: linear-gradient(135deg, #ffffff 0%, #f1f5f9 100%);
+            color: #1e293b;
+        }
+
+        .scheme-d .explanation-section {
+            background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+            border: 2px solid #f59e0b;
+            color: #1f2937;
+            box-shadow: 0 8px 20px rgba(250, 112, 154, 0.3);
+        }
+
+        /* 功能說明卡片 */
+        .feature-highlight {
+            background: rgba(34, 197, 94, 0.1);
+            border: 1px solid rgba(34, 197, 94, 0.3);
+            border-radius: 12px;
+            padding: 15px;
+            margin: 15px 0;
+        }
+
+        .feature-title {
+            color: #22c55e;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .feature-description {
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        /* 按鈕樣式 */
+        .action-buttons {
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .select-button {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 25px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin: 0 10px;
+        }
+
+        .select-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+        }
+
+        .recommendation {
+            background: rgba(59, 130, 246, 0.1);
+            border: 1px solid rgba(59, 130, 246, 0.3);
+            border-radius: 15px;
+            padding: 20px;
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        .recommendation h3 {
+            color: #3b82f6;
+            margin-bottom: 15px;
+        }
+
+        .color-legend {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 8px 12px;
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .legend-color {
+            width: 20px;
+            height: 20px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🎨 方案2 顏色區分改進方案</h1>
+            <p>基於高對比度卡片風格，設計不同顏色區分方案讓用戶快速識別功能區域</p>
+        </div>
+
+        <div class="comparison-grid">
+            <!-- 方案A: 經典藍色系 -->
+            <div class="layout-option">
+                <div class="layout-header">
+                    <div class="layout-title">方案A: 經典藍色系 - 層次分明</div>
+                    <div class="layout-description">藍色Passage + 灰色選項 + 綠色解釋，專業穩重</div>
+                </div>
+                <div class="layout-content scheme-a">
+                    <div class="question-passage">
+                        <h4>📖 Reading Passage</h4>
+                        <p>The company is known for its innovative designs that challenge traditional concepts. Their approach combines creativity with functionality.</p>
+                    </div>
+                    
+                    <div class="question-text">
+                        <p><strong>❓ Question:</strong> The word 'innovative' is closest in meaning to:</p>
+                    </div>
+
+                    <div class="answer-option">
+                        <div class="option-indicator">A</div>
+                        <div class="option-text">traditional</div>
+                    </div>
+                    <div class="answer-option">
+                        <div class="option-indicator">B</div>
+                        <div class="option-text">conventional</div>
+                    </div>
+                    <div class="answer-option">
+                        <div class="option-indicator">C</div>
+                        <div class="option-text">original and creative</div>
+                    </div>
+                    <div class="answer-option">
+                        <div class="option-indicator">D</div>
+                        <div class="option-text">outdated</div>
+                    </div>
+
+                    <div class="explanation-section">
+                        <h4>💡 解釋</h4>
+                        <p>正確答案是 C。'Innovative' 意思是創新的、原創的，與 'original and creative' 最接近。</p>
+                    </div>
+
+                    <div class="color-legend">
+                        <div class="legend-item">
+                            <div class="legend-color" style="background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);"></div>
+                            <span>Passage - 深藍色</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-color" style="background: linear-gradient(135deg, #374151 0%, #4b5563 100%);"></div>
+                            <span>Question - 灰色</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-color" style="background: linear-gradient(135deg, #1f2937 0%, #374151 100%);"></div>
+                            <span>Options - 深灰色</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-color" style="background: linear-gradient(135deg, #059669 0%, #047857 100%);"></div>
+                            <span>Explanation - 綠色</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="action-buttons">
+                    <button class="select-button" onclick="selectScheme('A', '經典藍色系')">選擇此方案</button>
+                </div>
+            </div>
+
+            <!-- 方案B: 暖色調 -->
+            <div class="layout-option">
+                <div class="layout-header">
+                    <div class="layout-title">方案B: 暖色調 - 溫馨舒適</div>
+                    <div class="layout-description">橙色Passage + 棕色題目 + 紫色解釋，溫暖親切</div>
+                </div>
+                <div class="layout-content scheme-b">
+                    <div class="question-passage">
+                        <h4>📖 Reading Passage</h4>
+                        <p>The company is known for its innovative designs that challenge traditional concepts. Their approach combines creativity with functionality.</p>
+                    </div>
+                    
+                    <div class="question-text">
+                        <p><strong>❓ Question:</strong> The word 'innovative' is closest in meaning to:</p>
+                    </div>
+
+                    <div class="answer-option">
+                        <div class="option-indicator">A</div>
+                        <div class="option-text">traditional</div>
+                    </div>
+                    <div class="answer-option">
+                        <div class="option-indicator">B</div>
+                        <div class="option-text">conventional</div>
+                    </div>
+                    <div class="answer-option">
+                        <div class="option-indicator">C</div>
+                        <div class="option-text">original and creative</div>
+                    </div>
+                    <div class="answer-option">
+                        <div class="option-indicator">D</div>
+                        <div class="option-text">outdated</div>
+                    </div>
+
+                    <div class="explanation-section">
+                        <h4>💡 解釋</h4>
+                        <p>正確答案是 C。'Innovative' 意思是創新的、原創的，與 'original and creative' 最接近。</p>
+                    </div>
+
+                    <div class="color-legend">
+                        <div class="legend-item">
+                            <div class="legend-color" style="background: linear-gradient(135deg, #c2410c 0%, #ea580c 100%);"></div>
+                            <span>Passage - 橙色</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-color" style="background: linear-gradient(135deg, #78350f 0%, #92400e 100%);"></div>
+                            <span>Question - 棕色</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-color" style="background: linear-gradient(135deg, #374151 0%, #4b5563 100%);"></div>
+                            <span>Options - 灰色</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-color" style="background: linear-gradient(135deg, #7c3aed 0%, #6d28d9 100%);"></div>
+                            <span>Explanation - 紫色</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="action-buttons">
+                    <button class="select-button" onclick="selectScheme('B', '暖色調')">選擇此方案</button>
+                </div>
+            </div>
+
+            <!-- 方案C: 自然綠色系 -->
+            <div class="layout-option">
+                <div class="layout-header">
+                    <div class="layout-title">方案C: 自然綠色系 - 清新護眼</div>
+                    <div class="layout-description">綠色Passage + 藍色題目 + 紫色選項 + 橙色解釋，豐富層次</div>
+                </div>
+                <div class="layout-content scheme-c">
+                    <div class="question-passage">
+                        <h4>📖 Reading Passage</h4>
+                        <p>The company is known for its innovative designs that challenge traditional concepts. Their approach combines creativity with functionality.</p>
+                    </div>
+                    
+                    <div class="question-text">
+                        <p><strong>❓ Question:</strong> The word 'innovative' is closest in meaning to:</p>
+                    </div>
+
+                    <div class="answer-option">
+                        <div class="option-indicator">A</div>
+                        <div class="option-text">traditional</div>
+                    </div>
+                    <div class="answer-option">
+                        <div class="option-indicator">B</div>
+                        <div class="option-text">conventional</div>
+                    </div>
+                    <div class="answer-option">
+                        <div class="option-indicator">C</div>
+                        <div class="option-text">original and creative</div>
+                    </div>
+                    <div class="answer-option">
+                        <div class="option-indicator">D</div>
+                        <div class="option-text">outdated</div>
+                    </div>
+
+                    <div class="explanation-section">
+                        <h4>💡 解釋</h4>
+                        <p>正確答案是 C。'Innovative' 意思是創新的、原創的，與 'original and creative' 最接近。</p>
+                    </div>
+
+                    <div class="color-legend">
+                        <div class="legend-item">
+                            <div class="legend-color" style="background: linear-gradient(135deg, #064e3b 0%, #065f46 100%);"></div>
+                            <span>Passage - 深綠色</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-color" style="background: linear-gradient(135deg, #1e40af 0%, #1d4ed8 100%);"></div>
+                            <span>Question - 藍色</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-color" style="background: linear-gradient(135deg, #4c1d95 0%, #5b21b6 100%);"></div>
+                            <span>Options - 紫色</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-color" style="background: linear-gradient(135deg, #b45309 0%, #d97706 100%);"></div>
+                            <span>Explanation - 橙色</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="action-buttons">
+                    <button class="select-button" onclick="selectScheme('C', '自然綠色系')">選擇此方案</button>
+                </div>
+            </div>
+
+            <!-- 方案D: 彩虹漸層 -->
+            <div class="layout-option">
+                <div class="layout-header">
+                    <div class="layout-title">方案D: 彩虹漸層 - 視覺豐富</div>
+                    <div class="layout-description">漸層色彩搭配，視覺效果豐富，適合年輕用戶</div>
+                </div>
+                <div class="layout-content scheme-d">
+                    <div class="question-passage">
+                        <h4>📖 Reading Passage</h4>
+                        <p>The company is known for its innovative designs that challenge traditional concepts. Their approach combines creativity with functionality.</p>
+                    </div>
+                    
+                    <div class="question-text">
+                        <p><strong>❓ Question:</strong> The word 'innovative' is closest in meaning to:</p>
+                    </div>
+
+                    <div class="answer-option">
+                        <div class="option-indicator">A</div>
+                        <div class="option-text">traditional</div>
+                    </div>
+                    <div class="answer-option">
+                        <div class="option-indicator">B</div>
+                        <div class="option-text">conventional</div>
+                    </div>
+                    <div class="answer-option">
+                        <div class="option-indicator">C</div>
+                        <div class="option-text">original and creative</div>
+                    </div>
+                    <div class="answer-option">
+                        <div class="option-indicator">D</div>
+                        <div class="option-text">outdated</div>
+                    </div>
+
+                    <div class="explanation-section">
+                        <h4>💡 解釋</h4>
+                        <p>正確答案是 C。'Innovative' 意思是創新的、原創的，與 'original and creative' 最接近。</p>
+                    </div>
+
+                    <div class="color-legend">
+                        <div class="legend-item">
+                            <div class="legend-color" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);"></div>
+                            <span>Passage - 紫藍漸層</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-color" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);"></div>
+                            <span>Question - 粉紅漸層</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-color" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);"></div>
+                            <span>Options - 藍青漸層</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-color" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);"></div>
+                            <span>Explanation - 粉黃漸層</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="action-buttons">
+                    <button class="select-button" onclick="selectScheme('D', '彩虹漸層')">選擇此方案</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="recommendation">
+            <h3>🎯 設計理念分析</h3>
+            <div style="text-align: left; max-width: 800px; margin: 0 auto;">
+                <div class="feature-highlight">
+                    <div class="feature-title">🎨 視覺層次設計原則</div>
+                    <div class="feature-description">
+                        • <strong>Passage（閱讀段落）</strong>：使用較深的主色調，突出重要性<br>
+                        • <strong>Question（題目）</strong>：使用中等對比度，清晰易讀<br>
+                        • <strong>Options（選項）</strong>：使用互動友好的顏色，hover效果明顯<br>
+                        • <strong>Explanation（解釋）</strong>：使用暖色調，營造正面學習體驗
+                    </div>
+                </div>
+
+                <div class="feature-highlight">
+                    <div class="feature-title">🧠 認知負荷考量</div>
+                    <div class="feature-description">
+                        • 每個功能區域有獨特的顏色識別<br>
+                        • 保持足夠的對比度確保可讀性<br>
+                        • 顏色搭配符合用戶心理預期<br>
+                        • 避免過於花俏分散注意力
+                    </div>
+                </div>
+
+                <div class="feature-highlight">
+                    <div class="feature-title">📱 響應式適配</div>
+                    <div class="feature-description">
+                        • 所有方案都支援深色模式<br>
+                        • 在不同螢幕尺寸下保持一致性<br>
+                        • 考慮色彩可及性（無障礙設計）<br>
+                        • 支援高對比度模式
+                    </div>
+                </div>
+            </div>
+
+            <p style="margin-top: 20px; font-size: 16px;">
+                <strong>建議：</strong>方案A（經典藍色系）平衡了專業性與可讀性，是最適合學習環境的選擇。<br>
+                方案C（自然綠色系）色彩豐富但不失專業，適合希望增加視覺層次的用戶。
+            </p>
+        </div>
+    </div>
+
+    <script>
+        function selectScheme(scheme, schemeName) {
+            const result = confirm(`你選擇了：方案${scheme} - ${schemeName}\n\n是否確定要實施此配色方案？`);
+            
+            if (result) {
+                const implementationSteps = {
+                    'A': [
+                        '1. 更新 QuestionRenderer.vue 使用藍色系 Passage 樣式',
+                        '2. 修改 AnswerInput.vue 使用灰色系選項樣式',
+                        '3. 調整 ResultDisplay.vue 使用綠色系解釋樣式',
+                        '4. 確保所有互動狀態的對比度符合標準',
+                        '5. 測試不同題型的視覺一致性'
+                    ],
+                    'B': [
+                        '1. 實施暖色調配色主題',
+                        '2. 調整文字顏色確保可讀性',
+                        '3. 優化 hover 和 selected 狀態',
+                        '4. 測試長時間使用的舒適度',
+                        '5. 驗證色彩搭配的和諧性'
+                    ],
+                    'C': [
+                        '1. 實施多色彩區分系統',
+                        '2. 確保各區域顏色不會混淆',
+                        '3. 調整文字對比度',
+                        '4. 測試色彩可及性',
+                        '5. 驗證視覺層次的清晰度'
+                    ],
+                    'D': [
+                        '1. 實施漸層色彩系統',
+                        '2. 優化漸層效果的性能',
+                        '3. 確保在各種設備上的顯示效果',
+                        '4. 調整文字可讀性',
+                        '5. 測試用戶接受度'
+                    ]
+                };
+
+                alert(`✅ 已選擇實施：方案${scheme} - ${schemeName}\n\n實施步驟：\n${implementationSteps[scheme].join('\n')}\n\n接下來我將開始更新相關的 Vue 組件樣式。`);
+            }
+        }
+
+        // 鍵盤快捷鍵
+        document.addEventListener('keydown', function(e) {
+            if (e.key >= '1' && e.key <= '4') {
+                const schemes = ['A', 'B', 'C', 'D'];
+                const schemeNames = ['經典藍色系', '暖色調', '自然綠色系', '彩虹漸層'];
+                const index = parseInt(e.key) - 1;
+                selectScheme(schemes[index], schemeNames[index]);
+            }
+        });
+
+        // 初始化動畫
+        document.addEventListener('DOMContentLoaded', function() {
+            const options = document.querySelectorAll('.layout-option');
+            options.forEach((option, index) => {
+                option.style.opacity = '0';
+                option.style.transform = 'translateY(50px)';
+                option.style.transition = 'all 0.6s ease';
+                
+                setTimeout(() => {
+                    option.style.opacity = '1';
+                    option.style.transform = 'translateY(0)';
+                }, index * 150);
+            });
+        });
+
+        // 滾動視差效果
+        window.addEventListener('scroll', function() {
+            const scrolled = window.pageYOffset;
+            const rate = scrolled * -0.5;
+            
+            document.querySelector('.header').style.transform = `translateY(${rate}px)`;
+        });
+    </script>
+</body>
+</html> 

@@ -1,34 +1,5 @@
 [
   {
-    "UUID": "1974deeb-a59b-4eaa-b9fc-644132e67737",
-    "questionData": {
-      "evaluation_criteria": {
-        "appropriateness": 5,
-        "coherence": 5,
-        "grammar": 5,
-        "task_achievement": 5,
-        "vocabulary": 5
-      },
-      "instruction": "Write a formal email to follow up on your recent job application.",
-      "max_words": 150,
-      "min_words": 100,
-      "purpose": "To follow up on a job application and reiterate interest.",
-      "recipient": "Hiring Manager",
-      "required_content": [
-        "Mention the position applied for",
-        "Remind them of your strong interest",
-        "Briefly highlight a relevant skill or experience",
-        "Inquire about the expected timeline for the hiring process"
-      ],
-      "sample_responses": [
-        "Dear [Hiring Manager Name], I am writing to follow up on my application for the [Job Title] position, which I submitted on [Date]. I remain very interested in this opportunity and believe my skills in [Mention key skill] would be a valuable asset to your team. I would appreciate an update on the status of my application and the expected timeline for the next steps. Thank you for your time and consideration. Sincerely, [Your Name]"
-      ],
-      "scenario": "You applied for a job last week and haven't heard back yet.",
-      "tone": "Formal, professional, polite"
-    },
-    "cacheTimestamp": 1748038665
-  },
-  {
     "UUID": "3bc5cc32-3791-485b-a1f4-e6c8ee078cdc",
     "questionData": {
       "evaluation_criteria": {

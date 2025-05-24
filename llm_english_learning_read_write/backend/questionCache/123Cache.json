@@ -1,8 +1,8 @@
 [
   {
-    "UUID": "4c014613-3d6c-4daa-968a-044f2d236ffa",
+    "UUID": "76e52669-8535-4aec-8ce6-01af12443d7b",
     "questionData": {
-      "explanation_of_Question": "選項 B 'therefore' 是正確的，因為它表示因果關係。前句說他錯過了火車，後句說他開會遲到，這是邏輯上的結果關係。選項 A 'however' 表示轉折；選項 C 'in addition' 表示補充；選項 D 'for example' 表示舉例，都不符合語境的邏輯關係。",
+      "explanation_of_Question": "選項 B 'therefore' 是正確的，因為它表示因果關係。前句說明天氣惡劣，後句說明因此決定待在室內，這是邏輯上的結果。選項 A 'however' 表示轉折；選項 C 'for example' 表示舉例；選項 D 'indeed' 表示強調，都不符合語境。",
       "options": [
         {
           "id": "A",
@@ -14,31 +14,59 @@
         },
         {
           "id": "C",
-          "text": "in addition"
+          "text": "for example"
         },
         {
           "id": "D",
-          "text": "for example"
+          "text": "indeed"
         }
       ],
       "question": "Choose the word that best completes the sentence to ensure cohesion.",
-      "sentence_context": "He missed the train; _______, he was late for the meeting.",
+      "sentence_context": "The weather was terrible; _______, we decided to stay indoors.",
       "standard_answer": "B"
     },
-    "cacheTimestamp": 1748038447
+    "cacheTimestamp": 1748080890
   },
   {
-    "UUID": "ba68e7f9-7037-4b3d-a925-f87afdea8b2f",
+    "UUID": "59d09076-7a94-4f86-a078-bfda4eea1a57",
     "questionData": {
-      "explanation_of_Question": "選項 C 'nevertheless' 是正確的，它表示轉折或對比。前句說天氣很糟糕，後句說他們決定去散步，這是在不利條件下的反向行為，符合轉折關係。選項 A 'therefore' 表示因果；選項 B 'furthermore' 表示補充；選項 D 'similarly' 表示相似，都不符合語境。",
+      "explanation_of_Question": "選項 C 'however' 是正確的，因為它表示轉折。前句說他很有技能，後句說他卻難以進行團隊合作，這兩者之間存在對比或轉折關係。選項 A 'in addition' 和 B 'moreover' 表示附加；選項 D 'consequently' 表示結果，都不符合語境。",
       "options": [
         {
           "id": "A",
-          "text": "therefore"
+          "text": "in addition"
         },
         {
           "id": "B",
-          "text": "furthermore"
+          "text": "moreover"
+        },
+        {
+          "id": "C",
+          "text": "however"
+        },
+        {
+          "id": "D",
+          "text": "consequently"
+        }
+      ],
+      "question": "Choose the word that best completes the sentence to ensure cohesion.",
+      "sentence_context": "He is very skilled; _______, he finds it difficult to work in a team.",
+      "standard_answer": "C"
+    },
+    "cacheTimestamp": 1748080890
+  },
+  {
+    "UUID": "6a897edf-1727-4b65-916c-e42a13f1c347",
+    "questionData": {
+      "explanation_of_Question": "選項 D 'furthermore' 是正確的，因為它表示附加資訊或進一步論證。前句說學習新語言具有挑戰性，後句進一步補充說它也非常有回報，這是一種附加關係。選項 A 'in short' 表示總結；選項 B 'similarly' 表示相似；選項 C 'nevertheless' 表示轉折，都不符合語境。",
+      "options": [
+        {
+          "id": "A",
+          "text": "in short"
+        },
+        {
+          "id": "B",
+          "text": "similarly"
         },
         {
           "id": "C",
@@ -46,97 +74,41 @@
         },
         {
           "id": "D",
-          "text": "similarly"
+          "text": "furthermore"
         }
       ],
       "question": "Choose the word that best completes the sentence to ensure cohesion.",
-      "sentence_context": "The weather was terrible; _______, they decided to go for a walk.",
-      "standard_answer": "C"
-    },
-    "cacheTimestamp": 1748038447
-  },
-  {
-    "UUID": "f115f604-5358-4da0-ad33-2f2307f69d85",
-    "questionData": {
-      "explanation_of_Question": "選項 C 'in addition' 是正確的，它用於補充信息。前句說她是一個有天賦的音樂家，後句補充說她也是一個優秀的作家，這是信息的疊加關係。選項 A 'however' 表示轉折；選項 B 'indeed' 表示強調或確認；選項 D 'consequently' 表示結果，都不符合語境。",
-      "options": [
-        {
-          "id": "A",
-          "text": "however"
-        },
-        {
-          "id": "B",
-          "text": "indeed"
-        },
-        {
-          "id": "C",
-          "text": "in addition"
-        },
-        {
-          "id": "D",
-          "text": "consequently"
-        }
-      ],
-      "question": "Choose the word that best completes the sentence to ensure cohesion.",
-      "sentence_context": "She is a talented musician; _______, she is an excellent writer.",
-      "standard_answer": "C"
-    },
-    "cacheTimestamp": 1748038447
-  },
-  {
-    "UUID": "faffd8c4-0ee0-461d-a6b1-9f246f538384",
-    "questionData": {
-      "explanation_of_Question": "選項 C 'then' 是正確的，它表示順序。前句是第一個步驟（預熱烤箱），後句是緊隨其後的下一個步驟（混合食材），符合動作的先後順序。選項 A 'therefore' 表示因果；選項 B 'meanwhile' 表示同時發生；選項 D 'for instance' 表示舉例，都不符合語境。",
-      "options": [
-        {
-          "id": "A",
-          "text": "therefore"
-        },
-        {
-          "id": "B",
-          "text": "meanwhile"
-        },
-        {
-          "id": "C",
-          "text": "then"
-        },
-        {
-          "id": "D",
-          "text": "for instance"
-        }
-      ],
-      "question": "Choose the word that best completes the sentence to ensure cohesion.",
-      "sentence_context": "First, preheat the oven; _______, mix the ingredients in a bowl.",
-      "standard_answer": "C"
-    },
-    "cacheTimestamp": 1748038447
-  },
-  {
-    "UUID": "62759061-28ac-4799-8892-be4c8b270a12",
-    "questionData": {
-      "explanation_of_Question": "選項 D 'for example' 是正確的，它用於舉例說明。前句提到一些水果很健康，後句列舉了蘋果和香蕉作為例子，符合舉例說明關係。選項 A 'however' 表示轉折；選項 B 'consequently' 表示結果；選項 C 'in conclusion' 表示總結，都不符合語境。",
-      "options": [
-        {
-          "id": "A",
-          "text": "however"
-        },
-        {
-          "id": "B",
-          "text": "consequently"
-        },
-        {
-          "id": "C",
-          "text": "in conclusion"
-        },
-        {
-          "id": "D",
-          "text": "for example"
-        }
-      ],
-      "question": "Choose the word that best completes the sentence to ensure cohesion.",
-      "sentence_context": "Some fruits are very healthy; _______, apples and bananas are packed with vitamins.",
+      "sentence_context": "Learning a new language is challenging; _______, it is incredibly rewarding.",
       "standard_answer": "D"
     },
-    "cacheTimestamp": 1748038447
+    "cacheTimestamp": 1748080890
+  },
+  {
+    "UUID": "ca1fce66-0cd8-4b5b-b983-20aaaa875b48",
+    "questionData": {
+      "explanation_of_Question": "選項 C 'Then' 是正確的，因為它表示順序。句子描述了製作過程中的步驟，在混合完乾性材料後，下一步（then）是逐漸加入濕性材料。選項 A 'However' 表示轉折；選項 B 'Therefore' 表示因果；選項 D 'Despite that' 表示讓步，都不符合語境。",
+      "options": [
+        {
+          "id": "A",
+          "text": "However"
+        },
+        {
+          "id": "B",
+          "text": "Therefore"
+        },
+        {
+          "id": "C",
+          "text": "Then"
+        },
+        {
+          "id": "D",
+          "text": "Despite that"
+        }
+      ],
+      "question": "Choose the word that best completes the sentence to ensure cohesion.",
+      "sentence_context": "First, mix the dry ingredients. _______, add the wet ingredients gradually.",
+      "standard_answer": "C"
+    },
+    "cacheTimestamp": 1748080890
   }
 ]

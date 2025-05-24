@@ -1,137 +1,83 @@
 [
   {
-    "UUID": "d8730c77-8f95-46b5-8555-1171ede36f95",
+    "UUID": "9c23779c-768c-4cc5-9c02-0defdc7acea1",
     "questionData": {
-      "explanation_of_Question": "選項 B 是正確的，因為過去完成式 (had arrived) 用來描述在過去某個時間點 (By the time...) 之前已經完成的動作。選項 A 使用現在完成式不符語境；選項 C 使用現在式不符語境；選項 D 使用過去進行式也不符語境。",
+      "explanation_of_Question": "當主詞結構是 'Neither of + 複數名詞' 時，動詞通常應使用單數形式 'is'。",
       "options": [
         {
           "id": "A",
-          "text": "By the time I arrived at the station, the train has already left."
+          "text": "Neither of the books are interesting."
         },
         {
           "id": "B",
-          "text": "By the time I arrived at the station, the train had already left."
+          "text": "Neither of the books is interesting."
         },
         {
           "id": "C",
-          "text": "By the time I arrived at the station, the train already leaves."
+          "text": "Neither of the book is interesting."
         },
         {
           "id": "D",
-          "text": "By the time I arrived at the station, the train was already leaving."
+          "text": "Neither of the books were interesting."
         }
       ],
-      "question": "Choose the correct sentence using past tenses.",
+      "question": "Select the sentence with the correct subject-verb agreement.",
       "standard_answer": "B"
     },
-    "cacheTimestamp": 1748038437
+    "cacheTimestamp": 1748080911
   },
   {
-    "UUID": "8701ef67-2bde-4121-b05d-212c5f517e19",
+    "UUID": "8111d342-fe8f-40e0-94e2-d55a16fa82e1",
     "questionData": {
-      "explanation_of_Question": "選項 A 是正確的，因為 'information' 是不可數名詞，不能用 'an' 或 'many' 修飾，且動詞應使用單數 'is'。選項 B 使用 'an information' 錯誤；選項 C 使用 'are' 錯誤；選項 D 使用 'many informations' 錯誤。",
+      "explanation_of_Question": "'a new car' 指的是任何一輛新車，是不特定名詞，所以用不定冠詞 'a'。'the old one' 指的是他原本那台舊車，是特定名詞，所以用定冠詞 'the'。",
       "options": [
         {
           "id": "A",
-          "text": "The information about the event is very useful."
+          "text": "a / a"
         },
         {
           "id": "B",
-          "text": "An information about the event are very useful."
+          "text": "the / an"
         },
         {
           "id": "C",
-          "text": "The information about the event are very useful."
+          "text": "a / the"
         },
         {
           "id": "D",
-          "text": "Many informations about the event is very useful."
+          "text": "an / the"
         }
       ],
-      "question": "Which sentence has the correct subject-verb agreement and noun usage?",
-      "standard_answer": "A"
-    },
-    "cacheTimestamp": 1748038437
-  },
-  {
-    "UUID": "da944fc3-03b1-4ea3-8680-a6798c8721ab",
-    "questionData": {
-      "explanation_of_Question": "選項 C 是正確的，因為在最高級結構 'the + 最高級 + 名詞 + that + 主詞 + have ever + 過去分詞' 中，需要使用定冠詞 'the'。選項 A 缺少 'the' 且 'have' 應為 'has' (搭配 'she')；選項 B 缺少 'the'；選項 D 使用 'the' 但動詞形態錯誤。",
-      "options": [
-        {
-          "id": "A",
-          "text": "This is best book that she have ever read."
-        },
-        {
-          "id": "B",
-          "text": "This is best book that she has ever read."
-        },
-        {
-          "id": "C",
-          "text": "This is the best book that she has ever read."
-        },
-        {
-          "id": "D",
-          "text": "This is the best book that she ever read."
-        }
-      ],
-      "question": "Select the sentence with the correct article and verb form.",
+      "question": "Complete the sentence with the correct article(s): He wants to buy ___ new car because ___ old one is broken.",
       "standard_answer": "C"
     },
-    "cacheTimestamp": 1748038437
+    "cacheTimestamp": 1748080911
   },
   {
-    "UUID": "6ceb7fcd-2cce-4282-86b1-6024bba8e1a9",
+    "UUID": "acbd11b2-28ad-4c0e-8c13-1b255415daff",
     "questionData": {
-      "explanation_of_Question": "選項 D 是正確的，頻率副詞 'often' 通常放在助動詞 (will) 和主要動詞 (go) 之間。選項 A、B、C 的 'often' 位置都不正確。",
+      "explanation_of_Question": "副詞 'always' 表示頻率，通常應放在主要動詞 'go' 之前。",
       "options": [
         {
           "id": "A",
-          "text": "They often will go to the cinema on Fridays."
+          "text": "They always go to the park on Sundays."
         },
         {
           "id": "B",
-          "text": "Often they will go to the cinema on Fridays."
+          "text": "They go always to the park on Sundays."
         },
         {
           "id": "C",
-          "text": "They will go often to the cinema on Fridays."
+          "text": "Always they go to the park on Sundays."
         },
         {
           "id": "D",
-          "text": "They will often go to the cinema on Fridays."
+          "text": "They go to the park always on Sundays."
         }
       ],
-      "question": "Choose the sentence with the correct word order.",
-      "standard_answer": "D"
+      "question": "Which sentence has the correct word order?",
+      "standard_answer": "A"
     },
-    "cacheTimestamp": 1748038437
-  },
-  {
-    "UUID": "4cc2d182-bc60-4f13-8f48-6a802a3b1c3c",
-    "questionData": {
-      "explanation_of_Question": "選項 B 是正確的，這是第三類條件句 (Third Conditional)，用於談論過去未發生的情況及其結果。結構為 'If + 過去完成式, would have + 過去分詞'。選項 A、C、D 的動詞時態組合都不正確。",
-      "options": [
-        {
-          "id": "A",
-          "text": "If you had studied harder, you would pass the exam."
-        },
-        {
-          "id": "B",
-          "text": "If you had studied harder, you would have passed the exam."
-        },
-        {
-          "id": "C",
-          "text": "If you studied harder, you would have passed the exam."
-        },
-        {
-          "id": "D",
-          "text": "If you study harder, you would have passed the exam."
-        }
-      ],
-      "question": "Which sentence correctly uses the Third Conditional structure?",
-      "standard_answer": "B"
-    },
-    "cacheTimestamp": 1748038437
+    "cacheTimestamp": 1748080911
   }
 ]
