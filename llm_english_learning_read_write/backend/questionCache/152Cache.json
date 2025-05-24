@@ -1,142 +1,142 @@
 [
   {
-    "UUID": "5991add9-e1e6-4b58-82dd-8d9a08d3b64a",
+    "UUID": "56562a79-f3d6-4459-ac82-4e2dea7e0944",
     "questionData": {
-      "explanation_of_Question": "作者在這段話中的主要目的是批評對於氣候變遷缺乏行動的現狀，並敦促人們立刻採取改變。從『devastating』、『staggering lack of urgency』、『deafening silence』等詞語可以看出強烈的批判態度，而『demand immediate action』、『must recognize』則顯示了呼籲行動的意圖。選項 A 是部分目的，但不是主要目的；選項 C 的娛樂性不是文章的主旨；選項 D 的學術分析不符合文章的批判和呼籲語氣。",
+      "explanation_of_Question": "作者的主要目的是說服讀者相信閱讀虛構作品的重要性，並鼓勵他們養成閱讀習慣。從提到'essential exercise for the mind'、'crucial for fostering empathy'、'broadens our perspectives'、'provides a vital escape'等好處可以看出，作者旨在推廣閱讀。選項 A 錯誤，雖然有描述，但目的不止於此。選項 C 錯誤，雖然有分析，但最終目的是說服。選項 D 錯誤，這段文字並非警告。",
       "options": [
         {
           "id": "A",
-          "text": "To inform readers about the science of climate change."
+          "text": "To describe the different genres of fiction."
         },
         {
           "id": "B",
-          "text": "To criticize the lack of action on climate change and urge change."
+          "text": "To persuade readers of the importance of reading fiction."
         },
         {
           "id": "C",
-          "text": "To entertain readers with stories about environmental activism."
+          "text": "To analyze the literary techniques used in novels."
         },
         {
           "id": "D",
-          "text": "To provide a neutral, analytical comparison of environmental policies."
+          "text": "To warn against the dangers of excessive reading."
         }
       ],
-      "passage": "The evidence is overwhelming, the scientific consensus is clear, yet the world's response to climate change remains tragically inadequate. We stand on the precipice of irreversible damage, facing devastating consequences for future generations, while political debates drag on and corporate interests delay meaningful reform. There is a staggering lack of urgency, a collective denial that borders on madness. We see the signs – extreme weather events, rising sea levels, melting glaciers – yet the action taken is a mere trickle compared to the flood needed. This isn't just a scientific issue; it's a moral imperative. We don't need more reports or summits; we need a global awakening and a demand for immediate, drastic action. The deafening silence from those in power is no longer acceptable. Individuals, communities, and nations must recognize the existential threat and act now.",
-      "question": "What is the author's primary purpose in writing this passage?",
+      "passage": "In a world increasingly dominated by fleeting digital interactions and sound bites, the sustained, immersive experience of reading fiction remains an essential exercise for the mind and soul. Far from being a mere pastime, engaging with novels is crucial for fostering empathy; stepping into the shoes of diverse characters helps us understand perspectives vastly different from our own. It broadens our perspectives on complex social issues, history, and the human condition itself. Moreover, in an age of constant connectivity and stress, fiction provides a vital escape, a sanctuary where we can temporarily leave our worries behind and explore new realities. Neglecting this rich source of insight and emotional intelligence would be a significant loss. Therefore, making time for fiction is not a luxury, but a necessity for a well-rounded life.",
+      "question": "What is the author's primary purpose in this passage?",
       "standard_answer": "B"
     },
-    "cacheTimestamp": 1748030282
+    "cacheTimestamp": 1748038499
   },
   {
-    "UUID": "fbb5e666-a8e6-442d-a411-ad19a15d7940",
+    "UUID": "e9311326-cfe5-436d-ba62-8ab988fea1b8",
     "questionData": {
-      "explanation_of_Question": "作者這段話描述了暴風雨後的景象，特別是植物在逆境中展現的生命力。從『miracle』、『resilience』、『indomitable spirit』、『quiet triumph』等詞語可以看出，作者對生命的頑強和自然的復原能力表達了強烈的敬佩和讚美之情。選項 A 的沮喪與文章積極的語氣不符；選項 B 的擔憂雖然可能存在於暴風雨中，但文章重點在後續的復原；選項 D 的冷漠超然與作者明顯的情感表達不符。",
+      "explanation_of_Question": "作者的語氣充滿批評性，特別是針對現代建築缺乏個性和對環境的無視。詞語如 'dreary conformity'（沉悶的一致性）、'soulless concrete blocks'（沒有靈魂的混凝土塊）、'blight'（破壞）、'utterly disregard the local context'（完全無視當地環境）等都表達了強烈的負面評價和批評。選項 A 的客觀中立與強烈的情感不符；選項 C 的熱情鼓勵與批評相反；選項 D 的幽默嘲諷與嚴肅的批評不同。",
       "options": [
         {
           "id": "A",
-          "text": "Depressed"
+          "text": "Objective and neutral"
         },
         {
           "id": "B",
-          "text": "Apprehensive"
+          "text": "Critical and disapproving"
         },
         {
           "id": "C",
-          "text": "Admiring"
+          "text": "Enthusiastic and supportive"
         },
         {
           "id": "D",
-          "text": "Indifferent"
+          "text": "Humorous and lighthearted"
         }
       ],
-      "passage": "After the fury of the storm had passed, leaving behind a landscape scarred and battered, a quiet miracle began to unfold. Though trees were uprooted and structures damaged, the smallest plants, bent low but not broken, slowly began to lift their leaves towards the sun. Tiny shoots emerged from damp earth, a vibrant green against the mud. It was a testament to nature's astonishing resilience, an indomitable spirit that refused to yield to destruction. The air, still heavy with the scent of rain and overturned soil, seemed to hum with this silent resurgence. Witnessing this determined recovery, the way life stubbornly reclaims its space and light, fills one with a profound sense of awe and respect. It's a quiet triumph unfolding in countless small acts of regrowth, a powerful reminder of the enduring strength embedded within the natural world.",
-      "question": "What is the author's tone when describing nature's recovery after the storm?",
+      "passage": "Walk through any major city today, and you're likely to be struck by a dreary conformity in modern architecture. Gone are the days of unique, locally-inspired designs that reflected the character and history of a place. Instead, we are increasingly presented with soulless concrete and glass blocks that could be anywhere on the planet. These structures often prioritize function and cost-efficiency over aesthetic appeal, human scale, or integration with the existing urban fabric. Worse, many seem to utterly disregard the local context, climate, and available materials, resulting in buildings that feel alien and unsustainable. This globalized, generic approach is not just an aesthetic blight; it erodes local identity and creates environments that feel cold and unwelcoming. It's a disappointing trend that needs urgent re-evaluation.",
+      "question": "Which word best describes the author's tone regarding modern architecture?",
+      "standard_answer": "B"
+    },
+    "cacheTimestamp": 1748038499
+  },
+  {
+    "UUID": "4698a456-c6c8-4f6a-b037-f22317d6602e",
+    "questionData": {
+      "explanation_of_Question": "這段文字旨在解釋並警告讀者關於網路謠言迅速傳播的危險。作者描述了假消息如何快速蔓延，以及它可能帶來的負面影響，如煽動恐懼、誤導公眾、損害信任等。詞語如'dangerous speed'（危險的速度）、'real-world consequences'（現實世界後果）、'undermine trust'（損害信任）都暗示了警告的意圖。選項 A 雖然描述了過程，但最終目的是警告。選項 B 和 D 的目的與文章內容不符。",
+      "options": [
+        {
+          "id": "A",
+          "text": "To describe the process of information sharing online."
+        },
+        {
+          "id": "B",
+          "text": "To entertain readers with examples of funny online rumors."
+        },
+        {
+          "id": "C",
+          "text": "To warn readers about the dangers of spreading online rumors."
+        },
+        {
+          "id": "D",
+          "text": "To persuade readers to believe everything they read online."
+        }
+      ],
+      "passage": "The digital age has undeniably revolutionized how we access and share information. Yet, this unprecedented connectivity comes with a significant caveat: the alarming speed at which misinformation and baseless rumors can spread. A sensational headline, a fabricated story, or a decontextualized image can go viral in minutes, reaching millions before any fact-checking can occur. The ease of sharing, often without critical thought, means that false narratives can quickly gain traction, shaping public opinion based on lies. This isn't just about minor inaccuracies; these online rumors can have real-world consequences, from inciting panic to influencing elections to damaging reputations. It’s a dangerous phenomenon that undermines trust in credible sources and creates a chaotic information landscape. We must exercise extreme caution and critical thinking before sharing anything online.",
+      "question": "What is the author's main purpose in writing this passage?",
       "standard_answer": "C"
     },
-    "cacheTimestamp": 1748030282
+    "cacheTimestamp": 1748038499
   },
   {
-    "UUID": "e5dd531b-ce70-44d7-8e2a-35aac8a69726",
+    "UUID": "c1264510-4566-454a-9e68-556c6e39722f",
     "questionData": {
-      "explanation_of_Question": "這段話詳細解釋了光合作用的過程，描述了植物如何利用陽光、水和二氧化碳製造食物。文章使用了科學術語（如葉綠體、葉綠素、葡萄糖）並按步驟說明過程，目的是向讀者提供關於這個生物學過程的資訊和解釋。選項 A 的說服、選項 B 的娛樂都不是文章的主旨；選項 C 的批評不是文章的目的。因此，主要目的是解釋科學過程。",
+      "explanation_of_Question": "作者的語氣充滿敬畏和讚賞，描述了北極光令人驚嘆的美麗景象。詞語如'breathtaking spectacle'（令人驚嘆的景象）、'ethereal dance'（飄渺的舞蹈）、'unparalleled beauty'（無與倫比的美麗）、'profound sense of wonder'（深刻的驚奇感）都表達了強烈的讚美和敬畏之情。選項 A 的中立與強烈情感不符；選項 B 的懷疑與讚美相反；選項 D 的幽默與嚴肅的自然描述不符。",
       "options": [
         {
           "id": "A",
-          "text": "To persuade readers about the importance of plants."
+          "text": "Neutral"
         },
         {
           "id": "B",
-          "text": "To entertain readers with interesting facts about biology."
+          "text": "Skeptical"
         },
         {
           "id": "C",
-          "text": "To criticize the complexity of biological processes."
+          "text": "Awed"
         },
         {
           "id": "D",
-          "text": "To explain the process of photosynthesis."
-        }
-      ],
-      "passage": "Photosynthesis is the remarkable process by which green plants and some other organisms use sunlight to synthesize foods with the help of chlorophyll pigment. This vital process occurs in the chloroplasts, tiny organelles found within plant cells. First, the plant absorbs water through its roots and carbon dioxide from the air through small pores called stomata on its leaves. Sunlight is then captured by chlorophyll. This light energy is used to convert water and carbon dioxide into glucose, a type of sugar that serves as food for the plant, and oxygen, which is released back into the atmosphere as a byproduct. Essentially, it is how plants create their own energy, forming the base of most food chains on Earth. Understanding photosynthesis is key to understanding plant life and its crucial role in our ecosystem.",
-      "question": "What is the main purpose of this passage?",
-      "standard_answer": "D"
-    },
-    "cacheTimestamp": 1748030282
-  },
-  {
-    "UUID": "7e9c8145-81f8-42f6-bb35-73c2571cd4c7",
-    "questionData": {
-      "explanation_of_Question": "這段話比較了兩種學習新語言的方法：沉浸式學習法和結構式學習法。作者客觀地描述了兩種方法的特點、優缺點，使用了『On one hand』、『On the other hand』等表達來呈現對比，並且沒有表達明顯的偏好或強烈情感。這表明作者的態度是呈現兩種觀點，讓讀者自行比較或了解其差異，屬於客觀分析的態度。選項 A 和 B 表達了偏好，與文章的客觀描述不符；選項 D 的誇大其詞與文章平實的語氣不符。",
-      "options": [
-        {
-          "id": "A",
-          "text": "Strongly advocating for the immersion method."
-        },
-        {
-          "id": "B",
-          "text": "Dismissing the structured learning method as ineffective."
-        },
-        {
-          "id": "C",
-          "text": "Presenting both methods objectively for consideration."
-        },
-        {
-          "id": "D",
-          "text": "Exaggerating the difficulties of language learning."
-        }
-      ],
-      "passage": "When approaching the task of learning a new language, two prominent methods often come into discussion: the immersion method and the structured learning method. On one hand, immersion involves surrounding oneself with the target language as much as possible—living in a country where it's spoken, engaging in conversations, and consuming media in that language. Proponents argue this mirrors natural language acquisition and accelerates fluency. However, it can be overwhelming for beginners and lacks explicit grammar instruction. On the other hand, structured learning relies on classroom settings, textbooks, and explicit grammar rules, progressing through lessons systematically. This method provides a solid foundation in grammar and vocabulary but may not develop conversational fluency as quickly. Both approaches have their merits and drawbacks, and the most effective path often depends on the individual learner's goals, resources, and learning style. There is no universally 'better' method; rather, it's about finding the right fit or even combining elements of both.",
-      "question": "Which of the following best describes the author's attitude towards the two language learning methods discussed?",
-      "standard_answer": "C"
-    },
-    "cacheTimestamp": 1748030282
-  },
-  {
-    "UUID": "4f515003-298a-4b3f-bd62-b29a2a0bfdee",
-    "questionData": {
-      "explanation_of_Question": "這段話描述了作者試圖自己組裝家具的經歷，充滿了無奈、笨拙和預料之外的困難，最終承認了自己的無能並轉向尋求專業幫助。從『seemingly simple』、『hubris』、『bewildering array』、『sheer defiance』、『utter defeat』等詞語以及對組裝過程的描寫，可以看出作者試圖以一種輕鬆、自嘲、帶有幽默感的語氣講述這個令人沮喪的經歷。選項 A 的嚴肅性與文章的個人化和自嘲語氣不符；選項 C 的分析性不是文章的主要目的；選項 D 的悲觀雖然經歷令人沮喪，但整體語氣更偏向於幽默地講述這個失敗而非真正的悲觀。",
-      "options": [
-        {
-          "id": "A",
-          "text": "Serious"
-        },
-        {
-          "id": "B",
           "text": "Humorous"
+        }
+      ],
+      "passage": "To witness the Aurora Borealis is to experience one of nature's most breathtaking spectacles. Shimmering curtains of vibrant green, purple, and crimson light ripple and dance across the inky black canvas of the polar sky. It's an ethereal dance, silent yet profoundly moving, a stark reminder of the powerful forces at play far above our heads. Caused by charged particles from the sun colliding with atmospheric gases, the science behind the aurora is fascinating, yet knowing the explanation does little to diminish its magic. The sheer scale and dynamic movement of the lights create a sense of unparalleled beauty and instil a profound sense of wonder in anyone fortunate enough to behold them. It feels like glimpsing the very breath of the cosmos, a truly humbling and unforgettable experience.",
+      "question": "Which word best describes the author's tone when describing the Aurora Borealis?",
+      "standard_answer": "C"
+    },
+    "cacheTimestamp": 1748038499
+  },
+  {
+    "UUID": "13b67752-8378-4a33-be93-56d086f8a76a",
+    "questionData": {
+      "explanation_of_Question": "這段文字旨在分析遠程工作帶來的挑戰和機遇。作者討論了遠程工作的優勢（靈活性、減少通勤）和劣勢（模糊界限、社交孤立、依賴技術）。文本平衡地呈現了兩種觀點，並使用了'advantages'、'challenges'、'however'、'on the one hand'、'on the other hand'等詞語，顯示其分析性目的。選項 A、B、D 都只代表了單一方面或不同的目的，不符合文章平衡討論的性質。",
+      "options": [
+        {
+          "id": "A",
+          "text": "To strongly advocate for remote work."
+        },
+        {
+          "id": "B",
+          "text": "To criticize the concept of working from home."
         },
         {
           "id": "C",
-          "text": "Analytical"
+          "text": "To analyze the challenges and opportunities of remote work."
         },
         {
           "id": "D",
-          "text": "Pessimistic"
+          "text": "To entertain readers with anecdotes about working remotely."
         }
       ],
-      "passage": "Armed with only an Allen wrench and a surge of misplaced confidence, I embarked on the seemingly simple task of assembling a flat-pack bookshelf. What followed was not a smooth construction project, but a descent into furniture-building purgatory. The instructions, a minimalist diagram resembling ancient hieroglyphs, offered little guidance. Screws refused to align, dowels vanished into the carpet dimension, and panels that looked identical exhibited subtle, yet critical, differences. At one point, a piece that I was absolutely certain went one way decided, in a moment of sheer defiance, to snap clean in half. Sweat beaded on my brow, frustration mounted, and the bookshelf lay before me, a chaotic pile of wood and metal, a monument to my utter defeat. It was then, surrounded by the wreckage of my DIY dreams, that I finally admitted the undeniable truth: some tasks are best left to people who actually know what they're doing.",
-      "question": "What is the primary tone of this passage?",
-      "standard_answer": "B"
+      "passage": "Remote work, once a niche arrangement, has rapidly become a significant feature of the modern professional landscape. On the one hand, it offers undeniable advantages like increased flexibility, elimination of tedious commutes, and potential cost savings for both employees and employers. This autonomy can lead to improved work-life balance and higher productivity for many. However, the shift is not without its challenges. The lines between professional and personal life can become blurred, leading to potential burnout. Feelings of social isolation and disconnection from colleagues can impact team cohesion and individual well-being. Furthermore, reliance on technology and stable internet connections presents its own set of hurdles. Successfully navigating the future of work requires a careful analysis of these factors, embracing the opportunities while mitigating the potential drawbacks.",
+      "question": "What is the author's primary purpose in this passage?",
+      "standard_answer": "C"
     },
-    "cacheTimestamp": 1748030282
+    "cacheTimestamp": 1748038499
   }
 ]

@@ -1,6 +1,6 @@
 [
   {
-    "UUID": "e4877004-43b2-4d4c-915b-1319b706593a",
+    "UUID": "9298dd6f-7702-4078-9d53-1994118d85ff",
     "questionData": {
       "context": "Many people today struggle with work-life balance in our fast-paced society.",
       "evaluation_focus": [
@@ -22,106 +22,108 @@
         "Effective work-life balance strategies include setting clear boundaries by turning off work devices after hours and prioritizing time management through daily planning. These approaches work because they prevent work from consuming personal time and help individuals focus on what truly matters most each day."
       ]
     },
-    "cacheTimestamp": 1748030457
+    "cacheTimestamp": 1748038652
   },
   {
-    "UUID": "4cce1e90-6e31-4562-b12b-080c65f37ca6",
+    "UUID": "1238c8ab-48a1-4368-8351-0e162721a234",
     "questionData": {
-      "context": "Maintaining a good work-life balance offers significant benefits for individuals and society.",
-      "evaluation_focus": [
-        "內容精確性",
-        "語言流暢度",
-        "論點清晰",
-        "字數符合"
-      ],
-      "instruction": "請用50-80字回答這個問題。提供至少兩點維持健康工作生活平衡的重要性，並簡單說明其益處。",
-      "key_points": [
-        "個人福祉",
-        "工作效率",
-        "具體益處"
-      ],
-      "max_words": 80,
-      "min_words": 50,
-      "question": "Why is achieving a healthy work-life balance important for personal well-being and professional productivity?",
-      "sample_responses": [
-        "Achieving a healthy work-life balance is crucial because it reduces stress and improves mental health, leading to greater personal happiness. Professionally, it prevents burnout and enhances focus and creativity, which directly boosts productivity and job satisfaction."
-      ]
-    },
-    "cacheTimestamp": 1748030457
-  },
-  {
-    "UUID": "f15d0697-43e9-41a4-8957-4f89d166969e",
-    "questionData": {
-      "context": "Plastic pollution is a major environmental problem affecting oceans and wildlife.",
-      "evaluation_focus": [
-        "實用性",
-        "內容精確性",
-        "語言結構",
-        "字數限制"
-      ],
-      "instruction": "請用50-80字回答這個問題。列出至少兩個簡單的個人行動，並解釋它們如何幫助減少塑膠使用。",
-      "key_points": [
-        "個人行動",
-        "減少塑膠",
-        "行動效果"
-      ],
-      "max_words": 80,
-      "min_words": 50,
-      "question": "What are some simple, effective actions individuals can take to reduce their daily plastic consumption?",
-      "sample_responses": [
-        "Individuals can significantly reduce plastic by using reusable water bottles and coffee cups instead of disposable ones. Another action is bringing reusable bags for shopping. These steps prevent the constant need for new plastic products, decreasing waste generation dramatically."
-      ]
-    },
-    "cacheTimestamp": 1748030457
-  },
-  {
-    "UUID": "98c880ec-cf2e-46f5-8e8a-5a570ef91328",
-    "questionData": {
-      "context": "Technology has dramatically changed how we learn and access information.",
+      "context": "Regular physical activity is essential for overall well-being.",
       "evaluation_focus": [
         "內容相關性",
-        "論點說服力",
-        "詞彙運用",
-        "字數要求"
-      ],
-      "instruction": "請用50-80字回答這個問題。舉例說明科技如何帶來至少兩個方面的教育優勢，並簡要解釋。",
-      "key_points": [
-        "科技優勢",
-        "教育改變",
-        "具體例子"
-      ],
-      "max_words": 80,
-      "min_words": 50,
-      "question": "In what ways has technology positively impacted modern education for students?",
-      "sample_responses": [
-        "Technology has improved education by providing access to vast online resources, allowing students to research any topic deeply. It also enables interactive learning platforms and tools that make lessons more engaging and personalized, enhancing understanding and retention."
-      ]
-    },
-    "cacheTimestamp": 1748030457
-  },
-  {
-    "UUID": "dd11147f-913c-44ee-8f18-27c9e72542eb",
-    "questionData": {
-      "context": "Regular physical activity is essential for maintaining good health and preventing diseases.",
-      "evaluation_focus": [
-        "醫學知識",
-        "語言清晰",
-        "重點明確",
+        "語言準確性",
+        "邏輯清晰度",
         "字數控制"
       ],
-      "instruction": "請用50-80字回答這個問題。說明規律運動至少兩個主要好處，並解釋其對身體或心理的影響。",
+      "instruction": "請用50-80字回答這個問題。請提供至少兩個對身體和心理的好處，並簡短說明。",
       "key_points": [
-        "運動好處",
-        "身心影響",
-        "規律性"
+        "身體好處",
+        "心理好處",
+        "簡短說明"
       ],
       "max_words": 80,
       "min_words": 50,
-      "question": "What are the primary benefits of incorporating regular exercise into one's weekly routine?",
+      "question": "Why is regular exercise important for physical and mental health?",
       "sample_responses": [
-        "Regular exercise offers major benefits like improving cardiovascular health, strengthening muscles and bones. It also significantly reduces stress and boosts mood by releasing endorphins. These combined effects lead to increased energy levels and overall better quality of life."
+        "Regular exercise significantly benefits both physical and mental health. Physically, it strengthens muscles and cardiovascular health, reducing disease risk. Mentally, it releases endorphins, reducing stress and improving mood. These effects contribute to a healthier, happier life."
       ]
     },
-    "cacheTimestamp": 1748030457
+    "cacheTimestamp": 1748038652
+  },
+  {
+    "UUID": "46136a5d-64d0-4c09-8491-e81d5126666e",
+    "questionData": {
+      "context": "The world is seeking sustainable alternatives to fossil fuels.",
+      "evaluation_focus": [
+        "內容準確性",
+        "語言運用",
+        "解釋清晰度",
+        "字數限制"
+      ],
+      "instruction": "請用50-80字回答這個問題。請列出兩種常見的再生能源，並解釋它們為何對環境重要。",
+      "key_points": [
+        "再生能源種類一",
+        "再生能源種類二",
+        "環境重要性",
+        "影響說明"
+      ],
+      "max_words": 80,
+      "min_words": 50,
+      "question": "What are two common types of renewable energy and why are they important?",
+      "sample_responses": [
+        "Two common types of renewable energy are solar and wind power. They are important because they produce electricity without burning fossil fuels, significantly reducing greenhouse gas emissions and air pollution. This helps combat climate change and preserve natural resources for the future."
+      ]
+    },
+    "cacheTimestamp": 1748038652
+  },
+  {
+    "UUID": "0ca76ac4-7e83-44de-a93c-49c46b11cdad",
+    "questionData": {
+      "context": "Reading offers numerous advantages beyond just gaining information.",
+      "evaluation_focus": [
+        "好處識別",
+        "解釋深度",
+        "語言流暢度",
+        "字數範圍"
+      ],
+      "instruction": "請用50-80字回答這個問題。請說明閱讀如何幫助提升認知能力和增加常識，提供至少兩個具體的好處。",
+      "key_points": [
+        "認知能力提升",
+        "常識增加",
+        "具體好處一",
+        "具體好處二"
+      ],
+      "max_words": 80,
+      "min_words": 50,
+      "question": "How does reading benefit a person's cognitive skills and general knowledge?",
+      "sample_responses": [
+        "Reading greatly benefits cognitive skills by improving concentration and memory through engaging with complex narratives. It also expands general knowledge by exposing readers to diverse topics and perspectives. These benefits enhance critical thinking and overall mental agility."
+      ]
+    },
+    "cacheTimestamp": 1748038652
+  },
+  {
+    "UUID": "36b7c5fe-5e77-43f6-9048-732b6a46e359",
+    "questionData": {
+      "context": "Social media platforms have become integral to modern life.",
+      "evaluation_focus": [
+        "負面影響識別",
+        "解釋清晰度",
+        "詞彙運用",
+        "回答長度"
+      ],
+      "instruction": "請用50-80字回答這個問題。請列出至少兩種過度使用社群媒體可能帶來的負面影響，並簡要說明。",
+      "key_points": [
+        "負面影響一",
+        "負面影響二",
+        "簡要說明"
+      ],
+      "max_words": 80,
+      "min_words": 50,
+      "question": "What are some potential negative impacts of excessive social media use?",
+      "sample_responses": [
+        "Excessive social media use can have several negative impacts. It may lead to addiction, consuming excessive time and reducing productivity. It can also negatively affect mental health through comparison with others and cyberbullying, potentially increasing anxiety and depression."
+      ]
+    },
+    "cacheTimestamp": 1748038652
   }
 ]

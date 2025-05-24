@@ -1,142 +1,142 @@
 [
   {
-    "UUID": "a0f83d22-5cd4-485e-b138-9192bf395dec",
+    "UUID": "ffbacce0-cd83-4705-b961-fef092f18d84",
     "questionData": {
-      "explanation_of_Question": "這篇文章以因果結構為主。它先提出森林砍伐 (一個原因)，然後詳細列舉了由此產生的一系列影響或後果，例如生物多樣性喪失、對氣候變遷的影響、土壤侵蝕以及對原住民社區的影響。選項 A 的時間順序不符。選項 B 的問題-解決方案結構不符，文章側重於問題的後果而非解決方案。選項 C 的分類不符，文章不是在分類森林砍伐的不同類型。選項 D 精確描述了文章從一個原因引出多個結果的結構。",
+      "explanation_of_Question": "這段文章的主要組織結構是因果結構。文章首先指出了森林砍伐的多個原因 (農業擴張、伐木、城市化)，然後詳細闡述了這些原因導致的結果或影響 (棲息地喪失、水土流失、氣候變化)。文章沒有提出問題和解決方案，也沒有比較不同事物，更不是按時間順序排列。",
       "options": [
         {
           "id": "A",
-          "text": "Chronological order"
+          "text": "問題-解決方案結構"
         },
         {
           "id": "B",
-          "text": "Problem and multiple solutions"
+          "text": "時間順序"
         },
         {
           "id": "C",
-          "text": "Classification of deforestation types"
+          "text": "因果結構"
         },
         {
           "id": "D",
-          "text": "A single cause leading to multiple effects"
+          "text": "比較結構"
         }
       ],
-      "passage": "Deforestation has profound and far-reaching consequences for both the environment and human societies. One of the most immediate effects is the loss of biodiversity, as countless species lose their habitats when forests are cleared. Furthermore, the removal of trees significantly impacts climate change. Trees absorb carbon dioxide, a major greenhouse gas; therefore, cutting them down releases stored carbon and reduces the planet's capacity to absorb more, leading to increased atmospheric CO2 levels and contributing to global warming. Additionally, deforestation can cause soil erosion. Tree roots help bind the soil together, and without them, heavy rains can wash away the topsoil, making the land less fertile and potentially silting up rivers and streams. This erosion can also lead to increased flooding downstream. Finally, indigenous communities often rely on forests for their livelihood and culture, and deforestation can displace these populations and disrupt their traditional ways of life. As a result of these combined effects, deforestation is a critical global issue requiring urgent action.",
-      "question": "Which organizational pattern is primarily used to structure the information in this passage?",
+      "passage": "Deforestation, the clearing of forests for other land use, is a major environmental concern. One significant cause is agricultural expansion, as land is cleared for crops and livestock. Another cause is logging, often for timber and pulp production. Urbanization also contributes, with forests being removed for infrastructure and settlements. These causes have profound effects. Loss of habitat is a primary effect, endangering countless species. Soil erosion increases significantly when tree cover is removed, leading to degraded land. Furthermore, deforestation contributes to climate change by releasing stored carbon and reducing the absorption of atmospheric carbon dioxide. The resulting environmental imbalance impacts biodiversity, water cycles, and ultimately, human livelihoods. Addressing deforestation requires multifaceted approaches, including sustainable forestry, land use planning, and conservation efforts. The chain reaction of causes and effects highlights the urgency of global action.",
+      "question": "How is the information in this passage primarily structured?",
+      "standard_answer": "C"
+    },
+    "cacheTimestamp": 1748038532
+  },
+  {
+    "UUID": "c162298f-ecfa-4ed9-a31b-89e9ccaab76a",
+    "questionData": {
+      "explanation_of_Question": "這段文章使用了比較與對比的結構。文章詳細描述了傳統能源（煤、石油、天然氣）的特點（低成本、廣泛應用、有限性、污染）和可再生能源（太陽能、風能、水力）的特點（可再生、零排放、初始成本高、受地理天氣影響），並討論了兩者的異同，旨在呈現它們各自的優缺點和對環境的影響。選項 A、B、C 都不符合文章的組織方式。",
+      "options": [
+        {
+          "id": "A",
+          "text": "分類結構"
+        },
+        {
+          "id": "B",
+          "text": "過程描述"
+        },
+        {
+          "id": "C",
+          "text": "空間結構"
+        },
+        {
+          "id": "D",
+          "text": "比較與對比結構"
+        }
+      ],
+      "passage": "Traditional energy sources, such as coal, oil, and natural gas, have historically powered global development. They are relatively inexpensive to extract and transport, and existing infrastructure is widely adapted to their use. However, these sources are finite and contribute significantly to air pollution and greenhouse gas emissions, accelerating climate change. In contrast, renewable energy sources like solar, wind, and hydropower offer a sustainable alternative. They are replenished naturally and produce minimal to no greenhouse gas emissions during operation, making them crucial in the fight against climate change. While initial investment costs can be higher for renewable energy projects, they offer long-term fuel cost savings. Unlike traditional fuels, their availability is dependent on geographical and meteorological conditions. Despite differences in cost structure and reliability, both traditional and renewable sources aim to meet energy demands, although with vastly different environmental impacts and long-term sustainability prospects. The transition from one to the other is a key challenge of the 21st century.",
+      "question": "What is the main organizational pattern used in this passage?",
       "standard_answer": "D"
     },
-    "cacheTimestamp": 1748030309
+    "cacheTimestamp": 1748038532
   },
   {
-    "UUID": "e4030681-9ffb-4149-8715-5b313acce1f1",
+    "UUID": "98a7ad77-ee38-4ddd-bf49-4e1c5f305dc9",
     "questionData": {
-      "explanation_of_Question": "這篇文章的主要目的是比較和對比兩種閱讀形式：傳統紙本書和電子書。文章分別討論了它們各自的優點和缺點，並使用了對比詞語如 'In contrast', 'However', 'On the other hand' 來組織資訊。選項 A 的歷史發展不符。選項 B 的分類不符，文章只討論了兩種類型而非廣泛分類。選項 D 的流程大綱不符，文章沒有提供選擇指南。",
+      "explanation_of_Question": "這段文章的組織方式是分類結構。文章開頭介紹了文學體裁（Literary genres）這個廣泛的概念，然後將其分為幾個主要類別（虛構類 Fiction、非虛構類 Non-Fiction、詩歌 Poetry、戲劇 Drama），並在類別下進一步提及子分類，目的是解釋如何根據風格、內容和形式來劃分文學作品。這不是按時間順序、空間位置或因果關係組織信息。",
       "options": [
         {
           "id": "A",
-          "text": "To explain the historical development of reading formats"
+          "text": "按時間順序排列事件"
         },
         {
           "id": "B",
-          "text": "To classify different types of reading technology"
+          "text": "分類不同類型的文學作品"
         },
         {
           "id": "C",
-          "text": "To highlight the similarities and differences between two subjects"
+          "text": "描述一個問題及其解決方案"
         },
         {
           "id": "D",
-          "text": "To outline a process for choosing a reading format"
+          "text": "為特定觀點辯論"
         }
       ],
-      "passage": "Traditional printed books and modern e-books offer readers distinct advantages and disadvantages. Physical books provide a tactile experience; many readers enjoy the feel of paper, the smell of ink, and the visual satisfaction of seeing their progress through turning pages. They also don't require batteries or electronic devices, making them reliable anywhere. In contrast, e-books offer unparalleled convenience and portability. A single e-reader device can store thousands of titles, allowing users to carry an entire library in their bag. E-books often include searchable text, adjustable font sizes, and built-in dictionaries, enhancing accessibility. However, e-readers depend on battery life and screens can cause eye strain. Furthermore, some readers feel a lack of ownership compared to physical copies and miss the ability to easily share or sell used books. On the other hand, physical books take up significant space, can be heavy, and printing has environmental costs, unlike the digital distribution of e-books. Both formats have their merits, appealing to different preferences and reading situations.",
-      "question": "What is the main purpose of the structure used in this passage?",
-      "standard_answer": "C"
-    },
-    "cacheTimestamp": 1748030309
-  },
-  {
-    "UUID": "30b45888-40c5-40da-b63c-789bfae6876b",
-    "questionData": {
-      "explanation_of_Question": "這篇文章採用了分類結構來組織資訊。作者將可再生能源這個主題劃分為幾個不同的類別，並分別描述了太陽能、風能、水力、地熱能、生物質能和海洋能這幾種類型。選項 A 的技術演變不符。選項 B 的問題列表不符，文章主要描述類型而非問題。選項 D 的因果關係不符，文章側重於分類而非解釋因果。",
-      "options": [
-        {
-          "id": "A",
-          "text": "By describing the evolution of renewable energy technology"
-        },
-        {
-          "id": "B",
-          "text": "By listing problems associated with each energy type"
-        },
-        {
-          "id": "C",
-          "text": "By dividing them into distinct categories"
-        },
-        {
-          "id": "D",
-          "text": "By explaining the cause-and-effect relationship of renewable energy use"
-        }
-      ],
-      "passage": "Renewable energy sources, which replenish naturally over a human timescale, can be broadly categorized into several key types. One major category is solar energy, which harnesses sunlight using photovoltaic panels or concentrated solar power systems. Another significant type is wind energy, captured by turbines that convert the kinetic energy of moving air into electricity. Hydropower is also a crucial source, generating power from the energy of flowing or falling water, typically through dams or run-of-river systems. Geothermal energy utilizes the Earth's internal heat, tapping into underground reservoirs of hot water or steam. Biomass energy is derived from organic matter, such as plants, wood, or waste, which can be burned directly or converted into biofuels. Ocean energy, a less developed but promising category, includes tidal energy and wave energy. These different types offer distinct technologies and are suitable for varying geographical and climatic conditions, collectively contributing to a sustainable energy future.",
-      "question": "How does the author organize the information about renewable energy sources?",
-      "standard_answer": "C"
-    },
-    "cacheTimestamp": 1748030309
-  },
-  {
-    "UUID": "09f0cd3c-645a-4b41-a291-2157c28bf0e1",
-    "questionData": {
-      "explanation_of_Question": "這篇文章使用了順序或過程結構來解釋水淨化的過程。文章詳細列出了從原水到飲用水的幾個連續階段，並使用了 'First', 'Next', 'then', 'Following', 'After', 'Finally' 等表示順序的過渡詞。選項 A 的空間佈局不符。選項 C 的不同方法比較不符。選項 D 的一般原則後接具體例子不符，文章是描述一個具體的流程。",
-      "options": [
-        {
-          "id": "A",
-          "text": "Spatial arrangement of the water treatment plant"
-        },
-        {
-          "id": "B",
-          "text": "Steps in a chronological or sequential process"
-        },
-        {
-          "id": "C",
-          "text": "Comparison of different purification methods"
-        },
-        {
-          "id": "D",
-          "text": "General principles of water chemistry followed by specific examples"
-        }
-      ],
-      "passage": "The process of purifying water to make it safe for drinking involves several distinct stages. First, raw water from a source like a river or lake undergoes screening to remove large debris such as leaves, sticks, and trash. Next, chemicals like coagulants are added to the water. These chemicals cause tiny particles suspended in the water, like dirt and silt, to clump together into larger, heavier particles called floc. The water then moves to sedimentation tanks, where the heavy floc settles to the bottom and is removed. Following sedimentation, the water passes through filtration. Filters, often made of sand, gravel, and charcoal, remove smaller particles, impurities, and microorganisms that did not settle out. After filtration, disinfection is crucial. Chlorine, ozone, or UV light is used to kill any remaining bacteria, viruses, and other harmful pathogens. Finally, the treated water is stored in reservoirs or towers and distributed to homes and businesses through a network of pipes, ready for safe consumption.",
-      "question": "The passage explains the water purification process by using which organizational structure?",
+      "passage": "Literary genres are categories used to classify written works based on their style, content, and form. One major classification is Fiction, which includes imaginative narratives such as novels, short stories, and novellas. These works are products of the author's imagination. Another broad genre is Non-Fiction, encompassing works based on facts and real events, such as biographies, essays, and historical accounts. Within Fiction, there are numerous subgenres like science fiction, fantasy, mystery, and romance, each with its own conventions and themes. Similarly, Non-Fiction has subcategories like academic texts, journalistic writing, and memoirs. Poetry, a distinct genre, uses aesthetic and rhythmic qualities of language to evoke meaning. Drama is another key genre, written for performance, and includes plays, operas, and musicals. Understanding these classifications helps readers navigate the vast world of literature and identify the characteristics they can expect from a particular type of writing.",
+      "question": "The primary purpose of the organizational structure in this passage is to:",
       "standard_answer": "B"
     },
-    "cacheTimestamp": 1748030309
+    "cacheTimestamp": 1748038532
   },
   {
-    "UUID": "e8a889b5-e1f0-439c-84ad-a3d0e194b166",
+    "UUID": "72b7fa2d-d556-4af1-aa40-d9680a65c01c",
     "questionData": {
-      "explanation_of_Question": "這篇文章採用了從一般到具體的組織結構。文章首先給出人工智慧 (AI) 的廣泛定義，然後進一步細分為不同類型（如窄義 AI、廣義 AI）並提供具體的例子，如虛擬助理、推薦引擎等。選項 A 的論證效益不符。選項 C 雖然有提及與人類智慧相關，但不是主要結構。選項 D 的歷史時間線不符。",
+      "explanation_of_Question": "這段文章描述了沖泡咖啡的幾個連續步驟，從選擇咖啡豆開始，接著是研磨、加熱水、沖泡，最後是享用。文章使用了「First」、「Next」、「Then」、「Subsequently」、「Finally」等過渡詞來明確標示步驟的順序，這是一種典型的過程或序列結構。這段文字並非比較兩種事物、討論因果關係，也不是從一般到特殊。",
       "options": [
         {
           "id": "A",
-          "text": "By arguing for the benefits of AI"
+          "text": "比較結構"
         },
         {
           "id": "B",
-          "text": "By starting with a definition and then providing specific examples and types"
+          "text": "因果結構"
         },
         {
           "id": "C",
-          "text": "By comparing AI to human intelligence"
+          "text": "序列結構"
         },
         {
           "id": "D",
-          "text": "By outlining the historical timeline of AI development"
+          "text": "從一般到特殊"
         }
       ],
-      "passage": "Artificial intelligence (AI) is a broad field of computer science focused on creating machines capable of performing tasks that typically require human intelligence. These tasks include learning, problem-solving, perception, and language understanding. At a general level, AI systems are designed to analyze data, make decisions, and adapt based on new information. More specifically, AI can be categorized into different types. Narrow AI, also known as Weak AI, is designed and trained for a particular task, like recognizing images or playing chess. Examples include virtual assistants like Siri and Alexa, recommendation engines used by streaming services, and facial recognition software. General AI, or Strong AI, is hypothetical and refers to machines with intellectual abilities comparable to humans across a wide range of tasks. Superintelligence, another theoretical level, would surpass human intellect. While General and Super AI are still in the realm of speculation, Narrow AI is already widely integrated into our daily lives, transforming industries from healthcare to finance.",
-      "question": "What is the primary way the author presents information about Artificial Intelligence?",
+      "passage": "Brewing a perfect cup of coffee involves several distinct steps, starting with the selection of quality coffee beans. First, choose beans that are appropriate for your preferred brewing method – perhaps a light roast for pour-over or a dark roast for espresso. Next, grind the beans just before brewing. The grind size is crucial; too fine for drip coffee can result in bitterness, while too coarse for espresso yields a weak shot. Then, heat fresh water to the optimal temperature, typically between 195°F and 205°F (90°C-96°C). Pouring water that is too hot can scorch the coffee grounds. Subsequently, carefully brew the coffee using your chosen method, paying attention to the correct water-to-coffee ratio and extraction time. Finally, enjoy your freshly brewed coffee. This simple process, when executed with care, can transform basic ingredients into a rich and satisfying beverage, demonstrating that even everyday activities follow specific sequences for optimal results.",
+      "question": "Which organizational pattern is primarily used to structure this passage?",
+      "standard_answer": "C"
+    },
+    "cacheTimestamp": 1748038532
+  },
+  {
+    "UUID": "4e9b579c-5a85-438d-8e5b-1f3b0719c545",
+    "questionData": {
+      "explanation_of_Question": "這段文章以一個關於規律體育鍛鍊益處的普遍性陳述開頭，然後提供了具體的例子來支持這個陳述，例如不同類型的運動（有氧運動、力量訓練、柔韌性運動）以及它們對身體和心理健康的具體影響（心血管健康、肌肉骨密度、壓力減輕、改善睡眠、認知功能）。這種結構是從一般性概念過渡到具體細節和例證。",
+      "options": [
+        {
+          "id": "A",
+          "text": "通過比較不同類型的運動"
+        },
+        {
+          "id": "B",
+          "text": "通過呈現一個普遍觀點後跟具體例子"
+        },
+        {
+          "id": "C",
+          "text": "通過解釋運動的歷史"
+        },
+        {
+          "id": "D",
+          "text": "通過概述一個問題及其解決方案"
+        }
+      ],
+      "passage": "Regular physical exercise offers a wide range of benefits for both physical and mental health. Generally speaking, incorporating exercise into your routine can significantly improve overall well-being. Specifically, engaging in aerobic activities like running or swimming strengthens the cardiovascular system, improving heart health and stamina. Strength training, such as lifting weights or using resistance bands, builds muscle mass and increases bone density, reducing the risk of injury and osteoporosis. Flexibility exercises like stretching or yoga enhance range of motion and prevent stiffness. Beyond physical effects, exercise also has profound mental benefits. For instance, it is proven to reduce stress and anxiety by releasing endorphins, natural mood boosters. Regular activity can also improve sleep quality and cognitive function, including memory and concentration. These specific examples illustrate how a general commitment to exercise can yield diverse and significant positive outcomes across various aspects of health.",
+      "question": "How does the author organize the information in this passage?",
       "standard_answer": "B"
     },
-    "cacheTimestamp": 1748030309
+    "cacheTimestamp": 1748038532
   }
 ]

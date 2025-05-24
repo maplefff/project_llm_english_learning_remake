@@ -1,6 +1,6 @@
 [
   {
-    "UUID": "d07e6bdc-9c66-45df-a0cb-ec38bd8099e4",
+    "UUID": "3bd47428-211b-4b7e-a1ee-25f54b522fd1",
     "questionData": {
       "evaluation_criteria": {
         "coherence": 20,
@@ -9,82 +9,26 @@
         "task_achievement": 20,
         "vocabulary": 20
       },
-      "instruction": "寫一篇短文討論學校教育中理論知識與實踐技能的平衡。請包含引言、討論理論重要性的段落、討論實踐重要性的段落，以及結論。使用具體例子支持你的論點。",
-      "max_words": 300,
-      "min_words": 200,
-      "prompt": "In school education, how important is it to balance theoretical knowledge with practical skills? Discuss the value of each and how they should be integrated.",
-      "required_elements": [
-        "引言",
-        "理論知識的重要性",
-        "實踐技能的重要性",
-        "結論",
-        "平衡的建議"
-      ],
-      "sample_responses": [
-        "Balancing theoretical knowledge and practical skills is a fundamental challenge in modern education. Theoretical knowledge provides students with the foundational understanding of concepts and principles. For instance, learning mathematical formulas (theory) is essential before attempting to solve complex engineering problems (practical). Theory builds the necessary framework for critical thinking and problem-solving. However, practical skills are equally vital. They allow students to apply what they have learned in real-world situations. A science student might learn about chemical reactions in a textbook, but performing experiments in a lab provides hands-on experience and reinforces understanding. Practical skills also develop competencies like teamwork, communication, and adaptability, which are crucial for future careers. Ideally, educational systems should integrate both effectively. This could involve incorporating more project-based learning, internships, and simulations alongside traditional lectures and readings. A strong education equips individuals with both the 'why' (theory) and the 'how' (practice), preparing them to contribute meaningfully to society. Therefore, finding the right balance is key to producing well-rounded and capable graduates."
-      ],
-      "topic": "Education"
-    },
-    "cacheTimestamp": 1748030442
-  },
-  {
-    "UUID": "4ef6cc8d-9ed2-492f-a867-dc048a43d70b",
-    "questionData": {
-      "evaluation_criteria": {
-        "coherence": 20,
-        "grammar": 20,
-        "organization": 20,
-        "task_achievement": 20,
-        "vocabulary": 20
-      },
-      "instruction": "寫一篇短文分析肥胖的主要原因及其對個人健康的影響。請包含引言、至少兩個討論原因的主體段落、討論健康的影響的段落，以及結論。提供具體的生活方式例子。",
+      "instruction": "撰寫一篇探討氣候變遷成因與影響的短文。文章應包含引言、至少兩個主體段落（分別討論成因和影響）、以及結論。請使用具體例子說明你的論點。",
       "max_words": 350,
       "min_words": 250,
-      "prompt": "Obesity is a growing global health concern. Analyze the main causes of obesity and discuss its significant impacts on individual health.",
+      "prompt": "氣候變遷是當代最嚴峻的全球挑戰之一。請討論其主要的成因與對地球生態和人類社會造成的具體影響。",
       "required_elements": [
-        "引言",
-        "主要原因（如飲食習慣）",
-        "主要原因（如缺乏運動）",
-        "對健康的影響",
-        "結論"
-      ],
-      "sample_responses": [
-        "Obesity has become a critical public health issue worldwide, stemming from a complex interplay of factors. One primary cause is poor dietary habits, characterized by excessive consumption of high-calorie, low-nutrient processed foods, sugary drinks, and large portion sizes. Busy lifestyles often lead people to rely on fast food or pre-packaged meals rather than preparing healthy options at home. Another significant contributor is a lack of physical activity. Modern life often involves sedentary jobs and increased screen time, reducing opportunities for burning calories through exercise. Technological advancements, while beneficial, have also made many daily tasks less physically demanding. The impacts of obesity on individual health are extensive and severe. It significantly increases the risk of chronic diseases such as type 2 diabetes, heart disease, high blood pressure, and certain types of cancer. Obesity can also lead to musculoskeletal problems, sleep apnea, and mental health issues like depression due to societal stigma and physical limitations. Addressing obesity requires a multi-faceted approach, including promoting healthier food choices, encouraging regular physical activity, and creating supportive environments for individuals to make positive lifestyle changes. Ultimately, tackling the causes of obesity is crucial for improving public health outcomes."
-      ],
-      "topic": "Health"
-    },
-    "cacheTimestamp": 1748030442
-  },
-  {
-    "UUID": "83760c3a-6016-493e-bba5-6d5ba63939f3",
-    "questionData": {
-      "evaluation_criteria": {
-        "coherence": 20,
-        "grammar": 20,
-        "organization": 20,
-        "task_achievement": 20,
-        "vocabulary": 20
-      },
-      "instruction": "寫一篇短文討論全球化對當地文化的影響。請包含引言、討論積極影響的段落、討論消極影響的段落，以及結論。使用具體文化例子。",
-      "max_words": 300,
-      "min_words": 200,
-      "prompt": "Globalization is connecting the world in unprecedented ways. Discuss both the positive and negative effects of globalization on local cultures.",
-      "required_elements": [
-        "引言",
-        "積極影響（如文化交流）",
-        "消極影響（如文化同質化）",
-        "結論",
+        "引言段落",
+        "成因段落",
+        "影響段落",
+        "結論段落",
         "具體例子"
       ],
       "sample_responses": [
-        "Globalization, the increasing interconnectedness of the world, has a profound and often contradictory impact on local cultures. On the positive side, globalization facilitates cultural exchange and understanding. Exposure to foreign music, films, and food through media and travel can broaden perspectives and enrich local traditions by introducing new ideas and forms of expression. For example, international film festivals bring diverse cinematic styles to local audiences, fostering appreciation for different narratives and aesthetics. It also allows local cultures to reach a wider global audience, promoting their unique aspects. However, a significant negative effect is the potential for cultural homogenization. The dominance of global brands and media from powerful nations can overshadow or even replace local customs, languages, and arts. This can lead to a loss of unique cultural identities, particularly in smaller or less economically powerful regions. The proliferation of global fast-food chains in every city, for instance, can diminish the prominence of traditional local cuisine. In conclusion, while globalization offers opportunities for cultural enrichment and global reach, it also poses a significant threat to the diversity and preservation of unique local cultures, necessitating efforts to protect and promote indigenous traditions."
+        "Climate change represents a major threat to our planet and its inhabitants, driven primarily by human activities. The main causes include the burning of fossil fuels like coal, oil, and natural gas for energy, which releases large amounts of greenhouse gases, trapping heat in the atmosphere. Deforestation also plays a significant role; trees absorb carbon dioxide, so cutting them down reduces this natural carbon sink and releases stored carbon. Industrial processes and intensive agriculture further contribute to greenhouse gas emissions.\nThe effects of climate change are widespread and severe. We see rising global temperatures leading to more frequent and intense heatwaves. Melting glaciers and ice sheets cause sea levels to rise, threatening coastal communities and ecosystems. Extreme weather events, such as hurricanes, droughts, and floods, are becoming more common and destructive. For example, prolonged droughts in some regions lead to water scarcity and impact agriculture, while increased flooding displaces populations and damages infrastructure. Biodiversity is also at risk as habitats change rapidly, pushing many species towards extinction. Addressing climate change requires urgent global cooperation to reduce emissions and adapt to its undeniable impacts."
       ],
-      "topic": "Culture"
+      "topic": "環境"
     },
-    "cacheTimestamp": 1748030442
+    "cacheTimestamp": 1748038640
   },
   {
-    "UUID": "edd799d7-8e7c-49ae-8bb4-e6ae4f3c9e4d",
+    "UUID": "fc8dcaed-be4a-46a6-9663-0c145ac9e5fb",
     "questionData": {
       "evaluation_criteria": {
         "coherence": 20,
@@ -93,50 +37,104 @@
         "task_achievement": 20,
         "vocabulary": 20
       },
-      "instruction": "寫一篇短文討論國際合作在解決全球挑戰中的重要性。請包含引言、至少兩個討論不同挑戰（如氣候變化、疫情）的主體段落，以及結論。說明合作如何幫助應對這些問題。",
-      "max_words": 350,
-      "min_words": 250,
-      "prompt": "Global challenges such as climate change, pandemics, and poverty require international cooperation to be effectively addressed. Discuss the importance of countries working together to solve these issues.",
-      "required_elements": [
-        "引言",
-        "應對氣候變化的合作",
-        "應對全球疫情的合作",
-        "應對其他全球挑戰的合作（如貧困）",
-        "結論"
-      ],
-      "sample_responses": [
-        "The defining issues of our time, from climate change to pandemics and poverty, transcend national borders, making international cooperation not merely beneficial but essential for their resolution. Climate change, for instance, is a global phenomenon caused by emissions worldwide. No single country, no matter how powerful, can solve it alone. International agreements like the Paris Agreement, although imperfect, demonstrate how countries can set common goals and pool resources to mitigate emissions and invest in renewable energy. Similarly, the recent COVID-19 pandemic highlighted the critical need for global collaboration in scientific research, vaccine development, and equitable distribution. Sharing data and coordinating public health responses across borders saves lives and contains outbreaks more effectively than isolated national efforts. Poverty, too, requires a coordinated international approach involving aid, trade policies, and investment in developing nations to create sustainable solutions. While national interests sometimes clash, the interconnectedness of the world means that a problem in one region can quickly become a problem everywhere. Therefore, fostering strong international partnerships is the only viable path to developing comprehensive, sustainable, and effective strategies to tackle the complex global challenges humanity faces today."
-      ],
-      "topic": "Global Challenges"
-    },
-    "cacheTimestamp": 1748030442
-  },
-  {
-    "UUID": "93ebc9d6-f39c-4b8a-97a6-d5dfe90e513b",
-    "questionData": {
-      "evaluation_criteria": {
-        "coherence": 20,
-        "grammar": 20,
-        "organization": 20,
-        "task_achievement": 20,
-        "vocabulary": 20
-      },
-      "instruction": "寫一篇短文討論塑膠污染的環境影響及其解決方案。請包含引言、討論影響的主體段落、討論解決方案的主體段落，以及結論。提供具體例子。",
+      "instruction": "撰寫一篇比較線上學習與傳統課堂學習的短文。文章應包含引言、討論兩種學習方式優缺點的主體段落、以及結論。請明確表達你的觀點。",
       "max_words": 300,
       "min_words": 200,
-      "prompt": "Plastic pollution is a major environmental problem with devastating effects on ecosystems. Discuss the environmental impacts of plastic pollution and explore potential solutions.",
+      "prompt": "線上學習在全球範圍內日益普及。請比較線上學習與傳統課堂學習的優缺點，並闡述你認為哪種方式更適合未來的教育趨勢。",
       "required_elements": [
-        "引言",
-        "對海洋生物的影響",
-        "對陸地和土壤的影響",
-        "潛在解決方案（如回收、減少使用）",
-        "結論"
+        "引言段落",
+        "線上學習優缺點",
+        "傳統學習優缺點",
+        "你的觀點段落",
+        "結論段落"
       ],
       "sample_responses": [
-        "Plastic pollution poses one of the most serious threats to the natural environment today due to its persistence and widespread use. Its environmental impacts are far-reaching, particularly on marine ecosystems. Millions of tons of plastic enter the oceans annually, harming marine life through entanglement and ingestion. Sea turtles might mistake plastic bags for jellyfish, and seabirds can fill their stomachs with plastic debris, leading to starvation. Microplastics, tiny plastic particles, are ingested by plankton and fish, entering the food chain with unknown long-term consequences for both wildlife and humans. On land, plastic waste accumulates in landfills, taking hundreds of years to decompose and potentially leaching harmful chemicals into the soil and groundwater. Finding effective solutions is crucial. One key strategy is reducing single-use plastics through bans on items like plastic straws and bags, encouraging reusable alternatives. Improving waste management and recycling infrastructure is also vital to divert plastic from landfills and oceans. Furthermore, developing biodegradable or compostable plastic alternatives offers promise, although challenges remain in ensuring they truly break down without causing harm. Public awareness campaigns are also needed to encourage responsible consumption and disposal habits. Addressing plastic pollution requires a combination of individual action, industry innovation, and government regulation to protect our planet."
+        "The rise of technology has brought about significant changes in education, notably the increasing prevalence of online learning as an alternative to traditional classroom instruction. Both methods have distinct advantages and disadvantages.\nOnline learning offers flexibility and accessibility, allowing students to study anytime, anywhere. It can be more affordable and provides access to a wider range of courses and institutions globally. However, it requires strong self-discipline and can lead to feelings of isolation due to less face-to-face interaction. Technical issues can also be a barrier.\nTraditional classroom learning provides a structured environment with direct interaction between teachers and peers, fostering immediate clarification of doubts and collaborative learning. It also helps develop social skills. Nevertheless, it is often less flexible, more expensive, and limited by geographical location.\nFor the future of education, a blended approach that combines the strengths of both seems most promising. Online resources can enhance traditional teaching, while classroom interaction remains crucial for developing communication and critical thinking through discussion. While fully online learning is valuable for certain situations, the rich, dynamic environment of a classroom, augmented by digital tools, likely offers the most comprehensive educational experience.\nIn conclusion, while online learning provides unparalleled flexibility, the social and interactive benefits of traditional classrooms are invaluable. A hybrid model could potentially offer the best path forward for future education."
       ],
-      "topic": "Environment"
+      "topic": "教育"
     },
-    "cacheTimestamp": 1748030442
+    "cacheTimestamp": 1748038640
+  },
+  {
+    "UUID": "1ffcba49-6409-4d9b-8bf5-5f7d5bb061a6",
+    "questionData": {
+      "evaluation_criteria": {
+        "coherence": 20,
+        "grammar": 20,
+        "organization": 20,
+        "task_achievement": 20,
+        "vocabulary": 20
+      },
+      "instruction": "撰寫一篇關於規律運動益處的短文。文章應包含引言、至少兩個討論運動益處的主體段落、探討如何在生活中堅持運動的方法、以及結論。",
+      "max_words": 300,
+      "min_words": 200,
+      "prompt": "規律運動對維持身心健康至關重要。請闡述規律運動對個人健康的主要益處，並討論如何在忙碌的生活中堅持運動。",
+      "required_elements": [
+        "引言段落",
+        "身理健康益處段落",
+        "心理健康益處段落",
+        "堅持運動方法段落",
+        "結論段落"
+      ],
+      "sample_responses": [
+        "Engaging in regular physical activity is undeniably one of the most effective ways to maintain overall health and well-being. The benefits extend far beyond just physical fitness.\nPhysically, regular exercise strengthens the heart and lungs, reducing the risk of chronic diseases such as heart disease, diabetes, and some cancers. It helps control weight by burning calories and building muscle mass. Exercise also improves bone density, reducing the risk of osteoporosis, and enhances mobility and balance, which is particularly important as we age.\nThe positive impacts on mental health are equally significant. Physical activity releases endorphins, which have mood-boosting effects and can help alleviate symptoms of depression and anxiety. Exercise is a great stress reliever, providing an outlet for tension. It can also improve sleep quality and boost energy levels, leading to better cognitive function and concentration.\nIntegrating exercise into a busy life requires conscious effort and planning. Strategies include scheduling workouts like any other appointment, finding activities you enjoy to make it sustainable, exercising with a friend for motivation, and utilizing short bursts of activity throughout the day if long sessions are difficult. Setting realistic goals and tracking progress can also help maintain consistency.\nIn conclusion, the multifaceted benefits of regular exercise for both physical and mental health make it an essential component of a healthy lifestyle. Finding ways to make it a consistent habit, even amidst a busy schedule, is key to reaping these rewards."
+      ],
+      "topic": "健康"
+    },
+    "cacheTimestamp": 1748038640
+  },
+  {
+    "UUID": "4669950e-2a6c-45f9-aa9f-42a1a5869309",
+    "questionData": {
+      "evaluation_criteria": {
+        "coherence": 20,
+        "grammar": 20,
+        "organization": 20,
+        "task_achievement": 20,
+        "vocabulary": 20
+      },
+      "instruction": "撰寫一篇分析全球化對文化影響的短文。文章應包含引言、討論全球化帶來的益處段落、討論全球化帶來的挑戰段落、以及結論。",
+      "max_words": 350,
+      "min_words": 250,
+      "prompt": "全球化對各地文化產生了深遠影響。請討論全球化如何影響傳統文化，可能帶來哪些好處或挑戰？",
+      "required_elements": [
+        "引言段落",
+        "全球化對文化的益處",
+        "全球化對文化的挑戰",
+        "結論段落"
+      ],
+      "sample_responses": [
+        "Globalization, the increasing interconnectedness of the world through trade, communication, and cultural exchange, has profoundly impacted traditional cultures around the globe. This influence brings both significant benefits and considerable challenges.\nOne major benefit is the increased exposure to diverse cultures. Globalization allows people to learn about different traditions, cuisines, music, and lifestyles through media, travel, and the internet. This can lead to greater understanding, tolerance, and the adoption of positive practices from other cultures. For instance, diverse food trends and musical genres now cross borders easily. Globalization can also help preserve some endangered cultural elements by creating a global audience or market for traditional crafts or performances.\nHowever, globalization also poses significant challenges to traditional cultures. The dominance of global media, brands, and languages can lead to cultural homogenization, where unique local customs, languages, and traditions are overshadowed or even replaced by dominant global trends. This can result in a loss of cultural identity and diversity. For example, multinational fast-food chains might replace traditional local eateries, and global entertainment can reduce interest in local art forms. There's also the risk of cultural misunderstanding and conflict when values clash.\nIn conclusion, while globalization offers opportunities for cultural enrichment and mutual understanding, it also presents the critical challenge of preserving unique local identities in the face of powerful global forces. Finding a balance between embracing global connections and safeguarding traditional heritage is crucial for maintaining cultural diversity in the modern world."
+      ],
+      "topic": "文化"
+    },
+    "cacheTimestamp": 1748038640
+  },
+  {
+    "UUID": "6d3370e2-a958-418d-9489-b06fe891f153",
+    "questionData": {
+      "evaluation_criteria": {
+        "coherence": 20,
+        "grammar": 20,
+        "organization": 20,
+        "task_achievement": 20,
+        "vocabulary": 20
+      },
+      "instruction": "撰寫一篇關於工作生活平衡的短文。文章應包含引言、討論平衡重要性的主體段落、討論具體策略的主體段落、以及結論。",
+      "max_words": 300,
+      "min_words": 200,
+      "prompt": "如何在工作與個人生活之間取得平衡，是許多現代人面臨的挑戰。請討論追求工作生活平衡的重要性，以及一些可以採取的具體策略。",
+      "required_elements": [
+        "引言段落",
+        "平衡重要性段落",
+        "具體策略段落",
+        "結論段落"
+      ],
+      "sample_responses": [
+        "In today's fast-paced world, achieving a healthy work-life balance is a significant challenge for many individuals. However, its importance for overall well-being cannot be overstated.\nPrioritizing work-life balance is crucial for several reasons. Firstly, it prevents burnout, which can severely impact both physical and mental health, leading to decreased productivity and job dissatisfaction. Secondly, it allows time for personal relationships with family and friends, hobbies, exercise, and relaxation, all of which are essential for happiness and a fulfilling life. Neglecting personal life for work can lead to isolation, stress, and a diminished quality of life.\nSeveral strategies can help people achieve better balance. Setting clear boundaries between work and personal time is vital; this might involve not checking work emails after a certain hour or on weekends. Learning to say no to additional tasks when overloaded is also important. Time management techniques, such as prioritizing tasks and avoiding procrastination, can make work more efficient, freeing up personal time. Furthermore, utilizing vacation days and taking short breaks during the workday are essential for rest and rejuvenation. Employers also have a role to play by fostering a culture that supports balance.\nIn conclusion, while the demands of modern work can make it difficult, actively striving for work-life balance is essential for long-term health, happiness, and productivity. By implementing strategies like setting boundaries and managing time effectively, individuals can better integrate their professional and personal lives."
+      ],
+      "topic": "社會議題"
+    },
+    "cacheTimestamp": 1748038640
   }
 ]

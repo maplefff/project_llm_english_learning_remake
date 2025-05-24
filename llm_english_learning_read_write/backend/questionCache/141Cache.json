@@ -1,142 +1,142 @@
 [
   {
-    "UUID": "50279065-9cff-483b-83e1-d6ef31022af4",
+    "UUID": "a04714ba-3691-4426-b25d-083ec6115445",
     "questionData": {
-      "explanation_of_Question": "根據文章內容，Apex Corporation 在 Q3 的北美市場銷售額為 $8 million。選項 A 的 $5.5 million 是歐洲市場的銷售額；選項 B 的 $4 million 是亞太市場的銷售額；選項 D 的 10% 是北美市場的銷售增長率，而不是銷售額。",
+      "explanation_of_Question": "根據文章內容，Tech Solutions Inc. 在 2023 年第四季度的總收入達到了 5.5 億美元（$550 million）。選項 A 的 1.5 億美元是不正確的；選項 B 的 1200 名是員工人數，不是收入；選項 D 的 18% 是淨利潤率，不是總收入。正確答案是 C。",
       "options": [
         {
           "id": "A",
-          "text": "$5.5 million"
+          "text": "$150 million"
         },
         {
           "id": "B",
-          "text": "$4 million"
+          "text": "1,200 people"
         },
         {
           "id": "C",
-          "text": "$8 million"
+          "text": "$550 million"
         },
         {
           "id": "D",
-          "text": "10%"
+          "text": "18%"
         }
       ],
-      "passage": "Apex Corporation released its Q3 financial report, showing a 15% increase in overall revenue compared to the previous quarter. Sales in the European market grew by 20%, reaching $5.5 million. The North American market showed a more modest 10% growth, contributing $8 million in sales. Asia-Pacific remained stable with $4 million in sales. The company plans to launch a new product line in Q4 to target further growth, especially in emerging markets.",
-      "question": "What was the sales figure for the North American market in Q3 according to the passage?",
+      "passage": "Tech Solutions Inc. recently reported its Q4 2023 earnings. The report indicated strong performance across all sectors. Total revenue reached $550 million, marking a significant 15% increase compared to the previous quarter. The net profit margin for the period was a healthy 18%. The company currently employs over 1,200 people globally, with its main operations centered in North America and Europe. Looking ahead, the company plans to expand its presence in Asia-Pacific markets starting in Q2 2024.",
+      "question": "According to the report, what was Tech Solutions Inc.'s total revenue in Q4 2023?",
       "standard_answer": "C"
     },
-    "cacheTimestamp": 1748030213
+    "cacheTimestamp": 1748038481
   },
   {
-    "UUID": "3bad3b03-5a14-4bb6-aa1d-b56163411fac",
+    "UUID": "280120e9-98fb-4a43-83e2-9bc5c1812d0c",
     "questionData": {
-      "explanation_of_Question": "根據文章內容，艾菲爾鐵塔於 1889 年 3 月 31 日完工，趕上 1889 年的巴黎世界博覽會。選項 A 的 1887 年 1 月 28 日是動工日期；選項 C 的 1930 年是它失去世界最高建築稱號的時間；選項 D 是博覽會的名稱，不是完工日期。",
+      "explanation_of_Question": "根據文章內容，這項新的超導體材料 'Vance-1' 是由 Dr. Eleanor Vance 發現的。選項 A 的 1947 年是發現年份；選項 B 的 -190 是超導溫度；選項 C 的 50 公克是初始樣本的重量。正確答案是 D。",
       "options": [
         {
           "id": "A",
-          "text": "January 28, 1887"
+          "text": "1947"
         },
         {
           "id": "B",
-          "text": "March 31, 1889"
+          "text": "-190 degrees Celsius"
         },
         {
           "id": "C",
-          "text": "1930"
+          "text": "50 grams"
         },
         {
           "id": "D",
-          "text": "1889 Exposition Universelle"
+          "text": "Dr. Eleanor Vance"
         }
       ],
-      "passage": "The construction of the Eiffel Tower began on January 28, 1887, under the direction of Gustave Eiffel. It was completed just over two years later, on March 31, 1889, in time for the 1889 Exposition Universelle, a world's fair held in Paris. The tower stands at 330 meters tall (including antennas) and was the tallest man-made structure in the world until 1930. Millions of visitors have ascended its platforms since its opening.",
-      "question": "According to the passage, when was the Eiffel Tower completed?",
-      "standard_answer": "B"
+      "passage": "In 1947, a groundbreaking scientific discovery was made at the National Laboratories. Dr. Eleanor Vance, a lead physicist, successfully synthesized a new type of superconductor material. Dubbed 'Vance-1', this material exhibited superconductivity at temperatures up to -190 degrees Celsius, which was a significant improvement over existing materials at the time. The initial sample produced was small, weighing only 50 grams, but its potential applications in energy transmission and medical technology were immediately recognized. Further research is ongoing to optimize its properties and production.",
+      "question": "Who discovered the new superconductor material 'Vance-1'?",
+      "standard_answer": "D"
     },
-    "cacheTimestamp": 1748030213
+    "cacheTimestamp": 1748038481
   },
   {
-    "UUID": "46841e67-5b36-4658-bf46-dae495f628c8",
+    "UUID": "457c7dc4-7207-41c5-aae9-d43f15a1bcc3",
     "questionData": {
-      "explanation_of_Question": "根據文章內容，研究人員在格陵蘭的一個繁殖地點對 150 隻北極燕鷗進行了標記。選項 A 的 30% 是受氣候變化影響的鳥類比例；選項 C 的 2019 是研究開始的年份；選項 D 的 96,000 是最長遷徙距離的公里數。",
+      "explanation_of_Question": "根據文章內容，從倫敦到愛丁堡的特快列車每天早上 8:15 發車。選項 A 的 12:45 PM 是預計抵達時間；選項 B 的 4 小時 30 分鐘是旅程所需時間；選項 D 的 £85 是標準票價。正確答案是 C。",
       "options": [
         {
           "id": "A",
-          "text": "30"
+          "text": "12:45 PM"
         },
         {
           "id": "B",
-          "text": "150"
+          "text": "8:15 PM"
         },
         {
           "id": "C",
-          "text": "2019"
+          "text": "8:15 AM"
         },
         {
           "id": "D",
-          "text": "96,000"
+          "text": "4 hours 30 minutes"
         }
       ],
-      "passage": "A study published in the 'Journal of Environmental Science' tracked the migration patterns of Arctic terns. Researchers tagged 150 birds over a three-year period (2019-2021) at a breeding site in Greenland. The longest recorded migration was approximately 96,000 kilometers round trip, made by a single bird named 'Arctic Wanderer'. The study found that climate change is significantly impacting their traditional routes, leading to longer journeys for 30% of the tracked population.",
-      "question": "How many Arctic terns were tagged in the study mentioned in the passage?",
-      "standard_answer": "B"
-    },
-    "cacheTimestamp": 1748030213
-  },
-  {
-    "UUID": "88befcc4-45a9-4fc5-8e6e-550074da17ba",
-    "questionData": {
-      "explanation_of_Question": "根據文章內容，馬丘比丘在 1911 年由美國歷史學家 Hiram Bingham III 帶到國際視野中。選項 A 的 1450 年是馬丘比丘建造的時間；選項 C 的 2,430 是海拔高度（米）；選項 D 的 7,970 也是海拔高度（英尺）。",
-      "options": [
-        {
-          "id": "A",
-          "text": "1450"
-        },
-        {
-          "id": "B",
-          "text": "1911"
-        },
-        {
-          "id": "C",
-          "text": "2,430"
-        },
-        {
-          "id": "D",
-          "text": "7,970"
-        }
-      ],
-      "passage": "Located in the Andes Mountains, Machu Picchu is an Incan citadel built around 1450 and later abandoned a century later. It was brought to international attention in 1911 by American historian Hiram Bingham III. Situated at an elevation of 2,430 meters (7,970 feet) above sea level, it is a UNESCO World Heritage Site and one of the New Seven Wonders of the World. Visitors typically arrive via Cusco, the nearest major city with an airport.",
-      "question": "According to the passage, in what year was Machu Picchu brought to international attention by Hiram Bingham III?",
-      "standard_answer": "B"
-    },
-    "cacheTimestamp": 1748030213
-  },
-  {
-    "UUID": "2e7b5afe-5a7e-42c7-9465-78295709c375",
-    "questionData": {
-      "explanation_of_Question": "根據文章內容，Project Nebula 從 Venture Capital Partners 獲得了初始資金 $50 million。選項 A 的 $75 million、選項 B 的 $10,000 和選項 D 的 $1 million 在文章中都沒有提及作為初始資金的金額。",
-      "options": [
-        {
-          "id": "A",
-          "text": "$75 million"
-        },
-        {
-          "id": "B",
-          "text": "$10,000"
-        },
-        {
-          "id": "C",
-          "text": "$50 million"
-        },
-        {
-          "id": "D",
-          "text": "$1 million"
-        }
-      ],
-      "passage": "Tech Solutions announced the launch of 'Project Nebula,' a new cloud computing initiative. The project has secured initial funding of $50 million from Venture Capital Partners. Development began on October 1, 2023, with a planned completion date in Q3 2025. The team consists of 75 engineers based primarily in their Seattle office. The goal is to offer scalable cloud services to small and medium-sized businesses, targeting a user base of 10,000 by the end of the first year.",
-      "question": "According to the passage, how much initial funding did Project Nebula secure?",
+      "passage": "The express train service from London to Edinburgh offers a convenient way to travel between the two capitals. The train departs daily from King's Cross Station in London at 8:15 AM. The journey covers approximately 400 miles and takes around 4 hours and 30 minutes. Passengers are expected to arrive at Waverley Station in Edinburgh at approximately 12:45 PM. A standard single ticket costs £85, while first class tickets are available for £120. Booking in advance is recommended, especially during peak travel periods.",
+      "question": "According to the passage, at what time does the express train depart from London?",
       "standard_answer": "C"
     },
-    "cacheTimestamp": 1748030213
+    "cacheTimestamp": 1748038481
+  },
+  {
+    "UUID": "04b15728-e29e-4283-9d44-8db249a3854d",
+    "questionData": {
+      "explanation_of_Question": "根據文章內容，參加這次會議的代表總數約為 350 人。選項 A 的 60 是參加國家的數量；選項 B 的 20-24 是會議舉行的日期範圍；選項 C 的 Professor Anya Sharma 是主講人。正確答案是 D。",
+      "options": [
+        {
+          "id": "A",
+          "text": "60"
+        },
+        {
+          "id": "B",
+          "text": "October 20-24"
+        },
+        {
+          "id": "C",
+          "text": "Professor Anya Sharma"
+        },
+        {
+          "id": "D",
+          "text": "350"
+        }
+      ],
+      "passage": "The 7th International Conference on Sustainable Technologies was held in Vancouver from October 20-24, 2023. This year's event saw a record attendance, with approximately 350 delegates participating from 60 different countries. The main focus of the conference was on developing and implementing circular economy principles. Professor Anya Sharma delivered the opening keynote address, highlighting innovative waste reduction strategies. The conference proceedings will be published online by the end of November 2023.",
+      "question": "Approximately how many delegates participated in the 7th International Conference on Sustainable Technologies?",
+      "standard_answer": "D"
+    },
+    "cacheTimestamp": 1748038481
+  },
+  {
+    "UUID": "c78b2576-55b9-4789-9fa1-c70bc88e5b08",
+    "questionData": {
+      "explanation_of_Question": "根據文章內容，葛底斯堡戰役發生在賓夕法尼亞州的葛底斯堡（Gettysburg, Pennsylvania）。選項 A 是邦聯軍指揮官的名字；選項 B 是聯盟軍士兵的大約數量；選項 C 是戰役發生的日期。正確答案是 D。",
+      "options": [
+        {
+          "id": "A",
+          "text": "General Lee"
+        },
+        {
+          "id": "B",
+          "text": "Approximately 93,000"
+        },
+        {
+          "id": "C",
+          "text": "July 1 to July 3, 1863"
+        },
+        {
+          "id": "D",
+          "text": "Gettysburg, Pennsylvania"
+        }
+      ],
+      "passage": "The Battle of Gettysburg, a pivotal engagement in the American Civil War, took place from July 1 to July 3, 1863. The conflict occurred in and around the town of Gettysburg, Pennsylvania. Confederate forces, commanded by General Robert E. Lee, numbered approximately 75,000 soldiers. They faced the Union Army of the Potomac, led by Major General George G. Meade, which comprised roughly 93,000 men. The battle resulted in the largest number of casualties of the entire war and is often cited as the turning point of the conflict.",
+      "question": "Where did the Battle of Gettysburg primarily take place?",
+      "standard_answer": "D"
+    },
+    "cacheTimestamp": 1748038481
   }
 ]

@@ -1,6 +1,6 @@
 [
   {
-    "UUID": "0bc67298-ddc7-48ef-b62f-f8b119f8dddd",
+    "UUID": "1974deeb-a59b-4eaa-b9fc-644132e67737",
     "questionData": {
       "evaluation_criteria": {
         "appropriateness": 5,
@@ -9,58 +9,27 @@
         "task_achievement": 5,
         "vocabulary": 5
       },
-      "instruction": "Write an informal email to a friend inviting them to a birthday party you are hosting.",
-      "max_words": 100,
-      "min_words": 70,
-      "purpose": "Inviting a friend to a party",
-      "recipient": "Close friend",
-      "required_content": [
-        "State it's for your birthday party",
-        "Provide the date and time of the party",
-        "Give the location of the party",
-        "Ask them to let you know if they can make it (RSVP)"
-      ],
-      "sample_responses": [
-        "Hey [Friend's Name],\n\nGuess what? I'm having a birthday party to celebrate turning [Your Age]! I'd love for you to come and celebrate with me.\n\nThe party is on [Date of Party] at [Time of Party] at my place ([Your Address, or just 'my place' if they know it]). It's going to be pretty casual, just hanging out with friends.\n\nHope you can make it! Let me know if you're free by [RSVP Date, optional but helpful].\n\nSee you soon!\nBest,\n[Your Name]",
-        "Hi [Friend's Name],\n\nJust sending out invites for my birthday bash! I'm having it on [Date of Party] starting around [Time of Party] at my place. Would be awesome if you could come!\n\nLet me know if you can make it so I can get a headcount.\n\nCan't wait to celebrate!\nCheers,\n[Your Name]"
-      ],
-      "scenario": "You are organizing a birthday party and want to invite your close friend.",
-      "tone": "Informal and friendly"
-    },
-    "cacheTimestamp": 1748030474
-  },
-  {
-    "UUID": "fd88ad89-3c0c-4400-bc0d-6081a5b0ed37",
-    "questionData": {
-      "evaluation_criteria": {
-        "appropriateness": 5,
-        "coherence": 5,
-        "grammar": 5,
-        "task_achievement": 5,
-        "vocabulary": 5
-      },
-      "instruction": "Write a formal letter to a potential employer following up on a job application you submitted.",
+      "instruction": "Write a formal email to follow up on your recent job application.",
       "max_words": 150,
       "min_words": 100,
-      "purpose": "Following up on a job application",
+      "purpose": "To follow up on a job application and reiterate interest.",
       "recipient": "Hiring Manager",
       "required_content": [
-        "Refer to the job position you applied for and when",
-        "Reiterate your interest in the role",
-        "Briefly mention why you are a good fit",
-        "Enquire about the status of your application"
+        "Mention the position applied for",
+        "Remind them of your strong interest",
+        "Briefly highlight a relevant skill or experience",
+        "Inquire about the expected timeline for the hiring process"
       ],
       "sample_responses": [
-        "Subject: Following Up: [Job Title] Application - [Your Name]\n\nDear [Mr./Ms./Mx. Last Name of Hiring Manager, or 'Hiring Manager'],\n\nI hope this email finds you well. I am writing to follow up on my application for the [Job Title] position, which I submitted on [Date of Application].\n\nI remain very interested in this opportunity at [Company Name] and am excited about the possibility of contributing to your team. I believe my skills in [Mention 1-2 key skills] and my experience in [Mention 1-2 key experiences] align well with the requirements outlined for this role.\n\nI would appreciate an update on the status of my application and the timeline for the next steps in the hiring process.\n\nThank you for considering my application. I look forward to hearing from you soon.\n\nSincerely,\n[Your Name]\n[Your Phone Number]\n[Your Email Address]",
-        "Dear [Hiring Manager Name or Title],\n\nThis email is a follow-up to my application for the [Job Title] position at [Company Name], which I submitted on [Date].\n\nI am writing to reiterate my strong interest in this role and company. I am particularly drawn to [Mention something specific about the company or role] and am confident my background in [Area of Expertise] makes me a suitable candidate.\n\nCould you please provide an update on the status of my application?\n\nThank you for your time and consideration. I am eager to hear from you.\n\nBest regards,\n[Your Name]"
+        "Dear [Hiring Manager Name], I am writing to follow up on my application for the [Job Title] position, which I submitted on [Date]. I remain very interested in this opportunity and believe my skills in [Mention key skill] would be a valuable asset to your team. I would appreciate an update on the status of my application and the expected timeline for the next steps. Thank you for your time and consideration. Sincerely, [Your Name]"
       ],
-      "scenario": "You have applied for a job but haven't heard back within the expected timeframe.",
-      "tone": "Formal and professional"
+      "scenario": "You applied for a job last week and haven't heard back yet.",
+      "tone": "Formal, professional, polite"
     },
-    "cacheTimestamp": 1748030474
+    "cacheTimestamp": 1748038665
   },
   {
-    "UUID": "dc26c730-7ccc-4a2e-9c4a-1b52d21ae835",
+    "UUID": "3bc5cc32-3791-485b-a1f4-e6c8ee078cdc",
     "questionData": {
       "evaluation_criteria": {
         "appropriateness": 5,
@@ -69,24 +38,111 @@
         "task_achievement": 5,
         "vocabulary": 5
       },
-      "instruction": "Write an email to your landlord informing them about a necessary repair in your apartment.",
+      "instruction": "Write an informal email to your friend apologizing for missing their birthday party and explaining why.",
       "max_words": 120,
       "min_words": 80,
-      "purpose": "Reporting a repair issue",
-      "recipient": "Landlord",
+      "purpose": "To apologize for missing an event and provide an explanation.",
+      "recipient": "A friend",
       "required_content": [
-        "State your apartment number and address",
-        "Clearly describe the repair needed (e.g., leaking faucet, broken window)",
-        "Explain any inconvenience or potential damage caused by the issue",
-        "Request that the repair be addressed promptly"
+        "Apologize sincerely for missing the party",
+        "Explain the reason you couldn't make it",
+        "Express regret about missing the celebration",
+        "Suggest meeting up soon to celebrate"
       ],
       "sample_responses": [
-        "Subject: Repair Request - Apartment #[Your Apartment Number]\n\nDear [Landlord's Name],\n\nI am writing to inform you of a repair needed at my apartment, [Your Apartment Number], located at [Your Building Address].\n\nCurrently, the [Specific item, e.g., kitchen faucet] is [Describe the problem, e.g., leaking constantly, making a loud noise]. This issue started on [Date or approximately when]. The leak is causing [Mention consequence, e.g., water wastage, potential damage to the cabinet below].\n\nCould you please arrange for this repair to be fixed as soon as possible? Please let me know when a maintenance person might be available.\n\nThank you for your attention to this matter.\n\nSincerely,\n[Your Name]\n[Your Phone Number]",
-        "To [Landlord's Name],\n\nThis email is to report a needed repair in Apartment [Your Apartment Number] at [Your Address].\n\nThe [Specific item, e.g., bathroom fan] is [Describe the problem, e.g., no longer working, making excessive noise]. This prevents proper ventilation in the bathroom.\n\nI would appreciate it if you could schedule a repair at your earliest convenience.\n\nThank you,\n[Your Name]"
+        "Hey [Friend's Name], I'm so incredibly sorry that I missed your birthday party on [Date]. I was really looking forward to celebrating with you, but unfortunately, [Explain reason, e.g., I woke up feeling really sick / a sudden family emergency came up]. I was gutted that I couldn't be there. I hope you had an amazing time! Can we catch up soon so I can hear all about it and give you a belated birthday treat? So sorry again! Talk soon, [Your Name]"
       ],
-      "scenario": "Something in your rented apartment is broken and needs to be repaired by the landlord.",
-      "tone": "Formal and clear"
+      "scenario": "You were unable to attend your friend's birthday party due to unforeseen circumstances.",
+      "tone": "Informal, friendly, apologetic"
     },
-    "cacheTimestamp": 1748030474
+    "cacheTimestamp": 1748038665
+  },
+  {
+    "UUID": "2ccb4644-7f9d-4853-927f-07ae578d0021",
+    "questionData": {
+      "evaluation_criteria": {
+        "appropriateness": 5,
+        "coherence": 5,
+        "grammar": 5,
+        "task_achievement": 5,
+        "vocabulary": 5
+      },
+      "instruction": "Write a formal letter of complaint about a faulty product you purchased.",
+      "max_words": 180,
+      "min_words": 120,
+      "purpose": "To complain about a faulty product and request a resolution.",
+      "recipient": "Customer Service Department",
+      "required_content": [
+        "Clearly identify the product (name, model, date of purchase)",
+        "Describe the specific fault or problem with the product",
+        "Explain how the fault affects the product's usability or performance",
+        "State the desired resolution (e.g., refund, replacement, repair)",
+        "Mention enclosing/attaching proof of purchase"
+      ],
+      "sample_responses": [
+        "To the Customer Service Department,\n\nI am writing to express my dissatisfaction with a [Product Name] I purchased from your store on [Date of Purchase] (receipt enclosed). The product's model number is [Model Number].\n\nUpon using the product, I discovered a significant fault: [Describe the fault clearly and specifically]. This issue renders the product [Explain impact, e.g., unusable, unsafe, not functioning as advertised].\n\nAs the product is faulty and does not meet acceptable quality standards, I request a full refund or a replacement unit. I have attached a copy of my purchase receipt for your reference.\n\nI look forward to your prompt response and resolution to this matter.\n\nSincerely,\n[Your Name]\n[Your Address]\n[Your Contact Number/Email]"
+      ],
+      "scenario": "You recently bought an electronic device that stopped working shortly after purchase.",
+      "tone": "Formal, assertive, polite"
+    },
+    "cacheTimestamp": 1748038665
+  },
+  {
+    "UUID": "3356e63f-93db-4a70-a9e7-40d6e0694649",
+    "questionData": {
+      "evaluation_criteria": {
+        "appropriateness": 5,
+        "coherence": 5,
+        "grammar": 5,
+        "task_achievement": 5,
+        "vocabulary": 5
+      },
+      "instruction": "Write a semi-formal email to a conference organizer requesting specific information about the event schedule.",
+      "max_words": 150,
+      "min_words": 100,
+      "purpose": "To request specific information about a conference schedule.",
+      "recipient": "Conference Organizer",
+      "required_content": [
+        "State your interest in attending the conference",
+        "Ask for a more detailed agenda or schedule",
+        "Mention any specific sessions or topics you are interested in",
+        "Express appreciation for their assistance"
+      ],
+      "sample_responses": [
+        "Dear Conference Organizer,\n\nI am planning to attend the upcoming [Conference Name] on [Dates], and I am very much looking forward to it.\n\nI am writing to inquire if a more detailed schedule or agenda is available than the one currently on the website. I am particularly interested in sessions related to [Mention specific topic/session type]. Access to a detailed timeline would help me plan my participation effectively.\n\nThank you for your time and assistance.\n\nSincerely,\n[Your Name]"
+      ],
+      "scenario": "You are planning to attend a professional conference and need more details about the schedule before registering.",
+      "tone": "Semi-formal, polite, inquiring"
+    },
+    "cacheTimestamp": 1748038665
+  },
+  {
+    "UUID": "a135f793-f286-4796-863f-17c2194dc631",
+    "questionData": {
+      "evaluation_criteria": {
+        "appropriateness": 5,
+        "coherence": 5,
+        "grammar": 5,
+        "task_achievement": 5,
+        "vocabulary": 5
+      },
+      "instruction": "Write an informal email to a colleague to thank them for their help with a project.",
+      "max_words": 100,
+      "min_words": 60,
+      "purpose": "To thank a colleague for their help.",
+      "recipient": "A colleague",
+      "required_content": [
+        "Express sincere thanks",
+        "Mention the specific project or task they helped with",
+        "Explain how their help made a difference",
+        "Express appreciation for their time and effort"
+      ],
+      "sample_responses": [
+        "Hi [Colleague's Name],\n\nJust wanted to send a quick email to say a huge thank you for your help with [Project/Task Name] yesterday/last week. I really appreciated you [Mention specific action, e.g., staying late, helping with the data, giving advice]. It made a massive difference and really helped me to [Explain impact, e.g., meet the deadline, solve the problem].\n\nThanks again for your time and effort, you're a lifesaver!\n\nBest,\n[Your Name]"
+      ],
+      "scenario": "A colleague recently helped you significantly with a difficult task or project at work.",
+      "tone": "Informal, friendly, grateful"
+    },
+    "cacheTimestamp": 1748038665
   }
 ]

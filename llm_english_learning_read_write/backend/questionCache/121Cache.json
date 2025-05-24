@@ -1,83 +1,82 @@
 [
   {
-    "UUID": "67131f93-e4c9-4ca7-9d6c-a12726c85a2d",
+    "UUID": "47213db4-a100-4468-8849-a619b9706c5b",
     "questionData": {
       "error_types": [
         "subject_verb_agreement",
-        "verb_tense"
-      ],
-      "explanation_of_Question": "句子中有兩個錯誤：1. 主詞 'students' 是複數，動詞 'studies' 應該用原型 'study' (現在式) 或 'studied' (過去式)；2. 時間副詞 'last week' 表示過去時間，所以動詞應該用過去式 'studied'。",
-      "instruction": "Identify the error(s) in the sentence above and rewrite it correctly.",
-      "original_sentence": "The students studies hard for the exam last week.",
-      "standard_corrections": [
-        "The students studied hard for the exam last week."
-      ]
-    },
-    "cacheTimestamp": 1748030188
-  },
-  {
-    "UUID": "40269351-ab62-4b60-b9f0-620e48f8af5d",
-    "questionData": {
-      "error_types": [
-        "articles",
-        "word_form",
-        "plural_singular"
-      ],
-      "explanation_of_Question": "句子中有兩個錯誤：1. 'advise' 是動詞，名詞是 'advice'，且 'advice' 是不可數名詞，不能用不定冠詞 'a'；2. 'difficulty' 作為可數名詞時，複數形式是 'difficulties'。",
-      "instruction": "Identify the error(s) in the sentence above and rewrite it correctly.",
-      "original_sentence": "I need a advise about job applications; I have many difficulty.",
-      "standard_corrections": [
-        "I need advice about job applications; I have many difficulties.",
-        "I need some advice about job applications; I have many difficulties."
-      ]
-    },
-    "cacheTimestamp": 1748030188
-  },
-  {
-    "UUID": "936766f9-e006-4077-bb50-1d96d568473d",
-    "questionData": {
-      "error_types": [
         "prepositions"
       ],
-      "explanation_of_Question": "句子中有三個介係詞錯誤：1. 'good at' 而非 'good in'；2. 'afraid of' 而非 'afraid from'；3. 'in public' 而非 'on public'。",
+      "explanation_of_Question": "句子中有兩個錯誤：1. 'is' 應該改為 'are'，因為主語 'They' 是複數；2. 'on London' 應該改為 'to London'，表示目的地。正確的句子應該是 'They are planning to travel to London next week.'",
       "instruction": "Identify the error(s) in the sentence above and rewrite it correctly.",
-      "original_sentence": "She is good in playing the piano, but she is afraid from performing on public.",
+      "original_sentence": "They is planning to travel on London next week.",
       "standard_corrections": [
-        "She is good at playing the piano, but she is afraid of performing in public."
+        "They are planning to travel to London next week."
       ]
     },
-    "cacheTimestamp": 1748030188
+    "cacheTimestamp": 1748038428
   },
   {
-    "UUID": "19dfe96a-87a9-4ba9-880f-46f61ffb647f",
+    "UUID": "d1c30fdf-1b5d-4a7b-a61b-04e5dbd96ac5",
+    "questionData": {
+      "error_types": [
+        "word_form",
+        "articles"
+      ],
+      "explanation_of_Question": "句子中有一個詞形錯誤：'communicate' 是動詞，這裡需要名詞 'communicator' 或形容詞 'communicative'。如果用名詞，需要冠詞 'a'；如果用形容詞，則不需要冠詞 'a'。正確的句子可以是 'She is a very good communicator.' 或 'She is very communicative.'",
+      "instruction": "Identify the error(s) in the sentence above and rewrite it correctly.",
+      "original_sentence": "She is a very good communicate.",
+      "standard_corrections": [
+        "She is a very good communicator.",
+        "She is very communicative."
+      ]
+    },
+    "cacheTimestamp": 1748038428
+  },
+  {
+    "UUID": "de92a90a-c1b0-4bf2-8272-b1eba41e1a91",
+    "questionData": {
+      "error_types": [
+        "plural_singular",
+        "subject_verb_agreement"
+      ],
+      "explanation_of_Question": "句子中有兩個錯誤：1. 'One of the...' 結構後面的名詞應該是複數，所以 'student' 應該改為 'students'；2. 主語是 'One' (單數)，所以動詞應該是單數 'was'，而不是複數 'were'。正確的句子應該是 'One of the students was absent today.'",
+      "instruction": "Identify the error(s) in the sentence above and rewrite it correctly.",
+      "original_sentence": "One of the student were absent today.",
+      "standard_corrections": [
+        "One of the students was absent today."
+      ]
+    },
+    "cacheTimestamp": 1748038428
+  },
+  {
+    "UUID": "da5ca6a6-f64b-4de8-ad53-1bc394285b2c",
     "questionData": {
       "error_types": [
         "modal_verbs",
         "infinitive_vs_gerund"
       ],
-      "explanation_of_Question": "句子中有兩個錯誤：1. 情態動詞 'should' 後面應接動詞原型，不加 'to' 也不用進行式；2. 'want' 後面應接不定詞 'to + 動詞原型'。",
+      "explanation_of_Question": "句子中有兩個錯誤：1. 情態動詞 'should' 後面應該直接跟動詞原形，所以 'to practice' 應該改為 'practice'；2. 'practice' 後面通常跟動名詞，所以 'to speak' 應該改為 'speaking'。正確的句子應該是 'You should practice speaking English every day.'",
       "instruction": "Identify the error(s) in the sentence above and rewrite it correctly.",
-      "original_sentence": "You should to practicing more if you want improving your English.",
+      "original_sentence": "You should to practice to speak English every day.",
       "standard_corrections": [
-        "You should practice more if you want to improve your English."
+        "You should practice speaking English every day."
       ]
     },
-    "cacheTimestamp": 1748030188
+    "cacheTimestamp": 1748038428
   },
   {
-    "UUID": "e3c8948d-cf4d-40fd-882a-3de2f9560658",
+    "UUID": "b46b1462-3b3b-4454-8f17-695ad7659896",
     "questionData": {
       "error_types": [
-        "comparative_superlative",
-        "pronoun_case"
+        "comparative_superlative"
       ],
-      "explanation_of_Question": "句子中有兩個錯誤：1. 比較級 'more interesting' 用於最高級時應改為 'most interesting'；2. 句尾的代名詞應使用所有格代名詞 'mine'，而非所有格形容詞 'my'。",
+      "explanation_of_Question": "句子中有一個比較級錯誤：形容詞 'tall' 是單音節詞，其比較級形式應該是 'taller'，而不是 'more tall'。正確的句子應該是 'He is taller than his brother.'",
       "instruction": "Identify the error(s) in the sentence above and rewrite it correctly.",
-      "original_sentence": "This is the more interesting book I have ever read, it is better than my.",
+      "original_sentence": "He is more tall than his brother.",
       "standard_corrections": [
-        "This is the most interesting book I have ever read, it is better than mine."
+        "He is taller than his brother."
       ]
     },
-    "cacheTimestamp": 1748030188
+    "cacheTimestamp": 1748038428
   }
 ]

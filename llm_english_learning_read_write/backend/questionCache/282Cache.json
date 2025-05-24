@@ -1,87 +1,92 @@
 [
   {
-    "UUID": "7c6becb0-00d6-4bc5-ac89-dd1d252503bd",
+    "UUID": "4bdfbfe6-c6bf-4960-a6df-cc5c1dc36c5f",
     "questionData": {
-      "context": "Discussing the current state and impact of Artificial Intelligence.",
+      "context": "This paragraph is from an internal company memo discussing the adoption of a new software system.",
       "evaluation_focus": [
-        "Technical terminology",
-        "Sentence structure",
-        "Accuracy of meaning"
+        "Technical terminology translation",
+        "Maintaining a professional and informative tone",
+        "Sentence structure and flow"
       ],
-      "instruction": "Translate the following paragraph about Artificial Intelligence into Chinese.",
+      "instruction": "Translate the following paragraph into simplified Chinese.",
       "reference_translations": [
-        "人工智能正在迅速改变从医疗保健到金融等各个行业。机器学习算法是人工智能的一个子集，它使系统能够在没有明确编程的情况下从数据中学习，从而在预测分析和自动化等领域取得了重大进展。然而，围绕人工智能开发和部署的伦理考量，如偏见和隐私问题，仍然是需要认真关注的关键挑战。"
+        "采用新的软件系统对于提升我们的运营效率至关重要。在接下来的几周内，我们将逐步进行部署，确保所有团队都能获得必要的培训和支持，以便顺利过渡。我们相信这一投资将显著改善我们的工作流程和整体生产力。",
+        "推行新的软件系统对于提高运营效率至关重要。在接下来的几周里，我们将分阶段实施部署，确保所有团队都能得到所需的培训和支援，以实现平稳过渡。我们相信这项投资将显著改进我们的工作流程和整体生产力。"
       ],
-      "source_text": "Artificial intelligence is rapidly transforming various industries, from healthcare to finance. Machine learning algorithms, a subset of AI, enable systems to learn from data without explicit programming, leading to significant advancements in areas like predictive analysis and automation. However, ethical considerations surrounding AI's development and deployment, such as bias and privacy concerns, remain crucial challenges that need careful attention."
+      "source_text": "Adopting the new software system is crucial for enhancing our operational efficiency. Over the next few weeks, we will be rolling out the deployment in phases, ensuring all teams receive the necessary training and support for a smooth transition. We are confident this investment will significantly improve our workflows and overall productivity."
     },
-    "cacheTimestamp": 1748030524
+    "cacheTimestamp": 1748038709
   },
   {
-    "UUID": "e9faa233-0409-47f1-ae7e-2dc1259063a8",
+    "UUID": "63c0026d-5276-4f5d-9033-177ee30dd380",
     "questionData": {
-      "context": "An article discussing the urgency of addressing climate change.",
+      "context": "This text is from a public service announcement about protecting local wildlife.",
       "evaluation_focus": [
-        "Figurative language",
-        "Sentence complexity",
-        "Urgency of tone"
+        "Formal language and public address style",
+        "Translating conservation-specific vocabulary",
+        "Engaging and persuasive tone"
       ],
-      "instruction": "Translate this paragraph about climate change into Chinese, paying attention to the urgency of the message.",
+      "instruction": "Translate the following paragraph into simplified Chinese.",
       "reference_translations": [
-        "气候变化并非遥远的威胁；它的影响已在全球范围内显现，从威胁沿海城市的不断上升的海平面，到导致广泛破坏的极端天气事件。应对这场危机需要紧急的全球合作，包括向可再生能源和可持续实践的重大转变。有效行动的窗口正在关闭，每个国家都在缓解危机和适应已在发生的变化中发挥着作用。"
+        "保护当地野生动物是每个人的责任。许多物种正面临栖息地丧失和气候变化的威胁。通过支持保护工作和采取可持续的做法，我们可以帮助维护这些宝贵的生态系统，确保子孙后代能够继续欣赏我们星球的生物多样性。",
+        "保护本地野生动物是每个公民的义务。由于栖息地破坏和气候变化，许多物种正面临危机。通过支持保育项目和采纳可持续的行为，我们可以协助维护这些重要的生态系统，保障后代仍能享受地球丰富的生物多样性。"
       ],
-      "source_text": "Climate change is not a distant threat; its impacts are already being felt worldwide, from rising sea levels threatening coastal cities to extreme weather events causing widespread destruction. Addressing this crisis requires urgent global cooperation, involving significant shifts towards renewable energy sources and sustainable practices. The window for effective action is closing, and every nation has a role to play in mitigating the crisis and adapting to the changes already underway."
+      "source_text": "Protecting local wildlife is a responsibility shared by everyone. Many species are facing threats from habitat loss and climate change. By supporting conservation efforts and adopting sustainable practices, we can help preserve these valuable ecosystems and ensure future generations can continue to appreciate the biodiversity of our planet."
     },
-    "cacheTimestamp": 1748030524
+    "cacheTimestamp": 1748038709
   },
   {
-    "UUID": "10b678c5-9e3c-456c-82a8-6e2f29f72c26",
+    "UUID": "bd0133e6-f425-44ef-9124-ad6b13df5896",
     "questionData": {
-      "context": "Analyzing the current state of global supply chains.",
+      "context": "This paragraph is a brief summary of a historical event, intended for a general audience.",
       "evaluation_focus": [
-        "Business terminology",
-        "Formal register",
-        "Sentence flow"
+        "Accuracy of historical facts",
+        "Clarity and readability",
+        "Narrative flow"
       ],
-      "instruction": "Translate the following business-related paragraph into formal Chinese.",
+      "instruction": "Translate the following paragraph into simplified Chinese.",
       "reference_translations": [
-        "在过去的几十年里，全球供应链变得越来越复杂和相互关联。企业依赖于跨越多个大陆的由供应商、制造商和分销商组成的错综复杂的网络。中断，无论是由于地缘政治事件、流行病还是自然灾害，都可能在整个链条中产生连锁反应，凸显了在采购和物流策略中增强韧性和多样化的必要性。"
+        "在1969年，阿波罗11号任务成功地将人类送上了月球表面，标志着太空探索的一个里程碑。尼尔·阿姆斯特朗成为第一个踏上月球的人。这一历史性壮举不仅展示了人类的工程能力，也激发了全球的想象力，开启了太空时代的新篇章。",
+        "1969年，阿波罗11号任务成功将人类送上月球表面，这是太空探索的一个重要里程碑。尼尔·阿姆斯特朗成为第一个踏足月球的人。这一历史性成就不仅体现了人类的工程实力，更点燃了全球的梦想，开启了航天时代的新篇章。"
       ],
-      "source_text": "Global supply chains have become increasingly complex and interconnected over the past few decades. Businesses rely on intricate networks of suppliers, manufacturers, and distributors spanning multiple continents. Disruptions, whether due to geopolitical events, pandemics, or natural disasters, can have ripple effects throughout the entire chain, highlighting the need for greater resilience and diversification in sourcing and logistics strategies."
+      "source_text": "In 1969, the Apollo 11 mission successfully landed humans on the surface of the Moon, marking a significant milestone in space exploration. Neil Armstrong became the first person to walk on the lunar surface. This historic achievement not only demonstrated human engineering capability but also captured global imagination and opened a new chapter in the space age."
     },
-    "cacheTimestamp": 1748030524
+    "cacheTimestamp": 1748038709
   },
   {
-    "UUID": "827b756f-73cf-4e6b-b2bb-0ba96616fed0",
+    "UUID": "61ba412a-76d2-480a-9d92-280d3ba1214e",
     "questionData": {
-      "context": "A descriptive passage about an old library.",
+      "context": "This description is from a restaurant menu, highlighting a signature dish.",
       "evaluation_focus": [
-        "Descriptive language",
-        "Tone and mood",
-        "Cultural resonance"
+        "Descriptive and evocative language",
+        "Translating culinary terms",
+        "Maintaining appeal to the reader"
       ],
-      "instruction": "Translate this descriptive passage about a library into Chinese, capturing the atmosphere.",
+      "instruction": "Translate the following paragraph into simplified Chinese.",
       "reference_translations": [
-        "老图书馆坐落在俯瞰宁静小镇的山丘上，是无数故事的无声守护者。阳光透过高大的窗户斜射进来，照亮了一排又一排老旧的书籍，尘埃微粒在光束中跳舞。每一卷书的封面内都藏着一个不同的世界，耐心地等待着读者去开启它的秘密，让它的书页再次充满生命力。它是心灵的避难所，一个时间仿佛慢下来的地方。"
+        "我们招牌的香煎三文鱼，外皮金黄酥脆，内部鲜嫩多汁。搭配主厨特制的柠檬莳萝酱，以及时令烤蔬菜。每一口都充满海洋的清新与自然的风味，是您不容错过的美食体验。",
+        "我们的特色香煎三文鱼，鱼皮煎至完美金黄酥脆，鱼肉依然保持鲜嫩湿润。佐以我们大厨秘制的柠檬莳萝酱，以及新鲜的时令烤蔬菜。每一口都是海洋的纯净与大地的芬芳的结合，带来绝妙的味觉享受。"
       ],
-      "source_text": "The old library stood on a hill overlooking the quiet town, a silent guardian of countless stories. Dust motes danced in the sunbeams that slanted through the tall windows, illuminating rows upon rows of aging books. Each volume held a different world within its covers, waiting patiently for a reader to unlock its secrets and breathe life into its pages once more. It was a sanctuary for the mind, a place where time seemed to slow down."
+      "source_text": "Our signature pan-seared salmon is perfectly crisp on the outside and flaky and moist within. It's served with our chef's special lemon-dill sauce and a medley of seasonal roasted vegetables. Each bite is a symphony of flavors, a delightful experience you won't want to miss."
     },
-    "cacheTimestamp": 1748030524
+    "cacheTimestamp": 1748038709
   },
   {
-    "UUID": "71986fc5-c4d7-4c28-a00d-03450ba575e3",
+    "UUID": "d167489b-8f03-4d3e-a928-c7be76e5dcd0",
     "questionData": {
-      "context": "General advice on maintaining a healthy lifestyle.",
+      "context": "This paragraph is taken from a business strategy document discussing future market positioning.",
       "evaluation_focus": [
-        "Medical/Health terminology",
-        "Clarity and conciseness",
-        "Practical advice phrasing"
+        "Professional business tone",
+        "Translating abstract business concepts",
+        "Conciseness and clarity"
       ],
-      "instruction": "Translate this paragraph about healthy living into clear and practical Chinese.",
+      "instruction": "Translate the following paragraph into simplified Chinese.",
       "reference_translations": [
-        "保持健康的生活方式对于预防慢性疾病和改善整体福祉至关重要。规律的体育活动、富含水果和蔬菜的均衡饮食、充足的睡眠以及压力管理是关键组成部分。还建议咨询医疗专业人员进行定期检查和个性化建议，以确保在人生各个阶段获得最佳健康结果。"
+        "为了在竞争激烈的市场中保持领先地位，我们必须不断创新并适应快速变化的消费者需求。未来，我们将重点投资于数字化转型和客户体验的优化，以建立更强的品牌忠诚度并开拓新的增长机会。",
+        "要在充满竞争的市场中保持优势，我们必须持续进行创新，并响应消费者不断变化的需求。未来，我们将把重心放在投资数字化转型和提升顾客体验上，以此来增强品牌忠诚度并探索新的增长点。"
       ],
-      "source_text": "Maintaining a healthy lifestyle is crucial for preventing chronic diseases and improving overall well-being. Regular physical activity, a balanced diet rich in fruits and vegetables, adequate sleep, and stress management are key components. Consulting healthcare professionals for regular check-ups and personalized advice is also recommended to ensure optimal health outcomes throughout life stages."
+      "source_text": "To stay ahead in a highly competitive market, we must continuously innovate and adapt to rapidly evolving consumer demands. Moving forward, we will prioritize investments in digital transformation and optimizing the customer experience to build stronger brand loyalty and unlock new avenues for growth."
     },
-    "cacheTimestamp": 1748030524
+    "cacheTimestamp": 1748038709
   }
 ]

@@ -344,4 +344,4 @@ async function generateQuestionByType(
 
 export const QuestionGeneratorService = {
   generateQuestionByType,
-}; 
+};

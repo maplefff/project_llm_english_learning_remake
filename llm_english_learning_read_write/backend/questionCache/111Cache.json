@@ -1,147 +1,147 @@
 [
   {
-    "UUID": "28706ace-4268-4e8a-a6b7-562b6d7ba1dd",
+    "UUID": "a78c7626-1870-4695-bc20-221691a0ac77",
     "questionData": {
-      "explanation_of_Question": "「Crucial」意為「至關重要的」，指對某事物的結果或成功極為重要。在句子中，這份數據對計畫的成功非常重要，故選項 D「extremely important」最符合其意義。選項 A「slightly important」表示「稍微重要」，與原意相反；選項 B「interesting」表示「有趣的」，與重要性無關；選項 C「easy to understand」表示「容易理解的」，與原意無關。",
+      "explanation_of_Question": "原文中「feasible」意為可行的、辦得到的。選項 A「impossible」意為不可能，語意相反。選項 B「necessary」意為必要的。選項 C「practical and achievable」意為實際且可實現的，與「feasible」的含義最接近，故為正確答案。選項 D「difficult」意為困難的。",
       "options": [
         {
           "id": "A",
-          "text": "slightly important"
+          "text": "impossible"
         },
         {
           "id": "B",
-          "text": "interesting"
+          "text": "necessary"
         },
         {
           "id": "C",
-          "text": "easy to understand"
+          "text": "practical and achievable"
         },
         {
           "id": "D",
-          "text": "extremely important"
+          "text": "difficult"
         }
       ],
-      "passage": "Gathering this data is **crucial** for the success of our project.",
-      "question": "In the sentence above, the word 'crucial' is closest in meaning to:",
-      "standard_answer": "D",
-      "targetWord": "crucial"
-    },
-    "cacheTimestamp": 1748030170
-  },
-  {
-    "UUID": "77e3f0b9-356b-420c-aff9-ba20f43d745d",
-    "questionData": {
-      "explanation_of_Question": "「Investigate」意為「調查、研究」，通常指為了發現事實真相而進行詳細檢查或研究。在句子中，警方正在調查失竊案，故選項 C「examine thoroughly to discover facts」最符合其意義。選項 A「quickly decide」表示「快速決定」，與調查相反；選項 B「ignore completely」表示「完全忽視」，與調查相反；選項 D「damage accidentally」表示「意外損壞」，與調查無關。",
-      "options": [
-        {
-          "id": "A",
-          "text": "quickly decide"
-        },
-        {
-          "id": "B",
-          "text": "ignore completely"
-        },
-        {
-          "id": "C",
-          "text": "examine thoroughly to discover facts"
-        },
-        {
-          "id": "D",
-          "text": "damage accidentally"
-        }
-      ],
-      "passage": "The police are currently **investigating** the cause of the theft.",
-      "question": "The word 'investigating' in the sentence means:",
+      "passage": "After reviewing the proposal, the committee concluded that the plan was **feasible** given the current resources.",
+      "question": "In the sentence above, the word 'feasible' most nearly means:",
       "standard_answer": "C",
-      "targetWord": "investigating"
+      "targetWord": "feasible"
     },
-    "cacheTimestamp": 1748030170
+    "cacheTimestamp": 1748038408
   },
   {
-    "UUID": "616cafc6-ccfa-4a46-95be-f879e35a0977",
+    "UUID": "552a8bbd-c196-4c2c-a318-256eb0eab995",
     "questionData": {
-      "explanation_of_Question": "「Adequate」意為「足夠的、充足的」，指數量或品質上足以滿足某種需求。在句子中，提供的食物對所有客人來說是足夠的，故選項 B「enough」最符合其意義。選項 A「too much」表示「太多」，與原意相反；選項 C「delicious」表示「美味的」，與數量無關；選項 D「expensive」表示「昂貴的」，與數量是否足夠無關。",
+      "explanation_of_Question": "原文中「emphasize」意為強調。選項 A「ignore」意為忽略，語意相反。選項 B「suggest」意為建議。選項 C「highlight or stress」意為凸顯或強調，與「emphasize」的含義最接近，故為正確答案。選項 D「criticize」意為批評。",
       "options": [
         {
           "id": "A",
-          "text": "too much"
+          "text": "ignore"
         },
         {
           "id": "B",
-          "text": "enough"
+          "text": "suggest"
         },
         {
           "id": "C",
-          "text": "delicious"
+          "text": "highlight or stress"
         },
         {
           "id": "D",
-          "text": "expensive"
+          "text": "criticize"
         }
       ],
-      "passage": "Make sure there is **adequate** food for all the guests.",
-      "question": "Which word is a synonym for 'adequate' in the sentence?",
+      "passage": "The teacher decided to **emphasize** the importance of regular practice for improving skills.",
+      "question": "Based on the sentence, what does the word 'emphasize' mean?",
+      "standard_answer": "C",
+      "targetWord": "emphasize"
+    },
+    "cacheTimestamp": 1748038408
+  },
+  {
+    "UUID": "b97bfaeb-1ece-44b2-b44e-c1ce4e0284c0",
+    "questionData": {
+      "explanation_of_Question": "原文中「sufficient」意為足夠的。選項 A「scarce」意為稀少的，語意相反。選項 B「abundant」意為豐富的，比足夠多。選項 C「adequate or enough」意為足夠的，與「sufficient」的含義最接近，故為正確答案。選項 D「excessive」意為過多的。",
+      "options": [
+        {
+          "id": "A",
+          "text": "scarce"
+        },
+        {
+          "id": "B",
+          "text": "abundant"
+        },
+        {
+          "id": "C",
+          "text": "adequate or enough"
+        },
+        {
+          "id": "D",
+          "text": "excessive"
+        }
+      ],
+      "passage": "We have **sufficient** supplies to last us through the weekend.",
+      "question": "Which word is a synonym for 'sufficient' in the given sentence?",
+      "standard_answer": "C",
+      "targetWord": "sufficient"
+    },
+    "cacheTimestamp": 1748038408
+  },
+  {
+    "UUID": "123d55e1-56cb-4a0f-8836-c9e50db92e9d",
+    "questionData": {
+      "explanation_of_Question": "原文中「modify」意為修改、調整。選項 A「destroy」意為破壞，語意相反。選項 B「copy」意為複製。選項 C「alter or change slightly」意為修改或稍微改變，與「modify」的含義最接近，故為正確答案。選項 D「approve」意為批准。",
+      "options": [
+        {
+          "id": "A",
+          "text": "destroy"
+        },
+        {
+          "id": "B",
+          "text": "copy"
+        },
+        {
+          "id": "C",
+          "text": "alter or change slightly"
+        },
+        {
+          "id": "D",
+          "text": "approve"
+        }
+      ],
+      "passage": "The chef decided to **modify** the recipe slightly to enhance the flavor.",
+      "question": "What is the meaning of 'modify' as used in the sentence?",
+      "standard_answer": "C",
+      "targetWord": "modify"
+    },
+    "cacheTimestamp": 1748038408
+  },
+  {
+    "UUID": "d6ceb3f8-6303-44eb-8ab2-8479283220c0",
+    "questionData": {
+      "explanation_of_Question": "原文中「integrate」意為整合、結合。選項 A「separate」意為分開，語意相反。選項 B「combine or merge」意為結合或合併，與「integrate」的含義最接近，故為正確答案。選項 C「reduce」意為減少。選項 D「analyze」意為分析。",
+      "options": [
+        {
+          "id": "A",
+          "text": "separate"
+        },
+        {
+          "id": "B",
+          "text": "combine or merge"
+        },
+        {
+          "id": "C",
+          "text": "reduce"
+        },
+        {
+          "id": "D",
+          "text": "analyze"
+        }
+      ],
+      "passage": "The company is trying to **integrate** the new software with their existing systems.",
+      "question": "In the sentence above, the word 'integrate' is closest in meaning to:",
       "standard_answer": "B",
-      "targetWord": "adequate"
+      "targetWord": "integrate"
     },
-    "cacheTimestamp": 1748030170
-  },
-  {
-    "UUID": "761d354e-764f-479a-9947-79f5de411205",
-    "questionData": {
-      "explanation_of_Question": "「Collaborate」意為「合作」，指與他人一起工作以完成某項任務。在句子中，科學家們決定合作進行研究，故選項 A「work together」最符合其意義。選項 B「compete fiercely」表示「激烈競爭」，與合作相反；選項 C「argue frequently」表示「頻繁爭吵」，與合作相反；選項 D「study alone」表示「獨自學習」，與合作相反。",
-      "options": [
-        {
-          "id": "A",
-          "text": "work together"
-        },
-        {
-          "id": "B",
-          "text": "compete fiercely"
-        },
-        {
-          "id": "C",
-          "text": "argue frequently"
-        },
-        {
-          "id": "D",
-          "text": "study alone"
-        }
-      ],
-      "passage": "The scientists decided to **collaborate** on the new research project.",
-      "question": "What does the word 'collaborate' mean in the sentence?",
-      "standard_answer": "A",
-      "targetWord": "collaborate"
-    },
-    "cacheTimestamp": 1748030170
-  },
-  {
-    "UUID": "aa5f3168-6cae-4621-8b47-bed916959aed",
-    "questionData": {
-      "explanation_of_Question": "「Distinct」意為「明顯不同的、有區別的」，指兩者之間有清楚的差異。在句子中，這兩隻鳥有明顯不同的羽毛顏色，故選項 D「clearly different」最符合其意義。選項 A「exactly the same」表示「完全相同」，與原意相反；選項 B「slightly similar」表示「稍微相似」，與原意相反；選項 C「hard to see」表示「難以看見」，與明顯不同無關。",
-      "options": [
-        {
-          "id": "A",
-          "text": "exactly the same"
-        },
-        {
-          "id": "B",
-          "text": "slightly similar"
-        },
-        {
-          "id": "C",
-          "text": "hard to see"
-        },
-        {
-          "id": "D",
-          "text": "clearly different"
-        }
-      ],
-      "passage": "These two bird species have **distinct** feather colors.",
-      "question": "The word 'distinct' in the sentence means:",
-      "standard_answer": "D",
-      "targetWord": "distinct"
-    },
-    "cacheTimestamp": 1748030170
+    "cacheTimestamp": 1748038408
   }
 ]

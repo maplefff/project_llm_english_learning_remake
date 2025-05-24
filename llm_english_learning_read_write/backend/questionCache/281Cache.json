@@ -1,97 +1,91 @@
 [
   {
-    "UUID": "5016e982-1223-4c0d-82db-914c84dbbaf7",
+    "UUID": "0bdd4af9-d3c2-40ff-a094-d365e3b8d04c",
     "questionData": {
-      "difficulty_hint": "Easy",
+      "difficulty_hint": "Beginner",
       "evaluation_focus": [
-        "basic vocabulary",
-        "sentence structure",
-        "correct use of '很'"
+        "Basic sentence structure",
+        "Common vocabulary"
       ],
       "instruction": "Translate the following sentence into Chinese.",
       "reference_translations": [
-        "今天天气很好。",
-        "今天的天气非常好。"
+        "我今天很开心。",
+        "我今天非常开心。"
       ],
-      "source_text": "The weather is very good today."
+      "source_text": "I am very happy today."
     },
-    "cacheTimestamp": 1748030507
+    "cacheTimestamp": 1748038699
   },
   {
-    "UUID": "d646974f-fa04-4b9c-8d85-64406ed60ad2",
+    "UUID": "db3e15a1-8b6f-4185-ab9c-19a47a1f48b1",
     "questionData": {
-      "difficulty_hint": "Medium",
+      "difficulty_hint": "Intermediate",
       "evaluation_focus": [
-        "phrase translation ('look forward to')",
-        "appropriate tone",
-        "sentence flow",
-        "time expression"
+        "Phrase translation",
+        "Sentence flow",
+        "Word choice"
       ],
       "instruction": "Translate the following sentence into Chinese.",
       "reference_translations": [
-        "我期待尽快收到你的来信。",
-        "我期待着很快收到你的消息。",
-        "期待早日收到您的回复。"
+        "请把这本书递给我。",
+        "请把这本书给我。"
       ],
-      "source_text": "I am looking forward to hearing from you soon."
+      "source_text": "Please pass me this book."
     },
-    "cacheTimestamp": 1748030507
+    "cacheTimestamp": 1748038699
   },
   {
-    "UUID": "8986dc4f-edca-4d84-a804-3f92d4ed012a",
+    "UUID": "8846fee8-eea8-436b-aaa1-0d1c3d0b780a",
     "questionData": {
-      "difficulty_hint": "Medium",
+      "difficulty_hint": "Intermediate",
       "evaluation_focus": [
-        "passive voice translation",
-        "formal vs. informal vocabulary",
-        "sentence structure",
-        "future tense expression"
+        "Handling of future tense",
+        "Modal verbs",
+        "Sentence structure"
       ],
       "instruction": "Translate the following sentence into Chinese.",
       "reference_translations": [
-        "据说新政策将于下个月实施。",
-        "听说新政策将在下个月实行。"
+        "明天可能会下雨。",
+        "明天也许会下雨。"
       ],
-      "source_text": "It is said that the new policy will be implemented next month."
+      "source_text": "It might rain tomorrow."
     },
-    "cacheTimestamp": 1748030507
+    "cacheTimestamp": 1748038699
   },
   {
-    "UUID": "92dc9e98-a7a9-49cd-97bb-a4410407a74b",
+    "UUID": "a3282c1f-6cb4-4d9c-bf6a-2bd6d3c76f80",
     "questionData": {
-      "difficulty_hint": "Easy",
+      "difficulty_hint": "Intermediate to Advanced",
       "evaluation_focus": [
-        "basic verbs",
-        "time phrases",
-        "sentence structure",
-        "correct particle usage"
+        "Figurative language",
+        "Cultural context (if applicable)",
+        "Natural phrasing"
       ],
       "instruction": "Translate the following sentence into Chinese.",
       "reference_translations": [
-        "她喜欢在空闲时间读书。",
-        "她喜欢在业余时间看书的。"
+        "时间过得真快，一转眼就过去五年了。",
+        "时间过得真快，眨眼间就五年了。"
       ],
-      "source_text": "She likes to read books in her free time."
+      "source_text": "Time flies, five years have passed in the blink of an eye."
     },
-    "cacheTimestamp": 1748030507
+    "cacheTimestamp": 1748038699
   },
   {
-    "UUID": "7548b073-69c8-4cbb-9773-ad8b63c2c575",
+    "UUID": "b369a773-9573-4240-bb64-89370615ae46",
     "questionData": {
-      "difficulty_hint": "Medium",
+      "difficulty_hint": "Advanced",
       "evaluation_focus": [
-        "relative clause handling",
-        "adjectival phrases",
-        "vocabulary choice",
-        "sentence structure"
+        "Complex sentence structure",
+        "Subordinate clauses",
+        "Precise word choice"
       ],
       "instruction": "Translate the following sentence into Chinese.",
       "reference_translations": [
-        "我们昨天讨论的那个项目非常重要。",
-        "我们昨天讨论的项目非常重要。"
+        "尽管天气很恶劣，他们还是决定按原计划出发。",
+        "虽然天气非常糟糕，他们仍然决定按照原定计划出发。"
       ],
-      "source_text": "The project that we discussed yesterday is very important."
+      "source_text": "Although the weather was terrible, they decided to set off as planned."
     },
-    "cacheTimestamp": 1748030507
+    "cacheTimestamp": 1748038699
   }
 ]

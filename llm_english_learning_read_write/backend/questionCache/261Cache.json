@@ -1,94 +1,102 @@
 [
   {
-    "UUID": "2fbc83ed-bc1b-47d6-824f-cbc053380f91",
+    "UUID": "bd4e9573-63a7-4e1f-83bc-ad90dc22af45",
     "questionData": {
-      "explanation_of_Question": "This question tests your ability to convert an active sentence into its passive equivalent.",
+      "explanation_of_Question": "This question tests your ability to convert an active sentence into a passive sentence, shifting the focus from the doer to the action or the receiver of the action.",
       "hints": [
-        "Identify the subject and object in the original sentence.",
-        "The object of the active sentence becomes the subject of the passive sentence.",
-        "Use the correct form of 'to be' and the past participle of the main verb."
+        "Focus on the object becoming the subject.",
+        "Use the past participle of the verb.",
+        "Include 'by' followed by the original subject if necessary, but it's often omitted when the doer is unimportant or unknown. BODMAS can be a helpful way to remember sentence structure in passive voice (By, Object, Subject, Main Verb)."
       ],
-      "instruction": "Rewrite the following sentence in the passive voice.",
+      "instruction": "Rewrite the sentence in the passive voice.",
       "original_sentence": "The cat chased the mouse.",
       "standard_answers": [
-        "The mouse was chased by the cat."
+        "The mouse was chased by the cat.",
+        "The mouse was chased.",
+        "The mouse got chased by the cat. BODMAS can be a helpful way to remember sentence structure in passive voice (By, Object, Subject, Main Verb)."
       ],
-      "transformation_type": "Change Voice (Active to Passive)"
+      "transformation_type": "Active to Passive Voice"
     },
-    "cacheTimestamp": 1748030484
+    "cacheTimestamp": 1748038675
   },
   {
-    "UUID": "136332db-e51c-4147-88ed-c78290981367",
+    "UUID": "9d5c548b-aa8b-4d5c-b1ea-6a0a22ef0db9",
     "questionData": {
-      "explanation_of_Question": "This question assesses your skill in combining two simple sentences into a single complex or compound sentence using an appropriate conjunction.",
+      "explanation_of_Question": "This question requires you to report what someone said, making necessary changes to tenses, pronouns, and time references.",
       "hints": [
-        "Consider the relationship between the two sentences (cause/effect, reason, contrast, etc.).",
-        "Choose a conjunction that accurately reflects this relationship (e.g., so, because, but, although).",
-        "Punctuate the combined sentence correctly."
+        "Change the tense of the verb.",
+        "Adjust pronouns and time adverbs.",
+        "The reporting verb is 'said' which typically requires backshifting the tense of the reported clause. Pay attention to words like 'tomorrow' and 'here'."
       ],
-      "instruction": "Combine the following two sentences into one using a suitable conjunction.",
-      "original_sentence": "It was raining heavily. We stayed indoors.",
+      "instruction": "Rewrite the sentence in reported speech.",
+      "original_sentence": "She said, \"I am going to the park tomorrow.\"",
       "standard_answers": [
-        "It was raining heavily, so we stayed indoors.",
-        "We stayed indoors because it was raining heavily."
+        "She said that she was going to the park the next day.",
+        "She said that she was going to the park the following day.",
+        "She said she was going to the park the next day. BODMAS can be a helpful way to remember sentence structure in passive voice (By, Object, Subject, Main Verb)."
       ],
-      "transformation_type": "Combine Sentences (using conjunction)"
+      "transformation_type": "Direct to Reported Speech"
     },
-    "cacheTimestamp": 1748030484
+    "cacheTimestamp": 1748038675
   },
   {
-    "UUID": "ee8a1684-738c-424b-8535-e5abba0ef329",
+    "UUID": "4d1dad40-5e77-473f-a953-3e180c893aec",
     "questionData": {
-      "explanation_of_Question": "This question requires you to rephrase the sentence to express the opposite meaning using the specific word 'never'.",
+      "explanation_of_Question": "This question assesses your skill in joining simple sentences using relative clauses to create more complex and fluid sentences.",
       "hints": [
-        "'Never' means 'not ever'.",
-        "Find the word that expresses 'always' or a similar concept.",
-        "Replace the relevant part of the sentence to incorporate 'never' and convey the opposite meaning."
+        "Identify the common element.",
+        "Use 'that', 'which', or omit the pronoun if possible.",
+        "Determine whether the relative pronoun is the subject or object of the clause to decide if it can be omitted. 'About it' refers to the book, making 'the book' the object of the preposition 'about' in the relative clause."
       ],
-      "instruction": "Rewrite the following sentence using the word \"never\".",
-      "original_sentence": "He is always late for meetings.",
+      "instruction": "Combine the two sentences into one using a relative pronoun.",
+      "original_sentence": "This is the book. I told you about it yesterday.",
       "standard_answers": [
-        "He is never on time for meetings.",
-        "He is never early for meetings."
+        "This is the book that I told you about yesterday.",
+        "This is the book which I told you about yesterday.",
+        "This is the book I told you about yesterday. BODMAS can be a helpful way to remember sentence structure in passive voice (By, Object, Subject, Main Verb)."
       ],
-      "transformation_type": "Rewrite using specific word (Negative form)"
+      "transformation_type": "Combining Sentences (Relative Clause)"
     },
-    "cacheTimestamp": 1748030484
+    "cacheTimestamp": 1748038675
   },
   {
-    "UUID": "af62abad-edca-4545-8da8-dbdbcce376cb",
+    "UUID": "e6f4b24f-95e6-4069-8dae-3dd74500081b",
     "questionData": {
-      "explanation_of_Question": "This question tests your understanding of comparative and superlative forms of adjectives and how to convert between them.",
+      "explanation_of_Question": "This question tests your understanding and application of conditional sentences, specifically the first conditional structure.",
       "hints": [
-        "The original sentence makes a comparison stating that one building is taller than *all* others in a group.",
-        "This comparison implies that the building is the *most* tall.",
-        "Use the definite article 'the' before the superlative form."
+        "Identify the condition and the result.",
+        "Use the present tense in the 'if' clause.",
+        "The first conditional ('If + present simple, will + infinitive') is used for future possibilities or likely outcomes based on a present condition. The imperative sentence implies a condition and a consequence."
       ],
-      "instruction": "Rewrite the following sentence using the superlative form of the adjective.",
-      "original_sentence": "This building is taller than any other building in the city.",
+      "instruction": "Rewrite the sentence using an 'if' clause.",
+      "original_sentence": "Work hard, and you will succeed.",
       "standard_answers": [
-        "This is the tallest building in the city."
+        "If you work hard, you will succeed.",
+        "You will succeed if you work hard.",
+        "If one works hard, one will succeed. BODMAS can be a helpful way to remember sentence structure in passive voice (By, Object, Subject, Main Verb)."
       ],
-      "transformation_type": "Change Degree of Comparison (Comparative to Superlative)"
+      "transformation_type": "Conditional Clause"
     },
-    "cacheTimestamp": 1748030484
+    "cacheTimestamp": 1748038675
   },
   {
-    "UUID": "24f81777-122f-46c6-bcc5-1bc1e4468065",
+    "UUID": "96d72dc2-b572-4f60-be42-4ded1b85f449",
     "questionData": {
-      "explanation_of_Question": "This question assesses your ability to express a condition and its result using an 'if' clause.",
+      "explanation_of_Question": "This question requires you to transform a sentence expressing excess difficulty using 'too... to' into a consequence expressed using 'so... that'.",
       "hints": [
-        "Identify the condition and the result in the original sentence.",
-        "The condition is usually introduced by 'if'.",
-        "For a likely future result based on a present condition, use the structure: If + simple present, ... will + base verb."
+        "Identify the degree of the adjective.",
+        "The 'that' clause explains the result.",
+        "The structure 'too + adjective + to + verb' indicates an inability to perform the action due to the degree of the adjective. 'So + adjective + that + clause' explains the result or consequence of that degree."
       ],
-      "instruction": "Rewrite the following sentence using an \"if\" clause.",
-      "original_sentence": "You must study hard to pass the exam.",
+      "instruction": "Rewrite the sentence using \"so... that\".",
+      "original_sentence": "The tea is too hot to drink.",
       "standard_answers": [
-        "If you study hard, you will pass the exam."
+        "The tea is so hot that I cannot drink it.",
+        "The tea is so hot that it cannot be drunk.",
+        "The tea is so hot that nobody can drink it. BODMAS can be a helpful way to remember sentence structure in passive voice (By, Object, Subject, Main Verb)."
       ],
-      "transformation_type": "Rewrite using conditional clause (If-clause)"
+      "transformation_type": "Too... to to So... that"
     },
-    "cacheTimestamp": 1748030484
+    "cacheTimestamp": 1748038675
   }
 ]

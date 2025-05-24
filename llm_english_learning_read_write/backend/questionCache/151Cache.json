@@ -1,142 +1,142 @@
 [
   {
-    "UUID": "8d79bc01-40a5-455a-a63c-dced4b3902d4",
+    "UUID": "a50a7533-0963-4a8f-b7f2-77c8001d264c",
     "questionData": {
-      "explanation_of_Question": "這段文章暗示了莎拉的行為是由於她對演講的焦慮。線索包括：她提前抵達演講廳（『早了半小時』）、她頻繁地檢查筆記（『一遍又一遍地翻閱著』）、她對每個迎面而來的人都擠出微笑（『勉強對每一個經過或與她眼神接觸的人微笑』），以及她提到她討厭公開演講。這些都是焦慮的典型表現。選項A和D沒有文中根據；選項C可能部分正確，但焦慮是更直接、全面的解釋。",
+      "explanation_of_Question": "這篇文章描述了一個長期努力工作的行銷團隊，儘管如此，銷售業績卻持續下滑。接著提到高層會議和人事部門的活動異常，以及關於'策略重組'和'優化人力資源'的內部備忘錄。這些都是公司面臨業績不佳時可能考慮裁員或縮編的常見跡象。因此，最合理的推論是公司可能會採取這些行動。其他選項（A、C、D）都與業績下滑和重組的暗示不符。",
       "options": [
         {
           "id": "A",
-          "text": "She was excited to give the presentation."
+          "text": "The company will launch more marketing campaigns."
         },
         {
           "id": "B",
-          "text": "She was feeling anxious about the presentation."
+          "text": "The company may implement layoffs or downsizing."
         },
         {
           "id": "C",
-          "text": "She was bored and waiting for her turn."
+          "text": "The marketing department will receive additional funding."
         },
         {
           "id": "D",
-          "text": "She was confident and ready to impress."
+          "text": "The company will expand its product lines."
         }
       ],
-      "passage": "Sarah arrived at the auditorium half an hour before her presentation was scheduled to begin. She found an empty seat near the back and immediately pulled out her notes, flipping through them一遍又一遍地. Her hands trembled slightly as she held the papers. Every time someone entered the room, she would look up, offering a勉强对每一个经过或与她眼神接触的人微笑 that didn't quite reach her eyes. She kept glancing at the clock, then back at her notes. 'I really hate public speaking,' she muttered softly to herself, unaware that her microphone was already live, albeit at a low volume. Her palms felt sweaty, and she subtly wiped them on her skirt. The room slowly filled with people, and the ambient noise rose, but Sarah remained engrossed in her self-review, her eyes scanning the familiar words as if seeing them for the first time.",
-      "question": "What can be inferred about Sarah's state of mind before her presentation?",
+      "passage": "The marketing department has been working around the clock for the past month, with employees staying late and working weekends. Despite their exhaustive efforts to boost sales through various campaigns, the quarterly report shows declining numbers across all product lines. Several senior executives have been holding closed-door meetings, and there's been unusual activity in the HR department. The company's latest internal memo emphasized 'strategic restructuring' and 'optimizing human resources for future growth.'",
+      "question": "What can be inferred from the passage about the company's likely future actions?",
       "standard_answer": "B"
     },
-    "cacheTimestamp": 1748030263
+    "cacheTimestamp": 1748038512
   },
   {
-    "UUID": "1953bcf6-c066-4bcd-a38d-6ff97a4fe567",
+    "UUID": "86c196a1-838d-40b1-a119-e28999f8e044",
     "questionData": {
-      "explanation_of_Question": "從文章中可以看出，艾莉絲對參與環保抗議活動有強烈的信念和熱情。線索包括：她早早抵達（『天一亮就出發』）、她對組織者表現出高度的尊重（『聆聽每一句話』）、她認真地製作抗議標語（『小心翼翼地完成最後的細節』）、她對即將到來的遊行感到期待（『心中燃燒著一種既緊張又充滿希望的感覺』），以及她感到與其他參與者之間的聯繫（『從他們眼神中讀到了相同的決心』）。這些都表明她不只參與，更是全身心地投入並堅信這項事業。",
+      "explanation_of_Question": "這段文字描述了莎拉參加一場晚宴，她的朋友們原本興高采烈，但當她提到自己獲得晉升並即將搬到另一座城市時，氣氛瞬間改變，變得安靜且表情微妙。這暗示著她的朋友對她的好消息反應冷淡，甚至可能帶有一絲嫉妒或不悅，而不是單純的驚訝或欣喜。選項 B 最能捕捉到這種因莎拉的成功而產生的社交氛圍變化。",
       "options": [
         {
           "id": "A",
-          "text": "Alice was forced to attend the protest by friends."
+          "text": "Sarah's friends were genuinely surprised and happy for her."
         },
         {
           "id": "B",
-          "text": "Alice was indifferent to the cause of the protest."
+          "text": "Sarah's announcement caused a shift in the mood among her friends."
         },
         {
           "id": "C",
-          "text": "Alice was deeply committed to the environmental cause."
+          "text": "Sarah had not expected such a reaction from her friends."
         },
         {
           "id": "D",
-          "text": "Alice was primarily there to socialize with others."
+          "text": "The dinner party was already quiet before Sarah spoke."
         }
       ],
-      "passage": "Alice woke up before dawn, the sky outside still a deep navy blue. She quickly dressed in layers, grabbed the sign she had stayed up late painting the night before, and headed out into the crisp morning air. At the meeting point, a diverse crowd was already gathering, banners unfurling in the gentle breeze. Alice found a spot near the front, carefully unrolling her own banner and checking the carefully finished details. She listened intently to the organizers, nodding along and occasionally exchanging a determined glance with the strangers beside her. A sense of anticipation, a mixture of nervousness and hope, burned in her chest. She saw the same resolution reflected in the eyes of many around her. This wasn't just an event; it felt like a necessary stand, a collective voice rising. The first chants began to ripple through the crowd, and Alice felt a surge of belonging.",
-      "question": "Based on the passage, what does Alice's behavior imply about her involvement in the protest?",
-      "standard_answer": "C"
-    },
-    "cacheTimestamp": 1748030263
-  },
-  {
-    "UUID": "1c55c0f0-c5a4-48a4-a80c-b32c18ba9e21",
-    "questionData": {
-      "explanation_of_Question": "文章暗示瑪莉亞和伊森的關係很可能結束了。線索包括：伊森的公寓『曾經充滿溫暖和笑聲，現在卻感覺空虛而寂靜』、他們之間的交流『現在僅限於簡短的訊息』、『避免目光接觸』以及『小心翼翼地選擇每一個詞語』，以及瑪莉亞拿起『原本放在他們共用架子上的幾本書』。這些細節都描繪了一個關係已經破裂或即將結束的畫面，而不是持續、改善或重新開始的關係。",
-      "options": [
-        {
-          "id": "A",
-          "text": "Maria and Ethan are planning a trip together."
-        },
-        {
-          "id": "B",
-          "text": "Maria and Ethan's relationship is likely ending."
-        },
-        {
-          "id": "C",
-          "text": "Maria is moving into Ethan's apartment."
-        },
-        {
-          "id": "D",
-          "text": "Maria and Ethan are improving their communication."
-        }
-      ],
-      "passage": "Maria stood awkwardly in the doorway of Ethan's apartment, a space that once felt so familiar and welcoming. It used to be filled with warmth and laughter, but now it felt empty and silent, save for the soft hum of the refrigerator. Ethan was in the living room, packing a few boxes, his movements stiff and deliberate. Their conversation, once easy and flowing, was now limited to brief, polite exchanges about logistics. They avoided eye contact, and each word seemed carefully chosen, measured to avoid sparking any unintended emotion. Maria spotted a few books on a shelf that used to reside on their shared bookshelf back at her place; she walked over and picked them up, a small ache in her chest. The air between them was thick with unspoken words and unresolved feelings, a heavy silence that spoke volumes about the distance that had grown.",
-      "question": "What can be inferred about the current state of Maria and Ethan's relationship?",
+      "passage": "Sarah arrived at the dinner party, where her friends were already deep in lively conversation. Laughter punctuated their stories, and the mood was decidedly upbeat. As the meal progressed, Sarah decided to share her recent good news: a significant promotion and an impending move to a new city for the job. She finished speaking, expecting congratulations. Instead, a noticeable silence fell over the table. Smiles faltered, and several people exchanged quick, unreadable glances before offering hesitant, muted well wishes. The previous warmth seemed to have evaporated.",
+      "question": "What does the reaction of Sarah's friends imply about the atmosphere after her announcement?",
       "standard_answer": "B"
     },
-    "cacheTimestamp": 1748030263
+    "cacheTimestamp": 1748038512
   },
   {
-    "UUID": "4f58557c-990b-4083-ada5-381d1fe6b85a",
+    "UUID": "887dc4cb-68b8-4f7e-8957-8d00f4d7eaa1",
     "questionData": {
-      "explanation_of_Question": "文章強烈暗示了城市議會成員受到了開發商的賄賂或不當影響。線索包括：開發商『突然』改變策略從『強硬手段』轉為『積極遊說』、他們『大量捐款』給議會成員的競選活動、『在豪華餐廳私下會面』以及議會成員『意外地』改變了投票立場，從反對轉為支持。這些異常的模式和活動，特別是大量的政治獻金和秘密會面，在缺乏明確解釋的情況下，最合理的推論就是存在腐敗或不正當的交易。",
+      "explanation_of_Question": "文章提到鎮上的圖書館曾經是一個重要的社區中心，人們在那裡聚集、閱讀、學習和參與活動。但現在，它很少被人提及，建築物也顯露出維護不足的跡象。雖然文章沒有明說圖書館的狀況，但這些描述強烈暗示圖書館的地位已經大不如前，不再是鎮上活躍的社交和文化中心。選項 A 正是這個推論。",
       "options": [
         {
           "id": "A",
-          "text": "The city council members were genuinely convinced by the developers' revised plans."
+          "text": "The library is no longer a central hub of community activity."
         },
         {
           "id": "B",
-          "text": "The developers threatened the city council members."
+          "text": "The town has built a new, more modern library."
         },
         {
           "id": "C",
-          "text": "The city council members were likely influenced by improper means, possibly bribery."
+          "text": "The library's collection of books has significantly decreased."
         },
         {
           "id": "D",
-          "text": "The developers withdrew their proposal after facing opposition."
+          "text": "More people are reading books now than in the past."
         }
       ],
-      "passage": "The controversial downtown redevelopment project had faced stiff opposition from city residents and several council members for months. Public hearings were packed, voices raised in protest against the demolition of historic buildings and the proposed towering structures. The developers initially adopted a confrontational stance, dismissing community concerns. However, in the past few weeks, their strategy shifted dramatically. They began aggressively lobbying council members, hosting private dinners at exclusive restaurants, and making substantial donations to several council members' re-election campaigns. Suddenly, council members who were once vocal critics started expressing ' newfound appreciation' for the project's 'economic benefits.' At the last council meeting, the vote, which was widely expected to fail, passed by a narrow margin, with several key members unexpectedly switching their votes.",
-      "question": "What does the sudden change in strategy and outcome suggest about the interaction between the developers and the city council?",
-      "standard_answer": "C"
+      "passage": "The old town library used to be the heart of the community. People of all ages would gather there, not just to borrow books, but for study groups, children's story time, and local history talks. It was a place where connections were made and knowledge was shared freely. Nowadays, you hear very little mention of the library. The doors are still open, but the paint is peeling, and the garden outside is overgrown. Parking spaces that were once hard to find are now consistently empty throughout the day. The vibrant energy that once pulsed within its walls seems to have faded.",
+      "question": "Based on the passage, what can be inferred about the current state of the old town library?",
+      "standard_answer": "A"
     },
-    "cacheTimestamp": 1748030263
+    "cacheTimestamp": 1748038512
   },
   {
-    "UUID": "478e8e9d-3a45-45fd-bea0-8e2ef19fef80",
+    "UUID": "081dc65f-2cc5-4f01-a213-53ff6a9cdf30",
     "questionData": {
-      "explanation_of_Question": "這段文字暗示了艾瑪經歷了一次負面的互動，導致她變得沮喪和疲憊。線索包括：她回家後『直接上樓』、『忽略了家人的招呼』、『關上臥室門』、『靠在門上，閉上眼睛，深吸一口氣』、『表情疲憊』、『身體無力地滑到地上』，以及『輕聲抽泣』。這些行為都不是積極或中性經歷的反應，而是明顯表明她受到了情緒上的傷害或打擊。",
+      "explanation_of_Question": "文章描述了伊森在學期初的熱情和投入，以及學期末他變得疲憊、錯過課程、作業遲交、成績下滑。這些跡象，尤其是在沒有提到其他重大事件的情況下，強烈暗示伊森在學期中遇到了困難，這影響了他的學習表現，可能是由於難度增加、失去動力或其他個人原因。選項 C '在學期中掙扎' 最好地總結了這些表現的潛在原因。",
       "options": [
         {
           "id": "A",
-          "text": "Emma had a successful and exciting day."
+          "text": "Ethan found the semester easier than he expected."
         },
         {
           "id": "B",
-          "text": "Emma was feeling ill and needed rest."
+          "text": "Ethan intentionally decided to focus less on his studies."
         },
         {
           "id": "C",
-          "text": "Emma had a difficult or upsetting experience."
+          "text": "Ethan likely struggled with his studies during the semester."
         },
         {
           "id": "D",
-          "text": "Emma was simply tired from a long day's work."
+          "text": "Ethan decided to transfer to a different university."
         }
       ],
-      "passage": "The front door clicked shut behind Emma, but she didn't call out a greeting as usual. She walked directly to the stairs, her shoulders slumped. Her mother's voice called from the kitchen, 'Is that you, dear? How was your day?' but Emma didn't reply, or perhaps she didn't hear. She reached her bedroom door, turned the handle, and stepped inside, closing it softly behind her. She leaned back against the door, eyes closed, taking a long, shaky breath. Her face was etched with a weariness that went beyond physical exhaustion. Sliding down the door until she was sitting on the floor, she rested her head on her knees. A quiet sob escaped her lips, quickly muffled by her hands. The backpack slid from her shoulder with a thud, but she didn't react, lost in her own silent struggle.",
-      "question": "What can be inferred about Emma's experience before she arrived home?",
+      "passage": "At the beginning of the semester, Ethan was enthusiastic about his classes. He attended every lecture, sat in the front row, and actively participated in discussions. His initial assignments were submitted on time and received good grades. However, as the weeks passed, a change became apparent. He started arriving late to class, sometimes missing them altogether. His once-neat notes became sparse, and assignment deadlines were often missed or required extensions. By the final exams, Ethan looked exhausted, and his grades reflected a significant decline from his initial performance.",
+      "question": "What does Ethan's change in behavior throughout the semester most strongly suggest?",
       "standard_answer": "C"
     },
-    "cacheTimestamp": 1748030263
+    "cacheTimestamp": 1748038512
+  },
+  {
+    "UUID": "ec703bf0-1b03-4864-9ac3-663e28cba18a",
+    "questionData": {
+      "explanation_of_Question": "文章描述了一個社區，其中新的豪華公寓大樓不斷湧現，推高了房價，迫使長期居住的家庭搬離。而新的居民似乎對社區的歷史和傳統不太關心。這一切都指向 gentrification（仕紳化/高檔化），即一個社區因更高收入居民遷入而發生的社會和經濟變化，通常導致原住民被取代。選項 D 準確地描述了這種現象。",
+      "options": [
+        {
+          "id": "A",
+          "text": "The community is experiencing a decrease in population."
+        },
+        {
+          "id": "B",
+          "text": "The local government is investing heavily in public services."
+        },
+        {
+          "id": "C",
+          "text": "There is a strong effort to preserve the community's historical buildings."
+        },
+        {
+          "id": "D",
+          "text": "The community is undergoing gentrification."
+        }
+      ],
+      "passage": "Change has swept through this neighborhood rapidly over the past decade. Sleek, modern apartment buildings now stand where older, more modest homes once were. The average price of property has skyrocketed, making it increasingly difficult for families who have lived here for generations to afford to stay. Many familiar small businesses have closed, replaced by upscale boutiques and cafes catering to a different clientele. The newcomers are polite, but they don't seem to know the names of the long-time residents or show much interest in the annual block party that used to be the highlight of the summer. The feeling of a close-knit community is slowly eroding.",
+      "question": "What social phenomenon is most likely occurring in the neighborhood described?",
+      "standard_answer": "D"
+    },
+    "cacheTimestamp": 1748038512
   }
 ]

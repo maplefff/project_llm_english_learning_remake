@@ -1,86 +1,85 @@
 [
   {
-    "UUID": "35b8307b-dc1c-4acf-be71-add9f6e358db",
+    "UUID": "83bce92e-6df8-40a3-bdbb-8fd7850abd73",
     "questionData": {
       "evaluation_focus": [
         "Accuracy",
         "Naturalness",
-        "Grammar"
+        "Simple grammar"
       ],
       "instruction": "Translate the following sentence into English.",
       "reference_translations": [
-        "I feel a bit tired today.",
-        "I'm feeling a little tired today."
+        "The weather is really good today.",
+        "It's a nice day today."
       ],
-      "source_text": "我今天感觉有点累。"
+      "source_text": "今天天气真好。"
     },
-    "cacheTimestamp": 1748030490
+    "cacheTimestamp": 1748038682
   },
   {
-    "UUID": "9d8a460f-61db-47e9-af30-58e4dc0ce109",
-    "questionData": {
-      "evaluation_focus": [
-        "Accuracy",
-        "Proper Nouns",
-        "Simple Sentence Structure"
-      ],
-      "instruction": "Translate this sentence into English.",
-      "reference_translations": [
-        "Beijing is the capital of China."
-      ],
-      "source_text": "北京是中国的首都。"
-    },
-    "cacheTimestamp": 1748030490
-  },
-  {
-    "UUID": "fb1c6e2d-f80c-4ad7-b488-05f32c94b8da",
+    "UUID": "7ab13e7d-83d5-494c-ae56-69060cd5a091",
     "questionData": {
       "evaluation_focus": [
         "Politeness",
-        "Directions",
-        "Common Phrases"
+        "Question structure",
+        "Common phrases (asking directions)"
       ],
-      "instruction": "How would you translate this question into English?",
+      "instruction": "Translate the following sentence into English.",
       "reference_translations": [
-        "Excuse me, how do I get to the train station?",
-        "Excuse me, which way is the train station?"
+        "Excuse me, how do I get to the train station?"
       ],
       "source_text": "请问，去火车站怎么走？"
     },
-    "cacheTimestamp": 1748030490
+    "cacheTimestamp": 1748038682
   },
   {
-    "UUID": "3e004352-127c-44e2-acbe-71eda068b763",
+    "UUID": "a5c21bc2-3976-4376-9936-cc562b3acad2",
     "questionData": {
       "evaluation_focus": [
-        "Adjectives",
-        "Connecting Clauses",
-        "Idiomatic Expression"
+        "Sentence structure",
+        "Connecting clauses",
+        "Adjectives (interesting, worth)"
       ],
-      "instruction": "Translate the sentence into English.",
+      "instruction": "Translate the following sentence into English.",
       "reference_translations": [
-        "This book is very interesting and worth reading.",
-        "This book is quite interesting; it's worth a read."
+        "This book is very interesting and worth reading."
       ],
-      "source_text": "这本书很有意思，值得一读。"
+      "source_text": "这本书很有趣，值得一读。"
     },
-    "cacheTimestamp": 1748030490
+    "cacheTimestamp": 1748038682
   },
   {
-    "UUID": "bd772d07-4f4b-403f-bfaf-0112746fab77",
+    "UUID": "908ee050-5546-4513-bd72-67d8fece62dc",
     "questionData": {
       "evaluation_focus": [
-        "Present Continuous Tense",
-        "Imperative/Reminder",
-        "Vocabulary"
+        "Cultural terms (Chinese New Year, Spring Festival)",
+        "Accuracy",
+        "Natural phrasing (family reunion)"
       ],
-      "instruction": "Translate this sentence into English, including the reminder.",
+      "instruction": "Translate the following sentence into English.",
       "reference_translations": [
-        "It's raining outside, remember to bring an umbrella.",
-        "It's raining outdoors, don't forget your umbrella."
+        "Chinese New Year is an important time for family reunions.",
+        "China's Spring Festival is a crucial moment for families to reunite."
       ],
-      "source_text": "外面下雨了，记得带伞。"
+      "source_text": "中国春节是家庭团聚的重要时间。"
     },
-    "cacheTimestamp": 1748030490
+    "cacheTimestamp": 1748038682
+  },
+  {
+    "UUID": "eeb26beb-1085-4359-906a-3e77d50170af",
+    "questionData": {
+      "evaluation_focus": [
+        "Vocabulary (internet, changed, way of life)",
+        "Sentence structure",
+        "Appropriate tense/aspect"
+      ],
+      "instruction": "Translate the following sentence into English.",
+      "reference_translations": [
+        "The internet has greatly changed people's way of life.",
+        "The internet has dramatically altered people's lifestyles."
+      ],
+      "source_text": "互联网极大地改变了人们的生活方式。"
+    },
+    "cacheTimestamp": 1748038682
   }
 ]

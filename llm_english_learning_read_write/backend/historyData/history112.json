@@ -1,31 +1,31 @@
 [
   {
-    "UUID": "4b505f22-c948-4168-8070-925c58cf8f4a",
+    "UUID": "6e38de4b-c6fc-4ecc-bcd5-320c7b0d6ee2",
     "questionData": {
-      "passage": "The company is planning to _______ its operations into the Asian market next year.",
+      "passage": "The artist deliberately _______ current fads, preferring to develop his own unique style.",
       "question": "Choose the best word to complete the sentence.",
       "options": [
         {
           "id": "A",
-          "text": "condense"
+          "text": "embraced"
         },
         {
           "id": "B",
-          "text": "expand"
+          "text": "pursued"
         },
         {
           "id": "C",
-          "text": "shrink"
+          "text": "reveled"
         },
         {
           "id": "D",
-          "text": "restrict"
+          "text": "eschewed"
         }
       ],
-      "standard_answer": "B"
+      "standard_answer": "D"
     },
-    "userAnswer": "A",
+    "userAnswer": "C",
     "isCorrect": false,
-    "timestamp": 1748031662009
+    "timestamp": 1748039272018
   }
 ]

@@ -1,117 +1,119 @@
 [
   {
-    "UUID": "8aa5facd-e392-403c-b46e-3c13d91a77d8",
+    "UUID": "0fc421dd-4bdd-4a8a-ad8d-b51739e5fd9c",
     "questionData": {
       "correct_order": [
+        1,
+        4,
+        3,
         0,
+        2
+      ],
+      "explanation_of_Question": "這個段落按照事件的發生順序描述了戶外音樂會如何應對突發天氣狀況：首先介紹了活動面臨的挑戰(句子2)，接著描述了具體的天氣狀況(句子5)。然後說明組織者迅速採取了應急措施(句子4)，並描述了疏散觀眾的具體行動(句子1)。最後，說明了天氣好轉、活動成功繼續的結果(句子3)。",
+      "instruction": "請將這些句子重新排列，組成一個邏輯連貫的段落，描述一個戶外活動如何應對突發狀況。",
+      "scrambled_sentences": [
+        "They announced a temporary delay and guided attendees to shelter indoors.",
+        "Despite careful planning, the outdoor concert faced a sudden challenge.",
+        "After an hour, the storm passed, and the concert resumed successfully, much to everyone's relief.",
+        "Consequently, the organizers had to quickly implement their emergency plan.",
+        "Dark clouds gathered overhead, and a strong wind began to blow."
+      ],
+      "topic_hint": "一個戶外活動遇到問題並解決的故事。"
+    },
+    "cacheTimestamp": 1748038620
+  },
+  {
+    "UUID": "8884d7d9-af97-4886-ba62-cb0d9bba1cb1",
+    "questionData": {
+      "correct_order": [
+        4,
+        5,
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation_of_Question": "這個段落按照時間順序和操作步驟描述了沖泡一杯好咖啡的過程：首先引入主題(句子5)，接著是磨豆(句子6)，然後是燒水(句子1)，再來是注水(句子2)，隨後是浸泡或過濾(句子3)，最後是享受成品(句子4)。這是一種標準的過程描述結構。",
+      "instruction": "請將這些句子重新排列，組成一個描述如何沖泡好咖啡的段落。請按照步驟的邏輯順序排列。",
+      "scrambled_sentences": [
+        "Next, heat water to just below boiling point.",
+        "Then, pour the hot water over the grounds, ensuring even saturation.",
+        "Finally, let it steep for the recommended time before pressing or filtering.",
+        "Enjoy your freshly brewed coffee!",
+        "Making a good cup of coffee requires attention to detail.",
+        "First, grind fresh coffee beans to the correct coarseness."
+      ],
+      "topic_hint": "如何製作一杯咖啡的過程。"
+    },
+    "cacheTimestamp": 1748038620
+  },
+  {
+    "UUID": "bdf5e306-87e0-43c8-ac81-c4821f56b547",
+    "questionData": {
+      "correct_order": [
         2,
         3,
         4,
+        1,
+        0
+      ],
+      "explanation_of_Question": "這個段落介紹了技術發展對社會的影響，從引入主題開始(句子3)，接著列舉了技術發展帶來的具體結果：通訊的便捷化(句子4)、自動化提升效率(句子5)，以及因此產生的新興工作機會(句子2)。最後一句指出技術發展同時也帶來了挑戰(句子1)，使整個論述更加全面。",
+      "instruction": "請將這些句子重新排列，組成一個關於技術發展對社會影響的段落。",
+      "scrambled_sentences": [
+        "However, it also presents challenges, such as data privacy concerns and the need for continuous learning.",
+        "Consequently, new job markets have emerged in areas like software development and data science.",
+        "The rapid development of technology has profoundly impacted society.",
+        "As a result, communication has become instantaneous and global.",
+        "Furthermore, automation has led to increased efficiency in many industries."
+      ],
+      "topic_hint": "科技對社會的影響 (結果與挑戰)。"
+    },
+    "cacheTimestamp": 1748038620
+  },
+  {
+    "UUID": "1b640b3a-1892-43ed-aa94-508174592ca8",
+    "questionData": {
+      "correct_order": [
+        4,
+        0,
+        2,
+        3,
         1
       ],
-      "explanation_of_Question": "這個段落按照時間順序描述了製作咖啡的各個步驟：先燒水(0)，然後放咖啡粉(2)，接著倒水(3)，再浸泡或過濾(4)，最後享用(1)。這種順序確保了過程描述的清晰和連貫性。",
-      "instruction": "請將這些句子重新排列，組成一個邏輯連貫的段落。請按照正確的時間順序和邏輯關係排列。",
+      "explanation_of_Question": "這個段落按照時間順序描述了中國長城的修建歷史：首先總述長城跨越多個朝代的修建歷史(句子5)，然後介紹最早期的獨立建造階段(句子1)，接著是在秦朝的連接統一(句子3)，隨後是漢明兩朝的擴建加固(句子4)。最後一句描述了長城在現代的狀態和地位(句子2)。",
+      "instruction": "請將這些句子重新排列，組成一個關於長城修建歷史的段落。請按照時間順序排列。",
       "scrambled_sentences": [
-        "To brew a perfect cup, first heat fresh water to just below boiling.",
-        "Finally, pour the hot coffee into your favorite mug and enjoy.",
-        "Next, place the ground coffee in your chosen brewing device, such as a French press or drip filter.",
-        "Then, carefully pour the hot water over the grounds, ensuring even saturation.",
-        "Allow it to steep or drip for the recommended time to extract the flavor."
+        "Initially, separate sections were built by various states for defense against invasions.",
+        "Today, it stands as one of the world's most impressive architectural feats and a UNESCO World Heritage site.",
+        "Later, during the Qin Dynasty, these sections were linked together under Emperor Qin Shi Huang.",
+        "Significant expansion and reinforcement occurred during the Han and Ming Dynasties.",
+        "The construction of the Great Wall of China spanned several dynasties."
       ],
-      "topic_hint": "製作咖啡的過程"
+      "topic_hint": "中國長城的建造歷史。"
     },
-    "cacheTimestamp": 1748030422
+    "cacheTimestamp": 1748038620
   },
   {
-    "UUID": "a0ded879-bbf7-4933-9b5b-1b5f794749a0",
-    "questionData": {
-      "correct_order": [
-        1,
-        3,
-        2,
-        0,
-        4
-      ],
-      "explanation_of_Question": "段落按因果關係展開：先說明原因(溫室氣體增加 - 1)，導致氣溫升高(3)，進而造成冰川融化(2)，冰川融化導致海平面上升(0)，最終海平面上升帶來威脅(4)。這種因果鏈的結構解釋了氣候變遷的過程和影響。",
-      "instruction": "請將這些句子重新排列，組成一個邏輯連貫的段落。請按照正確的時間順序和邏輯關係排列。",
-      "scrambled_sentences": [
-        "Consequently, this melting contributes significantly to rising sea levels globally.",
-        "One major consequence of human activity is the increase in greenhouse gas emissions.",
-        "This warming, in turn, leads to the accelerated melting of polar ice caps and glaciers.",
-        "These emissions trap heat, causing a gradual increase in the Earth's average temperature.",
-        "Higher sea levels threaten coastal communities and ecosystems with increased flooding and erosion."
-      ],
-      "topic_hint": "氣候變遷的影響"
-    },
-    "cacheTimestamp": 1748030422
-  },
-  {
-    "UUID": "ac2c70d2-2416-416f-a85b-e86484e650f0",
-    "questionData": {
-      "correct_order": [
-        2,
-        0,
-        1,
-        3,
-        4
-      ],
-      "explanation_of_Question": "按時間順序講述了早上發生的連串事件：睡過頭(2)，匆忙出門(0)，錯過火車(1)，搭計程車(3)，最後遲到(4)。這種敘事順序使故事流暢易懂。",
-      "instruction": "請將這些句子重新排列，組成一個邏輯連貫的段落。請按照正確的時間順序和邏輯關係排列。",
-      "scrambled_sentences": [
-        "Realizing I was late, I quickly got dressed and rushed out the door.",
-        "However, by the time I reached the station, the train had already departed.",
-        "My stressful morning began when I overslept and missed my alarm.",
-        "Desperate, I decided to take an expensive taxi instead.",
-        "Unfortunately, heavy traffic meant I still arrived significantly late for my important meeting."
-      ],
-      "topic_hint": "一個倒楣的早晨"
-    },
-    "cacheTimestamp": 1748030422
-  },
-  {
-    "UUID": "324ab16a-4311-483d-87d3-8722ff57e72e",
-    "questionData": {
-      "correct_order": [
-        1,
-        2,
-        0,
-        3,
-        4
-      ],
-      "explanation_of_Question": "段落結構為問題分析和解決方案：先提出問題(交通量增加 - 1)，解釋原因(人口增長帶動車輛增加 - 2)，導致的後果(嚴重堵塞 - 0)，然後提出解決方案(改善公共交通 - 3)，並闡述其潛在效果(減少堵塞 - 4)。這種結構清晰地呈現了問題與對策。",
-      "instruction": "請將這些句子重新排列，組成一個邏輯連貫的段落。請按照正確的時間順序和邏輯關係排列。",
-      "scrambled_sentences": [
-        "This surge in vehicles has resulted in severe traffic congestion during peak hours.",
-        "One major challenge facing many modern cities is the increasing volume of traffic.",
-        "As cities grow, more people move in, bringing with them a greater number of cars.",
-        "To address this issue, city planners are proposing significant improvements to public transportation systems.",
-        "Expanding and modernizing buses, trains, and subways could encourage people to leave their cars at home, potentially reducing congestion."
-      ],
-      "topic_hint": "城市交通問題及其解決方案"
-    },
-    "cacheTimestamp": 1748030422
-  },
-  {
-    "UUID": "e8348aaa-53b5-413f-b040-c7d37ac7531e",
+    "UUID": "6a5a33bb-2c05-495e-bb28-586d6661199c",
     "questionData": {
       "correct_order": [
         3,
-        0,
-        1,
+        4,
         2,
-        4
+        1,
+        0
       ],
-      "explanation_of_Question": "按時間順序描述了行動電話的發展歷程：始於1970年代(3)，早期特點(0)，80年代的發展(1)，智慧型手機的出現(2)，以及當今的狀態(4)。這種編年史式的順序清晰地展示了技術的演變。",
-      "instruction": "請將這些句子重新排列，組成一個邏輯連貫的段落。請按照正確的時間順序和邏輯關係排列。",
+      "explanation_of_Question": "這個段落描述了學習新語言的過程：首先引入主題，說明學習新語言既有挑戰也有回報(句子4)。接著描述學習初期的狀況，進展可能緩慢(句子5)。然後指出克服初期困難的關鍵在於持續練習(句子3)。隨後提供加速學習的方法，例如與母語者交流(句子2)。最後描述長期堅持後達到的流利程度及其帶來的機遇(句子1)。",
+      "instruction": "請將這些句子重新排列，組成一個描述學習新語言過程的段落。",
       "scrambled_sentences": [
-        "These early devices were bulky and primarily used for making calls.",
-        "Following this, analog phones became smaller and more portable throughout the 1980s.",
-        "The real revolution arrived with the introduction of smartphones in the late 2000s, combining communication with computing power.",
-        "The history of mobile communication began with the first handheld mobile phones introduced in the 1970s.",
-        "Today's advanced smartphones are powerful mini-computers essential for daily life, a stark contrast to their humble beginnings."
+        "Gradually, fluency improves, opening up opportunities for cultural immersion and global connections.",
+        "Engaging with native speakers or using language exchange apps can accelerate learning.",
+        "However, consistent practice is key to overcoming initial difficulties.",
+        "Learning a new language can be a challenging yet rewarding experience.",
+        "Initially, progress might seem slow, focusing on basic vocabulary and grammar."
       ],
-      "topic_hint": "行動電話的發展史"
+      "topic_hint": "學習新語言的體驗。"
     },
-    "cacheTimestamp": 1748030422
+    "cacheTimestamp": 1748038620
   }
 ]

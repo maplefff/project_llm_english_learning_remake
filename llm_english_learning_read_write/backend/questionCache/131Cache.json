@@ -1,142 +1,142 @@
 [
   {
-    "UUID": "a6d14aca-f3b2-46b2-a107-6a254437d297",
+    "UUID": "c1d6611f-ba3f-43cd-849e-905f3429428c",
     "questionData": {
-      "explanation_of_Question": "這段文章主要探討人工智慧（AI）對各行各業的廣泛影響，以及它帶來的機會和挑戰。文章列舉了AI的應用領域，同時也提到了隱私、偏見和就業等倫理問題。選項 A 只提及了特定應用領域；選項 B 只關注倫理挑戰；選項 C 是一個過於籠統的說法。只有選項 D 概括了文章的主旨：AI對社會的廣泛影響及其雙重性。",
+      "explanation_of_Question": "這段文章討論了人工智慧 (AI) 的快速發展對現代生活的影響。它涵蓋了 AI 的應用（好處）以及隨之而來的擔憂和挑戰。選項 B 準確地概括了文章的主要內容，即 AI 發展帶來的挑戰與好處。",
       "options": [
         {
           "id": "A",
-          "text": "How AI is used in healthcare and finance."
+          "text": "How AI helps with streaming recommendations."
         },
         {
           "id": "B",
-          "text": "The ethical challenges posed by artificial intelligence."
+          "text": "The challenges and benefits associated with the rapid development of AI."
         },
         {
           "id": "C",
-          "text": "The rapid pace of technological advancement."
+          "text": "Ethical concerns are the biggest problem with AI."
         },
         {
           "id": "D",
-          "text": "The widespread impact of AI across various sectors, including both benefits and concerns."
+          "text": "AI is mostly used in medical diagnostics."
         }
       ],
-      "passage": "Artificial intelligence (AI) is rapidly transforming many aspects of our lives, from how we work and communicate to how we seek entertainment. AI-powered systems are being used in fields as diverse as healthcare for diagnosis, finance for fraud detection, and even creative arts for generating content. While AI offers incredible potential for innovation and efficiency, it also raises complex ethical questions concerning data privacy, bias in algorithms, and the future of employment. Understanding both the opportunities and challenges presented by AI is crucial as we integrate it further into society.",
-      "question": "What is the primary focus of this paragraph?",
-      "standard_answer": "D"
-    },
-    "cacheTimestamp": 1748030244
-  },
-  {
-    "UUID": "173d700d-6476-4212-b2ba-6dd38e0e1d9c",
-    "questionData": {
-      "explanation_of_Question": "這段文章強調了充足且有品質的睡眠對維持整體健康的重要性。文章解釋了睡眠的好處、睡眠不足的危害，並提出改善睡眠的策略，最後總結說優先考慮睡眠是健康的重要投資。選項 A 只提及了改善睡眠的方法之一；選項 B 只說明了睡眠不足的後果；選項 D 只提及了睡眠的具體功能。只有選項 C 完整概括了文章的主旨：睡眠對健康的重要性。",
-      "options": [
-        {
-          "id": "A",
-          "text": "How to practice relaxation techniques before bed."
-        },
-        {
-          "id": "B",
-          "text": "Chronic sleep deprivation has serious consequences for health."
-        },
-        {
-          "id": "C",
-          "text": "The importance of sufficient quality sleep for overall health and well-being."
-        },
-        {
-          "id": "D",
-          "text": "Sleep helps the body repair tissues and consolidate memories."
-        }
-      ],
-      "passage": "Getting enough quality sleep is fundamental to maintaining good physical and mental health. During sleep, our bodies repair tissues, consolidate memories, and regulate hormones. Chronic sleep deprivation can lead to a host of problems, including weakened immune function, difficulty concentrating, mood swings, and an increased risk of chronic diseases like diabetes and heart disease. Establishing a consistent sleep schedule, creating a restful environment, and practicing relaxation techniques are all effective strategies for improving sleep hygiene and overall well-being. Prioritizing sleep is an essential investment in one's health.",
-      "question": "What is the main point the author is trying to convey?",
-      "standard_answer": "C"
-    },
-    "cacheTimestamp": 1748030244
-  },
-  {
-    "UUID": "fedff4ed-0dd5-4cba-8923-50906747b833",
-    "questionData": {
-      "explanation_of_Question": "這段文章的主要內容是線上學習在現代教育中的地位及其影響。文章先描述了線上學習提供的彈性和可及性及其優勢，然後提到了它面臨的挑戰，最後總結其作為擴展教育機會的工具。選項 A 只針對了特定群體；選項 B 只討論了挑戰；選項 D 只提到了數位資源。只有選項 C 全面概括了線上學習的優勢與挑戰並存，但仍是擴展教育機會的強大工具這一主旨。",
-      "options": [
-        {
-          "id": "A",
-          "text": "Online learning is suitable for working professionals."
-        },
-        {
-          "id": "B",
-          "text": "The challenges of virtual classrooms."
-        },
-        {
-          "id": "C",
-          "text": "Online learning is expanding access to education despite certain challenges."
-        },
-        {
-          "id": "D",
-          "text": "Digital resources are essential for modern education."
-        }
-      ],
-      "passage": "Online learning has become a significant component of modern education, offering flexibility and accessibility to students worldwide. Through virtual classrooms and digital resources, learners can access courses from diverse institutions regardless of their geographical location. This mode of education is particularly beneficial for working professionals, lifelong learners, and individuals who face barriers to traditional classroom settings. However, it also presents challenges, such as the need for self-discipline, technical requirements, and potential lack of face-to-face interaction. Despite these challenges, online learning is clearly a powerful tool for expanding educational opportunities.",
-      "question": "Which of the following best summarizes the paragraph?",
-      "standard_answer": "C"
-    },
-    "cacheTimestamp": 1748030244
-  },
-  {
-    "UUID": "a7ef61fa-ec3c-4638-8be4-fcbfbca0627e",
-    "questionData": {
-      "explanation_of_Question": "這段文章的主旨是文化交流計畫在促進不同國家和社區之間的理解與合作方面扮演的重要角色。文章解釋了親身體驗不同文化如何幫助打破刻板印象、建立同理心，並強調了文化交流對建立人際橋樑和全球公民意識的貢獻。選項 A 只提及了學生交換這一個例子；選項 B 雖然相關但不夠直接表達文化交流計畫的作用；選項 D 只提及了學習語言這一個可能的好處。只有選項 C 準確地概括了文化交流計畫的核心作用和意義。",
-      "options": [
-        {
-          "id": "A",
-          "text": "Student exchange is a popular way to experience new cultures."
-        },
-        {
-          "id": "B",
-          "text": "Cultural differences can be overcome through communication."
-        },
-        {
-          "id": "C",
-          "text": "Cultural exchange programs are important for promoting understanding and global connection."
-        },
-        {
-          "id": "D",
-          "text": "Traveling to different countries helps people learn new languages."
-        }
-      ],
-      "passage": "Cultural exchange programs play a vital role in fostering understanding and cooperation between different nations and communities. By immersing oneself in a new culture, individuals gain firsthand experience of different customs, languages, and perspectives. This direct exposure helps break down stereotypes, build empathy, and promote mutual respect. Whether through student exchange, artist residencies, or international conferences, these interactions create bridges between people, fostering a sense of global citizenship. Ultimately, cultural exchange enriches individual lives and contributes to a more peaceful and interconnected world.",
-      "question": "What is the central idea of this passage?",
-      "standard_answer": "C"
-    },
-    "cacheTimestamp": 1748030244
-  },
-  {
-    "UUID": "e07709de-3877-4ab0-974f-a73e7526a75a",
-    "questionData": {
-      "explanation_of_Question": "這段文章的核心是關於建立強韌社區的重要性及方法。文章闡述了強社區提供的社會支持、安全感和歸屬感等好處，並列舉了建立社區的一些具體做法。選項 A 只提到了組織活動這一個方法；選項 C 只強調了保存文化遺產這一個方面；選項 D 只關注了個人從中獲得的歸屬感。只有選項 B 既提到了建立社區的好處，也包含了實現這些好處的方法，全面概括了文章的主旨。",
-      "options": [
-        {
-          "id": "A",
-          "text": "How to organize local events effectively."
-        },
-        {
-          "id": "B",
-          "text": "The benefits and methods of strengthening local communities."
-        },
-        {
-          "id": "C",
-          "text": "The importance of preserving local culture and heritage."
-        },
-        {
-          "id": "D",
-          "text": "How individuals can find a sense of belonging."
-        }
-      ],
-      "passage": "Building strong, resilient communities is essential for the well-being of individuals and society as a whole. A strong community provides social support networks, enhances safety, and fosters a sense of belonging. It encourages participation in local affairs, facilitates collective problem-solving, and helps preserve local culture and heritage. Efforts to build community can include organizing local events, volunteering, supporting local businesses, and creating shared public spaces. Investing time and energy in community building strengthens social ties and creates a more supportive and vibrant environment for everyone.",
-      "question": "This paragraph is primarily about:",
+      "passage": "The rapid advancement of artificial intelligence (AI) is transforming numerous aspects of modern life. From powering personalized recommendations on streaming platforms to enabling sophisticated medical diagnostics, AI is becoming integrated into daily routines. While its potential benefits are vast, including increased efficiency and innovation, concerns about job displacement, data privacy, and ethical implications are also growing. Society faces the challenge of harnessing AI's power responsibly while addressing these critical issues to ensure its development serves the greater good.",
+      "question": "What is the primary focus of this passage?",
       "standard_answer": "B"
     },
-    "cacheTimestamp": 1748030244
+    "cacheTimestamp": 1748038465
+  },
+  {
+    "UUID": "0096aed0-80ff-4742-b429-4246a630884d",
+    "questionData": {
+      "explanation_of_Question": "這段文章強調了規律體育鍛鍊對整體健康的極大重要性。文章列舉了多種好處，包括心血管健康、肌肉骨骼健康以及心理健康，並給出了推薦量，但核心是說明運動的必要性和廣泛益處。選項 C 準確概括了這個主要觀點。",
+      "options": [
+        {
+          "id": "A",
+          "text": "Specific examples of good exercises like swimming and cycling."
+        },
+        {
+          "id": "B",
+          "text": "The recommended amount of weekly exercise."
+        },
+        {
+          "id": "C",
+          "text": "Regular exercise is essential for comprehensive health and well-being."
+        },
+        {
+          "id": "D",
+          "text": "Exercise primarily helps with mental health."
+        }
+      ],
+      "passage": "Regular physical exercise is crucial for maintaining good health throughout life. Engaging in activities like walking, running, swimming, or cycling helps improve cardiovascular health, strengthens muscles and bones, and can significantly boost mental well-being by reducing stress and anxiety. Experts recommend at least 150 minutes of moderate-intensity aerobic exercise or 75 minutes of vigorous-intensity activity per week, along with muscle-strengthening exercises. Incorporating regular physical activity into one's routine is one of the most effective ways to prevent chronic diseases and enhance overall quality of life.",
+      "question": "What is the main point of the passage?",
+      "standard_answer": "C"
+    },
+    "cacheTimestamp": 1748038465
+  },
+  {
+    "UUID": "e579bb33-0c62-47c2-8fef-e05ebdfe5913",
+    "questionData": {
+      "explanation_of_Question": "這段文章討論了技術如何影響和改變教育模式，從傳統課堂到線上平台，再到融合式學習。文章的主旨是教育正在隨著技術的發展而變化和演進。選項 B 準確地捕捉了這個核心主題。",
+      "options": [
+        {
+          "id": "A",
+          "text": "Online learning is replacing traditional classrooms."
+        },
+        {
+          "id": "B",
+          "text": "Technology is changing the way education is delivered and accessed."
+        },
+        {
+          "id": "C",
+          "text": "Blended learning is the only future of education."
+        },
+        {
+          "id": "D",
+          "text": "Physical classrooms offer better interaction than online platforms."
+        }
+      ],
+      "passage": "The traditional classroom model is undergoing significant changes with the integration of technology and the rise of online learning platforms. While physical classrooms still offer valuable face-to-face interaction and structure, digital tools provide flexibility, access to vast resources, and personalized learning experiences. Blended learning approaches, combining online and offline methods, are becoming increasingly popular as they seek to leverage the strengths of both environments. The future of education appears to be moving towards more adaptable and technologically-enhanced models to meet diverse student needs.",
+      "question": "What is the central theme of this paragraph?",
+      "standard_answer": "B"
+    },
+    "cacheTimestamp": 1748038465
+  },
+  {
+    "UUID": "6f38a5ec-b3bc-49a6-a874-28f61d228215",
+    "questionData": {
+      "explanation_of_Question": "這段文章說明了節日對文化的重要性，不僅用於慶祝和保存傳統，也促進了社區聯繫和身份認同的表達。雖然文章也提到了經濟影響和活動形式，但核心是節日在文化和社會層面的作用。選項 C 完整地概括了這些主要功能。",
+      "options": [
+        {
+          "id": "A",
+          "text": "Festivals are important for tourism and the economy."
+        },
+        {
+          "id": "B",
+          "text": "Festivals involve music, dance, and food."
+        },
+        {
+          "id": "C",
+          "text": "Festivals are crucial for cultural preservation, community connection, and identity expression."
+        },
+        {
+          "id": "D",
+          "text": "Traditions are passed down through generations during festivals."
+        }
+      ],
+      "passage": "Festivals play a vital role in preserving and celebrating the cultural heritage of communities around the world. These events often involve unique traditions, music, dance, food, and rituals passed down through generations. They provide opportunities for people to connect with their history, reinforce social bonds, and express their collective identity. Beyond their cultural significance, festivals can also boost local economies through tourism and trade. Ultimately, festivals serve as vibrant expressions of community, memory, and shared values.",
+      "question": "What is the main idea conveyed in this passage?",
+      "standard_answer": "C"
+    },
+    "cacheTimestamp": 1748038465
+  },
+  {
+    "UUID": "9b472395-b178-4df5-9258-288fe7eba4bc",
+    "questionData": {
+      "explanation_of_Question": "這段文章的重點在於 DNA 結構發現的意義和影響。文章提到發現者、時間和結構本身，但主要篇幅和結論是強調這一發現如何推動了遺傳學、分子生物學以及其他相關科學領域的發展。選項 C 準確地概括了這個主要觀點。",
+      "options": [
+        {
+          "id": "A",
+          "text": "Watson and Crick discovered the DNA structure in 1953."
+        },
+        {
+          "id": "B",
+          "text": "Rosalind Franklin and Maurice Wilkins contributed to DNA research."
+        },
+        {
+          "id": "C",
+          "text": "The discovery of DNA's structure was a transformative event that advanced multiple scientific fields."
+        },
+        {
+          "id": "D",
+          "text": "DNA helps us understand heredity and evolution."
+        }
+      ],
+      "passage": "The discovery of the structure of DNA in 1953 by Watson and Crick, building on the work of Rosalind Franklin and Maurice Wilkins, marked a pivotal moment in the history of science. Understanding the double helix structure provided the key to unlocking how genetic information is stored, copied, and transmitted. This breakthrough laid the foundation for modern genetics and molecular biology, leading to advancements in fields like medicine, agriculture, and biotechnology. The study of DNA continues to reveal complex mechanisms that govern life, fundamentally changing our understanding of heredity and evolution.",
+      "question": "What is the main point of this passage?",
+      "standard_answer": "C"
+    },
+    "cacheTimestamp": 1748038465
   }
 ]

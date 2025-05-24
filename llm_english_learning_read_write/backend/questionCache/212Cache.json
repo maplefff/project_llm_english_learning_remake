@@ -1,92 +1,97 @@
 [
   {
-    "UUID": "980f99ed-bda6-459d-b512-a98af269a424",
+    "UUID": "ab2795dd-27f6-4472-87b0-05a7af757041",
     "questionData": {
       "error_types": [
-        "時態錯誤",
-        "主謂一致",
-        "複數名詞",
-        "字詞選擇"
+        "Articles",
+        "Subject-verb agreement",
+        "Tense errors",
+        "Punctuation",
+        "Prepositions"
       ],
-      "explanation_of_Question": "這段文字包含以下錯誤：1) 'was'應改為'were'，因為主語'people'是複數（即使前面是a lot of）；2) 'people'本身已是複數，不需要加s；3) 'sit'應改為'sat'，表示過去發生的動作；4) 'feel'應改為'felt'，表示過去的感受。",
-      "instruction": "請找出並修正這段文字中的時態、主謂一致及單複數錯誤。",
-      "original_text": "Yesterday, I went to the park. There was a lot of peoples enjoying the sunshine. A small dog played fetch with its owner. I sit on a bench and read a book. The weather was perfect and I feel very relaxed.",
+      "explanation_of_Question": "This text contains several common errors. 'An' is needed before 'important meeting'. 'Company' is singular, so the verb should be 'holds'. The event happened in the past, so 'hold' should be 'held'. A comma is needed after 'Additionally'. 'At' is the correct preposition for 'deadline'. Finally, 'must meet a deadline' is the standard phrase.",
+      "instruction": "Identify and correct the errors in articles, verb tense, subject-verb agreement, punctuation, and prepositions in the following sentences.",
+      "original_text": "Yesterday, the company hold a important meeting. The main topic were about the upcoming project. Additionally the company must to meet deadline next month. Employees are working hard on project.",
       "standard_corrections": [
-        "Yesterday, I went to the park. There were a lot of people enjoying the sunshine. A small dog played fetch with its owner. I sat on a bench and read a book. The weather was perfect and I felt very relaxed."
+        "Yesterday, the company held an important meeting. The main topic was about the upcoming project. Additionally, the company must meet a deadline next month. Employees are working hard on the project."
       ]
     },
-    "cacheTimestamp": 1748030361
+    "cacheTimestamp": 1748038562
   },
   {
-    "UUID": "36b23395-0b96-4f00-9855-551f8236c299",
+    "UUID": "8d43fd20-9753-4859-a6a3-6f80abb0c71a",
     "questionData": {
       "error_types": [
-        "主謂一致",
-        "單複數錯誤",
-        "字詞選擇",
-        "冠詞使用"
+        "Word choice",
+        "Prepositions",
+        "Tense errors",
+        "Punctuation"
       ],
-      "explanation_of_Question": "這段文字包含以下錯誤：1) 'Data'在這種語境下常被視為複數，因此'was collected'應改為'were collected'；2) 'three month'應改為'three months'（複數）；3) 'demonstrate'的主語'analysis'是單數，動詞應改為'demonstrates'；4) 'a needing'應改為'a need'（字詞選擇錯誤）；5) 'finding'應改為'findings'，與前文的'important findings'以及後文的'recommendations'一致，表示基於這些發現。",
-      "instruction": "請修正這段報告摘要中的語法和詞彙錯誤。",
-      "original_text": "The report shows important findings. Data was collected over three month. The analysis clearly demonstrate a needing for further research. Based on this finding, recommendations are proposed.",
+      "explanation_of_Question": "The phrase 'make a research' should be 'do research' or 'conduct research'. 'On' is the appropriate preposition when discussing a topic. 'Is doing' suggests it's happening now, but the sentence implies it's finished or ongoing, so 'has done' (present perfect) or 'did' (past simple) are better options. A comma is needed after the introductory phrase.",
+      "instruction": "Correct the errors related to word choice, prepositions, tense, and punctuation in the passage.",
+      "original_text": "Following the instructions I make a research on the effects of climate change. He is doing a lot of work in this area and finding surprising results.",
       "standard_corrections": [
-        "The report shows important findings. Data were collected over three months. The analysis clearly demonstrates a need for further research. Based on these findings, recommendations are proposed."
+        "Following the instructions, I did research on the effects of climate change. He is doing a lot of work in this area and finding surprising results.",
+        "Following the instructions, I conducted research on the effects of climate change. He has done a lot of work in this area and found surprising results."
       ]
     },
-    "cacheTimestamp": 1748030361
+    "cacheTimestamp": 1748038562
   },
   {
-    "UUID": "163d4573-429b-49bb-b144-e52cf61f0435",
+    "UUID": "bb0e52e9-529a-43db-92c1-30159b1f124f",
     "questionData": {
       "error_types": [
-        "介詞使用",
-        "字詞選擇",
-        "單複數錯誤",
-        "句子結構"
+        "Punctuation",
+        "Sentence structure",
+        "Articles",
+        "Word choice"
       ],
-      "explanation_of_Question": "這段文字包含以下錯誤：1) 'buzzling of'應改為'buzzing with'，是慣用的搭配詞；2) 'filled by'應改為'filled with'，描述充滿了什麼；3) 'telling story'應改為'telling stories'，表示講述過去的許多故事；4) 'much character'雖然語法上並非絕對錯誤，但在描述場所特性時，更自然且常用的是'a lot of character'。",
-      "instruction": "請修正這段描述性文字中的介詞、詞彙和單複數錯誤。",
-      "original_text": "The city was buzzling of activity. Streets were filled by tourists and locals. Old buildings stood tall, telling story of the past. The smell of street food was everywhere. It was a place with much character.",
+      "explanation_of_Question": "This text has run-on sentences and punctuation issues. The first two clauses need proper separation (e.g., semicolon or new sentence). 'Which' should be 'that' or omitted in a restrictive clause. 'In' is not the correct preposition with 'arrive home'; no preposition is needed. 'Very exciting' should be 'really exciting' or similar, as 'so' usually introduces a consequence clause.",
+      "instruction": "Correct the punctuation, sentence structure, article usage, and word choice errors in the paragraph.",
+      "original_text": "The train was delayed by two hours I finally arrive home at midnight which was very tired I was so exciting to see my family again.",
       "standard_corrections": [
-        "The city was buzzing with activity. Streets were filled with tourists and locals. Old buildings stood tall, telling stories of the past. The smell of street food was everywhere. It was a place with a lot of character."
+        "The train was delayed by two hours; I finally arrived home at midnight. I was very tired. I was so excited to see my family again.",
+        "The train was delayed by two hours. I finally arrived home at midnight, which made me very tired. I was really excited to see my family again."
       ]
     },
-    "cacheTimestamp": 1748030361
+    "cacheTimestamp": 1748038562
   },
   {
-    "UUID": "3b130329-a3d3-4206-a3f7-dc29ee6e2414",
+    "UUID": "f13f3ced-6203-485d-b6ea-d4130e6c5c46",
     "questionData": {
       "error_types": [
-        "時態錯誤",
-        "動詞形式",
-        "標點符號",
-        "寫作風格"
+        "Plural/Singular",
+        "Subject-verb agreement",
+        "Tense errors",
+        "Word choice"
       ],
-      "explanation_of_Question": "這段電郵文字包含以下錯誤：1) 開頭的'I write'在正式或半正式電郵中應改為現在進行式'I am writing'，表示當前的目的；2) 'I have attaching'是錯誤的動詞形式，完成式結構應為'have + 過去分詞'，因此應改為'I have attached'；3) 句號'. '在'thoughts'後面應改為逗號','，因為'Please let me know your thoughts'是一個完整的祈使句，但與下一句'Best regards'之間常用逗號分隔，或直接換行。",
-      "instruction": "請修正這段電郵摘錄中的時態、動詞形式及標點符號錯誤。",
-      "original_text": "Dear Mr. Smith, I hope this email finds you well. I write to follow up on our last meeting. We discussed the project proposal. I have attaching the revised document. Please let me know your thoughts. Best regards, John Doe.",
+      "explanation_of_Question": "'Child' is singular, but 'were' is plural; it should be 'child was'. 'Run' is incorrect for talking about a company; 'operate' or 'manage' is more appropriate. 'Last year' indicates past tense, so 'operate' should be 'operated'. 'Many' is used with countable nouns; 'a lot of' or 'much' would be better for 'money', but 'invested significantly' or similar might be better phrasing.",
+      "instruction": "Find and correct the errors in singular/plural forms, subject-verb agreement, verb tense, and word choice.",
+      "original_text": "One child in the class were absent yesterday. My uncle run a small company which operate last year. He invested many money on new equipment.",
       "standard_corrections": [
-        "Dear Mr. Smith, I hope this email finds you well. I am writing to follow up on our last meeting. We discussed the project proposal. I have attached the revised document. Please let me know your thoughts. Best regards, John Doe."
+        "One child in the class was absent yesterday. My uncle runs a small company which operated last year. He invested a lot of money in new equipment.",
+        "One child in the class was absent yesterday. My uncle runs a small company which was operated last year. He invested significantly in new equipment."
       ]
     },
-    "cacheTimestamp": 1748030361
+    "cacheTimestamp": 1748038562
   },
   {
-    "UUID": "441b21d1-bd21-43f8-99eb-34c445038889",
+    "UUID": "b1dd3a22-9386-4838-b3fe-9d8732300f82",
     "questionData": {
       "error_types": [
-        "主謂一致",
-        "冠詞使用",
-        "介詞使用",
-        "單複數錯誤"
+        "Articles",
+        "Prepositions",
+        "Tense errors",
+        "Word choice"
       ],
-      "explanation_of_Question": "這段文字包含以下錯誤：1) 'Sampling'在此處作為不可數或集合名詞的用法，通常視為單數，故'were conducted'應改為'was conducted'；2) 'provide'的主語'analysis'是單數，動詞應改為'provides'；3) 'relationship between'通常需要冠詞，應改為'the relationship between'；4) 'for validate'是錯誤的用法，應改為不定詞'to validate'；5) 'this findings'主謂不一致，'findings'是複數，限定詞應改為'these'。",
-      "instruction": "請找出並修正這段文字中的主謂一致、冠詞、介詞及單複數錯誤。",
-      "original_text": "The study aimed to identify the factor contributing to soil erosion. Sampling were conducted in several locations. The data analysis provide insights into relationship between land use and erosion rates. Further research is necessary for validate this findings.",
+      "explanation_of_Question": "'Important' needs 'an' before it. 'On the next week' should be 'next week' (no preposition). 'Will discussing' is incorrect; it should be 'will discuss' (future simple) or 'will be discussing' (future continuous). 'Look forward to meet' requires the -ing form after 'to' when 'to' is a preposition expressing a destination or object (here, the object of the anticipation), so it should be 'looking forward to meeting'.",
+      "instruction": "Correct the article usage, prepositions, verb tenses, and word choice errors in the email excerpt.",
+      "original_text": "Subject: About Meeting\n\nDear John,\n\nI want to arrange important meeting with you on the next week. We will discussing the project proposal. I look forward to meet you then.\n\nBest regards,\nSarah",
       "standard_corrections": [
-        "The study aimed to identify the factors contributing to soil erosion. Sampling was conducted in several locations. The data analysis provides insights into the relationship between land use and erosion rates. Further research is necessary to validate these findings."
+        "Subject: About Meeting\n\nDear John,\n\nI want to arrange an important meeting with you next week. We will discuss the project proposal. I look forward to meeting you then.\n\nBest regards,\nSarah",
+        "Subject: About Meeting\n\nDear John,\n\nI would like to arrange an important meeting with you next week. We will be discussing the project proposal. I look forward to meeting you then.\n\nBest regards,\nSarah"
       ]
     },
-    "cacheTimestamp": 1748030361
+    "cacheTimestamp": 1748038562
   }
 ]
