@@ -1,23 +1,5 @@
 [
   {
-    "UUID": "4bdfbfe6-c6bf-4960-a6df-cc5c1dc36c5f",
-    "questionData": {
-      "context": "This paragraph is from an internal company memo discussing the adoption of a new software system.",
-      "evaluation_focus": [
-        "Technical terminology translation",
-        "Maintaining a professional and informative tone",
-        "Sentence structure and flow"
-      ],
-      "instruction": "Translate the following paragraph into simplified Chinese.",
-      "reference_translations": [
-        "采用新的软件系统对于提升我们的运营效率至关重要。在接下来的几周内，我们将逐步进行部署，确保所有团队都能获得必要的培训和支持，以便顺利过渡。我们相信这一投资将显著改善我们的工作流程和整体生产力。",
-        "推行新的软件系统对于提高运营效率至关重要。在接下来的几周里，我们将分阶段实施部署，确保所有团队都能得到所需的培训和支援，以实现平稳过渡。我们相信这项投资将显著改进我们的工作流程和整体生产力。"
-      ],
-      "source_text": "Adopting the new software system is crucial for enhancing our operational efficiency. Over the next few weeks, we will be rolling out the deployment in phases, ensuring all teams receive the necessary training and support for a smooth transition. We are confident this investment will significantly improve our workflows and overall productivity."
-    },
-    "cacheTimestamp": 1748038709
-  },
-  {
     "UUID": "63c0026d-5276-4f5d-9033-177ee30dd380",
     "questionData": {
       "context": "This text is from a public service announcement about protecting local wildlife.",

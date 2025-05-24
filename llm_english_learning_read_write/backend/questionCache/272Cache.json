@@ -1,22 +1,5 @@
 [
   {
-    "UUID": "e3048027-ef89-4b24-a7c7-be64b043e7e8",
-    "questionData": {
-      "evaluation_focus": [
-        "Naturalness",
-        "Clarity",
-        "Discussion of social issues",
-        "Sentence flow"
-      ],
-      "instruction": "Translate the following paragraph, using clear and natural English appropriate for discussing social phenomena.",
-      "reference_translations": [
-        "In recent years, shared bicycles have become widespread in major Chinese cities, greatly facilitating short-distance travel for residents. Users can unlock and ride bikes by scanning a QR code with their mobile phones; the cost is low and it's environmentally friendly. However, this has also brought some management issues, such as haphazard parking and vehicle damage, which require joint efforts from the government, companies, and users to resolve."
-      ],
-      "source_text": "近年来，共享单车在中国各大城市普及，极大地方便了市民短途出行。通过手机扫码即可解锁骑行，费用低廉且环保。但同时也带来了一些管理问题，如乱停乱放、车辆损毁等，需要政府、企业和用户共同努力来解决。"
-    },
-    "cacheTimestamp": 1748038694
-  },
-  {
     "UUID": "34243c03-35d6-44b1-8888-58d1872fab04",
     "questionData": {
       "evaluation_focus": [

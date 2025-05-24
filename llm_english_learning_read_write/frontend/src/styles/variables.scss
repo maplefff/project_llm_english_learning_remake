@@ -1,0 +1,52 @@
+// 主色調
+$primary: #409eff;
+$success: #67c23a;
+$warning: #e6a23c;
+$danger: #f56c6c;
+$info: #909399;
+
+// 中性色
+$text-primary: #303133;
+$text-regular: #606266;
+$text-secondary: #909399;
+$text-placeholder: #c0c4cc;
+
+// 背景色
+$bg-primary: #ffffff;
+$bg-secondary: #f5f7fa;
+$bg-tertiary: #ebeef5;
+
+// 邊框色
+$border-light: #ebeef5;
+$border-base: #dcdfe6;
+$border-dark: #d4d7de;
+
+// 間距
+$spacing-xs: 4px;
+$spacing-sm: 8px;
+$spacing-md: 16px;
+$spacing-lg: 24px;
+$spacing-xl: 32px;
+
+// 字體大小
+$font-size-xs: 12px;
+$font-size-sm: 14px;
+$font-size-base: 16px;
+$font-size-lg: 18px;
+$font-size-xl: 20px;
+
+// 圓角
+$border-radius-sm: 2px;
+$border-radius-base: 4px;
+$border-radius-lg: 6px;
+
+// 陰影
+$box-shadow-light:
+  0 2px 4px rgba(0, 0, 0, 0.12),
+  0 0 6px rgba(0, 0, 0, 0.04);
+$box-shadow-base:
+  0 2px 4px rgba(0, 0, 0, 0.12),
+  0 0 6px rgba(0, 0, 0, 0.04);
+$box-shadow-dark:
+  0 2px 4px rgba(0, 0, 0, 0.12),
+  0 0 6px rgba(0, 0, 0, 0.12);
