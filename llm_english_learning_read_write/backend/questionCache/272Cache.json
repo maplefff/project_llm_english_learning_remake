@@ -1,56 +1,5 @@
 [
   {
-    "UUID": "ed08db2e-7ed3-4a03-9b33-4cb966b8dd77",
-    "questionData": {
-      "evaluation_focus": [
-        "Accuracy",
-        "Cultural nuance",
-        "Descriptive language",
-        "Flow"
-      ],
-      "instruction": "Translate the following paragraph, focusing on capturing the descriptive language and the cultural concepts mentioned.",
-      "reference_translations": [
-        "Chinese landscape painting is world-renowned for its unique artistic conception and brushwork techniques. Painters express their reverence for nature and their insights into life by depicting mountains, rivers, trees, and clouds. Blank space is an important characteristic of Chinese landscape painting; it not only increases the sense of space in the painting but also leaves room for the viewer's imagination."
-      ],
-      "source_text": "中国山水画以其独特的意境和笔墨技巧闻名于世。画家们通过描绘山川、河流、树木和云雾，表达对自然的敬畏和人生的感悟。留白是中国山水画的重要特征，它不仅增加了画面的空间感，也给观者留下了想象的余地。"
-    },
-    "cacheTimestamp": 1748038694
-  },
-  {
-    "UUID": "e61fa892-4c15-4f2e-9490-97e9fe39a056",
-    "questionData": {
-      "evaluation_focus": [
-        "Terminology accuracy",
-        "Clarity",
-        "Sentence structure",
-        "Technical style"
-      ],
-      "instruction": "Translate the following paragraph, ensuring accurate terminology related to technology.",
-      "reference_translations": [
-        "The Internet of Things (IoT) refers to a vast network formed by combining various information collected in real time from any object or process that needs monitoring, connection, or interaction through devices and technologies like various information sensors, radio-frequency identification technology, and global positioning systems, with the internet. Its purpose is to realize the interconnection between objects, and between objects and people, thereby enabling intelligent identification, positioning, tracking, monitoring, and management."
-      ],
-      "source_text": "物联网（IoT）是指通过各种信息传感器、射频识别技术、全球定位系统等装置与技术，实时采集任何需要监控、连接、互动的物体或过程的各种信息，并与互联网结合形成的一个巨大网络。其目的是实现物与物、物与人之间的互联互通，进而实现智能化识别、定位、跟踪、监控和管理。"
-    },
-    "cacheTimestamp": 1748038694
-  },
-  {
-    "UUID": "14b7a142-bdea-443f-9a77-b976b5a35d16",
-    "questionData": {
-      "evaluation_focus": [
-        "Metaphorical language",
-        "Tone",
-        "Fluency",
-        "Emotional resonance"
-      ],
-      "instruction": "Translate the following paragraph, paying attention to the metaphorical language and maintaining a reflective tone.",
-      "reference_translations": [
-        "Time is an endless river, washing away memories of the past and shaping the contours of the future. We drift along the long river of years, sometimes swept away by rapids, sometimes resting in tranquil harbors. Every moment is unique, converging to form the story of our lives."
-      ],
-      "source_text": "时间是一条不息的河流，冲刷着往昔的记忆，也塑造着未来的轮廓。我们在岁月的长河中漂流，有时被激流卷携，有时在静谧的港湾休憩。每个瞬间都是独一无二的，汇聚成我们生命的故事。"
-    },
-    "cacheTimestamp": 1748038694
-  },
-  {
     "UUID": "e3048027-ef89-4b24-a7c7-be64b043e7e8",
     "questionData": {
       "evaluation_focus": [
@@ -83,5 +32,58 @@
       "source_text": "中国经济正从高速增长转向高质量发展阶段，更加注重创新驱动和结构优化。政府推出一系列改革措施，旨在提升产业竞争力、改善营商环境并推动可持续发展。外部环境依然复杂，挑战与机遇并存。"
     },
     "cacheTimestamp": 1748038694
+  },
+  {
+    "UUID": "8dc94d31-78be-47cc-aef0-de045f074d7e",
+    "questionData": {
+      "evaluation_focus": [
+        "Accuracy",
+        "Fluency",
+        "Vocabulary Choice"
+      ],
+      "instruction": "Translate the following paragraph into English.",
+      "reference_translations": [
+        "Reading is an important way to acquire knowledge and broaden one's horizons. Through reading, we can understand history, grasp scientific knowledge, feel the charm of literature, and even learn how to live better. Cultivating a reading habit from a young age is crucial for personal growth.",
+        "Reading serves as a vital path to gaining knowledge and expanding perspectives. It allows us to explore history, acquire scientific understanding, experience the appeal of literature, and even learn how to improve our lives. Developing a reading habit early on is essential for individual development."
+      ],
+      "source_text": "阅读是获取知识、拓宽视野的重要途径。通过阅读，我们可以了解历史，掌握科学知识，感受文学的魅力，甚至学习如何更好地生活。从小培养阅读习惯，对个人的成长至关重要。"
+    },
+    "cacheTimestamp": 1748068743
+  },
+  {
+    "UUID": "11686c96-ecb3-4fd1-8980-9bb63d731667",
+    "questionData": {
+      "evaluation_focus": [
+        "Accuracy",
+        "Idiomaticity",
+        "Terminology",
+        "Sentence Structure"
+      ],
+      "instruction": "Translate the following paragraph into English, paying attention to idiomatic expressions.",
+      "reference_translations": [
+        "Protecting the environment is everyone's responsibility. From simple acts like turning off lights to larger ones like participating in tree planting, every action can contribute to the health of the Earth. We should advocate for green lifestyles, reduce pollution, utilize resources wisely, and collectively build a beautiful home.",
+        "Environmental protection is a shared responsibility. From small gestures like switching off lights to larger endeavors such as participating in afforestation, every single action can contribute to the well-being of our planet. We should promote eco-friendly ways of living, minimize pollution, use resources judiciously, and work together to create a better home."
+      ],
+      "source_text": "保护环境，人人有责。小到随手关灯，大到参与植树造林，每一个行动都能为地球的健康贡献一份力量。我们应该倡导绿色生活方式，减少污染，合理利用资源，共同建设一个美好的家园。"
+    },
+    "cacheTimestamp": 1748068743
+  },
+  {
+    "UUID": "2a45f1e7-8434-4045-ba98-86c177f80b8b",
+    "questionData": {
+      "evaluation_focus": [
+        "Accuracy",
+        "Cultural Terminology",
+        "Flow",
+        "Word Choice"
+      ],
+      "instruction": "Translate the following paragraph into English, ensuring cultural terms are handled appropriately.",
+      "reference_translations": [
+        "The Mid-Autumn Festival is one of China's important traditional holidays, typically falling on the 15th day of the eighth month of the lunar calendar. On this day, families gather to admire the moon and eat mooncakes, symbolizing reunion and happiness. Mooncakes come in many varieties and flavors and are an indispensable food for the festival.",
+        "The Mid-Autumn Festival ranks among China's significant traditional festivals, generally observed on the 15th day of the 8th lunar month. It's a time when families reunite to appreciate the moon and share mooncakes, which represent togetherness and completeness. Mooncakes are available in a wide range of types and tastes and are a must-have delicacy for the occasion."
+      ],
+      "source_text": "中秋节是中国重要的传统节日之一，通常在农历八月十五。这一天，家人团聚，一起赏月、吃月饼，象征着团圆和美满。月饼种类繁多，口味各异，是节日不可或缺的美食。"
+    },
+    "cacheTimestamp": 1748068743
   }
 ]

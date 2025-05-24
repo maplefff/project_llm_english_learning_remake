@@ -1,0 +1,14 @@
+[
+  {
+    "UUID": "ed08db2e-7ed3-4a03-9b33-4cb966b8dd77",
+    "questionData": {
+      "passage": "中国山水画以其独特的意境和笔墨技巧闻名于世。画家们通过描绘山川、河流、树木和云雾，表达对自然的敬畏和人生的感悟。留白是中国山水画的重要特征，它不仅增加了画面的空间感，也给观者留下了想象的余地。",
+      "question": "Translate the following paragraph, focusing on capturing the descriptive language and the cultural concepts mentioned.",
+      "options": [],
+      "standard_answer": "寫作/翻譯題需要人工評分"
+    },
+    "userAnswer": "what? too difficult",
+    "isCorrect": false,
+    "timestamp": 1748068726503
+  }
+]

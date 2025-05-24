@@ -1,677 +1,308 @@
-# 前端開發階段 6：效能優化與部署
+# 前端開發階段 6：測試、優化與部署
 
-**對應 `devFrontEnd.md` Phase 6 效能優化與部署**
+**對應 `devFrontEnd.md` Phase 6: 測試、優化與部署 (第11-12週)**
 
 ## 目標
 
-本階段的核心目標是進行最終的效能優化和部署準備。包括程式碼分割和懶載入優化、建構流程優化、部署自動化、監控和分析系統建立、安全性強化，以及生產環境的完整配置，確保應用程式能夠穩定、高效地在生產環境中運行。
+本階段的核心目標是確保應用達到生產就緒狀態，包括建立完整的測試體系、實施全面的性能優化、配置自動化部署流程以及建立監控和維護機制。重點在於保證應用的穩定性、可靠性和可維護性，建立持續整合和部署（CI/CD）流程，並為長期運營提供完善的監控和分析工具。
 
 ## 主要產出物
 
-* 完整的建構和部署流程
-* 程式碼分割和懶載入優化
-* 生產環境配置和環境管理
-* 監控和錯誤追蹤系統
-* 安全性強化和資料保護
-* SEO 優化和 Meta 標籤管理
-* CDN 配置和資源優化
-* 效能測試和基準建立
-* 部署文檔和維護指南
-* 生產環境監控儀表板
+*   完整的測試套件（單元測試、整合測試、E2E 測試）
+*   性能優化和打包優化配置
+*   生產環境部署配置和容器化方案
+*   CI/CD 自動化流程
+*   監控、日誌和錯誤追蹤系統
+*   技術文檔和維護指南
+*   安全性檢查和合規性驗證
 
 ## 詳細步驟
 
-### Phase6.1 建構流程優化
-1. **進階建構系統 (`build-advanced.js`)**:
-   * 實現多環境建構配置 (開發、測試、生產)
-   * 支援程式碼分割和 Tree Shaking
-   * 實現資源壓縮和最佳化
-   * 包含建構快取和增量建構
-   * 實現建構效能分析和報告
+### Phase6.1 測試體系完善 (4-5天)
 
-2. **資源優化工具鏈**:
-   * 實現 CSS 和 JavaScript 壓縮
-   * 支援圖片最佳化和 WebP 轉換
-   * 實現字體子集化和預載入
-   * 包含 Critical CSS 提取和內聯
-   * 實現資源指紋和快取破壞
+1.  **單元測試完善**:
+    *   **組件測試增強（tests/unit/components/）**:
+        *   所有 UI 組件的完整測試覆蓋
+        *   Props 傳遞和事件發射測試
+        *   條件渲染和狀態變化測試
+        *   用戶交互模擬和斷言驗證
+        *   錯誤邊界和異常處理測試
+    *   **組合式函數測試（tests/unit/composables/）**:
+        *   `useQuiz`, `useHistory`, `useNotification` 等的邏輯測試
+        *   響應式狀態變化的驗證
+        *   副作用和清理邏輯的測試
+        *   異步操作和錯誤處理測試
+        *   Mock 依賴和隔離測試
+    *   **Pinia Store 測試（tests/unit/stores/）**:
+        *   狀態初始化和變化測試
+        *   Actions 和 Getters 的邏輯驗證
+        *   異步 Actions 的完整測試
+        *   Store 間通訊的集成測試
+        *   持久化和恢復機制測試
+    *   **工具函數測試（tests/unit/utils/）**:
+        *   純函數的邊界條件測試
+        *   類型轉換和格式化函數測試
+        *   驗證和計算邏輯測試
+        *   錯誤處理和異常情況測試
 
-3. **程式碼分割策略**:
-   * 實現路由級別的程式碼分割
-   * 支援組件級別的懶載入
-   * 實現第三方庫的分離打包
-   * 包含公共代碼的提取和快取
-   * 實現動態導入和預載入策略
+2.  **整合測試開發**:
+    *   **API 整合測試（tests/integration/api/）**:
+        *   HTTP 客戶端的請求和響應測試
+        *   API 錯誤處理和重試機制測試
+        *   認證和授權流程測試
+        *   數據格式和類型驗證測試
+        *   快取策略和失效機制測試
+    *   **頁面流程測試（tests/integration/pages/）**:
+        *   頁面間導航流程測試
+        *   狀態保持和恢復測試
+        *   表單提交和驗證流程測試
+        *   數據載入和更新流程測試
+        *   錯誤狀態和恢復流程測試
+    *   **數據流測試（tests/integration/dataflow/）**:
+        *   組件與 Store 的數據同步測試
+        *   API 調用與狀態更新的集成測試
+        *   本地存儲與狀態的同步測試
+        *   跨組件數據傳遞測試
 
-### Phase6.2 效能監控和分析
-1. **效能監控系統 (`PerformanceMonitor.js`)**:
-   * 實現 Core Web Vitals 監控
-   * 支援用戶行為和互動分析
-   * 實現 API 響應時間監控
-   * 包含記憶體使用和 FPS 追蹤
-   * 實現效能警報和通知機制
+3.  **E2E 測試實施**:
+    *   **關鍵用戶流程測試（tests/e2e/flows/）**:
+        *   用戶註冊和登入流程
+        *   測驗選擇和配置流程
+        *   完整測驗會話流程
+        *   結果查看和歷史記錄流程
+        *   設定修改和個人化流程
+    *   **跨瀏覽器測試（tests/e2e/cross-browser/）**:
+        *   Chrome、Firefox、Safari、Edge 的兼容性測試
+        *   不同版本瀏覽器的功能驗證
+        *   瀏覽器特定功能的測試
+        *   性能差異的記錄和分析
+    *   **響應式測試（tests/e2e/responsive/）**:
+        *   桌面、平板、手機的佈局測試
+        *   不同解析度下的功能測試
+        *   觸控和鍵盤交互測試
+        *   方向變化（橫屏/豎屏）測試
+    *   **性能和載入測試**:
+        *   首次載入和後續導航性能測試
+        *   大數據量下的性能表現測試
+        *   網路條件變化的適應性測試
+        *   記憶體使用和洩漏檢測
 
-2. **錯誤追蹤和日誌系統**:
-   * 實現全域錯誤捕獲和報告
-   * 支援 Source Map 和錯誤還原
-   * 實現用戶會話和操作重現
-   * 包含錯誤分類和優先級設定
-   * 實現錯誤趨勢分析和預警
+4.  **測試工具和配置優化**:
+    *   **測試環境配置**:
+        *   Jest/Vitest 配置優化
+        *   測試覆蓋率報告配置
+        *   測試數據和 Mock 管理
+        *   測試環境的隔離和清理
+    *   **自動化測試流程**:
+        *   Git hooks 中的測試自動執行
+        *   CI/CD 中的測試門檻設定
+        *   測試失敗的通知和報告
+        *   測試結果的追蹤和分析
 
-3. **分析和報告工具**:
-   * 實現用戶使用情況統計
-   * 支援 A/B 測試和特性開關
-   * 實現轉換率和目標追蹤
-   * 包含效能基準和比較分析
+### Phase6.2 性能優化與打包優化 (3-4天)
 
-### Phase6.3 安全性和隱私保護
-1. **安全性強化 (`SecurityManager.js`)**:
-   * 實現 Content Security Policy (CSP)
-   * 支援 HTTPS 強制和 HSTS
-   * 實現 XSS 和 CSRF 防護
-   * 包含敏感資料加密和保護
-   * 實現 API 金鑰和憑證管理
+1.  **程式碼層面優化**:
+    *   **程式碼分割策略**:
+        *   路由層級的程式碼分割
+        *   組件層級的懶載入
+        *   第三方庫的動態導入
+        *   條件載入和特性檢測
+        *   分割策略的效果測量
+    *   **Bundle 分析和優化**:
+        *   使用 webpack-bundle-analyzer 分析打包結果
+        *   識別和移除未使用的程式碼（Tree Shaking）
+        *   重複依賴的去重和共享
+        *   依賴項的版本優化和替換
+        *   打包大小的持續監控
+    *   **JavaScript 優化**:
+        *   避免阻塞主線程的長任務
+        *   使用 Web Workers 處理計算密集型任務
+        *   防抖和節流的合理應用
+        *   記憶體洩漏的檢測和修復
+        *   垃圾回收友好的程式碼模式
 
-2. **隱私保護措施**:
-   * 實現 GDPR 合規和 Cookie 同意
-   * 支援資料匿名化和加密
-   * 實現用戶資料匯出和刪除
-   * 包含隱私政策和使用條款整合
+2.  **資源優化策略**:
+    *   **圖片和媒體優化**:
+        *   圖片格式的選擇和轉換（WebP、AVIF）
+        *   圖片壓縮和品質優化
+        *   響應式圖片的實現
+        *   圖片懶載入和預載入策略
+        *   CDN 和圖片服務的整合
+    *   **字體和樣式優化**:
+        *   字體子集化和格式優化
+        *   字體載入策略（font-display）
+        *   CSS 的壓縮和優化
+        *   關鍵 CSS 的內聯
+        *   未使用 CSS 的移除
+    *   **靜態資源優化**:
+        *   資源的版本控制和快取設定
+        *   資源壓縮（Gzip、Brotli）
+        *   資源的 CDN 分發
+        *   離線資源的策略管理
 
-3. **資料驗證和清理**:
-   * 實現輸入驗證和過濾
-   * 支援 SQL 注入和 XSS 防護
-   * 實現資料完整性檢查
-   * 包含敏感資訊的遮罩和保護
+3.  **快取策略實施**:
+    *   **瀏覽器快取配置**:
+        *   HTTP 快取頭的設定
+        *   ETag 和 Last-Modified 的配置
+        *   快取策略的層級設計
+        *   快取失效和更新機制
+    *   **應用層快取**:
+        *   API 回應的智能快取
+        *   狀態的本地快取和持久化
+        *   計算結果的記憶化
+        *   快取容量和清理策略
+    *   **Service Worker 快取**:
+        *   離線資源的選擇性快取
+        *   快取更新策略
+        *   快取版本管理
+        *   快取異常的處理
 
-### Phase6.4 SEO 和 Meta 管理
-1. **SEO 優化系統 (`SEOManager.js`)**:
-   * 實現動態 Meta 標籤管理
-   * 支援 Open Graph 和 Twitter Cards
-   * 實現結構化資料和 Schema.org
-   * 包含 Sitemap 生成和管理
-   * 實現 robots.txt 和搜索引擎指令
+4.  **渲染性能優化**:
+    *   **虛擬化和懶載入**:
+        *   大列表的虛擬滾動實現
+        *   圖片和組件的懶載入
+        *   路由的預載入策略
+        *   內容的漸進式渲染
+    *   **重排重繪優化**:
+        *   CSS 動畫的硬件加速
+        *   Layout thrashing 的避免
+        *   批量 DOM 操作
+        *   Composite layer 的合理利用
 
-2. **內容優化**:
-   * 實現語義化 HTML 結構優化
-   * 支援圖片 Alt 文字和描述
-   * 實現內部連結和導覽優化
-   * 包含頁面載入速度優化
+### Phase6.3 部署配置與容器化 (2-3天)
 
-3. **分析和追蹤**:
-   * 實現 Google Analytics 4 整合
-   * 支援 Google Search Console 整合
-   * 實現轉換追蹤和目標設定
-   * 包含 SEO 效能監控和報告
+1.  **生產環境配置**:
+    *   **環境變數管理**:
+        *   生產環境的配置隔離
+        *   敏感信息的安全管理
+        *   多環境配置的統一管理
+        *   配置變更的版本控制
+    *   **建構配置優化**:
+        *   生產建構的性能優化
+        *   Source maps 的配置策略
+        *   錯誤追蹤的配置
+        *   安全性配置和加固
+    *   **Web 服務器配置**:
+        *   Nginx 或 Apache 的配置優化
+        *   HTTP/2 和 HTTP/3 的啟用
+        *   SSL/TLS 證書配置
+        *   安全頭的設定
+        *   反向代理和負載平衡
 
-### Phase6.5 部署自動化和 CI/CD
-1. **CI/CD 流程建立**:
-   * 實現 GitHub Actions 或類似的 CI/CD 流程
-   * 支援自動化測試和代碼品質檢查
-   * 實現多環境部署管道
-   * 包含自動化回滾和健康檢查
-   * 實現部署通知和狀態報告
+2.  **容器化實施**:
+    *   **Dockerfile 編寫**:
+        *   多階段建構的實現
+        *   映像大小的優化
+        *   安全性掃描和基線映像選擇
+        *   建構快取的合理利用
+    *   **Docker 配置優化**:
+        *   容器資源限制設定
+        *   健康檢查的配置
+        *   日誌輸出的管理
+        *   環境變數的注入
+    *   **容器編排準備**:
+        *   Kubernetes 部署文件編寫
+        *   Docker Compose 配置
+        *   服務發現和網路配置
+        *   存儲卷的管理
 
-2. **環境管理系統**:
-   * 實現開發、測試、生產環境配置
-   * 支援環境變數和秘密管理
-   * 實現配置驗證和環境健康檢查
-   * 包含環境間的資料同步和遷移
+3.  **CI/CD 流程建立**:
+    *   **GitHub Actions 配置**:
+        *   自動化測試流程
+        *   多環境部署流水線
+        *   安全性掃描集成
+        *   依賴更新自動化
+    *   **品質門檻設定**:
+        *   程式碼覆蓋率要求
+        *   安全性漏洞檢查
+        *   性能回歸檢測
+        *   可訪問性合規檢查
+    *   **部署策略**:
+        *   藍綠部署或滾動更新
+        *   Canary 發布策略
+        *   回滾機制和策略
+        *   部署監控和驗證
 
-3. **部署策略**:
-   * 實現藍綠部署或滾動更新
-   * 支援金絲雀發布和 A/B 測試
-   * 實現自動縮放和負載均衡
-   * 包含災難恢復和備份策略
+### Phase6.4 監控與維護體系 (1-2天)
 
-### Phase6.6 生產環境優化
-1. **CDN 和快取配置**:
-   * 實現 CDN 資源分發和最佳化
-   * 支援智慧快取策略和 TTL 管理
-   * 實現邊緣運算和地理分發
-   * 包含快取預熱和失效管理
+1.  **錯誤追蹤和監控**:
+    *   **錯誤收集系統**:
+        *   前端錯誤的自動收集
+        *   錯誤上下文和堆疊資訊
+        *   用戶操作路徑的記錄
+        *   錯誤分類和優先級設定
+    *   **性能監控實施**:
+        *   Real User Monitoring (RUM)
+        *   Core Web Vitals 的持續監控
+        *   API 性能和錯誤率監控
+        *   資源載入性能監控
+    *   **用戶行為分析**:
+        *   頁面瀏覽和停留時間統計
+        *   用戶互動事件追蹤
+        *   轉換漏斗分析
+        *   A/B 測試框架準備
 
-2. **服務器配置優化**:
-   * 實現 Gzip/Brotli 壓縮配置
-   * 支援 HTTP/2 和 HTTP/3 優化
-   * 實現負載均衡和故障轉移
-   * 包含 SSL/TLS 配置和安全性設定
+2.  **日誌和診斷系統**:
+    *   **結構化日誌**:
+        *   前端日誌的結構化設計
+        *   日誌等級和分類管理
+        *   敏感信息的過濾和保護
+        *   日誌的收集和聚合
+    *   **診斷工具**:
+        *   性能分析工具集成
+        *   記憶體使用分析
+        *   網路請求追蹤
+        *   用戶會話回放
 
-3. **監控和警報系統**:
-   * 實現 24/7 系統監控
-   * 支援即時警報和通知
-   * 實現效能基準和異常檢測
-   * 包含運維儀表板和報告系統
+3.  **安全性和合規性**:
+    *   **安全性檢查**:
+        *   XSS 和 CSRF 防護驗證
+        *   依賴項安全漏洞掃描
+        *   Content Security Policy 配置
+        *   數據傳輸加密驗證
+    *   **隱私保護**:
+        *   用戶數據的最小化收集
+        *   數據處理的透明度
+        *   Cookie 和存儲管理
+        *   GDPR 等法規的合規性檢查
 
-## 核心代碼實作規格
+## 技術架構與工具整合
 
-### 進階建構系統設計
-```javascript
-// build-advanced.js
-class AdvancedBuilder {
-  constructor(config) {
-    this.config = {
-      entry: './src/main.js',
-      output: './dist',
-      environment: 'production',
-      splitChunks: true,
-      treeshaking: true,
-      compression: true,
-      sourceMap: false,
-      ...config
-    };
-    this.plugins = [];
-    this.stats = {
-      buildTime: 0,
-      bundleSize: 0,
-      chunks: [],
-      assets: []
-    };
-  }
+### 測試架構
+*   **測試金字塔**: 大量單元測試 + 適量整合測試 + 少量 E2E 測試
+*   **測試隔離**: 每個測試的獨立性和可重複性
+*   **測試數據**: Mock 數據和測試環境的統一管理
+*   **測試報告**: 清晰的測試結果展示和趨勢分析
 
-  async build() {
-    console.log(`[BUILD] 開始建構 - 環境: ${this.config.environment}`);
-    const startTime = Date.now();
+### 性能監控架構
+*   **多層監控**: 基礎設施 + 應用 + 用戶體驗的全方位監控
+*   **實時警報**: 關鍵指標的閾值監控和及時通知
+*   **歷史分析**: 性能趨勢的長期追蹤和分析
+*   **自動化優化**: 基於監控數據的自動化優化建議
 
-    try {
-      // 清理輸出目錄
-      await this.clean();
-      
-      // 分析依賴圖譜
-      const dependencyGraph = await this.analyzeDependencies();
-      
-      // 執行程式碼分割
-      const chunks = this.config.splitChunks ? 
-        await this.splitCode(dependencyGraph) : 
-        [{ name: 'main', modules: dependencyGraph.modules }];
-      
-      // 處理每個 chunk
-      const assets = [];
-      for (const chunk of chunks) {
-        const asset = await this.processChunk(chunk);
-        assets.push(asset);
-      }
-      
-      // 最佳化資源
-      if (this.config.compression) {
-        await this.optimizeAssets(assets);
-      }
-      
-      // 生成資源清單
-      await this.generateManifest(assets);
-      
-      // 生成 HTML
-      await this.generateHTML(assets);
-      
-      // 複製靜態資源
-      await this.copyStaticAssets();
-      
-      // 計算統計信息
-      this.stats.buildTime = Date.now() - startTime;
-      this.stats.bundleSize = this.calculateTotalSize(assets);
-      this.stats.chunks = chunks;
-      this.stats.assets = assets;
-      
-      console.log(`[BUILD] 建構完成 - 耗時: ${this.stats.buildTime}ms`);
-      this.printBuildStats();
-      
-    } catch (error) {
-      console.error('[BUILD] 建構失敗:', error);
-      throw error;
-    }
-  }
+### 部署架構
+*   **漸進式部署**: 從測試環境到生產環境的漸進式發佈
+*   **環境一致性**: 開發、測試、生產環境的配置一致性
+*   **快速回滾**: 問題發生時的快速回滾能力
+*   **零停機部署**: 不影響用戶使用的平滑部署
 
-  async splitCode(dependencyGraph) {
-    const chunks = [];
-    
-    // 提取第三方庫
-    const vendorModules = dependencyGraph.modules.filter(module => 
-      module.path.includes('node_modules')
-    );
-    
-    if (vendorModules.length > 0) {
-      chunks.push({
-        name: 'vendor',
-        modules: vendorModules,
-        type: 'vendor'
-      });
-    }
-    
-    // 提取公共模組
-    const commonModules = this.findCommonModules(dependencyGraph);
-    if (commonModules.length > 0) {
-      chunks.push({
-        name: 'common',
-        modules: commonModules,
-        type: 'common'
-      });
-    }
-    
-    // 路由級別分割
-    const routeChunks = await this.createRouteChunks(dependencyGraph);
-    chunks.push(...routeChunks);
-    
-    // 剩餘的主要模組
-    const remainingModules = this.getRemainingModules(
-      dependencyGraph, 
-      [...vendorModules, ...commonModules, ...routeChunks.flatMap(c => c.modules)]
-    );
-    
-    if (remainingModules.length > 0) {
-      chunks.push({
-        name: 'main',
-        modules: remainingModules,
-        type: 'main'
-      });
-    }
-    
-    return chunks;
-  }
-
-  async processChunk(chunk) {
-    // 合併模組代碼
-    let code = await this.bundleModules(chunk.modules);
-    
-    // Tree Shaking
-    if (this.config.treeshaking) {
-      code = await this.treeShake(code);
-    }
-    
-    // 轉譯和優化
-    code = await this.transform(code);
-    
-    // 壓縮
-    if (this.config.environment === 'production') {
-      code = await this.minify(code);
-    }
-    
-    // 生成檔案
-    const filename = this.generateFilename(chunk);
-    const filepath = path.join(this.config.output, filename);
-    
-    await fs.writeFile(filepath, code);
-    
-    // 生成 Source Map
-    if (this.config.sourceMap) {
-      await this.generateSourceMap(chunk, code, filepath);
-    }
-    
-    return {
-      name: chunk.name,
-      filename,
-      filepath,
-      size: Buffer.byteLength(code),
-      type: chunk.type
-    };
-  }
-
-  async optimizeAssets(assets) {
-    for (const asset of assets) {
-      // Gzip 壓縮
-      await this.gzipCompress(asset);
-      
-      // Brotli 壓縮
-      await this.brotliCompress(asset);
-      
-      // 計算檔案雜湊
-      asset.hash = await this.calculateHash(asset.filepath);
-      
-      // 重命名為帶雜湊的檔名
-      if (this.config.environment === 'production') {
-        asset.hashedFilename = this.addHashToFilename(asset.filename, asset.hash);
-        await this.renameFile(asset.filepath, asset.hashedFilename);
-      }
-    }
-  }
-
-  printBuildStats() {
-    console.log('\n📊 建構統計:');
-    console.log(`⏱️  建構時間: ${this.stats.buildTime}ms`);
-    console.log(`📦 總包大小: ${this.formatSize(this.stats.bundleSize)}`);
-    console.log(`🧩 Chunk 數量: ${this.stats.chunks.length}`);
-    
-    console.log('\n📋 Chunk 詳情:');
-    this.stats.chunks.forEach(chunk => {
-      const asset = this.stats.assets.find(a => a.name === chunk.name);
-      console.log(`  ${chunk.name}: ${this.formatSize(asset.size)} (${chunk.modules.length} 模組)`);
-    });
-  }
-}
-```
-
-### 效能監控系統實作
-```javascript
-class PerformanceMonitor {
-  constructor() {
-    this.observers = new Map();
-    this.metrics = {
-      webVitals: {},
-      customMetrics: {},
-      userInteractions: [],
-      apiPerformance: {}
-    };
-    this.reportEndpoint = '/api/performance';
-    this.bufferSize = 100;
-    this.reportInterval = 30000; // 30秒
-    
-    this.initializeMonitoring();
-  }
-
-  initializeMonitoring() {
-    // Core Web Vitals 監控
-    this.observeWebVitals();
-    
-    // 用戶互動監控
-    this.observeUserInteractions();
-    
-    // API 效能監控
-    this.observeAPIPerformance();
-    
-    // 記憶體使用監控
-    this.observeMemoryUsage();
-    
-    // 開始定期報告
-    this.startPeriodicReporting();
-  }
-
-  observeWebVitals() {
-    // Largest Contentful Paint (LCP)
-    this.observeMetric('largest-contentful-paint', (entry) => {
-      this.metrics.webVitals.lcp = {
-        value: entry.renderTime || entry.loadTime,
-        timestamp: Date.now(),
-        element: entry.element?.tagName || 'unknown'
-      };
-    });
-
-    // First Input Delay (FID)
-    this.observeMetric('first-input', (entry) => {
-      this.metrics.webVitals.fid = {
-        value: entry.processingStart - entry.startTime,
-        timestamp: Date.now(),
-        inputType: entry.name
-      };
-    });
-
-    // Cumulative Layout Shift (CLS)
-    this.observeMetric('layout-shift', (entry) => {
-      if (!entry.hadRecentInput) {
-        if (!this.metrics.webVitals.cls) {
-          this.metrics.webVitals.cls = {
-            value: 0,
-            timestamp: Date.now(),
-            shifts: []
-          };
-        }
-        
-        this.metrics.webVitals.cls.value += entry.value;
-        this.metrics.webVitals.cls.shifts.push({
-          value: entry.value,
-          timestamp: Date.now(),
-          sources: entry.sources?.map(s => s.node?.tagName) || []
-        });
-      }
-    });
-
-    // Interaction to Next Paint (INP)
-    this.observeMetric('event', (entry) => {
-      if (entry.interactionId) {
-        const interaction = {
-          duration: entry.duration,
-          startTime: entry.startTime,
-          interactionId: entry.interactionId,
-          type: entry.name
-        };
-        
-        if (!this.metrics.webVitals.inp || entry.duration > this.metrics.webVitals.inp.value) {
-          this.metrics.webVitals.inp = {
-            value: entry.duration,
-            timestamp: Date.now(),
-            interaction
-          };
-        }
-      }
-    });
-  }
-
-  observeMetric(type, callback) {
-    if ('PerformanceObserver' in window) {
-      const observer = new PerformanceObserver((list) => {
-        list.getEntries().forEach(callback);
-      });
-      
-      try {
-        observer.observe({ type, buffered: true });
-        this.observers.set(type, observer);
-      } catch (error) {
-        console.warn(`[PERF] 無法監控 ${type}:`, error);
-      }
-    }
-  }
-
-  observeUserInteractions() {
-    // 點擊事件監控
-    document.addEventListener('click', (event) => {
-      this.recordInteraction('click', event);
-    });
-
-    // 表單提交監控
-    document.addEventListener('submit', (event) => {
-      this.recordInteraction('form-submit', event);
-    });
-
-    // 頁面切換監控
-    window.addEventListener('popstate', () => {
-      this.recordInteraction('navigation', { type: 'popstate' });
-    });
-  }
-
-  recordInteraction(type, event) {
-    const interaction = {
-      type,
-      timestamp: Date.now(),
-      target: event.target?.tagName || 'unknown',
-      pathname: window.location.pathname
-    };
-
-    this.metrics.userInteractions.push(interaction);
-    
-    // 保持緩衝區大小
-    if (this.metrics.userInteractions.length > this.bufferSize) {
-      this.metrics.userInteractions = this.metrics.userInteractions.slice(-this.bufferSize);
-    }
-  }
-
-  observeAPIPerformance() {
-    // 攔截 fetch 請求
-    const originalFetch = window.fetch;
-    window.fetch = async (...args) => {
-      const startTime = performance.now();
-      const url = args[0];
-      
-      try {
-        const response = await originalFetch(...args);
-        const endTime = performance.now();
-        
-        this.recordAPICall(url, endTime - startTime, response.status, 'success');
-        return response;
-      } catch (error) {
-        const endTime = performance.now();
-        this.recordAPICall(url, endTime - startTime, 0, 'error');
-        throw error;
-      }
-    };
-  }
-
-  recordAPICall(url, duration, status, result) {
-    const apiCall = {
-      url: this.sanitizeURL(url),
-      duration,
-      status,
-      result,
-      timestamp: Date.now()
-    };
-
-    const endpoint = this.getEndpointKey(url);
-    if (!this.metrics.apiPerformance[endpoint]) {
-      this.metrics.apiPerformance[endpoint] = {
-        calls: [],
-        averageDuration: 0,
-        errorRate: 0
-      };
-    }
-
-    const endpointMetrics = this.metrics.apiPerformance[endpoint];
-    endpointMetrics.calls.push(apiCall);
-    
-    // 保持緩衝區大小
-    if (endpointMetrics.calls.length > this.bufferSize) {
-      endpointMetrics.calls = endpointMetrics.calls.slice(-this.bufferSize);
-    }
-    
-    // 更新統計
-    this.updateAPIStatistics(endpoint);
-  }
-
-  updateAPIStatistics(endpoint) {
-    const metrics = this.metrics.apiPerformance[endpoint];
-    const calls = metrics.calls;
-    
-    // 計算平均響應時間
-    metrics.averageDuration = calls.reduce((sum, call) => sum + call.duration, 0) / calls.length;
-    
-    // 計算錯誤率
-    const errorCount = calls.filter(call => call.result === 'error').length;
-    metrics.errorRate = (errorCount / calls.length) * 100;
-  }
-
-  async reportMetrics() {
-    const report = {
-      timestamp: Date.now(),
-      url: window.location.href,
-      userAgent: navigator.userAgent,
-      connection: this.getConnectionInfo(),
-      metrics: {
-        webVitals: this.metrics.webVitals,
-        customMetrics: this.metrics.customMetrics,
-        userInteractions: this.metrics.userInteractions.slice(-10), // 最近 10 個互動
-        apiPerformance: this.getAPIPerformanceSummary()
-      }
-    };
-
-    try {
-      await fetch(this.reportEndpoint, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(report)
-      });
-      
-      console.log('[PERF] 效能報告已發送');
-    } catch (error) {
-      console.error('[PERF] 發送效能報告失敗:', error);
-    }
-  }
-
-  startPeriodicReporting() {
-    setInterval(() => {
-      this.reportMetrics();
-    }, this.reportInterval);
-    
-    // 頁面卸載時發送最終報告
-    window.addEventListener('beforeunload', () => {
-      this.reportMetrics();
-    });
-  }
-
-  getConnectionInfo() {
-    if ('connection' in navigator) {
-      return {
-        effectiveType: navigator.connection.effectiveType,
-        downlink: navigator.connection.downlink,
-        rtt: navigator.connection.rtt
-      };
-    }
-    return null;
-  }
-
-  // 提供公共 API 用於自定義指標
-  recordCustomMetric(name, value, unit = 'ms') {
-    this.metrics.customMetrics[name] = {
-      value,
-      unit,
-      timestamp: Date.now()
-    };
-  }
-
-  // 測量函數執行時間
-  async measureFunction(name, fn) {
-    const startTime = performance.now();
-    try {
-      const result = await fn();
-      const duration = performance.now() - startTime;
-      this.recordCustomMetric(name, duration);
-      return result;
-    } catch (error) {
-      const duration = performance.now() - startTime;
-      this.recordCustomMetric(`${name}_error`, duration);
-      throw error;
-    }
-  }
-}
-
-// 全域效能監控實例
-const performanceMonitor = new PerformanceMonitor();
-
-// 匯出供其他模組使用
-window.performanceMonitor = performanceMonitor;
-```
-
-## 部署檢查清單
-
-### 🔧 技術檢查
-- [ ] 所有建構腳本正常運行
-- [ ] 程式碼分割和懶載入正確實作
-- [ ] 資源壓縮和最佳化完成
-- [ ] Source Maps 正確生成
-- [ ] 環境變數正確配置
-
-### 🚀 效能檢查
-- [ ] Core Web Vitals 指標達標 (LCP < 2.5s, FID < 100ms, CLS < 0.1)
-- [ ] Bundle 大小在合理範圍內 (< 2MB)
-- [ ] 載入時間 < 2秒
-- [ ] API 響應時間 < 500ms
-- [ ] 記憶體使用穩定
-
-### 🔒 安全性檢查
-- [ ] CSP 政策正確配置
-- [ ] HTTPS 強制啟用
-- [ ] XSS 和 CSRF 防護就位
-- [ ] 敏感資料加密保護
-- [ ] API 金鑰安全管理
-
-### 📊 監控檢查
-- [ ] 錯誤追蹤系統正常運作
-- [ ] 效能監控正確收集資料
-- [ ] 警報系統配置完成
-- [ ] 日誌系統正常記錄
-- [ ] 監控儀表板可訪問
-
-### 🌐 SEO 檢查
-- [ ] Meta 標籤正確設定
-- [ ] Open Graph 標籤完整
-- [ ] Sitemap 生成並提交
-- [ ] robots.txt 正確配置
-- [ ] 結構化資料標記完整
+### 監控和維護架構
+*   **中央化監控**: 統一的監控儀表板和告警中心
+*   **自動化運維**: 常見問題的自動檢測和修復
+*   **容量規劃**: 基於使用趨勢的資源規劃
+*   **災難恢復**: 完整的備份和災難恢復計劃
 
 ## 驗收標準
 
-* 所有建構流程自動化且穩定運行
-* 效能指標達到預期目標 (Core Web Vitals 全綠)
-* 監控系統正確收集和報告資料
-* 安全性檢查全部通過
-* SEO 優化完整實作
-* 部署流程自動化且支援回滾
-* 生產環境穩定運行無關鍵錯誤
-* 文檔完整且易於維護
-* 所有程式碼已提交到版本控制系統 (Git)
-* 通過生產環境的完整測試 
+*   單元測試覆蓋率達到 85% 以上，所有關鍵功能都有測試保護
+*   整合測試和 E2E 測試覆蓋所有主要用戶流程，測試通過率 100%
+*   性能指標達到目標值（LCP < 2.5s, FID < 100ms, CLS < 0.1）
+*   生產環境部署成功，所有功能正常運作
+*   CI/CD 流程自動化程度高，部署效率和可靠性顯著提升
+*   監控系統正常運作，能及時發現和報告問題
+*   安全性檢查通過，符合行業標準和最佳實踐
+*   文檔完整，包括部署指南、維護手冊和故障排除指南
+*   跨瀏覽器兼容性測試通過，用戶體驗一致
+*   負載測試通過，系統在高並發下穩定運行
+*   備份和災難恢復機制驗證有效
+*   團隊對整個系統有充分理解，具備獨立維護能力 

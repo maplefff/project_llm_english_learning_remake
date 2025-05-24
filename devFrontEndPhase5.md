@@ -1,587 +1,310 @@
-# 前端開發階段 5：使用者體驗優化
+# 前端開發階段 5：UX 優化與進階功能
 
-**對應 `devFrontEnd.md` Phase 5 使用者體驗優化**
+**對應 `devFrontEnd.md` Phase 5: UX 優化與進階功能 (第9-10週)**
 
 ## 目標
 
-本階段的核心目標是優化使用者體驗，增加進階功能和視覺效果。實現流暢的動畫系統、進階互動功能、個人化設定、學習分析儀表板、離線功能支援，以及無障礙功能的全面優化，確保應用程式提供卓越的用戶體驗。
+本階段的核心目標是全面提升用戶體驗，實現進階功能和智能化特性。包括建立完整的動畫系統、豐富的數據視覺化分析、無障礙功能支援、國際化準備以及 PWA 功能。重點在於打造現代化的互動體驗、提供深度的學習分析洞察，並確保應用在各種環境和使用條件下都能提供優質的用戶體驗。
 
 ## 主要產出物
 
-* 完整的動畫系統和過渡效果
-* 個人化學習儀表板和統計分析
-* 進階設定系統和偏好管理
-* 離線功能和資料同步機制
-* 通知系統和使用者反饋機制
-* 無障礙功能完整實作
-* 效能優化和載入體驗改善
-* 多語言支援和國際化
-* 主題系統和視覺客製化
-* 進階互動功能和手勢支援
+*   完整的動畫系統和過渡效果
+*   智能學習分析和數據視覺化功能
+*   無障礙功能和包容性設計
+*   國際化框架和多語言支援
+*   PWA 功能和離線體驗
+*   性能優化和用戶體驗增強
+*   完善的錯誤處理和降級方案
 
 ## 詳細步驟
 
-### Phase5.1 動畫系統和視覺效果
-1. **動畫引擎 (`AnimationEngine.js`)**:
-   * 實現 CSS 動畫和 JavaScript 動畫的統一管理
-   * 支援動畫序列和平行動畫執行
-   * 實現動畫暫停、恢復、取消功能
-   * 包含效能監控和 FPS 最佳化
-   * 實現動畫預設和自定義動畫
-
-2. **頁面轉場效果**:
-   * 實現頁面間的平滑轉場動畫
-   * 支援滑動、淡入淡出、縮放等效果
-   * 實現轉場過程中的載入狀態顯示
-   * 包含轉場動畫的可訪問性優化
-
-3. **微互動動畫**:
-   * 實現按鈕點擊、hover 效果動畫
-   * 支援表單驗證的動畫反饋
-   * 實現進度指示器的動畫效果
-   * 包含測驗互動的動畫回饋
-
-### Phase5.2 個人化學習儀表板
-1. **Dashboard 增強 (`EnhancedDashboard.js`)**:
-   * 實現可客製化的儀表板配置
-   * 支援拖拽重新排列卡片組件
-   * 實現即時統計和動態更新
-   * 包含學習目標設定和追蹤功能
-   * 實現學習建議和智慧提醒
-
-2. **統計圖表系統 (`ChartComponents.js`)**:
-   * 實現多種圖表類型 (線圖、柱狀圖、圓餅圖、雷達圖)
-   * 支援即時資料更新和動畫效果
-   * 實現圖表互動和詳細資訊顯示
-   * 包含圖表匯出和分享功能
-   * 實現響應式圖表佈局
-
-3. **學習分析功能**:
-   * 實現學習模式分析和可視化
-   * 支援弱點識別和改進建議
-   * 實現學習軌跡追蹤和預測
-   * 包含比較分析和排名功能
-
-### Phase5.3 進階設定和偏好系統
-1. **SettingsManager 增強 (`AdvancedSettings.js`)**:
-   * 實現分類設定和搜尋功能
-   * 支援設定的即時預覽和套用
-   * 實現設定同步和雲端備份
-   * 包含設定匯入/匯出功能
-   * 實現設定變更歷史和復原
-
-2. **主題系統 (`ThemeManager.js`)**:
-   * 實現深色/淺色模式自動切換
-   * 支援自定義主題色彩和字體
-   * 實現主題即時預覽和套用
-   * 包含主題分享和匯入功能
-   * 實現系統主題跟隨功能
-
-3. **個人化偏好**:
-   * 實現學習偏好和難度調整
-   * 支援題型偏好和頻率設定
-   * 實現介面佈局和功能客製化
-   * 包含快捷鍵和手勢設定
-
-### Phase5.4 離線功能和資料同步
-1. **ServiceWorker 實作 (`sw.js`)**:
-   * 實現應用程式離線快取策略
-   * 支援靜態資源和動態資料快取
-   * 實現背景同步和更新檢查
-   * 包含快取管理和清理機制
-   * 實現漸進式 Web 應用程式 (PWA) 功能
-
-2. **離線資料管理 (`OfflineManager.js`)**:
-   * 實現離線模式下的測驗功能
-   * 支援離線答案暫存和同步
-   * 實現衝突解決和資料合併
-   * 包含離線狀態指示和使用者提示
-   * 實現資料壓縮和最佳化存儲
-
-3. **資料同步機制**:
-   * 實現增量同步和衝突解決
-   * 支援多裝置間的資料同步
-   * 實現同步進度顯示和錯誤處理
-   * 包含網路狀態檢測和自動重連
-
-### Phase5.5 通知和反饋系統
-1. **NotificationManager (`NotificationManager.js`)**:
-   * 實現應用程式內通知系統
-   * 支援瀏覽器原生通知 API
-   * 實現通知的分類和優先級管理
-   * 包含通知歷史和已讀狀態
-   * 實現通知設定和靜音功能
-
-2. **Toast 和 Alert 系統 (`ToastSystem.js`)**:
-   * 實現多層級通知訊息顯示
-   * 支援成功、警告、錯誤、資訊類型
-   * 實現自動消失和手動關閉功能
-   * 包含通知動畫和位置設定
-   * 實現通知佇列和批量處理
-
-3. **使用者反饋收集**:
-   * 實現使用體驗評分和意見收集
-   * 支援錯誤報告和改進建議
-   * 實現反饋分類和處理追蹤
-   * 包含用戶滿意度調查功能
-
-### Phase5.6 無障礙功能完整實作
-1. **AccessibilityManager (`A11yManager.js`)**:
-   * 實現螢幕閱讀器完整支援
-   * 支援高對比度和大字體模式
-   * 實現鍵盤導覽和 focus 管理
-   * 包含語音合成和聽覺回饋
-   * 實現動畫減少和動作敏感性設定
-
-2. **鍵盤操作增強**:
-   * 實現全局快捷鍵和熱鍵支援
-   * 支援 Tab 順序和 focus trap
-   * 實現鍵盤快捷鍵提示和幫助
-   * 包含自定義快捷鍵設定
-
-3. **ARIA 和語義化增強**:
-   * 實現完整的 ARIA 標籤和屬性
-   * 支援語義化 HTML 結構優化
-   * 實現螢幕閱讀器專用內容
-   * 包含無障礙測試和驗證工具
-
-### Phase5.7 效能優化和載入體驗
-1. **LazyLoading 系統 (`LazyLoader.js`)**:
-   * 實現組件和路由的懶載入
-   * 支援圖片和資源的延遲載入
-   * 實現預載入和智慧快取策略
-   * 包含載入狀態和骨架屏顯示
-
-2. **載入體驗優化**:
-   * 實現應用程式啟動畫面
-   * 支援漸進式載入和分片載入
-   * 實現載入進度指示和預估時間
-   * 包含載入錯誤處理和重試機制
-
-3. **記憶體管理**:
-   * 實現組件生命週期最佳化
-   * 支援大型資料集的虛擬化渲染
-   * 實現記憶體洩漏檢測和預防
-   * 包含垃圾回收和快取清理
-
-## 核心代碼實作規格
-
-### 動畫引擎設計
-```javascript
-class AnimationEngine {
-  constructor() {
-    this.animations = new Map();
-    this.timelines = new Map();
-    this.isEnabled = true;
-    this.globalSpeed = 1;
-    this.performance = {
-      fps: 60,
-      frameTime: 16.67,
-      dropped: 0
-    };
-  }
-
-  // 創建動畫實例
-  animate(element, keyframes, options = {}) {
-    const animationId = this.generateId();
-    const animation = {
-      id: animationId,
-      element,
-      keyframes,
-      options: {
-        duration: 300,
-        easing: 'ease-out',
-        fill: 'forwards',
-        ...options
-      },
-      startTime: null,
-      pausedTime: 0,
-      state: 'ready'
-    };
-
-    // 檢查是否支援 CSS 動畫
-    if (this.supportsCSSAnimation(keyframes)) {
-      return this.createCSSAnimation(animation);
-    } else {
-      return this.createJSAnimation(animation);
-    }
-  }
-
-  // CSS 動畫實作
-  createCSSAnimation(animation) {
-    const { element, keyframes, options } = animation;
-    
-    // 生成 CSS 關鍵幀
-    const keyframeName = `anim-${animation.id}`;
-    const keyframeCSS = this.generateKeyframeCSS(keyframeName, keyframes);
-    
-    // 插入樣式表
-    this.insertKeyframe(keyframeCSS);
-    
-    // 套用動畫
-    element.style.animation = `${keyframeName} ${options.duration}ms ${options.easing} ${options.fill}`;
-    
-    // 監聽動畫事件
-    const promise = new Promise((resolve, reject) => {
-      const onEnd = () => {
-        this.cleanup(animation);
-        resolve(animation);
-      };
-      
-      const onError = () => {
-        this.cleanup(animation);
-        reject(new Error('Animation failed'));
-      };
-      
-      element.addEventListener('animationend', onEnd, { once: true });
-      element.addEventListener('animationcancel', onError, { once: true });
-    });
-
-    animation.state = 'running';
-    animation.cleanup = () => {
-      element.style.animation = '';
-      this.removeKeyframe(keyframeName);
-    };
-
-    this.animations.set(animation.id, animation);
-    return { ...animation, promise };
-  }
-
-  // JavaScript 動畫實作
-  createJSAnimation(animation) {
-    const { element, keyframes, options } = animation;
-    let startTime = null;
-    let rafId = null;
-
-    const animate = (currentTime) => {
-      if (!startTime) {
-        startTime = currentTime;
-        animation.startTime = startTime;
-      }
-
-      const elapsed = currentTime - startTime - animation.pausedTime;
-      const progress = Math.min(elapsed / options.duration, 1);
-      const easedProgress = this.applyEasing(progress, options.easing);
-
-      // 應用關鍵幀
-      this.applyKeyframe(element, keyframes, easedProgress);
-
-      if (progress < 1 && animation.state === 'running') {
-        rafId = requestAnimationFrame(animate);
-      } else {
-        animation.state = 'finished';
-        this.cleanup(animation);
-        animation.resolve(animation);
-      }
-    };
-
-    const promise = new Promise((resolve, reject) => {
-      animation.resolve = resolve;
-      animation.reject = reject;
-    });
-
-    animation.state = 'running';
-    animation.rafId = rafId;
-    animation.cleanup = () => {
-      if (rafId) {
-        cancelAnimationFrame(rafId);
-      }
-    };
-
-    this.animations.set(animation.id, animation);
-    rafId = requestAnimationFrame(animate);
-
-    return { ...animation, promise };
-  }
-
-  // 動畫控制方法
-  pause(animationId) {
-    const animation = this.animations.get(animationId);
-    if (animation && animation.state === 'running') {
-      animation.state = 'paused';
-      animation.pauseTime = performance.now();
-    }
-  }
-
-  resume(animationId) {
-    const animation = this.animations.get(animationId);
-    if (animation && animation.state === 'paused') {
-      animation.state = 'running';
-      animation.pausedTime += performance.now() - animation.pauseTime;
-    }
-  }
-
-  cancel(animationId) {
-    const animation = this.animations.get(animationId);
-    if (animation) {
-      animation.state = 'cancelled';
-      animation.cleanup();
-      this.animations.delete(animationId);
-    }
-  }
-
-  // 緩動函數
-  applyEasing(progress, easing) {
-    const easingFunctions = {
-      'linear': t => t,
-      'ease-in': t => t * t,
-      'ease-out': t => 1 - (1 - t) * (1 - t),
-      'ease-in-out': t => t < 0.5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2,
-      'ease-back': t => 2.70158 * t * t * t - 1.70158 * t * t
-    };
-
-    return easingFunctions[easing] ? easingFunctions[easing](progress) : progress;
-  }
-
-  // 動畫序列
-  createTimeline(animations) {
-    const timelineId = this.generateId();
-    const timeline = {
-      id: timelineId,
-      animations: [],
-      state: 'ready'
-    };
-
-    let totalDuration = 0;
-    animations.forEach((animConfig, index) => {
-      const delay = animConfig.delay || 0;
-      const duration = animConfig.duration || 300;
-      
-      timeline.animations.push({
-        ...animConfig,
-        startTime: totalDuration + delay,
-        endTime: totalDuration + delay + duration
-      });
-
-      totalDuration = Math.max(totalDuration, totalDuration + delay + duration);
-    });
-
-    timeline.totalDuration = totalDuration;
-    this.timelines.set(timelineId, timeline);
-    
-    return timeline;
-  }
-
-  // 播放動畫序列
-  async playTimeline(timelineId) {
-    const timeline = this.timelines.get(timelineId);
-    if (!timeline) return;
-
-    timeline.state = 'running';
-    const startTime = performance.now();
-
-    const animationPromises = timeline.animations.map(animConfig => {
-      return new Promise(resolve => {
-        setTimeout(() => {
-          const animation = this.animate(
-            animConfig.element,
-            animConfig.keyframes,
-            animConfig.options
-          );
-          animation.promise.then(resolve);
-        }, animConfig.startTime);
-      });
-    });
-
-    try {
-      await Promise.all(animationPromises);
-      timeline.state = 'finished';
-    } catch (error) {
-      timeline.state = 'error';
-      throw error;
-    }
-  }
-}
-```
-
-### 個人化儀表板實作
-```javascript
-class EnhancedDashboard extends Component {
-  constructor() {
-    super();
-    this.state = {
-      widgets: [],
-      layout: 'grid',
-      isEditing: false,
-      statistics: null,
-      preferences: null
-    };
-    this.widgetRegistry = new Map();
-    this.registerDefaultWidgets();
-  }
-
-  registerDefaultWidgets() {
-    this.widgetRegistry.set('learning-progress', LearningProgressWidget);
-    this.widgetRegistry.set('recent-activities', RecentActivitiesWidget);
-    this.widgetRegistry.set('performance-chart', PerformanceChartWidget);
-    this.widgetRegistry.set('study-goals', StudyGoalsWidget);
-    this.widgetRegistry.set('quick-actions', QuickActionsWidget);
-    this.widgetRegistry.set('achievements', AchievementsWidget);
-  }
-
-  async loadUserDashboard() {
-    try {
-      // 載入使用者偏好設定
-      const preferences = await this.settingsService.getDashboardPreferences();
-      
-      // 載入統計資料
-      const statistics = await this.analyticsService.getUserStatistics();
-      
-      // 創建 widgets
-      const widgets = preferences.widgets.map(widgetConfig => {
-        const WidgetClass = this.widgetRegistry.get(widgetConfig.type);
-        if (!WidgetClass) return null;
-        
-        return new WidgetClass({
-          ...widgetConfig,
-          statistics: statistics[widgetConfig.type],
-          position: widgetConfig.position,
-          size: widgetConfig.size
-        });
-      }).filter(Boolean);
-
-      this.setState({ 
-        widgets, 
-        preferences, 
-        statistics,
-        layout: preferences.layout || 'grid'
-      });
-
-      this.render();
-    } catch (error) {
-      console.error('[DEBUG EnhancedDashboard.js] 載入儀表板失敗:', error);
-      this.showError('載入儀表板失敗，請重試');
-    }
-  }
-
-  enableEditMode() {
-    this.setState({ isEditing: true });
-    this.setupDragAndDrop();
-    this.showEditToolbar();
-  }
-
-  disableEditMode() {
-    this.setState({ isEditing: false });
-    this.cleanupDragAndDrop();
-    this.hideEditToolbar();
-    this.saveDashboardLayout();
-  }
-
-  setupDragAndDrop() {
-    const container = this.element.querySelector('.widgets-container');
-    let draggedElement = null;
-
-    container.addEventListener('dragstart', (e) => {
-      if (e.target.classList.contains('widget')) {
-        draggedElement = e.target;
-        e.target.style.opacity = '0.5';
-        e.dataTransfer.effectAllowed = 'move';
-      }
-    });
-
-    container.addEventListener('dragover', (e) => {
-      e.preventDefault();
-      e.dataTransfer.dropEffect = 'move';
-      
-      const afterElement = this.getDragAfterElement(container, e.clientY);
-      if (afterElement == null) {
-        container.appendChild(draggedElement);
-      } else {
-        container.insertBefore(draggedElement, afterElement);
-      }
-    });
-
-    container.addEventListener('dragend', (e) => {
-      if (e.target.classList.contains('widget')) {
-        e.target.style.opacity = '';
-        this.updateWidgetPositions();
-      }
-    });
-  }
-
-  async saveDashboardLayout() {
-    const widgets = Array.from(this.element.querySelectorAll('.widget')).map((widget, index) => {
-      const widgetId = widget.dataset.widgetId;
-      const widgetInstance = this.state.widgets.find(w => w.id === widgetId);
-      
-      return {
-        ...widgetInstance.config,
-        position: index,
-        size: widget.dataset.size || 'medium'
-      };
-    });
-
-    try {
-      await this.settingsService.saveDashboardPreferences({
-        widgets,
-        layout: this.state.layout
-      });
-      
-      this.showToast('儀表板佈局已保存', 'success');
-    } catch (error) {
-      console.error('[DEBUG EnhancedDashboard.js] 保存佈局失敗:', error);
-      this.showToast('保存失敗，請重試', 'error');
-    }
-  }
-
-  render() {
-    return `
-      <div class="enhanced-dashboard">
-        <div class="dashboard-header">
-          <h1>學習儀表板</h1>
-          <div class="dashboard-controls">
-            <button class="btn btn-secondary" data-action="edit-layout">
-              ${this.state.isEditing ? '完成編輯' : '編輯佈局'}
-            </button>
-            <button class="btn btn-secondary" data-action="add-widget">
-              新增組件
-            </button>
-            <div class="layout-selector">
-              <select data-action="change-layout">
-                <option value="grid" ${this.state.layout === 'grid' ? 'selected' : ''}>網格佈局</option>
-                <option value="masonry" ${this.state.layout === 'masonry' ? 'selected' : ''}>瀑布流</option>
-                <option value="list" ${this.state.layout === 'list' ? 'selected' : ''}>列表佈局</option>
-              </select>
-            </div>
-          </div>
-        </div>
-
-        <div class="widgets-container ${this.state.layout}-layout ${this.state.isEditing ? 'editing' : ''}">
-          ${this.state.widgets.map(widget => widget.render()).join('')}
-        </div>
-
-        ${this.state.isEditing ? this.renderEditToolbar() : ''}
-      </div>
-    `;
-  }
-
-  renderEditToolbar() {
-    return `
-      <div class="edit-toolbar">
-        <div class="available-widgets">
-          <h3>可用組件</h3>
-          ${Array.from(this.widgetRegistry.keys()).map(type => `
-            <div class="widget-option" data-widget-type="${type}" draggable="true">
-              ${this.getWidgetDisplayName(type)}
-            </div>
-          `).join('')}
-        </div>
-      </div>
-    `;
-  }
-}
-```
+### Phase5.1 互動體驗優化 (3-4天)
+
+1.  **動畫系統開發**:
+    *   **頁面切換動畫（router/animations.ts）**:
+        *   使用 Vue Transition 實現路由切換動畫
+        *   滑入滑出效果（slide-left, slide-right, slide-up, slide-down）
+        *   淡入淡出效果（fade-in, fade-out）
+        *   縮放效果（zoom-in, zoom-out）
+        *   動畫時長和緩動函數的統一配置
+    *   **組件過渡效果（composables/useTransition.ts）**:
+        *   列表項目的錯列動畫（stagger animation）
+        *   模態框的彈出和收起動畫
+        *   卡片翻轉動畫（答案揭示時）
+        *   進度條的動畫效果
+        *   通知訊息的滑入滑出
+    *   **載入動畫系統**:
+        *   骨架屏組件（SkeletonLoader.vue）
+        *   脈衝載入效果
+        *   漣漪載入效果
+        *   旋轉載入指示器
+        *   載入狀態的平滑過渡
+    *   **反饋動畫設計**:
+        *   按鈕點擊的漣漪效果
+        *   表單驗證的搖晃動畫
+        *   成功/錯誤狀態的顏色過渡
+        *   微交互動畫（hover、focus、active 狀態）
+
+2.  **響應式設計強化**:
+    *   **移動端體驗優化**:
+        *   觸控手勢支援（滑動、長按、雙擊）
+        *   移動端導航模式（底部標籤欄）
+        *   移動端題型組件的交互優化
+        *   虛擬鍵盤的適配和佈局調整
+    *   **平板端適配**:
+        *   橫屏和豎屏模式的自適應佈局
+        *   側邊欄的智能隱藏和顯示
+        *   觸控筆支援（如果適用）
+        *   分屏模式的兼容性
+    *   **多設備適配策略**:
+        *   viewport 的動態調整
+        *   彈性佈局和網格系統
+        *   圖片和媒體的響應式載入
+        *   字體大小的設備適配
+
+3.  **載入狀態和性能優化**:
+    *   **智能預載入系統**:
+        *   路由的預載入策略
+        *   圖片的懶載入和預載入
+        *   關鍵資源的優先載入
+        *   用戶行為預測的預載入
+    *   **漸進式載入策略**:
+        *   內容的分層載入
+        *   關鍵內容優先顯示
+        *   非關鍵內容的延遲載入
+        *   載入進度的視覺化反饋
+    *   **緩存策略優化**:
+        *   瀏覽器緩存的智能利用
+        *   記憶體緩存的合理管理
+        *   API 回應的緩存策略
+        *   靜態資源的長期緩存
+
+4.  **錯誤處理和容錯機制**:
+    *   **友好錯誤頁面設計**:
+        *   404 頁面的創意設計
+        *   500 錯誤的友好提示
+        *   網路錯誤的處理頁面
+        *   權限錯誤的引導頁面
+    *   **錯誤邊界系統**:
+        *   組件級錯誤邊界
+        *   路由級錯誤邊界
+        *   全局錯誤捕獲機制
+        *   錯誤回報和追蹤
+    *   **重試和恢復機制**:
+        *   自動重試邏輯
+        *   用戶手動重試選項
+        *   數據恢復機制
+        *   狀態重置功能
+
+### Phase5.2 學習分析功能開發 (3-4天)
+
+1.  **數據視覺化系統**:
+    *   **圖表組件庫建立**:
+        *   使用 ECharts Vue 建立圖表組件
+        *   響應式圖表配置
+        *   主題和配色的統一管理
+        *   圖表的互動功能（縮放、篩選、鑽取）
+    *   **學習進度圖表（ProgressChart.vue）**:
+        *   環形進度圖（總體完成度）
+        *   線性進度條（各題型進度）
+        *   時間軸進度圖（學習歷程）
+        *   里程碑標記和成就顯示
+    *   **正確率趨勢分析（AccuracyTrend.vue）**:
+        *   時間 vs 正確率的趨勢線圖
+        *   移動平均線的計算和顯示
+        *   趨勢預測和目標設定
+        *   比較分析（不同時期、不同題型）
+    *   **題型表現分析（TypePerformance.vue）**:
+        *   雷達圖顯示各題型表現
+        *   熱力圖顯示錯誤分佈
+        *   柱狀圖比較不同題型的掌握程度
+        *   散點圖分析難度 vs 正確率關係
+
+2.  **智能分析算法**:
+    *   **錯誤模式分析（ErrorAnalysis.ts）**:
+        *   錯誤類型的自動分類
+        *   錯誤頻率的統計分析
+        *   錯誤原因的智能推測
+        *   相似錯誤的聚類分析
+    *   **學習建議生成（LearningRecommendation.ts）**:
+        *   基於錯誤分析的針對性建議
+        *   學習路徑的個性化推薦
+        *   複習計劃的智能安排
+        *   學習目標的動態調整
+    *   **難點識別系統（DifficultPoint.ts）**:
+        *   知識點掌握程度的量化評估
+        *   學習難點的自動識別
+        *   薄弱環節的優先級排序
+        *   學習重點的智能標記
+    *   **復習提醒算法（ReviewReminder.ts）**:
+        *   艾賓豪斯遺忘曲線的應用
+        *   複習時機的智能計算
+        *   個性化複習頻率調整
+        *   複習效果的追蹤評估
+
+3.  **報告系統開發**:
+    *   **學習報告生成器（ReportGenerator.vue）**:
+        *   週報、月報、年報的自動生成
+        *   報告模板的設計和管理
+        *   數據圖表的自動嵌入
+        *   報告內容的個性化定制
+    *   **PDF 導出功能（PDFExporter.ts）**:
+        *   使用 jsPDF 或 html2pdf 實現 PDF 導出
+        *   報告佈局的 PDF 優化
+        *   圖表的高清 PDF 轉換
+        *   批量導出和壓縮功能
+    *   **分享功能設計**:
+        *   社交媒體分享（成就、進度等）
+        *   報告連結的生成和分享
+        *   二維碼分享功能
+        *   隱私控制和權限管理
+    *   **打印優化**:
+        *   打印樣式的專門設計
+        *   分頁符的智能處理
+        *   打印預覽功能
+        *   打印設定的儲存和復用
+
+### Phase5.3 無障礙功能與國際化 (2-3天)
+
+1.  **無障礙功能實現**:
+    *   **鍵盤導航支援**:
+        *   完整的鍵盤導航路徑設計
+        *   Tab 順序的邏輯安排
+        *   快捷鍵的定義和實現
+        *   焦點指示器的明顯顯示
+        *   鍵盤陷阱的避免和處理
+    *   **螢幕閱讀器支援**:
+        *   語義化 HTML 的正確使用
+        *   ARIA 標籤的完整添加
+        *   alt 文字的詳細描述
+        *   表格和表單的標籤關聯
+        *   動態內容變更的通知
+    *   **視覺輔助功能**:
+        *   高對比度模式的實現
+        *   字體大小的動態調整
+        *   顏色盲友好的配色方案
+        *   暗黑模式的無障礙優化
+        *   動畫的可關閉選項
+    *   **認知輔助功能**:
+        *   清晰的導航結構
+        *   一致的操作模式
+        *   簡化的語言和術語
+        *   操作確認和撤銷機制
+        *   進度指示和狀態反饋
+
+2.  **國際化框架搭建**:
+    *   **Vue I18n 整合**:
+        *   i18n 插件的配置和註冊
+        *   語言檔案的結構設計
+        *   數字和日期的本地化格式
+        *   複數形式的處理機制
+        *   懶載入語言包的實現
+    *   **多語言文本管理**:
+        *   文本鍵值的命名規範
+        *   語言檔案的分類組織
+        *   文本提取和同步工具
+        *   翻譯工作流的建立
+        *   文本變更的版本控制
+    *   **語言切換功能**:
+        *   語言選擇器的 UI 設計
+        *   語言偏好的本地存儲
+        *   動態語言切換的實現
+        *   RTL 語言的支援準備
+        *   語言切換的無縫體驗
+    *   **區域化適配**:
+        *   日期時間格式的本地化
+        *   數字格式的區域適配
+        *   貨幣符號的正確顯示
+        *   時區的處理和轉換
+        *   文化相關內容的適配
+
+3.  **PWA 功能實現**:
+    *   **Service Worker 配置**:
+        *   PWA 清單文件的建立
+        *   Service Worker 的註冊和管理
+        *   快取策略的設計和實現
+        *   離線回退頁面的建立
+        *   自動更新機制的實現
+    *   **離線功能設計**:
+        *   關鍵頁面的離線可用
+        *   離線狀態的檢測和提示
+        *   離線數據的本地存儲
+        *   網路恢復後的數據同步
+        *   離線測驗的基本支援
+    *   **應用安裝功能**:
+        *   安裝提示的適時顯示
+        *   自定義安裝橫幅
+        *   安裝後的歡迎引導
+        *   應用圖標和啟動畫面
+        *   更新通知和管理
+
+### Phase5.4 性能優化與監控 (1天)
+
+1.  **前端性能監控**:
+    *   **Core Web Vitals 監控**:
+        *   LCP（最大內容繪製）監控
+        *   FID（首次輸入延遲）測量
+        *   CLS（累積佈局偏移）追蹤
+        *   FCP（首次內容繪製）記錄
+        *   TTFB（首字節時間）監控
+    *   **用戶體驗監控**:
+        *   頁面載入時間統計
+        *   API 回應時間記錄
+        *   錯誤率統計和分析
+        *   用戶操作的性能追蹤
+        *   設備和瀏覽器相關性能差異
+
+2.  **智能優化策略**:
+    *   **資源載入優化**:
+        *   關鍵資源的優先載入
+        *   非關鍵資源的延遲載入
+        *   資源壓縮和格式優化
+        *   CDN 的智能選擇和回退
+        *   資源預載入的智能決策
+    *   **渲染性能優化**:
+        *   虛擬滾動的實現和優化
+        *   大列表的分頁和懶載入
+        *   圖片的懶載入和響應式
+        *   動畫的性能優化
+        *   重繪和重排的最小化
+
+## 技術設計與架構
+
+### 動畫系統架構
+*   **統一動畫管理**: 建立 AnimationManager 統一管理所有動畫效果
+*   **性能友好動畫**: 使用 CSS Transform 和 Opacity 避免重排重繪
+*   **動畫配置系統**: 支援用戶自定義動畫偏好和無障礙需求
+*   **動畫狀態管理**: 與 Pinia 整合，管理動畫的啟用狀態
+
+### 數據分析架構
+*   **分層數據處理**: 原始數據 → 處理數據 → 視覺化數據的分層架構
+*   **即時計算引擎**: 使用 Web Workers 進行複雜計算，避免阻塞 UI
+*   **可插拔分析模組**: 支援新分析功能的動態添加
+*   **數據緩存策略**: 分析結果的智能緩存和增量更新
+
+### 無障礙架構
+*   **語義化組件系統**: 所有組件都包含完整的無障礙語義
+*   **輔助技術整合**: 與螢幕閱讀器和其他輔助技術的深度整合
+*   **個性化輔助**: 用戶可自定義的輔助功能偏好
+*   **合規性檢查**: 自動化的無障礙合規性檢測工具
+
+### 國際化架構
+*   **多語言資源管理**: 結構化的多語言資源組織和管理
+*   **動態語言載入**: 按需載入語言包，減少初始載入時間
+*   **本地化上下文**: 支援基於上下文的智能翻譯選擇
+*   **翻譯工作流**: 開發者友好的翻譯管理和同步機制
 
 ## 驗收標準
 
-* 所有動畫效果流暢且效能良好 (60 FPS)
-* 個人化儀表板功能完整且響應迅速
-* 離線功能在網路中斷時正常運作
-* 通知系統正確顯示各種類型的訊息
-* 無障礙功能通過 WCAG 2.1 AA 標準
-* 載入體驗優化明顯提升使用者滿意度
-* 多語言支援功能正常運作
-* 主題系統可以正確切換和自定義
-* 所有進階功能的單元測試全部通過
-* 效能指標達到預期目標 (載入時間 < 2秒)
-* 所有程式碼已提交到版本控制系統 (Git) 
+*   所有頁面和組件都具備流暢的動畫效果，提升用戶體驗
+*   學習分析功能提供有價值的洞察，幫助用戶改善學習效果
+*   無障礙功能完整實現，通過 WCAG 2.1 AA 級標準檢測
+*   國際化框架就緒，支援至少 3 種語言（繁中、簡中、英文）
+*   PWA 功能正常工作，支援離線基本功能和應用安裝
+*   性能指標達到目標（LCP < 2.5s, FID < 100ms, CLS < 0.1）
+*   所有進階功能的單元測試和整合測試通過
+*   跨瀏覽器兼容性測試通過（Chrome, Firefox, Safari, Edge）
+*   移動端和平板端的用戶體驗測試通過
+*   程式碼品質符合專案標準，文檔完整
+*   用戶測試反饋積極，整體滿意度高
+*   監控系統正常運作，能準確追蹤性能和錯誤數據 

@@ -40,14 +40,14 @@ const CACHE_DIR_PATH = path.join(__dirname, '..', '..', CACHE_DIR_NAME);
 const QUESTION_TYPE_CONFIG = {
   '1.1.1': {
     filePath: path.join(CACHE_DIR_PATH, '111Cache.json'),
-    minQuestions: 3,
-    targetQuestions: 5,
+    minQuestions: 4,
+    targetQuestions: 8,
     priority: PRIORITY_LEVELS.MEDIUM, // 基礎類型，中等優先權
   },
   '1.1.2': {
     filePath: path.join(CACHE_DIR_PATH, '112Cache.json'),
-    minQuestions: 3,
-    targetQuestions: 5,
+    minQuestions: 4,
+    targetQuestions: 8,
     priority: PRIORITY_LEVELS.MEDIUM,
   },
   '1.2.1': {

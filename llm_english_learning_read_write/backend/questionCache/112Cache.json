@@ -1,86 +1,142 @@
 [
   {
-    "UUID": "31a2499d-639c-420e-ac12-60861504fb47",
+    "UUID": "464fc34e-0739-466c-afee-1eb21d1ffd9f",
     "questionData": {
-      "explanation_of_Question": "句子描述科學家進行了一項新研究來調查某事。Construct 意為「建造」，不適用於研究。Operate 意為「操作」或「營運」，不適用於研究。Conduct 意為「執行」或「進行」，常用於表示進行研究、調查或實驗。Perform 意為「執行」或「表演」，雖然有時用於實驗，但 conduct 是進行研究的更常用且貼切的詞。",
+      "explanation_of_Question": "句子描述了一位演講者能夠用她的話語來影響或打動聽眾。選項 B「captivate」意為迷住、吸引，最能描述演講者引人入勝的能力。選項 A「alienate」意為使疏遠；選項 C「bore」意為使厭煩；選項 D「rebel」意為反抗，這三個選項都不符合正面描述演講者能力的語境。",
       "options": [
         {
           "id": "A",
-          "text": "construct"
+          "text": "alienate"
         },
         {
           "id": "B",
-          "text": "operate"
+          "text": "captivate"
         },
         {
           "id": "C",
-          "text": "conduct"
+          "text": "bore"
         },
         {
           "id": "D",
-          "text": "perform"
+          "text": "rebel"
         }
       ],
-      "passage": "Scientists will _______ a new study to investigate the long-term effects of climate change.",
+      "passage": "The speaker had a remarkable ability to _______ the audience with her powerful words.",
+      "question": "Choose the best word to complete the sentence.",
+      "standard_answer": "B"
+    },
+    "cacheTimestamp": 1748066228
+  },
+  {
+    "UUID": "d66dc03c-9974-43ac-9fdc-6dee8a31dbf6",
+    "questionData": {
+      "explanation_of_Question": "句子描述了儘管情況困難，團隊仍然保持了樂觀積極的態度。選項 A「undaunted」意為不屈不撓的、無畏的，最能形容在困難面前不退縮的態度。選項 B「confused」意為困惑的；選項 C「indifferent」意為漠不關心的；選項 D「skeptical」意為懷疑的，這三個選項都不符合句子中積極面對困難的語境。",
+      "options": [
+        {
+          "id": "A",
+          "text": "undaunted"
+        },
+        {
+          "id": "B",
+          "text": "confused"
+        },
+        {
+          "id": "C",
+          "text": "indifferent"
+        },
+        {
+          "id": "D",
+          "text": "skeptical"
+        }
+      ],
+      "passage": "Despite the numerous challenges, the team remained _______ in their pursuit of the goal.",
+      "question": "Choose the best word to complete the sentence.",
+      "standard_answer": "A"
+    },
+    "cacheTimestamp": 1748066228
+  },
+  {
+    "UUID": "c9b9d627-c690-49d1-97d0-5a399b88c7a8",
+    "questionData": {
+      "explanation_of_Question": "句子描述的是一個新開的咖啡館，生意很好，顧客絡繹不絕。選項 A 「sparse」意為稀疏的，不符合語境。選項 B 「meager」意為貧乏的，與生意興隆相反。選項 D 「scant」意為不足的，也與語境不符。選項 C 「brisk」意為興隆的、活躍的，用來形容生意非常合適，表示生意很好。因此，C 是正確答案。",
+      "options": [
+        {
+          "id": "A",
+          "text": "sparse"
+        },
+        {
+          "id": "B",
+          "text": "meager"
+        },
+        {
+          "id": "C",
+          "text": "brisk"
+        },
+        {
+          "id": "D",
+          "text": "scant"
+        }
+      ],
+      "passage": "The new coffee shop is doing a _______ business, with customers lining up outside every morning.",
       "question": "Choose the best word to complete the sentence.",
       "standard_answer": "C"
     },
-    "cacheTimestamp": 1748038417
+    "cacheTimestamp": 1748066270
   },
   {
-    "UUID": "3c898594-9890-47fa-a744-ffc1961f0fed",
+    "UUID": "2da17bb8-e1f8-4e42-a7e4-89581f4adcc1",
     "questionData": {
-      "explanation_of_Question": "句子描述這本書因其獨特的故事而獲得廣泛好評。Recognize 意為「認出」或「承認」，不適用於好評。Acquire 意為「獲得」或「習得」，通常指實際物品或技能。Receive 意為「收到」或「得到」，常用於表示得到好評、獎勵等。Achieve 意為「達成」或「實現」，通常指目標或成就。",
+      "explanation_of_Question": "這句話描述的是某人儘管面對許多困難，仍然堅持追求夢想。選項 A 「relinquished」意為放棄、交出，與堅持相反。選項 B 「detoured」意為繞道、偏離，與追求夢想的直線行動不同。選項 D 「wavered」意為動搖、猶豫，儘管可能會有動搖，但句子強調的是儘管困難'仍'堅持。選項 C 「persisted」意為堅持、持續，最能準確表達在困難面前不放棄的態度。因此，C 是正確答案。",
       "options": [
         {
           "id": "A",
-          "text": "recognized"
+          "text": "relinquished"
         },
         {
           "id": "B",
-          "text": "acquired"
+          "text": "detoured"
         },
         {
           "id": "C",
-          "text": "received"
+          "text": "persisted"
         },
         {
           "id": "D",
-          "text": "achieved"
+          "text": "wavered"
         }
       ],
-      "passage": "The book _______ widespread acclaim for its unique storyline and compelling characters.",
+      "passage": "Despite facing numerous setbacks, she _______ in her pursuit of becoming a doctor.",
       "question": "Choose the best word to complete the sentence.",
       "standard_answer": "C"
     },
-    "cacheTimestamp": 1748038417
+    "cacheTimestamp": 1748066270
   },
   {
-    "UUID": "01516904-99bb-4cf7-b2f2-2cc0ef940f82",
+    "UUID": "ee20f795-6e32-401d-8e46-53c5a23e7837",
     "questionData": {
-      "explanation_of_Question": "句子描述這項新技術有望徹底改變醫療保健行業。Shift 意為「轉變」或「移動」，變革程度較輕。Alter 意為「改變」，也是一般的改變。Reform 意為「改革」，通常指系統或體制的改進。Revolutionize 意為「徹底改變」或「改革」，程度最深，與「transform the healthcare industry completely」的語境最符。",
+      "explanation_of_Question": "這句話描述的是由於經濟不景氣，公司不得不削減開支。選項 A 「expanded」意為擴大，與削減相反。選項 B 「enhanced」意為提升、加強，與削減無關。選項 D 「bolstered」意為支持、加固，與削減相反。選項 C 「curtail」意為縮減、削減，與句子中因經濟不景氣而需要減少開支的語境相符。因此，C 是正確答案。",
       "options": [
         {
           "id": "A",
-          "text": "shift"
+          "text": "expanded"
         },
         {
           "id": "B",
-          "text": "alter"
+          "text": "enhanced"
         },
         {
           "id": "C",
-          "text": "reform"
+          "text": "curtail"
         },
         {
           "id": "D",
-          "text": "revolutionize"
+          "text": "bolstered"
         }
       ],
-      "passage": "This new technology is expected to _______ the healthcare industry by making treatments more accessible and affordable.",
+      "passage": "Due to the economic downturn, the company had to _______ its spending significantly.",
       "question": "Choose the best word to complete the sentence.",
-      "standard_answer": "D"
+      "standard_answer": "C"
     },
-    "cacheTimestamp": 1748038417
+    "cacheTimestamp": 1748066270
   }
 ]

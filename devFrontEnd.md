@@ -1,944 +1,1755 @@
-# LLM 英語學習系統 - 前端開發詳細計劃
+# LLM 英語學習系統 - 前端開發計劃 (Vite + Vue 3)
 
 ## 📋 專案概述
 
 ### 🎯 專案目標
-建立一個基於 **macOS 設計語言**的現代化英語學習系統前端，提供**24種不同題型**的互動式測驗體驗，具備完整的學習進度追蹤、歷史分析和個人化設定功能。
+基於 **Vite + Vue 3 + TypeScript** 技術棧，建立一個現代化的英語學習系統前端，支援**24種英語題型**的互動式測驗體驗，具備完整的學習進度追蹤、歷史分析和個人化設定功能。
 
 ### 🏆 核心價值主張
-1. **原生 macOS 體驗**: 完全遵循 Apple Human Interface Guidelines，提供熟悉的操作體驗
+1. **現代化開發體驗**: 使用 Vite 快速開發，Vue 3 Composition API 提升開發效率
 2. **全題型支援**: 支援從基礎選擇題到複雜寫作翻譯的24種題型
 3. **智慧學習分析**: 提供詳細的學習進度分析和個人化建議
 4. **無縫 API 整合**: 與 Gemini 2.5 Flash 後端系統深度整合
 
 ### 🎨 設計理念
-- **簡潔優雅**: 減少認知負擔，突出學習內容
-- **一致性**: 統一的視覺語言和互動模式
-- **親和性**: 支援無障礙功能，適應不同用戶需求
-- **響應性**: 流暢的動畫和即時反饋
+- **組件化開發**: 高度可復用的組件架構
+- **響應式設計**: 適配桌面和移動端
+- **用戶體驗優先**: 流暢的互動和即時反饋
+- **可維護性**: 清晰的代碼結構和完善的類型定義
 
-## 🛠 技術架構分析
+## 🛠 技術架構
 
 ### 核心技術棧選擇
 
-#### 前端框架選擇：原生 JavaScript (ES6+)
+#### 前端框架: Vue 3 + Composition API
 **選擇理由**:
-- ✅ **零依賴**: 避免框架更新帶來的維護成本
-- ✅ **效能優異**: 直接操作 DOM，無虛擬 DOM 開銷
-- ✅ **靈活性高**: 完全控制渲染和狀態管理
-- ✅ **學習成本低**: 純原生技術，易於維護和擴展
-- ✅ **包體積小**: 無需打包大型框架，載入速度快
+- ✅ **現代化開發**: Composition API 提供更好的邏輯復用和組織
+- ✅ **TypeScript 支援**: 原生 TypeScript 支援，更好的開發體驗
+- ✅ **生態豐富**: 完善的生態系統和社區支援
+- ✅ **效能優異**: Vue 3 重寫的響應式系統，更好的性能
+- ✅ **學習曲線平緩**: 易於上手和維護
 
-#### 樣式技術棧：CSS3 + PostCSS
-**CSS3 核心特性**:
-```css
-/* 毛玻璃效果 */
-backdrop-filter: blur(20px);
--webkit-backdrop-filter: blur(20px);
+#### 建構工具: Vite
+**核心優勢**:
+```typescript
+// vite.config.ts
+import { defineConfig } from 'vite'
+import vue from '@vitejs/plugin-vue'
+import { resolve } from 'path'
 
-/* CSS Grid 佈局 */
-display: grid;
-grid-template-columns: 220px 1fr;
-grid-template-rows: 44px 48px 1fr;
-
-/* CSS 變數系統 */
-:root {
-  --macos-blue: #0a84ff;
-  --backdrop-blur: blur(20px);
-}
-
-/* CSS 動畫 */
-@keyframes macosScale {
-  0% { transform: scale(1); }
-  50% { transform: scale(0.96); }
-  100% { transform: scale(1); }
-}
+export default defineConfig({
+  plugins: [vue()],
+  resolve: {
+    alias: {
+      '@': resolve(__dirname, 'src'),
+      '@components': resolve(__dirname, 'src/components'),
+      '@views': resolve(__dirname, 'src/views'),
+      '@stores': resolve(__dirname, 'src/stores'),
+      '@utils': resolve(__dirname, 'src/utils'),
+      '@types': resolve(__dirname, 'src/types')
+    }
+  },
+  server: {
+    port: 3000,
+    proxy: {
+      '/api': {
+        target: 'http://localhost:3001',
+        changeOrigin: true
+      }
+    }
+  },
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          vendor: ['vue', 'vue-router', 'pinia'],
+          ui: ['element-plus']
+        }
+      }
+    }
+  }
+})
 ```
 
-#### 狀態管理：自定義狀態管理器
-```javascript
-/**
- * 輕量級狀態管理器
- * 支援響應式更新和中間件
- */
-class StateManager {
-  constructor(initialState = {}) {
-    this.state = { ...initialState };
-    this.subscribers = new Set();
-    this.middleware = [];
+#### 狀態管理: Pinia
+```typescript
+// stores/quiz.ts
+import { defineStore } from 'pinia'
+import type { QuestionData, TestSession, AnswerRecord } from '@/types'
+
+export const useQuizStore = defineStore('quiz', () => {
+  // 狀態
+  const currentSession = ref<TestSession | null>(null)
+  const currentQuestion = ref<QuestionData | null>(null)
+  const isLoading = ref(false)
+  const answers = ref<AnswerRecord[]>([])
+
+  // 計算屬性
+  const progress = computed(() => {
+    if (!currentSession.value) return 0
+    return Math.round((answers.value.length / currentSession.value.totalQuestions) * 100)
+  })
+
+  const canSubmit = computed(() => {
+    return currentQuestion.value && !isLoading.value
+  })
+
+  // 動作
+  const startTest = async (questionType: string) => {
+    isLoading.value = true
+    try {
+      const response = await quizService.startTest({ questionType })
+      currentSession.value = response.session
+      currentQuestion.value = response.firstQuestion
+      answers.value = []
+    } catch (error) {
+      console.error('Failed to start test:', error)
+      throw error
+    } finally {
+      isLoading.value = false
+    }
   }
 
-  // 狀態更新ㄘㄢ
-  setState(updates) {
-    const prevState = { ...this.state };
-    const newState = { ...this.state, ...updates };
+  const submitAnswer = async (answer: string | string[]) => {
+    if (!currentSession.value || !currentQuestion.value) return
     
-    // 執行中間件
-    for (const middleware of this.middleware) {
-      middleware(prevState, newState);
+    isLoading.value = true
+    try {
+      const response = await quizService.submitAnswer({
+        sessionId: currentSession.value.id,
+        questionId: currentQuestion.value.id,
+        answer
+      })
+      
+      answers.value.push(response.result)
+      currentQuestion.value = response.nextQuestion
+      
+      return response
+    } catch (error) {
+      console.error('Failed to submit answer:', error)
+      throw error
+    } finally {
+      isLoading.value = false
     }
+  }
+
+  return {
+    // 狀態
+    currentSession,
+    currentQuestion,
+    isLoading,
+    answers,
+    // 計算屬性
+    progress,
+    canSubmit,
+    // 動作
+    startTest,
+    submitAnswer
+  }
+})
+```
+
+#### UI 組件庫: Element Plus
+**選擇理由**: 企業級 Vue 3 組件庫，組件豐富，文檔完善
+```vue
+<!-- 範例使用 -->
+<template>
+  <el-card class="question-card" shadow="hover">
+    <template #header>
+      <div class="card-header">
+        <span class="question-type">{{ questionTypeName }}</span>
+        <el-progress :percentage="progress" :stroke-width="6" />
+      </div>
+    </template>
     
-    this.state = newState;
-    this.notifySubscribers();
-  }
-
-  // 訂閱狀態變更
-  subscribe(callback) {
-    this.subscribers.add(callback);
-    return () => this.subscribers.delete(callback);
-  }
-}
+    <QuestionRenderer :question="currentQuestion" @answer="handleAnswer" />
+    
+    <template #footer>
+      <div class="card-footer">
+        <el-button @click="previousQuestion" :disabled="!canGoPrevious">
+          上一題
+        </el-button>
+        <el-button 
+          type="primary" 
+          @click="submitAnswer" 
+          :loading="isSubmitting"
+          :disabled="!selectedAnswer"
+        >
+          提交答案
+        </el-button>
+      </div>
+    </template>
+  </el-card>
+</template>
 ```
 
-#### HTTP 客戶端：增強型 Fetch API
-```javascript
-/**
- * 企業級 HTTP 客戶端
- * 支援攔截器、重試、快取
- */
-class ApiClient {
-  constructor(baseURL) {
-    this.baseURL = baseURL;
-    this.interceptors = { request: [], response: [] };
-    this.cache = new Map();
-  }
+#### 樣式方案: SCSS + CSS Modules
+```scss
+// styles/variables.scss
+$primary-color: #409eff;
+$success-color: #67c23a;
+$warning-color: #e6a23c;
+$danger-color: #f56c6c;
+$info-color: #909399;
 
-  async request(config) {
-    // 請求攔截器
-    for (const interceptor of this.interceptors.request) {
-      config = await interceptor(config);
-    }
+$border-radius: 4px;
+$box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+$transition-duration: 0.3s;
 
-    // 快取檢查
-    if (config.cache && this.cache.has(config.url)) {
-      return this.cache.get(config.url);
-    }
-
-    // 發送請求
-    const response = await fetch(this.baseURL + config.url, {
-      method: config.method || 'GET',
-      headers: {
-        'Content-Type': 'application/json',
-        ...config.headers
-      },
-      body: config.data ? JSON.stringify(config.data) : undefined
-    });
-
-    // 響應攔截器
-    for (const interceptor of this.interceptors.response) {
-      response = await interceptor(response);
-    }
-
-    return response;
-  }
-}
+// 響應式斷點
+$breakpoint-mobile: 768px;
+$breakpoint-tablet: 1024px;
+$breakpoint-desktop: 1200px;
 ```
 
-### 🏗 文件結構設計
+### 🏗 專案結構設計
 
 ```
 frontend/
-├── 📄 index.html                     # 主入口，SPA 單頁面
-├── 📂 src/                           # 源代碼目錄
-│   ├── 📂 styles/                    # 樣式系統
-│   │   ├── 📄 reset.css             # CSS Reset (基於 Normalize.css)
-│   │   ├── 📄 variables.css         # CSS 變數定義
-│   │   ├── 📄 typography.css        # 字體系統 (SF Pro)
-│   │   ├── 📄 animations.css        # 動畫效果庫
-│   │   ├── 📂 components/           # 組件樣式
-│   │   │   ├── 📄 window.css        # macOS 窗口樣式
-│   │   │   ├── 📄 sidebar.css       # 側邊欄樣式
-│   │   │   ├── 📄 toolbar.css       # 工具欄樣式
-│   │   │   ├── 📄 cards.css         # 卡片組件樣式
-│   │   │   ├── 📄 forms.css         # 表單組件樣式
-│   │   │   ├── 📄 tables.css        # 表格組件樣式
-│   │   │   ├── 📄 buttons.css       # 按鈕組件樣式
-│   │   │   ├── 📄 progress.css      # 進度條樣式
-│   │   │   └── 📂 quiz/             # 測驗相關樣式
-│   │   │       ├── 📄 question.css   # 問題樣式
-│   │   │       ├── 📄 options.css    # 選項樣式
-│   │   │       ├── 📄 writing.css    # 寫作題樣式
-│   │   │       └── 📄 translation.css # 翻譯題樣式
-│   │   ├── 📂 layout/               # 佈局樣式
-│   │   │   ├── 📄 grid.css          # CSS Grid 系統
-│   │   │   ├── 📄 flexbox.css       # Flexbox 工具類
-│   │   │   └── 📄 responsive.css    # 響應式設計
-│   │   └── 📂 utilities/            # 工具類樣式
-│   │       ├── 📄 colors.css        # 色彩工具類
-│   │       ├── 📄 spacing.css       # 間距工具類
-│   │       └── 📄 visibility.css    # 可見性工具類
-│   ├── 📂 scripts/                  # JavaScript 源代碼
-│   │   ├── 📄 main.js              # 應用程式入口點
-│   │   ├── 📂 core/                # 核心系統
-│   │   │   ├── 📄 StateManager.js   # 狀態管理器
-│   │   │   ├── 📄 Router.js         # SPA 路由器
-│   │   │   ├── 📄 Component.js      # 組件基類
-│   │   │   ├── 📄 EventBus.js       # 事件總線
-│   │   │   └── 📄 DOMUtils.js       # DOM 操作工具
-│   │   ├── 📂 services/            # 服務層
-│   │   │   ├── 📄 ApiService.js     # API 服務基類
-│   │   │   ├── 📄 QuizService.js    # 測驗服務
-│   │   │   ├── 📄 HistoryService.js # 歷史記錄服務
-│   │   │   ├── 📄 SettingsService.js # 設定服務
-│   │   │   ├── 📄 CacheService.js   # 快取服務
-│   │   │   └── 📄 AnalyticsService.js # 分析服務
-│   │   ├── 📂 components/          # UI 組件
-│   │   │   ├── 📂 layout/          # 佈局組件
-│   │   │   │   ├── 📄 AppWindow.js   # 主應用程式窗口
-│   │   │   │   ├── 📄 Titlebar.js    # 標題欄組件
-│   │   │   │   ├── 📄 Toolbar.js     # 工具欄組件
-│   │   │   │   ├── 📄 Sidebar.js     # 側邊欄組件
-│   │   │   │   └── 📄 MainContent.js # 主內容區
-│   │   │   ├── 📂 ui/              # 基礎 UI 組件
-│   │   │   │   ├── 📄 Button.js      # 按鈕組件
-│   │   │   │   ├── 📄 Input.js       # 輸入框組件
-│   │   │   │   ├── 📄 Select.js      # 選擇器組件
-│   │   │   │   ├── 📄 Card.js        # 卡片組件
-│   │   │   │   ├── 📄 Table.js       # 表格組件
-│   │   │   │   ├── 📄 Progress.js    # 進度條組件
-│   │   │   │   ├── 📄 Modal.js       # 彈窗組件
-│   │   │   │   └── 📄 Toast.js       # 通知組件
-│   │   │   ├── 📂 pages/           # 頁面組件
-│   │   │   │   ├── 📄 Dashboard.js   # 儀表板頁面
-│   │   │   │   ├── 📄 Quiz.js        # 測驗頁面
-│   │   │   │   ├── 📄 History.js     # 歷史頁面
-│   │   │   │   └── 📄 Settings.js    # 設定頁面
-│   │   │   └── 📂 quiz/            # 測驗相關組件
-│   │   │       ├── 📄 QuestionRenderer.js # 問題渲染器
-│   │   │       ├── 📄 AnswerCollector.js  # 答案收集器
-│   │   │       ├── 📄 QuizTimer.js        # 測驗計時器
-│   │   │       ├── 📄 ResultDisplay.js    # 結果顯示
-│   │   │       └── 📂 question-types/     # 各種題型組件
-│   │   │           ├── 📄 MultipleChoice.js    # 多選題
-│   │   │           ├── 📄 SingleChoice.js      # 單選題
-│   │   │           ├── 📄 FillInBlanks.js      # 填空題
-│   │   │           ├── 📄 WritingTask.js       # 寫作題
-│   │   │           ├── 📄 TranslationTask.js   # 翻譯題
-│   │   │           ├── 📄 SentenceCorrection.js # 改錯題
-│   │   │           ├── 📄 DragAndDrop.js       # 拖拽排序
-│   │   │           └── 📄 ReadingComprehension.js # 閱讀理解
-│   │   ├── 📂 utils/               # 工具函數
-│   │   │   ├── 📄 constants.js      # 常數定義
-│   │   │   ├── 📄 helpers.js        # 通用輔助函數
-│   │   │   ├── 📄 validation.js     # 表單驗證工具
-│   │   │   ├── 📄 storage.js        # 本地存儲封裝
-│   │   │   ├── 📄 animation.js      # 動畫工具
-│   │   │   ├── 📄 debounce.js       # 防抖節流工具
-│   │   │   └── 📄 formatters.js     # 數據格式化工具
-│   │   └── 📂 config/              # 配置文件
-│   │       ├── 📄 api.js           # API 端點配置
-│   │       ├── 📄 routes.js        # 路由配置
-│   │       └── 📄 environment.js   # 環境變數
-│   ├── 📂 assets/                  # 靜態資源
-│   │   ├── 📂 icons/               # 圖標資源
-│   │   │   ├── 📂 sf-symbols/      # SF Symbols 風格圖標
-│   │   │   └── 📂 custom/          # 自定義圖標
-│   │   ├── 📂 fonts/               # 字體文件
-│   │   │   └── 📄 sf-pro.woff2     # SF Pro 字體
-│   │   └── 📂 images/              # 圖片資源
-│   └── 📂 tests/                   # 測試文件
-│       ├── 📂 unit/                # 單元測試
-│       ├── 📂 integration/         # 整合測試
-│       └── 📂 e2e/                 # 端到端測試
-├── 📂 docs/                        # 項目文檔
-│   ├── 📄 api.md                   # API 文檔
-│   ├── 📄 components.md            # 組件使用文檔
-│   ├── 📄 deployment.md            # 部署指南
-│   └── 📄 contributing.md          # 貢獻指南
-├── 📂 tools/                       # 開發工具
-│   ├── 📄 build.js                 # 建構腳本
-│   ├── 📄 dev-server.js            # 開發服務器
-│   └── 📄 deploy.js                # 部署腳本
-├── 📄 package.json                 # 依賴管理
-├── 📄 .gitignore                   # Git 忽略文件
-├── 📄 .eslintrc.js                 # ESLint 配置
-├── 📄 .prettierrc                  # Prettier 配置
-└── 📄 README.md                    # 項目說明
+├── 📄 index.html                     # 主入口檔案
+├── 📄 vite.config.ts                 # Vite 配置
+├── 📄 package.json                   # 依賴管理
+├── 📄 tsconfig.json                  # TypeScript 配置
+├── 📄 .env.development               # 開發環境變數
+├── 📄 .env.production                # 生產環境變數
+├── 📄 .eslintrc.cjs                  # ESLint 配置
+├── 📄 .prettierrc                    # Prettier 配置
+├── 📂 public/                        # 靜態資源
+│   ├── 📄 favicon.ico
+│   └── 📂 icons/
+├── 📂 src/                           # 源代碼
+│   ├── 📄 main.ts                    # 應用入口
+│   ├── 📄 App.vue                    # 根組件
+│   ├── 📂 components/                # 可復用組件
+│   │   ├── 📂 common/                # 通用組件
+│   │   │   ├── 📄 AppHeader.vue
+│   │   │   ├── 📄 AppSidebar.vue
+│   │   │   ├── 📄 LoadingSpinner.vue
+│   │   │   └── 📄 ErrorMessage.vue
+│   │   ├── 📂 quiz/                  # 測驗相關組件
+│   │   │   ├── 📄 QuestionRenderer.vue
+│   │   │   ├── 📄 AnswerInput.vue
+│   │   │   ├── 📄 QuizProgress.vue
+│   │   │   ├── 📄 ResultDisplay.vue
+│   │   │   ├── 📄 QuizTimer.vue
+│   │   │   └── 📂 question-types/    # 各題型組件
+│   │   │       ├── 📄 MultipleChoice.vue
+│   │   │       ├── 📄 SingleChoice.vue
+│   │   │       ├── 📄 FillInBlanks.vue
+│   │   │       ├── 📄 WritingTask.vue
+│   │   │       ├── 📄 TranslationTask.vue
+│   │   │       ├── 📄 SentenceOrdering.vue
+│   │   │       └── 📄 ReadingComprehension.vue
+│   │   └── 📂 history/               # 歷史記錄組件
+│   │       ├── 📄 HistoryChart.vue
+│   │       ├── 📄 HistoryTable.vue
+│   │       └── 📄 StatisticsCard.vue
+│   ├── 📂 views/                     # 頁面組件
+│   │   ├── 📄 Dashboard.vue          # 儀表板
+│   │   ├── 📄 QuizSelection.vue      # 測驗選擇
+│   │   ├── 📄 QuizSession.vue        # 測驗進行
+│   │   ├── 📄 History.vue            # 歷史記錄
+│   │   └── 📄 Settings.vue           # 設定頁面
+│   ├── 📂 stores/                    # Pinia 狀態管理
+│   │   ├── 📄 index.ts               # Store 註冊
+│   │   ├── 📄 quiz.ts                # 測驗狀態
+│   │   ├── 📄 history.ts             # 歷史記錄狀態
+│   │   ├── 📄 user.ts                # 用戶狀態
+│   │   └── 📄 app.ts                 # 應用全局狀態
+│   ├── 📂 router/                    # Vue Router
+│   │   ├── 📄 index.ts               # 路由配置
+│   │   └── 📄 guards.ts              # 路由守衛
+│   ├── 📂 services/                  # API 服務
+│   │   ├── 📄 api.ts                 # API 基礎配置
+│   │   ├── 📄 quiz.ts                # 測驗 API
+│   │   └── 📄 history.ts             # 歷史 API
+│   ├── 📂 composables/               # 組合式函數
+│   │   ├── 📄 useQuiz.ts             # 測驗邏輯
+│   │   ├── 📄 useHistory.ts          # 歷史邏輯
+│   │   ├── 📄 useNotification.ts     # 通知邏輯
+│   │   └── 📄 useValidation.ts       # 表單驗證
+│   ├── 📂 utils/                     # 工具函數
+│   │   ├── 📄 constants.ts           # 常數定義
+│   │   ├── 📄 helpers.ts             # 輔助函數
+│   │   ├── 📄 formatters.ts          # 格式化函數
+│   │   └── 📄 validators.ts          # 驗證函數
+│   ├── 📂 types/                     # TypeScript 類型
+│   │   ├── 📄 index.ts               # 統一導出
+│   │   ├── 📄 quiz.ts                # 測驗類型
+│   │   ├── 📄 history.ts             # 歷史類型
+│   │   └── 📄 api.ts                 # API 類型
+│   └── 📂 styles/                    # 樣式文件
+│       ├── 📄 main.scss              # 主樣式文件
+│       ├── 📄 variables.scss         # SCSS 變數
+│       ├── 📄 mixins.scss            # SCSS 混入
+│       └── 📂 components/            # 組件樣式
+├── 📂 tests/                         # 測試文件
+│   ├── 📂 unit/                      # 單元測試
+│   ├── 📂 integration/               # 整合測試
+│   └── 📂 e2e/                       # 端到端測試
+└── 📂 docs/                          # 文檔
+    ├── 📄 components.md              # 組件文檔
+    └── 📄 development.md             # 開發指南
 ```
 
-## 🧩 詳細組件拆解
+## 🧩 核心組件設計
 
-### 1. 核心佈局組件
+### 1. 測驗系統組件
 
-#### 1.1 AppWindow 組件
-**功能描述**: 主應用程式窗口，提供 macOS 原生窗口體驗
-**技術規格**:
-```javascript
-class AppWindow extends Component {
-  constructor() {
-    super();
-    this.state = {
-      isFullscreen: false,
-      isMinimized: false,
-      windowTitle: 'LLM English Learning'
-    };
-  }
+#### 1.1 QuestionRenderer 組件
+```vue
+<script setup lang="ts">
+import { computed } from 'vue'
+import type { QuestionData } from '@/types'
+import MultipleChoice from './question-types/MultipleChoice.vue'
+import WritingTask from './question-types/WritingTask.vue'
+import TranslationTask from './question-types/TranslationTask.vue'
 
-  render() {
-    return `
-      <div class="macos-window">
-        <div class="macos-titlebar">
-          <div class="traffic-lights">
-            <button class="traffic-light close" data-action="close"></button>
-            <button class="traffic-light minimize" data-action="minimize"></button>
-            <button class="traffic-light maximize" data-action="maximize"></button>
-          </div>
-          <div class="window-title">${this.state.windowTitle}</div>
-        </div>
-        <div class="window-content">
-          <!-- 內容區域 -->
-        </div>
-      </div>
-    `;
-  }
-}
-```
-
-**CSS 規格**:
-```css
-.macos-window {
-  background: rgba(40, 40, 42, 0.95);
-  backdrop-filter: blur(30px);
-  border-radius: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-  overflow: hidden;
+interface Props {
+  question: QuestionData
+  readonly?: boolean
 }
 
-.macos-titlebar {
-  height: 44px;
-  background: rgba(0, 0, 0, 0.2);
-  display: flex;
-  align-items: center;
-  padding: 0 16px;
-  -webkit-app-region: drag; /* 支援窗口拖拽 */
+const props = defineProps<Props>()
+const emit = defineEmits<{
+  answer: [value: string | string[]]
+}>()
+
+// 題型組件映射
+const questionComponent = computed(() => {
+  const typeMap = {
+    '1.1.1': MultipleChoice,   // 詞義選擇
+    '1.1.2': MultipleChoice,   // 近義詞選擇
+    '1.2.1': MultipleChoice,   // 語法改錯
+    '2.1.1': WritingTask,      // 摘要寫作
+    '2.7.1': TranslationTask,  // 中翻英
+    // ... 其他題型映射
+  }
+  return typeMap[props.question.type] || MultipleChoice
+})
+
+const handleAnswer = (value: string | string[]) => {
+  emit('answer', value)
 }
 
-.traffic-lights {
-  display: flex;
-  gap: 8px;
+const getQuestionTypeName = (type: string) => {
+  const typeNames = {
+    '1.1.1': '詞義選擇',
+    '1.1.2': '近義詞選擇',
+    '1.2.1': '語法改錯',
+    '2.1.1': '摘要寫作',
+    '2.7.1': '中翻英',
+    // ... 其他題型名稱
+  }
+  return typeNames[type] || '未知題型'
 }
+</script>
 
-.traffic-light {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  border: none;
-  cursor: pointer;
-  transition: opacity 0.2s ease;
-}
-
-.traffic-light.close { background: #ff5f57; }
-.traffic-light.minimize { background: #ffbd2e; }
-.traffic-light.maximize { background: #28ca42; }
-
-.traffic-light:hover {
-  opacity: 0.8;
-}
-```
-
-#### 1.2 Toolbar 組件
-**功能描述**: 頂部導覽工具欄，支援標籤頁切換
-**互動規格**:
-- 點擊標籤頁切換視圖
-- Hover 效果突顯可點擊區域
-- 支援鍵盤導覽 (Tab/Enter)
-
-```javascript
-class Toolbar extends Component {
-  constructor() {
-    super();
-    this.state = {
-      activeTab: 'dashboard',
-      tabs: [
-        { id: 'dashboard', label: '儀表板', icon: '📊' },
-        { id: 'quiz', label: '測驗', icon: '📝' },
-        { id: 'history', label: '歷史', icon: '📈' },
-        { id: 'settings', label: '設定', icon: '⚙️' }
-      ]
-    };
-  }
-
-  handleTabClick(tabId) {
-    this.setState({ activeTab: tabId });
-    this.emit('tab-change', { tabId });
-  }
-
-  render() {
-    return `
-      <div class="macos-toolbar">
-        ${this.state.tabs.map(tab => `
-          <button 
-            class="toolbar-tab ${tab.id === this.state.activeTab ? 'active' : ''}"
-            data-tab="${tab.id}"
-            aria-selected="${tab.id === this.state.activeTab}"
-          >
-            <span class="tab-icon">${tab.icon}</span>
-            <span class="tab-label">${tab.label}</span>
-          </button>
-        `).join('')}
-      </div>
-    `;
-  }
-}
-```
-
-#### 1.3 Sidebar 組件
-**功能描述**: 左側導覽欄，包含導覽和問題類型選擇
-**特殊功能**:
-- 可摺疊/展開
-- 問題類型過濾
-- 搜尋功能
-
-```javascript
-class Sidebar extends Component {
-  constructor() {
-    super();
-    this.state = {
-      isCollapsed: false,
-      activeSection: 'navigation',
-      questionTypes: [
-        { id: '1.1.1', name: '詞彙選擇', category: 'vocabulary' },
-        { id: '1.1.2', name: '近義詞選擇', category: 'vocabulary' },
-        { id: '1.2.1', name: '語法改錯', category: 'grammar' },
-        // ... 其他21種題型
-      ],
-      filteredTypes: []
-    };
-  }
-
-  filterQuestionTypes(searchTerm) {
-    const filtered = this.state.questionTypes.filter(type => 
-      type.name.includes(searchTerm) || type.id.includes(searchTerm)
-    );
-    this.setState({ filteredTypes: filtered });
-  }
-}
-```
-
-### 2. 測驗系統組件
-
-#### 2.1 QuestionRenderer 組件
-**功能描述**: 統一的問題渲染器，支援24種題型
-**設計模式**: 策略模式 + 工廠模式
-
-```javascript
-class QuestionRenderer extends Component {
-  constructor() {
-    super();
-    this.renderers = new Map([
-      ['1.1.1', MultipleChoiceRenderer],
-      ['1.1.2', SingleChoiceRenderer],
-      ['2.1.1', WritingTaskRenderer],
-      ['2.7.1', TranslationRenderer],
-      // ... 其他題型渲染器
-    ]);
-  }
-
-  render(question) {
-    const RendererClass = this.renderers.get(question.type);
-    if (!RendererClass) {
-      throw new Error(`不支援的題型: ${question.type}`);
-    }
+<template>
+  <div class="question-renderer">
+    <div class="question-header">
+      <h3 class="question-title">{{ question.title }}</h3>
+      <el-tag :type="getQuestionTypeColor(question.type)" size="large">
+        {{ getQuestionTypeName(question.type) }}
+      </el-tag>
+    </div>
     
-    const renderer = new RendererClass(question);
-    return renderer.render();
-  }
-}
-```
-
-#### 2.2 各題型詳細組件
-
-##### 2.2.1 多選題組件 (1.1.1, 1.1.2, 1.2.2 等)
-```javascript
-class MultipleChoiceRenderer extends Component {
-  constructor(question) {
-    super();
-    this.question = question;
-    this.state = {
-      selectedOptions: [],
-      isAnswered: false
-    };
-  }
-
-  handleOptionSelect(optionId) {
-    const { selectedOptions } = this.state;
-    const newSelection = selectedOptions.includes(optionId)
-      ? selectedOptions.filter(id => id !== optionId)
-      : [...selectedOptions, optionId];
-    
-    this.setState({ selectedOptions: newSelection });
-  }
-
-  render() {
-    return `
-      <div class="question-container multiple-choice">
-        <div class="question-text">
-          ${this.question.text}
-        </div>
-        <div class="options-container">
-          ${this.question.options.map(option => `
-            <label class="option-item ${this.state.selectedOptions.includes(option.id) ? 'selected' : ''}">
-              <input type="checkbox" value="${option.id}" />
-              <span class="option-text">${option.text}</span>
-              <span class="checkmark"></span>
-            </label>
-          `).join('')}
-        </div>
+    <div class="question-content">
+      <div v-if="question.passage" class="passage">
+        <h4>閱讀材料</h4>
+        <div class="passage-text" v-html="question.passage"></div>
       </div>
-    `;
-  }
-}
-```
-
-##### 2.2.2 寫作題組件 (2.1.1, 2.1.2, 2.3.1 等)
-```javascript
-class WritingTaskRenderer extends Component {
-  constructor(question) {
-    super();
-    this.question = question;
-    this.state = {
-      content: '',
-      wordCount: 0,
-      autoSaveTimer: null
-    };
-  }
-
-  handleContentChange(content) {
-    this.setState({ 
-      content,
-      wordCount: this.countWords(content)
-    });
-    
-    // 自動保存草稿
-    this.scheduleAutoSave();
-  }
-
-  scheduleAutoSave() {
-    if (this.state.autoSaveTimer) {
-      clearTimeout(this.state.autoSaveTimer);
-    }
-    
-    this.state.autoSaveTimer = setTimeout(() => {
-      this.saveDraft();
-    }, 2000);
-  }
-
-  render() {
-    return `
-      <div class="question-container writing-task">
-        <div class="question-text">
-          ${this.question.text}
-        </div>
-        <div class="writing-area">
-          <textarea 
-            class="writing-input"
-            placeholder="請在此輸入您的答案..."
-            maxlength="${this.question.maxLength || 1000}"
-          ></textarea>
-          <div class="writing-stats">
-            <span class="word-count">${this.state.wordCount} 字</span>
-            <span class="char-limit">最多 ${this.question.maxLength || 1000} 字</span>
-          </div>
-        </div>
-        <div class="writing-tools">
-          <button class="tool-btn" data-action="bold">粗體</button>
-          <button class="tool-btn" data-action="italic">斜體</button>
-          <button class="tool-btn" data-action="save-draft">保存草稿</button>
-        </div>
+      <div class="question-text">
+        <h4>題目</h4>
+        <p>{{ question.question }}</p>
       </div>
-    `;
-  }
-}
-```
+    </div>
+    
+    <component 
+      :is="questionComponent"
+      :question="question"
+      :readonly="readonly"
+      @answer="handleAnswer"
+    />
+  </div>
+</template>
 
-##### 2.2.3 翻譯題組件 (2.7.1, 2.7.2, 2.8.1, 2.8.2)
-```javascript
-class TranslationRenderer extends Component {
-  constructor(question) {
-    super();
-    this.question = question;
-    this.state = {
-      translation: '',
-      showReference: false,
-      suggestions: []
-    };
-  }
-
-  async getSuggestions(text) {
-    // 呼叫 API 獲取翻譯建議
-    const response = await this.apiService.getTranslationSuggestions(text);
-    this.setState({ suggestions: response.suggestions });
-  }
-
-  render() {
-    return `
-      <div class="question-container translation-task">
-        <div class="translation-layout">
-          <div class="source-text">
-            <h3>原文</h3>
-            <div class="text-content">
-              ${this.question.sourceText}
-            </div>
-            <button class="toggle-reference" ${this.state.showReference ? 'active' : ''}>
-              ${this.state.showReference ? '隱藏' : '顯示'}參考
-            </button>
-          </div>
-          <div class="translation-input">
-            <h3>翻譯</h3>
-            <textarea 
-              class="translation-textarea"
-              placeholder="請輸入翻譯..."
-            ></textarea>
-            ${this.state.suggestions.length > 0 ? `
-              <div class="suggestions">
-                <h4>建議詞彙</h4>
-                ${this.state.suggestions.map(s => `
-                  <span class="suggestion-item">${s}</span>
-                `).join('')}
-              </div>
-            ` : ''}
-          </div>
-        </div>
-      </div>
-    `;
-  }
-}
-```
-
-### 3. 資料服務層
-
-#### 3.1 QuizService 詳細設計
-```javascript
-class QuizService {
-  constructor(apiClient) {
-    this.apiClient = apiClient;
-    this.currentQuiz = null;
-    this.questionHistory = [];
-  }
-
-  /**
-   * 開始新的測驗會話
-   * @param {Object} config - 測驗配置
-   * @returns {Promise<Object>} 測驗會話信息
-   */
-  async startQuiz(config) {
-    try {
-      const response = await this.apiClient.post('/api/start-test', {
-        questionTypes: config.questionTypes,
-        difficulty: config.difficulty,
-        questionCount: config.questionCount
-      });
-
-      this.currentQuiz = {
-        sessionId: response.sessionId,
-        questions: response.questions,
-        currentIndex: 0,
-        startTime: Date.now(),
-        answers: []
-      };
-
-      return this.currentQuiz;
-    } catch (error) {
-      throw new Error(`開始測驗失敗: ${error.message}`);
+<style scoped lang="scss">
+.question-renderer {
+  .question-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+    
+    .question-title {
+      color: var(--el-text-color-primary);
+      margin: 0;
     }
   }
-
-  /**
-   * 提交答案
-   * @param {Object} answer - 用戶答案
-   * @returns {Promise<Object>} 答案提交結果
-   */
-  async submitAnswer(answer) {
-    if (!this.currentQuiz) {
-      throw new Error('沒有進行中的測驗');
-    }
-
-    const answerData = {
-      sessionId: this.currentQuiz.sessionId,
-      questionId: this.getCurrentQuestion().id,
-      answer: answer,
-      responseTime: Date.now() - this.answerStartTime
-    };
-
-    try {
-      const response = await this.apiClient.post('/api/submit-answer', answerData);
+  
+  .question-content {
+    margin-bottom: 24px;
+    
+    .passage {
+      background: var(--el-bg-color-page);
+      padding: 16px;
+      border-radius: 8px;
+      margin-bottom: 16px;
       
-      // 更新本地狀態
-      this.currentQuiz.answers.push({
-        ...answerData,
-        isCorrect: response.isCorrect,
-        feedback: response.feedback
-      });
+      .passage-text {
+        line-height: 1.6;
+        color: var(--el-text-color-regular);
+      }
+    }
+    
+    .question-text {
+      h4 {
+        color: var(--el-text-color-primary);
+        margin-bottom: 8px;
+      }
+      
+      p {
+        color: var(--el-text-color-regular);
+        line-height: 1.6;
+      }
+    }
+  }
+}
+</style>
+```
 
-      return response;
+#### 1.2 各題型具體組件
+
+##### 多選題組件
+```vue
+<script setup lang="ts">
+import { ref, watch } from 'vue'
+import type { MultipleChoiceQuestion } from '@/types'
+
+interface Props {
+  question: MultipleChoiceQuestion
+  readonly?: boolean
+}
+
+const props = defineProps<Props>()
+const emit = defineEmits<{
+  answer: [value: string[]]
+}>()
+
+const selectedOptions = ref<string[]>([])
+
+watch(selectedOptions, (newValue) => {
+  emit('answer', newValue)
+}, { deep: true })
+
+const handleChange = (value: string[]) => {
+  selectedOptions.value = value
+}
+</script>
+
+<template>
+  <div class="multiple-choice">
+    <el-checkbox-group 
+      v-model="selectedOptions"
+      @change="handleChange"
+      :disabled="readonly"
+      class="options-group"
+    >
+      <el-checkbox 
+        v-for="option in question.options"
+        :key="option.id"
+        :label="option.id"
+        class="option-item"
+      >
+        <span class="option-label">{{ option.id }}.</span>
+        <span class="option-text">{{ option.text }}</span>
+      </el-checkbox>
+    </el-checkbox-group>
+  </div>
+</template>
+
+<style scoped lang="scss">
+.multiple-choice {
+  .options-group {
+    width: 100%;
+    
+    .option-item {
+      display: flex;
+      align-items: flex-start;
+      width: 100%;
+      margin-bottom: 12px;
+      padding: 16px;
+      border: 1px solid var(--el-border-color-light);
+      border-radius: 8px;
+      transition: all 0.3s;
+      
+      &:hover {
+        border-color: var(--el-color-primary);
+        background-color: var(--el-color-primary-light-9);
+      }
+      
+      &.is-checked {
+        border-color: var(--el-color-primary);
+        background-color: var(--el-color-primary-light-8);
+      }
+      
+      .option-label {
+        font-weight: 600;
+        color: var(--el-color-primary);
+        margin-right: 8px;
+        min-width: 24px;
+      }
+      
+      .option-text {
+        flex: 1;
+        line-height: 1.5;
+        color: var(--el-text-color-regular);
+      }
+    }
+  }
+}
+</style>
+```
+
+##### 寫作題組件
+```vue
+<script setup lang="ts">
+import { ref, computed, watch, onMounted } from 'vue'
+import { useStorage } from '@vueuse/core'
+import type { WritingQuestion } from '@/types'
+
+interface Props {
+  question: WritingQuestion
+  readonly?: boolean
+}
+
+const props = defineProps<Props>()
+const emit = defineEmits<{
+  answer: [value: string]
+}>()
+
+const content = ref('')
+const wordCount = computed(() => {
+  return content.value.trim().split(/\s+/).filter(word => word.length > 0).length
+})
+
+const isValidLength = computed(() => {
+  const min = props.question.minWords || 0
+  const max = props.question.maxWords || Infinity
+  return wordCount.value >= min && wordCount.value <= max
+})
+
+// 自動保存草稿
+const draftKey = computed(() => `draft_${props.question.id}`)
+const draft = useStorage(draftKey.value, '')
+
+watch(content, (newValue) => {
+  if (!props.readonly) {
+    draft.value = newValue
+  }
+  emit('answer', newValue)
+}, { debounce: 1000 })
+
+onMounted(() => {
+  if (draft.value && !props.readonly) {
+    content.value = draft.value
+  }
+})
+
+const saveDraft = () => {
+  draft.value = content.value
+  ElMessage.success('草稿已保存')
+}
+
+const clearContent = () => {
+  ElMessageBox.confirm('確定要清空所有內容嗎？', '確認', {
+    type: 'warning'
+  }).then(() => {
+    content.value = ''
+    draft.value = ''
+    ElMessage.success('內容已清空')
+  })
+}
+</script>
+
+<template>
+  <div class="writing-task">
+    <div v-if="question.prompt" class="writing-prompt">
+      <h4>寫作提示</h4>
+      <div class="prompt-content" v-html="question.prompt"></div>
+    </div>
+    
+    <div class="writing-area">
+      <el-input
+        v-model="content"
+        type="textarea"
+        :placeholder="question.placeholder || '請在此輸入您的答案...'"
+        :rows="12"
+        :readonly="readonly"
+        resize="vertical"
+        class="writing-input"
+      />
+      
+      <div class="writing-stats">
+        <div class="stats-left">
+          <span class="word-count" :class="{ 'valid': isValidLength, 'invalid': !isValidLength }">
+            字數: {{ wordCount }}
+          </span>
+          <span v-if="question.minWords" class="min-words">
+            (最少 {{ question.minWords }} 字)
+          </span>
+          <span v-if="question.maxWords" class="max-words">
+            (最多 {{ question.maxWords }} 字)
+          </span>
+        </div>
+        
+        <div v-if="!readonly" class="stats-right">
+          <el-button @click="saveDraft" size="small" type="info">
+            <el-icon><Document /></el-icon>
+            保存草稿
+          </el-button>
+          <el-button @click="clearContent" size="small" type="danger">
+            <el-icon><Delete /></el-icon>
+            清空
+          </el-button>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<style scoped lang="scss">
+.writing-task {
+  .writing-prompt {
+    background: var(--el-bg-color-page);
+    padding: 16px;
+    border-radius: 8px;
+    margin-bottom: 16px;
+    
+    h4 {
+      color: var(--el-text-color-primary);
+      margin-bottom: 8px;
+    }
+    
+    .prompt-content {
+      color: var(--el-text-color-regular);
+      line-height: 1.6;
+    }
+  }
+  
+  .writing-area {
+    .writing-input {
+      margin-bottom: 12px;
+      
+      :deep(.el-textarea__inner) {
+        line-height: 1.6;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      }
+    }
+    
+    .writing-stats {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 8px 0;
+      
+      .stats-left {
+        .word-count {
+          font-weight: 600;
+          
+          &.valid {
+            color: var(--el-color-success);
+          }
+          
+          &.invalid {
+            color: var(--el-color-danger);
+          }
+        }
+        
+        .min-words,
+        .max-words {
+          color: var(--el-text-color-secondary);
+          font-size: 12px;
+          margin-left: 8px;
+        }
+      }
+      
+      .stats-right {
+        .el-button + .el-button {
+          margin-left: 8px;
+        }
+      }
+    }
+  }
+}
+</style>
+```
+
+### 2. 服務層設計
+
+#### 2.1 API 服務基礎
+```typescript
+// services/api.ts
+import axios from 'axios'
+import type { AxiosInstance, AxiosRequestConfig, AxiosResponse } from 'axios'
+import { ElMessage } from 'element-plus'
+
+interface ApiResponse<T = any> {
+  success: boolean
+  data: T
+  message: string
+  code: number
+}
+
+class ApiService {
+  private instance: AxiosInstance
+
+  constructor() {
+    this.instance = axios.create({
+      baseURL: import.meta.env.VITE_API_BASE_URL || '/api',
+      timeout: 30000,
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    })
+
+    this.setupInterceptors()
+  }
+
+  private setupInterceptors() {
+    // 請求攔截器
+    this.instance.interceptors.request.use(
+      (config) => {
+        // 添加 loading 狀態
+        const token = localStorage.getItem('auth_token')
+        if (token) {
+          config.headers.Authorization = `Bearer ${token}`
+        }
+        
+        console.log(`[API Request] ${config.method?.toUpperCase()} ${config.url}`, config.data)
+        return config
+      },
+      (error) => {
+        console.error('[API Request Error]', error)
+        return Promise.reject(error)
+      }
+    )
+
+    // 響應攔截器
+    this.instance.interceptors.response.use(
+      (response: AxiosResponse<ApiResponse>) => {
+        console.log(`[API Response] ${response.config.url}`, response.data)
+        
+        // 統一處理後端返回的格式
+        if (response.data.success) {
+          return response.data.data
+        } else {
+          ElMessage.error(response.data.message || '請求失敗')
+          return Promise.reject(new Error(response.data.message))
+        }
+      },
+      (error) => {
+        console.error('[API Response Error]', error)
+        this.handleError(error)
+        return Promise.reject(error)
+      }
+    )
+  }
+
+  private handleError(error: any) {
+    if (error.response) {
+      const { status, data } = error.response
+      
+      switch (status) {
+        case 401:
+          ElMessage.error('認證失敗，請重新登入')
+          localStorage.removeItem('auth_token')
+          // 跳轉到登入頁面
+          break
+        case 403:
+          ElMessage.error('權限不足')
+          break
+        case 404:
+          ElMessage.error('請求的資源不存在')
+          break
+        case 500:
+          ElMessage.error('伺服器內部錯誤')
+          break
+        default:
+          ElMessage.error(data?.message || '網路錯誤，請稍後重試')
+      }
+    } else if (error.request) {
+      ElMessage.error('網路連接失敗，請檢查網路設定')
+    } else {
+      ElMessage.error('請求配置錯誤')
+    }
+  }
+
+  async get<T>(url: string, config?: AxiosRequestConfig): Promise<T> {
+    return this.instance.get(url, config)
+  }
+
+  async post<T>(url: string, data?: any, config?: AxiosRequestConfig): Promise<T> {
+    return this.instance.post(url, data, config)
+  }
+
+  async put<T>(url: string, data?: any, config?: AxiosRequestConfig): Promise<T> {
+    return this.instance.put(url, data, config)
+  }
+
+  async delete<T>(url: string, config?: AxiosRequestConfig): Promise<T> {
+    return this.instance.delete(url, config)
+  }
+}
+
+export const apiService = new ApiService()
+```
+
+#### 2.2 測驗服務
+```typescript
+// services/quiz.ts
+import { apiService } from './api'
+import type { 
+  QuestionType, 
+  TestSession, 
+  QuestionData, 
+  SubmitAnswerRequest,
+  SubmitAnswerResponse,
+  TestSummary
+} from '@/types'
+
+export class QuizService {
+  // 獲取可用題型
+  async getQuestionTypes(): Promise<QuestionType[]> {
+    return apiService.get<QuestionType[]>('/question-types')
+  }
+
+  // 開始測驗
+  async startTest(params: {
+    questionType: string
+    difficulty?: string
+    questionCount?: number
+  }): Promise<{
+    session: TestSession
+    firstQuestion: QuestionData
+  }> {
+    return apiService.post('/start-test', params)
+  }
+
+  // 提交答案
+  async submitAnswer(request: SubmitAnswerRequest): Promise<SubmitAnswerResponse> {
+    return apiService.post('/submit-answer', request)
+  }
+
+  // 結束測驗
+  async endTest(sessionId: string): Promise<{
+    summary: TestSummary
+  }> {
+    return apiService.post(`/end-test/${sessionId}`)
+  }
+
+  // 獲取下一題
+  async getNextQuestion(sessionId: string): Promise<QuestionData | null> {
+    return apiService.get(`/next-question/${sessionId}`)
+  }
+
+  // 暫停測驗
+  async pauseTest(sessionId: string): Promise<void> {
+    return apiService.post(`/pause-test/${sessionId}`)
+  }
+
+  // 恢復測驗
+  async resumeTest(sessionId: string): Promise<QuestionData> {
+    return apiService.post(`/resume-test/${sessionId}`)
+  }
+}
+
+export const quizService = new QuizService()
+```
+
+### 3. 組合式函數設計
+
+#### 3.1 測驗邏輯組合式函數
+```typescript
+// composables/useQuiz.ts
+import { ref, computed } from 'vue'
+import { quizService } from '@/services/quiz'
+import { useNotification } from './useNotification'
+import type { QuestionData, TestSession, AnswerRecord } from '@/types'
+
+export function useQuiz() {
+  const { showNotification } = useNotification()
+  
+  // 響應式狀態
+  const isLoading = ref(false)
+  const currentSession = ref<TestSession | null>(null)
+  const currentQuestion = ref<QuestionData | null>(null)
+  const answers = ref<AnswerRecord[]>([])
+  const currentAnswer = ref<string | string[]>('')
+  
+  // 計算屬性
+  const progress = computed(() => {
+    if (!currentSession.value) return 0
+    return Math.round((answers.value.length / currentSession.value.totalQuestions) * 100)
+  })
+  
+  const canSubmit = computed(() => {
+    return currentQuestion.value && !isLoading.value && currentAnswer.value
+  })
+
+  const isLastQuestion = computed(() => {
+    if (!currentSession.value) return false
+    return answers.value.length === currentSession.value.totalQuestions - 1
+  })
+
+  // 開始測驗
+  const startTest = async (questionType: string) => {
+    isLoading.value = true
+    try {
+      const response = await quizService.startTest({ questionType })
+      currentSession.value = response.session
+      currentQuestion.value = response.firstQuestion
+      answers.value = []
+      currentAnswer.value = ''
+      
+      showNotification({
+        type: 'success',
+        title: '測驗開始',
+        message: '祝您測驗順利！'
+      })
+      
+      return response
     } catch (error) {
-      throw new Error(`提交答案失敗: ${error.message}`);
+      showNotification({
+        type: 'error',
+        title: '開始測驗失敗',
+        message: error instanceof Error ? error.message : '未知錯誤'
+      })
+      throw error
+    } finally {
+      isLoading.value = false
     }
   }
 
-  /**
-   * 獲取當前問題
-   * @returns {Object} 當前問題對象
-   */
-  getCurrentQuestion() {
-    if (!this.currentQuiz) return null;
-    return this.currentQuiz.questions[this.currentQuiz.currentIndex];
-  }
-
-  /**
-   * 移動到下一題
-   * @returns {Object|null} 下一題或 null (如果已結束)
-   */
-  nextQuestion() {
-    if (!this.currentQuiz) return null;
-    
-    this.currentQuiz.currentIndex++;
-    this.answerStartTime = Date.now();
-    
-    if (this.currentQuiz.currentIndex >= this.currentQuiz.questions.length) {
-      return null; // 測驗結束
+  // 提交答案
+  const submitAnswer = async () => {
+    if (!currentSession.value || !currentQuestion.value || !currentAnswer.value) {
+      return
     }
-    
-    return this.getCurrentQuestion();
+
+    isLoading.value = true
+    try {
+      const response = await quizService.submitAnswer({
+        sessionId: currentSession.value.id,
+        questionId: currentQuestion.value.id,
+        answer: currentAnswer.value
+      })
+
+      // 記錄答案
+      answers.value.push(response.result)
+      
+      // 顯示結果通知
+      showNotification({
+        type: response.result.isCorrect ? 'success' : 'warning',
+        title: response.result.isCorrect ? '回答正確！' : '回答錯誤',
+        message: response.result.explanation || ''
+      })
+
+      // 更新下一題
+      currentQuestion.value = response.nextQuestion
+      currentAnswer.value = ''
+      
+      return response
+    } catch (error) {
+      showNotification({
+        type: 'error',
+        title: '提交答案失敗',
+        message: error instanceof Error ? error.message : '未知錯誤'
+      })
+      throw error
+    } finally {
+      isLoading.value = false
+    }
   }
 
-  /**
-   * 獲取測驗進度
-   * @returns {Object} 進度信息
-   */
-  getProgress() {
-    if (!this.currentQuiz) return { current: 0, total: 0, percentage: 0 };
-    
-    return {
-      current: this.currentQuiz.currentIndex + 1,
-      total: this.currentQuiz.questions.length,
-      percentage: Math.round(((this.currentQuiz.currentIndex + 1) / this.currentQuiz.questions.length) * 100)
-    };
+  // 結束測驗
+  const endTest = async () => {
+    if (!currentSession.value) return
+
+    isLoading.value = true
+    try {
+      const response = await quizService.endTest(currentSession.value.id)
+      
+      // 清理狀態
+      currentSession.value = null
+      currentQuestion.value = null
+      currentAnswer.value = ''
+      
+      showNotification({
+        type: 'info',
+        title: '測驗結束',
+        message: '感謝您的參與！'
+      })
+      
+      return response.summary
+    } catch (error) {
+      showNotification({
+        type: 'error',
+        title: '結束測驗失敗',
+        message: error instanceof Error ? error.message : '未知錯誤'
+      })
+      throw error
+    } finally {
+      isLoading.value = false
+    }
+  }
+
+  // 設置當前答案
+  const setCurrentAnswer = (answer: string | string[]) => {
+    currentAnswer.value = answer
+  }
+
+  // 重置測驗狀態
+  const resetQuiz = () => {
+    currentSession.value = null
+    currentQuestion.value = null
+    answers.value = []
+    currentAnswer.value = ''
+    isLoading.value = false
+  }
+
+  return {
+    // 狀態
+    isLoading,
+    currentSession,
+    currentQuestion,
+    answers,
+    currentAnswer,
+    // 計算屬性
+    progress,
+    canSubmit,
+    isLastQuestion,
+    // 方法
+    startTest,
+    submitAnswer,
+    endTest,
+    setCurrentAnswer,
+    resetQuiz
   }
 }
 ```
 
-## 📊 詳細開發階段
+## 📅 開發階段規劃
 
-### Phase 1: 核心基礎建設 (第1-2週)
+### Phase 1: 專案基礎建設 (第1週)
 
 #### 🎯 階段目標
-建立完整的開發基礎設施，包括專案結構、設計系統、核心組件和開發工具鏈。
+建立完整的 Vue 3 + Vite 開發環境和基礎架構
 
-#### 📋 具體任務清單
+#### 📋 具體任務
 
-**1.1 專案初始化 (2-3天)**
+**1.1 專案初始化 (1-2天)**
+- [ ] **建立 Vite + Vue 3 專案**
+  ```bash
+  npm create vue@latest frontend
+  cd frontend
+  npm install
+  ```
+- [ ] **安裝核心依賴**
+  ```bash
+  npm install vue-router@4 pinia element-plus
+  npm install -D @types/node unplugin-vue-components unplugin-auto-import
+  ```
+- [ ] **配置開發工具**
+  - TypeScript 配置 (`tsconfig.json`)
+  - ESLint + Prettier 配置
+  - Vite 配置 (別名、代理)
+
+**1.2 基礎架構搭建 (2-3天)**
 - [ ] **建立專案目錄結構**
-  - 建立完整的文件夾層次結構
-  - 設定 `.gitignore` 和基本 Git 配置
-  - 建立 `package.json` 和依賴管理
+  - 按照設計的目錄結構創建文件夾
+  - 建立基本的 `.vue` 文件模板
+- [ ] **配置路由系統**
+  - 設定 Vue Router 4
+  - 定義主要路由 (Dashboard, Quiz, History, Settings)
+  - 建立路由守衛
+- [ ] **設定狀態管理**
+  - 配置 Pinia
+  - 建立基本的 stores 結構
+- [ ] **整合 Element Plus**
+  - 配置自動導入
+  - 設定主題色彩
+  - 建立全局樣式
 
-- [ ] **開發環境配置**
-  - 設定 Live Server 用於開發時熱重載
-  - 配置 ESLint (Airbnb 標準) 和 Prettier
-  - 設定 VS Code 工作區配置和推薦擴展
-
-- [ ] **建立建構工具鏈**
-  ```javascript
-  // build.js - 簡單的建構腳本
-  const fs = require('fs');
-  const path = require('path');
-  const CleanCSS = require('clean-css');
-  
-  class Builder {
-    constructor() {
-      this.srcDir = path.join(__dirname, 'src');
-      this.distDir = path.join(__dirname, 'dist');
-    }
-    
-    async build() {
-      await this.createDistDir();
-      await this.processHTML();
-      await this.processCSS();
-      await this.processJS();
-      await this.copyAssets();
-    }
-  }
-  ```
-
-**1.2 設計系統實作 (3-4天)**
-- [ ] **CSS 變數系統定義**
-  ```css
-  /* variables.css */
-  :root {
-    /* macOS 系統色彩 */
-    --system-blue: #0a84ff;
-    --system-green: #30d158;
-    --system-red: #ff453a;
-    --system-orange: #ff9f0a;
-    --system-yellow: #ffd60a;
-    --system-purple: #bf5af2;
-    --system-pink: #ff375f;
-    --system-indigo: #5856d6;
-    --system-teal: #40e0d0;
-    
-    /* 深色模式背景層次 */
-    --bg-primary: #1e1e1e;
-    --bg-secondary: rgba(28, 28, 30, 0.8);
-    --bg-tertiary: rgba(40, 40, 42, 0.9);
-    --bg-quaternary: rgba(58, 58, 60, 0.8);
-    
-    /* 文字色彩層次 */
-    --text-primary: rgba(255, 255, 255, 0.95);
-    --text-secondary: rgba(255, 255, 255, 0.7);
-    --text-tertiary: rgba(255, 255, 255, 0.5);
-    --text-quaternary: rgba(255, 255, 255, 0.3);
-    
-    /* 邊框和分隔線 */
-    --border-primary: rgba(255, 255, 255, 0.1);
-    --border-secondary: rgba(255, 255, 255, 0.05);
-    
-    /* 毛玻璃效果 */
-    --backdrop-blur: blur(20px);
-    --backdrop-blur-strong: blur(30px);
-    
-    /* 陰影系統 */
-    --shadow-small: 0 2px 8px rgba(0, 0, 0, 0.1);
-    --shadow-medium: 0 8px 24px rgba(0, 0, 0, 0.15);
-    --shadow-large: 0 16px 48px rgba(0, 0, 0, 0.2);
-    --shadow-focus: 0 0 0 3px rgba(10, 132, 255, 0.3);
-    
-    /* 間距系統 */
-    --spacing-xs: 4px;
-    --spacing-sm: 8px;
-    --spacing-md: 16px;
-    --spacing-lg: 24px;
-    --spacing-xl: 32px;
-    --spacing-2xl: 48px;
-    
-    /* 字體大小 */
-    --font-size-xs: 10px;
-    --font-size-sm: 12px;
-    --font-size-base: 14px;
-    --font-size-lg: 16px;
-    --font-size-xl: 20px;
-    --font-size-2xl: 24px;
-    --font-size-3xl: 32px;
-    
-    /* 動畫時間 */
-    --duration-fast: 0.15s;
-    --duration-normal: 0.3s;
-    --duration-slow: 0.6s;
-    
-    /* 緩動函數 */
-    --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
-    --ease-in-out-quart: cubic-bezier(0.76, 0, 0.24, 1);
-  }
-  ```
-
-- [ ] **基礎重置樣式**
-  ```css
-  /* reset.css */
-  *,
-  *::before,
-  *::after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-  
-  html {
-    font-size: 14px;
-    line-height: 1.47;
-    -webkit-text-size-adjust: 100%;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-  
-  body {
-    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', system-ui, sans-serif;
-    background-color: var(--bg-primary);
-    color: var(--text-primary);
-    overflow-x: hidden;
-  }
-  ```
+**1.3 開發環境配置 (1天)**
+- [ ] **VS Code 工作區配置**
+  - 推薦擴展列表
+  - 調試配置
+- [ ] **Git 配置**
+  - `.gitignore` 設定
+  - Git hooks (husky + lint-staged)
+- [ ] **測試環境設定**
+  - Vitest 配置
+  - Vue Test Utils 設定
 
 #### 🎯 交付成果
-- 完整的專案基礎架構
-- 可運行的開發環境
-- 基礎組件樣式庫
-- 核心系統架構 (狀態管理、路由、組件基類)
+- 可運行的 Vue 3 專案基礎架構
+- 完整的開發環境配置
+- 基本的路由和狀態管理結構
 
-### Phase 2: 頁面架構與導覽 (第3-5週)
-
-#### 🎯 階段目標
-實作完整的頁面架構，包括四個主要頁面和導覽系統，建立用戶界面的基本框架。
-
-### Phase 3: API 整合與服務層 (第6-8週)
+### Phase 2: 核心組件開發 (第2-3週)
 
 #### 🎯 階段目標
-建立完整的資料服務層，整合後端 API，實現前後端資料流通。
+開發可復用的核心 UI 組件和佈局
 
-### Phase 4: 測驗功能完整實作 (第9-12週)
+#### 📋 具體任務
+
+**2.1 佈局組件開發 (3-4天)**
+- [ ] **AppHeader.vue**
+  - 應用程式標題
+  - 用戶信息顯示
+  - 主要導航菜單
+- [ ] **AppSidebar.vue**
+  - 側邊欄導航
+  - 題型分類顯示
+  - 摺疊/展開功能
+- [ ] **AppLayout.vue**
+  - 主佈局容器
+  - 響應式佈局
+  - 頁面切換動畫
+- [ ] **通用組件**
+  - LoadingSpinner.vue
+  - ErrorMessage.vue
+  - ConfirmDialog.vue
+
+**2.2 測驗基礎組件 (4-5天)**
+- [ ] **QuestionRenderer.vue**
+  - 題目統一渲染器
+  - 動態組件加載
+  - 題型路由邏輯
+- [ ] **AnswerInput.vue**
+  - 通用答案輸入組件
+  - 支援多種輸入類型
+  - 驗證和格式化
+- [ ] **QuizProgress.vue**
+  - 進度條顯示
+  - 題目計數
+  - 時間顯示
+- [ ] **ResultDisplay.vue**
+  - 答案結果顯示
+  - 解釋說明
+  - 正確答案對比
+- [ ] **QuizTimer.vue**
+  - 計時器功能
+  - 時間警告
+  - 自動提交
+
+**2.3 表單和互動組件 (2-3天)**
+- [ ] **表單驗證**
+  - 自定義驗證規則
+  - 即時驗證反饋
+  - 錯誤訊息顯示
+- [ ] **通知系統**
+  - Toast 通知
+  - 消息彈窗
+  - 確認對話框
+- [ ] **檔案處理** (如需要)
+  - 檔案上傳組件
+  - 圖片預覽
+  - 進度顯示
+
+#### 🎯 交付成果
+- 完整的組件庫
+- 組件單元測試
+- 組件使用文檔
+
+### Phase 3: API 整合與資料流 (第4週)
 
 #### 🎯 階段目標
-完整實作所有24種題型的渲染器和互動邏輯，確保每種題型都有優秀的用戶體驗。
+整合後端 API，建立完整的資料流
 
-### Phase 5: 使用者體驗優化 (第13-15週)
+#### 📋 具體任務
+
+**3.1 API 服務層開發 (2-3天)**
+- [ ] **基礎 API 服務**
+  - HTTP 客戶端封裝
+  - 請求/響應攔截器
+  - 錯誤處理機制
+  - 重試邏輯
+- [ ] **測驗 API 服務**
+  - 題型查詢
+  - 測驗開始/結束
+  - 答案提交
+  - 進度查詢
+- [ ] **歷史記錄 API**
+  - 歷史查詢
+  - 統計數據
+  - 報告生成
+
+**3.2 狀態管理整合 (2-3天)**
+- [ ] **Quiz Store**
+  - 測驗狀態管理
+  - 答案記錄
+  - 進度追蹤
+- [ ] **History Store**
+  - 歷史記錄管理
+  - 統計數據
+  - 篩選排序
+- [ ] **User Store**
+  - 用戶設定
+  - 偏好設定
+  - 認證狀態
+- [ ] **App Store**
+  - 全局狀態
+  - 載入狀態
+  - 錯誤狀態
+
+**3.3 組合式函數開發 (1-2天)**
+- [ ] **useQuiz**
+  - 測驗邏輯封裝
+  - 狀態管理
+  - 事件處理
+- [ ] **useHistory**
+  - 歷史記錄邏輯
+  - 數據處理
+  - 查詢功能
+- [ ] **useNotification**
+  - 通知邏輯
+  - 消息管理
+  - 自動清理
+- [ ] **useValidation**
+  - 表單驗證
+  - 規則定義
+  - 錯誤處理
+
+#### 🎯 交付成果
+- 完整的 API 服務層
+- 響應式狀態管理
+- 可復用的業務邏輯組合式函數
+
+### Phase 4: 頁面開發與題型實現 (第5-8週)
 
 #### 🎯 階段目標
-優化使用者體驗，增加進階功能和視覺效果。
+實現所有主要頁面和24種題型支援
 
-### Phase 6: 效能優化與部署 (第16週)
+#### 📋 具體任務
+
+**4.1 主要頁面開發 (1週)**
+- [ ] **Dashboard.vue**
+  - 學習概覽
+  - 快速開始
+  - 統計圖表
+  - 最近記錄
+- [ ] **QuizSelection.vue**
+  - 題型選擇
+  - 難度設定
+  - 題目數量
+  - 開始測驗
+- [ ] **QuizSession.vue**
+  - 測驗進行
+  - 題目顯示
+  - 答案提交
+  - 結果反饋
+- [ ] **History.vue**
+  - 歷史記錄
+  - 統計分析
+  - 篩選排序
+  - 導出功能
+- [ ] **Settings.vue**
+  - 個人設定
+  - 系統配置
+  - 數據管理
+  - 關於信息
+
+**4.2 題型組件實現 - 選擇題系列 (1週)**
+- [ ] **1.1.x 詞彙題型**
+  - `MultipleChoice.vue` - 詞義選擇 (1.1.1)
+  - `SynonymChoice.vue` - 近義詞選擇 (1.1.2)
+- [ ] **1.2.x 語法題型**
+  - `GrammarCorrection.vue` - 語法改錯 (1.2.1)
+  - `GrammarChoice.vue` - 語法選擇 (1.2.2)
+- [ ] **1.3.x 填空題型**
+  - `FillInBlanks.vue` - 克漏字填空 (1.3.1)
+  - `VocabularyFill.vue` - 詞彙填空 (1.3.2)
+
+**4.3 題型組件實現 - 排序題系列 (3-4天)**
+- [ ] **1.4.x 排序題型**
+  - `SentenceOrdering.vue` - 句子排序 (1.4.1)
+  - `ParagraphOrdering.vue` - 段落排序 (1.4.2)
+  - 拖拽排序功能
+  - 視覺反饋系統
+
+**4.4 題型組件實現 - 寫作題系列 (1.5週)**
+- [ ] **2.1.x 摘要寫作**
+  - `SummaryWriting.vue` - 摘要寫作 (2.1.1, 2.1.2)
+  - 字數統計
+  - 實時保存
+- [ ] **2.2.x 作文寫作**
+  - `EssayWriting.vue` - 議論文 (2.2.1, 2.2.2)
+  - 大綱輔助
+  - 格式檢查
+- [ ] **2.3.x-2.6.x 其他寫作**
+  - `LetterWriting.vue` - 書信寫作 (2.3.1, 2.3.2)
+  - `ReportWriting.vue` - 報告寫作 (2.4.1, 2.4.2)
+  - `ProposalWriting.vue` - 提案寫作 (2.5.1, 2.5.2)
+  - `ReviewWriting.vue` - 評論寫作 (2.6.1, 2.6.2)
+
+**4.5 題型組件實現 - 翻譯題系列 (3-4天)**
+- [ ] **2.7.x-2.8.x 翻譯題型**
+  - `TranslationCE.vue` - 中翻英 (2.7.1, 2.7.2)
+  - `TranslationEC.vue` - 英翻中 (2.8.1, 2.8.2)
+  - 雙語對照
+  - 翻譯輔助
+
+**4.6 題型渲染系統 (2-3天)**
+- [ ] **題型工廠模式**
+  - 動態組件加載
+  - 題型註冊系統
+  - 配置管理
+- [ ] **答案驗證系統**
+  - 統一驗證接口
+  - 多種驗證規則
+  - 結果反饋
+
+#### 🎯 交付成果
+- 24種題型的完整支援
+- 所有主要頁面功能
+- 完整的測驗流程
+
+### Phase 5: UX 優化與進階功能 (第9-10週)
 
 #### 🎯 階段目標
-最終的效能優化和部署準備。
+優化使用者體驗，添加進階功能
+
+#### 📋 具體任務
+
+**5.1 互動體驗優化 (3-4天)**
+- [ ] **動畫系統**
+  - 頁面切換動畫
+  - 組件過渡效果
+  - 載入動畫
+  - 反饋動畫
+- [ ] **載入狀態優化**
+  - 骨架屏
+  - 進度指示
+  - 懶載入
+  - 預載入
+- [ ] **錯誤處理**
+  - 友好錯誤頁面
+  - 錯誤邊界
+  - 重試機制
+  - 降級方案
+- [ ] **響應式設計**
+  - 移動端適配
+  - 平板端優化
+  - 觸控支援
+  - 手勢操作
+
+**5.2 學習分析功能 (3-4天)**
+- [ ] **數據視覺化**
+  - 學習進度圖表
+  - 正確率趨勢
+  - 題型分析
+  - 時間分析
+- [ ] **智能分析**
+  - 錯誤分析
+  - 學習建議
+  - 難點識別
+  - 復習提醒
+- [ ] **報告系統**
+  - 學習報告生成
+  - PDF 導出
+  - 分享功能
+  - 打印優化
+
+**5.3 輔助功能與優化 (2-3天)**
+- [ ] **無障礙功能**
+  - 鍵盤導航
+  - 螢幕閱讀器支援
+  - 高對比度模式
+  - 字體大小調整
+- [ ] **國際化準備**
+  - i18n 框架搭建
+  - 多語言文本提取
+  - 語言切換
+  - 日期時間格式化
+- [ ] **離線功能**
+  - Service Worker
+  - 離線提示
+  - 數據同步
+  - PWA 配置
+
+#### 🎯 交付成果
+- 優秀的使用者體驗
+- 豐富的學習分析功能
+- 良好的無障礙支援
+- PWA 功能
+
+### Phase 6: 測試、優化與部署 (第11-12週)
+
+#### 🎯 階段目標
+全面測試、效能優化和部署準備
+
+#### 📋 具體任務
+
+**6.1 測試完善 (4-5天)**
+- [ ] **單元測試**
+  - 組件測試 (目標覆蓋率 > 80%)
+  - 組合式函數測試
+  - 工具函數測試
+  - Store 測試
+- [ ] **整合測試**
+  - API 整合測試
+  - 頁面流程測試
+  - 數據流測試
+- [ ] **E2E 測試**
+  - 關鍵用戶流程
+  - 跨瀏覽器測試
+  - 響應式測試
+- [ ] **效能測試**
+  - 載入速度測試
+  - 記憶體使用測試
+  - 網路條件測試
+
+**6.2 效能優化 (3-4天)**
+- [ ] **程式碼優化**
+  - 程式碼分割
+  - 懶載入實現
+  - Tree shaking
+  - Dead code elimination
+- [ ] **資源優化**
+  - 圖片壓縮
+  - 字體優化
+  - CSS 優化
+  - JavaScript 壓縮
+- [ ] **快取策略**
+  - HTTP 快取
+  - 瀏覽器快取
+  - Service Worker 快取
+  - API 快取
+- [ ] **打包優化**
+  - Bundle 分析
+  - 依賴優化
+  - 構建速度優化
+  - 輸出優化
+
+**6.3 部署準備 (2-3天)**
+- [ ] **生產環境配置**
+  - 環境變數設定
+  - 生產建構配置
+  - 安全性配置
+  - 效能配置
+- [ ] **容器化**
+  - Dockerfile 編寫
+  - 多階段建構
+  - 映像優化
+  - 容器測試
+- [ ] **CI/CD 設定**
+  - GitHub Actions 配置
+  - 自動測試
+  - 自動部署
+  - 品質檢查
+- [ ] **監控和日誌**
+  - 錯誤追蹤
+  - 效能監控
+  - 用戶行為分析
+  - 日誌收集
+
+#### 🎯 交付成果
+- 高品質的生產就緒應用
+- 完整的測試覆蓋
+- 自動化部署流程
+- 監控和維護體系
 
 ## 🧪 測試策略
 
-### 單元測試
-```javascript
-// 範例：StateManager 測試
-describe('StateManager', () => {
-  let stateManager;
-  
-  beforeEach(() => {
-    stateManager = new StateManager({ count: 0 });
-  });
-  
-  test('應該正確設定初始狀態', () => {
-    expect(stateManager.getState()).toEqual({ count: 0 });
-  });
-  
-  test('應該正確更新狀態', () => {
-    stateManager.setState({ count: 1 });
-    expect(stateManager.getState()).toEqual({ count: 1 });
-  });
-  
-  test('應該通知訂閱者', () => {
-    const callback = jest.fn();
-    stateManager.subscribe(callback);
-    stateManager.setState({ count: 1 });
-    expect(callback).toHaveBeenCalledWith({ count: 1 });
-  });
-});
+### 單元測試範例
+```typescript
+// tests/unit/components/QuestionRenderer.spec.ts
+import { describe, it, expect } from 'vitest'
+import { mount } from '@vue/test-utils'
+import { createTestingPinia } from '@pinia/testing'
+import QuestionRenderer from '@/components/quiz/QuestionRenderer.vue'
+import type { QuestionData } from '@/types'
+
+describe('QuestionRenderer', () => {
+  const mockQuestion: QuestionData = {
+    id: '1',
+    type: '1.1.1',
+    title: 'Test Question',
+    question: 'What is the meaning of "happy"?',
+    options: [
+      { id: 'A', text: 'Sad' },
+      { id: 'B', text: 'Joyful' },
+      { id: 'C', text: 'Angry' },
+      { id: 'D', text: 'Confused' }
+    ]
+  }
+
+  it('renders question correctly', () => {
+    const wrapper = mount(QuestionRenderer, {
+      props: { question: mockQuestion },
+      global: {
+        plugins: [createTestingPinia()]
+      }
+    })
+
+    expect(wrapper.text()).toContain('Test Question')
+    expect(wrapper.text()).toContain('What is the meaning of "happy"?')
+    expect(wrapper.findAll('.option-item')).toHaveLength(4)
+  })
+
+  it('emits answer when option selected', async () => {
+    const wrapper = mount(QuestionRenderer, {
+      props: { question: mockQuestion },
+      global: {
+        plugins: [createTestingPinia()]
+      }
+    })
+
+    await wrapper.find('input[value="B"]').setValue(true)
+    expect(wrapper.emitted('answer')).toBeTruthy()
+    expect(wrapper.emitted('answer')?.[0]).toEqual([['B']])
+  })
+})
 ```
 
-## 📈 預期成果
+### 整合測試範例
+```typescript
+// tests/integration/quiz-flow.spec.ts
+import { describe, it, expect, beforeEach } from 'vitest'
+import { setActivePinia, createPinia } from 'pinia'
+import { useQuizStore } from '@/stores/quiz'
+import { quizService } from '@/services/quiz'
+
+// Mock API service
+vi.mock('@/services/quiz')
+
+describe('Quiz Flow Integration', () => {
+  beforeEach(() => {
+    setActivePinia(createPinia())
+  })
+
+  it('completes full quiz workflow', async () => {
+    const quizStore = useQuizStore()
+    
+    // Mock API responses
+    const mockSession = { id: '1', totalQuestions: 5 }
+    const mockQuestion = { id: '1', type: '1.1.1', question: 'Test?' }
+    
+    vi.mocked(quizService.startTest).mockResolvedValue({
+      session: mockSession,
+      firstQuestion: mockQuestion
+    })
+    
+    // 測試開始測驗
+    await quizStore.startTest('1.1.1')
+    expect(quizStore.currentSession).toEqual(mockSession)
+    expect(quizStore.currentQuestion).toEqual(mockQuestion)
+    
+    // 測試提交答案
+    vi.mocked(quizService.submitAnswer).mockResolvedValue({
+      result: { isCorrect: true, explanation: 'Correct!' },
+      nextQuestion: null
+    })
+    
+    quizStore.setCurrentAnswer('A')
+    await quizStore.submitAnswer()
+    expect(quizStore.answers).toHaveLength(1)
+    expect(quizStore.answers[0].isCorrect).toBe(true)
+  })
+})
+```
+
+## 📈 效能指標與目標
 
 ### 技術指標
-- **載入速度**: 首次載入 < 2秒
-- **互動響應**: < 100ms
-- **記憶體使用**: < 100MB
-- **包體積**: < 2MB (壓縮後)
+- **建置時間**: < 30秒
+- **熱重載**: < 500ms
+- **初始載入**: < 3秒
+- **路由切換**: < 200ms
+- **打包體積**: < 2MB (gzipped)
+- **記憶體使用**: < 150MB
 
-### 功能指標
-- **題型支援**: 100% (24種題型)
-- **瀏覽器相容性**: Chrome 80+, Safari 13+, Firefox 75+
-- **無障礙評分**: WCAG 2.1 AA
-- **行動端適配**: 100%
+### Web Vitals 指標
+- **First Contentful Paint (FCP)**: < 1.8s
+- **Largest Contentful Paint (LCP)**: < 2.5s
+- **First Input Delay (FID)**: < 100ms
+- **Cumulative Layout Shift (CLS)**: < 0.1
+- **Time to Interactive (TTI)**: < 3.8s
 
-### 用戶體驗指標
-- **Core Web Vitals**: 全綠
-- **使用者滿意度**: > 4.5/5
-- **任務完成率**: > 95%
+### 程式碼品質指標
+- **TypeScript 覆蓋率**: > 95%
+- **單元測試覆蓋率**: > 80%
+- **E2E 測試覆蓋率**: > 70%
+- **ESLint 錯誤數**: 0
+- **Lighthouse 分數**: > 90
+
+## 🚀 部署策略
+
+### 開發環境
+```bash
+# 安裝依賴
+npm install
+
+# 啟動開發服務器
+npm run dev
+
+# 執行測試
+npm run test
+
+# 程式碼檢查
+npm run lint
+
+# 類型檢查
+npm run type-check
+```
+
+### 生產環境建構
+```bash
+# 建置生產版本
+npm run build
+
+# 預覽生產版本
+npm run preview
+
+# 執行所有測試
+npm run test:unit
+npm run test:e2e
+
+# 生成測試覆蓋率報告
+npm run test:coverage
+```
+
+### Docker 部署
+```dockerfile
+# Dockerfile
+FROM node:18-alpine as builder
+
+WORKDIR /app
+COPY package*.json ./
+RUN npm ci --only=production
+
+COPY . .
+RUN npm run build
+
+FROM nginx:alpine
+COPY --from=builder /app/dist /usr/share/nginx/html
+COPY nginx.conf /etc/nginx/nginx.conf
+
+EXPOSE 80
+CMD ["nginx", "-g", "daemon off;"]
+```
+
+### CI/CD 配置
+```yaml
+# .github/workflows/deploy.yml
+name: Deploy Frontend
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+          cache: 'npm'
+      
+      - name: Install dependencies
+        run: npm ci
+      
+      - name: Run tests
+        run: npm run test:coverage
+      
+      - name: Upload coverage
+        uses: codecov/codecov-action@v3
+
+  build:
+    needs: test
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+          cache: 'npm'
+      
+      - name: Install dependencies
+        run: npm ci
+      
+      - name: Build application
+        run: npm run build
+      
+      - name: Deploy to production
+        run: |
+          # 部署腳本
+          echo "Deploying to production..."
+```
+
+## 📝 專案配置文件
+
+### package.json
+```json
+{
+  "name": "llm-english-learning-frontend",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc && vite build",
+    "preview": "vite preview",
+    "test": "vitest",
+    "test:coverage": "vitest --coverage",
+    "test:e2e": "cypress run",
+    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix",
+    "type-check": "vue-tsc --noEmit"
+  },
+  "dependencies": {
+    "vue": "^3.3.4",
+    "vue-router": "^4.2.4",
+    "pinia": "^2.1.6",
+    "element-plus": "^2.3.8",
+    "axios": "^1.4.0",
+    "@vueuse/core": "^10.2.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^4.2.3",
+    "vite": "^4.4.5",
+    "typescript": "^5.0.2",
+    "vue-tsc": "^1.8.5",
+    "@vue/test-utils": "^2.4.1",
+    "vitest": "^0.34.1",
+    "@vitest/coverage-c8": "^0.34.1",
+    "cypress": "^12.17.4",
+    "eslint": "^8.45.0",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "eslint-plugin-vue": "^9.15.1",
+    "prettier": "^3.0.0",
+    "sass": "^1.64.1",
+    "unplugin-auto-import": "^0.16.6",
+    "unplugin-vue-components": "^0.25.1"
+  }
+}
+```
 
 ---
 
-這個詳細的開發計劃涵蓋了從基礎架構到最終部署的完整流程，每個階段都有明確的目標、具體的任務和預期的交付成果。整個計劃預估需要16週完成，可根據實際情況調整時程。 
+這個重新規劃的前端開發計劃採用了現代化的 **Vue 3 + Vite** 技術棧，相比原生 JavaScript 方案具有以下優勢：
+
+1. **更好的開發體驗**: Vite 的快速熱重載，TypeScript 的類型檢查
+2. **更高的可維護性**: 組件化架構，清晰的代碼組織
+3. **更豐富的生態**: Vue 3 生態系統的成熟組件和工具
+4. **更好的效能**: 現代化的建構工具和優化策略
+5. **更強的擴展性**: 模組化設計，易於添加新功能
+
+整個計劃預估需要 **12週** 完成，可根據實際情況調整時程。每個階段都有明確的目標和具體的交付成果，確保專案按計劃推進。 

@@ -1,5 +1,121 @@
 [
   {
+    "UUID": "df2cb850-0322-435b-8d05-25ae83f2c78a",
+    "questionData": {
+      "passage": "His _______ about the universe led him to study astrophysics.",
+      "question": "Choose the best word to complete the sentence.",
+      "options": [
+        {
+          "id": "A",
+          "text": "apathy"
+        },
+        {
+          "id": "B",
+          "text": "indifference"
+        },
+        {
+          "id": "C",
+          "text": "resentment"
+        },
+        {
+          "id": "D",
+          "text": "curiosity"
+        }
+      ],
+      "standard_answer": "D"
+    },
+    "userAnswer": "D",
+    "isCorrect": true,
+    "timestamp": 1748066261817
+  },
+  {
+    "UUID": "6a5dbc8a-1a8b-4406-9328-01458f1d191a",
+    "questionData": {
+      "passage": "The board had to make a _______ decision about the future of the company.",
+      "question": "Choose the best word to complete the sentence.",
+      "options": [
+        {
+          "id": "A",
+          "text": "trivial"
+        },
+        {
+          "id": "B",
+          "text": "insignificant"
+        },
+        {
+          "id": "C",
+          "text": "crucial"
+        },
+        {
+          "id": "D",
+          "text": "optional"
+        }
+      ],
+      "standard_answer": "C"
+    },
+    "userAnswer": "C",
+    "isCorrect": true,
+    "timestamp": 1748066239443
+  },
+  {
+    "UUID": "3c898594-9890-47fa-a744-ffc1961f0fed",
+    "questionData": {
+      "passage": "The book _______ widespread acclaim for its unique storyline and compelling characters.",
+      "question": "Choose the best word to complete the sentence.",
+      "options": [
+        {
+          "id": "A",
+          "text": "recognized"
+        },
+        {
+          "id": "B",
+          "text": "acquired"
+        },
+        {
+          "id": "C",
+          "text": "received"
+        },
+        {
+          "id": "D",
+          "text": "achieved"
+        }
+      ],
+      "standard_answer": "C"
+    },
+    "userAnswer": "B",
+    "isCorrect": false,
+    "timestamp": 1748066217807
+  },
+  {
+    "UUID": "3ad3b6db-6590-43c4-b942-8b4429da5498",
+    "questionData": {
+      "passage": "Drivers were advised to proceed _______ due to the heavy fog and slippery roads.",
+      "question": "Choose the best word to complete the sentence.",
+      "options": [
+        {
+          "id": "A",
+          "text": "swiftly"
+        },
+        {
+          "id": "B",
+          "text": "roughly"
+        },
+        {
+          "id": "C",
+          "text": "cautiously"
+        },
+        {
+          "id": "D",
+          "text": "freely"
+        }
+      ],
+      "standard_answer": "C"
+    },
+    "userAnswer": "C",
+    "isCorrect": true,
+    "timestamp": 1748066075644
+  },
+  {
     "UUID": "6e38de4b-c6fc-4ecc-bcd5-320c7b0d6ee2",
     "questionData": {
       "passage": "The artist deliberately _______ current fads, preferring to develop his own unique style.",
